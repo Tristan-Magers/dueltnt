@@ -1,0 +1,9 @@
+execute as @s at @s if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:gravetrapactive
+execute as @s at @s positioned ~.15 ~ ~ if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:gravetrapactive
+execute as @s at @s positioned ~-.15 ~ ~ if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:gravetrapactive
+execute as @s at @s positioned ~-.15 ~ ~.15 if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:gravetrapactive
+execute as @s at @s positioned ~-.15 ~ ~-.15 if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:gravetrapactive
+execute as @s at @s positioned ~.15 ~ ~.15 if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:gravetrapactive
+execute as @s at @s positioned ~.15 ~ ~-.15 if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:gravetrapactive
+execute as @s at @s positioned ~ ~ ~.15 if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:gravetrapactive
+execute as @s at @s positioned ~ ~ ~-.15 if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:gravetrapactive

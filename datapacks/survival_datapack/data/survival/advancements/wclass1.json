@@ -1,0 +1,25 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Warrior Assassin"
+        },
+        "description": {
+            "text": "Survive as Assassin"
+        },
+        "icon": {
+            "item": "minecraft:bow",
+            "nbt": "{Damage:40}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "warriorassassin": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "survival:warrior"
+}

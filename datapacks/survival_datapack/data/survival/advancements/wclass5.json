@@ -1,0 +1,25 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Warrior Mad Scientist"
+        },
+        "description": {
+            "text": "Survive as Mad Scientist"
+        },
+        "icon": {
+            "item": "minecraft:bow",
+            "nbt": "{Damage:160}"
+        },
+        "frame": "goal",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "warriormad": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "survival:warrior"
+}
