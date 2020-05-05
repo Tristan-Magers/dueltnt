@@ -1,0 +1,102 @@
+*Season 6 Update*
+
+[Mode Changes]
+- Removed "Overpowered" mode
+	- Note: this is exchanged for a general overall power increase
+- "Air Missile" item
+	- Moves .1 more blocks per tick (.24 -> .34)
+	- Takes 7 ticks to start destroying
+	- Makes more particles
+	- Can travel the full map (previously 33 blocks)
+	- Note: These changes effect the new "Air Missile" Ghost item
+
+[Character Changes]
+
+Soldier
+- Added "Air Grenade"
+	- Slot alternates between Slime and Air Grenade
+	- 2.5s reload after each (origionally 5s for slime)
+- Slimes die 3.5s faster (6.5s -> 3s)
+- Megabomb
+	- Reloads 2s faster (10s -> 8s)
+	- Fuse starts after being 4.5 Blocks away from user
+	- .8s faster fuse (1.25s -> .45s)
+	- Glows, with color indicating if fuse has triggered
+- Starts with 9 more enderpeals (3 -> 12)
+- Ender pearls give 1.5s less invisibility (3s -> 1.5s)
+- Starts with 2 less Anvils (10 -> 12)
+
+Assassin
+- Replaced TNT Eggs with "Sneak Attack" (also 5 uses)
+- Mass Freeze can freeze people 1 block further away (2 -> 3)
+
+Ghost
+- Added "Air Missile" (4s start reload, 12s reload)
+	- Slot Alternates Between Smoke Bomb and Air Missile
+	- 3s and 1s reload after each (origionally 5s for Smoke Bomb)
+	- Note: impacted by Air Missile changes (see Phantom Mode)
+- Smoke Bomb gives .2s more Invisibility (1s -> 1.2s)
+- Gets one extra smoke bomb (previously just one)
+	- .5s reload between them
+- Primed for Dark can give 1.4s longer max blindness (3.6s -> 5s) (functionally a max 4s)
+	- Glowing status adjusted to reflect the period of actual blindness (one second less)
+
+Trapper
+- Arrows make sound when they hit the ground (only audible for user)e
+
+Wizard
+- Bows reload .4s slower (1.2s -> 1.6s)
+- Fireballs now shoot out of boow (instead of starting still)
+	- Have .15s delay before moving
+- Teleport Bow no longer consumes 2 arrows
+- Teleport bow teleports up 2 blocks lower (4 up -> 2 up)
+- Ghost creepers no longer move or explode by themselves
+- Ghost creepers have stonger explosion
+- Vortex reloads 2s slower (13s -> 15s)
+
+Mad Scientist
+- Added "Laser Beam"
+- Bow reloads .15s faster (2.95s -> 2.8s)
+- Poral has improved particle
+- Portal summons 1 more tnt (1 -> 2)
+- Portal TNT has .15s longer Fuse (0s -> .15s)
+- Portal can now be teleported to from 1 blocks further (15 Blocks -> 16 Blocks)
+- Portal dies 1 seconds faster (7s -> 6s)
+- Acid reloads 2s faster (4.5s -> 2.5s)
+- Powershield no longer recharges blocks after tnt detonates (previously stayed active 1.8 extra seconds)
+
+Reaper
+- Shift reload .5s faster (10 -> 9.5s)
+- Scythe reloads .35s faster (5.75s -> 5.3s)
+
+Echo
+- Blast Wand reloads .5s faster (.9 -> .85s)
+- Boom Wand reloads .05s faster (.55s -> .5s)
+- *Blast Wand interacts with slimes and magic-stars
+- *Ground Spell can't be used in the void or above spawn height
+
+Gardener
+- Bow reloads .15s faster (1.25s -> 1.1s)
+- Bow has one more punch (2 -> 3)
+- EXTREME Shovel has 2 more knockback (6 -> 8)
+- Plague reloads 5s faster (15s -> 10s)
+- Plague reloads 4s faster at begining of round (12s -> 8s)
+- Plague gives 2s less poison (5s -> 3s)
+- Plague poison is 4 levels less (11 -> 7s)
+
+Overloard
+- Shift reloads 5s faster (15s -> 10s)
+- Shift decays 6s faster (15s -> 9s)
+- Masterwand starts with 2 blocks more range (5 blocks -> 7 blocks)
+- Master wand upgrades increase range 2 blocks less (4.8 -> 2.8)
+	- Functionally makes max range 4 Blocks less
+- Bombs cost 1 less (7 -> 6)
+- Land Slide costs 1 less (15 -> 14)
+- Boom Halo (a.k.a. beef) costs 2 less (15 -> 13)
+- Can hold 3 less Material (35 -> 32)
+- Passively given 1 matter every 1.3s
+
+[Bug Fixes]
+- Echo makes boom wand partcle on Boom Wand recover reload
+- Echo shift timer starts too high
+- Overlord Unstable Mass text says the move gives matter

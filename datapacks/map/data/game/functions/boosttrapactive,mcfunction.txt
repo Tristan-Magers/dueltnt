@@ -1,0 +1,2 @@
+effect give @s minecraft:speed 5 3
+effect give @s minecraft:jump_boost 5 4

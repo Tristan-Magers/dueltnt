@@ -1,4 +1,5 @@
 execute as @e[type=area_effect_cloud,tag=!a,nbt={Potion:"minecraft:poison"}] at @s run function game:plaguepot
+execute as @e[type=area_effect_cloud,tag=!a,nbt={Potion:"minecraft:swiftness"}] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1,Marker:1,Tags:["a","airnade"]}
 kill @e[type=area_effect_cloud,tag=!a]
 
 clear @a[gamemode=spectator]
@@ -148,20 +149,25 @@ scoreboard players set @r[scores={GoPortal=1..}] GoPortalP 1
 scoreboard players set @a[scores={GoPortalP=1..}] GoPortal 0
 
 scoreboard players operation @e[name=Portal] tntID -= @p[scores={GoPortalP=1..}] tntID
-execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s positioned ~ ~ ~ run execute as @a[scores={GoPortalP=1..},distance=..15] at @s positioned ~ ~ ~ run summon tnt ~ ~ ~ {Fuse:2}
-execute if entity @e[scores={mode=1}] run execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s positioned ~ ~ ~ run execute as @a[scores={GoPortalP=1..},distance=..15] at @s positioned ~ ~ ~ run summon tnt ~ ~ ~ {Fuse:2}
-execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s positioned ~ ~ ~ run teleport @a[scores={GoPortalP=1..},distance=..15] ~ ~ ~
-execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s positioned ~ ~ ~ run xp add @a[scores={GoPortalP=1..},distance=..15] 20 levels
-execute as @e[name=Portal,type=armor_stand] at @s positioned ~ ~1 ~ run particle totem_of_undying ~ ~ ~ .1 0 .1 .1 2 force
-execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s positioned ~ ~ ~ run scoreboard players set @a[scores={GoPortalP=1..},distance=..15] timer 1
+execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s positioned ~ ~ ~ run execute as @a[scores={GoPortalP=1..},distance=..16] at @s positioned ~ ~ ~ run summon tnt ~ ~ ~ {Fuse:4,NoGravity:1}
+execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s positioned ~ ~ ~ run execute as @a[scores={GoPortalP=1..},distance=..16] at @s positioned ~ ~ ~ run summon tnt ~ ~ ~ {Fuse:4,NoGravity:1}
+execute if entity @e[scores={mode=1}] run execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s positioned ~ ~ ~ run execute as @a[scores={GoPortalP=1..},distance=..16] at @s positioned ~ ~ ~ run summon tnt ~ ~ ~ {Fuse:1}
+execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s positioned ~ ~ ~ run teleport @a[scores={GoPortalP=1..},distance=..16] ~ ~ ~
+#execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s positioned ~ ~ ~ run execute as @a[scores={GoPortalP=1..},distance=..16] at @s run tp @s @s
+execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s positioned ~ ~ ~ run xp add @a[scores={GoPortalP=1..},distance=..16] 20 levels
+execute as @e[name=Portal,type=armor_stand] at @s positioned ~ ~1 ~ run particle sneeze ~ ~ ~ .1 0 .1 .03 2 force
+execute as @e[name=Portal,type=armor_stand] at @s positioned ~ ~1 ~ run particle minecraft:item_slime ~ ~ ~ .1 0 .1 .03 2 force
+execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s positioned ~ ~ ~ run scoreboard players set @a[scores={GoPortalP=1..},distance=..16] timer 1
 scoreboard players set @a[scores={GoPortalP=1..}] haveportal 0
-execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s positioned ~ ~ ~ run scoreboard players set @a[scores={GoPortalP=1..},distance=..15] haveportal 1
-execute as @a[scores={GoPortalP=1..}] at @s positioned ~ ~ ~ run kill @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1,distance=..15]
+execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s positioned ~ ~ ~ run scoreboard players set @a[scores={GoPortalP=1..},distance=..16] haveportal 1
+execute as @a[scores={GoPortalP=1..}] at @s positioned ~ ~ ~ run kill @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1,distance=..16]
 scoreboard players operation @e[name=Portal] tntID += @p[scores={GoPortalP=1..}] tntID
 title @a[scores={GoPortalP=1..,haveportal=..0}] actionbar {"text":"No portal nearby","color":"green"}
 
 scoreboard players add @e[name=Portal,type=armor_stand] PLife 1
-kill @e[name=Portal,type=armor_stand,scores={PLife=140..}]
+execute as @e[name=Portal,type=armor_stand,scores={PLife=120..}] at @s positioned ~ ~1 ~ run particle minecraft:totem_of_undying ~ ~ ~ .3 .3 .3 .03 20 force
+execute as @e[name=Portal,type=armor_stand,scores={PLife=120..}] at @s positioned ~ ~1 ~ run particle minecraft:large_smoke ~ ~ ~ .2 .2 .2 .1 20 force
+kill @e[name=Portal,type=armor_stand,scores={PLife=120..}]
 
 #Y
 execute as @a store result score @s Y run data get entity @s Pos[1]

@@ -23,6 +23,7 @@ execute as @a[x=495,y=23,z=564,distance=..10] if blocks 486 17 513 488 16 513 48
 
 #Mode
 execute as @e[tag=ModeC] at @s run scoreboard players add @e[name=Map] mode 1
+scoreboard players set @e[scores={mode=1}] mode 2
 scoreboard players set @e[scores={mode=5..}] mode 0
 execute as @e[tag=ModeC] at @s run function game:mode
 tag @e[tag=ModeC] remove ModeC

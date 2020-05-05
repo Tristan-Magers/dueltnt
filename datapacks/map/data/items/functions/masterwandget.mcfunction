@@ -2,7 +2,7 @@ clear @s gold_ore{display:{Name:"{\"italic\":false,\"text\":\"§6Material\"}"}}
 
 scoreboard players set @s[scores={masterb=..0}] masterb 0
 scoreboard players add @s masterb 1
-scoreboard players set @s[scores={masterb=35..}] masterb 35
+scoreboard players set @s[scores={masterb=32..}] masterb 32
 
 replaceitem entity @s[scores={masterb=1}] hotbar.5 minecraft:gold_ore{display:{Name:"{\"italic\":false,\"text\":\"§6Material\"}"}} 1
 replaceitem entity @s[scores={masterb=2}] hotbar.5 minecraft:gold_ore{display:{Name:"{\"italic\":false,\"text\":\"§6Material\"}"}} 2

@@ -23,12 +23,12 @@ execute as @s[tag=!end] at @s anchored eyes positioned ^ ^ ^3.8 run function ite
 execute as @s[tag=!end] at @s anchored eyes positioned ^ ^ ^4.2 run function items:masterwandtest
 execute as @s[tag=!end] at @s anchored eyes positioned ^ ^ ^4.6 run function items:masterwandtest
 execute as @s[tag=!end] at @s anchored eyes positioned ^ ^ ^5.0 run function items:masterwandtest
+execute as @s[tag=!end] at @s anchored eyes positioned ^ ^ ^5.4 run function items:masterwandtest
+execute as @s[tag=!end] at @s anchored eyes positioned ^ ^ ^5.8 run function items:masterwandtest
+execute as @s[tag=!end] at @s anchored eyes positioned ^ ^ ^6.2 run function items:masterwandtest
+execute as @s[tag=!end] at @s anchored eyes positioned ^ ^ ^6.6 run function items:masterwandtest
+execute as @s[tag=!end] at @s anchored eyes positioned ^ ^ ^7.0 run function items:masterwandtest
 
-execute as @s[tag=!end,scores={masterup=1..}] at @s anchored eyes positioned ^ ^ ^5.4 run function items:masterwandtest
-execute as @s[tag=!end,scores={masterup=1..}] at @s anchored eyes positioned ^ ^ ^5.8 run function items:masterwandtest
-execute as @s[tag=!end,scores={masterup=1..}] at @s anchored eyes positioned ^ ^ ^6.2 run function items:masterwandtest
-execute as @s[tag=!end,scores={masterup=1..}] at @s anchored eyes positioned ^ ^ ^6.6 run function items:masterwandtest
-execute as @s[tag=!end,scores={masterup=1..}] at @s anchored eyes positioned ^ ^ ^7.0 run function items:masterwandtest
 execute as @s[tag=!end,scores={masterup=1..}] at @s anchored eyes positioned ^ ^ ^7.4 run function items:masterwandtest
 execute as @s[tag=!end,scores={masterup=1..}] at @s anchored eyes positioned ^ ^ ^7.8 run function items:masterwandtest
 execute as @s[tag=!end,scores={masterup=1..}] at @s anchored eyes positioned ^ ^ ^8.2 run function items:masterwandtest
@@ -44,24 +44,27 @@ execute as @s[tag=!end,scores={masterup=2..}] at @s anchored eyes positioned ^ ^
 execute as @s[tag=!end,scores={masterup=2..}] at @s anchored eyes positioned ^ ^ ^11.8 run function items:masterwandtest
 execute as @s[tag=!end,scores={masterup=2..}] at @s anchored eyes positioned ^ ^ ^12.2 run function items:masterwandtest
 execute as @s[tag=!end,scores={masterup=2..}] at @s anchored eyes positioned ^ ^ ^12.6 run function items:masterwandtest
-execute as @s[tag=!end,scores={masterup=2..}] at @s anchored eyes positioned ^ ^ ^13.0 run function items:masterwandtest
-execute as @s[tag=!end,scores={masterup=2..}] at @s anchored eyes positioned ^ ^ ^13.4 run function items:masterwandtest
-execute as @s[tag=!end,scores={masterup=2..}] at @s anchored eyes positioned ^ ^ ^13.8 run function items:masterwandtest
-execute as @s[tag=!end,scores={masterup=2..}] at @s anchored eyes positioned ^ ^ ^14.2 run function items:masterwandtest
-execute as @s[tag=!end,scores={masterup=2..}] at @s anchored eyes positioned ^ ^ ^14.6 run function items:masterwandtest
 
+execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^13.0 run function items:masterwandtest
+execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^13.4 run function items:masterwandtest
+execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^13.8 run function items:masterwandtest
+execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^14.2 run function items:masterwandtest
+execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^14.6 run function items:masterwandtest
 execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^15.0 run function items:masterwandtest
 execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^15.4 run function items:masterwandtest
-execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^15.8 run function items:masterwandtest
-execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^16.2 run function items:masterwandtest
-execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^16.6 run function items:masterwandtest
-execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^17.0 run function items:masterwandtest
-execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^17.4 run function items:masterwandtest
-execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^17.8 run function items:masterwandtest
-execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^18.2 run function items:masterwandtest
-execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^18.6 run function items:masterwandtest
-execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^19.0 run function items:masterwandtest
-execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^19.4 run function items:masterwandtest
+
+#execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^15.8 run function items:masterwandtest
+#execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^16.2 run function items:masterwandtest
+#execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^16.6 run function items:masterwandtest
+
+#execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^17.0 run function items:masterwandtest
+#execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^17.4 run function items:masterwandtest
+#execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^17.8 run function items:masterwandtest
+
+#execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^18.2 run function items:masterwandtest
+#execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^18.6 run function items:masterwandtest
+#execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^19.0 run function items:masterwandtest
+#execute as @s[tag=!end,scores={masterup=3..}] at @s anchored eyes positioned ^ ^ ^19.4 run function items:masterwandtest
 
 tag @s[tag=mw1] add mw
 tag @s[tag=mw2] add mw

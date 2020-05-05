@@ -1,5 +1,9 @@
 clear @s
 
+effect give @s minecraft:blindness 2 0
+effect give @s minecraft:poison 3 6
+effect give @s minecraft:glowing 5 10
+
 scoreboard players set @s Sreload 0
 scoreboard players set @s endercount 0
 scoreboard players set @s potion 0
@@ -27,8 +31,8 @@ scoreboard players set @s plaguetimer 60
 
 scoreboard players operation @s realclass = @s class
 scoreboard players set @p class 8
-execute unless entity @e[scores={mode=1}] run replaceitem entity @s hotbar.0 minecraft:bow{Damage:220,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§6Blast Jumper§r : Throw to switch\"}"},Enchantments:[{id:punch,lvl:1}]}
-execute if entity @e[scores={mode=1}] run replaceitem entity @s hotbar.0 minecraft:bow{Damage:220,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§6Blast Jumper§r : Throw to switch\"}"},Enchantments:[{id:punch,lvl:2}]}
+execute unless entity @e[scores={mode=1}] run replaceitem entity @s hotbar.0 minecraft:bow{Damage:220,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§6Blast Jumper§r : Throw to switch\"}"},Enchantments:[{id:punch,lvl:2}]}
+execute if entity @e[scores={mode=1}] run replaceitem entity @s hotbar.0 minecraft:bow{Damage:220,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§6Blast Jumper§r : Throw to switch\"}"},Enchantments:[{id:punch,lvl:3}]}
 #replaceitem entity @s hotbar.5 arrow{display:{Name:"{\"italic\":false,\"text\":\"Not your father's Blast Off\"}"}}
 scoreboard players set @s bow 0
 replaceitem entity @s hotbar.4 minecraft:paper{display:{Name:"{\"italic\":false,\"text\":\"§6You can now PvP with players :D\"}"}}

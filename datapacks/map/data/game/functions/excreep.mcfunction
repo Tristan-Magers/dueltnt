@@ -3,6 +3,7 @@ scoreboard players remove @s CPtimer 1
 execute as @s[scores={CPtimer=139}] at @s run scoreboard players operation @e[type=minecraft:creeper] tntID -= @s tntID
 execute as @s[scores={CPtimer=139}] at @s run execute as @e[type=creeper,scores={tntID=0}] at @s run particle minecraft:end_rod ~ ~ ~ 0 0 0 .5 100 force
 execute as @s[scores={CPtimer=139}] at @s run execute as @e[type=creeper,scores={tntID=0}] at @s run data merge entity @s {Fuse:1,ignited:1}
+execute as @s[scores={CPtimer=139}] at @s run execute as @e[type=creeper,scores={tntID=0}] at @s run summon creeper ~ ~ ~ {Invulnerable:1,Fuse:1,ignited:1,powered:1}
 execute as @s[scores={CPtimer=139}] at @s run execute as @e[type=creeper,scores={tntID=0}] at @s run scoreboard players set @a[scores={CPtimer=139}] CPtimer 138
 execute as @s[scores={CPtimer=139}] at @s run scoreboard players operation @e[type=minecraft:creeper] tntID += @s tntID
 scoreboard players set @a[scores={CPtimer=139}] CPtimer 3

@@ -1,8 +1,8 @@
 execute as @s[scores={class=4}] at @s run effect give @p blindness 1 0 true
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!pig] at @s run summon lightning_bolt
-execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run summon creeper ~ ~.5 ~ {Invulnerable:1,powered:1,Fuse:8}
+execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run summon creeper ~ ~.5 ~ {Invulnerable:1,powered:1,Fuse:9999,Attributes:[{Name:generic.followRange,Base:0},{Name:generic.movementSpeed,Base:0}]}
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run scoreboard players operation @e[limit=1,sort=nearest,type=minecraft:creeper] tntID = @s tntID
-execute if entity @e[scores={mode=1}] run execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run summon creeper ~ ~.5 ~ {Invulnerable:1,powered:1,Fuse:8}
+execute if entity @e[scores={mode=1}] run execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run summon creeper ~ ~.5 ~ {Invulnerable:1,powered:1,Fuse:9999,Attributes:[{Name:generic.followRange,Base:0},{Name:generic.movementSpeed,Base:0}]}
 execute if entity @e[scores={mode=1}] run execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run scoreboard players operation @e[limit=2,sort=nearest,type=minecraft:creeper] tntID = @s tntID
 scoreboard players set @s[scores={class=5}] GoPortal 1
 execute as @s[scores={class=3}] at @s run playsound minecraft:entity.tnt.primed master @p
@@ -25,9 +25,9 @@ execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=1,timer=1}
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=2,timer=1}] 85 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=3,timer=1}] 80 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=4,timer=1}] 150 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=6,timer=1}] 200 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=7,timer=1}] 160 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=9,timer=1}] 300 levels
+execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=6,timer=1}] 190 levels
+execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=7,timer=1}] 130 levels
+execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=9,timer=1}] 200 levels
 
 execute if entity @e[scores={mode=1}] run xp add @s[scores={class=0,timer=1}] 12 levels
 execute if entity @e[scores={mode=1}] run xp add @s[scores={class=1,timer=1}] 40 levels
@@ -62,7 +62,7 @@ execute as @s[scores={class=9}] at @s run playsound minecraft:block.grass.place 
 #execute as @s[scores={class=9}] at @s run summon tnt ~ ~ ~ {Fuse:21}
 #execute as @s[scores={class=9}] at @s run execute as @e[type=tnt,limit=2,sort=nearest] at @s run function game:gridpos
 
-#scoreboard players add @a[scores={class=9}] masterb 9
+#scoreboard players add @a[scores={class=9}] masterb 3
 #execute as @s[scores={class=9}] at @s run function items:masterwandget
 
 execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run summon tnt ~ ~ ~ {Fuse:16}
