@@ -1,0 +1,13 @@
+{
+    "parent": "item/bow",
+    "textures": {
+        "layer0": "item/tra_bow_pulling_0"
+    },
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [ -80, 260, -40 ],
+            "translation": [ 0, 3, 0 ],
+            "scale": [ 0.9, 0.9, 0.9 ]
+		}
+	}
+}
