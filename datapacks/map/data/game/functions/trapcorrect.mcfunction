@@ -1,6 +1,7 @@
 #replaceitem entity @s[scores={nobow=3..}] hotbar.0 bow{Damage:80,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§cTNT Trap§r : Throw to switch\"}"}}
 
 tag @s remove first
+tag @s[tag=haspup] add first
 tag @s[nbt={Inventory:[{id:"minecraft:bamboo",Slot:0b}]}] add first
 tag @s[nbt={Inventory:[{id:"minecraft:flint",Slot:0b}]}] add first
 tag @s[nbt={Inventory:[{id:"minecraft:bowl",Slot:0b}]}] add first
@@ -13,8 +14,8 @@ scoreboard players set @s[tag=!first,scores={bowlthrow=0,flintthrow=0,bambthrow=
 clear @s[nbt=!{Inventory:[{id:"minecraft:bone",Slot:1b}]}] bone
 replaceitem entity @s[nbt=!{Inventory:[{id:"minecraft:bone",Slot:1b}]}] hotbar.1 minecraft:bone{Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§6Detonate Arrows §f§r: Right-click\"}"}}
 
-clear @s[nbt=!{Inventory:[{id:"minecraft:tnt",Slot:2b}]},scores={PlaceMineTime=..0}] tnt
-scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:tnt",Slot:2b}]},scores={PlaceMineTime=..0}] PlaceMineTime 39
+clear @s[nbt=!{Inventory:[{id:"minecraft:tnt",Slot:2b}]},scores={PlaceMineTime=..80}] tnt
+scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:tnt",Slot:2b}]},scores={PlaceMineTime=..80}] PlaceMineTime 200
 
 clear @s[nbt=!{Inventory:[{id:"minecraft:redstone",Slot:4b}]},scores={TBtimer=..-2}] redstone
 scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:redstone",Slot:4b}]},scores={TBtimer=..-2}] TBtimer 1

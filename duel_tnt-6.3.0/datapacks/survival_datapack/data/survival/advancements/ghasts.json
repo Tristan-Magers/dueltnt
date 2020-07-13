@@ -1,0 +1,24 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Clear Skys"
+        },
+        "description": {
+            "text": "Kill 13 Ghasts in one round"
+        },
+        "icon": {
+            "item": "minecraft:ghast_tear"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": false
+    },
+    "criteria": {
+        "ghasts": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "survival:root"
+}

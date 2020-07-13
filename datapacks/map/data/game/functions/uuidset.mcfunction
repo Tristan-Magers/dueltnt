@@ -6,6 +6,8 @@ execute anchored eyes run summon minecraft:arrow ^ ^ ^0.1 {Tags:["arrow_new"],Co
 data modify storage proj arrow.OwnerUUIDMost set from entity @s UUIDMost
 data modify storage proj arrow.OwnerUUIDLeast set from entity @s UUIDLeast
 
+say test
+
 # generating motion
 data modify storage proj arrow.Motion set from entity 0-0-0-0-0 Pos
 

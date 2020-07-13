@@ -1,55 +1,49 @@
 {
   "classes:class3": {
     "criteria": {
-      "trapper": "2020-04-11 00:45:42 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/black_dye": {
-    "criteria": {
-      "has_ink_sac": "2020-04-11 01:31:26 -0600"
+      "trapper": "2020-06-26 00:36:51 -0600"
     },
     "done": true
   },
   "minecraft:recipes/misc/magenta_dye_from_blue_red_white_dye": {
     "criteria": {
-      "has_rose_red": "2020-04-17 02:39:48 -0600"
+      "has_rose_red": "2020-07-12 20:04:18 -0600"
     },
     "done": true
   },
   "minecraft:recipes/misc/iron_nugget_from_blasting": {
     "criteria": {
-      "has_iron_chestplate": "2020-02-22 15:58:05 -0700"
+      "has_iron_chestplate": "2020-07-12 19:38:41 -0600"
     },
     "done": true
   },
   "classes:class5": {
     "criteria": {
-      "mad": "2020-04-11 00:51:01 -0600"
+      "mad": "2020-07-12 19:52:35 -0600"
     },
     "done": true
   },
   "classes:class4": {
     "criteria": {
-      "wizard": "2020-04-11 00:45:30 -0600"
+      "wizard": "2020-07-12 19:52:19 -0600"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_chicken_from_smoking": {
     "criteria": {
-      "has_chicken": "2020-04-11 00:53:29 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/food/cooked_porkchop_from_campfire_cooking": {
-    "criteria": {
-      "has_porkchop": "2020-04-11 00:55:26 -0600"
+      "has_chicken": "2020-07-12 19:53:48 -0600"
     },
     "done": true
   },
   "minecraft:recipes/misc/pink_dye_from_red_white_dye": {
     "criteria": {
-      "has_red_dye": "2020-04-17 02:39:48 -0600"
+      "has_red_dye": "2020-07-12 20:04:18 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_porkchop_from_campfire_cooking": {
+    "criteria": {
+      "has_porkchop": "2020-07-13 00:42:47 -0600"
     },
     "done": true
   },
@@ -59,75 +53,237 @@
     },
     "done": true
   },
-  "minecraft:recipes/food/baked_potato_from_smoking": {
+  "minecraft:recipes/building_blocks/smooth_stone_slab": {
     "criteria": {
-      "has_potato": "2020-04-11 00:55:04 -0600"
+      "has_smooth_stone": "2020-07-12 21:16:21 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/food/dried_kelp_from_campfire_cooking": {
+  "minecraft:recipes/building_blocks/stone_stairs_from_stone_stonecutting": {
     "criteria": {
-      "has_kelp": "2020-02-22 15:58:17 -0700"
+      "has_stone": "2020-07-12 21:21:12 -0600"
     },
     "done": true
   },
   "classes:class7": {
     "criteria": {
-      "echo": "2020-04-11 00:45:32 -0600"
+      "echo": "2020-07-12 19:52:21 -0600"
     },
     "done": true
   },
   "classes:class6": {
     "criteria": {
-      "reaper": "2020-04-11 00:50:47 -0600"
+      "reaper": "2020-07-12 19:52:43 -0600"
     },
     "done": true
   },
   "classes:class9": {
     "criteria": {
-      "overlord": "2020-04-11 00:52:48 -0600"
+      "overlord": "2020-07-12 19:53:48 -0600"
     },
     "done": true
   },
   "minecraft:recipes/misc/magenta_dye_from_blue_red_pink": {
     "criteria": {
-      "has_red_dye": "2020-04-17 02:39:48 -0600"
+      "has_red_dye": "2020-07-12 20:04:18 -0600"
     },
     "done": true
   },
   "classes:class8": {
     "criteria": {
-      "gardener": "2020-04-11 00:46:20 -0600"
+      "gardener": "2020-07-12 19:53:25 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_bricks_from_stone_stonecutting": {
+    "criteria": {
+      "has_stone": "2020-07-12 21:21:12 -0600"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_salmon_from_smoking": {
     "criteria": {
-      "has_salmon": "2020-04-20 22:40:20 -0600"
+      "has_salmon": "2020-07-12 20:32:37 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/target": {
+    "criteria": {
+      "has_redstone": "2020-06-26 00:37:05 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_brick_slab_from_stone_bricks_stonecutting": {
+    "criteria": {
+      "has_stone_bricks": "2020-07-12 21:14:57 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/stone_brick_wall_from_stone_bricks_stonecutting": {
+    "criteria": {
+      "has_stone_bricks": "2020-07-12 21:14:57 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/stonecutter": {
+    "criteria": {
+      "has_stone": "2020-07-12 21:21:12 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/campfire": {
+    "criteria": {
+      "has_coal": "2020-07-12 19:47:53 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_stone_bricks_from_stone_bricks_stonecutting": {
+    "criteria": {
+      "has_stone_bricks": "2020-07-12 21:14:57 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/scaffolding": {
+    "criteria": {
+      "has_bamboo": "2020-07-12 19:51:09 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_stone": {
+    "criteria": {
+      "has_stone": "2020-07-12 21:21:12 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/blast_furnace": {
+    "criteria": {
+      "has_smooth_stone": "2020-07-12 21:16:21 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_slab_from_stone_stonecutting": {
+    "criteria": {
+      "has_stone": "2020-07-12 21:21:12 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_stone_bricks_stone_from_stonecutting": {
+    "criteria": {
+      "has_stone": "2020-07-12 21:21:12 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_ingot_from_blasting": {
+    "criteria": {
+      "has_gold_ore": "2020-07-12 20:32:31 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/smithing_table": {
+    "criteria": {
+      "has_iron_ingot": "2020-07-12 19:47:06 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/red_carpet_from_white_carpet": {
+    "criteria": {
+      "has_red_dye": "2020-07-12 20:04:18 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/quartz_bricks": {
+    "criteria": {
+      "has_quartz_block": "2020-07-12 21:51:52 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_brick_slab_from_stone_stonecutting": {
+    "criteria": {
+      "has_stone": "2020-07-12 21:21:12 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/cooked_salmon_from_campfire_cooking": {
+    "criteria": {
+      "has_salmon": "2020-07-12 20:32:37 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_nugget_from_blasting": {
+    "criteria": {
+      "has_golden_leggings": "2020-06-26 00:35:46 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/black_dye": {
+    "criteria": {
+      "has_ink_sac": "2020-07-12 19:59:09 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/stone_brick_walls_from_stone_stonecutting": {
+    "criteria": {
+      "has_stone": "2020-07-12 21:21:12 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_brick_stairs_from_stone_stonecutting": {
+    "criteria": {
+      "has_stone": "2020-07-12 21:21:12 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/quartz_stairs_from_quartz_block_stonecutting": {
+    "criteria": {
+      "has_quartz_block": "2020-07-12 21:51:52 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/dried_kelp_from_campfire_cooking": {
+    "criteria": {
+      "has_kelp": "2020-07-12 19:38:47 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/quartz_bricks_from_quartz_block_stonecutting": {
+    "criteria": {
+      "has_quartz_block": "2020-07-12 21:51:52 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/chiseled_quartz_block_from_quartz_block_stonecutting": {
+    "criteria": {
+      "has_quartz_block": "2020-07-12 21:51:52 -0600"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_beef_from_smoking": {
     "criteria": {
-      "has_beef": "2020-04-20 22:40:37 -0600"
+      "has_beef": "2020-07-12 20:32:39 -0600"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_cod_from_smoking": {
     "criteria": {
-      "has_cod": "2020-04-20 22:40:38 -0600"
+      "has_cod": "2020-07-12 20:32:40 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/stone_brick_wall": {
+    "criteria": {
+      "has_stone_bricks": "2020-07-12 21:14:57 -0600"
     },
     "done": true
   },
   "minecraft:recipes/decorations/fletching_table": {
     "criteria": {
-      "has_flint": "2020-04-17 03:19:45 -0600"
+      "has_flint": "2020-06-26 00:37:05 -0600"
     },
     "done": true
   },
   "minecraft:recipes/decorations/lantern": {
     "criteria": {
-      "has_iron_ingot": "2020-04-11 00:54:13 -0600"
+      "has_iron_ingot": "2020-07-12 19:47:06 -0600"
     },
     "done": true
   },
@@ -139,99 +295,105 @@
   },
   "minecraft:recipes/food/cooked_chicken_from_campfire_cooking": {
     "criteria": {
-      "has_chicken": "2020-04-11 00:53:29 -0600"
+      "has_chicken": "2020-07-12 19:53:48 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/quartz_slab_from_stonecutting": {
+    "criteria": {
+      "has_quartz_block": "2020-07-12 21:51:52 -0600"
     },
     "done": true
   },
   "minecraft:recipes/misc/stick_from_bamboo_item": {
     "criteria": {
-      "has_bamboo": "2020-04-16 16:31:48 -0600"
+      "has_bamboo": "2020-07-12 19:51:09 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_stairs": {
+    "criteria": {
+      "has_stone": "2020-07-12 21:21:12 -0600"
     },
     "done": true
   },
   "minecraft:recipes/food/dried_kelp_from_smoking": {
     "criteria": {
-      "has_kelp": "2020-02-22 15:58:17 -0700"
+      "has_kelp": "2020-07-12 19:38:47 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/campfire": {
+  "minecraft:recipes/building_blocks/stone_brick_stairs_from_stone_bricks_stonecutting": {
     "criteria": {
-      "has_stick": "2020-04-11 01:31:26 -0600"
+      "has_stone_bricks": "2020-07-12 21:14:57 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/scaffolding": {
+  "minecraft:recipes/building_blocks/quartz_pillar_from_quartz_block_stonecutting": {
     "criteria": {
-      "has_bamboo": "2020-04-16 16:31:48 -0600"
+      "has_quartz_block": "2020-07-12 21:51:52 -0600"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_beef_from_campfire_cooking": {
     "criteria": {
-      "has_beef": "2020-04-20 22:40:37 -0600"
+      "has_beef": "2020-07-12 20:32:39 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chain": {
+    "criteria": {
+      "has_iron_ingot": "2020-07-12 19:47:06 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/smooth_quartz": {
+    "criteria": {
+      "has_quartz_block": "2020-07-12 21:51:52 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cartography_table": {
+    "criteria": {
+      "has_paper": "2020-06-26 00:37:05 -0600"
     },
     "done": true
   },
   "minecraft:recipes/decorations/red_stained_glass_pane_from_glass_pane": {
     "criteria": {
-      "has_red_dye": "2020-04-17 02:39:48 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/gold_ingot_from_blasting": {
-    "criteria": {
-      "has_gold_ore": "2020-04-20 22:40:20 -0600"
+      "has_red_dye": "2020-07-12 20:04:18 -0600"
     },
     "done": true
   },
   "minecraft:recipes/combat/crossbow": {
     "criteria": {
-      "has_iron_ingot": "2020-04-11 00:54:13 -0600"
+      "has_iron_ingot": "2020-07-12 19:47:06 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/smithing_table": {
+  "minecraft:recipes/decorations/soul_campfire": {
     "criteria": {
-      "has_iron_ingot": "2020-04-11 00:54:13 -0600"
+      "has_stick": "2020-07-12 19:59:09 -0600"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_cod_from_campfire_cooking": {
     "criteria": {
-      "has_cod": "2020-04-20 22:40:38 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/red_carpet_from_white_carpet": {
-    "criteria": {
-      "has_red_dye": "2020-04-17 02:39:48 -0600"
+      "has_cod": "2020-07-12 20:32:40 -0600"
     },
     "done": true
   },
   "minecraft:recipes/food/cooked_porkchop_from_smoking": {
     "criteria": {
-      "has_porkchop": "2020-04-11 00:55:26 -0600"
+      "has_porkchop": "2020-07-13 00:42:47 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/food/baked_potato_from_campfire_cooking": {
+  "minecraft:recipes/building_blocks/smooth_stone_slab_from_smooth_stone_stonecutting": {
     "criteria": {
-      "has_potato": "2020-04-11 00:55:04 -0600"
+      "has_smooth_stone": "2020-07-12 21:16:21 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/food/cooked_salmon_from_campfire_cooking": {
-    "criteria": {
-      "has_salmon": "2020-04-20 22:40:20 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/gold_nugget_from_blasting": {
-    "criteria": {
-      "has_golden_leggings": "2020-02-22 15:57:50 -0700"
-    },
-    "done": true
-  },
-  "DataVersion": 2230
+  "DataVersion": 2567
 }

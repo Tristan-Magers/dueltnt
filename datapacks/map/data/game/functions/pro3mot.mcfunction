@@ -5,8 +5,7 @@ scoreboard players operation @e[limit=1,tag=newtrack,sort=nearest] tntID = @s tn
 scoreboard players set @e[limit=1,tag=newtrack,sort=nearest] BombBow 1
 
 # writing uuid data 
-data modify storage proj arrow.OwnerUUIDMost set from entity @p UUIDMost
-data modify storage proj arrow.OwnerUUIDLeast set from entity @p UUIDLeast
+data modify storage proj arrow.Owner set from entity @p UUID
 
 # data writing to arrow
 data modify entity @e[tag=newtrack,limit=1] {} merge from storage proj arrow

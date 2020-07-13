@@ -20,8 +20,12 @@ execute if entity @e[scores={mode=4}] run tag @e[type=ghast] add target
 execute if entity @e[scores={mode=4}] run tag @e[type=wither] add target
 #tag @e[limit=1,type=villager,distance=..50] add target
 
-execute as @s at @s run tp @s ~ ~ ~ facing entity @e[limit=1,tag=target] eyes
+execute positioned ^ ^ ^4 run tag @e[limit=1,tag=target,sort=nearest] add close
+
+execute as @s at @s run tp @s ~ ~ ~ facing entity @e[tag=close,limit=1] eyes
 execute positioned ~ ~-1 ~ unless entity @e[distance=..1,tag=target] if entity @e[distance=1..50,tag=target] positioned ~ ~1 ~ run tp @s ^ ^ ^.3
+
+tag @e[tag=close] remove close
 
 #say @a[tag=self] self
 #say @a[tag=!self] notself

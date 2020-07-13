@@ -1,0 +1,26 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Immortal Grump",
+            "color": "gold"
+        },
+        "description": {
+            "text": "Find Overlord",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:cooked_salmon"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "criteria": {
+        "overlord": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "classes:root"
+}

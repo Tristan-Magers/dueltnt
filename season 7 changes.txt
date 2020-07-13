@@ -1,14 +1,28 @@
 *Season 6 Update*
 
+[General]
+
+- Updated to 1.16.1, fixing subsequent bugs
+
+[Textures]
+
+- Improved armor texture for Reaper, making it not just pure black
+
 [Mode Changes]
+
 - Removed "Overpowered" mode
 	- Note: this is exchanged for a general overall power increase
-- "Air Missile" item
+- "Air Missile" item (Phantom Mode)
 	- Moves .1 more blocks per tick (.24 -> .34)
 	- Takes 7 ticks to start destroying
 	- Makes more particles
 	- Can travel the full map (previously 33 blocks)
 	- Note: These changes effect the new "Air Missile" Ghost item
+	
+[Map Changes]
+
+- Obsidian spots added to the center of Showtime
+- Gaps in the obsidian/bedrock added to the center of Terminal
 
 [Character Changes]
 
@@ -22,15 +36,16 @@ Soldier
 	- Fuse starts after being 4.5 Blocks away from user
 	- .8s faster fuse (1.25s -> .45s)
 	- Glows, with color indicating if fuse has triggered
-- Starts with 9 more enderpeals (3 -> 12)
+- Starts with 3 more enderpeals (3 -> 6)
 - Ender pearls give 1.5s less invisibility (3s -> 1.5s)
-- Starts with 2 less Anvils (10 -> 12)
 
 Assassin
 - Replaced TNT Eggs with "Sneak Attack" (also 5 uses)
+	- Note: Teleport disables Sneak Attack for 2 seconds
 - Mass Freeze can freeze people 1 block further away (2 -> 3)
 
 Ghost
+- Bow reloads .25s faster (3.25s -> 3s)
 - Added "Air Missile" (4s start reload, 12s reload)
 	- Slot Alternates Between Smoke Bomb and Air Missile
 	- 3s and 1s reload after each (origionally 5s for Smoke Bomb)
@@ -38,11 +53,16 @@ Ghost
 - Smoke Bomb gives .2s more Invisibility (1s -> 1.2s)
 - Gets one extra smoke bomb (previously just one)
 	- .5s reload between them
+- 2 Teleports replaced with 1 Teleport on a 19s reload
 - Primed for Dark can give 1.4s longer max blindness (3.6s -> 5s) (functionally a max 4s)
 	- Glowing status adjusted to reflect the period of actual blindness (one second less)
 
 Trapper
-- Arrows make sound when they hit the ground (only audible for user)e
+- Arrows make sound when they hit the ground (only audible for user)
+- Arrows make sound when close to another player (only audible for user)
+- Tracking Bomb reloads 1s faster (12s -> 11s)
+- Tracking Bomb gives .75s less of levitation (1s -> .25s)
+- Tracking Bomb now closes closest target in front of Track Bomb (instead of at the track bomb iteself)
 
 Wizard
 - Bows reload .4s slower (1.2s -> 1.6s)
@@ -59,9 +79,9 @@ Mad Scientist
 - Bow reloads .15s faster (2.95s -> 2.8s)
 - Poral has improved particle
 - Portal summons 1 more tnt (1 -> 2)
-- Portal TNT has .15s longer Fuse (0s -> .15s)
+- Portal now cancels all motion (including for 1 of its own tnt)
 - Portal can now be teleported to from 1 blocks further (15 Blocks -> 16 Blocks)
-- Portal dies 1 seconds faster (7s -> 6s)
+- Portal dies 1 seconds faster (7s -> 6.5s)
 - Acid reloads 2s faster (4.5s -> 2.5s)
 - Powershield no longer recharges blocks after tnt detonates (previously stayed active 1.8 extra seconds)
 
@@ -70,22 +90,23 @@ Reaper
 - Scythe reloads .35s faster (5.75s -> 5.3s)
 
 Echo
-- Blast Wand reloads .5s faster (.9 -> .85s)
-- Boom Wand reloads .05s faster (.55s -> .5s)
-- *Blast Wand interacts with slimes and magic-stars
-- *Ground Spell can't be used in the void or above spawn height
+- Ground Spell can't be used in the void or above spawn height
 
 Gardener
 - Bow reloads .15s faster (1.25s -> 1.1s)
-- Bow has one more punch (2 -> 3)
 - EXTREME Shovel has 2 more knockback (6 -> 8)
 - Plague reloads 5s faster (15s -> 10s)
 - Plague reloads 4s faster at begining of round (12s -> 8s)
 - Plague gives 2s less poison (5s -> 3s)
 - Plague poison is 4 levels less (11 -> 7s)
+- Plaguing self (on any gardener) Boosts you 4 seconds
+	- Speed level 3, Jumpboost level 2
+	- 1 extra knockback on base shovel
+	- Bow reloads very quickly
+	- Reloads gravetraps
 
 Overloard
-- Shift reloads 5s faster (15s -> 10s)
+- Shift reloads 4.5s faster (15s -> 10.5s)
 - Shift decays 6s faster (15s -> 9s)
 - Masterwand starts with 2 blocks more range (5 blocks -> 7 blocks)
 - Master wand upgrades increase range 2 blocks less (4.8 -> 2.8)
@@ -94,9 +115,29 @@ Overloard
 - Land Slide costs 1 less (15 -> 14)
 - Boom Halo (a.k.a. beef) costs 2 less (15 -> 13)
 - Can hold 3 less Material (35 -> 32)
-- Passively given 1 matter every 1.3s
+- Passively given 1 matter every 1.2s
+
+[Particle]
+
+- Improved the look of Prometheus
+- Added Radiant
+- Added Soul
 
 [Bug Fixes]
-- Echo makes boom wand partcle on Boom Wand recover reload
+- Lobby Songs play incorrectly
+- Invisible Armor Stand could summon randomly on maps, blocking shots
+- Spectators could be sucked into vortex (lol)
+- Placeable items couldn't be placed on some smooth sandstone
+- Soldier anvils can be accidentally permanently destroyed
+- Trapper's Mines can be accidentally permanently destroyed
+- Trapper's Bow does not start with correct instructions
+- Trapper's Bows says 'Overhand' instead of 'Offhand'
+- Trapper's Track Bomb often did not track the nearest target
+- Trapper unable to pickup power ups in Phantom Mode
+- Reaper's Eggs can be accidentally permanently destroyed
+- Reaper's Feathers can be accidentally permanently destroyed
+- Echo makes boom wand particle on Boom Wand recover reload
 - Echo shift timer starts too high
 - Overlord Unstable Mass text says the move gives matter
+- Overlord Unstable Mass makes decay sound even when no blocks remain
+- Title for "Heads Up" may linger in Survival mode

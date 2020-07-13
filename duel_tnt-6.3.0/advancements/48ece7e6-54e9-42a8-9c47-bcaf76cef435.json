@@ -1,0 +1,33 @@
+{
+  "minecraft:recipes/misc/iron_nugget_from_blasting": {
+    "criteria": {
+      "has_iron_chestplate": "2019-11-05 11:16:04 -0500"
+    },
+    "done": true
+  },
+  "classes:root": {
+    "criteria": {
+      "warrior": "2019-11-05 11:15:20 -0500"
+    },
+    "done": true
+  },
+  "survival:root": {
+    "criteria": {
+      "warrior": "2019-11-05 11:15:20 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/dried_kelp_from_campfire_cooking": {
+    "criteria": {
+      "has_kelp": "2019-11-05 11:20:03 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/food/dried_kelp_from_smoking": {
+    "criteria": {
+      "has_kelp": "2019-11-05 11:20:03 -0500"
+    },
+    "done": true
+  },
+  "DataVersion": 1976
+}

@@ -1,6 +1,10 @@
-scoreboard players remove @p TBtimer 1
+scoreboard players remove @s TBtimer 1
 
 clear @s[scores={TBtimer=239}] redstone
+
+effect clear @s[scores={TBtimer=229}] minecraft:levitation
+
+scoreboard players remove @s[scores={TBtimer=200}] TBtimer 20
 
 execute as @s[scores={TBtimer=239}] at @s run summon minecraft:armor_stand ~ ~ ~ {Small:1,Marker:1,Invulnerable:1,Tags:["tnttrack"],Invisible:1,ArmorItems:[{},{},{},{Count:1,id:tnt}]}
 execute as @s[scores={TBtimer=239}] at @s run scoreboard players operation @e[distance=..0.1,limit=1,tag=tnttrack] tntID = @s tntID

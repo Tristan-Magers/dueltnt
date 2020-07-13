@@ -1,0 +1,2 @@
+summon minecraft:zombie ~ ~ ~ {Tags:["dummy"],Invulnerable:1b,IsBaby:0b,ArmorItems:[{},{},{},{id:"minecraft:glass",Count:1b}],Attributes:[{Name:generic.followRange,Base:0},{Name:generic.movementSpeed,Base:0}]}
+team join Main @e[tag=dummy]

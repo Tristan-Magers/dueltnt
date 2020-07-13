@@ -1,4 +1,4 @@
-tag @s remove pull
+tag @e remove pull
 tag @a[gamemode=adventure] add pull
 tag @e[type=zombie] add pull
 

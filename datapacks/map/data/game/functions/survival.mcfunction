@@ -85,6 +85,8 @@ execute as @s[scores={survival=1140}] run execute as @a[x=600,y=60,z=600,distanc
 execute as @s[scores={survival=1170}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
 execute as @s[scores={survival=1200}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
 
+execute as @s[scores={survival=1240..1270}] run title @a title {"text":""}
+
 execute as @s[scores={survival=1220}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
 execute as @s[scores={survival=1220}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
 execute as @s[scores={survival=1220}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
@@ -157,6 +159,8 @@ execute as @s[scores={survival=2630}] run execute as @a[x=600,y=60,z=600,distanc
 execute as @s[scores={survival=2645}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
 execute as @s[scores={survival=2660}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
 execute as @s[scores={survival=2670}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
+
+execute as @s[scores={survival=2700..2730}] run title @a title {"text":""}
 
 execute as @s[scores={survival=2850}] run summon ghast 615 35 615
 execute as @s[scores={survival=2850}] run summon ghast 615 35 615

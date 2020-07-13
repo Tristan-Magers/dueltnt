@@ -9,7 +9,7 @@ execute as @s[scores={class=3}] at @s run playsound minecraft:entity.tnt.primed 
 execute as @s[scores={class=3}] at @s run summon tnt ~ ~.5 ~ {Fuse:5}
 execute as @s[scores={class=3}] at @s run effect give @p speed 1 1
 execute as @s[scores={class=2}] at @s run effect give @s levitation 1 8
-execute as @s[scores={class=2}] at @s run scoreboard players set @s ghostshift 20
+#execute as @s[scores={class=2}] at @s run scoreboard players set @s ghostshift 20
 
 execute unless entity @e[scores={mode=1}] run execute as @s[scores={class=1}] at @s run effect give @s jump_boost 3 4
 execute unless entity @e[scores={mode=1}] run execute as @s[scores={class=1}] at @s run scoreboard players set @p Invis 20
@@ -27,7 +27,7 @@ execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=3,timer=1}
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=4,timer=1}] 150 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=6,timer=1}] 190 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=7,timer=1}] 130 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=9,timer=1}] 200 levels
+execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=9,timer=1}] 210 levels
 
 execute if entity @e[scores={mode=1}] run xp add @s[scores={class=0,timer=1}] 12 levels
 execute if entity @e[scores={mode=1}] run xp add @s[scores={class=1,timer=1}] 40 levels

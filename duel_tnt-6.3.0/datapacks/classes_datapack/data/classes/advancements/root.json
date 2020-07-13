@@ -1,0 +1,25 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Classes",
+            "color": "gold"
+        },
+        "description": {
+            "text": "Can you find them all?"
+        },
+        "icon": {
+            "item": "minecraft:bow"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true,
+        "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+    },
+    "criteria": {
+        "warrior": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

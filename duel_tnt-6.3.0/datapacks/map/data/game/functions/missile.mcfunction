@@ -1,0 +1,12 @@
+execute as @s at @s run function game:missilemove
+execute as @s at @s run function game:inblock
+execute as @s[tag=!in] at @s run function game:missilehit
+execute as @s at @s run function game:missilemove
+execute as @s at @s run function game:inblock
+execute as @s[tag=!in] at @s run function game:missilehit
+execute as @s at @s run function game:missilemove
+execute as @s at @s run function game:inblock
+execute as @s[tag=!in] at @s run function game:missilehit
+execute as @s at @s run function game:missilemove
+execute as @s at @s run function game:inblock
+execute as @s[tag=!in] at @s run function game:missilehit

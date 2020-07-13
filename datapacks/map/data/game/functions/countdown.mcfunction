@@ -22,6 +22,8 @@ execute as @s[scores={countdown=-10}] at @s run scoreboard objectives setdisplay
 execute as @s[scores={countdown=67}] at @s run setblock 600 9 600 air
 execute as @s[scores={countdown=67}] at @s run setblock 600 10 600 air
 
+execute as @s[scores={countdown=50}] at @s run execute as @a[x=620,y=20,z=600,distance=..100] at @s run stopsound @s
+
 execute as @s[scores={countdown=60}] at @s run time set 11000
 execute as @s[scores={countdown=60}] at @s run execute as @e[name=Map,type=armor_stand,scores={game=99}] at @s run time set 12800
 
