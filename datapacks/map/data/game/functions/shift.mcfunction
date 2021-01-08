@@ -1,6 +1,6 @@
 execute as @s[scores={class=4}] at @s run effect give @p blindness 1 0 true
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!pig] at @s run summon lightning_bolt
-execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run summon creeper ~ ~.5 ~ {Invulnerable:1,powered:1,Fuse:9999,Attributes:[{Name:generic.followRange,Base:0},{Name:generic.movementSpeed,Base:0}]}
+execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run summon creeper ~ ~.5 ~ {Invulnerable:1,powered:1,Fuse:9999,Attributes:[{Name:generic.followRange,Base:0},{Name:generic.movementSpeed,Base:0}],Tags:["wizcreep"]}
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run scoreboard players operation @e[limit=1,sort=nearest,type=minecraft:creeper] tntID = @s tntID
 execute if entity @e[scores={mode=1}] run execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run summon creeper ~ ~.5 ~ {Invulnerable:1,powered:1,Fuse:9999,Attributes:[{Name:generic.followRange,Base:0},{Name:generic.movementSpeed,Base:0}]}
 execute if entity @e[scores={mode=1}] run execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run scoreboard players operation @e[limit=2,sort=nearest,type=minecraft:creeper] tntID = @s tntID
@@ -20,14 +20,16 @@ execute as @s[scores={class=0},distance=..100] at @s run summon creeper ~ ~.05 ~
 
 scoreboard players set @s timer 1
 
+scoreboard players add @s overlordsc 1
+
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=0,timer=1}] 17 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=1,timer=1}] 88 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=2,timer=1}] 85 levels
+execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=2,timer=1}] 80 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=3,timer=1}] 80 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=4,timer=1}] 150 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=6,timer=1}] 190 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=7,timer=1}] 130 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=9,timer=1}] 210 levels
+execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=7,timer=1}] 160 levels
+execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=9,timer=1}] -1 levels
 
 execute if entity @e[scores={mode=1}] run xp add @s[scores={class=0,timer=1}] 12 levels
 execute if entity @e[scores={mode=1}] run xp add @s[scores={class=1,timer=1}] 40 levels

@@ -187,3 +187,14 @@ setblock 600 9 600 redstone_block
 setblock -4 5 -20 redstone_block
 
 fill 599 59 599 601 63 601 barrier hollow
+
+#details
+fill 594 1 641 594 1 594 minecraft:stone_bricks
+fill 641 1 641 641 1 594 minecraft:stone_bricks
+fill 594 1 594 641 1 594 minecraft:stone_bricks
+fill 594 1 641 641 1 641 minecraft:stone_bricks
+
+fill 593 1 643 590 1 591 minecraft:stone
+fill 644 1 643 642 1 591 minecraft:stone
+fill 591 1 593 643 1 591 minecraft:stone
+fill 591 1 644 643 1 642 minecraft:stone

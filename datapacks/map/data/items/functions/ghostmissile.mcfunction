@@ -14,4 +14,5 @@ scoreboard players set @s misreload 60
 #effect clear @p minecraft:levitation
 #effect give @p minecraft:levitation 1 0 true
 
+tag @s remove coal
 clear @s coal

@@ -1,6 +1,7 @@
 execute as @s at @s run function game:getdir2
 
-summon minecraft:arrow ~ ~ ~ {NoGravity:1,Tags:["trackshot","newtrack"]}
+execute as @s[tag=!chickenbowsum] run summon minecraft:arrow ~ ~ ~ {NoGravity:1,Tags:["trackshot","newtrack"]}
+execute as @s[tag=chickenbowsum] run summon minecraft:arrow ~ ~ ~ {NoGravity:1,Tags:["trackshot","newtrack","trapchick"]}
 scoreboard players operation @e[limit=1,tag=newtrack,sort=nearest] tntID = @s tntID
 scoreboard players set @e[limit=1,tag=newtrack,sort=nearest] BombBow 1
 

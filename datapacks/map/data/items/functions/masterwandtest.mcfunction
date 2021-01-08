@@ -8,5 +8,6 @@ execute as @s[tag=!mw1] unless block ~ ~ ~ air unless block ~ ~ ~ barrier unless
 
 execute unless block ~ ~ ~ air unless block ~ ~ ~ barrier unless block ~ ~ ~ gold_ore run setblock ~ ~ ~ air destroy
 
+execute if block ~ ~ ~ gold_ore run tag @s add end
 execute if block ~ ~ ~ barrier run tag @s add end
 tag @s[tag=mw] add end

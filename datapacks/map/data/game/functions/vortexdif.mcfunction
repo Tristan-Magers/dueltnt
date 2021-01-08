@@ -1,6 +1,15 @@
+scoreboard players operation @a tntID -= @s tntID
+
 tag @e remove pull
-tag @a[gamemode=adventure] add pull
+tag @a[gamemode=adventure,scores={tntID=1..}] add pull
+tag @a[gamemode=adventure,scores={tntID=..-1}] add pull
 tag @e[type=zombie] add pull
+
+scoreboard players operation @a tntID += @s tntID
+
+scoreboard players operation @e[tag=pull] tntID -= @s tntID
+tag @e[tag=pull,scores={tntID=0}] remove pull
+scoreboard players operation @e[tag=pull] tntID += @s tntID
 
 execute as @s[scores={vortex=..100}] at @s run effect give @e[distance=..8,tag=pull] levitation 1 0
 

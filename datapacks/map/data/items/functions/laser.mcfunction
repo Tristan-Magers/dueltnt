@@ -26,7 +26,9 @@ tag @s[scores={laserDummy=17}] add nohit
 execute as @s[scores={laserDummy=17}] at @s run summon armor_stand ~ ~ ~ {Tags:["wbeam"]}
 execute as @s[scores={laserDummy=17}] at @s run tp @e[tag=wbeam] @s
 execute as @s[scores={laserDummy=17}] at @s run scoreboard players set @e[tag=wbeam] laserDummy 300
+execute as @s[scores={laserDummy=17}] at @s run tag @a[gamemode=spectator] add spectest
 execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=wbeam] at @s run function items:redbeam
+execute as @s[scores={laserDummy=17}] at @s run tag @a[tag=spectest] remove spectest
 tag @s[scores={laserDummy=17}] remove nohit
 
 execute as @s[scores={laserDummy=17}] at @s run execute as @a[tag=beamhit] at @s run function items:beamhit
@@ -35,6 +37,6 @@ execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=beamhit,type=s
 execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=beamhit,type=creeper] at @s run function items:beamhit
 execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=beamhit,type=slime] at @s run function items:beamhit
 
-replaceitem entity @s[scores={laserDummy=-190}] hotbar.4 rabbit_hide{display:{Name:"{\"italic\":false,\"text\":\"§4Laser §r: Right-click\"}"}}
+replaceitem entity @s[scores={laserDummy=-230}] hotbar.4 rabbit_hide{display:{Name:"{\"italic\":false,\"text\":\"§4Laser §r: Right-click\"}"}}
 
 scoreboard players remove @s laserDummy 1

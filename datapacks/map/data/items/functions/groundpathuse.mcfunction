@@ -7,8 +7,8 @@ execute if entity @e[scores={mode=1}] run effect give @p minecraft:jump_boost 3 
 tp @e[limit=1,tag=groundpath,sort=nearest] @p
 execute as @e[limit=1,tag=groundpath,sort=nearest] at @s run tp @s ~ ~-1 ~ ~ 0
 
-scoreboard players remove @s masterb 14
-clear @s gold_ore 14
+scoreboard players remove @s masterb 17
+clear @s gold_ore 17
 
 function items:masterwanditems
 

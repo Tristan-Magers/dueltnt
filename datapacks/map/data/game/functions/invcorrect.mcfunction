@@ -1,4 +1,5 @@
-replaceitem entity @a[nbt=!{Inventory:[{id:"minecraft:potion"}]},x=620,y=20,z=620,distance=3..100] hotbar.8 minecraft:potion{display:{Name:"{\"italic\":false,\"text\":\"§dLeave game §r: Right-click\"}"}}
+clear @a[nbt=!{Inventory:[{id:"minecraft:potion",Slot:8b}]},x=620,y=20,z=620,distance=3..100] potion
+replaceitem entity @a[nbt=!{Inventory:[{id:"minecraft:potion",Slot:8b}]},x=620,y=20,z=620,distance=3..100] hotbar.8 minecraft:potion{display:{Name:"{\"italic\":false,\"text\":\"§dLeave game §r: Right-click\"}"}}
 
 tag @s remove hasbow
 tag @s remove haspup
@@ -25,6 +26,8 @@ clear @s[tag=arrow] arrow
 clear @s[tag=arrow] tipped_arrow
 scoreboard players set @s[tag=arrow,scores={bow=..0}] bow 1
 
+clear @s[scores={nobow=3..}] bow
+
 execute as @s[scores={class=0}] at @s run function game:solcorrect
 execute as @s[scores={class=1}] at @s run function game:asscorrect
 execute as @s[scores={class=2}] at @s run function game:ghostcorrect
@@ -43,4 +46,9 @@ tag @s[scores={class=9},nbt={Inventory:[{id:"minecraft:stone_pickaxe"}]}] add ha
 tag @s[scores={class=9},nbt={Inventory:[{id:"minecraft:iron_pickaxe"}]}] add hasshov
 tag @s[scores={class=9},nbt={Inventory:[{id:"minecraft:golden_pickaxe"}]}] add hasshov
 tag @s[scores={class=9},nbt={Inventory:[{id:"minecraft:diamond_pickaxe"}]}] add hasshov
+clear @s[scores={class=9,masterc=..24},tag=!hasshov] wooden_pickaxe
+clear @s[scores={class=9,masterc=..24},tag=!hasshov] stone_pickaxe
+clear @s[scores={class=9,masterc=..24},tag=!hasshov] iron_pickaxe
+clear @s[scores={class=9,masterc=..24},tag=!hasshov] golden_pickaxe
+clear @s[scores={class=9,masterc=..24},tag=!hasshov] diamond_pickaxe
 execute as @s[scores={class=9,masterc=..24},tag=!hasshov] at @s run function items:masterwanduse

@@ -15,5 +15,5 @@ scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:sugar",Slot:2b}]},scor
 clear @s[nbt=!{Inventory:[{id:"minecraft:ink_sac",Slot:1b}]},scores={SPorttimer=..0}] ink_sac
 scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:ink_sac",Slot:1b}]},scores={SPorttimer=..0}] SPorttimer 2
 
-clear @s[nbt=!{Inventory:[{id:"minecraft:rabbit_hide",Slot:4b}]},scores={laserDummy=..-191}] rabbit_hide
-scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:rabbit_hide",Slot:4b}]},scores={laserDummy=..-191}] laserDummy -189
+clear @s[nbt=!{Inventory:[{id:"minecraft:rabbit_hide",Slot:4b}]},scores={laserDummy=..-231}] rabbit_hide
+scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:rabbit_hide",Slot:4b}]},scores={laserDummy=..-231}] laserDummy -229

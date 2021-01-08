@@ -10,7 +10,7 @@ scoreboard players operation @a tntID -= @s tntID
 tag @e remove target
 tag @a remove self
 tag @a[scores={tntID=0}] add self
-execute unless entity @e[scores={mode=4}] run tag @e[limit=1,type=player,distance=..50,gamemode=adventure,tag=!self] add target
+execute unless entity @e[scores={mode=4}] run tag @e[type=player,distance=..50,gamemode=adventure,tag=!self] add target
 execute if entity @a[scores={playercount=1}] run tag @e[type=zombie] add target
 execute if entity @e[scores={mode=4}] run tag @e[type=zombie] add target
 execute if entity @e[scores={mode=4}] run tag @e[type=skeleton] add target
@@ -20,9 +20,9 @@ execute if entity @e[scores={mode=4}] run tag @e[type=ghast] add target
 execute if entity @e[scores={mode=4}] run tag @e[type=wither] add target
 #tag @e[limit=1,type=villager,distance=..50] add target
 
-execute positioned ^ ^ ^4 run tag @e[limit=1,tag=target,sort=nearest] add close
+execute positioned ^ ^ ^4 run tag @e[sort=nearest,limit=1,tag=target] add close
 
-execute as @s at @s run tp @s ~ ~ ~ facing entity @e[tag=close,limit=1] eyes
+execute as @s at @s run tp @s ~ ~ ~ facing entity @e[sort=nearest,tag=close,limit=1] eyes
 execute positioned ~ ~-1 ~ unless entity @e[distance=..1,tag=target] if entity @e[distance=1..50,tag=target] positioned ~ ~1 ~ run tp @s ^ ^ ^.3
 
 tag @e[tag=close] remove close
@@ -49,10 +49,12 @@ execute positioned ~ ~-1 ~ unless entity @e[distance=..1,tag=target] if entity @
 
 scoreboard players add @s TBtimer 1
 
-execute as @s at @s positioned ~ ~-.5 ~ if entity @e[tag=target,distance=..2.5] run scoreboard players set @s TBtimer 100
+execute as @s at @s positioned ~ ~ ~ if entity @e[tag=target,distance=..2.2] run scoreboard players set @s TBtimer 100
 
 execute as @s[scores={TBtimer=80..}] at @s run summon tnt ~ ~.4 ~ {Fuse:1}
 execute as @s[scores={TBtimer=80..}] at @s run summon tnt ~ ~.4 ~ {Fuse:1}
 kill @s[scores={TBtimer=80..}]
 
 particle minecraft:spit ~ ~1 ~ 0.3 0.3 0.3 0 1 force
+
+execute if block ~ ~ ~ barrier run kill @s

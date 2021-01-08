@@ -1,4 +1,4 @@
-*Season 6 Update*
+*Season 7 Update*
 
 [General]
 
@@ -17,7 +17,7 @@
 	- Takes 7 ticks to start destroying
 	- Makes more particles
 	- Can travel the full map (previously 33 blocks)
-	- Note: These changes effect the new "Air Missile" Ghost item
+	- Note: These changes affect the new "Air Missile" Ghost item
 	
 [Map Changes]
 
@@ -48,7 +48,7 @@ Ghost
 - Bow reloads .25s faster (3.25s -> 3s)
 - Added "Air Missile" (4s start reload, 12s reload)
 	- Slot Alternates Between Smoke Bomb and Air Missile
-	- 3s and 1s reload after each (origionally 5s for Smoke Bomb)
+	- 3s and 1s reload after each (originally 5s for Smoke Bomb)
 	- Note: impacted by Air Missile changes (see Phantom Mode)
 - Smoke Bomb gives .2s more Invisibility (1s -> 1.2s)
 - Gets one extra smoke bomb (previously just one)
@@ -58,32 +58,33 @@ Ghost
 	- Glowing status adjusted to reflect the period of actual blindness (one second less)
 
 Trapper
-- Arrows make sound when they hit the ground (only audible for user)
-- Arrows make sound when close to another player (only audible for user)
-- Tracking Bomb reloads 1s faster (12s -> 11s)
-- Tracking Bomb gives .75s less of levitation (1s -> .25s)
-- Tracking Bomb now closes closest target in front of Track Bomb (instead of at the track bomb iteself)
+- Arrows make a sound when they hit the ground (only audible for user)
+- Arrows make a sound when close to another player (only audible for user)
+- Tracking Bomb reloads 1.5s faster (12s -> 10.5s)
+- Tracking Bomb gives .4s less of levitation (1s -> .6s)
+- Tracking Bomb now closes the closest target in front of Track Bomb (instead of at the track bomb itself)
+- Tracking Bomb detection slightly adjusted (.5 blocks higher, .3 less range)
 
 Wizard
 - Bows reload .4s slower (1.2s -> 1.6s)
-- Fireballs now shoot out of boow (instead of starting still)
+- Fireballs now shoot out of bow (instead of starting still)
 	- Have .15s delay before moving
 - Teleport Bow no longer consumes 2 arrows
 - Teleport bow teleports up 2 blocks lower (4 up -> 2 up)
 - Ghost creepers no longer move or explode by themselves
-- Ghost creepers have stonger explosion
+- Ghost creepers have a stronger explosion
 - Vortex reloads 2s slower (13s -> 15s)
 
 Mad Scientist
 - Added "Laser Beam"
 - Bow reloads .15s faster (2.95s -> 2.8s)
-- Poral has improved particle
-- Portal summons 1 more tnt (1 -> 2)
-- Portal now cancels all motion (including for 1 of its own tnt)
+- Portal has improved particle
+- Portal summons 1 more TNT (1 -> 2)
+- Portal now cancels all motion (including for 1 of its own TNT)
 - Portal can now be teleported to from 1 blocks further (15 Blocks -> 16 Blocks)
 - Portal dies 1 seconds faster (7s -> 6.5s)
 - Acid reloads 2s faster (4.5s -> 2.5s)
-- Powershield no longer recharges blocks after tnt detonates (previously stayed active 1.8 extra seconds)
+- Powershield no longer recharges blocks after TNT detonates (previously stayed active 1.8 extra seconds)
 
 Reaper
 - Shift reload .5s faster (10 -> 9.5s)
@@ -106,11 +107,12 @@ Gardener
 	- Reloads gravetraps
 
 Overloard
-- Shift reloads 4.5s faster (15s -> 10.5s)
-- Shift decays 6s faster (15s -> 9s)
+- Shift reloads 3s faster (15s -> 12s)
+- Shift decays 5s faster (15s -> 10s)
 - Masterwand starts with 2 blocks more range (5 blocks -> 7 blocks)
-- Master wand upgrades increase range 2 blocks less (4.8 -> 2.8)
+- Masterwand upgrades increase range 2 blocks less (4.8 -> 2.8)
 	- Functionally makes max range 4 Blocks less
+- Masterwand can no longer shoot through Lang Slide
 - Bombs cost 1 less (7 -> 6)
 - Land Slide costs 1 less (15 -> 14)
 - Boom Halo (a.k.a. beef) costs 2 less (15 -> 13)
@@ -118,7 +120,6 @@ Overloard
 - Passively given 1 matter every 1.2s
 
 [Particle]
-
 - Improved the look of Prometheus
 - Added Radiant
 - Added Soul
@@ -126,14 +127,16 @@ Overloard
 [Bug Fixes]
 - Lobby Songs play incorrectly
 - Invisible Armor Stand could summon randomly on maps, blocking shots
-- Spectators could be sucked into vortex (lol)
+- Spectators could be sucked into Vortex (lol)
 - Placeable items couldn't be placed on some smooth sandstone
 - Soldier anvils can be accidentally permanently destroyed
 - Trapper's Mines can be accidentally permanently destroyed
 - Trapper's Bow does not start with correct instructions
 - Trapper's Bows says 'Overhand' instead of 'Offhand'
 - Trapper's Track Bomb often did not track the nearest target
-- Trapper unable to pickup power ups in Phantom Mode
+- Trapper's Track Bomb able to destroy sides of maps
+- Trapper's Track Bomb able to destroy map between rounds
+- Trapper unable to pick up power-ups in Phantom Mode
 - Reaper's Eggs can be accidentally permanently destroyed
 - Reaper's Feathers can be accidentally permanently destroyed
 - Echo makes boom wand particle on Boom Wand recover reload
@@ -141,3 +144,131 @@ Overloard
 - Overlord Unstable Mass text says the move gives matter
 - Overlord Unstable Mass makes decay sound even when no blocks remain
 - Title for "Heads Up" may linger in Survival mode
+
+*Patch 7.1 Update*
+
+[Lobby]
+- Updated all signs to tellraw instead of whisper (at the cost of sanity)
+- Added "Pie's #1 2020 Tournament" and "Pie's #2 Tournament" to the tournament area
+- Updated 'whooo' sign
+- Made 'whooo' sign not spam fireworks
+
+[Modes]
+- 'Chicken Bow' now makes a sound when the effect ends (Phantom Mode)
+
+[Texture]
+- Fire texture reduced to improve clarity
+
+[Character Changes]
+
+Assassin
+- Magic Stars explode .5s faster (3s -> 2.5s)
+- Mass Freeze reloads 1.5s faster (8.5s -> 7s)
+
+Trapper
+- Track Bomb reloads .5s faster (10.5s -> 10s)
+- No longer has jump boost (previously level 1)
+
+Wizard
+- Using pig cancels all previous momentum
+- Detonating Creeper now has .3s delay and sound (previously instant)
+- Vortex no longer sucks the wizard who summons it
+- Vortex is summoned 3.7 blocks in front of the player's eyes (regardless of blocks)
+
+Reaper
+- Placing Creepers and Slimes now makes a sound
+
+Echo
+- Ground Spell platforms go away after 25 seconds
+- Echo can only fire blast wand 4 times before touching the ground (to prevent wall stalling)
+- Echo can only get leviation off barrier walls once before touching the ground (to prevent wall stalling)
+
+[Bug Fixes]
+- Vines would grow down Overlord area, allowing for easy access to out of bounds areas
+- Lobby music would keep playing after becoming a spectator
+- Season 7 map changes to Terminal and Showtime were not applied in-game
+- The map 'Suto' has a missing piece of bedrock
+- Grabbing a player would remove any character jump boost
+- Grabs could affect spectators
+- 'Leave Game' potion could be moved slots
+- Bows could be duplicated in inventory (no gameplay effect)
+- Soldier consumables could be duplicated in inventory
+- Soldier Slimer and Air Grenade could be permanently deleted
+- Air Missile could linger between rounds
+- Ghost Smoke Bomb and Air Missile could be permanently deleted
+- Trapper's Short Blast would teleport the nearest arrow to the trapper
+- Trapper trackbomb did not always track the correct player if many were available
+- 'Chicken Bow' upgrade did not work with trapper (now summon a chicken on det)
+- On Rare occasion Trapper Mines did not det on players
+- Wizard could not pick up powerups in phantom mode
+- Mad Scientist Laser could 'kill' players in spectator mode
+- Mad Scientist could shift to cancel motion if out of range of an active portal
+- Portal could be reloaded on the wrong class using random class select
+- Reaper consumables could be duplicated in inventory
+- Unjoining game as echo did not remove character armor in the lobby
+- Gardener could inventory duplicate in endlessly use 'Extreme Shovel' and the golden shovel
+- Plague would sometimes not remove character jump boost and speed
+- Plague carries over shift countdown timer
+- In rare cares, Echo Boom wand could appear in other classes
+- Overlord wand could be inventory duplicated for endless use
+- Overlord bomb could be summoned in the lobby on rare instances
+- Overlord could be unlocked without selecting the original 3 classes
+- On a fringe place of the lobby, in-game items could be obtained
+- Fixed an issue where players could get stuck in lobby void
+- If a fringe part of the arena walls were damaged in rare instances, the damage was permanent
+
+*Patch 7.2 Update*
+
+[Lobby]
+- *Tournament updates
+
+[General]
+- *Spectators get more detailed info (ex. amount of platforms left)
+- Spectators can fly higher and lower
+
+[Particle]
+- Improved the look of Poof
+
+[Character Changes]
+
+General
+- Removed fall damage
+- Lists character selections in chat
+
+Soldier
+- Bow reloads 0.05s faster (.7s -> .65s)
+- Slimes decays 1s faster (3s -> 2s)
+- Slimes summon 1 tnt on death
+- After delay, Air Nade decays .35s faster (.7s -> .35s)
+- Ender pearls no longer give invisibility
+- Ender pearls give levitation on hit (1s, level 9)
+- Ender pearls reset motion on hit
+
+Assassin
+- Moved Magic Stars to second hotbar location
+- Replaced 'Primed for Death' with Explosive Darts (6 uses)
+
+Ghost
+- 1 level higher of Jump Boost (1 -> 2)
+- 1 level higher of Speed (1 -> 2)
+- Mass Levitate reloads 1s faster (6s -> 5s)
+- Ender Pearl reloads 2s faster (19s -> 17s)
+- 'Primed for Dark' gives .5s longer max blindness (4s -> 4.5s)
+- Shift reloads .25s faster (4.25s -> 4s)
+
+Wizard
+- Fireballs no longer cause fire on stage
+
+Mad Scientist
+- 1 level less of Speed (2 -> 1)
+- Laser reloads 2s slower (11s -> 13s)
+
+Echo
+- Blast Wand collides with Slimes and Magic Stars
+- Shift reloads 1.5s slower (6.5s -> 8s)
+
+Overlord
+- Land Slide costs 3 more (14 -> 17)
+- Upgrade Wand costs 2 more (24 -> 26)
+- Overlord Shift reloads 9.5s faster (12s -> 1.5s)
+- Overlord only gets 5 Unstable Masses (shift move)

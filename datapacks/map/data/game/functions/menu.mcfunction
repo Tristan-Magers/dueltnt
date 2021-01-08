@@ -19,7 +19,7 @@ execute as @e[name=menu,scores={mastercut=40}] at @s run playsound minecraft:ent
 execute as @e[name=menu,scores={mastercut=30}] at @s run playsound minecraft:block.bell.resonate master @a 495 20 564 1 0
 execute as @e[name=menu,scores={mastercut=80..}] at @s run particle minecraft:falling_water 495.51 26.60 564.52 1.5 1.5 .15 0 2 force
 scoreboard players add @e[name=menu,scores={mastercut=1..80}] mastercut 1
-execute as @a[x=495,y=23,z=564,distance=..10] if blocks 486 17 513 488 16 513 486 16 510 all run scoreboard players add @e[name=menu,scores={mastercut=0}] mastercut 1
+execute as @a[x=495,y=23,z=564,distance=..10] if block 495 31 564 minecraft:red_glazed_terracotta if block 492 30 564 minecraft:yellow_glazed_terracotta if block 490 27 564 minecraft:blue_glazed_terracotta if blocks 486 17 513 488 16 513 486 16 510 all run scoreboard players add @e[name=menu,scores={mastercut=0}] mastercut 1
 
 #Mode
 execute as @e[tag=ModeC] at @s run scoreboard players add @e[name=Map] mode 1

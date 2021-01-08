@@ -6,6 +6,10 @@ tag @s[nbt={Inventory:[{id:"minecraft:bamboo",Slot:0b}]}] add first
 tag @s[nbt={Inventory:[{id:"minecraft:flint",Slot:0b}]}] add first
 tag @s[nbt={Inventory:[{id:"minecraft:bowl",Slot:0b}]}] add first
 
+clear @s[tag=!first,scores={bowlthrow=0,flintthrow=0,bambthrow=0}] bamboo
+clear @s[tag=!first,scores={bowlthrow=0,flintthrow=0,bambthrow=0}] flint
+clear @s[tag=!first,scores={bowlthrow=0,flintthrow=0,bambthrow=0}] bowl
+
 scoreboard players set @s[tag=!first,scores={bowlthrow=0,flintthrow=0,bambthrow=0}] bowlthrow 1
 
 #clear @s[nbt=!{Inventory:[{id:"minecraft:splash_potion",Slot:4b}]},scores={potion=-1..0}] splash_potion

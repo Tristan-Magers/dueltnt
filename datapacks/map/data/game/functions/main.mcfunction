@@ -46,6 +46,7 @@ scoreboard players reset @a[scores={leaveServer=1..}] leaveServer
 
 # spec
 gamemode spectator @a[tag=spec]
+stopsound @a[tag=spec]
 tp @a[tag=spec] 625 40 625
 tag @a remove spec
 
@@ -80,8 +81,10 @@ execute as @a[scores={CPtimer=1..,class=4}] at @s run function game:excreep
 
 #particle
 execute as @a[scores={Invis=..0,particle=1}] at @s run particle flame ~ ~.1 ~ .3 .1 .3 .02 1 force
-execute as @a[scores={Invis=..0,particle=2,parttimer=1}] at @s positioned ~ ~.05 ~ run particle cloud ~ ~.25 ~ .3 .1 .3 0 1 force
-execute as @a[scores={Invis=..0,particle=2,parttimer=1}] at @s positioned ~ ~.05 ~ run particle spit ~ ~.25 ~ .3 .1 .3 0 1 force
+execute as @a[scores={Invis=..0,particle=2,parttimer=1}] at @s positioned ~ ~.05 ~ run particle cloud ~ ~.25 ~ .14 .1 .14 0 2 force
+execute as @a[scores={Invis=..0,particle=2,parttimer=1}] at @s positioned ~ ~.05 ~ run particle spit ~ ~.25 ~ .14 .1 .14 0 1 force
+#execute as @a[scores={Invis=..0,particle=2,parttimer=1}] at @s positioned ~ ~.05 ~ run particle poof ~ ~.25 ~ .3 .1 .3 .1 1 force
+execute as @a[scores={Invis=..0,particle=2,parttimer=1}] at @s positioned ~ ~.05 ~ run particle minecraft:block snow ~ ~.3 ~ .3 .1 .3 0 2
 execute as @a[scores={Invis=..0,particle=3,parttimer=1}] at @s run particle dragon_breath ~ ~.1 ~ .5 .1 .5 .04 2 force
 execute as @a[scores={Invis=..0,particle=4}] at @s run particle enchant ~ ~.1 ~ .5 .5 .5 .1 2 force
 execute as @a[scores={Invis=..0,particle=5}] at @s run particle minecraft:dust 15277350 20 2 2 ~ ~ ~ .2 .2 .2 0 3 force
@@ -116,10 +119,13 @@ execute as @a[scores={Invis=..0,particle=15,gpart=1..2}] at @s run particle mine
 execute as @a[scores={Invis=..0,particle=15,gpart=10..12}] at @s run particle minecraft:sneeze ~ ~.3 ~ .3 .1 .3 0 1 force
 
 execute as @a[scores={Invis=..0,particle=16,parttimer=1}] at @s run particle minecraft:crimson_spore ~ ~-.5 ~ .2 .2 .2 0 2 force @a
-execute as @a[scores={Invis=..0,particle=16,parttimer=1}] at @s run particle minecraft:smoke ~ ~.22 ~ .4 0 .4 0 3
+execute as @a[scores={Invis=..0,particle=16,parttimer=1}] at @s run particle minecraft:smoke ~ ~.22 ~ .4 0 .4 0 3 force @a
 
-execute as @a[scores={Invis=..0,particle=17,parttimer=1}] at @s run particle minecraft:soul_fire_flame ~ ~.3 ~ .4 .1 .4 0 2 force @a
+execute as @a[scores={Invis=..0,particle=17,gpart=4..7}] at @s run particle minecraft:soul_fire_flame ~ ~.2 ~ .4 .1 .4 0 1 force @a
+execute as @a[scores={Invis=..0,particle=17,gpart=14..17}] at @s run particle minecraft:soul_fire_flame ~ ~.2 ~ .4 .1 .4 0 1 force @a
 execute as @a[scores={Invis=..0,particle=17,parttimer=1}] at @s run particle minecraft:white_ash ~ ~1 ~ .4 .5 .4 0 2 force @a
+execute as @a[scores={Invis=..0,particle=17,gpart=1}] at @s run particle minecraft:soul ~ ~.4 ~ .4 .2 .4 0 1 force @a
+execute as @a[scores={Invis=..0,particle=17,gpart=10}] at @s run particle minecraft:soul ~ ~.4 ~ .4 .2 .4 0 1 force @a
 
 scoreboard players add @a[scores={Invis=..0}] gpart 1
 scoreboard players set @a[scores={gpart=20..}] gpart 0
@@ -160,7 +166,7 @@ execute as @e[tag=portstopmove] at @s run tp @s @s
 tag @e[tag=portstopmove] remove portstopmove
 
 scoreboard players operation @e[name=Portal] tntID -= @p[scores={GoPortalP=1..}] tntID
-execute as @a[scores={GoPortalP=1..}] at @s if entity @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] run tag @s add portstopmove
+execute as @a[scores={GoPortalP=1..}] at @s if entity @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1,distance=..16] run tag @s add portstopmove
 
 execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run execute as @a[scores={GoPortalP=1..},distance=..16] at @s run summon tnt ~ ~ ~ {Fuse:1,NoGravity:1}
 execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run execute as @a[scores={GoPortalP=1..},distance=..16] at @s run summon tnt ~ ~ ~ {Fuse:2,NoGravity:1}
@@ -198,7 +204,7 @@ execute as @a[scores={Lives=5,Y=..0},x=620,y=20,z=620,distance=..100] at @s run 
 execute as @a[scores={Lives=4,Y=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a ["",{"selector":"@p[scores={Y=..0,Lives=4}]"},{"text":" fell!","color":"white"},{"text":" 3 ","color":"gold","bold":true},{"text":"lives remaining","color":"none","bold":false}]
 execute as @a[scores={Lives=3,Y=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a ["",{"selector":"@p[scores={Y=..0,Lives=3}]"},{"text":" fell!","color":"white"},{"text":" 2 ","color":"red","bold":true},{"text":"lives remaining","color":"none","bold":false}]
 execute as @a[scores={Lives=2,Y=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a ["",{"selector":"@p[scores={Y=..0,Lives=2}]"},{"text":" fell!","color":"white"},{"text":" 1 ","color":"dark_red","bold":true},{"text":"life remaining","color":"none","bold":false}]
-scoreboard players remove @a[scores={Lives=1..,Y=..0}] Lives 1
+scoreboard players remove @a[scores={Lives=-10..,Y=..0}] Lives 1
 execute as @a[scores={Lives=1..,Y=..0}] at @s run summon armor_stand ~ 44 ~ {NoGravity:1,Invlunerable:1,Marker:1,CustomName:"{\"italic\":false,\"text\":\"SP\"}",Invisible:1}
 execute as @a[scores={Lives=1..,Y=..0}] at @s run function game:killender
 execute as @a[scores={Lives=1..,Y=..0}] at @s run tp @s ~ 45 ~
@@ -211,6 +217,10 @@ scoreboard players set @a[scores={Y=..0}] platAm -100
 execute as @a[scores={Lives=1..,Y=..0}] at @s positioned ~ ~-1 ~ run fill ~1 44 ~1 ~-1 44 ~-1 white_stained_glass replace air
 #execute as @a[scores={Lives=1..,Y=..0}] at @s run tp @s ~ 999 ~
 #scoreboard players remove @a[scores={Lives=1..,Y=..0}] Lives 1
+
+execute as @a[scores={Lives=-8,Y=..0}] at @s run gamemode spectator
+execute as @a[scores={Lives=-8,Y=..0}] at @s run scoreboard players set @s Lives 1
+
 scoreboard players set @a[scores={Lives=1..,Y=..0}] Y 45
 scoreboard players add @a[scores={rejoin=1..}] timer 0
 #scoreboard players add @a[scores={rejoin=1..}] Y 0
@@ -254,6 +264,7 @@ replaceitem entity @a[gamemode=adventure,x=620,y=20,z=620,distance=..500,scores=
 replaceitem entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={class=5..6,ingame=..0}] armor.head minecraft:air{Unbreakable:1}
 replaceitem entity @a[gamemode=adventure,scores={class=4,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest minecraft:chainmail_chestplate{Unbreakable:1}
 replaceitem entity @a[gamemode=adventure,scores={class=7,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.legs minecraft:golden_leggings{Unbreakable:1}
+replaceitem entity @a[gamemode=adventure,scores={class=7,Invis=0..1,ingame=0},x=620,y=20,z=620,distance=..500] armor.legs minecraft:air
 replaceitem entity @a[gamemode=adventure,scores={class=5,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest minecraft:air{Unbreakable:1}
 replaceitem entity @a[gamemode=adventure,scores={class=7..,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest minecraft:air{Unbreakable:1}
 replaceitem entity @a[gamemode=adventure,scores={class=6..7,teamed=..0,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.head minecraft:air{Unbreakable:1}
@@ -283,6 +294,7 @@ execute if entity @e[tag=Map,scores={mode=0..1}] as @a[x=600,y=60,z=600,distance
 scoreboard players set @a dummytrigger2 0
 
 effect give @e[tag=dummy] minecraft:slowness 1 10 true
+effect give @e[tag=wizcreep] minecraft:slowness 1 10 true
 
 #scoreboard players enable @a resettrigger
 #execute if entity @e[tag=Map,scores={mode=0..1}] as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure,scores={resettrigger=1,playercount=1}] at @s run fill 600 9 600 600 10 600 air
@@ -322,3 +334,6 @@ scoreboard players set @a[scores={LobbyMusic3=40}] LobbyMusic 0
 scoreboard players set @a[scores={LobbyMusic3=40}] LobbyMusic2 0
 scoreboard players set @a[scores={LobbyMusic3=5000..}] LobbyMusic3 0
 stopsound @a[scores={LobbyMusic3=39}]
+
+#clear
+clear @a[x=520,y=40,z=587,distance=..20]

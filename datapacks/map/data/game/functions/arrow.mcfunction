@@ -105,9 +105,10 @@ execute as @s[type=arrow,scores={SolBow=1}] at @s run playsound minecraft:entity
 #echo bow
 execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=598,z=598,y=0,dx=39,dz=39,dy=108,distance=..1000] at @s run fill ~-1 0 ~-1 ~1 80 ~1 air
 execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=598,z=598,y=0,dx=39,dz=39,dy=108,distance=..1000] at @s run particle crit ~ ~ ~ 1 10 1 0 100 force
-execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=3.5,type=!armor_stand] at @s run effect give @s levitation 1 1
-execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=3.5,type=!armor_stand] at @s run tp @s ~ ~4 ~
-execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000] positioned ~-2 ~-2 ~-2 run playsound minecraft:block.conduit.deactivate master @a ~ ~ ~ 1 1.5
+execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=3.5,type=!armor_stand,tag=!nowalllev] at @s run effect give @s levitation 1 1
+execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000,nbt={inBlockState:{Name:"minecraft:barrier"}}] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=3.5,type=!armor_stand,tag=!nowalllev] at @s run scoreboard players set @s grtest 3
+execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000,nbt={inBlockState:{Name:"minecraft:barrier"}}] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=3.5,type=!armor_stand,tag=!nowalllev] at @s run tag @s add nowalllev
+execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=3.5,type=!armor_stand] at @s run teleport @s ~ ~4 ~
 
 #gardener bow
 execute as @s[type=arrow,scores={GardBow=1..}] at @s run summon tnt ~ ~ ~ {Fuse:1}
