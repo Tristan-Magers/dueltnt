@@ -1,0 +1,75 @@
+*Season 8 Update*
+
+[Character Changes]
+
+Soldier
+- Bomb Bow arrows explode 0.05s faster (0.5s -> 0.45s)
+- Mega Bomb summon 1 more tnt  (7 -> 8)
+- Mega Bomb isn't given until 4s into round
+- Anvil fall speed reduced by 50%
+
+Assassin
+- Magics Stars activate .3s faster (.6s -> .3s)
+- Magics Stars start with 40% faster motion
+- Magic Stars fire .7 blocks lower and 1 block out (previously from eyes)
+- Teleport explodes on contact (1 tnt)
+- Teleport (ender pearls) reload after 7 seconds
+- Starts with 2 less teleports (4 -> 2)
+- Mass Freeze reloads 0.5s faster (6s -> 5.5s)
+
+Ghost
+- Ender Pearl reloads 2s faster (17s -> 15s)
+
+Trapper
+- All arrows explode 0.05s slower (0.05s -> 0.1s)
+	- Does not effect Short Blast
+- Track Bomb glows
+- Track Bomb only tracks players within 20 bocks
+
+Wizard
+- Removed .1s fireball movement delay
+- Fireball speed is based on bow charge
+ - Max charge as fast as previous
+- Teleport reworked
+	- Teleports up 1 block every .3s (previously 2 blocks once)
+	- After 11 steps or at height limit (y=40), summons air pillar
+
+Mad Scientist
+- Explosive Gel (bow) explodes 0.05s slower (.2s -> .25s)
+- Laser fires .1s slower (.65s -> .75s)
+
+Reaper
+- Gets 2 more feathers (4 -> 6)
+- Shift reloads 1s faster (9.5s -> 8.5s)
+- Shift gives slow_falling (for consistency while falling)
+- Gets 8 more Grave Traps (8 -> 16)
+
+Echo
+- Space Warp (bow) player teleport hitbox 1.5 blocks higher (1.5 -> 3 blocks)
+	- Functionally makes it harder to spleef players near arrow hitbox
+	- Hitbox still reaches 2 blocks under hit as well
+
+Gardener
+- Gets an extra life every 45 seconds
+- *Hitting non-Gardner with Plague gives 1 life
+
+Overlord
+- Wand can no longer eat glass or unstable mass
+
+Shard
+- Added to game
+
+[Map Changes]
+
+- Made center off bedrock more shallow in Arena
+
+[Bug Fixes]
+- Mega Bomb could sometimes never trigger
+- Air Nade killing chickens
+- Trapper short blast did not fire from eyes
+- Plague could be inventory duplicated
+- Reaper creepers could become double powered
+- Fixed issue where Chicken Bow expired too fast
+- Power shield glass could last between rounds
+- Players could briefly keep levitation after game
+- Placeables did not recognize end stone stairs

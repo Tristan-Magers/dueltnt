@@ -16,25 +16,25 @@ execute as @s[scores={groundtimer=196..}] at @s positioned ~ ~-2 ~ if block ~ ~-
 execute as @s[scores={groundtimer=196..}] at @s positioned ~ ~-2 ~ if block ~ ~-1 ~ purple_wool run tag @s add sound
 execute as @s[scores={groundtimer=196..}] at @s positioned ~ ~-2 ~ if block ~ ~-1 ~1 purple_wool run tag @s add sound
 
-execute as @s[scores={groundtimer=196..}] at @s positioned ~ ~-2 ~ if block ~ ~ ~-1 purple_wool run tag @s add sound
-execute as @s[scores={groundtimer=196..}] at @s positioned ~ ~-2 ~ if block ~ ~ ~ purple_wool run tag @s add sound
-execute as @s[scores={groundtimer=196..}] at @s positioned ~ ~-2 ~ if block ~ ~ ~1 purple_wool run tag @s add sound
+execute as @s[scores={groundtimer=116..}] at @s positioned ~ ~-2 ~ if block ~ ~ ~-1 purple_wool run tag @s add sound
+execute as @s[scores={groundtimer=116..}] at @s positioned ~ ~-2 ~ if block ~ ~ ~ purple_wool run tag @s add sound
+execute as @s[scores={groundtimer=116..}] at @s positioned ~ ~-2 ~ if block ~ ~ ~1 purple_wool run tag @s add sound
 
-execute as @s[scores={groundtimer=196..}] at @s positioned ~ ~-2 ~ if block ~ ~1 ~-1 purple_wool run tag @s add sound
-execute as @s[scores={groundtimer=196..}] at @s positioned ~ ~-2 ~ if block ~ ~1 ~ purple_wool run tag @s add sound
-execute as @s[scores={groundtimer=196..}] at @s positioned ~ ~-2 ~ if block ~ ~1 ~1 purple_wool run tag @s add sound
+execute as @s[scores={groundtimer=116..}] at @s positioned ~ ~-2 ~ if block ~ ~1 ~-1 purple_wool run tag @s add sound
+execute as @s[scores={groundtimer=116..}] at @s positioned ~ ~-2 ~ if block ~ ~1 ~ purple_wool run tag @s add sound
+execute as @s[scores={groundtimer=116..}] at @s positioned ~ ~-2 ~ if block ~ ~1 ~1 purple_wool run tag @s add sound
 
-execute as @s[scores={groundtimer=196..}] at @s positioned ~ ~-2 ~ if block ~1 ~-1 ~-1 purple_wool run tag @s add sound
-execute as @s[scores={groundtimer=196..}] at @s positioned ~ ~-2 ~ if block ~1 ~-1 ~ purple_wool run tag @s add sound
-execute as @s[scores={groundtimer=196..}] at @s positioned ~ ~-2 ~ if block ~1 ~-1 ~1 purple_wool run tag @s add sound
+execute as @s[scores={groundtimer=116..}] at @s positioned ~ ~-2 ~ if block ~1 ~-1 ~-1 purple_wool run tag @s add sound
+execute as @s[scores={groundtimer=116..}] at @s positioned ~ ~-2 ~ if block ~1 ~-1 ~ purple_wool run tag @s add sound
+execute as @s[scores={groundtimer=116..}] at @s positioned ~ ~-2 ~ if block ~1 ~-1 ~1 purple_wool run tag @s add sound
 
-execute as @s[scores={groundtimer=196..}] at @s positioned ~ ~-2 ~ if block ~1 ~ ~-1 purple_wool run tag @s add sound
-execute as @s[scores={groundtimer=196..}] at @s positioned ~ ~-2 ~ if block ~1 ~ ~ purple_wool run tag @s add sound
-execute as @s[scores={groundtimer=196..}] at @s positioned ~ ~-2 ~ if block ~1 ~ ~1 purple_wool run tag @s add sound
+execute as @s[scores={groundtimer=116..}] at @s positioned ~ ~-2 ~ if block ~1 ~ ~-1 purple_wool run tag @s add sound
+execute as @s[scores={groundtimer=116..}] at @s positioned ~ ~-2 ~ if block ~1 ~ ~ purple_wool run tag @s add sound
+execute as @s[scores={groundtimer=116..}] at @s positioned ~ ~-2 ~ if block ~1 ~ ~1 purple_wool run tag @s add sound
 
-execute as @s[scores={groundtimer=196..}] at @s positioned ~ ~-2 ~ if block ~1 ~1 ~-1 purple_wool run tag @s add sound
-execute as @s[scores={groundtimer=196..}] at @s positioned ~ ~-2 ~ if block ~1 ~1 ~ purple_wool run tag @s add sound
-execute as @s[scores={groundtimer=196..}] at @s positioned ~ ~-2 ~ if block ~1 ~1 ~1 purple_wool run tag @s add sound
+execute as @s[scores={groundtimer=116..}] at @s positioned ~ ~-2 ~ if block ~1 ~1 ~-1 purple_wool run tag @s add sound
+execute as @s[scores={groundtimer=116..}] at @s positioned ~ ~-2 ~ if block ~1 ~1 ~ purple_wool run tag @s add sound
+execute as @s[scores={groundtimer=116..}] at @s positioned ~ ~-2 ~ if block ~1 ~1 ~1 purple_wool run tag @s add sound
 
 
 execute as @s[scores={groundtimer=196..},tag=sound] at @s run playsound minecraft:block.fire.extinguish master @a ~ ~ ~ 1 0

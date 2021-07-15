@@ -11,25 +11,27 @@ data modify storage proj fireball.OwnerUUIDLeast set from entity @p UUIDLeast
 # data writing to fireball
 data modify entity @e[tag=newtrack,limit=1] {} merge from storage proj fireball
 
-scoreboard players operation @e[limit=1,tag=newtrack] DirX = @s DirX
-scoreboard players operation @e[limit=1,tag=newtrack] DirZ = @s DirZ
-
-#execute as @s at @s run execute store result entity @e[limit=1,tag=newtrack] power[0] double .0025 run scoreboard players get @s DirX
-#execute as @s at @s run execute store result entity @e[limit=1,tag=newtrack] power[2] double .0025 run scoreboard players get @s DirZ
-
-#execute as @s at @s run execute store result entity @e[limit=1,tag=newtrack] direction[0] double .0025 run scoreboard players get @s DirX
-#execute as @s at @s run execute store result entity @e[limit=1,tag=newtrack] direction[2] double .0025 run scoreboard players get @s DirZ
-
 scoreboard players operation @s y = @s DirY
 
 scoreboard players remove @s y 988
 
+scoreboard players operation @e[limit=1,tag=newtrack] vel = @s vel
+
+scoreboard players add @s vel 350
+
+scoreboard players operation @s DirX *= @s vel
+scoreboard players operation @s DirZ *= @s vel
+scoreboard players operation @s y *= @s vel
+
+scoreboard players set @s vel 3350
+
+scoreboard players operation @s DirX /= @s vel
+scoreboard players operation @s DirZ /= @s vel
+scoreboard players operation @s y /= @s vel
+
+scoreboard players operation @e[limit=1,tag=newtrack] DirX = @s DirX
+scoreboard players operation @e[limit=1,tag=newtrack] DirZ = @s DirZ
 scoreboard players operation @e[limit=1,tag=newtrack] y = @s y
-
-#execute as @s at @s run execute store result entity @e[limit=1,tag=newtrack] power[1] double .0025 run scoreboard players get @s y
-#execute as @s at @s run execute store result entity @e[limit=1,tag=newtrack] direction[1] double .0025 run scoreboard players get @s y
-
-#execute as @s at @s run tp @s ~ ~ ~ ~ 0
 
 scoreboard players set @e[limit=1,tag=newtrack] fballtimer 1
 

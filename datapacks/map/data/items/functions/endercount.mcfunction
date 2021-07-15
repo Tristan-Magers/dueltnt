@@ -15,4 +15,9 @@ scoreboard players operation @s enderct -= @s enderc
 execute as @s[scores={enderct=1,class=0}] run tp @s @s
 execute as @s[scores={enderct=1,class=0}] run effect give @s minecraft:levitation 1 8 true
 
+execute as @s[scores={enderct=1,class=1}] run tp @s @s
+#execute as @s[scores={enderct=1,class=1}] run scoreboard players set @s nolev 12
+#execute as @s[scores={enderct=1,class=1}] run effect give @s minecraft:levitation 1 0 true
+execute as @s[scores={enderct=1,class=1}] run summon tnt ~ ~ ~
+
 scoreboard players operation @s enderct = @s enderc

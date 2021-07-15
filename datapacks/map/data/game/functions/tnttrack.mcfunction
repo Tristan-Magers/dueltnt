@@ -1,3 +1,5 @@
+effect give @s minecraft:glowing 10
+
 execute store result score @s R1 run data get entity @s Rotation[0] 1
 execute store result score @s R2 run data get entity @s Rotation[1] 1
 
@@ -10,20 +12,20 @@ scoreboard players operation @a tntID -= @s tntID
 tag @e remove target
 tag @a remove self
 tag @a[scores={tntID=0}] add self
-execute unless entity @e[scores={mode=4}] run tag @e[type=player,distance=..50,gamemode=adventure,tag=!self] add target
-execute if entity @a[scores={playercount=1}] run tag @e[type=zombie] add target
-execute if entity @e[scores={mode=4}] run tag @e[type=zombie] add target
-execute if entity @e[scores={mode=4}] run tag @e[type=skeleton] add target
-execute if entity @e[scores={mode=4}] run tag @e[type=creeper] add target
-execute if entity @e[scores={mode=4}] run tag @e[type=chicken] add target
-execute if entity @e[scores={mode=4}] run tag @e[type=ghast] add target
-execute if entity @e[scores={mode=4}] run tag @e[type=wither] add target
+execute unless entity @e[scores={mode=4}] run tag @e[type=player,gamemode=adventure,tag=!self,distance=..20] add target
+execute if entity @a[scores={playercount=1}] run tag @e[type=zombie,distance=..20] add target
+execute if entity @e[scores={mode=4}] run tag @e[type=zombie,distance=..20] add target
+execute if entity @e[scores={mode=4}] run tag @e[type=skeleton,distance=..20] add target
+execute if entity @e[scores={mode=4}] run tag @e[type=creeper,distance=..20] add target
+execute if entity @e[scores={mode=4}] run tag @e[type=chicken,distance=..20] add target
+execute if entity @e[scores={mode=4}] run tag @e[type=ghast,distance=..20] add target
+execute if entity @e[scores={mode=4}] run tag @e[type=wither,distance=..20] add target
 #tag @e[limit=1,type=villager,distance=..50] add target
 
 execute positioned ^ ^ ^4 run tag @e[sort=nearest,limit=1,tag=target] add close
 
 execute as @s at @s run tp @s ~ ~ ~ facing entity @e[sort=nearest,tag=close,limit=1] eyes
-execute positioned ~ ~-1 ~ unless entity @e[distance=..1,tag=target] if entity @e[distance=1..50,tag=target] positioned ~ ~1 ~ run tp @s ^ ^ ^.3
+execute positioned ~ ~-1 ~ unless entity @e[distance=..1,tag=target] if entity @e[distance=1..50,tag=target,tag=close] positioned ~ ~1 ~ run tp @s ^ ^ ^.3
 
 tag @e[tag=close] remove close
 

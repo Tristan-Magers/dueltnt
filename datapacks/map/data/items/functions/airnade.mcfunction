@@ -1,6 +1,6 @@
 scoreboard players add @s airnade 1
 
-execute as @s[scores={airnade=1}] at @s run tp @e[type=chicken,distance=..2] ~ ~-1000 ~
+#execute as @s[scores={airnade=1}] at @s run tp @e[type=chicken,distance=..2] ~ ~-1000 ~
 
 #execute as @s[scores={airnade=1}] if block ~ ~-1 ~ air run tp @s ~ ~-1 ~
 

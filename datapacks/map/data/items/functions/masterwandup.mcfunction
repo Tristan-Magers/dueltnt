@@ -5,7 +5,6 @@ execute as @s[x=580,dx=80,y=-1,dy=100,z=580,dz=80,distance=..100,scores={masteru
 execute as @s[x=580,dx=80,y=-1,dy=100,z=580,dz=80,distance=..100,scores={masterup=3}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Wand Upgrade","color":"aqua","bold":"true"},{"text":" (Level 4) ","color":"white"}]
 execute as @s[x=580,dx=80,y=-1,dy=100,z=580,dz=80,distance=..100,scores={masterup=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Wand Upgrade","color":"aqua","bold":"true"},{"text":" (MAX Level) ","color":"white"}]
 
-
 execute unless entity @e[scores={mode=1}] run scoreboard players remove @s masterb 26
 execute if entity @e[scores={mode=1}] run scoreboard players remove @s masterb 20
 execute unless entity @e[scores={mode=1}] run clear @s gold_ore 26

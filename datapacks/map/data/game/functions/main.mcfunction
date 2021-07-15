@@ -1,6 +1,6 @@
 execute as @e[type=area_effect_cloud,tag=!a,nbt={Potion:"minecraft:poison"}] at @s run function game:plaguepot
 execute as @e[type=area_effect_cloud,tag=!a,nbt={Potion:"minecraft:swiftness"}] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1,Marker:1,Tags:["a","airnade"]}
-kill @e[type=area_effect_cloud,tag=!a]
+kill @e[type=area_effect_cloud,tag=!a,tag=!gameae]
 
 clear @a[gamemode=spectator]
 
@@ -127,6 +127,13 @@ execute as @a[scores={Invis=..0,particle=17,parttimer=1}] at @s run particle min
 execute as @a[scores={Invis=..0,particle=17,gpart=1}] at @s run particle minecraft:soul ~ ~.4 ~ .4 .2 .4 0 1 force @a
 execute as @a[scores={Invis=..0,particle=17,gpart=10}] at @s run particle minecraft:soul ~ ~.4 ~ .4 .2 .4 0 1 force @a
 
+execute as @a[scores={Invis=..0,particle=18,OPp=20..30}] at @s run particle minecraft:warped_spore ~ ~0.5 ~ .5 .3 .5 .08 3 force
+execute as @a[scores={Invis=..0,particle=18,OPp=0..19}] at @s run particle minecraft:ash ~ ~0.5 ~ .6 .3 .6 .08 1 force
+execute as @a[scores={Invis=..0,particle=18,OPp=0..19}] at @s run particle minecraft:block nether_portal ~ ~.2 ~ 0.4 0.1 0.4 0.1 1 force
+
+scoreboard players add @a[scores={Invis=..0}] OPp 1
+scoreboard players set @a[scores={OPp=54..}] OPp 0
+
 scoreboard players add @a[scores={Invis=..0}] gpart 1
 scoreboard players set @a[scores={gpart=20..}] gpart 0
 
@@ -244,33 +251,33 @@ execute as @e[type=armor_stand,tag=stnt] at @s run tag @e[type=tnt,tag=!tnt,dist
 execute as @e[tag=timer,scores={timer=1}] at @s run function game:tntblow
 
 # armor
-replaceitem entity @a[gamemode=adventure,scores={Invis=2..}] armor.chest minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=2,ingame=1..,Invis=0..1},x=620,y=20,z=620,distance=..500] armor.chest minecraft:diamond_chestplate{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=0,ingame=1..,Invis=0..1},x=620,y=20,z=620,distance=..500] armor.chest minecraft:iron_chestplate{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=1,ingame=1..,Invis=0..1},x=620,y=20,z=620,distance=..500] armor.chest minecraft:golden_chestplate{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={Invis=2..}] armor.head minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=3,teamed=..0,Invis=0..1},x=620,y=20,z=620,distance=..500] armor.head minecraft:leather_helmet{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,tag=red,x=620,y=20,z=620,distance=..500,scores={teamed=1..,Invis=0..1,ingame=1..}] armor.head red_stained_glass{ench:[{id:10,lvl:1}]}
-replaceitem entity @a[gamemode=adventure,tag=green,x=620,y=20,z=620,distance=..500,scores={teamed=1..,Invis=0..1,ingame=1..}] armor.head green_stained_glass{ench:[{id:10,lvl:1}]}
-replaceitem entity @a[gamemode=adventure,tag=blue,x=620,y=20,z=620,distance=..500,scores={teamed=1..,Invis=0..1,ingame=1..}] armor.head blue_stained_glass{ench:[{id:10,lvl:1}]}
-replaceitem entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={class=0..2,teamed=..0}] armor.head minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={ingame=..0}] armor.head minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=3,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest minecraft:leather_chestplate{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=4,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest minecraft:chainmail_chestplate{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={ingame=..0}] armor.chest minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={class=4,teamed=..0}] armor.head minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=6,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest minecraft:netherite_chestplate
-replaceitem entity @a[gamemode=adventure,x=620,y=20,z=620,distance=..500,scores={class=5,teamed=..0,Invis=0..1}] armor.head minecraft:diamond_helmet{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={class=5..6,ingame=..0}] armor.head minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=4,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest minecraft:chainmail_chestplate{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=7,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.legs minecraft:golden_leggings{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=7,Invis=0..1,ingame=0},x=620,y=20,z=620,distance=..500] armor.legs minecraft:air
-replaceitem entity @a[gamemode=adventure,scores={class=5,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=7..,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=6..7,teamed=..0,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.head minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=8,teamed=..0,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.head minecraft:golden_helmet{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=9,teamed=..0,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.head minecraft:chicken
-replaceitem entity @a[gamemode=adventure,scores={class=99,teamed=..0,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.head minecraft:iron_ore
+item replace entity @a[gamemode=adventure,scores={Invis=2..}] armor.chest with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=2,ingame=1..,Invis=0..1},nbt=!{Inventory:[{id:"minecraft:diamond_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:diamond_chestplate{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=0,ingame=1..,Invis=0..1},nbt=!{Inventory:[{id:"minecraft:iron_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:iron_chestplate{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=1,ingame=1..,Invis=0..1},nbt=!{Inventory:[{id:"minecraft:golden_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:golden_chestplate{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={Invis=2..}] armor.head with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=3,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:leather_helmet",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:leather_helmet{Unbreakable:1}
+item replace entity @a[gamemode=adventure,tag=red,x=620,y=20,z=620,distance=..500,nbt=!{Inventory:[{id:"minecraft:red_stained_glass",Slot:103b}]},scores={teamed=1..,Invis=0..1,ingame=1..}] armor.head with red_stained_glass{ench:[{id:10,lvl:1}]}
+item replace entity @a[gamemode=adventure,tag=green,x=620,y=20,z=620,distance=..500,nbt=!{Inventory:[{id:"minecraft:green_stained_glass",Slot:103b}]},scores={teamed=1..,Invis=0..1,ingame=1..}] armor.head with green_stained_glass{ench:[{id:10,lvl:1}]}
+item replace entity @a[gamemode=adventure,tag=blue,x=620,y=20,z=620,distance=..500,nbt=!{Inventory:[{id:"minecraft:blue_stained_glass",Slot:103b}]},scores={teamed=1..,Invis=0..1,ingame=1..}] armor.head with blue_stained_glass{ench:[{id:10,lvl:1}]}
+item replace entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={class=0..2,teamed=..0}] armor.head with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={ingame=..0}] armor.head with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=3,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:leather_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:leather_chestplate{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=4,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:chainmail_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:chainmail_chestplate{Unbreakable:1}
+item replace entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={ingame=..0}] armor.chest with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={class=4,teamed=..0}] armor.head with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=6,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:netherite_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:netherite_chestplate
+item replace entity @a[gamemode=adventure,x=620,y=20,z=620,distance=..500,nbt=!{Inventory:[{id:"minecraft:diamond_helmet",Slot:103b}]},scores={class=5,teamed=..0,Invis=0..1,ingame=1..}] armor.head with minecraft:diamond_helmet{Unbreakable:1}
+item replace entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={class=5..6,ingame=..0}] armor.head with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=4,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:chainmail_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:chainmail_chestplate{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=7,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:golden_leggings",Slot:101b}]},x=620,y=20,z=620,distance=..500] armor.legs with minecraft:golden_leggings{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=7,Invis=0..1,ingame=0},x=620,y=20,z=620,distance=..500] armor.legs with minecraft:air
+item replace entity @a[gamemode=adventure,scores={class=5,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=7..,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=6..7,teamed=..0,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.head with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=8,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:golden_helmet",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:golden_helmet{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=9,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:chicken",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:chicken
+item replace entity @a[gamemode=adventure,scores={class=99,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:iron_ore",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:iron_ore
 
 #Modes
 execute if entity @e[scores={mode=1}] run function game:overpowered
@@ -334,6 +341,10 @@ scoreboard players set @a[scores={LobbyMusic3=40}] LobbyMusic 0
 scoreboard players set @a[scores={LobbyMusic3=40}] LobbyMusic2 0
 scoreboard players set @a[scores={LobbyMusic3=5000..}] LobbyMusic3 0
 stopsound @a[scores={LobbyMusic3=39}]
+
+#patreon
+tellraw @a[scores={patclick=1..}] ["",{"text":"Hey there! ","color":"aqua"},{"text":"I made a page where you can see all my future games and work over on Patreon. Over the past half year, I have been making Minecraft maps full time on the Minecraft Marketplace. ","color":"white","bold":false,"underlined":false,"clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"Now I want to move my effort to making games right here on Realms, with higher quality than ever, just for you guys.","color":"yellow","bold":"false","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":" If you want to see the cool games coming, or you want to support me so I can make these games, [","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"color":"blue","text":"CLICK HERE","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"] to go the page about it. Thanks :D ","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"  <3 <3 <3","color":"red"}]
+scoreboard players set @a patclick 0
 
 #clear
 clear @a[x=520,y=40,z=587,distance=..20]

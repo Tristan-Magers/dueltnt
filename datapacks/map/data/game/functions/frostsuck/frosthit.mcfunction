@@ -1,0 +1,2 @@
+summon area_effect_cloud ~ ~-1 ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2","org"]}
+scoreboard players operation @e[tag=frostsuck,tag=org,limit=1,sort=nearest] objID = @p[tag=frostuser] tntID

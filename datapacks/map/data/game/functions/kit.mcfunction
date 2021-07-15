@@ -10,6 +10,7 @@ execute as @s[scores={kit=6}] at @s run scoreboard players set @p class 6
 execute as @s[scores={kit=7}] at @s run scoreboard players set @p class 7
 execute as @s[scores={kit=8}] at @s run scoreboard players set @p class 8
 execute as @s[scores={kit=9}] at @s run scoreboard players set @p class 9
+execute as @s[scores={kit=10}] at @s run scoreboard players set @p class 10
 
 execute as @s[scores={kit=3},x=482,y=11,z=487,distance=..7] at @s run advancement grant @s only classes:class3
 execute as @s[scores={kit=4},x=479,y=10,z=505,distance=..7] at @s run advancement grant @s only classes:class4
@@ -41,4 +42,4 @@ tag @s[scores={kit=..10}] remove randclass
 tag @s[scores={kit=99}] add randclass
 execute as @s[scores={kit=99}] at @s run scoreboard players set @p class 99
 scoreboard players set @s[scores={kit=0..}] kit -1
-replaceitem entity @s armor.legs air
+item replace entity @s armor.legs with air

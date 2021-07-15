@@ -10,9 +10,9 @@ scoreboard players operation @s x -= @s dx
 scoreboard players operation @s y -= @s dy
 scoreboard players operation @s z -= @s dz
 
-execute store result entity @e[sort=nearest,limit=1,type=item] Motion[0] double 0.01 run scoreboard players get @s x
-execute store result entity @e[sort=nearest,limit=1,type=item] Motion[1] double 0.01 run scoreboard players get @s y
-execute store result entity @e[sort=nearest,limit=1,type=item] Motion[2] double 0.01 run scoreboard players get @s z
+execute store result entity @e[sort=nearest,limit=1,type=item] Motion[0] double 0.014 run scoreboard players get @s x
+execute store result entity @e[sort=nearest,limit=1,type=item] Motion[1] double 0.014 run scoreboard players get @s y
+execute store result entity @e[sort=nearest,limit=1,type=item] Motion[2] double 0.014 run scoreboard players get @s z
 
 
 

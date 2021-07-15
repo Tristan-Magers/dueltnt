@@ -1,4 +1,4 @@
-replaceitem entity @s[scores={CPtimer=119..}] armor.feet air
+item replace entity @s[scores={CPtimer=119..}] armor.feet with air
 clear @s[scores={CPtimer=119..}] minecraft:golden_boots
 scoreboard players remove @s CPtimer 1
 
@@ -34,4 +34,4 @@ execute as @s[scores={CPtimer=139}] at @s run execute as @e[type=creeper,scores=
 execute as @s[scores={CPtimer=139}] at @s run execute as @e[type=creeper,scores={tntID=0}] at @s run scoreboard players set @a[scores={CPtimer=139}] CPtimer 138
 execute as @s[scores={CPtimer=139}] at @s run scoreboard players operation @e[type=minecraft:creeper] tntID += @s tntID
 scoreboard players set @a[scores={CPtimer=139}] CPtimer 3
-replaceitem entity @s[x=600,y=60,z=600,distance=3..95,scores={CPtimer=1}] hotbar.4 golden_boots{display:{Name:"{\"text\":\"§r§bExplode Ghost Creeper §r: Right Click (summoned by shift)\"}"}}
+item replace entity @s[x=600,y=60,z=600,distance=3..95,scores={CPtimer=1}] hotbar.4 with golden_boots{display:{Name:"{\"text\":\"§r§bExplode Ghost Creeper §r: Right Click (summoned by shift)\"}"}}

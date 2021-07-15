@@ -4,7 +4,7 @@ tag @s remove mw2
 tag @s remove end
 
 scoreboard players add @s masterc 1
-replaceitem entity @s[scores={masterc=25..}] hotbar.0 barrier
+item replace entity @s[scores={masterc=25..}] hotbar.0 with barrier
 clear @s[scores={masterc=25..}] wooden_shovel
 clear @s[scores={masterc=25..}] stone_shovel
 clear @s[scores={masterc=25..}] iron_shovel
