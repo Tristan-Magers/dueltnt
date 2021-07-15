@@ -655,7 +655,7 @@ execute as @a[scores={ender=1..,endercount=4,class=1}] at @s run tellraw @a[game
 effect give @a[gamemode=adventure,scores={ender=1..,class=1..2}] invisibility 2 0 true
 scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=1..2}] Invis 40
 #scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=0}] Invis 30
-scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=2}] enderreload 300
+scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=2}] enderreload 260
 scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=1,endercount=2..}] enderreload 170
 scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=1,endercount=2..}] endercount 0
 scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=1}] sneakdisable 40

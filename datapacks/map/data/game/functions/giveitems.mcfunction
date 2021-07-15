@@ -171,7 +171,7 @@ scoreboard players set @a snowReset 0
 scoreboard players set @a XPReset 0
 scoreboard players set @a FZtimer 0
 scoreboard players set @a BBtimer 0
-scoreboard players set @a[scores={class=0}] BBtimer 80
+scoreboard players set @a[scores={class=0}] BBtimer 60
 scoreboard players set @a TBtimer -100
 scoreboard players set @a mTtimer 0
 scoreboard players set @a PlatTimer 0

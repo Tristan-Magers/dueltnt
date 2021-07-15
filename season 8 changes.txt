@@ -1,11 +1,14 @@
 *Season 8 Update*
 
+[General]
+- Updated Minecraft version to 1.17.1
+
 [Character Changes]
 
 Soldier
 - Bomb Bow arrows explode 0.05s faster (0.5s -> 0.45s)
 - Mega Bomb summon 1 more tnt  (7 -> 8)
-- Mega Bomb isn't given until 4s into round
+- Mega Bomb isn't given until 3s into round
 - Anvil fall speed reduced by 50%
 
 Assassin
@@ -18,7 +21,8 @@ Assassin
 - Mass Freeze reloads 0.5s faster (6s -> 5.5s)
 
 Ghost
-- Ender Pearl reloads 2s faster (17s -> 15s)
+- Teleport reloads 2s faster (17s -> 13s)
+- Teleport gives levitation on contact (1s, level 2)
 
 Trapper
 - All arrows explode 0.05s slower (0.05s -> 0.1s)
@@ -55,15 +59,22 @@ Gardener
 
 Overlord
 - Wand can no longer eat glass or unstable mass
+- Wand's starting range is 1.2 blocks shorter (7 -> 5.8 blocks)
+	- Logically reduces max range (15.4 -> 14.2 blocks)
 
 Shard
 - Added to game
 
 [Map Changes]
-
 - Made center off bedrock more shallow in Arena
 
+[Lobby Changes]
+- Updated general lobby look for story event
+- Set lobby to night time
+- Added "Book for Nerds"
+
 [Bug Fixes]
+- Ghost teleport reload would tell all players
 - Mega Bomb could sometimes never trigger
 - Air Nade killing chickens
 - Trapper short blast did not fire from eyes
