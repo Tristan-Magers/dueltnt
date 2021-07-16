@@ -1,8 +1,9 @@
 scoreboard players add @s timer 1
-execute as @s[scores={timer=1}] at @s run summon tnt ~ ~20 ~ {Fuse:20,Motion:[0.0,-0.9,0.0]}
-execute as @s[scores={timer=11}] at @s run summon tnt ~ ~20 ~ {Fuse:20,Motion:[0.0,-0.9,0.0]}
-execute as @s[scores={timer=21}] at @s run summon tnt ~ ~20 ~ {Fuse:20,Motion:[0.0,-0.9,0.0]}
-execute as @s[scores={timer=31}] at @s run summon tnt ~ ~20 ~ {Fuse:20,Motion:[0.0,-0.9,0.0]}
+execute as @s[scores={timer=1}] at @s run summon tnt ~ ~23 ~ {Fuse:20,Motion:[0.0,-0.9,0.0]}
+execute as @s[scores={timer=11}] at @s run summon tnt ~ ~23 ~ {Fuse:20,Motion:[0.0,-0.9,0.0]}
+execute as @s[scores={timer=21}] at @s run summon tnt ~ ~23 ~ {Fuse:20,Motion:[0.0,-0.9,0.0]}
+execute as @s[scores={timer=21}] at @s run summon tnt ~ ~23 ~ {Fuse:20,Motion:[0.0,-0.9,0.0]}
+#execute as @s[scores={timer=31}] at @s run summon tnt ~ ~23 ~ {Fuse:20,Motion:[0.0,-0.9,0.0]}
 kill @s[scores={timer=31}]
 
 #turn air

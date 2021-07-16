@@ -28,20 +28,20 @@ tag @s[tag=delayT] add delay
 tag @s remove delayT
 
 execute as @s[scores={frostT=100,frostsize=1..}] at @s run fill ~ ~-1 ~ ~ ~-1 ~ air replace packed_ice
-execute as @s[scores={frostT=100,frostsize=3..}] at @s run fill ~ ~-1 ~1 ~ ~-1 ~-1 air replace packed_ice
-execute as @s[scores={frostT=100,frostsize=5..}] at @s run fill ~1 ~-1 ~ ~-1 ~-1 ~ air replace packed_ice
-execute as @s[scores={frostT=100,frostsize=9..}] at @s run fill ~1 ~-1 ~1 ~-1 ~-1 ~-1 air replace packed_ice
-execute as @s[scores={frostT=100,frostsize=14..}] at @s run fill ~ ~-1 ~1 ~ ~-2 ~-1 air replace packed_ice
-execute as @s[scores={frostT=100,frostsize=14..}] at @s run fill ~1 ~-1 ~ ~-1 ~-2 ~ air replace packed_ice
-execute as @s[scores={frostT=100,frostsize=18..}] at @s run fill ~1 ~-1 ~1 ~-1 ~-2 ~-1 air replace packed_ice
-execute as @s[scores={frostT=100,frostsize=22..}] at @s run fill ~2 ~-1 ~ ~-2 ~-1 ~ air replace packed_ice
-execute as @s[scores={frostT=100,frostsize=22..}] at @s run fill ~ ~-1 ~2 ~ ~-1 ~-2 air replace packed_ice
-execute as @s[scores={frostT=100,frostsize=30..}] at @s run fill ~2 ~-1 ~1 ~-2 ~-1 ~-1 air replace packed_ice
-execute as @s[scores={frostT=100,frostsize=30..}] at @s run fill ~1 ~-1 ~2 ~-1 ~-1 ~-2 air replace packed_ice
-execute as @s[scores={frostT=100,frostsize=35..}] at @s run fill ~ ~-3 ~1 ~ ~-3 ~-1 air replace packed_ice
-execute as @s[scores={frostT=100,frostsize=35..}] at @s run fill ~1 ~-3 ~ ~-1 ~-3 ~ air replace packed_ice
-execute as @s[scores={frostT=100,frostsize=42..}] at @s run fill ~1 ~-3 ~1 ~-1 ~-3 ~-1 air replace packed_ice
-execute as @s[scores={frostT=100,frostsize=42..}] at @s run fill ~ ~-4 ~ ~ ~-5 ~ air replace packed_ice
+execute as @s[scores={frostT=101,frostsize=3..}] at @s run fill ~ ~-1 ~1 ~ ~-1 ~-1 air replace packed_ice
+execute as @s[scores={frostT=102,frostsize=5..}] at @s run fill ~1 ~-1 ~ ~-1 ~-1 ~ air replace packed_ice
+execute as @s[scores={frostT=103,frostsize=9..}] at @s run fill ~1 ~-1 ~1 ~-1 ~-1 ~-1 air replace packed_ice
+execute as @s[scores={frostT=104,frostsize=14..}] at @s run fill ~ ~-1 ~1 ~ ~-2 ~-1 air replace packed_ice
+execute as @s[scores={frostT=105,frostsize=14..}] at @s run fill ~1 ~-1 ~ ~-1 ~-2 ~ air replace packed_ice
+execute as @s[scores={frostT=106,frostsize=18..}] at @s run fill ~1 ~-1 ~1 ~-1 ~-2 ~-1 air replace packed_ice
+execute as @s[scores={frostT=107,frostsize=22..}] at @s run fill ~2 ~-1 ~ ~-2 ~-1 ~ air replace packed_ice
+execute as @s[scores={frostT=108,frostsize=22..}] at @s run fill ~ ~-1 ~2 ~ ~-1 ~-2 air replace packed_ice
+execute as @s[scores={frostT=109,frostsize=30..}] at @s run fill ~2 ~-1 ~1 ~-2 ~-1 ~-1 air replace packed_ice
+execute as @s[scores={frostT=110,frostsize=30..}] at @s run fill ~1 ~-1 ~2 ~-1 ~-1 ~-2 air replace packed_ice
+execute as @s[scores={frostT=111,frostsize=35..}] at @s run fill ~ ~-3 ~1 ~ ~-3 ~-1 air replace packed_ice
+execute as @s[scores={frostT=112,frostsize=35..}] at @s run fill ~1 ~-3 ~ ~-1 ~-3 ~ air replace packed_ice
+execute as @s[scores={frostT=113,frostsize=42..}] at @s run fill ~1 ~-3 ~1 ~-1 ~-3 ~-1 air replace packed_ice
+execute as @s[scores={frostT=114,frostsize=42..}] at @s run fill ~ ~-4 ~ ~ ~-5 ~ air replace packed_ice
 
-execute as @s[scores={frostT=100}] at @s run fill ~-2 ~-1 ~-2 ~2 ~-3 ~2 air replace packed_ice
-kill @s[scores={frostT=100..}]
+execute as @s[scores={frostT=114}] at @s run fill ~-2 ~-1 ~-2 ~2 ~-3 ~2 air replace packed_ice
+kill @s[scores={frostT=114..}]

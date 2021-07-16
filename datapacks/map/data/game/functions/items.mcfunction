@@ -49,9 +49,9 @@ execute as @a[gamemode=adventure,scores={class=3,bow=25}] at @s run playsound mi
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=3,bow=50..}] hotbar.6 with arrow 1
 execute as @a[gamemode=adventure,scores={class=3,bow=50..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
 scoreboard players set @a[gamemode=adventure,scores={class=3,bow=50..}] bow -1
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=4,bow=28}] hotbar.7 with tipped_arrow{display:{Name:"{\"italic\":false,\"text\":\"Magic arrow\"}"},Potion:"minecraft:swiftness",HideFlags:32} 2
-execute as @a[gamemode=adventure,scores={class=4,bow=27..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .45 2
-scoreboard players set @a[gamemode=adventure,scores={class=4,bow=28..}] bow -1
+item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=4,bow=27}] hotbar.7 with tipped_arrow{display:{Name:"{\"italic\":false,\"text\":\"Magic arrow\"}"},Potion:"minecraft:swiftness",HideFlags:32} 2
+execute as @a[gamemode=adventure,scores={class=4,bow=26..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .45 2
+scoreboard players set @a[gamemode=adventure,scores={class=4,bow=27..}] bow -1
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=5,bow=56..}] hotbar.6 with arrow 3
 execute as @a[gamemode=adventure,scores={class=5,bow=53..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .5 2
 scoreboard players set @a[gamemode=adventure,scores={class=5,bow=56..}] bow -2
@@ -64,9 +64,9 @@ scoreboard players set @a[gamemode=adventure,scores={class=7,bow=45..}] bow 0
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=8,bow=22..}] hotbar.7 with arrow{display:{Name:"{\"italic\":false,\"text\":\"Not your father's Blast Off\"}"}}
 execute as @a[gamemode=adventure,scores={class=8,bow=22..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
 scoreboard players set @a[gamemode=adventure,scores={class=8,bow=22..}] bow 0
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=10,bow=45..}] hotbar.6 with arrow 2
-execute as @a[gamemode=adventure,scores={class=10,bow=44..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
-scoreboard players set @a[gamemode=adventure,scores={class=10,bow=45..}] bow 0
+item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=10,bow=43..}] hotbar.6 with arrow 2
+execute as @a[gamemode=adventure,scores={class=10,bow=42..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
+scoreboard players set @a[gamemode=adventure,scores={class=10,bow=43..}] bow 0
 
 #ender land effects
 execute as @a[gamemode=adventure,distance=..100,x=620,y=20,z=620] at @s run function items:endercount
@@ -88,7 +88,7 @@ execute as @a[gamemode=adventure,scores={shift=1..,timer=..0},distance=..100,x=6
 
 execute unless entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adventure,scores={timer=19..,class=0}] timer 0
 execute unless entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adventure,scores={timer=88..,class=1}] timer 0
-execute unless entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adventure,scores={timer=80..,class=2}] timer 0
+execute unless entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adventure,scores={timer=73..,class=2}] timer 0
 execute unless entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adventure,scores={timer=80..,class=3}] timer 0
 
 execute if entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adventure,scores={timer=12..,class=0}] timer 0
@@ -733,8 +733,9 @@ scoreboard players set @a[gamemode=adventure,scores={class=4},nbt={SelectedItemS
 scoreboard players set @e[scores={ballArrowT=..1}] isBall 0
 execute as @a[gamemode=adventure,scores={class=4,shootBall=1..,wizItem=1}] at @s run function game:pro4
 execute as @a[gamemode=adventure,scores={class=4,shootBall=1..,wizItem=1}] at @s run kill @e[distance=..5,type=arrow,scores={ballArrowT=..1}]
-execute as @a[gamemode=adventure,scores={class=4,shootBall=1..,wizItem=2}] at @s run scoreboard players set @e[distance=..5,type=arrow,scores={ballArrowT=..1}] isBall 2
-execute as @a[gamemode=adventure,scores={class=4,shootBall=1..,wizItem=3}] at @s run scoreboard players set @e[distance=..5,type=arrow,scores={ballArrowT=..1}] isBall 3
+execute as @a[gamemode=adventure,scores={class=4,shootBall=1..,wizItem=2}] at @s run scoreboard players set @e[limit=1,distance=..5,type=arrow,scores={ballArrowT=..1}] isBall 2
+execute as @a[gamemode=adventure,scores={class=4,shootBall=1..,wizItem=3}] at @s run scoreboard players set @e[limit=1,distance=..5,type=arrow,scores={ballArrowT=..1}] isBall 3
+execute as @a[gamemode=adventure,scores={class=4,shootBall=1..,wizItem=3}] at @s run scoreboard players operation @e[limit=1,distance=..5,type=arrow,scores={ballArrowT=..1}] tntID = @s tntID
 #clear @a[gamemode=adventure,scores={class=4,shootBall=1..,wizItem=3}] tipped_arrow
 scoreboard players set @a[gamemode=adventure,scores={class=4,shootBall=1..,wizItem=3}] bow 1
 scoreboard players set @a shootBall 0

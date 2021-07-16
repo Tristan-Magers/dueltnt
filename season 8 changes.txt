@@ -3,10 +3,14 @@
 [General]
 - Updated Minecraft version to 1.17.1
 
+[General Gameplay]
+- Updated lives color for 5 and 6
+
 [Character Changes]
 
 Soldier
 - Bomb Bow arrows explode 0.05s faster (0.5s -> 0.45s)
+	- Same explosion height (0.51 blocks off ground)
 - Mega Bomb summon 1 more tnt  (7 -> 8)
 - Mega Bomb isn't given until 3s into round
 - Anvil fall speed reduced by 50%
@@ -19,10 +23,12 @@ Assassin
 - Teleport (ender pearls) reload after 7 seconds
 - Starts with 2 less teleports (4 -> 2)
 - Mass Freeze reloads 0.5s faster (6s -> 5.5s)
+- Mass Freeze gives 0.6s less leviation (2s -> 1.4s)
 
 Ghost
-- Teleport reloads 2s faster (17s -> 13s)
+- Teleport reloads 4s faster (17s -> 13s)
 - Teleport gives levitation on contact (1s, level 2)
+- Shift reloads .35s faster (4s -> 3.65s)
 
 Trapper
 - All arrows explode 0.05s slower (0.05s -> 0.1s)
@@ -33,13 +39,16 @@ Trapper
 Wizard
 - Removed .1s fireball movement delay
 - Fireball speed is based on bow charge
- - Max charge as fast as previous
+	- Max charge as fast as previous
 - Teleport reworked
 	- Teleports up 1 block every .3s (previously 2 blocks once)
-	- After 11 steps or at height limit (y=40), summons air pillar
+	- Teleports down 1 blocks every .5s if near enemy (and not shooter)
+	- After 11 steps or at height limit (y=40 or y=4), summons air pillar
+- Arrows reload .05s faster (1.4s -> 1.35s)
 
 Mad Scientist
 - Explosive Gel (bow) explodes 0.05s slower (.2s -> .25s)
+	- Same explosion height (0.53 blocks off ground)
 - Laser fires .1s slower (.65s -> .75s)
 
 Reaper
@@ -52,6 +61,7 @@ Echo
 - Space Warp (bow) player teleport hitbox 1.5 blocks higher (1.5 -> 3 blocks)
 	- Functionally makes it harder to spleef players near arrow hitbox
 	- Hitbox still reaches 2 blocks under hit as well
+- Blast wand explodes .1s slower (.05s -> .15s)
 
 Gardener
 - Gets an extra life every 45 seconds
@@ -79,6 +89,7 @@ Shard
 - Air Nade killing chickens
 - Trapper short blast did not fire from eyes
 - Plague could be inventory duplicated
+- Fixed issue where blast wand could explode twice
 - Reaper creepers could become double powered
 - Fixed issue where Chicken Bow expired too fast
 - Power shield glass could last between rounds

@@ -3,12 +3,34 @@ scoreboard players remove @s frostl 1
 tag @s remove new
 tag @s add done
 
-execute as @s[scores={frostl=..300}] at @s positioned ~1 ~ ~ unless entity @e[tag=frostsuck,distance=..0.8] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
-execute as @s[scores={frostl=..300}] at @s positioned ~-1 ~ ~ unless entity @e[tag=frostsuck,distance=..0.8] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
-execute as @s[scores={frostl=..300}] at @s positioned ~ ~1 ~ unless entity @e[tag=frostsuck,distance=..0.8] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
-execute as @s[scores={frostl=..300}] at @s positioned ~ ~-1 ~ unless entity @e[tag=frostsuck,distance=..0.8] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
-execute as @s[scores={frostl=..300}] at @s positioned ~ ~ ~1 unless entity @e[tag=frostsuck,distance=..0.8] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
-execute as @s[scores={frostl=..300}] at @s positioned ~ ~ ~-1 unless entity @e[tag=frostsuck,distance=..0.8] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~1 ~ ~ unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~-1 ~ ~ unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~ ~1 ~ unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~ ~-1 ~ unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~ ~ ~1 unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~ ~ ~-1 unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+
+execute as @s[scores={frostl=..300}] at @s positioned ~1 ~1 ~ unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~1 ~-1 ~ unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~-1 ~1 ~ unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~-1 ~-1 ~ unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~ ~1 ~1 unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~ ~1 ~-1 unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~ ~-1 ~1 unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~ ~-1 ~-1 unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~1 ~ ~1 unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~1 ~ ~-1 unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~-1 ~ ~1 unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~-1 ~ ~-1 unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+
+execute as @s[scores={frostl=..300}] at @s positioned ~1 ~1 ~1 unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~1 ~1 ~-1 unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~1 ~-1 ~1 unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~1 ~-1 ~-1 unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~-1 ~1 ~1 unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~-1 ~1 ~-1 unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~-1 ~-1 ~1 unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
+execute as @s[scores={frostl=..300}] at @s positioned ~-1 ~-1 ~-1 unless entity @e[tag=frostsuck,distance=..0.49] if block ~ ~ ~ minecraft:packed_ice run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["testing","gameae","frostsuck","new","new2"]}
 
 execute at @s run scoreboard players operation @e[tag=frostsuck,tag=new,distance=..3] objID = @s objID
 

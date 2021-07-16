@@ -80,68 +80,7 @@ scoreboard players set @a[scores={CPbomb=1..}] CPtimer 140
 execute as @a[scores={CPtimer=1..,class=4}] at @s run function game:excreep
 
 #particle
-execute as @a[scores={Invis=..0,particle=1}] at @s run particle flame ~ ~.1 ~ .3 .1 .3 .02 1 force
-execute as @a[scores={Invis=..0,particle=2,parttimer=1}] at @s positioned ~ ~.05 ~ run particle cloud ~ ~.25 ~ .14 .1 .14 0 2 force
-execute as @a[scores={Invis=..0,particle=2,parttimer=1}] at @s positioned ~ ~.05 ~ run particle spit ~ ~.25 ~ .14 .1 .14 0 1 force
-#execute as @a[scores={Invis=..0,particle=2,parttimer=1}] at @s positioned ~ ~.05 ~ run particle poof ~ ~.25 ~ .3 .1 .3 .1 1 force
-execute as @a[scores={Invis=..0,particle=2,parttimer=1}] at @s positioned ~ ~.05 ~ run particle minecraft:block snow ~ ~.3 ~ .3 .1 .3 0 2
-execute as @a[scores={Invis=..0,particle=3,parttimer=1}] at @s run particle dragon_breath ~ ~.1 ~ .5 .1 .5 .04 2 force
-execute as @a[scores={Invis=..0,particle=4}] at @s run particle enchant ~ ~.1 ~ .5 .5 .5 .1 2 force
-execute as @a[scores={Invis=..0,particle=5}] at @s run particle minecraft:dust 15277350 20 2 2 ~ ~ ~ .2 .2 .2 0 3 force
-execute as @a[scores={Invis=..0,particle=6,parttimer=1}] at @s run particle angry_villager ~ ~2.5 ~ .3 .2 .3 0 1 force
-execute as @a[scores={Invis=..0,particle=6,parttimer=1}] at @s run particle falling_water ~ ~3.1 ~ .25 .3 .25 0 1 force
-execute as @a[scores={Invis=..0,particle=7}] at @s run particle note ~ ~-.5 ~ .3 .6 .3 0 1 force
-execute as @a[scores={Invis=..0,particle=8}] at @s run particle witch ~ ~ ~ .3 .2 .3 0 1 force
-execute as @a[scores={Invis=..0,particle=8}] at @s run particle minecraft:dragon_breath ~ ~ ~ 2.5 0 2.5 .02 1 force
-execute as @a[scores={Invis=..0,particle=9}] at @s run particle end_rod ~ ~ ~ .2 .2 .2 .05 1 force
-execute as @a[scores={Invis=..0,particle=9}] at @s run particle crit ~ ~ ~ 1.5 1.5 1.5 .05 1 force
-execute as @a[scores={Invis=..0,particle=10}] at @s run particle minecraft:totem_of_undying ~ ~.5 ~ .5 1 .5 0 1 force
-execute as @a[scores={Invis=..0,particle=10}] at @s run particle minecraft:rain ~ ~.2 ~ .3 .1 .3 0 1 force
-execute as @a[scores={Invis=..0,particle=11,gpart=0..2}] at @s run particle minecraft:lava ~ ~.2 ~ .5 .1 .5 0 1 force
-execute as @a[scores={Invis=..0,particle=11,gpart=5..7}] at @s run particle minecraft:large_smoke ~ ~.2 ~ .32 .1 .32 .03 1 force
-execute as @a[scores={Invis=..0,particle=12,parttimer=1}] at @s run particle minecraft:heart ~ ~.2 ~ 0.7 0.1 0.7 0 1 force
-execute as @a[scores={Invis=..0,particle=13,parttimer=1}] at @s run particle minecraft:portal ~ ~1 ~ 1 1 1 0 2 force
-execute as @a[scores={Invis=..0,particle=13,parttimer=1,spacepart=0}] at @s run particle minecraft:end_rod ~1 ~.9 ~ .1 0 .2 0 1 force
-execute as @a[scores={Invis=..0,particle=13,parttimer=1,spacepart=1}] at @s run particle minecraft:end_rod ~-1 ~.9 ~ .1 0 .2 0 1 force
-execute as @a[scores={Invis=..0,particle=13,parttimer=1,spacepart=2}] at @s run particle minecraft:end_rod ~ ~.9 ~1 .2 0 .1 0 1 force
-execute as @a[scores={Invis=..0,particle=13,parttimer=1,spacepart=3}] at @s run particle minecraft:end_rod ~ ~.9 ~-1 .2 0 .1 0 1 force
-execute as @a[scores={Invis=..0,particle=13,parttimer=1,spacepart=4}] at @s run particle minecraft:end_rod ~.7 ~.9 ~.7 .1 0 .1 0 1 force
-execute as @a[scores={Invis=..0,particle=13,parttimer=1,spacepart=5}] at @s run particle minecraft:end_rod ~-.7 ~.9 ~.7 .1 0 .1 0 1 force
-execute as @a[scores={Invis=..0,particle=13,parttimer=1,spacepart=6}] at @s run particle minecraft:end_rod ~.7 ~.9 ~-.7 .1 0 .1 0 1 force
-execute as @a[scores={Invis=..0,particle=13,parttimer=1,spacepart=7}] at @s run particle minecraft:end_rod ~-.7 ~.9 ~-.7 .1 0 .1 0 1 force
-
-execute as @a[scores={Invis=..0,particle=14}] at @s run function game:waterpart
-
-execute as @a[scores={Invis=..0,particle=15,gpart=8..9}] at @s run particle totem_of_undying ~ ~1 ~ 1 1 1 0 1 force
-execute as @a[scores={Invis=..0,particle=15,gpart=15..16}] at @s run particle totem_of_undying ~ ~1 ~ 1 1 1 0 1 force
-execute as @a[scores={Invis=..0,particle=15,gpart=1..5}] at @s run particle enchant ~ ~1 ~ .8 .8 .8 0 2 force
-execute as @a[scores={Invis=..0,particle=15,gpart=1..2}] at @s run particle minecraft:sneeze ~ ~.3 ~ .3 .1 .3 0 1 force
-execute as @a[scores={Invis=..0,particle=15,gpart=10..12}] at @s run particle minecraft:sneeze ~ ~.3 ~ .3 .1 .3 0 1 force
-
-execute as @a[scores={Invis=..0,particle=16,parttimer=1}] at @s run particle minecraft:crimson_spore ~ ~-.5 ~ .2 .2 .2 0 2 force @a
-execute as @a[scores={Invis=..0,particle=16,parttimer=1}] at @s run particle minecraft:smoke ~ ~.22 ~ .4 0 .4 0 3 force @a
-
-execute as @a[scores={Invis=..0,particle=17,gpart=4..7}] at @s run particle minecraft:soul_fire_flame ~ ~.2 ~ .4 .1 .4 0 1 force @a
-execute as @a[scores={Invis=..0,particle=17,gpart=14..17}] at @s run particle minecraft:soul_fire_flame ~ ~.2 ~ .4 .1 .4 0 1 force @a
-execute as @a[scores={Invis=..0,particle=17,parttimer=1}] at @s run particle minecraft:white_ash ~ ~1 ~ .4 .5 .4 0 2 force @a
-execute as @a[scores={Invis=..0,particle=17,gpart=1}] at @s run particle minecraft:soul ~ ~.4 ~ .4 .2 .4 0 1 force @a
-execute as @a[scores={Invis=..0,particle=17,gpart=10}] at @s run particle minecraft:soul ~ ~.4 ~ .4 .2 .4 0 1 force @a
-
-execute as @a[scores={Invis=..0,particle=18,OPp=20..30}] at @s run particle minecraft:warped_spore ~ ~0.5 ~ .5 .3 .5 .08 3 force
-execute as @a[scores={Invis=..0,particle=18,OPp=0..19}] at @s run particle minecraft:ash ~ ~0.5 ~ .6 .3 .6 .08 1 force
-execute as @a[scores={Invis=..0,particle=18,OPp=0..19}] at @s run particle minecraft:block nether_portal ~ ~.2 ~ 0.4 0.1 0.4 0.1 1 force
-
-scoreboard players add @a[scores={Invis=..0}] OPp 1
-scoreboard players set @a[scores={OPp=54..}] OPp 0
-
-scoreboard players add @a[scores={Invis=..0}] gpart 1
-scoreboard players set @a[scores={gpart=20..}] gpart 0
-
-scoreboard players add @a[scores={Invis=..0,particle=13,parttimer=1}] spacepart 1
-scoreboard players set @a[scores={spacepart=8..}] spacepart 0
-
-scoreboard players add @a parttimer 1
-scoreboard players set @a[scores={parttimer=4..}] parttimer 1
+execute as @a[scores={Invis=..0,particle=1..}] at @s run function game:player/particle
 
 #misc
 kill @e[x=595,z=595,y=-10,dx=45,dz=45,dy=10,distance=..1000,type=fireball]
@@ -204,38 +143,13 @@ scoreboard players set @a[gamemode=spectator] Y 45
 scoreboard players set @a[x=600,y=60,z=600,distance=..3] Y 45
 
 #respawn
-execute as @a[scores={Y=..0},x=620,y=20,z=620,distance=..100] at @s run particle explosion_emitter ~ 1 ~ 1 3 1 1 20
-execute as @a[scores={Lives=7,Y=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a ["",{"selector":"@p[scores={Y=..0,Lives=7}]"},{"text":" fell!","color":"white"},{"text":" 6 ","color":"dark_aqua","bold":true},{"text":"lives remaining","color":"none","bold":false}]
-execute as @a[scores={Lives=6,Y=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a ["",{"selector":"@p[scores={Y=..0,Lives=6}]"},{"text":" fell!","color":"white"},{"text":" 5 ","color":"blue","bold":true},{"text":"lives remaining","color":"none","bold":false}]
-execute as @a[scores={Lives=5,Y=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a ["",{"selector":"@p[scores={Y=..0,Lives=5}]"},{"text":" fell!","color":"white"},{"text":" 4 ","color":"dark_green","bold":true},{"text":"lives remaining","color":"none","bold":false}]
-execute as @a[scores={Lives=4,Y=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a ["",{"selector":"@p[scores={Y=..0,Lives=4}]"},{"text":" fell!","color":"white"},{"text":" 3 ","color":"gold","bold":true},{"text":"lives remaining","color":"none","bold":false}]
-execute as @a[scores={Lives=3,Y=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a ["",{"selector":"@p[scores={Y=..0,Lives=3}]"},{"text":" fell!","color":"white"},{"text":" 2 ","color":"red","bold":true},{"text":"lives remaining","color":"none","bold":false}]
-execute as @a[scores={Lives=2,Y=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a ["",{"selector":"@p[scores={Y=..0,Lives=2}]"},{"text":" fell!","color":"white"},{"text":" 1 ","color":"dark_red","bold":true},{"text":"life remaining","color":"none","bold":false}]
-scoreboard players remove @a[scores={Lives=-10..,Y=..0}] Lives 1
-execute as @a[scores={Lives=1..,Y=..0}] at @s run summon armor_stand ~ 44 ~ {NoGravity:1,Invlunerable:1,Marker:1,CustomName:"{\"italic\":false,\"text\":\"SP\"}",Invisible:1}
-execute as @a[scores={Lives=1..,Y=..0}] at @s run function game:killender
-execute as @a[scores={Lives=1..,Y=..0}] at @s run tp @s ~ 45 ~
-execute as @a[scores={Y=..0},x=620,y=20,z=620,distance=..100] at @s run execute as @a[distance=..100] at @s run playsound minecraft:entity.wither.hurt master @s ~ ~ ~ 1 1.5
-#execute as @a[scores={Lives=1..,Y=..0}] at @s run scoreboard players set @s Y 45
-effect clear @a[scores={Y=..0}] blindness
-effect clear @a[scores={Y=..0}] poison
-scoreboard players set @a[scores={Y=..0}] fall 3
-scoreboard players set @a[scores={Y=..0}] platAm -100
-execute as @a[scores={Lives=1..,Y=..0}] at @s positioned ~ ~-1 ~ run fill ~1 44 ~1 ~-1 44 ~-1 white_stained_glass replace air
-#execute as @a[scores={Lives=1..,Y=..0}] at @s run tp @s ~ 999 ~
-#scoreboard players remove @a[scores={Lives=1..,Y=..0}] Lives 1
+execute as @a[scores={Y=..0}] at @s run function game:player/respawn
 
-execute as @a[scores={Lives=-8,Y=..0}] at @s run gamemode spectator
-execute as @a[scores={Lives=-8,Y=..0}] at @s run scoreboard players set @s Lives 1
-
-scoreboard players set @a[scores={Lives=1..,Y=..0}] Y 45
 scoreboard players add @a[scores={rejoin=1..}] timer 0
-#scoreboard players add @a[scores={rejoin=1..}] Y 0
 effect give @a[scores={rejoin=1..}] resistance 1000000 255 true
 effect give @a[scores={rejoin=1..}] saturation 1000000 255 true
 execute as @a[scores={Y=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a [{"selector":"@p[scores={Y=..0}]"},{"text":" died!","color":"green"}]
 tp @a[scores={rejoin=1..,inarena=..0}] 500 20.5 500 0 0
-#scoreboard players reset @a[scores={bow_min=1,scores={rejoin=1..}] bow
 scoreboard players add @a[scores={rejoin=1..}] class 0
 gamemode spectator @a[scores={Y=..0,inarena=1..}]
 tp @a[scores={Y=..0,inarena=1..}] 614 40 614

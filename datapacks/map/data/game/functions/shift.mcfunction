@@ -24,7 +24,7 @@ scoreboard players add @s overlordsc 1
 
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=0,timer=1}] 17 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=1,timer=1}] 88 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=2,timer=1}] 80 levels
+execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=2,timer=1}] 73 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=3,timer=1}] 80 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=4,timer=1}] 150 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=6,timer=1}] 170 levels
@@ -77,8 +77,8 @@ execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s 
 
 xp add @s[scores={class=8,timer=1}] 45 levels
 
-execute as @s[scores={class=10}] at @s positioned ~ ~.4 ~ run summon tnt ^ ^ ^-.4 {Fuse:3}
-execute as @s[scores={class=10}] at @s positioned ~ ~.4 ~ run summon tnt ^ ^ ^-.4 {Fuse:3}
+execute as @s[scores={class=10}] at @s positioned ~ ~.35 ~ run summon tnt ^ ^ ^-.35 {Fuse:3}
+execute as @s[scores={class=10}] at @s positioned ~ ~.35 ~ run summon tnt ^ ^ ^-.35 {Fuse:3}
 
 execute as @s[scores={class=10}] at @s run effect give @s levitation 1 3
 

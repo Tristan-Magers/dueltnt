@@ -75,6 +75,7 @@ execute if entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={isBal
 
 #wizard tele bow
 execute as @s[type=arrow,x=599,z=599,y=5,dx=36,dz=36,dy=25,distance=..1000,scores={Inbarrier=..0,isBall=3}] at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,Small:1,Marker:1,Invulnerable:1,Tags:["telebow"],DisabledSlots:4144959}
+execute as @s[type=arrow,x=599,z=599,y=5,dx=36,dz=36,dy=25,distance=..1000,scores={Inbarrier=..0,isBall=3}] at @s run scoreboard players operation @e[tag=telebow,limit=1,distance=..1] tntID = @s tntID
 
 #ghost bow
 execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air destroy
