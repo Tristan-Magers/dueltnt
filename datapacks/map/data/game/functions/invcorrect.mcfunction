@@ -51,4 +51,4 @@ clear @s[scores={class=9,masterc=..24},tag=!hasshov] stone_pickaxe
 clear @s[scores={class=9,masterc=..24},tag=!hasshov] iron_pickaxe
 clear @s[scores={class=9,masterc=..24},tag=!hasshov] golden_pickaxe
 clear @s[scores={class=9,masterc=..24},tag=!hasshov] diamond_pickaxe
-execute as @s[scores={class=9,masterc=..24},tag=!hasshov] at @s run function items:masterwanduse
+execute as @s[scores={class=9,masterc=..24},tag=!hasshov] at @s run function game:char/overlord/masterwanduse

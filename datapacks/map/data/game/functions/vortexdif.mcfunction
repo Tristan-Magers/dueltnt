@@ -41,4 +41,4 @@ execute as @e[distance=..8,tag=pull] at @s run scoreboard players operation @s d
 execute as @e[distance=..8,tag=pull] at @s run scoreboard players operation @s dy = @s y
 execute as @e[distance=..8,tag=pull] at @s run scoreboard players operation @s dz = @s z
 
-execute as @e[distance=..8,tag=pull] at @s run function game:detailwall
+execute as @e[distance=..8,tag=pull] at @s run function game:physics/detailwall

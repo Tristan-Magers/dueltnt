@@ -1,8 +1,12 @@
-execute as @e[type=area_effect_cloud,tag=!a,nbt={Potion:"minecraft:poison"}] at @s run function game:plaguepot
+execute as @e[type=area_effect_cloud,tag=!a,nbt={Potion:"minecraft:poison"}] at @s run function game:char/gardener/plaguepot
 execute as @e[type=area_effect_cloud,tag=!a,nbt={Potion:"minecraft:swiftness"}] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1,Marker:1,Tags:["a","airnade"]}
 kill @e[type=area_effect_cloud,tag=!a,tag=!gameae]
 
 clear @a[gamemode=spectator]
+
+#run game
+execute unless entity @a[x=620,y=20,z=620,distance=..100,gamemode=adventure] run function game:game/run
+execute if entity @a[x=620,y=20,z=620,distance=..100,gamemode=adventure] run scoreboard players set ArenaCheck game 0
 
 #menu push
 execute as @a[x=473.7,y=16,z=494,dz=10,dy=4] at @s run tp @s ~.1 ~ ~
@@ -64,6 +68,9 @@ tp @a[gamemode=!creative,x=500,y=35,z=500,distance=..4] 500 20 500
 
 #bedremove
 scoreboard players set @e[type=tnt,x=615,y=30,z=615,distance=..90,nbt={Fuse:1s}] tntEnd 1
+execute as @e[scores={tntEnd=1..},tag=frost] at @s run summon minecraft:marker ~ ~ ~ {Tags:["frostmarker"]}
+scoreboard players add @e[tag=frostmarker] t1 1
+execute as @e[scores={t1=2..},tag=frostmarker] at @s run function game:char/shard/tntfill
 execute as @e[scores={tntEnd=1..},type=!creeper] at @s run function game:bedremove
 execute as @e[type=tnt,scores={tntEnd=1..}] at @s run fill ~ ~ ~ ~ ~ ~ air
 scoreboard players set @e[type=creeper,nbt={ignited:1b}] tntEnd 1
@@ -77,7 +84,7 @@ execute as @a[scores={kit=0..}] at @s run function game:kit
 scoreboard players set @a CPbomb 0
 scoreboard players set @a[nbt={Inventory:[{Slot:100b,id:"minecraft:golden_boots"}]}] CPbomb 1
 scoreboard players set @a[scores={CPbomb=1..}] CPtimer 140
-execute as @a[scores={CPtimer=1..,class=4}] at @s run function game:excreep
+execute as @a[scores={CPtimer=1..,class=4}] at @s run function game:char/wizard/excreep
 
 #particle
 execute as @a[scores={Invis=..0,particle=1..}] at @s run function game:player/particle
@@ -191,19 +198,20 @@ item replace entity @a[gamemode=adventure,scores={class=7..,Invis=0..1,ingame=1.
 item replace entity @a[gamemode=adventure,scores={class=6..7,teamed=..0,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.head with minecraft:air{Unbreakable:1}
 item replace entity @a[gamemode=adventure,scores={class=8,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:golden_helmet",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:golden_helmet{Unbreakable:1}
 item replace entity @a[gamemode=adventure,scores={class=9,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:chicken",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:chicken
+item replace entity @a[gamemode=adventure,scores={class=10,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:netherite_helmet",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:netherite_helmet
 item replace entity @a[gamemode=adventure,scores={class=99,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:iron_ore",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:iron_ore
 
 #Modes
-execute if entity @e[scores={mode=1}] run function game:overpowered
+execute if entity @e[scores={mode=1}] run function game:mode/overpowered/overpowered
 
 execute if entity @e[scores={mode=2}] run scoreboard players add @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] hotfeet 1
-execute if entity @e[scores={mode=2}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure,scores={hotfeet=110}] at @s run function game:hotfeetsummon
+execute if entity @e[scores={mode=2}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure,scores={hotfeet=110}] at @s run function game:mode/hotfeet/hotfeetsummon
 execute if entity @e[scores={mode=2}] run scoreboard players add @a[scores={hotfeet=110..}] hotfeetlevel 1
-execute if entity @e[scores={mode=2}] run function game:hotfeetlevel
+execute if entity @e[scores={mode=2}] run function game:mode/hotfeet/hotfeetlevel
 
 execute if entity @e[scores={mode=3}] run function game:phantommode
 
-execute if entity @e[scores={mode=4}] run function game:survivalmode
+execute if entity @e[scores={mode=4}] run function game:mode/survival/survivalmode
 
 #Training Mode
 scoreboard players enable @a dummytrigger

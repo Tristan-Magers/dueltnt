@@ -1,7 +1,7 @@
 # tracking bomb
 effect give @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:redstone"}}] minecraft:levitation 1
 scoreboard players set @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:redstone"}}] TBtimer 240
-execute as @s[scores={TBtimer=-10..}] at @s run function items:trackbomb
+execute as @s[scores={TBtimer=-10..}] at @s run function game:items/trackbomb
 
 #bow
 execute as @s[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:bamboo"}},nbt={Inventory:[{id:"minecraft:arrow"}]}] at @s anchored eyes run summon minecraft:tnt ^ ^ ^3 {Fuse:2,NoGravity:1}
@@ -13,7 +13,7 @@ execute as @s[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minec
 execute as @s[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:flint"}},nbt={Inventory:[{id:"minecraft:arrow"}]}] at @s run scoreboard players set @s[scores={trapdraw=0}] trapdraw 1
 execute as @s[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:bowl"}},nbt={Inventory:[{id:"minecraft:arrow"}]}] at @s run scoreboard players set @s[scores={trapdraw=0}] trapdraw 1
 
-execute as @s[gamemode=adventure,scores={trapdraw=2..}] at @s run function game:pro3
+execute as @s[gamemode=adventure,scores={trapdraw=2..}] at @s run function game:cprojectile/pro3
 
 scoreboard players add @s[gamemode=adventure,scores={trapdraw=1..}] trapdraw 1
 scoreboard players set @s[gamemode=adventure,scores={trapdraw=3..}] trapdraw 0

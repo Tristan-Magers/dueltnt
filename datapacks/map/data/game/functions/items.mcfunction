@@ -36,6 +36,8 @@ team join Main @a[gamemode=adventure,team=!Main,scores={class=..7}]
 execute as @a[gamemode=adventure,scores={class=0,bow=12..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .3 2
 execute as @a[gamemode=adventure,scores={class=1,bow=23..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 1.5
 execute as @a[gamemode=adventure,scores={class=2,bow=58..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .5 1.1
+scoreboard players set @a[gamemode=adventure,scores={bow=-100}] bow 1
+scoreboard players add @a[gamemode=adventure,scores={bow=..-99}] bow 1
 scoreboard players add @a[gamemode=adventure,scores={bow=1..}] bow 1
 item replace entity @a[gamemode=adventure,scores={class=0,bow=14..}] hotbar.5 with arrow 2
 scoreboard players set @a[gamemode=adventure,scores={class=0,bow=14..}] bow -1
@@ -69,7 +71,7 @@ execute as @a[gamemode=adventure,scores={class=10,bow=42..}] at @s run playsound
 scoreboard players set @a[gamemode=adventure,scores={class=10,bow=43..}] bow 0
 
 #ender land effects
-execute as @a[gamemode=adventure,distance=..100,x=620,y=20,z=620] at @s run function items:endercount
+execute as @a[gamemode=adventure,distance=..100,x=620,y=20,z=620] at @s run function game:items/endercount
 
 # shifting specials
 
@@ -111,7 +113,7 @@ scoreboard players set @a[gamemode=adventure,scores={timer=20..,class=5}] timer 
 effect give @a[gamemode=adventure,scores={class=4,timer=1},distance=..100,x=620,y=20,z=620] slowness 2 2
 effect give @a[gamemode=adventure,scores={class=6,timer=2},distance=..100,x=620,y=20,z=620] slowness 2 3
 
-execute unless entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adventure,scores={timer=170..,class=6}] timer 0
+execute unless entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adventure,scores={timer=160..,class=6}] timer 0
 execute if entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adventure,scores={timer=140..,class=6}] timer 0
 
 #execute unless entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adventure,scores={timer=160..,class=7}] timer 0
@@ -140,12 +142,12 @@ execute as @a[gamemode=adventure,scores={bowDetect=1..,class=6}] at @s run score
 execute as @a[gamemode=adventure,scores={bowDetect=1..,class=7}] at @s run scoreboard players set @e[type=arrow,scores={arrowTime=1},distance=..5,limit=1] AprBow 1
 execute as @a[gamemode=adventure,scores={bowDetect=1..,class=8}] at @s run scoreboard players set @e[type=arrow,scores={arrowTime=1},distance=..5,limit=1] GardBow 1
 #execute as @a[gamemode=adventure,scores={bowDetect=1..,class=8}] at @s run data merge entity @e[type=arrow,scores={arrowTime=1},distance=..5,limit=1] {PierceLevel:10b}
-execute as @a[gamemode=adventure,scores={bowDetect=1..,class=10}] at @s run execute as @e[type=arrow,scores={arrowTime=1},distance=..5,limit=1] at @s run function game:frostbow
+execute as @a[gamemode=adventure,scores={bowDetect=1..,class=10}] at @s run execute as @e[type=arrow,scores={arrowTime=1},distance=..5,limit=1] at @s run function game:char/shard/frostbow
 execute as @a[gamemode=adventure,scores={bowDetect=1..,chickenbow=1..}] at @s run tag @e[type=arrow,scores={arrowTime=1},distance=..5,limit=1] add chickenbow
 scoreboard players set @a bowDetect 0
 
-execute as @e[type=arrow,scores={BombBow=1..}] at @s run function game:traparrowalarm
-execute as @e[tag=!inG,type=arrow,nbt={inGround:1b},scores={BombBow=1..}] run function game:traparrowhit
+execute as @e[type=arrow,scores={BombBow=1..}] at @s run function game:char/trapper/traparrowalarm
+execute as @e[tag=!inG,type=arrow,nbt={inGround:1b},scores={BombBow=1..}] run function game:char/trapper/traparrowhit
 tag @e[type=arrow,nbt={inGround:1b}] add inG
 
 execute as @a[scores={alarm=5}] at @s run playsound minecraft:block.note_block.iron_xylophone master @p ~ ~ ~ 1 1
@@ -154,7 +156,7 @@ scoreboard players remove @a[scores={alarm=1..}] alarm 1
 execute as @e[type=arrow,tag=chickenbow,tag=inG] at @s run summon chicken ~ ~ ~ {Tags:["exchicken"],Invulnerable:1}
 kill @e[type=arrow,tag=chickenbow,tag=inG]
 
-execute as @e[tag=frostset] at @s run function game:frostplace
+execute as @e[tag=frostset] at @s run function game:char/shard/frostplace
 kill @e[tag=frostset]
 
 tag @e[type=arrow,tag=!flame,nbt={Fire:1999s}] add flame
@@ -204,20 +206,20 @@ item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores
 kill @e[tag=slime,name=AM,type=armor_stand]
 
 # potions
-execute as @a[gamemode=adventure,scores={potion=-200..}] at @s run function items:potion
+execute as @a[gamemode=adventure,scores={potion=-200..}] at @s run function game:items/potion
 
 #master_wand
-#execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,tag=!mwnext,tag=mwnext2] at @s anchored eyes run function items:masterwand
+#execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,tag=!mwnext,tag=mwnext2] at @s anchored eyes run function game:char/overlord/masterwand
 tag @a[gamemode=adventure,tag=!mwnext] remove mwnext2
 
-#execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,tag=mwnext] at @s anchored eyes run function items:masterwand
+#execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,tag=mwnext] at @s anchored eyes run function game:char/overlord/masterwand
 tag @a remove mwnext
 
-execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:wooden_pickaxe"}}] at @s anchored eyes run function items:masterwand
-execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:stone_pickaxe"}}] at @s anchored eyes run function items:masterwand
-execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:iron_pickaxe"}}] at @s anchored eyes run function items:masterwand
-execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:golden_pickaxe"}}] at @s anchored eyes run function items:masterwand
-execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:diamond_pickaxe"}}] at @s anchored eyes run function items:masterwand
+execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:wooden_pickaxe"}}] at @s anchored eyes run function game:char/overlord/masterwand
+execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:stone_pickaxe"}}] at @s anchored eyes run function game:char/overlord/masterwand
+execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:iron_pickaxe"}}] at @s anchored eyes run function game:char/overlord/masterwand
+execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:golden_pickaxe"}}] at @s anchored eyes run function game:char/overlord/masterwand
+execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:diamond_pickaxe"}}] at @s anchored eyes run function game:char/overlord/masterwand
 
 execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:wooden_pickaxe"}}] at @s anchored eyes run tag @s add mwnext
 execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:stone_pickaxe"}}] at @s anchored eyes run tag @s add mwnext
@@ -228,23 +230,23 @@ execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minec
 tag @a[gamemode=adventure,tag=mwnext,tag=!mwnext2] add mwnext2
 
 #master boom
-execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:beef"}}] at @s run function items:masterboom
+execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:beef"}}] at @s run function game:char/overlord/masterboom
 scoreboard players remove @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:beef"}}] masterb 13
 clear @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:beef"}}] gold_ore 13
-execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:beef"}}] at @s run function items:masterwanditems
+execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:beef"}}] at @s run function game:char/overlord/masterwanditems
 
 #wand upgrade
 scoreboard players add @a[gamemode=adventure,scores={masterc=25..}] mastercT 1
 execute if entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adventure,scores={mastercT=1}] mastercT 4
 scoreboard players set @a[gamemode=adventure,scores={mastercT=40..}] masterc 0
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={mastercT=40..,class=9}] at @s run function items:masterwandreload
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={mastercT=40..,class=9}] at @s run function game:char/overlord/masterwandreload
 scoreboard players set @a[gamemode=adventure,scores={mastercT=40..}] mastercT 0
 
-execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:cod"}}] at @s anchored eyes run function items:masterwandup
+execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:cod"}}] at @s anchored eyes run function game:char/overlord/masterwandup
 
 #matter refill
 scoreboard players add @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=9}] matfill 1
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=9,matfill=24}] at @s run function items:masterwandget
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=9,matfill=24}] at @s run function game:char/overlord/masterwandget
 scoreboard players set @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=9,matfill=24}] matfill 0
 
 #master storm
@@ -252,25 +254,25 @@ scoreboard players set @a[gamemode=adventure,scores={click=1..},nbt={SelectedIte
 #execute if entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:cooked_salmon"}}] masterstorm 9
 scoreboard players remove @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:cooked_salmon"}}] masterb 16
 clear @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:cooked_salmon"}}] gold_ore 16
-execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:cooked_salmon"}}] at @s run function items:masterwanditems
+execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:cooked_salmon"}}] at @s run function game:char/overlord/masterwanditems
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={masterstorm=12,class=9}] at @s run playsound minecraft:entity.lightning_bolt.thunder master @a ~ ~ ~ 1 2
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={masterstorm=12,class=9}] at @s run playsound minecraft:entity.lightning_bolt.impact master @a ~ ~ ~ 1 0
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={masterstorm=12,class=9}] at @s run playsound minecraft:block.beacon.deactivate master @a ~ ~ ~ 1 0
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={masterstorm=12,class=9}] at @s run function items:masterstorm
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={masterstorm=9,class=9}] at @s run function items:masterstorm
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={masterstorm=6,class=9}] at @s run function items:masterstorm
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={masterstorm=3,class=9}] at @s run function items:masterstorm
-execute if entity @e[scores={mode=1}] run execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={masterstorm=0,class=9}] at @s run function items:masterstorm
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={masterstorm=12,class=9}] at @s run function game:char/overlord/masterstorm
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={masterstorm=9,class=9}] at @s run function game:char/overlord/masterstorm
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={masterstorm=6,class=9}] at @s run function game:char/overlord/masterstorm
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={masterstorm=3,class=9}] at @s run function game:char/overlord/masterstorm
+execute if entity @e[scores={mode=1}] run execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={masterstorm=0,class=9}] at @s run function game:char/overlord/masterstorm
 scoreboard players remove @a[gamemode=adventure,scores={masterstorm=0..}] masterstorm 1
 
-execute as @e[tag=stormtnt] at @s run function items:masterstormmove
+execute as @e[tag=stormtnt] at @s run function game:char/overlord/masterstormmove
 
 #mastershift
-execute as @e[name=ground2] at @s run function items:masterground
+execute as @e[name=ground2] at @s run function game:char/overlord/masterground
 
 #fireball mot
-execute as @e[tag=trackshot2,tag=newbomb] at @s anchored eyes run function game:pro4mot
-execute as @e[scores={fballtimer=1}] at @s run function game:pro4mot2
+execute as @e[tag=trackshot2,tag=newbomb] at @s anchored eyes run function game:cprojectile/pro4mot
+execute as @e[scores={fballtimer=1}] at @s run function game:cprojectile/pro4mot2
 scoreboard players add @e[scores={fballtimer=1..}] fballtimer 1
 kill @e[scores={fballtimer=300..}]
 
@@ -281,15 +283,29 @@ execute as @e[tag=mastertnt,scores={masterb=14}] at @s run summon tnt ~ ~.4 ~ {F
 execute as @e[tag=mastertnt,scores={masterb=14}] at @s run summon tnt ~ ~.4 ~ {Fuse:2}
 kill @e[tag=mastertnt,scores={masterb=14}]
 
-execute as @e[tag=mastertnt,tag=newbomb] at @s anchored eyes run function game:pro2mot
-execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:salmon"}}] at @s run function game:pro2
+execute as @e[tag=mastertnt,tag=newbomb] at @s anchored eyes run function game:cprojectile/pro2mot
+execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:salmon"}}] at @s run function game:cprojectile/pro2
+
+#creeper projectile
+scoreboard players add @e[tag=creepro] masterb 1
+
+execute as @e[tag=creeppro,tag=newbomb] at @s anchored eyes run function game:cprojectile/pro5mot
+execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:creeper_spawn_egg"}}] at @s run function game:cprojectile/pro5
+
+#slime projectile
+execute as @e[tag=slimepro,tag=newbomb] at @s anchored eyes run function game:cprojectile/pro6mot
+execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:slime_spawn_egg"}}] at @s run function game:cprojectile/pro6
+
+#entity particles
+execute as @e[tag=critpart,nbt=!{inGround:1b}] at @s run particle minecraft:crit ~ ~ ~ 0.05 0.05 0.05 0 1 force
+execute as @e[tag=waxpart,nbt=!{inGround:1b}] at @s run particle minecraft:composter ~ ~ ~ 0 0 0 0 1 force
 
 #trapper arrows
-execute as @e[tag=trackshot,tag=newbomb] at @s anchored eyes run function game:pro3mot
+execute as @e[tag=trackshot,tag=newbomb] at @s anchored eyes run function game:cprojectile/pro3mot
 
 #ground path
-execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:cooked_cod"}}] at @s run function items:groundpathuse
-execute as @e[tag=groundpath] at @s run function items:groundpath
+execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:cooked_cod"}}] at @s run function game:char/overlord/groundpathuse
+execute as @e[tag=groundpath] at @s run function game:char/overlord/groundpath
 
 #vortex
 scoreboard players remove @a[gamemode=adventure,scores={vortextime=0..}] vortextime 1
@@ -305,7 +321,7 @@ execute as @a[gamemode=adventure,scores={vortextime=300}] at @s run playsound mi
 clear @a[gamemode=adventure,x=600,y=60,z=600,distance=..90,scores={click=1..},nbt={SelectedItem:{id:"minecraft:clay_ball"}}] clay_ball
 
 # platform
-scoreboard players set @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] PlatTimer 120
+scoreboard players set @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] PlatTimer 280
 
 execute as @a[gamemode=adventure,scores={click=1..,platUse=3},nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Platform","color":"red","bold":"true"},{"text":" (3 Remaining) ","color":"white"}]
 execute as @a[gamemode=adventure,scores={click=1..,platUse=2},nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Platform","color":"red","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
@@ -314,11 +330,13 @@ execute as @a[gamemode=adventure,scores={click=1..,platUse=0},nbt={SelectedItem:
 
 scoreboard players remove @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1}] platUse 1
 
+execute as @a[gamemode=adventure,scores={PlatTimer=279}] at @s run tp @s @s
+
 clear @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] diamond_sword
-execute as @a[gamemode=adventure,scores={PlatTimer=120}] at @s positioned ~ ~-.1 ~ run playsound minecraft:item.armor.equip_iron master @a ~ ~ ~ .7 1
+execute as @a[gamemode=adventure,scores={PlatTimer=280}] at @s positioned ~ ~-.1 ~ run playsound minecraft:item.armor.equip_iron master @a ~ ~ ~ .7 1
 scoreboard players remove @a[gamemode=adventure,scores={PlatTimer=1..}] PlatTimer 1
 execute as @a[gamemode=adventure,scores={platAm=1}] at @s positioned ~ ~-.1 ~ run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 white_stained_glass replace air
-execute as @a[gamemode=adventure,scores={PlatTimer=119}] at @s positioned ~ ~-.1 ~ run scoreboard players set @s platAm 6
+execute as @a[gamemode=adventure,scores={PlatTimer=279}] at @s positioned ~ ~-.1 ~ run scoreboard players set @s platAm 6
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=4}] hotbar.3 with diamond_sword{Damage:100,display:{Name:"{\"italic\":false,\"text\":\"Temporary Platform §r: Right-click\"}"}}
 scoreboard players add @e[name=SP] PlatTimer 1
 execute as @e[name=SP,scores={PlatTimer=50..}] at @s run fill ~1 ~ ~1 ~-1 ~ ~-1 air replace white_stained_glass
@@ -347,7 +365,7 @@ scoreboard players set @a tntegguset 0
 
 # acid
 scoreboard players set @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:sugar"}}] acidTimer 60
-execute as @a[gamemode=adventure,scores={acidTimer=1..}] at @s run function items:acid
+execute as @a[gamemode=adventure,scores={acidTimer=1..}] at @s run function game:items/acid
 
 execute as @e[name=acid,type=armor_stand] at @s run particle item_slime ~ ~ ~ .3 .3 .3 0 2 force
 scoreboard players add @e[name=acid,type=armor_stand] acid 1
@@ -406,7 +424,7 @@ scoreboard players set @a shStunD 0
 scoreboard players add @a shStun 0
 
 #boom wand
-execute as @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,scores={class=7}] at @s anchored eyes run function items:boomwman
+execute as @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,scores={class=7}] at @s anchored eyes run function game:items/boomwman
 
 #echo wall limit
 tag @a[nbt={OnGround:1b},scores={grtest=0}] remove nowalllev
@@ -414,32 +432,32 @@ tag @a[nbt={OnGround:1b},scores={grtest=0}] remove nowalllev
 #blast wand
 scoreboard players set @a[nbt={OnGround:1b},scores={grtest=0}] bwandlimit 0
 scoreboard players remove @a[gamemode=adventure,scores={blastwandtime=0..}] blastwandtime 1
-execute as @a[gamemode=adventure,scores={click=1..,blastwandtime=..0,bwandlimit=..3},nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] at @s run function items:blastwand
-execute as @e[name=blast] at @s run function game:blasttick
+execute as @a[gamemode=adventure,scores={click=1..,blastwandtime=..0,bwandlimit=..3},nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] at @s run function game:items/blastwand
+execute as @e[name=blast] at @s run function game:char/echo/blast/blasttick
 item replace entity @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,scores={blastwandtime=0}] hotbar.2 with minecraft:stone_hoe{display:{Name:"{\"italic\":false,\"text\":\"§aBlast Wand §r: Right-click\"}"},AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
 
 scoreboard players remove @a[scores={grtest=1..}] grtest 1
 
 #sky wand
 scoreboard players remove @a[gamemode=adventure,scores={airwandtime=0..}] airwandtime 1
-execute as @a[gamemode=adventure,scores={click=1..,airwandtime=..0},nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] at @s run function items:airwand
+execute as @a[gamemode=adventure,scores={click=1..,airwandtime=..0},nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] at @s run function game:items/airwand
 item replace entity @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,scores={airwandtime=0}] hotbar.3 with minecraft:diamond_hoe{display:{Name:"{\"italic\":false,\"text\":\"§bSky Wand §r: Right-click\"}"},AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
 
 #ground spell
-execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={click=1..},nbt={SelectedItem:{id:"minecraft:red_dye"}}] at @s run function items:groundspell
+execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={click=1..},nbt={SelectedItem:{id:"minecraft:red_dye"}}] at @s run function game:items/groundspell
 scoreboard players remove @a[gamemode=adventure,scores={groundtime=1..}] groundtime 1
 
 scoreboard players add @e[name=ground] gtimer 1
-execute as @e[name=ground,scores={gtimer=500..}] at @s run function items:groundspelldecay
+execute as @e[name=ground,scores={gtimer=500..}] at @s run function game:items/groundspelldecay
 
 #scythe
 tag @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] add pro1
 clear @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:iron_hoe"}}] iron_hoe
 scoreboard players set @a throwP1 0
 effect give @a[gamemode=adventure,tag=pro1] minecraft:slow_falling 1 10
-execute as @a[gamemode=adventure,tag=pro1] at @s positioned ~ ~ ~ run function game:pro1
+execute as @a[gamemode=adventure,tag=pro1] at @s positioned ~ ~ ~ run function game:cprojectile/pro1
 tag @a remove pro1
-execute as @e[name=pro1] at @s positioned ~ ~ ~ run function game:movevol
+execute as @e[name=pro1] at @s positioned ~ ~ ~ run function game:physics/movevol
 scoreboard players add @e[name=pro1] prolife 1
 kill @e[scores={prolife=60..}]
 scoreboard players remove @e[tag=!boom,name=pro1,scores={DirX=-70..}] DirX 1
@@ -492,33 +510,33 @@ execute as @a[gamemode=adventure,scores={pig=-100..}] at @s run function game:pi
 scoreboard players remove @e[scores={pig=-100..}] pig 1
 
 #frost suck
-execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={click=1..},nbt={SelectedItem:{id:"minecraft:lime_dye"}}] at @s run function game:frostsuck/use
-execute as @e[tag=frostsuck,scores={frostl=-200..}] at @s run function game:frostsuck/frostl
-execute as @e[tag=frostsuck,tag=org] at @s align x align y align z run function game:frostsuck/frosts
+execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={click=1..},nbt={SelectedItem:{id:"minecraft:lime_dye"}}] at @s run function game:char/shard/frostsuck/use
+execute as @e[tag=frostsuck,scores={frostl=-200..}] at @s run function game:char/shard/frostsuck/frostl
+execute as @e[tag=frostsuck,tag=org] at @s align x align y align z run function game:char/shard/frostsuck/frosts
 scoreboard players add @e[tag=frostsuck] frostl 0
 
 item replace entity @a[scores={class=10,frostsT=0},x=620,y=20,z=620,distance=..100] hotbar.3 with lime_dye{display:{Name:"{\"italic\":false,\"text\":\"§6Ice Suck §f§r: Right-click\"}"}}
 scoreboard players remove @e[scores={frostsT=-100..}] frostsT 1
 
-execute as @e[tag=frostplat] at @s run function game:frostsuck/plat
+execute as @e[tag=frostplat] at @s run function game:char/shard/frostsuck/plat
 
 #snowman
-execute as @e[type=minecraft:snow_golem] at @s run function game:snowman/tick
+execute as @e[type=minecraft:snow_golem] at @s run function game:char/shard/snowman/tick
 
-execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={click=1..},nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] at @s run function game:snowman/create
+execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={click=1..},nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] at @s run function game:char/shard/snowman/create
 #item replace entity @a[scores={class=10,snowmanT=0},x=620,y=20,z=620,distance=..100] hotbar.2 with yellow_dye{display:{Name:"{\"italic\":false,\"text\":\"§6Snowman §f§r: Right-click\"}"}}
 item replace entity @a[scores={class=10,snowmanT=0},x=620,y=20,z=620,distance=..100] hotbar.1 with egg{display:{Name:"{\"italic\":false,\"text\":\"§6Frost Nade §f§r: Right-click\"}"}}
 scoreboard players remove @e[scores={snowmanT=-100..}] snowmanT 1
 
 #trident trow
 execute as @e[type=minecraft:trident,nbt={inGround:1b}] at @s run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["tntstorm","gameae"]}
-#execute as @e[type=minecraft:trident,nbt={inGround:1b}] at @s run function game:frostplace2
+#execute as @e[type=minecraft:trident,nbt={inGround:1b}] at @s run function game:char/shard/frostplace2
 execute as @e[type=minecraft:trident,nbt={inGround:1b}] at @s run kill @s
 scoreboard players remove @a[scores={tridentT=0..}] tridentT 1
-scoreboard players set @a[scores={tridentuse=1..}] tridentT 90
+scoreboard players set @a[scores={tridentuse=1..}] tridentT 130
 item replace entity @a[scores={class=10,tridentT=0},x=620,y=20,z=620,distance=..100] hotbar.2 with trident{display:{Name:"{\"italic\":false,\"text\":\"§6Trident §f§r: Right-click\"}"}}
 scoreboard players set @a[scores={tridentuse=1..}] tridentuse 0
-execute as @e[tag=tntstorm] at @s run function game:tntstorm
+execute as @e[tag=tntstorm] at @s run function game:char/shard/tntstorm
 
 #power shield
 execute as @a[gamemode=adventure,scores={powerAn=1},x=600,y=60,z=600,distance=3..100] at @s run summon armor_stand ~ ~ ~ {CustomName:"{\"italic\":false,\"text\":\"PS\"}",Marker:1,NoGravity:1,Invulnerable:1,Invisible:1}
@@ -556,7 +574,7 @@ execute as @e[type=arrow,scores={BombBow=1..}] at @s run data merge entity @s {p
 execute as @a[gamemode=adventure,scores={class=3,BowUse=1..}] at @s run scoreboard players operation @e[type=arrow,scores={BowTime=..2},distance=..5] tntID = @p tntID
 scoreboard players set @a[gamemode=adventure,sort=random,limit=1,scores={BombExplode=1..},nbt={SelectedItem:{id:"minecraft:bone"}}] RanExplode 1
 scoreboard players operation @e[scores={BombBow=1..}] tntID -= @p[scores={RanExplode=1..}] tntID
-execute as @e[type=arrow,tag=!trapchick,scores={BombBow=1..,tntID=0}] at @s run summon tnt ~ ~.55 ~ {Fuse:3,NoGravity:0}
+execute as @e[type=arrow,tag=!trapchick,scores={BombBow=1..,tntID=0}] at @s run summon tnt ~ ~.55 ~ {Fuse:2,NoGravity:0}
 execute as @e[type=arrow,tag=trapchick,scores={BombBow=1..,tntID=0}] at @s run summon chicken ~ ~ ~ {Tags:["exchicken"],Invulnerable:1}
 kill @e[type=arrow,scores={BombBow=1..,tntID=0}]
 scoreboard players operation @e[scores={BombBow=1..}] tntID += @p[scores={RanExplode=1..}] tntID
@@ -567,8 +585,8 @@ scoreboard players set @a[gamemode=adventure,scores={RanExplode=1..}] RanExplode
 execute as @e[scores={BombBow=1..}] at @s run data merge entity @s {NoGravity:1}
 
 # platform
-execute as @a[gamemode=adventure,x=620,y=20,z=620,distance=..100] at @s run function game:gravetrap
-execute as @a[gamemode=adventure,x=620,y=20,z=620,distance=..100] at @s run function game:boosttrap
+execute as @a[gamemode=adventure,x=620,y=20,z=620,distance=..100] at @s run function game:char/gardener/gravetrap
+execute as @a[gamemode=adventure,x=620,y=20,z=620,distance=..100] at @s run function game:char/gardener/boosttrap
 
 effect clear @a wither
 
@@ -579,13 +597,20 @@ effect give @e[type=slime] resistance 999 100 true
 effect give @e[type=creeper] resistance 999 100 true
 
 scoreboard players add @e[type=slime,tag=s1] slimeT 1
-execute as @e[type=slime,scores={slimeT=8}] at @s run data merge entity @s {Size:2}
-execute as @e[type=slime,scores={slimeT=18}] at @s run data merge entity @s {Size:3}
-execute as @e[type=slime,scores={slimeT=35}] at @s run data merge entity @s {Size:4}
+execute as @e[type=slime,scores={slimeT=7}] at @s run data merge entity @s {Size:2}
+execute as @e[type=slime,scores={slimeT=14}] at @s run data merge entity @s {Size:3}
+execute as @e[type=slime,scores={slimeT=21}] at @s run data merge entity @s {Size:4}
+execute as @e[type=slime,scores={slimeT=28}] at @s run data merge entity @s {Size:5}
+execute as @e[type=slime,scores={slimeT=35}] at @s run data merge entity @s {Size:6}
+execute as @e[type=slime,scores={slimeT=42}] at @s run data merge entity @s {Size:7}
+execute as @e[type=slime,scores={slimeT=49}] at @s run data merge entity @s {Size:8}
+execute as @e[type=slime,scores={slimeT=56}] at @s run data merge entity @s {Size:9}
+
 scoreboard players add @e[name=Bomb,type=creeper] Ctimer 1
 execute as @e[scores={Ctimer=17}] at @s run summon minecraft:creeper ~ ~ ~ {ignited:1,Fuse:4,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"{\"italic\":false,\"text\":\"Bomb\"}",Health:500,powered:1,ExplosionRadius:2,Invulnerable:1,NoAI:1}
-execute as @e[type=slime,scores={slimeT=47}] at @s run data merge entity @s {Size:5}
-execute as @e[type=slime,scores={slimeT=60}] at @s run data merge entity @s {Size:6}
+
+execute as @e[type=slime,scores={slimeT=59}] at @s run summon tnt ~ ~1 ~
+execute as @e[type=slime,scores={slimeT=59}] at @s run summon tnt ~ ~1 ~
 
 execute as @a[scores={creepegguse=8,creeperegguset=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Creeper","color":"green","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
 execute as @a[scores={creepegguse=9,creeperegguset=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Creeper","color":"green","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
@@ -593,8 +618,30 @@ execute as @a[scores={creepegguse=10,creeperegguset=1..}] at @s run tellraw @a[g
 
 scoreboard players set @a creeperegguset 0 
 
+#creep and scyth reload
+scoreboard players add @a[scores={creepegguse=1..}] creepeggr 1
+scoreboard players add @a[scores={slimeegguse=1..}] slimeeggr 1
+
+clear @a[scores={creepeggr=140..}] creeper_spawn_egg
+clear @a[scores={slimeeggr=140..}] slime_spawn_egg
+
+scoreboard players remove @a[scores={creepeggr=140..}] creepegguse 1
+scoreboard players remove @a[scores={slimeeggr=140..}] slimeegguse 1
+
+scoreboard players set @a[scores={creepeggr=140..}] creepeggr 0
+scoreboard players set @a[scores={slimeeggr=140..}] slimeeggr 0
+
 # sythe reloading
 item replace entity @a[gamemode=adventure,scores={class=6,Sreload=0},x=600,y=60,z=600,distance=3..100] hotbar.1 with iron_hoe{display:{Name:"{\"italic\":false,\"text\":\"§aScythe §r: Right-click to throw\"}"},Enchantments:[{id:knockback,lvl:6}],Unbreakable:1}
+
+#dark pillar
+scoreboard players add @e[name=NArrow,type=armor_stand] NArrow 1
+kill @e[type=armor_stand,name=NArrow,scores={NArrow=42..}]
+execute as @e[type=armor_stand,name=NArrow,scores={NArrow=..1}] at @s run fill ~1 ~-1 ~1 ~-1 ~2 ~-1 black_stained_glass
+execute as @e[type=armor_stand,name=NArrow,scores={NArrow=41..}] at @s run fill ~1 ~-1 ~1 ~-1 ~2 ~-1 air
+execute as @e[type=armor_stand,name=NArrow,scores={NArrow=..1}] at @s run fill ~ ~-1 ~-1 ~1 ~1 ~-1 black_stained_glass
+execute as @e[type=armor_stand,name=NArrow,scores={NArrow=..1}] at @s run summon tnt ~ ~ ~ {Fuse:34,NoGravity:1}
+execute as @e[type=armor_stand,name=NArrow,scores={NArrow=..1}] at @s run execute as @a[gamemode=adventure,distance=..4.5] at @s if block ~ ~1.8 ~ minecraft:black_stained_glass if block ~ ~.9 ~ minecraft:black_stained_glass run function game:char/reaper/darkpillar
 
 # smoke bomb
 execute as @e[type=experience_bottle] at @s run kill @e[type=area_effect_cloud,name=place,distance=..4]
@@ -622,13 +669,13 @@ scoreboard players reset @a Escape
 execute as @e[tag=sit] at @s run data merge entity @s {Motion:[0.0,0.0,0.0]}
 
 #air grenade
-execute as @e[tag=airnade] at @s run function items:airnade
+execute as @e[tag=airnade] at @s run function game:items/airnade
 
 #air grenade
-execute as @e[tag=frostnade] at @s run function items:frostnade
+execute as @e[tag=frostnade] at @s run function game:items/frostnade
 
 # mass lev
-execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:iron_ingot"}}] at @s run function items:masslev
+execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:iron_ingot"}}] at @s run function game:items/masslev
 #effect give @a[gamemode=adventure,scores={mTtimer=119}] levitation 1 1
 scoreboard players remove @a[gamemode=adventure,scores={mTtimer=1..}] mTtimer 1
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={mTtimer=1}] hotbar.3 with iron_ingot{display:{Name:"{\"italic\":false,\"text\":\"Mass Levitate §r: Right-click [everyone within 3 blocks]\"}"}}
@@ -652,8 +699,8 @@ execute as @a[scores={ender=1..,endercount=3,class=1}] at @s run tellraw @a[game
 execute as @a[scores={ender=1..,endercount=4,class=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
 
 #effect give @a[gamemode=adventure,scores={ender=1..,class=0}] invisibility 3 0 true
-effect give @a[gamemode=adventure,scores={ender=1..,class=1..2}] invisibility 2 0 true
-scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=1..2}] Invis 40
+#effect give @a[gamemode=adventure,scores={ender=1..,class=1..2}] invisibility 2 0 true
+#scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=2}] Invis 40
 #scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=0}] Invis 30
 scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=2}] enderreload 260
 scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=1,endercount=2..}] enderreload 170
@@ -697,7 +744,7 @@ execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={chicke
 scoreboard players remove @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100] chickenbow 1
 
 #DPeffect
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={DPeffect=1..}] run function items:dpeffect
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={DPeffect=1..}] run function game:items/dpeffect
 
 #scythe begone
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={class=8}] at @s run clear @a[gamemode=adventure,distance=..3.5,scores={class=6}] iron_hoe
@@ -731,7 +778,7 @@ scoreboard players set @a[gamemode=adventure,scores={class=4},nbt={SelectedItemS
 scoreboard players set @a[gamemode=adventure,scores={class=4},nbt={SelectedItemSlot:1}] wizItem 2
 scoreboard players set @a[gamemode=adventure,scores={class=4},nbt={SelectedItemSlot:2}] wizItem 3
 scoreboard players set @e[scores={ballArrowT=..1}] isBall 0
-execute as @a[gamemode=adventure,scores={class=4,shootBall=1..,wizItem=1}] at @s run function game:pro4
+execute as @a[gamemode=adventure,scores={class=4,shootBall=1..,wizItem=1}] at @s run function game:cprojectile/pro4
 execute as @a[gamemode=adventure,scores={class=4,shootBall=1..,wizItem=1}] at @s run kill @e[distance=..5,type=arrow,scores={ballArrowT=..1}]
 execute as @a[gamemode=adventure,scores={class=4,shootBall=1..,wizItem=2}] at @s run scoreboard players set @e[limit=1,distance=..5,type=arrow,scores={ballArrowT=..1}] isBall 2
 execute as @a[gamemode=adventure,scores={class=4,shootBall=1..,wizItem=3}] at @s run scoreboard players set @e[limit=1,distance=..5,type=arrow,scores={ballArrowT=..1}] isBall 3
@@ -747,7 +794,7 @@ kill @e[tag=firecheck,scores={firer=2..}]
 execute as @e[type=fireball] at @s run summon armor_stand ~ ~ ~ {Tags:["firecheck"],Marker:1,Invulnerable:1}
 
 #telebow
-execute as @e[tag=telebow] at @s run function game:telebow
+execute as @e[tag=telebow] at @s run function game:char/wizard/telebow
 
 #test
 #execute as @e[type=tnt,nbt={Fuse:1s}] at @s run execute store result score @s y run data get entity @s Pos[1] 100

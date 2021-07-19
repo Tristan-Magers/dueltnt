@@ -1,7 +1,28 @@
 *Season 8 Update*
 
+Goals:
+4-year anniversary WHOOOOOOOOOOO!
+
+The season is all about adding in a new character 'Shard'. I hope to return to
+form somewhat with this character while also doing something fresh. This character
+comes with Duel TNT's first in game event. Explore what has changed in the lobby.
+
+Powerful characters Trapper, Overlord, Mad Scientist, and Echo are getting minor 
+changes to add more space for counter-play. Soldier and Ghost are getting changes
+to make their gameplay smoother and more consistant.
+
+Assassin, Reaper, and Wizard are getting character reworks to introduce more
+depth and options to the kit in areas where gameplay felt very limiting.
+
+Gardener is one again getting pushed to stay in fight, but in its own unique way.
+
+On the less exciting backend, I am spending much effort to clean the code, with the
+goal to help those trying to modify or learn from the game.
+
 [General]
 - Updated Minecraft version to 1.17.1
+- Cleaned up game files
+- Moved remaining command block comands to functions
 
 [General Gameplay]
 - Updated lives color for 5 and 6
@@ -21,25 +42,31 @@ Assassin
 - Magic Stars fire .7 blocks lower and 1 block out (previously from eyes)
 - Teleport explodes on contact (1 tnt)
 - Teleport (ender pearls) reload after 7 seconds
+- Teleport no longer gives invisibility
 - Starts with 2 less teleports (4 -> 2)
 - Mass Freeze reloads 0.5s faster (6s -> 5.5s)
 - Mass Freeze gives 0.6s less leviation (2s -> 1.4s)
 
 Ghost
 - Teleport reloads 4s faster (17s -> 13s)
-- Teleport gives levitation on contact (1s, level 2)
+- Teleport gives levitation on contact (0.6s, level 2)
+- Teleport no longer gives invisibility
 - Shift reloads .35s faster (4s -> 3.65s)
 
 Trapper
-- All arrows explode 0.05s slower (0.05s -> 0.1s)
-	- Does not effect Short Blast
+- Fast Arrows have particle trail
+- Fast Arrows go 20% slower (+100% -> +80%)
+- Fast Trap resets entire bow reload countdown
+- Fast Trap causes first arrow to reload .25s slower
+- Platform stops your motion
+- Platform reloads 8s slower (6s -> 14s)
 - Track Bomb glows
 - Track Bomb only tracks players within 20 bocks
 
 Wizard
 - Removed .1s fireball movement delay
 - Fireball speed is based on bow charge
-	- Max charge as fast as previous
+	- 90% charge as fast as previous
 - Teleport reworked
 	- Teleports up 1 block every .3s (previously 2 blocks once)
 	- Teleports down 1 blocks every .5s if near enemy (and not shooter)
@@ -49,18 +76,29 @@ Wizard
 Mad Scientist
 - Explosive Gel (bow) explodes 0.05s slower (.2s -> .25s)
 	- Same explosion height (0.53 blocks off ground)
-- Laser fires .1s slower (.65s -> .75s)
+- Laser fires .05s slower (.65s -> .7s)
 
 Reaper
-- Gets 2 more feathers (4 -> 6)
-- Shift reloads 1s faster (9.5s -> 8.5s)
+- Dark Pillar gives .45s longer full blindness (.25s -> .7s)
+- Dark Pillar hitbox more consistant
+- Creeper and Slimes can now be used as projectiles
+	- Still placeable
+- Slimes grow 2 sizes bigger (6 -> 8)
+- Slimes explode on death (2 tnt)
+- Creeper and Slime eggs reload 1 every 7 seconds
+- Spawns with 6 less Creepers (10 -> 4)
+- Spawns with 6 less Slimes (8 -> 2)
+- Switched Creeper Egg and Slime Egg positions
+- Shift reloads 1.5s faster (9.5s -> 8s)
 - Shift gives slow_falling (for consistency while falling)
+- Gets 2 more feathers (4 -> 6)
 - Gets 8 more Grave Traps (8 -> 16)
 
 Echo
-- Space Warp (bow) player teleport hitbox 1.5 blocks higher (1.5 -> 3 blocks)
+- Space Warp (bow) player teleport hitbox 1 blocks higher (1.5 -> 2.5 blocks)
 	- Functionally makes it harder to spleef players near arrow hitbox
 	- Hitbox still reaches 2 blocks under hit as well
+- Blast wand explosion summons higher and more precisely
 - Blast wand explodes .1s slower (.05s -> .15s)
 
 Gardener
@@ -71,6 +109,8 @@ Overlord
 - Wand can no longer eat glass or unstable mass
 - Wand's starting range is 1.2 blocks shorter (7 -> 5.8 blocks)
 	- Logically reduces max range (15.4 -> 14.2 blocks)
+- Matter Storm hitbox vastly improved to represent visual
+- Matter Storm moves 38% slower (40 b/s -> 25 b/s)
 
 Shard
 - Added to game
@@ -84,6 +124,8 @@ Shard
 - Added "Book for Nerds"
 
 [Bug Fixes]
+- Game would take multiple ticks before ending
+- Dart did not keep custom name after use
 - Ghost teleport reload would tell all players
 - Mega Bomb could sometimes never trigger
 - Air Nade killing chickens
