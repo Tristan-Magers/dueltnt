@@ -53,8 +53,8 @@ tag @e[tag=ModeC] remove ModeC
 execute as @e[name=menu,tag=LifeC] at @s run function game:lives
 
 #Rounds
-execute as @e[name=menu,tag=RoundCheckUp] at @s run function game:roundup
-execute as @e[name=menu,tag=RoundCheckDown] at @s run function game:rounddown
+execute as @e[name=menu,tag=RoundCheckUp] at @s run function game:menu/roundup
+execute as @e[name=menu,tag=RoundCheckDown] at @s run function game:menu/rounddown
 
 #Map Change
 execute as @e[name=menu,scores={MChange=1..}] at @s run function game:mapchange

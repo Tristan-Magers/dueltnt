@@ -1,7 +1,7 @@
 #funtions runs when lobby tnt "explodes"
 
 gamerule mobGriefing false
-execute as @e[tag=tnt] at @s run summon creeper ~ ~ ~ {ignited:1,Fuse:2,NoAI:1,Tags:["boom"]}
+execute as @e[tag=tnt] at @s run summon creeper ~ ~ ~ {ignited:1,Fuse:2,NoAI:1,Tags:["boom"],ExplosionRadius:1}
 tag @e[type=creeper] add boom
 #tp @e[type=creeper,tag=boom] ~ ~-100 ~
 kill @e[tag=tnt,type=tnt]

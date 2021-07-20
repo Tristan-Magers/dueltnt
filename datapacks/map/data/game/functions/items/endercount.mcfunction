@@ -24,4 +24,6 @@ execute as @s[scores={enderct=1,class=1}] if block ~ ~-1 ~ air run summon tnt ~ 
 execute as @s[scores={enderct=1,class=2}] run effect give @s minecraft:levitation 1 1 true
 execute as @s[scores={enderct=1,class=2}] run scoreboard players set @s nolev 12
 
+execute as @s[x=600,y=60,z=600,distance=6..100,scores={enderct=1}] run playsound entity.enderman.teleport master @a
+
 scoreboard players operation @s enderct = @s enderc

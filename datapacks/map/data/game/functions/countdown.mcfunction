@@ -68,6 +68,8 @@ execute as @s[scores={countdown=-10}] at @s run scoreboard players set Time game
 
 scoreboard players remove @s countdown 1
 
+execute as @s[scores={countdown=-10}] at @s run gamerule mobGriefing true
+
 #players spawning
 scoreboard players set @a[x=600,y=60,z=600,distance=..3] Invis 5
 clear @a[x=600,y=60,z=600,distance=..3]

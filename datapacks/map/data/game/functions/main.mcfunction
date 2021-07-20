@@ -38,6 +38,7 @@ effect clear @a minecraft:absorption
 
 tp @a[x=322,y=3,z=450,distance=..10,gamemode=adventure] 485 50 473
 
+execute as @a[scores={leavetext=1..}] at @s run function game:killender
 execute as @a[scores={leavetext=1..}] at @s run tellraw @a [{"selector":"@p"},{"text":" left the arena","color":"white"}]
 scoreboard players reset @a[scores={leavetext=1..}] leavetext
 

@@ -611,9 +611,9 @@ execute as @e[scores={Ctimer=17}] at @s run summon minecraft:creeper ~ ~ ~ {igni
 execute as @e[type=slime,scores={slimeT=59}] at @s run summon tnt ~ ~1 ~
 execute as @e[type=slime,scores={slimeT=59}] at @s run summon tnt ~ ~1 ~
 
-execute as @a[scores={creepegguse=8,creeperegguset=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Creeper","color":"green","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
-execute as @a[scores={creepegguse=9,creeperegguset=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Creeper","color":"green","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
-execute as @a[scores={creepegguse=10,creeperegguset=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Creeper","color":"green","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
+#execute as @a[scores={creepegguse=8,creeperegguset=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Creeper","color":"green","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
+#execute as @a[scores={creepegguse=9,creeperegguset=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Creeper","color":"green","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
+#execute as @a[scores={creepegguse=10,creeperegguset=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Creeper","color":"green","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
 
 scoreboard players set @a creeperegguset 0 
 
@@ -631,7 +631,7 @@ scoreboard players set @a[scores={creepeggr=140..}] creepeggr 0
 scoreboard players set @a[scores={slimeeggr=140..}] slimeeggr 0
 
 # sythe reloading
-item replace entity @a[gamemode=adventure,scores={class=6,Sreload=0},x=600,y=60,z=600,distance=3..100] hotbar.1 with iron_hoe{display:{Name:"{\"italic\":false,\"text\":\"§aScythe §r: Right-click to throw\"}"},Enchantments:[{id:knockback,lvl:6}],Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=6,Sreload=0},x=600,y=60,z=600,distance=3..100] hotbar.1 with iron_hoe{display:{Name:"{\"italic\":false,\"text\":\"§aScythe §r: Right-click to throw\"}"},Enchantments:[{id:knockback,lvl:2}],Unbreakable:1}
 
 #dark pillar
 scoreboard players add @e[name=NArrow,type=armor_stand] NArrow 1
@@ -692,10 +692,10 @@ execute as @a[scores={ender=1..,endercount=4,class=0}] at @s run tellraw @a[game
 execute as @a[scores={ender=1..,endercount=5,class=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
 execute as @a[scores={ender=1..,endercount=6,class=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
 
-execute as @a[scores={ender=1..,endercount=1,class=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (3 Remaining) ","color":"white"}]
-execute as @a[scores={ender=1..,endercount=2,class=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
-execute as @a[scores={ender=1..,endercount=3,class=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
-execute as @a[scores={ender=1..,endercount=4,class=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
+#execute as @a[scores={ender=1..,endercount=1,class=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (3 Remaining) ","color":"white"}]
+#execute as @a[scores={ender=1..,endercount=2,class=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
+#execute as @a[scores={ender=1..,endercount=3,class=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
+#execute as @a[scores={ender=1..,endercount=4,class=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
 
 #effect give @a[gamemode=adventure,scores={ender=1..,class=0}] invisibility 3 0 true
 #effect give @a[gamemode=adventure,scores={ender=1..,class=1..2}] invisibility 2 0 true
@@ -735,16 +735,12 @@ scoreboard players remove @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={DPeffect=1..}] run function game:items/dpeffect
 
 #scythe begone
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={class=8}] at @s run clear @a[gamemode=adventure,distance=..3.5,scores={class=6}] iron_hoe
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={class=8}] at @s run execute as @a[gamemode=adventure,distance=..3.5,scores={Sreload=..10,class=6}] at @s run particle minecraft:item iron_block ~ ~.4 ~ .3 .4 .3 .05 2 force
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={class=8}] at @s run scoreboard players set @a[gamemode=adventure,distance=..3.5,scores={Sreload=..10,class=6}] Sreload 10
+#execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={class=8}] at @s run clear @a[gamemode=adventure,distance=..3.5,scores={class=6}] iron_hoe
+#execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={class=8}] at @s run execute as @a[gamemode=adventure,distance=..3.5,scores={Sreload=..10,class=6}] at @s run particle minecraft:item iron_block ~ ~.4 ~ .3 .4 .3 .05 2 force
+#execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={class=8}] at @s run scoreboard players set @a[gamemode=adventure,distance=..3.5,scores={Sreload=..10,class=6}] Sreload 10
 
-scoreboard players set @a click 0
-
+#track bomb
 execute as @e[tag=tnttrack] at @s run function game:tnttrack
-
-clear @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] minecraft:carrot_on_a_stick
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] weapon.offhand with minecraft:carrot_on_a_stick
 
 #reaper egg sound
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={slimeplace=1..}] at @s run playsound minecraft:entity.slime.death master @a ~ ~ ~ 1 0
@@ -799,3 +795,8 @@ execute as @a[gamemode=adventure] at @s if block ~-.3 ~ ~ barrier run tp @s ~.4 
 #execute as @e[type=tnt,nbt={Fuse:1s}] at @s run execute store result score @s y run data get entity @s Pos[1] 100
 #execute as @e[type=tnt,nbt={Fuse:1s}] at @s run scoreboard players operation @p y = @s y
 
+#manage click
+scoreboard players set @a click 0
+
+clear @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] minecraft:carrot_on_a_stick
+item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] weapon.offhand with minecraft:carrot_on_a_stick

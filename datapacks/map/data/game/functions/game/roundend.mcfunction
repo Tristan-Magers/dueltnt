@@ -5,4 +5,4 @@ execute if entity @e[scores={mode=4}] if entity @a[scores={survival=4000..}] run
 execute if entity @e[scores={mode=4}] if entity @a[scores={survival=4000..}] run scoreboard players add @a[scores={survival=4000..}] p 1
 execute if entity @e[scores={mode=4}] if entity @a[scores={survival=4000..}] run function game:mode/survival/survivaladvance
 
-function game:game/start
+execute if entity @a[scores={ingame=1..}] run function game:game/start

@@ -1,23 +1,12 @@
 *Season 8 Update*
+4-year anniversary!
 
 Goals:
-4-year anniversary WHOOOOOOOOOOO!
-
-The season is all about adding in a new character 'Shard'. I hope to return to
-form somewhat with this character while also doing something fresh. This character
-comes with Duel TNT's first in game event. Explore what has changed in the lobby.
-
-Powerful characters Trapper, Overlord, Mad Scientist, and Echo are getting minor 
-changes to add more space for counter-play. Soldier and Ghost are getting changes
-to make their gameplay smoother and more consistant.
-
-Assassin, Reaper, and Wizard are getting character reworks to introduce more
-depth and options to the kit in areas where gameplay felt very limiting.
-
-Gardener is one again getting pushed to stay in fight, but in its own unique way.
-
-On the less exciting backend, I have cleaned the code, with the
-goal to help those trying to modify or learn from the game.
+- Shard season event
+- Rework Reaper, Assassing, Wizard, and Gardener
+- Slightly tone down Overlord, Trapper, Echo, and MS
+- Slightly increase power on Solider and Ghost
+- Make code better structured
 
 [General]
 - Updated Minecraft version to 1.17.1
@@ -35,6 +24,7 @@ Soldier
 - Mega Bomb summon 1 more tnt  (7 -> 8)
 - Mega Bomb isn't given until 3s into round
 - Anvil fall speed reduced by 50%
+- Teleport makes sound on hit
 
 Assassin
 - Magics Stars activate .3s faster (.6s -> .3s)
@@ -43,6 +33,7 @@ Assassin
 - Teleport explodes on contact (1 tnt)
 - Teleport (ender pearls) reload after 7 seconds
 - Teleport no longer gives invisibility
+- Teleport makes sound on hit
 - Starts with 2 less teleports (4 -> 2)
 - Mass Freeze reloads 0.5s faster (6s -> 5.5s)
 - Mass Freeze gives 0.6s less leviation (2s -> 1.4s)
@@ -51,6 +42,7 @@ Ghost
 - Teleport reloads 4s faster (17s -> 13s)
 - Teleport gives levitation on contact (0.6s, level 2)
 - Teleport no longer gives invisibility
+- Teleport makes sound on hit
 - Shift reloads .35s faster (4s -> 3.65s)
 
 Trapper
@@ -71,6 +63,7 @@ Wizard
 	- Teleports up 1 block every .3s (previously 2 blocks once)
 	- Teleports down 1 blocks every .5s if near enemy (and not shooter)
 	- After 11 steps or at height limit (y=40 or y=4), summons air pillar
+	- Upwards teleports linger much longer if used on self (makes different sound)
 - Arrows reload .05s faster (1.4s -> 1.35s)
 
 Mad Scientist
@@ -86,13 +79,15 @@ Reaper
 - Slimes grow 2 sizes bigger (6 -> 8)
 - Slimes explode on death (2 tnt)
 - Creeper and Slime eggs reload 1 every 7 seconds
-- Spawns with 6 less Creepers (10 -> 4)
-- Spawns with 6 less Slimes (8 -> 2)
+- Spawns with 8 less Creepers (10 -> 2) (Max 4)
+- Spawns with 6 less Slimes (8 -> 2) (Max 2)
 - Switched Creeper Egg and Slime Egg positions
 - Shift reloads 1.5s faster (9.5s -> 8s)
 - Shift gives slow_falling (for consistency while falling)
 - Gets 2 more feathers (4 -> 6)
 - Gets 8 more Grave Traps (8 -> 16)
+- Scythe reloads 1s faster at round start (2s -> 1s)
+- Scythe knockback reduced 4 levels (6 -> 2)
 
 Echo
 - Space Warp (bow) player teleport hitbox 1 blocks higher (1.5 -> 2.5 blocks)
@@ -104,6 +99,7 @@ Echo
 Gardener
 - Gets an extra life every 45 seconds
 - *Hitting non-Gardner with Plague gives 1 life
+- Removed Scythe Begone (no longer needed)
 
 Overlord
 - Wand can no longer eat unstable mass
@@ -143,3 +139,6 @@ Shard
 - Some placeables did not recognize granite
 - Placeables did not recognize end stone stairs
 - LOCKED signs still used /tell instead of /tellraw
+- Ender pearls could teleport players after last death
+- Ender pearls could teleport players after leaving match
+- Acid would respawn with incorrect color
