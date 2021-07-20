@@ -3,6 +3,27 @@ scoreboard players set @a clickDis 0
 
 function game:tutorial
 
+function game:lobbyitems
+
+#Tourny area
+tp @a[x=506,y=6,z=469,distance=..2] 498 83 462
+execute as @a[x=496,y=9,z=427,distance=..8,gamemode=adventure] at @s if block ~ ~-1 ~ minecraft:bedrock run tp @s 501 11 475
+
+#kills
+kill @e[type=armor_stand,name=place,x=496,y=20,z=520,distance=..60]
+kill @e[type=arrow,x=496,y=20,z=520,distance=..60]
+clear @a[gamemode=adventure,x=496,y=20,z=520,distance=..80,scores={lobby=2}]
+scoreboard players add @a[x=500,y=20,z=500,distance=..80] lobby 1
+scoreboard players set @a[x=620,y=30,z=620,distance=..90] lobby 0
+effect clear @a[scores={lobby=1..20},x=500,y=20,z=500,distance=..80] jump_boost
+effect clear @a[scores={lobby=1..20},x=500,y=20,z=500,distance=..80] speed
+title @a[scores={lobby=49..},x=500,y=20,z=500,distance=..80] title {"text":""}
+scoreboard players set @a[x=0,y=30,z=0,distance=..190] lobby 0
+scoreboard players set @a[x=496,y=20,z=520,distance=..60] Y 30
+kill @e[type=minecraft:fireball,x=496,y=20,z=520,distance=..60]
+kill @e[tag=mastertnt,x=496,y=20,z=520,distance=..60]
+execute as @a[x=496,y=20,z=520,distance=..60] at @s run attribute @p minecraft:generic.movement_speed base set .1
+
 #master portal
 execute as @e[name=menu,scores={mastercut=0}] at @s run particle minecraft:falling_water 495.51 26.60 564.52 1.5 1.5 .15 0 2 force
 execute as @e[name=menu,scores={mastercut=10}] at @s run particle minecraft:portal 495 26 564 0 0 0 1 300 force
@@ -42,8 +63,8 @@ execute as @e[name=menu,scores={MChange=1..}] at @s run function game:mapchange
 execute as @e[x=0,y=0,z=0,distance=..100,type=armor_stand,scores={CustomRandom=2..}] at @s run function game:customrandom
 
 #Custom Random toggle
-execute as @e[name=menu,scores={RoundType=1}] at @s run function game:crenable
-execute as @e[name=menu,scores={RoundType=2}] at @s run function game:crdisable
+execute as @e[name=menu,scores={RoundType=1}] at @s run function game:menu/crenable
+execute as @e[name=menu,scores={RoundType=2}] at @s run function game:menu/crdisable
 
 #Instant start
 execute as @e[name=menu,tag=instant] at @s run function game:instantstart
@@ -68,3 +89,47 @@ tag @a[tag=Sgreen] add green
 tag @a[tag=Sgreen] remove blue
 tag @a[tag=Sgreen] remove red
 tag @a[tag=Sgreen] remove Sgreen
+
+#Set players team value
+execute if entity @e[name=menu,type=armor_stand,scores={Team=0}] run scoreboard players set @a teamed 0
+execute if entity @e[name=menu,type=armor_stand,scores={Team=1}] run scoreboard players set @a teamed 1
+
+#Options Button
+execute if entity @e[name=menu,type=armor_stand,scores={Opt=3}] run function game:menu/optionsoff
+execute if entity @e[name=menu,type=armor_stand,scores={Opt=2}] run function game:menu/options
+
+#Team Buttons
+execute if entity @e[name=menu,type=armor_stand,scores={Team=3}] run data merge block 475 16 495 {Text2:"{\"text\":\"Teams\",\"bold\":false,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"scoreboard players set @e[name=menu,type=armor_stand] Team 2\"}}",Text3:"{\"text\":\"[disabled]\",\"color\":\"dark_red\",\"bold\":true}"}
+execute if entity @e[name=menu,type=armor_stand,scores={Team=3}] run playsound minecraft:entity.armor_stand.fall master @a 475 18 497 .6 .9
+execute if entity @e[name=menu,type=armor_stand,scores={Team=3}] run scoreboard players set @e[name=menu,type=armor_stand] Team 0
+
+execute if entity @e[name=menu,type=armor_stand,scores={Team=2}] run data merge block 475 16 495 {Text2:"{\"text\":\"Teams\",\"bold\":false,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"scoreboard players set @e[name=menu,type=armor_stand] Team 3\"}}",Text3:"{\"text\":\"[enabled]\",\"color\":\"dark_green\",\"bold\":true}"}
+execute if entity @e[name=menu,type=armor_stand,scores={Team=2}] run playsound minecraft:entity.armor_stand.fall master @a 475 18 497 .6 .9
+execute if entity @e[name=menu,type=armor_stand,scores={Team=2}] run clone 459 3 491 459 3 489 475 18 494
+execute if entity @e[name=menu,type=armor_stand,scores={Team=2}] run scoreboard players set @e[name=menu,type=armor_stand] Team 1
+
+execute if entity @e[name=menu,type=armor_stand,scores={Team=0}] run fill 475 18 496 475 18 494 air
+
+#Shard area
+execute if block 485 11 476 minecraft:polished_blackstone_button[powered=true] run function game:menu/shard
+
+#Iris ladder
+execute if block 478 14 467 minecraft:stone_button[powered=true] run clone 477 6 466 480 2 467 477 12 466
+
+#particle sound
+scoreboard players set @a partTest 0
+execute as @a at @s run scoreboard players operation @s partTest += @s particle
+execute as @a at @s run scoreboard players operation @s partTest -= @s partPast
+execute as @a[scores={partTest=1..}] at @s run playsound minecraft:block.wooden_pressure_plate.click_off master @s ~ ~ ~ .5 1.3
+execute as @a[scores={partTest=..-1}] at @s run playsound minecraft:block.wooden_pressure_plate.click_off master @s ~ ~ ~ .5 1.3
+execute as @a at @s run scoreboard players operation @s partPast = @s particle
+
+#disable settings while game is in play
+tag @e[name=Map,type=armor_stand,limit=1] remove removeset
+execute if entity @e[type=player,distance=..100,x=600,y=60,z=600,gamemode=adventure] run tag @e[name=Map,type=armor_stand,limit=1] add removeset
+
+execute as @e[name=Map,type=armor_stand,limit=1,tag=removeset,tag=!removesett] run function game:menu/setdisable
+execute as @e[name=Map,type=armor_stand,limit=1,tag=!removeset,tag=removesett] run schedule function game:menu/setenable 5t
+
+tag @e[name=Map,type=armor_stand,limit=1,tag=removeset] add removesett
+tag @e[name=Map,type=armor_stand,limit=1,tag=!removeset] remove removesett

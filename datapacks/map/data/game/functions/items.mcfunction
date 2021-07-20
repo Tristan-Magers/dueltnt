@@ -126,6 +126,12 @@ scoreboard players set @a[gamemode=adventure,scores={timer=60..,class=10}] timer
 
 scoreboard players reset @a[gamemode=adventure,scores={shift=1..}] shift
 
+#reaper shift
+execute as @a[scores={timer=1,class=6},distance=..100,x=620,y=20,z=620,gamemode=adventure] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:10,NoGravity:1}
+execute as @a[scores={timer=1,class=6},distance=..100,x=620,y=20,z=620,gamemode=adventure] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:10,NoGravity:1}
+execute as @a[scores={timer=1,class=6},distance=..100,x=620,y=20,z=620,gamemode=adventure] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:0,NoGravity:1}
+execute as @a[scores={timer=1,class=6},distance=..100,x=620,y=20,z=620,gamemode=adventure] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:0,NoGravity:1}
+
 # arrow effects
 scoreboard players add @e[type=arrow] BombBow 0
 scoreboard players add @e[type=arrow] VaporBow 0
@@ -270,11 +276,19 @@ execute as @e[tag=stormtnt] at @s run function game:char/overlord/masterstormmov
 #mastershift
 execute as @e[name=ground2] at @s run function game:char/overlord/masterground
 
+#fireball manage
+scoreboard players add @e[type=fireball] egg 1
+kill @e[type=fireball,scores={egg=150..}]
+
 #fireball mot
 execute as @e[tag=trackshot2,tag=newbomb] at @s anchored eyes run function game:cprojectile/pro4mot
 execute as @e[scores={fballtimer=1}] at @s run function game:cprojectile/pro4mot2
 scoreboard players add @e[scores={fballtimer=1..}] fballtimer 1
 kill @e[scores={fballtimer=300..}]
+
+#out of bounds entities
+kill @e[type=ender_pearl,x=614,y=50,z=614,distance=60..200]
+kill @e[type=arrow,x=614,y=50,z=614,distance=60..200]
 
 #master tnt
 scoreboard players add @e[tag=mastertnt] masterb 1
@@ -464,21 +478,6 @@ scoreboard players remove @e[tag=!boom,name=pro1,scores={DirX=-70..}] DirX 1
 
 scoreboard players remove @a[gamemode=adventure,scores={Sreload=0..}] Sreload 1
 
-#feather
-effect give @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:feather"}}] speed 1 4
-effect give @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:feather"}}] levitation 1 0
-execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:feather"}}] at @s run playsound minecraft:item.armor.equip_generic master @a ~ ~ ~ .6 .8
-scoreboard players add @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:feather"}}] featheruse 1
-
-execute as @a[gamemode=adventure,scores={click=1..,featheruse=1},nbt={SelectedItem:{id:"minecraft:feather"}}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Feather","color":"gray","bold":"true"},{"text":" (5 Remaining) ","color":"white"}]
-execute as @a[gamemode=adventure,scores={click=1..,featheruse=2},nbt={SelectedItem:{id:"minecraft:feather"}}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Feather","color":"gray","bold":"true"},{"text":" (4 Remaining) ","color":"white"}]
-execute as @a[gamemode=adventure,scores={click=1..,featheruse=3},nbt={SelectedItem:{id:"minecraft:feather"}}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Feather","color":"gray","bold":"true"},{"text":" (3 Remaining) ","color":"white"}]
-execute as @a[gamemode=adventure,scores={click=1..,featheruse=4},nbt={SelectedItem:{id:"minecraft:feather"}}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Feather","color":"gray","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
-execute as @a[gamemode=adventure,scores={click=1..,featheruse=5},nbt={SelectedItem:{id:"minecraft:feather"}}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Feather","color":"gray","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
-execute as @a[gamemode=adventure,scores={click=1..,featheruse=6},nbt={SelectedItem:{id:"minecraft:feather"}}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Feather","color":"gray","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
-
-clear @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:feather"}}] feather 1
-
 # sneak attack
 execute as @e[type=squid] at @s run summon tnt ~ ~1 ~ {Fuse:3}
 execute as @e[type=squid] at @s run summon tnt ~ ~1 ~ {Fuse:3}
@@ -506,7 +505,7 @@ scoreboard players set @a[gamemode=adventure,scores={class=4}] egg 0
 execute as @e[type=pig] at @s run data merge entity @s {Invulnerable:1}
 scoreboard players set @e[type=pig,scores={egg=..1}] pig 41
 kill @e[type=pig,scores={pig=..0}]
-execute as @a[gamemode=adventure,scores={pig=-100..}] at @s run function game:pig
+execute as @a[gamemode=adventure,scores={pig=-100..}] at @s run function game:char/wizard/pig
 scoreboard players remove @e[scores={pig=-100..}] pig 1
 
 #frost suck
@@ -712,17 +711,6 @@ scoreboard players set @a ender 0
 scoreboard players remove @a[gamemode=adventure,scores={enderreload=0..,class=1}] enderreload 1
 scoreboard players remove @a[gamemode=adventure,scores={enderreload=0..,class=2}] enderreload 1
 
-# set portal
-scoreboard players set @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:ink_sac"}}] SPorttimer 210
-execute as @a[gamemode=adventure,scores={SPorttimer=210}] at @s run playsound minecraft:entity.enderman.teleport master @a ~ ~ ~ .7 .8
-execute as @a[gamemode=adventure,scores={SPorttimer=205}] at @s run playsound minecraft:entity.ender_eye.death master @a ~ ~ ~ 1 .9
-execute as @a[gamemode=adventure,scores={SPorttimer=210}] at @s run playsound minecraft:entity.firework_rocket.twinkle master @a ~ ~ ~ .2 1.2
-execute as @a[gamemode=adventure,scores={SPorttimer=210}] at @s run playsound minecraft:block.portal.travel master @a ~ ~ ~ .12 1.2
-clear @a[gamemode=adventure,scores={SPorttimer=210}] ink_sac
-scoreboard players remove @a[gamemode=adventure,scores={SPorttimer=1..}] SPorttimer 1
-scoreboard players set @a[gamemode=adventure,scores={SPorttimer=209}] SetPortal 1
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={SPorttimer=1}] hotbar.1 with ink_sac{display:{Name:"{\"italic\":false,\"text\":\"§2Set Portal §r: Right-click (lasts 6 seconds) [16 block range]\"}"}}
-
 # plague
 tag @a[gamemode=adventure,scores={plagueuse=1..}] remove checkairnade
 scoreboard players set @a[gamemode=adventure,scores={plagueuse=1..}] plaguetimer 200
@@ -795,6 +783,17 @@ execute as @e[type=fireball] at @s run summon armor_stand ~ ~ ~ {Tags:["firechec
 
 #telebow
 execute as @e[tag=telebow] at @s run function game:char/wizard/telebow
+
+#Invis 
+effect give @a[scores={Invis=1..}] minecraft:invisibility 5 0 true
+scoreboard players remove @a[scores={Invis=1..}] Invis 1
+effect clear @a[scores={Invis=..0}] minecraft:invisibility
+
+#In barrier wall
+execute as @a[gamemode=adventure] at @s if block ~ ~ ~.3 barrier run tp @s ~ ~ ~-.4
+execute as @a[gamemode=adventure] at @s if block ~ ~ ~-.3 barrier run tp @s ~ ~ ~.4
+execute as @a[gamemode=adventure] at @s if block ~.3 ~ ~ barrier run tp @s ~-.4 ~ ~
+execute as @a[gamemode=adventure] at @s if block ~-.3 ~ ~ barrier run tp @s ~.4 ~ ~
 
 #test
 #execute as @e[type=tnt,nbt={Fuse:1s}] at @s run execute store result score @s y run data get entity @s Pos[1] 100

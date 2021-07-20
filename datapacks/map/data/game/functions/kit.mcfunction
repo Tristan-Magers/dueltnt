@@ -37,8 +37,9 @@ execute as @s[scores={kit=6}] at @s run clone 488 16 513 488 16 513 488 16 510
 execute as @s[scores={kit=7}] at @s run clone 487 16 513 487 16 513 487 16 510
 execute as @s[scores={kit=8}] at @s run clone 486 16 513 486 16 513 486 16 510
 execute as @s[scores={kit=9}] at @s run clone 487 18 513 487 18 513 487 18 510
+execute as @s[scores={kit=10}] at @s run clone 488 18 513 488 18 513 488 18 510
 
-tag @s[scores={kit=..10}] remove randclass
+tag @s[scores={kit=..98}] remove randclass
 tag @s[scores={kit=99}] add randclass
 execute as @s[scores={kit=99}] at @s run scoreboard players set @p class 99
 scoreboard players set @s[scores={kit=0..}] kit -1

@@ -4,6 +4,22 @@ kill @e[type=area_effect_cloud,tag=!a,tag=!gameae]
 
 clear @a[gamemode=spectator]
 
+#leave players
+clear @a[scores={leave=1..}]
+scoreboard players set @a[scores={leave=1..}] ingame 0
+gamemode adventure @a[scores={leave=1..}]
+tp @a[scores={leave=1..}] 500 20 500 0 0
+scoreboard players reset @a[scores={leave=1..}] leave
+
+#team join main
+execute if entity @a[team=] run scoreboard players set @a[team=] rejoin 1
+team join Main @a[team=]
+
+#tntID
+scoreboard players add @a tntID 0
+execute if entity @a[scores={tntID=..0}] run scoreboard players add M tntID 1
+execute if entity @a[scores={tntID=..0}] run scoreboard players operation @r[scores={tntID=..0}] tntID = M tntID
+
 #run game
 execute unless entity @a[x=620,y=20,z=620,distance=..100,gamemode=adventure] run function game:game/run
 execute if entity @a[x=620,y=20,z=620,distance=..100,gamemode=adventure] run scoreboard players set ArenaCheck game 0
@@ -26,7 +42,7 @@ execute as @a[scores={leavetext=1..}] at @s run tellraw @a [{"selector":"@p"},{"
 scoreboard players reset @a[scores={leavetext=1..}] leavetext
 
 scoreboard players add @r[tag=randclass] randclass 1
-scoreboard players set @a[scores={randclass=10..}] randclass 0
+scoreboard players set @a[scores={randclass=11..}] randclass 0
 
 scoreboard players set @a[x=600,y=60,z=600,distance=105..,tag=randclass] class 99
 
@@ -150,6 +166,8 @@ scoreboard players set @a[gamemode=spectator] Y 45
 scoreboard players set @a[x=600,y=60,z=600,distance=..3] Y 45
 
 #respawn
+effect give @a resistance 1000000 4 true
+
 execute as @a[scores={Y=..0}] at @s run function game:player/respawn
 
 scoreboard players add @a[scores={rejoin=1..}] timer 0
@@ -209,7 +227,7 @@ execute if entity @e[scores={mode=2}] run execute as @a[x=600,y=60,z=600,distanc
 execute if entity @e[scores={mode=2}] run scoreboard players add @a[scores={hotfeet=110..}] hotfeetlevel 1
 execute if entity @e[scores={mode=2}] run function game:mode/hotfeet/hotfeetlevel
 
-execute if entity @e[scores={mode=3}] run function game:phantommode
+execute if entity @e[scores={mode=3}] run function game:mode/phantom/phantommode
 
 execute if entity @e[scores={mode=4}] run function game:mode/survival/survivalmode
 
@@ -270,3 +288,74 @@ scoreboard players set @a patclick 0
 
 #clear
 clear @a[x=520,y=40,z=587,distance=..20]
+
+#manage player locations (SPECTATOR, CEILING DEATH, etc.)
+scoreboard players set @a inarena 0
+scoreboard players set @a[x=592,z=592,y=-10,dx=51,dz=51,dy=88,distance=..1000] inarena 1
+tp @a[gamemode=spectator,x=595,z=595,y=-20,dx=45,dz=45,dy=13,distance=..1000] 500 20 500
+tp @a[gamemode=spectator,scores={inarena=..0}] 500 20 500 0 0
+gamemode adventure @a[gamemode=spectator,distance=..2,x=500,y=20,z=500]
+effect give @a[x=595,z=595,y=65,dx=45,dz=45,dy=68,distance=..1000,gamemode=adventure] blindness 3
+execute as @a[x=595,z=595,y=65,dx=45,dz=45,dy=68,distance=..1000,gamemode=adventure] at @s run tp @s ~ 0 ~
+tp @a[gamemode=spectator,x=595,z=595,y=80,dx=45,dz=45,dy=14,distance=..1000] 500 20 500
+
+#running game
+function game:game/main
+
+#Game end conditions
+scoreboard players set gameCheck game 0
+execute as @a[x=620,y=20,z=620,distance=..100,gamemode=adventure,scores={teamed=..0}] at @s run scoreboard players add gameCheck game 1
+scoreboard players set playerCheck game 0
+execute as @a[scores={ingame=1..,teamed=..0}] at @s run scoreboard players add playerCheck game 1
+execute as @p[tag=blue,scores={ingame=1..,teamed=1..}] at @s run scoreboard players add playerCheck game 1
+execute as @p[tag=red,scores={ingame=1..,teamed=1..}] at @s run scoreboard players add playerCheck game 1
+execute as @p[tag=green,scores={ingame=1..,teamed=1..}] at @s run scoreboard players add playerCheck game 1
+execute as @p[x=620,y=20,z=620,distance=..100,gamemode=adventure,tag=blue,scores={teamed=1..}] at @s run scoreboard players add gameCheck game 1
+execute as @p[x=620,y=20,z=620,distance=..100,gamemode=adventure,tag=red,scores={teamed=1..}] at @s run scoreboard players add gameCheck game 1
+execute as @p[x=620,y=20,z=620,distance=..100,gamemode=adventure,tag=green,scores={teamed=1..}] at @s run scoreboard players add gameCheck game 1
+scoreboard players operation @e[name=Map,type=armor_stand] gameCheck = gameCheck game
+scoreboard players operation @e[name=Map,type=armor_stand] playerCheck = playerCheck game
+execute if entity @e[name=Map,type=armor_stand,scores={gameCheck=0}] if entity @e[name=Map,type=armor_stand,scores={playerCheck=1}] run tag @e[name=Map,type=armor_stand,limit=1] add start
+execute if entity @e[name=Map,type=armor_stand,scores={gameCheck=0..1}] if entity @e[name=Map,type=armor_stand,scores={playerCheck=2..100}] run tag @e[name=Map,type=armor_stand,limit=1] add start
+execute if entity @e[name=Map,type=armor_stand,scores={gameCheck=2..100}] run tag @e[name=Map,type=armor_stand,limit=1] remove start
+execute if entity @e[name=Map,type=armor_stand,scores={gameCheck=1}] if entity @e[name=Map,type=armor_stand,scores={playerCheck=1}] run tag @e[name=Map,type=armor_stand,limit=1] remove start
+execute if entity @e[name=Map,type=armor_stand,scores={gameCheck=0}] if entity @e[name=Map,type=armor_stand,scores={playerCheck=0}] run tag @e[name=Map,type=armor_stand,limit=1] add start
+
+execute as @e[name=Map,type=armor_stand,limit=1,tag=start,tag=!startt] at @s run function game:game/roundend
+
+tag @e[name=Map,type=armor_stand,limit=1,tag=start] add startt
+tag @e[name=Map,type=armor_stand,limit=1,tag=!start] remove startt
+
+#New Player
+scoreboard players add @a NewPlay 1
+tag @a[scores={NewPlay=2}] add blue
+scoreboard players set @a[scores={NewPlay=2}] class 1
+scoreboard players set @a[scores={NewPlay=2}] Invis 0
+tp @a[scores={NewPlay=1..40}] 14 4 1
+scoreboard players set @a[scores={NewPlay=1..2}] ingame 0
+scoreboard players set @a[scores={NewPlay=2}] tntID 0
+clear @a[scores={NewPlay=2..4}] red_concrete_powder
+clear @a[scores={NewPlay=2..4}] green_concrete_powder
+gamemode adventure @a[scores={NewPlay=2..8}]
+
+#Tutorial
+effect give @a[x=14,y=4,z=1,distance=..2] blindness 2 99 true
+scoreboard players add @a[x=14,y=4,z=1,distance=..2] tutorial 1
+scoreboard players set @a[x=500,y=20,z=500,distance=..20] tutorial 0
+effect give @a[x=14,y=4,z=1,distance=..2] jump_boost 2 200 true
+scoreboard players set @a[x=14,y=4,z=1,distance=..2] Invis 3
+
+#Timer
+scoreboard players operation @e[name=Map,type=armor_stand] Time = Time game
+execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run scoreboard players remove Time game 1
+execute if entity @e[name=Map,type=armor_stand,scores={Time=600}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"30 seconds","color":"dark_red","bold":"false"}]
+execute if entity @e[name=Map,type=armor_stand,scores={Time=1}] run gamemode spectator @a[x=620,y=20,z=620,distance=..100]
+
+scoreboard players operation TimeReal game = Time game
+scoreboard players operation TimeReal game /= 20 game
+execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run scoreboard players operation Time l = TimeReal game
+
+execute if entity @e[name=Map,type=armor_stand,scores={Time=580}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"","color":"dark_red","bold":"false"}]
+
+execute if entity @e[name=Map,type=armor_stand,scores={Time=15}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"TIMES OUT","color":"dark_red","bold":"false"}]
+execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run scoreboard players operation @s l = @s Lives

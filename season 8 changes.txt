@@ -16,13 +16,13 @@ depth and options to the kit in areas where gameplay felt very limiting.
 
 Gardener is one again getting pushed to stay in fight, but in its own unique way.
 
-On the less exciting backend, I am spending much effort to clean the code, with the
+On the less exciting backend, I have cleaned the code, with the
 goal to help those trying to modify or learn from the game.
 
 [General]
 - Updated Minecraft version to 1.17.1
-- Cleaned up game files
-- Moved remaining command block comands to functions
+- Cleaned up and optimized game files
+- Moved remaining command block commands to functions
 
 [General Gameplay]
 - Updated lives color for 5 and 6
@@ -57,7 +57,7 @@ Trapper
 - Fast Arrows have particle trail
 - Fast Arrows go 20% slower (+100% -> +80%)
 - Fast Trap resets entire bow reload countdown
-- Fast Trap causes first arrow to reload .25s slower
+- Fast Trap causes first arrow to reload .35s slower (2.6s)
 - Platform stops your motion
 - Platform reloads 8s slower (6s -> 14s)
 - Track Bomb glows
@@ -106,7 +106,8 @@ Gardener
 - *Hitting non-Gardner with Plague gives 1 life
 
 Overlord
-- Wand can no longer eat glass or unstable mass
+- Wand can no longer eat unstable mass
+- Wand does not get matter from Power Shield or Dark Pillar glass
 - Wand's starting range is 1.2 blocks shorter (7 -> 5.8 blocks)
 	- Logically reduces max range (15.4 -> 14.2 blocks)
 - Matter Storm hitbox vastly improved to represent visual
@@ -122,6 +123,9 @@ Shard
 - Updated general lobby look for story event
 - Set lobby to night time
 - Added "Book for Nerds"
+- Soldier, Assassin, and Ghost automatically unlocked in Overlord swamp
+- Small settings look and sound improvements
+- Iris ladder <3
 
 [Bug Fixes]
 - Game would take multiple ticks before ending
@@ -136,4 +140,6 @@ Shard
 - Fixed issue where Chicken Bow expired too fast
 - Power shield glass could last between rounds
 - Players could briefly keep levitation after game
+- Some placeables did not recognize granite
 - Placeables did not recognize end stone stairs
+- LOCKED signs still used /tell instead of /tellraw

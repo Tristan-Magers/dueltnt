@@ -184,7 +184,7 @@ execute as @e[name=Map,type=armor_stand,scores={game=16}] at @s run fill 590 2 5
 clone 4 5 -16 4 5 -16 600 10 600
 setblock 600 9 600 redstone_block
 
-setblock -4 5 -20 redstone_block
+clone 4 5 -16 4 5 -16 600 10 600
 
 fill 599 59 599 601 63 601 barrier hollow
 

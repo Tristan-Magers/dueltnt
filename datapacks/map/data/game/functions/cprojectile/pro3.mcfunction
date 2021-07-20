@@ -18,7 +18,7 @@ clear @s arrow 1
 clear @s[nbt={SelectedItem:{id:"minecraft:bowl"}}] arrow
 
 scoreboard players add @s bow 1
-scoreboard players set @s[tag=fast] bow -104
+scoreboard players set @s[tag=fast] bow -106
 
 tag @s remove short
 tag @s remove med

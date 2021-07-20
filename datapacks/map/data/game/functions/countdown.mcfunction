@@ -67,3 +67,9 @@ execute as @s[scores={countdown=-10}] at @s run scoreboard players add RoundAnno
 execute as @s[scores={countdown=-10}] at @s run scoreboard players set Time game 6000
 
 scoreboard players remove @s countdown 1
+
+#players spawning
+scoreboard players set @a[x=600,y=60,z=600,distance=..3] Invis 5
+clear @a[x=600,y=60,z=600,distance=..3]
+scoreboard players set @a[x=600,y=60,z=600,distance=..3] timer 100
+effect give @a[x=600,y=60,z=600,distance=..3] blindness 1 0 true
