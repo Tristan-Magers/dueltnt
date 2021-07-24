@@ -51,9 +51,9 @@ execute as @a[gamemode=adventure,scores={class=3,bow=25}] at @s run playsound mi
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=3,bow=50..}] hotbar.6 with arrow 1
 execute as @a[gamemode=adventure,scores={class=3,bow=50..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
 scoreboard players set @a[gamemode=adventure,scores={class=3,bow=50..}] bow -1
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=4,bow=27}] hotbar.7 with tipped_arrow{display:{Name:"{\"italic\":false,\"text\":\"Magic arrow\"}"},Potion:"minecraft:swiftness",HideFlags:32} 2
-execute as @a[gamemode=adventure,scores={class=4,bow=26..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .45 2
-scoreboard players set @a[gamemode=adventure,scores={class=4,bow=27..}] bow -1
+item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=4,bow=23}] hotbar.7 with tipped_arrow{display:{Name:"{\"italic\":false,\"text\":\"Magic arrow\"}"},Potion:"minecraft:swiftness",HideFlags:32} 2
+execute as @a[gamemode=adventure,scores={class=4,bow=22..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .45 2
+scoreboard players set @a[gamemode=adventure,scores={class=4,bow=23..}] bow -1
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=5,bow=56..}] hotbar.6 with arrow 3
 execute as @a[gamemode=adventure,scores={class=5,bow=53..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .5 2
 scoreboard players set @a[gamemode=adventure,scores={class=5,bow=56..}] bow -2
@@ -100,7 +100,7 @@ execute if entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adv
 
 execute as @a[gamemode=adventure,scores={timer=1..7,class=4},distance=..100,x=620,y=20,z=620] at @s run tp @p ~ ~2 ~
 
-execute unless entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adventure,scores={timer=150..,class=4}] timer 0
+execute unless entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adventure,scores={timer=140..,class=4}] timer 0
 execute if entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adventure,scores={timer=100..,class=4}] timer 0
 
 execute as @a[gamemode=adventure,distance=..100,scores={timer=1..5,class=4},x=620,y=20,z=620] at @s run effect give @p levitation 1 0 true
@@ -206,9 +206,9 @@ execute as @e[type=egg] at @s run summon armor_stand ~ ~ ~ {CustomName:"{\"itali
 execute as @e[name=AM,type=armor_stand,tag=slime] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1,Marker:1,Tags:["a","frostnade"]}
 scoreboard players set @a[gamemode=adventure,scores={egguse=1..}] eggtimer 40
 scoreboard players set @a[gamemode=adventure,scores={egguse=1..}] egguse 0
-scoreboard players remove @a[gamemode=adventure,scores={eggtimer=1..}] eggtimer 1
-#item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={eggtimer=1}] hotbar.1 with egg{display:{Name:"{\"italic\":false,\"text\":\"§6Frost Nade §f§r: Right-click\"}"}}
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={eggtimer=1}] hotbar.1 with yellow_dye{display:{Name:"{\"italic\":false,\"text\":\"§6Snowman §f§r: Right-click\"}"}}
+scoreboard players remove @a[gamemode=adventure,scores={eggtimer=-1..}] eggtimer 1
+#item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={eggtimer=1}] hotbar.1 with egg{display:{Name:"{\"italic\":false,\"text\":\"§3Frost Nade §f§r: Right-click\"}"}}
+item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={eggtimer=1}] hotbar.1 with yellow_dye{display:{Name:"{\"italic\":false,\"text\":\"§3Snowman §f§r: Right-click\"}"}}
 kill @e[tag=slime,name=AM,type=armor_stand]
 
 # potions
@@ -514,7 +514,7 @@ execute as @e[tag=frostsuck,scores={frostl=-200..}] at @s run function game:char
 execute as @e[tag=frostsuck,tag=org] at @s align x align y align z run function game:char/shard/frostsuck/frosts
 scoreboard players add @e[tag=frostsuck] frostl 0
 
-item replace entity @a[scores={class=10,frostsT=0},x=620,y=20,z=620,distance=..100] hotbar.3 with lime_dye{display:{Name:"{\"italic\":false,\"text\":\"§6Ice Suck §f§r: Right-click\"}"}}
+item replace entity @a[scores={class=10,frostsT=0},x=620,y=20,z=620,distance=..100] hotbar.3 with lime_dye{display:{Name:"{\"italic\":false,\"text\":\"§3Ice Suck §f§r: Right-click\"}"}}
 scoreboard players remove @e[scores={frostsT=-100..}] frostsT 1
 
 execute as @e[tag=frostplat] at @s run function game:char/shard/frostsuck/plat
@@ -524,7 +524,7 @@ execute as @e[type=minecraft:snow_golem] at @s run function game:char/shard/snow
 
 execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={click=1..},nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] at @s run function game:char/shard/snowman/create
 #item replace entity @a[scores={class=10,snowmanT=0},x=620,y=20,z=620,distance=..100] hotbar.2 with yellow_dye{display:{Name:"{\"italic\":false,\"text\":\"§6Snowman §f§r: Right-click\"}"}}
-item replace entity @a[scores={class=10,snowmanT=0},x=620,y=20,z=620,distance=..100] hotbar.1 with egg{display:{Name:"{\"italic\":false,\"text\":\"§6Frost Nade §f§r: Right-click\"}"}}
+item replace entity @a[scores={class=10,snowmanT=0},x=620,y=20,z=620,distance=..100] hotbar.1 with egg{display:{Name:"{\"italic\":false,\"text\":\"§3Frost Nade §f§r: Right-click\"}"}}
 scoreboard players remove @e[scores={snowmanT=-100..}] snowmanT 1
 
 #trident trow
@@ -533,7 +533,7 @@ execute as @e[type=minecraft:trident,nbt={inGround:1b}] at @s run summon area_ef
 execute as @e[type=minecraft:trident,nbt={inGround:1b}] at @s run kill @s
 scoreboard players remove @a[scores={tridentT=0..}] tridentT 1
 scoreboard players set @a[scores={tridentuse=1..}] tridentT 130
-item replace entity @a[scores={class=10,tridentT=0},x=620,y=20,z=620,distance=..100] hotbar.2 with trident{display:{Name:"{\"italic\":false,\"text\":\"§6Trident §f§r: Right-click\"}"}}
+item replace entity @a[scores={class=10,tridentT=0},x=620,y=20,z=620,distance=..100] hotbar.2 with trident{display:{Name:"{\"italic\":false,\"text\":\"§9Trident §f§r: Right-click\"}"}}
 scoreboard players set @a[scores={tridentuse=1..}] tridentuse 0
 execute as @e[tag=tntstorm] at @s run function game:char/shard/tntstorm
 
@@ -589,6 +589,8 @@ execute as @a[gamemode=adventure,x=620,y=20,z=620,distance=..100] at @s run func
 
 effect clear @a wither
 
+execute as @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,tag=grave] at @s run function game:char/gardener/grave
+
 # creepers and slimes
 effect give @e[name=Bomb,type=creeper] slowness 999 100 true
 effect give @e[type=slime] slowness 999 100 true
@@ -631,7 +633,7 @@ scoreboard players set @a[scores={creepeggr=140..}] creepeggr 0
 scoreboard players set @a[scores={slimeeggr=140..}] slimeeggr 0
 
 # sythe reloading
-item replace entity @a[gamemode=adventure,scores={class=6,Sreload=0},x=600,y=60,z=600,distance=3..100] hotbar.1 with iron_hoe{display:{Name:"{\"italic\":false,\"text\":\"§aScythe §r: Right-click to throw\"}"},Enchantments:[{id:knockback,lvl:2}],Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=6,Sreload=0},x=600,y=60,z=600,distance=3..100] hotbar.1 with iron_hoe{display:{Name:"{\"italic\":false,\"text\":\"§aScythe §f: Right-click to throw\"}"},Enchantments:[{id:knockback,lvl:2}],Unbreakable:1}
 
 #dark pillar
 scoreboard players add @e[name=NArrow,type=armor_stand] NArrow 1
@@ -702,7 +704,7 @@ execute as @a[scores={ender=1..,endercount=6,class=0}] at @s run tellraw @a[game
 #scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=2}] Invis 40
 #scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=0}] Invis 30
 scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=2}] enderreload 260
-scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=1,endercount=2..}] enderreload 170
+scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=1,endercount=2..}] enderreload 180
 scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=1,endercount=2..}] endercount 0
 scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=1}] sneakdisable 40
 clear @a[gamemode=adventure,scores={ender=1..,class=1}] squid_spawn_egg

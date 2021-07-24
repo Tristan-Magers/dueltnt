@@ -15,7 +15,7 @@ setblock 490 17 495 air
 scoreboard players operation @e[name=Map,type=armor_stand] PlayerCount = PlayerCount game
 scoreboard players operation @e[name=Map,type=armor_stand] ArenaCheck = ArenaCheck game
 scoreboard players operation @e[name=Map,type=armor_stand] CurrentRound = CurrentRound game
-execute if entity @e[name=Map,type=armor_stand,scores={CurrentRound=..0}] if entity @e[name=Map,type=armor_stand,scores={ArenaCheck=140..}] if entity @a[scores={ingame=1..},gamemode=adventure,x=460,y=19,z=494,distance=..200] if entity @e[name=Map,type=armor_stand,scores={PlayerCount=..1}] if block 490 16 495 minecraft:tnt run setblock 490 17 495 minecraft:birch_button[face=floor] keep
+execute if entity @e[name=Map,type=armor_stand,scores={CurrentRound=..0}] if entity @e[name=Map,type=armor_stand,scores={ArenaCheck=140..}] if entity @a[scores={ingame=1..},gamemode=adventure,x=460,y=19,z=494,distance=..200] if block 490 16 495 minecraft:tnt run setblock 490 17 495 minecraft:birch_button[face=floor] keep
 
 #prevent ArenaCheck value from going to high. possibly unnessisary
 scoreboard players operation @e[name=Map,type=armor_stand] ArenaCheck = ArenaCheck game

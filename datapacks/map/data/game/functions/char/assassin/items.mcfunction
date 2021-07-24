@@ -14,16 +14,16 @@ execute as @s[scores={star=1..}] at @s run kill @e[sort=nearest,limit=1,type=ite
 scoreboard players add @s[scores={star=1..},nbt={SelectedItem:{id:"minecraft:nether_star"}}] starUse 1
 scoreboard players add @s[scores={starUse=2..}] starT 1
 execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:nether_star"}}] at @s run function game:items/magicstar
-item replace entity @s[scores={starT=105..}] hotbar.1 with nether_star{display:{Name:"{\"italic\":false,\"text\":\"Magic Star §r: Right-click\"}"}} 2
+item replace entity @s[scores={starT=105..}] hotbar.1 with nether_star{display:{Name:"{\"italic\":false,\"text\":\"Magic Star §f: Right-click\"}"}} 2
 scoreboard players set @s[scores={starT=2..}] starUse 0
 scoreboard players set @s[scores={starT=105..}] starT 0
 scoreboard players add @s[scores={starT=1..}] starT 1
 scoreboard players remove @s[scores={star=1..}] star 1
 
 #sneak attack
-execute as @a[scores={squidegg=1..,squidegguse=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":"true"},{"text":" (3 Remaining) ","color":"white"}]
-execute as @a[scores={squidegg=1..,squidegguse=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
-execute as @a[scores={squidegg=1..,squidegguse=3}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
+execute as @a[scores={squidegg=1..,squidegguse=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
+execute as @a[scores={squidegg=1..,squidegguse=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
+execute as @a[scores={squidegg=1..,squidegguse=3}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
 execute as @a[scores={squidegg=1..,squidegguse=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
 
 scoreboard players remove @s[scores={sneakdisable=1..}] sneakdisable 1

@@ -7,5 +7,7 @@ fill ~ ~ ~ ~ 0 ~ air
 kill @e[tag=killthisthing]
 
 #effect give @s minecraft:blindness 3
-effect give @s minecraft:slowness 2 2
+effect give @s minecraft:slowness 2 1
 #effect give @s minecraft:slow_falling 2 0
+
+tag @s add grave

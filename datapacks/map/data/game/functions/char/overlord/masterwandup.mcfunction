@@ -22,3 +22,5 @@ playsound minecraft:item.bottle.fill_dragonbreath master @a ~ ~ ~ 1 2
 playsound minecraft:item.armor.equip_diamond master @a ~ ~ ~ 1 1
 playsound minecraft:item.armor.equip_iron master @a ~ ~ ~ 1 1
 playsound minecraft:block.conduit.activate master @a ~ ~ ~ 1 2
+
+particle minecraft:totem_of_undying ~ ~1 ~ 0 1 0 0.7 12 force

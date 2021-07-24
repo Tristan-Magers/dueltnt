@@ -1,4 +1,4 @@
-item replace entity @s[scores={nobow=3..}] hotbar.0 with bow{Damage:20,Unbreakable:1,display:{Name:"{\"color\":\"red\",\"italic\":false,\"text\":\"§cBomb Bow§r : Throw to switch\"}"}}
+item replace entity @s[scores={nobow=3..}] hotbar.0 with bow{Damage:20,Unbreakable:1,display:{Name:"{\"color\":\"red\",\"italic\":false,\"text\":\"§cBomb Bow§f : Throw to switch\"}"}}
 
 clear @s[nbt=!{Inventory:[{id:"minecraft:lingering_potion",Slot:1b}]},scores={snowReset=..50},tag=checkairnade] lingering_potion
 scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:lingering_potion",Slot:1b}]},scores={snowReset=..50},tag=checkairnade] snowReset 51

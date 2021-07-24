@@ -1,349 +1,175 @@
 {
-  "classes:class3": {
+  "minecraft:recipes/decorations/stone_brick_walls_from_stone_stonecutting": {
     "criteria": {
-      "trapper": "2021-07-19 22:35:22 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/magenta_dye_from_blue_red_white_dye": {
-    "criteria": {
-      "has_white_dye": "2021-07-19 22:22:48 -0600"
+      "has_stone": "2021-07-24 14:50:43 -0600"
     },
     "done": true
   },
   "minecraft:recipes/misc/iron_nugget_from_blasting": {
     "criteria": {
-      "has_iron_chestplate": "2021-07-19 21:57:23 -0600"
-    },
-    "done": true
-  },
-  "classes:class5": {
-    "criteria": {
-      "mad": "2021-07-19 22:20:44 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/pink_dye_from_red_white_dye": {
-    "criteria": {
-      "has_white_dye": "2021-07-19 22:22:48 -0600"
-    },
-    "done": true
-  },
-  "classes:class4": {
-    "criteria": {
-      "wizard": "2021-07-20 01:34:24 -0600"
-    },
-    "done": true
-  },
-  "classes:root": {
-    "criteria": {
-      "warrior": "2021-07-19 21:39:24 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/stone_stairs_from_stone_stonecutting": {
-    "criteria": {
-      "has_stone": "2021-07-19 22:40:07 -0600"
-    },
-    "done": true
-  },
-  "classes:class6": {
-    "criteria": {
-      "reaper": "2021-07-19 22:06:38 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/diorite_wall_from_diorite_stonecutting": {
-    "criteria": {
-      "has_diorite": "2021-07-20 01:58:25 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/gold_ingot_from_smelting_gold_ore": {
-    "criteria": {
-      "has_gold_ore": "2021-07-19 21:55:20 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/polished_diorite_stairs_from_diorite_stonecutting": {
-    "criteria": {
-      "has_diorite": "2021-07-20 01:58:25 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/yellow_candle": {
-    "criteria": {
-      "has_yellow_dye": "2021-07-19 22:23:30 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/stone_bricks_from_stone_stonecutting": {
-    "criteria": {
-      "has_stone": "2021-07-19 22:40:07 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/diorite_wall": {
-    "criteria": {
-      "has_diorite": "2021-07-20 01:58:25 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/yellow_stained_glass_pane_from_glass_pane": {
-    "criteria": {
-      "has_yellow_dye": "2021-07-19 22:23:30 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/redstone/target": {
-    "criteria": {
-      "has_redstone": "2021-07-19 22:35:32 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/diorite_stairs_from_diorite_stonecutting": {
-    "criteria": {
-      "has_diorite": "2021-07-20 01:58:25 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/stonecutter": {
-    "criteria": {
-      "has_stone": "2021-07-19 22:40:07 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/white_candle": {
-    "criteria": {
-      "has_white_dye": "2021-07-19 22:22:48 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/campfire": {
-    "criteria": {
-      "has_stick": "2021-07-19 22:20:58 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/lime_stained_glass_pane_from_glass_pane": {
-    "criteria": {
-      "has_lime_dye": "2021-07-19 22:22:48 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/diorite_slab_from_diorite_stonecutting": {
-    "criteria": {
-      "has_diorite": "2021-07-20 01:58:25 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/smooth_stone": {
-    "criteria": {
-      "has_stone": "2021-07-19 22:40:07 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/polished_diorite_slab_from_polished_diorite_stonecutting": {
-    "criteria": {
-      "has_polished_diorite": "2021-07-20 01:54:10 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/stone_slab_from_stone_stonecutting": {
-    "criteria": {
-      "has_stone": "2021-07-19 22:40:07 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/chiseled_stone_bricks_stone_from_stonecutting": {
-    "criteria": {
-      "has_stone": "2021-07-19 22:40:07 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/polished_diorite_slab": {
-    "criteria": {
-      "has_polished_diorite": "2021-07-20 01:54:10 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/stone_brick_slab_from_stone_stonecutting": {
-    "criteria": {
-      "has_stone": "2021-07-19 22:40:07 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/gold_nugget_from_blasting": {
-    "criteria": {
-      "has_golden_chestplate": "2021-07-19 23:43:52 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/black_dye": {
-    "criteria": {
-      "has_ink_sac": "2021-07-19 22:20:58 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/stone_brick_walls_from_stone_stonecutting": {
-    "criteria": {
-      "has_stone": "2021-07-19 22:40:07 -0600"
+      "has_iron_chestplate": "2021-07-24 14:30:00 -0600"
     },
     "done": true
   },
   "minecraft:recipes/building_blocks/stone_brick_stairs_from_stone_stonecutting": {
     "criteria": {
-      "has_stone": "2021-07-19 22:40:07 -0600"
+      "has_stone": "2021-07-24 14:50:43 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/lime_candle": {
+  "classes:root": {
     "criteria": {
-      "has_lime_dye": "2021-07-19 22:22:48 -0600"
+      "warrior": "2021-07-24 14:03:08 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/diorite_stairs": {
+  "minecraft:recipes/decorations/andesite_wall_from_andesite_stonecutting": {
     "criteria": {
-      "has_diorite": "2021-07-20 01:58:25 -0600"
+      "has_andesite": "2021-07-24 14:50:37 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/misc/light_gray_dye_from_gray_white_dye": {
+  "minecraft:recipes/building_blocks/stone_stairs_from_stone_stonecutting": {
     "criteria": {
-      "has_white_dye": "2021-07-19 22:22:48 -0600"
+      "has_stone": "2021-07-24 14:50:43 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/andesite_stairs_from_andesite_stonecutting": {
+    "criteria": {
+      "has_andesite": "2021-07-24 14:50:37 -0600"
     },
     "done": true
   },
   "minecraft:recipes/food/dried_kelp_from_campfire_cooking": {
     "criteria": {
-      "has_kelp": "2021-07-19 22:29:42 -0600"
+      "has_kelp": "2021-07-24 14:30:18 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/misc/iron_ingot_from_blasting_iron_ore": {
+  "minecraft:recipes/building_blocks/stone_bricks_from_stone_stonecutting": {
     "criteria": {
-      "has_iron_ore": "2021-07-19 22:01:13 -0600"
+      "has_stone": "2021-07-24 14:50:43 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/misc/iron_ingot_from_smelting_iron_ore": {
+  "minecraft:recipes/building_blocks/polished_andesite_stairs_from_andesite_stonecutting": {
     "criteria": {
-      "has_iron_ore": "2021-07-19 22:01:13 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/fletching_table": {
-    "criteria": {
-      "has_flint": "2021-07-19 22:35:32 -0600"
+      "has_andesite": "2021-07-24 14:50:37 -0600"
     },
     "done": true
   },
   "survival:root": {
     "criteria": {
-      "warrior": "2021-07-19 21:39:24 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/lime_carpet_from_white_carpet": {
-    "criteria": {
-      "has_lime_dye": "2021-07-19 22:22:48 -0600"
+      "warrior": "2021-07-24 14:03:08 -0600"
     },
     "done": true
   },
   "minecraft:recipes/building_blocks/stone_stairs": {
     "criteria": {
-      "has_stone": "2021-07-19 22:40:07 -0600"
+      "has_stone": "2021-07-24 14:50:43 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/white_stained_glass_pane_from_glass_pane": {
+  "minecraft:recipes/decorations/stonecutter": {
     "criteria": {
-      "has_white_dye": "2021-07-19 22:22:48 -0600"
+      "has_stone": "2021-07-24 14:50:43 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/black_dye_from_wither_rose": {
+    "criteria": {
+      "has_wither_rose": "2021-07-24 14:51:36 -0600"
     },
     "done": true
   },
   "minecraft:recipes/food/dried_kelp_from_smoking": {
     "criteria": {
-      "has_kelp": "2021-07-19 22:29:42 -0600"
+      "has_kelp": "2021-07-24 14:30:18 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/diorite_slab": {
+  "minecraft:recipes/building_blocks/andesite_stairs": {
     "criteria": {
-      "has_diorite": "2021-07-20 01:58:25 -0600"
+      "has_andesite": "2021-07-24 14:50:37 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/polished_diorite_stairs_from_polished_diorite_stonecutting": {
+  "minecraft:recipes/building_blocks/smooth_stone": {
     "criteria": {
-      "has_polished_diorite": "2021-07-20 01:54:10 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/yellow_carpet_from_white_carpet": {
-    "criteria": {
-      "has_yellow_dye": "2021-07-19 22:23:30 -0600"
+      "has_stone": "2021-07-24 14:50:43 -0600"
     },
     "done": true
   },
   "minecraft:recipes/decorations/cartography_table": {
     "criteria": {
-      "has_paper": "2021-07-19 22:06:53 -0600"
+      "has_paper": "2021-07-24 14:30:00 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/polished_diorite_stairs": {
+  "minecraft:recipes/building_blocks/stone_slab_from_stone_stonecutting": {
     "criteria": {
-      "has_polished_diorite": "2021-07-20 01:54:10 -0600"
+      "has_stone": "2021-07-24 14:50:43 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/misc/light_blue_dye_from_blue_white_dye": {
+  "minecraft:recipes/building_blocks/chiseled_stone_bricks_stone_from_stonecutting": {
     "criteria": {
-      "has_white_dye": "2021-07-19 22:22:48 -0600"
+      "has_stone": "2021-07-24 14:50:43 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/decorations/soul_campfire": {
+  "minecraft:recipes/building_blocks/polished_andesite_slab_from_andesite_stonecutting": {
     "criteria": {
-      "has_stick": "2021-07-19 22:20:58 -0600"
+      "has_andesite": "2021-07-24 14:50:37 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/combat/crossbow": {
+  "minecraft:recipes/building_blocks/polished_andesite_from_andesite_stonecutting": {
     "criteria": {
-      "has_stick": "2021-07-19 22:20:58 -0600"
+      "has_andesite": "2021-07-24 14:50:37 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/polished_diorite_slab_from_diorite_stonecutting": {
+  "minecraft:recipes/decorations/andesite_wall": {
     "criteria": {
-      "has_diorite": "2021-07-20 01:58:25 -0600"
+      "has_andesite": "2021-07-24 14:50:37 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/misc/light_gray_dye_from_black_white_dye": {
+  "minecraft:recipes/building_blocks/andesite_slab": {
     "criteria": {
-      "has_white_dye": "2021-07-19 22:22:48 -0600"
+      "has_andesite": "2021-07-24 14:50:37 -0600"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/polished_diorite_from_diorite_stonecutting": {
+  "minecraft:recipes/building_blocks/andesite_slab_from_andesite_stonecutting": {
     "criteria": {
-      "has_diorite": "2021-07-20 01:58:25 -0600"
+      "has_andesite": "2021-07-24 14:50:37 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/stone_brick_slab_from_stone_stonecutting": {
+    "criteria": {
+      "has_stone": "2021-07-24 14:50:43 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/flower_banner_pattern": {
+    "criteria": {
+      "has_oxeye_daisy": "2021-07-24 14:51:20 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/gold_nugget_from_blasting": {
+    "criteria": {
+      "has_golden_chestplate": "2021-07-24 14:55:09 -0600"
     },
     "done": true
   },
   "minecraft:recipes/misc/leather_horse_armor": {
     "criteria": {
-      "has_leather": "2021-07-19 23:43:57 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/gold_ingot_from_blasting_gold_ore": {
-    "criteria": {
-      "has_gold_ore": "2021-07-19 21:55:20 -0600"
+      "has_leather": "2021-07-24 14:55:17 -0600"
     },
     "done": true
   },

@@ -74,8 +74,8 @@ execute as @e[name=menu,scores={instant=1}] at @s run scoreboard players set @e[
 tag @a[tag=green] remove Sgreen
 tag @a[tag=red] remove Sred
 tag @a[tag=blue] remove Sblue
-execute as @a[tag=Sgreen] at @s run me joined §2GREEN
-execute as @a[tag=Sblue] at @s run me joined §9BLUE
+execute as @a[tag=Sgreen] at @s run me joined §aGREEN
+execute as @a[tag=Sblue] at @s run me joined §bBLUE
 execute as @a[tag=Sred] at @s run me joined §cRED
 tag @a[tag=Sblue] add blue
 tag @a[tag=Sblue] remove red
@@ -114,7 +114,16 @@ execute if entity @e[name=menu,type=armor_stand,scores={Team=0}] run fill 475 18
 execute if block 485 11 476 minecraft:polished_blackstone_button[powered=true] run function game:menu/shard
 
 #Iris ladder
-execute if block 478 14 467 minecraft:stone_button[powered=true] run clone 477 6 466 480 2 467 477 12 466
+execute if entity @e[name=Map,tag=!ladder] if block 478 14 467 minecraft:stone_button[powered=true] run tag @e[name=Map,tag=!ladder] add laddert
+execute if entity @e[name=Map,tag=!ladder] if block 478 14 467 minecraft:stone_button[powered=true] run clone 477 6 466 480 2 467 477 12 466
+
+execute if entity @e[name=Map,tag=ladder] if block 478 14 467 minecraft:stone_button[powered=true] run fill 479 14 467 480 12 467 air
+execute if entity @e[name=Map,tag=ladder] if block 478 14 467 minecraft:stone_button[powered=true] run tag @e[name=Map] remove ladder
+
+execute if block 478 14 467 minecraft:stone_button[powered=true] run setblock 478 14 467 minecraft:stone_button[facing=east,powered=false]
+
+tag @e[name=Map,tag=laddert] add ladder
+tag @e[name=Map,tag=laddert] remove laddert
 
 #particle sound
 scoreboard players set @a partTest 0
@@ -128,7 +137,7 @@ execute as @a at @s run scoreboard players operation @s partPast = @s particle
 tag @e[name=Map,type=armor_stand,limit=1] remove removeset
 execute if entity @e[type=player,distance=..100,x=600,y=60,z=600,gamemode=adventure] run tag @e[name=Map,type=armor_stand,limit=1] add removeset
 
-execute as @e[name=Map,type=armor_stand,limit=1,tag=removeset,tag=!removesett] run function game:menu/setdisable
+#execute as @e[name=Map,type=armor_stand,limit=1,tag=removeset,tag=!removesett] run function game:menu/setdisable
 execute as @e[name=Map,type=armor_stand,limit=1,tag=!removeset,tag=removesett] run schedule function game:menu/setenable 5t
 
 tag @e[name=Map,type=armor_stand,limit=1,tag=removeset] add removesett

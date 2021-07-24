@@ -7,7 +7,7 @@ scoreboard players operation @e[name=Map,type=armor_stand] Map = Map game
 scoreboard players operation @e[name=Map,type=armor_stand] RoundSetting = RoundSetting game
 execute if entity @e[name=Map,type=armor_stand,scores={Map=0}] run scoreboard players operation StartMap game = @e[sort=random,limit=1,type=armor_stand,distance=..1000,scores={randomizer=1..}] randomizer
 execute if entity @e[name=Map,type=armor_stand,scores={RoundSetting=1}] run scoreboard players set StartMap game 99
-execute if entity @e[name=Map,type=armor_stand,scores={RoundSetting=1}] run scoreboard players operation StartMap game = @e[sort=random,limit=1,type=armor_stand,distance=..10,scores={randomizer=1..,CustomRandom=1..}] randomizer
+execute if entity @e[name=Map,type=armor_stand,scores={RoundSetting=1}] run scoreboard players operation StartMap game = @e[sort=random,limit=1,type=armor_stand,distance=..1000,scores={randomizer=1..,CustomRandom=1..}] randomizer
 scoreboard players operation @e[name=Map,type=armor_stand] game = StartMap game
 scoreboard players remove CurrentRound game 1
 scoreboard players operation @e[name=Map,type=armor_stand] CurrentRound = CurrentRound game

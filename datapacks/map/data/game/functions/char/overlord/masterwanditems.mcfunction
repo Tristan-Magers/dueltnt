@@ -23,3 +23,5 @@ item replace entity @s[scores={masterb=..16}] hotbar.2 with minecraft:barrier{di
 item replace entity @s[scores={masterb=16..,masterup=4..}] hotbar.3 with minecraft:cooked_salmon{display:{Name:"{\"italic\":false,\"text\":\"§1Matter Storm §r: Right-click (16 Material)\"}"}}
 clear @s[scores={masterb=..15,masterup=4..}] cooked_salmon
 item replace entity @s[scores={masterb=..15,masterup=4..}] hotbar.3 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}} 1
+
+item replace entity @s[scores={masterc=25..}] hotbar.0 with barrier

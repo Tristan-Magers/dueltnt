@@ -27,7 +27,7 @@ execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=0,timer=1}
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=1,timer=1}] 88 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=2,timer=1}] 73 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=3,timer=1}] 80 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=4,timer=1}] 150 levels
+execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=4,timer=1}] 140 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=6,timer=1}] 160 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=7,timer=1}] 160 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=9,timer=1}] -1 levels

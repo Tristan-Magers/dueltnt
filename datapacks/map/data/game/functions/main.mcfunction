@@ -174,7 +174,12 @@ execute as @a[scores={Y=..0}] at @s run function game:player/respawn
 scoreboard players add @a[scores={rejoin=1..}] timer 0
 effect give @a[scores={rejoin=1..}] resistance 1000000 255 true
 effect give @a[scores={rejoin=1..}] saturation 1000000 255 true
-execute as @a[scores={Y=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a [{"selector":"@p[scores={Y=..0}]"},{"text":" died!","color":"green"}]
+execute as @a[scores={Y=..0,teamed=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a [{"selector":"@p[scores={Y=..0}]"},{"text":" died!","color":"green"}]
+
+execute as @a[scores={Y=..0,teamed=1..},tag=red,x=620,y=20,z=620,distance=..100] at @s run tellraw @a [{"text":"[","color":"white"},{"text":"RED","color":"red"},{"text":"] ","color":"white"},{"selector":"@p[scores={Y=..0}]"},{"text":" died!","color":"green"}]
+execute as @a[scores={Y=..0,teamed=1..},tag=blue,x=620,y=20,z=620,distance=..100] at @s run tellraw @a [{"text":"[","color":"white"},{"text":"BLUE","color":"aqua"},{"text":"] ","color":"white"},{"selector":"@p[scores={Y=..0}]"},{"text":" died!","color":"green"}]
+execute as @a[scores={Y=..0,teamed=1..},tag=green,x=620,y=20,z=620,distance=..100] at @s run tellraw @a [{"text":"[","color":"white"},{"text":"GREEN","color":"green"},{"text":"] ","color":"white"},{"selector":"@p[scores={Y=..0}]"},{"text":" died!","color":"green"}]
+
 tp @a[scores={rejoin=1..,inarena=..0}] 500 20.5 500 0 0
 scoreboard players add @a[scores={rejoin=1..}] class 0
 gamemode spectator @a[scores={Y=..0,inarena=1..}]
@@ -359,4 +364,14 @@ execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run scoreboard
 execute if entity @e[name=Map,type=armor_stand,scores={Time=580}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"","color":"dark_red","bold":"false"}]
 
 execute if entity @e[name=Map,type=armor_stand,scores={Time=15}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"TIMES OUT","color":"dark_red","bold":"false"}]
-execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run scoreboard players operation @s l = @s Lives
+execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure,scores={teamed=..0}] at @s run scoreboard players operation @s l = @s Lives
+
+#Team Lives
+execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=red,scores={teamed=1..}] run scoreboard players set §cRED_LIVES l 0
+execute as @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=red,scores={teamed=1..}] run scoreboard players operation §cRED_LIVES l += @s Lives
+
+execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=blue,scores={teamed=1..}] run scoreboard players set §bBLUE_LIVES l 0
+execute as @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=blue,scores={teamed=1..}] run scoreboard players operation §bBLUE_LIVES l += @s Lives
+
+execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run scoreboard players set §aGREEN_LIVES l 0
+execute as @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run scoreboard players operation §aGREEN_LIVES l += @s Lives

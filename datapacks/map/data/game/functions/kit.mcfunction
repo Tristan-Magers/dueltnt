@@ -19,6 +19,7 @@ execute as @s[scores={kit=6},x=517,y=11,z=514,distance=..7] at @s run advancemen
 execute as @s[scores={kit=7},x=473,y=10,z=506,distance=..7] at @s run advancement grant @s only classes:class7
 execute as @s[scores={kit=8},x=482,y=17,z=453,distance=..7] at @s run advancement grant @s only classes:class8
 execute as @s[scores={kit=9},x=495,y=24,z=563,distance=..20] at @s run advancement grant @s only classes:class9
+execute as @s[scores={kit=10},x=487,y=11,z=477,distance=..11] at @s run advancement grant @s only classes:class10
 
 execute as @s[scores={kit=0}] at @s run setblock 495 31 564 minecraft:red_glazed_terracotta
 execute as @s[scores={kit=1}] at @s run setblock 492 30 564 minecraft:yellow_glazed_terracotta

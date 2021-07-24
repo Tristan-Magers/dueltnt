@@ -36,19 +36,8 @@ execute as @s[scores={class=4}] at @s run function game:char/wizard/correct
 execute as @s[scores={class=5}] at @s run function game:char/mads/correct
 execute as @s[scores={class=6}] at @s run function game:char/reaper/correct
 execute as @s[scores={class=7}] at @s run function game:char/echo/correct
+execute as @s[scores={class=9}] at @s run function game:char/overlord/correct
+execute as @s[scores={class=10}] at @s run function game:char/shard/correct
 
 execute unless entity @e[scores={mode=1}] run item replace entity @s[scores={nobow=3..,class=8}] hotbar.0 with minecraft:bow{Damage:220,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§6Blast Jumper §r : Throw to switch\"}"},Enchantments:[{id:punch,lvl:2}]}
 execute if entity @e[scores={mode=1}] run item replace entity @s[scores={nobow=3..,class=8}] hotbar.0 with minecraft:bow{Damage:220,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§6Blast Jumper §r : Throw to switch\"}"},Enchantments:[{id:punch,lvl:3}]}
-
-tag @s remove hasshov
-tag @s[scores={class=9},nbt={Inventory:[{id:"minecraft:wooden_pickaxe"}]}] add hasshov
-tag @s[scores={class=9},nbt={Inventory:[{id:"minecraft:stone_pickaxe"}]}] add hasshov
-tag @s[scores={class=9},nbt={Inventory:[{id:"minecraft:iron_pickaxe"}]}] add hasshov
-tag @s[scores={class=9},nbt={Inventory:[{id:"minecraft:golden_pickaxe"}]}] add hasshov
-tag @s[scores={class=9},nbt={Inventory:[{id:"minecraft:diamond_pickaxe"}]}] add hasshov
-clear @s[scores={class=9,masterc=..24},tag=!hasshov] wooden_pickaxe
-clear @s[scores={class=9,masterc=..24},tag=!hasshov] stone_pickaxe
-clear @s[scores={class=9,masterc=..24},tag=!hasshov] iron_pickaxe
-clear @s[scores={class=9,masterc=..24},tag=!hasshov] golden_pickaxe
-clear @s[scores={class=9,masterc=..24},tag=!hasshov] diamond_pickaxe
-execute as @s[scores={class=9,masterc=..24},tag=!hasshov] at @s run function game:char/overlord/masterwanduse

@@ -17,10 +17,10 @@ execute as @s[scores={survival=30}] run spreadplayers 615 615 14 13 false @e[typ
 
 execute as @s[scores={survival=100}] run summon ghast 615 35 615
 
-execute as @s[scores={survival=150}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b},{}],ArmorItems:[{},{},{},{id:"minecraft:skeleton_skull",Count:1b}]}
-execute as @s[scores={survival=150}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b},{}],ArmorItems:[{},{},{},{id:"minecraft:skeleton_skull",Count:1b}]}
-execute as @s[scores={survival=150}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b},{}],ArmorItems:[{},{},{},{id:"minecraft:skeleton_skull",Count:1b}]}
-execute as @s[scores={survival=150}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b},{}],ArmorItems:[{},{},{},{id:"minecraft:skeleton_skull",Count:1b}]}
+execute as @s[scores={survival=150}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b},{}],ArmorItems:[{},{},{},{id:"minecraft:skeleton_skull",Count:1b}]}
+execute as @s[scores={survival=150}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b},{}],ArmorItems:[{},{},{},{id:"minecraft:skeleton_skull",Count:1b}]}
+execute as @s[scores={survival=150}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b},{}],ArmorItems:[{},{},{},{id:"minecraft:skeleton_skull",Count:1b}]}
+execute as @s[scores={survival=150}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b},{}],ArmorItems:[{},{},{},{id:"minecraft:skeleton_skull",Count:1b}]}
 
 execute as @s[scores={survival=150}] run spreadplayers 615 615 14 13 false @e[type=skeleton,x=615,y=50,z=615,distance=..1]
 
@@ -48,9 +48,9 @@ execute as @s[scores={survival=680}] run spreadplayers 615 615 14 13 false @e[ty
 execute as @s[scores={survival=700}] run summon chicken 615 50 615
 execute as @s[scores={survival=700}] run spreadplayers 615 615 14 13 false @e[type=chicken,x=615,y=50,z=615,distance=..1]
 
-execute as @s[scores={survival=720}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:1s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:wither_skeleton_skull",Count:1b}]}
-execute as @s[scores={survival=720}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:1s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:wither_skeleton_skull",Count:1b}]}
-execute as @s[scores={survival=720}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:1s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:wither_skeleton_skull",Count:1b}]}
+execute as @s[scores={survival=720}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:1s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:wither_skeleton_skull",Count:1b}]}
+execute as @s[scores={survival=720}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:1s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:wither_skeleton_skull",Count:1b}]}
+execute as @s[scores={survival=720}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:1s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:wither_skeleton_skull",Count:1b}]}
 
 execute as @s[scores={survival=720}] run spreadplayers 615 615 14 13 false @e[type=skeleton,x=615,y=50,z=615,distance=..1]
 
@@ -87,10 +87,10 @@ execute as @s[scores={survival=1200}] run execute as @a[x=600,y=60,z=600,distanc
 
 execute as @s[scores={survival=1240..1270}] run title @a title {"text":""}
 
-execute as @s[scores={survival=1220}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
-execute as @s[scores={survival=1220}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
-execute as @s[scores={survival=1220}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
-execute as @s[scores={survival=1220}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
+execute as @s[scores={survival=1220}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
+execute as @s[scores={survival=1220}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
+execute as @s[scores={survival=1220}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
+execute as @s[scores={survival=1220}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
 
 execute as @s[scores={survival=1220}] run spreadplayers 615 615 14 13 false @e[type=skeleton,x=615,y=50,z=615,distance=..1]
 
@@ -108,10 +108,10 @@ execute as @s[scores={survival=1570}] run execute as @a[x=600,y=60,z=600,distanc
 
 execute as @s[scores={survival=1600}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
 
-execute as @s[scores={survival=1620}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
-execute as @s[scores={survival=1620}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
-execute as @s[scores={survival=1620}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
-execute as @s[scores={survival=1620}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
+execute as @s[scores={survival=1620}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
+execute as @s[scores={survival=1620}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
+execute as @s[scores={survival=1620}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
+execute as @s[scores={survival=1620}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
 
 execute as @s[scores={survival=1620}] run spreadplayers 615 615 14 13 false @e[type=skeleton,x=615,y=50,z=615,distance=..1]
 
@@ -120,12 +120,12 @@ execute as @s[scores={survival=1660}] run summon chicken 615 50 615
 
 execute as @s[scores={survival=1660}] run spreadplayers 615 615 14 13 false @e[type=chicken,x=615,y=50,z=615,distance=..1]
 
-execute as @s[scores={survival=1820}] run summon zombie 615 50 615 {Handgame:items/[{id:"minecraft:golden_shovel",Count:1b,tag:{Enchantments:[{id:"minecraft:knockback",lvl:3s}]}},{}]}
-execute as @s[scores={survival=1820}] run summon zombie 615 50 615 {Handgame:items/[{id:"minecraft:golden_shovel",Count:1b,tag:{Enchantments:[{id:"minecraft:knockback",lvl:3s}]}},{}]}
-execute as @s[scores={survival=1820}] run summon zombie 615 50 615 {Handgame:items/[{id:"minecraft:golden_shovel",Count:1b,tag:{Enchantments:[{id:"minecraft:knockback",lvl:3s}]}},{}]}
-execute as @s[scores={survival=1820}] run summon zombie 615 50 615 {Handgame:items/[{id:"minecraft:golden_shovel",Count:1b,tag:{Enchantments:[{id:"minecraft:knockback",lvl:3s}]}},{}]}
-execute as @s[scores={survival=1820}] run summon zombie 615 50 615 {Handgame:items/[{id:"minecraft:golden_shovel",Count:1b,tag:{Enchantments:[{id:"minecraft:knockback",lvl:3s}]}},{}]}
-execute as @s[scores={survival=1820}] run summon zombie 615 50 615 {Handgame:items/[{id:"minecraft:golden_shovel",Count:1b,tag:{Enchantments:[{id:"minecraft:knockback",lvl:3s}]}},{}]}
+execute as @s[scores={survival=1820}] run summon zombie 615 50 615 {HandItems:[{id:"minecraft:golden_shovel",Count:1b,tag:{Enchantments:[{id:"minecraft:knockback",lvl:3s}]}},{}]}
+execute as @s[scores={survival=1820}] run summon zombie 615 50 615 {HandItems:[{id:"minecraft:golden_shovel",Count:1b,tag:{Enchantments:[{id:"minecraft:knockback",lvl:3s}]}},{}]}
+execute as @s[scores={survival=1820}] run summon zombie 615 50 615 {HandItems:[{id:"minecraft:golden_shovel",Count:1b,tag:{Enchantments:[{id:"minecraft:knockback",lvl:3s}]}},{}]}
+execute as @s[scores={survival=1820}] run summon zombie 615 50 615 {HandItems:[{id:"minecraft:golden_shovel",Count:1b,tag:{Enchantments:[{id:"minecraft:knockback",lvl:3s}]}},{}]}
+execute as @s[scores={survival=1820}] run summon zombie 615 50 615 {HandItems:[{id:"minecraft:golden_shovel",Count:1b,tag:{Enchantments:[{id:"minecraft:knockback",lvl:3s}]}},{}]}
+execute as @s[scores={survival=1820}] run summon zombie 615 50 615 {HandItems:[{id:"minecraft:golden_shovel",Count:1b,tag:{Enchantments:[{id:"minecraft:knockback",lvl:3s}]}},{}]}
 
 execute as @s[scores={survival=1819..1823}] run spreadplayers 615 615 14 13 false @e[type=zombie,x=615,y=50,z=615,distance=..1]
 
@@ -165,9 +165,9 @@ execute as @s[scores={survival=2700..2730}] run title @a title {"text":""}
 execute as @s[scores={survival=2850}] run summon ghast 615 35 615
 execute as @s[scores={survival=2850}] run summon ghast 615 35 615
 
-execute as @s[scores={survival=2900}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:1s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:wither_skeleton_skull",Count:1b}]}
-execute as @s[scores={survival=2900}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:1s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:wither_skeleton_skull",Count:1b}]}
-execute as @s[scores={survival=2900}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:1s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:wither_skeleton_skull",Count:1b}]}
+execute as @s[scores={survival=2900}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:1s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:wither_skeleton_skull",Count:1b}]}
+execute as @s[scores={survival=2900}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:1s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:wither_skeleton_skull",Count:1b}]}
+execute as @s[scores={survival=2900}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:1s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:wither_skeleton_skull",Count:1b}]}
 
 execute as @s[scores={survival=2900}] run spreadplayers 615 615 14 13 false @e[type=skeleton,x=615,y=50,z=615,distance=..1]
 
@@ -177,10 +177,10 @@ execute as @s[scores={survival=3000}] run summon chicken 615 50 615
 
 execute as @s[scores={survival=3000}] run spreadplayers 615 615 14 13 false @e[type=chicken,x=615,y=50,z=615,distance=..1]
 
-execute as @s[scores={survival=3100}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
-execute as @s[scores={survival=3100}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
-execute as @s[scores={survival=3100}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
-execute as @s[scores={survival=3100}] run summon skeleton 615 50 615 {Handgame:items/[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
+execute as @s[scores={survival=3100}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
+execute as @s[scores={survival=3100}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
+execute as @s[scores={survival=3100}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
+execute as @s[scores={survival=3100}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
 
 execute as @s[scores={survival=3100}] run spreadplayers 615 615 14 13 false @e[type=skeleton,x=615,y=50,z=615,distance=..1]
 

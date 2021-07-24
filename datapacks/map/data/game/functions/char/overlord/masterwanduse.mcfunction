@@ -1,4 +1,8 @@
 item replace entity @s[scores={masterc=25..}] hotbar.0 with barrier
+execute as @s[scores={masterc=25..}] at @s run playsound minecraft:item.shield.break master @a ~ ~ ~ 1 0
+execute as @s[scores={masterc=25..}] at @s run playsound minecraft:item.shield.break master @a ~ ~ ~ 1 1.2
+execute as @s[scores={masterc=25..}] at @s run particle minecraft:campfire_signal_smoke ~ ~1 ~ 0.5 0.3 0.5 0 10 force
+execute as @s[scores={masterc=25..}] at @s run particle minecraft:cloud ~ ~1 ~ 0.2 0.2 0.2 0.3 10 force
 
 item replace entity @s[scores={masterup=0,masterc=0}] hotbar.0 with wooden_pickaxe{Damage:0,display:{Name:"{\"italic\":false,\"text\":\"§9Master Wand §r: Right-click Blocks\"}"}}
 item replace entity @s[scores={masterup=0,masterc=1}] hotbar.0 with wooden_pickaxe{Damage:2,display:{Name:"{\"italic\":false,\"text\":\"§9Master Wand §r: Right-click Blocks\"}"}}

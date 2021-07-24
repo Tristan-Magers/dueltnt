@@ -9,3 +9,4 @@ advancement grant @a[scores={survival=4000..,class=6}] only survival:wclass6
 advancement grant @a[scores={survival=4000..,class=7}] only survival:wclass7
 advancement grant @a[scores={survival=4000..,class=8}] only survival:wclass8
 advancement grant @a[scores={survival=4000..,class=9}] only survival:wclass9
+advancement grant @a[scores={survival=4000..,class=10}] only survival:wclass10

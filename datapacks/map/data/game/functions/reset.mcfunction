@@ -17,6 +17,7 @@ fill 486 9 476 486 9 476 minecraft:redstone_block
 
 #iris ladder
 fill 479 14 467 480 12 467 air
+tag @e[name=Map] remove ladder
 
 #overlord default unlocks
 setblock 495 31 564 minecraft:red_glazed_terracotta[facing=north]
