@@ -138,6 +138,9 @@ Shard
 
 [Lobby Changes]
 - Updated general lobby look for story event
+- Updated Tournament hall (TbT4, Pie #8, Pie #9, Viral's undtt)
+- Added PyroStunts to credits on behalf of McStacker
+- Added LoliAdmin to credits on behalf of laser testing
 - Set lobby to night time
 - Added "Book for Nerds"
 - Soldier, Assassin, and Ghost automatically unlocked in Overlord swamp
@@ -165,3 +168,4 @@ Shard
 - Some items would sometimes have incorrect colors on name
 - Overlord wand not displaying anything when broken
 - Survival would not tell remaining time on loss
+- In part of lobby you could not join/unjoin

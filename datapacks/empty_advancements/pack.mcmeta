@@ -1,6 +1,6 @@
 {
-	"pack": {
-		"pack_format": 1,
-		"description": "Empty Advancements (1.13-pre8)"
-	}
+    "pack": {
+        "pack_format": 7,
+        "description": "Empty Advancements (1.17)"
+    }
 }
