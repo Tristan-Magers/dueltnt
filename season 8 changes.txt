@@ -24,7 +24,10 @@ Teams
 - Death messages show teams
 - Character picks show team
 
-Hotfeet
+Phantom Mode
+- Removed invisibility and glowing phase
+
+Hotfeet Mode
 - Reach max tnt level 32% faster (~125s -> ~95s)
 
 [Character Changes]

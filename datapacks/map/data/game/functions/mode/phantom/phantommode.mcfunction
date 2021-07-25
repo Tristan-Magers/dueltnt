@@ -1,4 +1,4 @@
-scoreboard players set @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] Invis 4
+#scoreboard players set @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] Invis 4
 scoreboard players add @r[x=600,y=60,z=600,distance=3..100,gamemode=adventure] phantom 1
 execute unless entity @e[tag=powerupitem] run scoreboard players add @r[x=600,y=60,z=600,distance=3..100,gamemode=adventure] phantom 1
 execute as @a[scores={phantom=240..}] at @s run summon armor_stand ~ ~100 ~ {Marker:0,Tags:["powerupitem","new"],Small:1,Invulnerable:1,ArmorItems:[{},{},{},{id:"minecraft:carrot",Count:1b}]}
@@ -24,6 +24,6 @@ execute as @a[scores={phantomboost=0}] at @s run function game:mode/phantom/phan
 effect give @e[tag=powerupitem] glowing 10 0
 execute as @e[tag=powerupitem] at @s run function game:mode/phantom/powerupitem
 
-scoreboard players add @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] pglow 1
+#scoreboard players add @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] pglow 1
 effect give @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure,scores={pglow=160}] glowing 2
 scoreboard players set @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure,scores={pglow=200..}] pglow 0
