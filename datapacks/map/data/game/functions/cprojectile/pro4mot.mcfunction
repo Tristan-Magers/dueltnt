@@ -17,13 +17,13 @@ scoreboard players remove @s y 988
 
 scoreboard players operation @e[limit=1,tag=newtrack] vel = @s vel
 
-scoreboard players add @s vel 540
+scoreboard players add @s vel 255
 
 scoreboard players operation @s DirX *= @s vel
 scoreboard players operation @s DirZ *= @s vel
 scoreboard players operation @s y *= @s vel
 
-scoreboard players set @s vel 3000
+scoreboard players set @s vel 2000
 
 scoreboard players operation @s DirX /= @s vel
 scoreboard players operation @s DirZ /= @s vel

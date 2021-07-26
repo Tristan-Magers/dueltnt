@@ -1,4 +1,9 @@
 scoreboard players add @s timer 1
+
+execute as @s[scores={timer=1}] at @s run playsound minecraft:item.trident.riptide_3 master @a ~ ~ ~ 1 1.8
+execute as @s[scores={timer=1}] at @s run playsound minecraft:item.trident.riptide_3 master @a ~ ~ ~ 0.4 0.5
+#execute as @s[scores={timer=1}] at @s run playsound minecraft:item.trident.thunder master @a ~ ~ ~ 0.3 0.7
+
 execute as @s[scores={timer=1}] at @s run summon tnt ~ ~23 ~ {Fuse:20,Motion:[0.0,-0.9,0.0]}
 execute as @s[scores={timer=11}] at @s run summon tnt ~ ~23 ~ {Fuse:20,Motion:[0.0,-0.9,0.0]}
 execute as @s[scores={timer=21}] at @s run summon tnt ~ ~23 ~ {Fuse:20,Motion:[0.0,-0.9,0.0]}

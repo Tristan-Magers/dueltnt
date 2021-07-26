@@ -27,6 +27,11 @@ scoreboard players operation @s[tag=delayT] frostT -= @s frostsize
 tag @s[tag=delayT] add delay
 tag @s remove delayT
 
+execute as @s[scores={frostT=100}] at @s run playsound minecraft:entity.vex.hurt master @a ~ ~ ~ 1 0
+execute as @s[scores={frostT=100}] at @s run playsound minecraft:entity.zombie_villager.converted master @a ~ ~ ~ 0.2 2
+execute as @s[scores={frostT=100}] at @s run playsound minecraft:block.glass.break master @a ~ ~ ~ 1 0.7
+execute as @s[scores={frostT=100}] at @s run playsound minecraft:block.amethyst_cluster.break master @a ~ ~ ~ 1 0
+
 execute as @s[scores={frostT=100,frostsize=1..}] at @s run fill ~ ~-1 ~ ~ ~-1 ~ air replace packed_ice
 execute as @s[scores={frostT=101,frostsize=3..}] at @s run fill ~ ~-1 ~1 ~ ~-1 ~-1 air replace packed_ice
 execute as @s[scores={frostT=102,frostsize=5..}] at @s run fill ~1 ~-1 ~ ~-1 ~-1 ~ air replace packed_ice

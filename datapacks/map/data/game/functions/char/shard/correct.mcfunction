@@ -1,4 +1,4 @@
-item replace entity @s[scores={nobow=3..}] hotbar.0 with bow{Damage:20,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§9Frost Bow§r : Throw to switch\"}"}}
+item replace entity @s[scores={nobow=3..}] hotbar.0 with bow{Damage:260,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§9Anti-Ice§r : Throw to switch\"}"}}
 
 clear @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:white_dye",Slot:4b}]}] white_dye
 item replace entity @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:white_dye",Slot:4b}]},scores={floatuse=0}] hotbar.4 with minecraft:white_dye{display:{Name:"{\"italic\":false,\"text\":\"§6Float §f§r: Right-click\"}"}} 3
@@ -6,7 +6,8 @@ item replace entity @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"min
 item replace entity @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:white_dye",Slot:4b}]},scores={floatuse=2}] hotbar.4 with minecraft:white_dye{display:{Name:"{\"italic\":false,\"text\":\"§6Float §f§r: Right-click\"}"}} 1
 
 clear @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:yellow_dye",Slot:1b}]},nbt=!{Inventory:[{id:"minecraft:egg",Slot:1b}]}] egg
-scoreboard players set @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:yellow_dye",Slot:1b}]},nbt=!{Inventory:[{id:"minecraft:egg",Slot:1b}]},scores={snowmanT=..-10,eggtimer=..-1}] snowmanT 2
+clear @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:yellow_dye",Slot:1b}]},nbt=!{Inventory:[{id:"minecraft:egg",Slot:1b}]}] yellow_dye
+scoreboard players set @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:yellow_dye",Slot:1b}]},nbt=!{Inventory:[{id:"minecraft:egg",Slot:1b}]},scores={snowmanT=..-10,eggtimer=..-1}] snowmanT 20
 
 clear @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:trident",Slot:2b}]}] trident
 scoreboard players set @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:trident",Slot:2b}]},scores={tridentT=..0}] tridentT 2

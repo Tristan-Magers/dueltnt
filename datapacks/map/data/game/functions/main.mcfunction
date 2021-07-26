@@ -39,7 +39,7 @@ effect clear @a minecraft:absorption
 tp @a[x=322,y=3,z=450,distance=..10,gamemode=adventure] 485 50 473
 
 execute as @a[scores={leavetext=1..}] at @s run function game:killender
-execute as @a[scores={leavetext=1..}] at @s run tellraw @a [{"selector":"@p"},{"text":" left the arena","color":"white"}]
+execute as @a[scores={leavetext=1..}] at @s run tellraw @a [{"selector":"@s"},{"text":" left the arena","color":"white"}]
 scoreboard players reset @a[scores={leavetext=1..}] leavetext
 
 scoreboard players add @r[tag=randclass] randclass 1
@@ -367,11 +367,11 @@ execute if entity @e[name=Map,type=armor_stand,scores={Time=15}] run title @a[x=
 execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure,scores={teamed=..0}] at @s run scoreboard players operation @s l = @s Lives
 
 #Team Lives
-execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=red,scores={teamed=1..}] run scoreboard players set §cRED_LIVES l 0
-execute as @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=red,scores={teamed=1..}] run scoreboard players operation §cRED_LIVES l += @s Lives
+execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=red,scores={teamed=1..}] run scoreboard players set §cRED l 0
+execute as @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=red,scores={teamed=1..}] run scoreboard players operation §cRED l += @s Lives
 
-execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=blue,scores={teamed=1..}] run scoreboard players set §bBLUE_LIVES l 0
-execute as @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=blue,scores={teamed=1..}] run scoreboard players operation §bBLUE_LIVES l += @s Lives
+execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=blue,scores={teamed=1..}] run scoreboard players set §bBLUE l 0
+execute as @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=blue,scores={teamed=1..}] run scoreboard players operation §bBLUE l += @s Lives
 
-execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run scoreboard players set §aGREEN_LIVES l 0
-execute as @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run scoreboard players operation §aGREEN_LIVES l += @s Lives
+execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run scoreboard players set §aGREEN l 0
+execute as @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run scoreboard players operation §aGREEN l += @s Lives

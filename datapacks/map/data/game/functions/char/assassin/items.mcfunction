@@ -51,4 +51,5 @@ item replace entity @s[scores={FZtimer=1}] hotbar.3 with diamond{display:{Name:"
 execute as @s[scores={FZtimer=169}] at @s run particle dripping_water ~ ~ ~ 2 2 2 0 250 force @a
 execute as @s[scores={FZtimer=169}] at @s run scoreboard players set @p[distance=..2] frozen 0
 execute as @s[scores={FZtimer=169}] at @s run effect give @p minecraft:levitation 2
+execute as @s[scores={FZtimer=169}] at @s run effect give @p minecraft:speed 2 2 true
 execute as @s[scores={FZtimer=169}] at @s run scoreboard players set @s nolev 28

@@ -9,10 +9,9 @@ scoreboard players add @s slimeegguse 1
 
 playsound minecraft:entity.skeleton.shoot master @a ~ ~ ~ 1 0
 #playsound minecraft:entity.skeleton.hurt master @a ~ ~ ~ 1 0
-playsound minecraft:entity.creeper.death master @a ~ ~ ~ 1 2
-playsound minecraft:entity.creeper.death master @a ~ ~ ~ 1 0
+playsound minecraft:entity.slime.squish master @a ~ ~ ~ 1 1.4
+playsound minecraft:entity.slime.squish_small master @a ~ ~ ~ 1 1.3
 playsound minecraft:block.composter.empty master @a ~ ~ ~ 1 0
 playsound minecraft:block.gravel.place master @a ~ ~ ~ 1 1
 playsound minecraft:entity.item.pickup master @a ~ ~ ~ 1 0
 playsound minecraft:entity.item.pickup master @a ~ ~ ~ 1 1
-playsound minecraft:entity.creeper.primed master @a ~ ~ ~ 1 0.8
