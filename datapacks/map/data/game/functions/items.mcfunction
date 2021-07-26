@@ -335,7 +335,7 @@ execute as @a[gamemode=adventure,scores={vortextime=300}] at @s run playsound mi
 clear @a[gamemode=adventure,x=600,y=60,z=600,distance=..90,scores={click=1..},nbt={SelectedItem:{id:"minecraft:clay_ball"}}] clay_ball
 
 # platform
-scoreboard players set @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] PlatTimer 280
+scoreboard players set @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] PlatTimer 270
 
 execute as @a[gamemode=adventure,scores={click=1..,platUse=3},nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Platform","color":"red","bold":"true"},{"text":" (3 Remaining) ","color":"white"}]
 execute as @a[gamemode=adventure,scores={click=1..,platUse=2},nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Platform","color":"red","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
@@ -344,13 +344,13 @@ execute as @a[gamemode=adventure,scores={click=1..,platUse=0},nbt={SelectedItem:
 
 scoreboard players remove @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1}] platUse 1
 
-execute as @a[gamemode=adventure,scores={PlatTimer=279}] at @s run tp @s @s
+execute as @a[gamemode=adventure,scores={PlatTimer=269}] at @s run tp @s @s
 
 clear @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] diamond_sword
-execute as @a[gamemode=adventure,scores={PlatTimer=280}] at @s positioned ~ ~-.1 ~ run playsound minecraft:item.armor.equip_iron master @a ~ ~ ~ .7 1
+execute as @a[gamemode=adventure,scores={PlatTimer=270}] at @s positioned ~ ~-.1 ~ run playsound minecraft:item.armor.equip_iron master @a ~ ~ ~ .7 1
 scoreboard players remove @a[gamemode=adventure,scores={PlatTimer=1..}] PlatTimer 1
 execute as @a[gamemode=adventure,scores={platAm=1}] at @s positioned ~ ~-.1 ~ run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 white_stained_glass replace air
-execute as @a[gamemode=adventure,scores={PlatTimer=279}] at @s positioned ~ ~-.1 ~ run scoreboard players set @s platAm 6
+execute as @a[gamemode=adventure,scores={PlatTimer=269}] at @s positioned ~ ~-.1 ~ run scoreboard players set @s platAm 6
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=4}] hotbar.3 with diamond_sword{Damage:100,display:{Name:"{\"italic\":false,\"text\":\"Temporary Platform §r: Right-click\"}"}}
 scoreboard players add @e[name=SP] PlatTimer 1
 execute as @e[name=SP,scores={PlatTimer=50..}] at @s run fill ~1 ~ ~1 ~-1 ~ ~-1 air replace white_stained_glass
@@ -363,8 +363,7 @@ execute as @a[gamemode=adventure,scores={platAm=6}] at @s run playsound minecraf
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=3}] hotbar.3 with diamond_sword{Damage:390,display:{Name:"{\"italic\":false,\"text\":\"Temporary Platform §r: Right-click\"}"}}
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=2}] hotbar.3 with diamond_sword{Damage:780,display:{Name:"{\"italic\":false,\"text\":\"Temporary Platform §r: Right-click\"}"}}
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=1}] hotbar.3 with diamond_sword{Damage:1170,display:{Name:"{\"italic\":false,\"text\":\"Temporary Platform §r: Right-click\"}"}}
-
-
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=2,platUse=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Reloaded ","color":"white"},{"text":"Platform","color":"red","bold":"true"},{"text":"","color":"white"}]
 
 # tnt egg
 execute as @e[name=tnt] at @s run summon tnt ~ ~.6 ~ {Fuse:4}

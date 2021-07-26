@@ -63,11 +63,12 @@ Ghost
 
 Trapper
 - Fast Arrows have particle trail
-- Fast Arrows go 20% slower (+100% -> +80%)
+- Fast Arrows go 20% slower (+100% -> +60%)
 - Fast Trap resets entire bow reload countdown
-- Fast Trap causes first arrow to reload .35s slower (2.6s)
+- Fast Trap causes first arrow to reload .2s slower (2.45s)
 - Platform stops your motion
-- Platform reloads 8s slower (6s -> 14s)
+- Platform reloads 7.5s slower (6s -> 13.5s)
+- Spectators told when platform reloads
 - Track Bomb glows
 - Track Bomb only tracks players within 20 bocks
 
