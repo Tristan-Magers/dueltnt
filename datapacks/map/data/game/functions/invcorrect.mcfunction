@@ -1,5 +1,5 @@
 clear @a[nbt=!{Inventory:[{id:"minecraft:potion",Slot:8b}]},x=620,y=20,z=620,distance=3..100] potion
-replaceitem entity @a[nbt=!{Inventory:[{id:"minecraft:potion",Slot:8b}]},x=620,y=20,z=620,distance=3..100] hotbar.8 minecraft:potion{display:{Name:"{\"italic\":false,\"text\":\"§dLeave game §r: Right-click\"}"}}
+item replace entity @a[nbt=!{Inventory:[{id:"minecraft:potion",Slot:8b}]},x=620,y=20,z=620,distance=3..100] hotbar.8 with minecraft:potion{display:{Name:"{\"italic\":false,\"text\":\"§dLeave game §r: Right-click\"}"}}
 
 tag @s remove hasbow
 tag @s remove haspup
@@ -28,27 +28,16 @@ scoreboard players set @s[tag=arrow,scores={bow=..0}] bow 1
 
 clear @s[scores={nobow=3..}] bow
 
-execute as @s[scores={class=0}] at @s run function game:solcorrect
-execute as @s[scores={class=1}] at @s run function game:asscorrect
-execute as @s[scores={class=2}] at @s run function game:ghostcorrect
-execute as @s[scores={class=3}] at @s run function game:trapcorrect
-execute as @s[scores={class=4}] at @s run function game:wizcorrect
-execute as @s[scores={class=5}] at @s run function game:madcorrect
-execute as @s[scores={class=6}] at @s run function game:reapercorrect
-execute as @s[scores={class=7}] at @s run function game:echocorrect
+execute as @s[scores={class=0}] at @s run function game:char/soldier/correct
+execute as @s[scores={class=1}] at @s run function game:char/assassin/correct
+execute as @s[scores={class=2}] at @s run function game:char/ghost/correct
+execute as @s[scores={class=3}] at @s run function game:char/trapper/correct
+execute as @s[scores={class=4}] at @s run function game:char/wizard/correct
+execute as @s[scores={class=5}] at @s run function game:char/mads/correct
+execute as @s[scores={class=6}] at @s run function game:char/reaper/correct
+execute as @s[scores={class=7}] at @s run function game:char/echo/correct
+execute as @s[scores={class=9}] at @s run function game:char/overlord/correct
+execute as @s[scores={class=10}] at @s run function game:char/shard/correct
 
-execute unless entity @e[scores={mode=1}] run replaceitem entity @s[scores={nobow=3..,class=8}] hotbar.0 minecraft:bow{Damage:220,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§6Blast Jumper §r : Throw to switch\"}"},Enchantments:[{id:punch,lvl:2}]}
-execute if entity @e[scores={mode=1}] run replaceitem entity @s[scores={nobow=3..,class=8}] hotbar.0 minecraft:bow{Damage:220,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§6Blast Jumper §r : Throw to switch\"}"},Enchantments:[{id:punch,lvl:3}]}
-
-tag @s remove hasshov
-tag @s[scores={class=9},nbt={Inventory:[{id:"minecraft:wooden_pickaxe"}]}] add hasshov
-tag @s[scores={class=9},nbt={Inventory:[{id:"minecraft:stone_pickaxe"}]}] add hasshov
-tag @s[scores={class=9},nbt={Inventory:[{id:"minecraft:iron_pickaxe"}]}] add hasshov
-tag @s[scores={class=9},nbt={Inventory:[{id:"minecraft:golden_pickaxe"}]}] add hasshov
-tag @s[scores={class=9},nbt={Inventory:[{id:"minecraft:diamond_pickaxe"}]}] add hasshov
-clear @s[scores={class=9,masterc=..24},tag=!hasshov] wooden_pickaxe
-clear @s[scores={class=9,masterc=..24},tag=!hasshov] stone_pickaxe
-clear @s[scores={class=9,masterc=..24},tag=!hasshov] iron_pickaxe
-clear @s[scores={class=9,masterc=..24},tag=!hasshov] golden_pickaxe
-clear @s[scores={class=9,masterc=..24},tag=!hasshov] diamond_pickaxe
-execute as @s[scores={class=9,masterc=..24},tag=!hasshov] at @s run function items:masterwanduse
+execute unless entity @e[scores={mode=1}] run item replace entity @s[scores={nobow=3..,class=8}] hotbar.0 with minecraft:bow{Damage:220,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§6Blast Jumper §r : Throw to switch\"}"},Enchantments:[{id:punch,lvl:2}]}
+execute if entity @e[scores={mode=1}] run item replace entity @s[scores={nobow=3..,class=8}] hotbar.0 with minecraft:bow{Damage:220,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§6Blast Jumper §r : Throw to switch\"}"},Enchantments:[{id:punch,lvl:3}]}

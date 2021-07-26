@@ -9,6 +9,7 @@ execute as @s[scores={class=3}] at @s run playsound minecraft:entity.tnt.primed 
 execute as @s[scores={class=3}] at @s run summon tnt ~ ~.5 ~ {Fuse:5}
 execute as @s[scores={class=3}] at @s run effect give @p speed 1 1
 execute as @s[scores={class=2}] at @s run effect give @s levitation 1 8
+execute as @s[scores={class=2}] at @s run scoreboard players set @s nolev -10
 #execute as @s[scores={class=2}] at @s run scoreboard players set @s ghostshift 20
 
 execute unless entity @e[scores={mode=1}] run execute as @s[scores={class=1}] at @s run effect give @s jump_boost 3 4
@@ -24,10 +25,10 @@ scoreboard players add @s overlordsc 1
 
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=0,timer=1}] 17 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=1,timer=1}] 88 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=2,timer=1}] 80 levels
+execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=2,timer=1}] 73 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=3,timer=1}] 80 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=4,timer=1}] 150 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=6,timer=1}] 190 levels
+execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=4,timer=1}] 135 levels
+execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=6,timer=1}] 160 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=7,timer=1}] 160 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=9,timer=1}] -1 levels
 
@@ -38,8 +39,12 @@ execute if entity @e[scores={mode=1}] run xp add @s[scores={class=3,timer=1}] 30
 execute if entity @e[scores={mode=1}] run xp add @s[scores={class=4,timer=1}] 100 levels
 execute if entity @e[scores={mode=1}] run xp add @s[scores={class=6,timer=1}] 140 levels
 execute if entity @e[scores={mode=1}] run xp add @s[scores={class=7,timer=1}] 130 levels
-execute if entity @e[scores={mode=1}] run xp add @s[scores={class=9,timer=1}] 240 levels
+execute if entity @e[scores={mode=1}] run xp add @s[scores={class=9,timer=1}] -1 levels
 
+#reaper
+execute as @s[scores={class=6}] at @s run effect give @s slow_falling 1 1 true
+
+#echo
 execute as @s[scores={class=7}] at @s run effect give @s slow_falling 3 1
 execute as @s[scores={class=7}] at @s run effect give @s speed 3 3
 
@@ -65,7 +70,7 @@ execute as @s[scores={class=9}] at @s run playsound minecraft:block.grass.place 
 #execute as @s[scores={class=9}] at @s run execute as @e[type=tnt,limit=2,sort=nearest] at @s run function game:gridpos
 
 #scoreboard players add @a[scores={class=9}] masterb 3
-#execute as @s[scores={class=9}] at @s run function items:masterwandget
+#execute as @s[scores={class=9}] at @s run function game:char/overlord/masterwandget
 
 execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run summon tnt ~ ~ ~ {Fuse:16}
 execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run summon tnt ~ ~ ~ {Fuse:16}
@@ -74,3 +79,10 @@ execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s 
 execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run effect give @s slow_falling 2 2
 
 xp add @s[scores={class=8,timer=1}] 45 levels
+
+execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {Fuse:3}
+execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {Fuse:3}
+
+execute as @s[scores={class=10}] at @s run effect give @s levitation 1 3
+
+xp add @s[scores={class=10,timer=1}] 60 levels

@@ -1,0 +1,12 @@
+advancement grant @a[scores={survival=4000..}] only survival:warrior
+advancement grant @a[scores={survival=4000..,class=0}] only survival:wclass0
+advancement grant @a[scores={survival=4000..,class=1}] only survival:wclass1
+advancement grant @a[scores={survival=4000..,class=2}] only survival:wclass2
+advancement grant @a[scores={survival=4000..,class=3}] only survival:wclass3
+advancement grant @a[scores={survival=4000..,class=4}] only survival:wclass4
+advancement grant @a[scores={survival=4000..,class=5}] only survival:wclass5
+advancement grant @a[scores={survival=4000..,class=6}] only survival:wclass6
+advancement grant @a[scores={survival=4000..,class=7}] only survival:wclass7
+advancement grant @a[scores={survival=4000..,class=8}] only survival:wclass8
+advancement grant @a[scores={survival=4000..,class=9}] only survival:wclass9
+advancement grant @a[scores={survival=4000..,class=10}] only survival:wclass10

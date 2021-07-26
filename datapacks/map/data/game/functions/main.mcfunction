@@ -1,8 +1,28 @@
-execute as @e[type=area_effect_cloud,tag=!a,nbt={Potion:"minecraft:poison"}] at @s run function game:plaguepot
+execute as @e[type=area_effect_cloud,tag=!a,nbt={Potion:"minecraft:poison"}] at @s run function game:char/gardener/plaguepot
 execute as @e[type=area_effect_cloud,tag=!a,nbt={Potion:"minecraft:swiftness"}] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1,Marker:1,Tags:["a","airnade"]}
-kill @e[type=area_effect_cloud,tag=!a]
+kill @e[type=area_effect_cloud,tag=!a,tag=!gameae]
 
 clear @a[gamemode=spectator]
+
+#leave players
+clear @a[scores={leave=1..}]
+scoreboard players set @a[scores={leave=1..}] ingame 0
+gamemode adventure @a[scores={leave=1..}]
+tp @a[scores={leave=1..}] 500 20 500 0 0
+scoreboard players reset @a[scores={leave=1..}] leave
+
+#team join main
+execute if entity @a[team=] run scoreboard players set @a[team=] rejoin 1
+team join Main @a[team=]
+
+#tntID
+scoreboard players add @a tntID 0
+execute if entity @a[scores={tntID=..0}] run scoreboard players add M tntID 1
+execute if entity @a[scores={tntID=..0}] run scoreboard players operation @r[scores={tntID=..0}] tntID = M tntID
+
+#run game
+execute unless entity @a[x=620,y=20,z=620,distance=..100,gamemode=adventure] run function game:game/run
+execute if entity @a[x=620,y=20,z=620,distance=..100,gamemode=adventure] run scoreboard players set ArenaCheck game 0
 
 #menu push
 execute as @a[x=473.7,y=16,z=494,dz=10,dy=4] at @s run tp @s ~.1 ~ ~
@@ -18,11 +38,12 @@ effect clear @a minecraft:absorption
 
 tp @a[x=322,y=3,z=450,distance=..10,gamemode=adventure] 485 50 473
 
-execute as @a[scores={leavetext=1..}] at @s run tellraw @a [{"selector":"@p"},{"text":" left the arena","color":"white"}]
+execute as @a[scores={leavetext=1..}] at @s run function game:killender
+execute as @a[scores={leavetext=1..}] at @s run tellraw @a [{"selector":"@s"},{"text":" left the arena","color":"white"}]
 scoreboard players reset @a[scores={leavetext=1..}] leavetext
 
 scoreboard players add @r[tag=randclass] randclass 1
-scoreboard players set @a[scores={randclass=10..}] randclass 0
+scoreboard players set @a[scores={randclass=11..}] randclass 0
 
 scoreboard players set @a[x=600,y=60,z=600,distance=105..,tag=randclass] class 99
 
@@ -64,6 +85,9 @@ tp @a[gamemode=!creative,x=500,y=35,z=500,distance=..4] 500 20 500
 
 #bedremove
 scoreboard players set @e[type=tnt,x=615,y=30,z=615,distance=..90,nbt={Fuse:1s}] tntEnd 1
+execute as @e[scores={tntEnd=1..},tag=frost] at @s run summon minecraft:marker ~ ~ ~ {Tags:["frostmarker"]}
+scoreboard players add @e[tag=frostmarker] t1 1
+execute as @e[scores={t1=2..},tag=frostmarker] at @s run function game:char/shard/tntfill
 execute as @e[scores={tntEnd=1..},type=!creeper] at @s run function game:bedremove
 execute as @e[type=tnt,scores={tntEnd=1..}] at @s run fill ~ ~ ~ ~ ~ ~ air
 scoreboard players set @e[type=creeper,nbt={ignited:1b}] tntEnd 1
@@ -77,64 +101,10 @@ execute as @a[scores={kit=0..}] at @s run function game:kit
 scoreboard players set @a CPbomb 0
 scoreboard players set @a[nbt={Inventory:[{Slot:100b,id:"minecraft:golden_boots"}]}] CPbomb 1
 scoreboard players set @a[scores={CPbomb=1..}] CPtimer 140
-execute as @a[scores={CPtimer=1..,class=4}] at @s run function game:excreep
+execute as @a[scores={CPtimer=1..,class=4}] at @s run function game:char/wizard/excreep
 
 #particle
-execute as @a[scores={Invis=..0,particle=1}] at @s run particle flame ~ ~.1 ~ .3 .1 .3 .02 1 force
-execute as @a[scores={Invis=..0,particle=2,parttimer=1}] at @s positioned ~ ~.05 ~ run particle cloud ~ ~.25 ~ .14 .1 .14 0 2 force
-execute as @a[scores={Invis=..0,particle=2,parttimer=1}] at @s positioned ~ ~.05 ~ run particle spit ~ ~.25 ~ .14 .1 .14 0 1 force
-#execute as @a[scores={Invis=..0,particle=2,parttimer=1}] at @s positioned ~ ~.05 ~ run particle poof ~ ~.25 ~ .3 .1 .3 .1 1 force
-execute as @a[scores={Invis=..0,particle=2,parttimer=1}] at @s positioned ~ ~.05 ~ run particle minecraft:block snow ~ ~.3 ~ .3 .1 .3 0 2
-execute as @a[scores={Invis=..0,particle=3,parttimer=1}] at @s run particle dragon_breath ~ ~.1 ~ .5 .1 .5 .04 2 force
-execute as @a[scores={Invis=..0,particle=4}] at @s run particle enchant ~ ~.1 ~ .5 .5 .5 .1 2 force
-execute as @a[scores={Invis=..0,particle=5}] at @s run particle minecraft:dust 15277350 20 2 2 ~ ~ ~ .2 .2 .2 0 3 force
-execute as @a[scores={Invis=..0,particle=6,parttimer=1}] at @s run particle angry_villager ~ ~2.5 ~ .3 .2 .3 0 1 force
-execute as @a[scores={Invis=..0,particle=6,parttimer=1}] at @s run particle falling_water ~ ~3.1 ~ .25 .3 .25 0 1 force
-execute as @a[scores={Invis=..0,particle=7}] at @s run particle note ~ ~-.5 ~ .3 .6 .3 0 1 force
-execute as @a[scores={Invis=..0,particle=8}] at @s run particle witch ~ ~ ~ .3 .2 .3 0 1 force
-execute as @a[scores={Invis=..0,particle=8}] at @s run particle minecraft:dragon_breath ~ ~ ~ 2.5 0 2.5 .02 1 force
-execute as @a[scores={Invis=..0,particle=9}] at @s run particle end_rod ~ ~ ~ .2 .2 .2 .05 1 force
-execute as @a[scores={Invis=..0,particle=9}] at @s run particle crit ~ ~ ~ 1.5 1.5 1.5 .05 1 force
-execute as @a[scores={Invis=..0,particle=10}] at @s run particle minecraft:totem_of_undying ~ ~.5 ~ .5 1 .5 0 1 force
-execute as @a[scores={Invis=..0,particle=10}] at @s run particle minecraft:rain ~ ~.2 ~ .3 .1 .3 0 1 force
-execute as @a[scores={Invis=..0,particle=11,gpart=0..2}] at @s run particle minecraft:lava ~ ~.2 ~ .5 .1 .5 0 1 force
-execute as @a[scores={Invis=..0,particle=11,gpart=5..7}] at @s run particle minecraft:large_smoke ~ ~.2 ~ .32 .1 .32 .03 1 force
-execute as @a[scores={Invis=..0,particle=12,parttimer=1}] at @s run particle minecraft:heart ~ ~.2 ~ 0.7 0.1 0.7 0 1 force
-execute as @a[scores={Invis=..0,particle=13,parttimer=1}] at @s run particle minecraft:portal ~ ~1 ~ 1 1 1 0 2 force
-execute as @a[scores={Invis=..0,particle=13,parttimer=1,spacepart=0}] at @s run particle minecraft:end_rod ~1 ~.9 ~ .1 0 .2 0 1 force
-execute as @a[scores={Invis=..0,particle=13,parttimer=1,spacepart=1}] at @s run particle minecraft:end_rod ~-1 ~.9 ~ .1 0 .2 0 1 force
-execute as @a[scores={Invis=..0,particle=13,parttimer=1,spacepart=2}] at @s run particle minecraft:end_rod ~ ~.9 ~1 .2 0 .1 0 1 force
-execute as @a[scores={Invis=..0,particle=13,parttimer=1,spacepart=3}] at @s run particle minecraft:end_rod ~ ~.9 ~-1 .2 0 .1 0 1 force
-execute as @a[scores={Invis=..0,particle=13,parttimer=1,spacepart=4}] at @s run particle minecraft:end_rod ~.7 ~.9 ~.7 .1 0 .1 0 1 force
-execute as @a[scores={Invis=..0,particle=13,parttimer=1,spacepart=5}] at @s run particle minecraft:end_rod ~-.7 ~.9 ~.7 .1 0 .1 0 1 force
-execute as @a[scores={Invis=..0,particle=13,parttimer=1,spacepart=6}] at @s run particle minecraft:end_rod ~.7 ~.9 ~-.7 .1 0 .1 0 1 force
-execute as @a[scores={Invis=..0,particle=13,parttimer=1,spacepart=7}] at @s run particle minecraft:end_rod ~-.7 ~.9 ~-.7 .1 0 .1 0 1 force
-
-execute as @a[scores={Invis=..0,particle=14}] at @s run function game:waterpart
-
-execute as @a[scores={Invis=..0,particle=15,gpart=8..9}] at @s run particle totem_of_undying ~ ~1 ~ 1 1 1 0 1 force
-execute as @a[scores={Invis=..0,particle=15,gpart=15..16}] at @s run particle totem_of_undying ~ ~1 ~ 1 1 1 0 1 force
-execute as @a[scores={Invis=..0,particle=15,gpart=1..5}] at @s run particle enchant ~ ~1 ~ .8 .8 .8 0 2 force
-execute as @a[scores={Invis=..0,particle=15,gpart=1..2}] at @s run particle minecraft:sneeze ~ ~.3 ~ .3 .1 .3 0 1 force
-execute as @a[scores={Invis=..0,particle=15,gpart=10..12}] at @s run particle minecraft:sneeze ~ ~.3 ~ .3 .1 .3 0 1 force
-
-execute as @a[scores={Invis=..0,particle=16,parttimer=1}] at @s run particle minecraft:crimson_spore ~ ~-.5 ~ .2 .2 .2 0 2 force @a
-execute as @a[scores={Invis=..0,particle=16,parttimer=1}] at @s run particle minecraft:smoke ~ ~.22 ~ .4 0 .4 0 3 force @a
-
-execute as @a[scores={Invis=..0,particle=17,gpart=4..7}] at @s run particle minecraft:soul_fire_flame ~ ~.2 ~ .4 .1 .4 0 1 force @a
-execute as @a[scores={Invis=..0,particle=17,gpart=14..17}] at @s run particle minecraft:soul_fire_flame ~ ~.2 ~ .4 .1 .4 0 1 force @a
-execute as @a[scores={Invis=..0,particle=17,parttimer=1}] at @s run particle minecraft:white_ash ~ ~1 ~ .4 .5 .4 0 2 force @a
-execute as @a[scores={Invis=..0,particle=17,gpart=1}] at @s run particle minecraft:soul ~ ~.4 ~ .4 .2 .4 0 1 force @a
-execute as @a[scores={Invis=..0,particle=17,gpart=10}] at @s run particle minecraft:soul ~ ~.4 ~ .4 .2 .4 0 1 force @a
-
-scoreboard players add @a[scores={Invis=..0}] gpart 1
-scoreboard players set @a[scores={gpart=20..}] gpart 0
-
-scoreboard players add @a[scores={Invis=..0,particle=13,parttimer=1}] spacepart 1
-scoreboard players set @a[scores={spacepart=8..}] spacepart 0
-
-scoreboard players add @a parttimer 1
-scoreboard players set @a[scores={parttimer=4..}] parttimer 1
+execute as @a[scores={Invis=..0,particle=1..}] at @s run function game:player/particle
 
 #misc
 kill @e[x=595,z=595,y=-10,dx=45,dz=45,dy=10,distance=..1000,type=fireball]
@@ -197,38 +167,20 @@ scoreboard players set @a[gamemode=spectator] Y 45
 scoreboard players set @a[x=600,y=60,z=600,distance=..3] Y 45
 
 #respawn
-execute as @a[scores={Y=..0},x=620,y=20,z=620,distance=..100] at @s run particle explosion_emitter ~ 1 ~ 1 3 1 1 20
-execute as @a[scores={Lives=7,Y=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a ["",{"selector":"@p[scores={Y=..0,Lives=7}]"},{"text":" fell!","color":"white"},{"text":" 6 ","color":"dark_aqua","bold":true},{"text":"lives remaining","color":"none","bold":false}]
-execute as @a[scores={Lives=6,Y=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a ["",{"selector":"@p[scores={Y=..0,Lives=6}]"},{"text":" fell!","color":"white"},{"text":" 5 ","color":"blue","bold":true},{"text":"lives remaining","color":"none","bold":false}]
-execute as @a[scores={Lives=5,Y=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a ["",{"selector":"@p[scores={Y=..0,Lives=5}]"},{"text":" fell!","color":"white"},{"text":" 4 ","color":"dark_green","bold":true},{"text":"lives remaining","color":"none","bold":false}]
-execute as @a[scores={Lives=4,Y=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a ["",{"selector":"@p[scores={Y=..0,Lives=4}]"},{"text":" fell!","color":"white"},{"text":" 3 ","color":"gold","bold":true},{"text":"lives remaining","color":"none","bold":false}]
-execute as @a[scores={Lives=3,Y=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a ["",{"selector":"@p[scores={Y=..0,Lives=3}]"},{"text":" fell!","color":"white"},{"text":" 2 ","color":"red","bold":true},{"text":"lives remaining","color":"none","bold":false}]
-execute as @a[scores={Lives=2,Y=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a ["",{"selector":"@p[scores={Y=..0,Lives=2}]"},{"text":" fell!","color":"white"},{"text":" 1 ","color":"dark_red","bold":true},{"text":"life remaining","color":"none","bold":false}]
-scoreboard players remove @a[scores={Lives=-10..,Y=..0}] Lives 1
-execute as @a[scores={Lives=1..,Y=..0}] at @s run summon armor_stand ~ 44 ~ {NoGravity:1,Invlunerable:1,Marker:1,CustomName:"{\"italic\":false,\"text\":\"SP\"}",Invisible:1}
-execute as @a[scores={Lives=1..,Y=..0}] at @s run function game:killender
-execute as @a[scores={Lives=1..,Y=..0}] at @s run tp @s ~ 45 ~
-execute as @a[scores={Y=..0},x=620,y=20,z=620,distance=..100] at @s run execute as @a[distance=..100] at @s run playsound minecraft:entity.wither.hurt master @s ~ ~ ~ 1 1.5
-#execute as @a[scores={Lives=1..,Y=..0}] at @s run scoreboard players set @s Y 45
-effect clear @a[scores={Y=..0}] blindness
-effect clear @a[scores={Y=..0}] poison
-scoreboard players set @a[scores={Y=..0}] fall 3
-scoreboard players set @a[scores={Y=..0}] platAm -100
-execute as @a[scores={Lives=1..,Y=..0}] at @s positioned ~ ~-1 ~ run fill ~1 44 ~1 ~-1 44 ~-1 white_stained_glass replace air
-#execute as @a[scores={Lives=1..,Y=..0}] at @s run tp @s ~ 999 ~
-#scoreboard players remove @a[scores={Lives=1..,Y=..0}] Lives 1
+effect give @a resistance 1000000 4 true
 
-execute as @a[scores={Lives=-8,Y=..0}] at @s run gamemode spectator
-execute as @a[scores={Lives=-8,Y=..0}] at @s run scoreboard players set @s Lives 1
+execute as @a[scores={Y=..0}] at @s run function game:player/respawn
 
-scoreboard players set @a[scores={Lives=1..,Y=..0}] Y 45
 scoreboard players add @a[scores={rejoin=1..}] timer 0
-#scoreboard players add @a[scores={rejoin=1..}] Y 0
 effect give @a[scores={rejoin=1..}] resistance 1000000 255 true
 effect give @a[scores={rejoin=1..}] saturation 1000000 255 true
-execute as @a[scores={Y=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a [{"selector":"@p[scores={Y=..0}]"},{"text":" died!","color":"green"}]
+execute as @a[scores={Y=..0,teamed=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a [{"selector":"@p[scores={Y=..0}]"},{"text":" died!","color":"green"}]
+
+execute as @a[scores={Y=..0,teamed=1..},tag=red,x=620,y=20,z=620,distance=..100] at @s run tellraw @a [{"text":"[","color":"white"},{"text":"RED","color":"red"},{"text":"] ","color":"white"},{"selector":"@p[scores={Y=..0}]"},{"text":" died!","color":"green"}]
+execute as @a[scores={Y=..0,teamed=1..},tag=blue,x=620,y=20,z=620,distance=..100] at @s run tellraw @a [{"text":"[","color":"white"},{"text":"BLUE","color":"aqua"},{"text":"] ","color":"white"},{"selector":"@p[scores={Y=..0}]"},{"text":" died!","color":"green"}]
+execute as @a[scores={Y=..0,teamed=1..},tag=green,x=620,y=20,z=620,distance=..100] at @s run tellraw @a [{"text":"[","color":"white"},{"text":"GREEN","color":"green"},{"text":"] ","color":"white"},{"selector":"@p[scores={Y=..0}]"},{"text":" died!","color":"green"}]
+
 tp @a[scores={rejoin=1..,inarena=..0}] 500 20.5 500 0 0
-#scoreboard players reset @a[scores={bow_min=1,scores={rejoin=1..}] bow
 scoreboard players add @a[scores={rejoin=1..}] class 0
 gamemode spectator @a[scores={Y=..0,inarena=1..}]
 tp @a[scores={Y=..0,inarena=1..}] 614 40 614
@@ -244,45 +196,46 @@ execute as @e[type=armor_stand,tag=stnt] at @s run tag @e[type=tnt,tag=!tnt,dist
 execute as @e[tag=timer,scores={timer=1}] at @s run function game:tntblow
 
 # armor
-replaceitem entity @a[gamemode=adventure,scores={Invis=2..}] armor.chest minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=2,ingame=1..,Invis=0..1},x=620,y=20,z=620,distance=..500] armor.chest minecraft:diamond_chestplate{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=0,ingame=1..,Invis=0..1},x=620,y=20,z=620,distance=..500] armor.chest minecraft:iron_chestplate{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=1,ingame=1..,Invis=0..1},x=620,y=20,z=620,distance=..500] armor.chest minecraft:golden_chestplate{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={Invis=2..}] armor.head minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=3,teamed=..0,Invis=0..1},x=620,y=20,z=620,distance=..500] armor.head minecraft:leather_helmet{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,tag=red,x=620,y=20,z=620,distance=..500,scores={teamed=1..,Invis=0..1,ingame=1..}] armor.head red_stained_glass{ench:[{id:10,lvl:1}]}
-replaceitem entity @a[gamemode=adventure,tag=green,x=620,y=20,z=620,distance=..500,scores={teamed=1..,Invis=0..1,ingame=1..}] armor.head green_stained_glass{ench:[{id:10,lvl:1}]}
-replaceitem entity @a[gamemode=adventure,tag=blue,x=620,y=20,z=620,distance=..500,scores={teamed=1..,Invis=0..1,ingame=1..}] armor.head blue_stained_glass{ench:[{id:10,lvl:1}]}
-replaceitem entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={class=0..2,teamed=..0}] armor.head minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={ingame=..0}] armor.head minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=3,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest minecraft:leather_chestplate{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=4,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest minecraft:chainmail_chestplate{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={ingame=..0}] armor.chest minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={class=4,teamed=..0}] armor.head minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=6,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest minecraft:netherite_chestplate
-replaceitem entity @a[gamemode=adventure,x=620,y=20,z=620,distance=..500,scores={class=5,teamed=..0,Invis=0..1}] armor.head minecraft:diamond_helmet{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={class=5..6,ingame=..0}] armor.head minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=4,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest minecraft:chainmail_chestplate{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=7,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.legs minecraft:golden_leggings{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=7,Invis=0..1,ingame=0},x=620,y=20,z=620,distance=..500] armor.legs minecraft:air
-replaceitem entity @a[gamemode=adventure,scores={class=5,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=7..,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=6..7,teamed=..0,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.head minecraft:air{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=8,teamed=..0,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.head minecraft:golden_helmet{Unbreakable:1}
-replaceitem entity @a[gamemode=adventure,scores={class=9,teamed=..0,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.head minecraft:chicken
-replaceitem entity @a[gamemode=adventure,scores={class=99,teamed=..0,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.head minecraft:iron_ore
+item replace entity @a[gamemode=adventure,scores={Invis=2..}] armor.chest with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=2,ingame=1..,Invis=0..1},nbt=!{Inventory:[{id:"minecraft:diamond_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:diamond_chestplate{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=0,ingame=1..,Invis=0..1},nbt=!{Inventory:[{id:"minecraft:iron_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:iron_chestplate{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=1,ingame=1..,Invis=0..1},nbt=!{Inventory:[{id:"minecraft:golden_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:golden_chestplate{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={Invis=2..}] armor.head with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=3,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:leather_helmet",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:leather_helmet{Unbreakable:1}
+item replace entity @a[gamemode=adventure,tag=red,x=620,y=20,z=620,distance=..500,nbt=!{Inventory:[{id:"minecraft:red_stained_glass",Slot:103b}]},scores={teamed=1..,Invis=0..1,ingame=1..}] armor.head with red_stained_glass{ench:[{id:10,lvl:1}]}
+item replace entity @a[gamemode=adventure,tag=green,x=620,y=20,z=620,distance=..500,nbt=!{Inventory:[{id:"minecraft:green_stained_glass",Slot:103b}]},scores={teamed=1..,Invis=0..1,ingame=1..}] armor.head with green_stained_glass{ench:[{id:10,lvl:1}]}
+item replace entity @a[gamemode=adventure,tag=blue,x=620,y=20,z=620,distance=..500,nbt=!{Inventory:[{id:"minecraft:blue_stained_glass",Slot:103b}]},scores={teamed=1..,Invis=0..1,ingame=1..}] armor.head with blue_stained_glass{ench:[{id:10,lvl:1}]}
+item replace entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={class=0..2,teamed=..0}] armor.head with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={ingame=..0}] armor.head with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=3,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:leather_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:leather_chestplate{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=4,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:chainmail_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:chainmail_chestplate{Unbreakable:1}
+item replace entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={ingame=..0}] armor.chest with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={class=4,teamed=..0}] armor.head with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=6,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:netherite_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:netherite_chestplate
+item replace entity @a[gamemode=adventure,x=620,y=20,z=620,distance=..500,nbt=!{Inventory:[{id:"minecraft:diamond_helmet",Slot:103b}]},scores={class=5,teamed=..0,Invis=0..1,ingame=1..}] armor.head with minecraft:diamond_helmet{Unbreakable:1}
+item replace entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={class=5..6,ingame=..0}] armor.head with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=4,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:chainmail_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:chainmail_chestplate{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=7,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:golden_leggings",Slot:101b}]},x=620,y=20,z=620,distance=..500] armor.legs with minecraft:golden_leggings{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=7,Invis=0..1,ingame=0},x=620,y=20,z=620,distance=..500] armor.legs with minecraft:air
+item replace entity @a[gamemode=adventure,scores={class=5,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=7..,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=6..7,teamed=..0,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.head with minecraft:air{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=8,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:golden_helmet",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:golden_helmet{Unbreakable:1}
+item replace entity @a[gamemode=adventure,scores={class=9,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:chicken",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:chicken
+item replace entity @a[gamemode=adventure,scores={class=10,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:netherite_helmet",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:netherite_helmet
+item replace entity @a[gamemode=adventure,scores={class=99,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:iron_ore",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:iron_ore
 
 #Modes
-execute if entity @e[scores={mode=1}] run function game:overpowered
+execute if entity @e[scores={mode=1}] run function game:mode/overpowered/overpowered
 
 execute if entity @e[scores={mode=2}] run scoreboard players add @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] hotfeet 1
-execute if entity @e[scores={mode=2}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure,scores={hotfeet=110}] at @s run function game:hotfeetsummon
+execute if entity @e[scores={mode=2}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure,scores={hotfeet=110}] at @s run function game:mode/hotfeet/hotfeetsummon
 execute if entity @e[scores={mode=2}] run scoreboard players add @a[scores={hotfeet=110..}] hotfeetlevel 1
-execute if entity @e[scores={mode=2}] run function game:hotfeetlevel
+execute if entity @e[scores={mode=2}] run function game:mode/hotfeet/hotfeetlevel
 
-execute if entity @e[scores={mode=3}] run function game:phantommode
+execute if entity @e[scores={mode=3}] run function game:mode/phantom/phantommode
 
-execute if entity @e[scores={mode=4}] run function game:survivalmode
+execute if entity @e[scores={mode=4}] run function game:mode/survival/survivalmode
 
 #Training Mode
 scoreboard players enable @a dummytrigger
@@ -335,5 +288,90 @@ scoreboard players set @a[scores={LobbyMusic3=40}] LobbyMusic2 0
 scoreboard players set @a[scores={LobbyMusic3=5000..}] LobbyMusic3 0
 stopsound @a[scores={LobbyMusic3=39}]
 
+#patreon
+tellraw @a[scores={patclick=1..}] ["",{"text":"Hey there! ","color":"aqua"},{"text":"I made a page where you can see all my future games and work over on Patreon. Over the past half year, I have been making Minecraft maps full time on the Minecraft Marketplace. ","color":"white","bold":false,"underlined":false,"clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"Now I want to move my effort to making games right here on Realms, with higher quality than ever, just for you guys.","color":"yellow","bold":"false","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":" If you want to see the cool games coming, or you want to support me so I can make these games, [","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"color":"blue","text":"CLICK HERE","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"] to go the page about it. Thanks :D ","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"  <3 <3 <3","color":"red"}]
+scoreboard players set @a patclick 0
+
 #clear
 clear @a[x=520,y=40,z=587,distance=..20]
+
+#manage player locations (SPECTATOR, CEILING DEATH, etc.)
+scoreboard players set @a inarena 0
+scoreboard players set @a[x=592,z=592,y=-10,dx=51,dz=51,dy=88,distance=..1000] inarena 1
+tp @a[gamemode=spectator,x=595,z=595,y=-20,dx=45,dz=45,dy=13,distance=..1000] 500 20 500
+tp @a[gamemode=spectator,scores={inarena=..0}] 500 20 500 0 0
+gamemode adventure @a[gamemode=spectator,distance=..2,x=500,y=20,z=500]
+effect give @a[x=595,z=595,y=65,dx=45,dz=45,dy=68,distance=..1000,gamemode=adventure] blindness 3
+execute as @a[x=595,z=595,y=65,dx=45,dz=45,dy=68,distance=..1000,gamemode=adventure] at @s run tp @s ~ 0 ~
+tp @a[gamemode=spectator,x=595,z=595,y=80,dx=45,dz=45,dy=14,distance=..1000] 500 20 500
+
+#running game
+function game:game/main
+
+#Game end conditions
+scoreboard players set gameCheck game 0
+execute as @a[x=620,y=20,z=620,distance=..100,gamemode=adventure,scores={teamed=..0}] at @s run scoreboard players add gameCheck game 1
+scoreboard players set playerCheck game 0
+execute as @a[scores={ingame=1..,teamed=..0}] at @s run scoreboard players add playerCheck game 1
+execute as @p[tag=blue,scores={ingame=1..,teamed=1..}] at @s run scoreboard players add playerCheck game 1
+execute as @p[tag=red,scores={ingame=1..,teamed=1..}] at @s run scoreboard players add playerCheck game 1
+execute as @p[tag=green,scores={ingame=1..,teamed=1..}] at @s run scoreboard players add playerCheck game 1
+execute as @p[x=620,y=20,z=620,distance=..100,gamemode=adventure,tag=blue,scores={teamed=1..}] at @s run scoreboard players add gameCheck game 1
+execute as @p[x=620,y=20,z=620,distance=..100,gamemode=adventure,tag=red,scores={teamed=1..}] at @s run scoreboard players add gameCheck game 1
+execute as @p[x=620,y=20,z=620,distance=..100,gamemode=adventure,tag=green,scores={teamed=1..}] at @s run scoreboard players add gameCheck game 1
+scoreboard players operation @e[name=Map,type=armor_stand] gameCheck = gameCheck game
+scoreboard players operation @e[name=Map,type=armor_stand] playerCheck = playerCheck game
+execute if entity @e[name=Map,type=armor_stand,scores={gameCheck=0}] if entity @e[name=Map,type=armor_stand,scores={playerCheck=1}] run tag @e[name=Map,type=armor_stand,limit=1] add start
+execute if entity @e[name=Map,type=armor_stand,scores={gameCheck=0..1}] if entity @e[name=Map,type=armor_stand,scores={playerCheck=2..100}] run tag @e[name=Map,type=armor_stand,limit=1] add start
+execute if entity @e[name=Map,type=armor_stand,scores={gameCheck=2..100}] run tag @e[name=Map,type=armor_stand,limit=1] remove start
+execute if entity @e[name=Map,type=armor_stand,scores={gameCheck=1}] if entity @e[name=Map,type=armor_stand,scores={playerCheck=1}] run tag @e[name=Map,type=armor_stand,limit=1] remove start
+execute if entity @e[name=Map,type=armor_stand,scores={gameCheck=0}] if entity @e[name=Map,type=armor_stand,scores={playerCheck=0}] run tag @e[name=Map,type=armor_stand,limit=1] add start
+
+execute as @e[name=Map,type=armor_stand,limit=1,tag=start,tag=!startt] at @s run function game:game/roundend
+
+tag @e[name=Map,type=armor_stand,limit=1,tag=start] add startt
+tag @e[name=Map,type=armor_stand,limit=1,tag=!start] remove startt
+
+#New Player
+scoreboard players add @a NewPlay 1
+tag @a[scores={NewPlay=2}] add blue
+scoreboard players set @a[scores={NewPlay=2}] class 1
+scoreboard players set @a[scores={NewPlay=2}] Invis 0
+tp @a[scores={NewPlay=1..40}] 14 4 1
+scoreboard players set @a[scores={NewPlay=1..2}] ingame 0
+scoreboard players set @a[scores={NewPlay=2}] tntID 0
+clear @a[scores={NewPlay=2..4}] red_concrete_powder
+clear @a[scores={NewPlay=2..4}] green_concrete_powder
+gamemode adventure @a[scores={NewPlay=2..8}]
+
+#Tutorial
+effect give @a[x=14,y=4,z=1,distance=..2] blindness 2 99 true
+scoreboard players add @a[x=14,y=4,z=1,distance=..2] tutorial 1
+scoreboard players set @a[x=500,y=20,z=500,distance=..20] tutorial 0
+effect give @a[x=14,y=4,z=1,distance=..2] jump_boost 2 200 true
+scoreboard players set @a[x=14,y=4,z=1,distance=..2] Invis 3
+
+#Timer
+scoreboard players operation @e[name=Map,type=armor_stand] Time = Time game
+execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run scoreboard players remove Time game 1
+execute if entity @e[name=Map,type=armor_stand,scores={Time=600}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"30 seconds","color":"dark_red","bold":"false"}]
+execute if entity @e[name=Map,type=armor_stand,scores={Time=1}] run gamemode spectator @a[x=620,y=20,z=620,distance=..100]
+
+scoreboard players operation TimeReal game = Time game
+scoreboard players operation TimeReal game /= 20 game
+execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run scoreboard players operation Time l = TimeReal game
+
+execute if entity @e[name=Map,type=armor_stand,scores={Time=580}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"","color":"dark_red","bold":"false"}]
+
+execute if entity @e[name=Map,type=armor_stand,scores={Time=15}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"TIMES OUT","color":"dark_red","bold":"false"}]
+execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure,scores={teamed=..0}] at @s run scoreboard players operation @s l = @s Lives
+
+#Team Lives
+execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=red,scores={teamed=1..}] run scoreboard players set §cRED l 0
+execute as @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=red,scores={teamed=1..}] run scoreboard players operation §cRED l += @s Lives
+
+execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=blue,scores={teamed=1..}] run scoreboard players set §bBLUE l 0
+execute as @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=blue,scores={teamed=1..}] run scoreboard players operation §bBLUE l += @s Lives
+
+execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run scoreboard players set §aGREEN l 0
+execute as @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run scoreboard players operation §aGREEN l += @s Lives

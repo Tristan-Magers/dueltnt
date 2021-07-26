@@ -35,7 +35,7 @@ kill @e[tag=powerupitem]
 
 execute if entity @e[scores={mode=1}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Overpowered","color":"dark_aqua","bold":true},{"text":"] Reload times are a thing of the past. Every single item is much more powerful in this mode.","color":"reset","bold":false}]
 execute if entity @e[scores={mode=2}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Hotfeet","color":"dark_red","bold":true},{"text":"] Be careful in this mode. TNT spawns at your feet at an ever increasing pace. Don't stand still!","color":"reset","bold":false}]
-execute if entity @e[scores={mode=3}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Phantom","color":"dark_purple","bold":true},{"text":"] They will never see you coming. Duel invisibly with powerful items spawning across the map.","color":"reset","bold":false}]
+execute if entity @e[scores={mode=3}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Phantom","color":"dark_purple","bold":true},{"text":"] Sometimes you need more tools. Duel with powerful items spawning across the map.","color":"reset","bold":false}]
 execute if entity @e[scores={mode=4}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Survival","color":"dark_green","bold":true},{"text":"] Survive against hoards of enemies until time runs out. Go solo, outlive your peers, or work with a team to get through the storm. Good luck! Remember: ","color":"reset","bold":false},{"text":"Ghasts are vulnerable...and chickens aren't what they seem","bold":true},{"text":".","bold":false}]
 
 execute if entity @e[tag=Map,scores={mode=0..1}] run tellraw @a[scores={ingame=1..,playercount=1}] [{"text":"You have joined solo. Welcome to training mode.","color":"gold"}]
@@ -184,7 +184,7 @@ execute as @e[name=Map,type=armor_stand,scores={game=16}] at @s run fill 590 2 5
 clone 4 5 -16 4 5 -16 600 10 600
 setblock 600 9 600 redstone_block
 
-setblock -4 5 -20 redstone_block
+clone 4 5 -16 4 5 -16 600 10 600
 
 fill 599 59 599 601 63 601 barrier hollow
 

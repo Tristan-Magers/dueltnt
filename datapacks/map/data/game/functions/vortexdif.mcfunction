@@ -12,6 +12,7 @@ tag @e[tag=pull,scores={tntID=0}] remove pull
 scoreboard players operation @e[tag=pull] tntID += @s tntID
 
 execute as @s[scores={vortex=..100}] at @s run effect give @e[distance=..8,tag=pull] levitation 1 0
+execute as @s[scores={vortex=..100}] at @s run effect give @e[distance=..8,tag=pull] slowness 1 2
 
 execute as @e[distance=..8,tag=pull] at @s run execute store result score @s dx run data get entity @s Pos[0] 1.5
 execute as @e[distance=..8,tag=pull] at @s run execute store result score @s dy run data get entity @s Pos[1] 1.5
@@ -29,16 +30,22 @@ execute as @e[distance=..8,tag=pull] at @s run scoreboard players operation @s x
 execute as @e[distance=..8,tag=pull] at @s run scoreboard players operation @s y = @s dy
 execute as @e[distance=..8,tag=pull] at @s run scoreboard players operation @s z = @s dz
 
-scoreboard players operation @e[distance=..8,scores={dx=1..},tag=pull] x += @e[scores={vortexdisneg=..-1},limit=1] vortexdisneg
-scoreboard players operation @e[distance=..8,scores={dy=1..},tag=pull] y += @e[scores={vortexdisneg=..-1},limit=1] vortexdisneg
-scoreboard players operation @e[distance=..8,scores={dz=1..},tag=pull] z += @e[scores={vortexdisneg=..-1},limit=1] vortexdisneg
+scoreboard players operation @e[distance=..8,scores={dx=1..},tag=pull] x += @e[scores={vortexdisneg=..-1},limit=1] vortexdis
+scoreboard players operation @e[distance=..8,scores={dy=1..},tag=pull] y += @e[scores={vortexdisneg=..-1},limit=1] vortexdis
+scoreboard players operation @e[distance=..8,scores={dz=1..},tag=pull] z += @e[scores={vortexdisneg=..-1},limit=1] vortexdis
 
-scoreboard players operation @e[distance=..8,scores={dx=..-1},tag=pull] x += @e[scores={vortexdis=0..},limit=1] vortexdis
-scoreboard players operation @e[distance=..8,scores={dy=..-1},tag=pull] y += @e[scores={vortexdis=0..},limit=1] vortexdis
-scoreboard players operation @e[distance=..8,scores={dz=..-1},tag=pull] z += @e[scores={vortexdis=0..},limit=1] vortexdis
+scoreboard players operation @e[distance=..8,scores={dx=..-1},tag=pull] x += @e[scores={vortexdis=0..},limit=1] vortexdisneg
+scoreboard players operation @e[distance=..8,scores={dy=..-1},tag=pull] y += @e[scores={vortexdis=0..},limit=1] vortexdisneg
+scoreboard players operation @e[distance=..8,scores={dz=..-1},tag=pull] z += @e[scores={vortexdis=0..},limit=1] vortexdisneg
+
+scoreboard players set mnegone game -1
+
+execute as @e[distance=..8,tag=pull] at @s run scoreboard players operation @s x *= mnegone game
+execute as @e[distance=..8,tag=pull] at @s run scoreboard players operation @s y *= mnegone game
+execute as @e[distance=..8,tag=pull] at @s run scoreboard players operation @s z *= mnegone game
 
 execute as @e[distance=..8,tag=pull] at @s run scoreboard players operation @s dx = @s x
 execute as @e[distance=..8,tag=pull] at @s run scoreboard players operation @s dy = @s y
 execute as @e[distance=..8,tag=pull] at @s run scoreboard players operation @s dz = @s z
 
-execute as @e[distance=..8,tag=pull] at @s run function game:detailwall
+execute as @e[distance=..8,tag=pull] at @s run function game:physics/detailwall

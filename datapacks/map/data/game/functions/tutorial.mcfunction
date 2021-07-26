@@ -1,4 +1,5 @@
-give @a[scores={tutorial=2}] golden_apple{display:{Name:"Skip Tutorial"}}
+clear @a[scores={tutorial=30..32}]
+item replace entity @a[scores={tutorial=30..32}] hotbar.0 with golden_apple{display:{Name:"{\"italic\":false,\"text\":\"§r§6Skip Intro\"}"}}
 scoreboard players add @a[x=14,y=4,z=1,distance=..2] tutorial 1
 scoreboard players set @a[x=500,y=20,z=500,distance=..20] tutSkip 0
 tp @a[scores={tutSkip=1..}] 500 20 500

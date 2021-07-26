@@ -220,14 +220,17 @@ Echo
 *Patch 7.2 Update*
 
 [Lobby]
-- *Tournament updates
+- Added a community event area
+  - Added Pie's #3 and Pie's #6
 
 [General]
-- *Spectators get more detailed info (ex. amount of platforms left)
+- Spectators get info on important item usage
+  - Teleports, Feathers, Ground Spell, etc.
 - Spectators can fly higher and lower
 
 [Particle]
 - Improved the look of Poof
+- Added 'Overpowered'
 
 [Character Changes]
 
@@ -245,7 +248,7 @@ Soldier
 - Ender pearls reset motion on hit
 
 Assassin
-- Moved Magic Stars to second hotbar location
+- Moved Magic Stars to the second hotbar location
 - Replaced 'Primed for Death' with Explosive Darts (6 uses)
 
 Ghost

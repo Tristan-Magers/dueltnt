@@ -1,0 +1,9 @@
+execute as @s at @s if block ~ ~ ~ minecraft:light_weighted_pressure_plate[power=1] run function game:char/gardener/boosttrapactive
+execute as @s at @s positioned ~.15 ~ ~ if block ~ ~ ~ minecraft:light_weighted_pressure_plate[power=1] run function game:char/gardener/boosttrapactive
+execute as @s at @s positioned ~-.15 ~ ~ if block ~ ~ ~ minecraft:light_weighted_pressure_plate[power=1] run function game:char/gardener/boosttrapactive
+execute as @s at @s positioned ~-.15 ~ ~.15 if block ~ ~ ~ minecraft:light_weighted_pressure_plate[power=1] run function game:char/gardener/boosttrapactive
+execute as @s at @s positioned ~-.15 ~ ~-.15 if block ~ ~ ~ minecraft:light_weighted_pressure_plate[power=1] run function game:char/gardener/boosttrapactive
+execute as @s at @s positioned ~.15 ~ ~.15 if block ~ ~ ~ minecraft:light_weighted_pressure_plate[power=1] run function game:char/gardener/boosttrapactive
+execute as @s at @s positioned ~.15 ~ ~-.15 if block ~ ~ ~ minecraft:light_weighted_pressure_plate[power=1] run function game:char/gardener/boosttrapactive
+execute as @s at @s positioned ~ ~ ~.15 if block ~ ~ ~ minecraft:light_weighted_pressure_plate[power=1] run function game:char/gardener/boosttrapactive
+execute as @s at @s positioned ~ ~ ~-.15 if block ~ ~ ~ minecraft:light_weighted_pressure_plate[power=1] run function game:char/gardener/boosttrapactive
