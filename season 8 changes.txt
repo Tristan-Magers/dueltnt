@@ -87,7 +87,6 @@ Wizard
 Mad Scientist
 - Explosive Gel (bow) explodes 0.05s slower (.2s -> .25s)
 	- Same explosion height (0.53 blocks off ground)
-- Laser fires .05s slower (.65s -> .7s)
 
 Reaper
 - Dark Pillar gives .45s longer full blindness (.25s -> .7s)
@@ -116,7 +115,7 @@ Echo
 - Blast wand explodes .1s slower (.05s -> .15s)
 
 Gardener
-- Gets an extra life every 45 seconds
+- Gets an extra life every 47 seconds
 - Removed Scythe Begone (no longer needed)
 - Grave Trap always kills players
 - Starts with 6 less Grave Traps (12 -> 6) (still given by plague)
