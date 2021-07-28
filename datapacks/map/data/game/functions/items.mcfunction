@@ -51,6 +51,13 @@ execute as @a[gamemode=adventure,scores={class=3,bow=25}] at @s run playsound mi
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=3,bow=50..}] hotbar.6 with arrow 1
 execute as @a[gamemode=adventure,scores={class=3,bow=50..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
 scoreboard players set @a[gamemode=adventure,scores={class=3,bow=50..}] bow -1
+scoreboard players set @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=3},nbt={Inventory:[{id:"minecraft:arrow",Slot:5b}]}] bow2 0
+scoreboard players add @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=3},nbt=!{Inventory:[{id:"minecraft:arrow",Slot:5b}]}] bow2 1
+item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=3,bow2=50..}] hotbar.5 with arrow 1
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=3,bow2=50..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
+scoreboard players set @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=3,bow2=50..},nbt={Inventory:[{id:"minecraft:arrow",Slot:6b}]}] bow -1
+scoreboard players set @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=3,bow2=50..},nbt=!{Inventory:[{id:"minecraft:arrow",Slot:6b}]}] bow 25
+
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=4,bow=22}] hotbar.7 with tipped_arrow{display:{Name:"{\"italic\":false,\"text\":\"Magic arrow\"}"},Potion:"minecraft:swiftness",HideFlags:32} 2
 execute as @a[gamemode=adventure,scores={class=4,bow=21..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .45 2
 scoreboard players set @a[gamemode=adventure,scores={class=4,bow=22..}] bow -1
@@ -106,7 +113,7 @@ execute if entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adv
 execute as @a[gamemode=adventure,distance=..100,scores={timer=1..5,class=4},x=620,y=20,z=620] at @s run effect give @p levitation 1 0 true
 execute as @a[gamemode=adventure,distance=..100,scores={timer=12,class=4},x=620,y=20,z=620] at @s run effect clear @p levitation
 execute as @a[gamemode=adventure,distance=5..100,scores={timer=9,class=4},x=600,y=60,z=600] at @s run effect clear @p blindness
-execute as @a[gamemode=adventure,distance=..100,scores={timer=17,class=2},x=620,y=20,z=620] at @s run effect clear @p levitation
+#execute as @a[gamemode=adventure,distance=..100,scores={timer=17,class=2},x=620,y=20,z=620] at @s run effect clear @p levitation
 execute as @a[gamemode=adventure,distance=..100,scores={timer=15,class=10},x=620,y=20,z=620] at @s run effect clear @p levitation
 title @a[gamemode=adventure,scores={shift=1..},x=600,y=60,z=600,distance=3..500] title {"text":""}
 scoreboard players set @a[gamemode=adventure,scores={timer=20..,class=5}] timer 0
