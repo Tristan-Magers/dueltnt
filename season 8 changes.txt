@@ -176,3 +176,48 @@ Shard
 - Shooting Wizard Teleport would reload bow
 - Overlord couldn't use phantom mode items
 - Ghost shift could cancle Mass Lev levitation
+
+*Patch 8.1 Update*
+
+[Character Changes]
+
+Soldier
+- Starts with 1 less Teleport (ender pearl) (6 -> 5)
+
+Assassin
+- Dart tnt fuse increased by .15s (.2s -> .35s)
+- Teleport (ender pearl) reload increased by 1s (9s -> 10s)
+
+Ghost
+- The first arrow shot in a clip is "critical", destroying more ground
+	- Added sound and particle effect for crit arrows
+- Teleport (ender pearl) reloads 1s slower (13s -> 14s)
+
+Reaper
+- Dark Pillar (bow) sucks in players 1 block lower
+- Creepers fired 1 block higher
+- Creeper and Slimes given y-vel boost on throw
+	- To help improve feel
+- Max Creeper count reduced by 1 (4 -> 3)
+- Max Slime count reduced by 1 (2 -> 1)
+
+Echo
+- Added 'Unstable Orb' (given after breaking boom wand or blast wand)
+- Blast Wand travels 2.24 blocks further (20.72 -> 22.96)
+- Blast Wand reloads faster and reloads slower with use
+	- 6 tiers (0.1s, 0.2s, 0.4s, 0.7s, 1.0s, 1.2s) (previously 0.9s)
+	- Takes 1s of no use to heal a tier
+	- Breaks after full use (5.25s reload)
+	
+Shard
+- Anti-Ice (Bow) get 1 more ammo (2 -> 3)
+- Anti-Ice (Bow) starts reload after 3 shots (previously 1)
+- Anti-Ice (Bow) reloads 1s slower (2.15s -> 3.15s)
+- All ice changed from packed_ice to blue_ice
+	- Blast res (0.5 -> 2.8) (Stone blast res is 6)
+	- Note: The goal is to reduce Shard's destructiveness.
+- Ice Tnt spreads slightly less far (due to blast res change)
+
+[Bug Fixes]
+- Ground spell could double up pushing players off
+- Ground spell would not work very close to void

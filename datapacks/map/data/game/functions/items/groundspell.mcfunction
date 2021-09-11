@@ -17,15 +17,19 @@ execute as @e[scores={gtimer=0},name=ground,x=580,dx=80,y=11,dy=25,z=580,dz=80,d
 execute as @e[scores={gtimer=0},name=ground,x=580,dx=80,y=2,dy=10,z=580,dz=80,distance=..100] at @s run fill ~-2 ~-1 ~-3 ~2 ~-1 ~3 end_stone replace air
 execute as @e[scores={gtimer=0},name=ground,x=580,dx=80,y=2,dy=10,z=580,dz=80,distance=..100] at @s run fill ~-3 ~-1 ~-2 ~3 ~-1 ~2 end_stone replace air
 
-execute as @e[scores={gtimer=0},name=ground,x=580,dx=80,y=45,dy=20,z=580,dz=80,distance=..100] at @s run fill ~-1 44 ~-1 ~1 44 ~1 end_stone replace white_stained_glass
+#execute as @e[scores={gtimer=0},name=ground,x=580,dx=80,y=-2,dy=4,z=580,dz=80,distance=..100] at @s run tp @s ~ 1 ~
+#execute as @e[scores={gtimer=0},name=ground,x=580,dx=80,y=-2,dy=4,z=580,dz=80,distance=..100] at @s run fill ~-2 0 ~-3 ~2 0 ~3 end_stone replace air
+#execute as @e[scores={gtimer=0},name=ground,x=580,dx=80,y=-2,dy=4,z=580,dz=80,distance=..100] at @s run fill ~-3 0 ~-2 ~3 0 ~2 end_stone replace air
 
-execute as @e[scores={gtimer=0},name=ground,x=580,dx=80,y=35,dy=9,z=580,dz=80,distance=..100] at @s run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 end_stone replace white_stained_glass
+#execute as @e[scores={gtimer=0},name=ground,x=580,dx=80,y=45,dy=20,z=580,dz=80,distance=..100] at @s run fill ~-1 44 ~-1 ~1 44 ~1 end_stone replace white_stained_glass
 
-execute as @e[scores={gtimer=0},name=ground,x=580,dx=80,y=11,dy=25,z=580,dz=80,distance=..100] at @s run fill ~-1 ~-1 ~-2 ~1 ~-1 ~2 end_stone replace white_stained_glass
-execute as @e[scores={gtimer=0},name=ground,x=580,dx=80,y=11,dy=25,z=580,dz=80,distance=..100] at @s run fill ~-2 ~-1 ~-1 ~2 ~-1 ~1 end_stone replace white_stained_glass
+#execute as @e[scores={gtimer=0},name=ground,x=580,dx=80,y=35,dy=9,z=580,dz=80,distance=..100] at @s run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 end_stone replace white_stained_glass
 
-execute as @e[scores={gtimer=0},name=ground,x=580,dx=80,y=2,dy=10,z=580,dz=80,distance=..100] at @s run fill ~-2 ~-1 ~-3 ~2 ~-1 ~3 end_stone replace white_stained_glass
-execute as @e[scores={gtimer=0},name=ground,x=580,dx=80,y=2,dy=10,z=580,dz=80,distance=..100] at @s run fill ~-3 ~-1 ~-2 ~3 ~-1 ~2 end_stone replace white_stained_glass
+#execute as @e[scores={gtimer=0},name=ground,x=580,dx=80,y=11,dy=25,z=580,dz=80,distance=..100] at @s run fill ~-1 ~-1 ~-2 ~1 ~-1 ~2 end_stone replace white_stained_glass
+#execute as @e[scores={gtimer=0},name=ground,x=580,dx=80,y=11,dy=25,z=580,dz=80,distance=..100] at @s run fill ~-2 ~-1 ~-1 ~2 ~-1 ~1 end_stone replace white_stained_glass
+
+#execute as @e[scores={gtimer=0},name=ground,x=580,dx=80,y=2,dy=10,z=580,dz=80,distance=..100] at @s run fill ~-2 ~-1 ~-3 ~2 ~-1 ~3 end_stone replace white_stained_glass
+#execute as @e[scores={gtimer=0},name=ground,x=580,dx=80,y=2,dy=10,z=580,dz=80,distance=..100] at @s run fill ~-3 ~-1 ~-2 ~3 ~-1 ~2 end_stone replace white_stained_glass
 
 execute as @s at @s[x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100] run clear @s red_dye
 execute as @s at @s[x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100] run scoreboard players add @s grounduse 1

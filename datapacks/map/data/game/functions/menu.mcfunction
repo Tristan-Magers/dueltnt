@@ -74,9 +74,9 @@ execute as @e[name=menu,scores={instant=1}] at @s run scoreboard players set @e[
 tag @a[tag=green] remove Sgreen
 tag @a[tag=red] remove Sred
 tag @a[tag=blue] remove Sblue
-execute as @a[tag=Sgreen] at @s run me joined §aGREEN
-execute as @a[tag=Sblue] at @s run me joined §bBLUE
-execute as @a[tag=Sred] at @s run me joined §cRED
+execute as @a[tag=Sgreen] at @s run tellraw @a [{"selector":"@s"},{"text":" joined "},{"text":"GREEN","color":"green"}]
+execute as @a[tag=Sblue] at @s run tellraw @a [{"selector":"@s"},{"text":" joined "},{"text":"BLUE","color":"blue"}]
+execute as @a[tag=Sred] at @s run tellraw @a [{"selector":"@s"},{"text":" joined "},{"text":"RED","color":"red"}]
 tag @a[tag=Sblue] add blue
 tag @a[tag=Sblue] remove red
 tag @a[tag=Sblue] remove green

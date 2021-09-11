@@ -43,7 +43,7 @@ item replace entity @a[gamemode=adventure,scores={class=0,bow=14..}] hotbar.5 wi
 scoreboard players set @a[gamemode=adventure,scores={class=0,bow=14..}] bow -1
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=1,bow=24..}] hotbar.6 with arrow 1
 scoreboard players set @a[gamemode=adventure,scores={class=1,bow=24..}] bow 0
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=2,bow=60..}] hotbar.5 with arrow 3
+item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=2,bow=60..}] hotbar.5 with minecraft:tipped_arrow{display:{Name:"{\"italic\":false,\"text\":\"Magic arrow\"}"},Potion:"minecraft:swiftness",HideFlags:32} 3
 scoreboard players set @a[gamemode=adventure,scores={class=2,bow=60..}] bow -1
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=3,bow=25}] hotbar.5 with arrow 1
 execute as @a[gamemode=adventure,scores={class=3,bow=25}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
@@ -58,7 +58,7 @@ execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=3
 scoreboard players set @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=3,bow2=50..},nbt={Inventory:[{id:"minecraft:arrow",Slot:6b}]}] bow -1
 scoreboard players set @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=3,bow2=50..},nbt=!{Inventory:[{id:"minecraft:arrow",Slot:6b}]}] bow 25
 
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=4,bow=22}] hotbar.7 with tipped_arrow{display:{Name:"{\"italic\":false,\"text\":\"Magic arrow\"}"},Potion:"minecraft:swiftness",HideFlags:32} 2
+item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=4,bow=22}] hotbar.7 with tipped_arrow{display:{Name:"{\"italic\":false,\"text\":\"Magic arrow\"}"},Potion:"minecraft:night_vision",HideFlags:32} 2
 execute as @a[gamemode=adventure,scores={class=4,bow=21..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .45 2
 scoreboard players set @a[gamemode=adventure,scores={class=4,bow=22..}] bow -1
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=5,bow=56..}] hotbar.6 with arrow 3
@@ -73,9 +73,9 @@ scoreboard players set @a[gamemode=adventure,scores={class=7,bow=45..}] bow 0
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=8,bow=22..}] hotbar.7 with arrow{display:{Name:"{\"italic\":false,\"text\":\"Not your father's Blast Off\"}"}}
 execute as @a[gamemode=adventure,scores={class=8,bow=22..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
 scoreboard players set @a[gamemode=adventure,scores={class=8,bow=22..}] bow 0
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=10,bow=43..}] hotbar.6 with arrow 2
-execute as @a[gamemode=adventure,scores={class=10,bow=42..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
-scoreboard players set @a[gamemode=adventure,scores={class=10,bow=43..}] bow 0
+item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=10,bow=46..}] hotbar.6 with arrow 3
+execute as @a[gamemode=adventure,scores={class=10,bow=44..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
+scoreboard players set @a[gamemode=adventure,scores={class=10,bow=46..}] bow -2
 
 #ender land effects
 execute as @a[gamemode=adventure,distance=..100,x=620,y=20,z=620] at @s run function game:items/endercount
@@ -150,6 +150,9 @@ scoreboard players add @e[type=arrow] arrowTime 1
 
 execute as @a[gamemode=adventure,scores={bowDetect=1..,class=0}] at @s run scoreboard players set @e[type=arrow,scores={arrowTime=1},distance=..5,limit=1] SolBow 1
 execute as @a[gamemode=adventure,scores={bowDetect=1..,class=2}] at @s run scoreboard players set @e[type=arrow,scores={arrowTime=1},distance=..5,limit=1] VaporBow 1
+execute as @a[gamemode=adventure,scores={bowDetect=1..,class=2,bow=..0}] at @s run tag @e[type=arrow,scores={arrowTime=1},distance=..5,limit=1] add crit
+execute as @a[gamemode=adventure,scores={bowDetect=1..,class=2,bow=..0}] at @s run clear @s tipped_arrow
+execute as @a[gamemode=adventure,scores={bowDetect=1..,class=2,bow=..0}] at @s run item replace entity @s hotbar.5 with arrow 2
 execute as @a[gamemode=adventure,scores={bowDetect=1..,class=5}] at @s run scoreboard players set @e[type=arrow,scores={arrowTime=1},distance=..5,limit=1] SciBow 1
 execute as @a[gamemode=adventure,scores={bowDetect=1..,class=6}] at @s run scoreboard players set @e[type=arrow,scores={arrowTime=1},distance=..5,limit=1] NecroBow 1
 execute as @a[gamemode=adventure,scores={bowDetect=1..,class=7}] at @s run scoreboard players set @e[type=arrow,scores={arrowTime=1},distance=..5,limit=1] AprBow 1
@@ -446,6 +449,10 @@ scoreboard players add @a shStun 0
 #boom wand
 execute as @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,scores={class=7}] at @s anchored eyes run function game:items/boomwman
 
+#boom shard
+execute as @e[tag=tntpro,tag=newbomb] at @s anchored eyes run function game:cprojectile/pro7mot
+execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:pink_dye"}}] at @s run function game:cprojectile/pro7
+
 #echo wall limit
 tag @a[nbt={OnGround:1b},scores={grtest=0}] remove nowalllev
 
@@ -454,7 +461,23 @@ scoreboard players set @a[nbt={OnGround:1b},scores={grtest=0}] bwandlimit 0
 scoreboard players remove @a[gamemode=adventure,scores={blastwandtime=0..}] blastwandtime 1
 execute as @a[gamemode=adventure,scores={click=1..,blastwandtime=..0,bwandlimit=..3},nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] at @s run function game:items/blastwand
 execute as @e[name=blast] at @s run function game:char/echo/blast/blasttick
-item replace entity @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,scores={blastwandtime=0}] hotbar.2 with minecraft:stone_hoe{display:{Name:"{\"italic\":false,\"text\":\"§aBlast Wand §r: Right-click\"}"},AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
+item replace entity @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,scores={blastwandtime=0,blastdur=0}] hotbar.2 with minecraft:stone_hoe{Damage:0,display:{Name:"{\"italic\":false,\"text\":\"§aBlast Wand §r: Right-click\"}"},AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
+item replace entity @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,scores={blastwandtime=0,blastdur=1}] hotbar.2 with minecraft:stone_hoe{Damage:22,display:{Name:"{\"italic\":false,\"text\":\"§aBlast Wand §r: Right-click\"}"},AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
+item replace entity @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,scores={blastwandtime=0,blastdur=2}] hotbar.2 with minecraft:stone_hoe{Damage:43,display:{Name:"{\"italic\":false,\"text\":\"§aBlast Wand §r: Right-click\"}"},AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
+item replace entity @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,scores={blastwandtime=0,blastdur=3}] hotbar.2 with minecraft:stone_hoe{Damage:65,display:{Name:"{\"italic\":false,\"text\":\"§aBlast Wand §r: Right-click\"}"},AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
+item replace entity @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,scores={blastwandtime=0,blastdur=4}] hotbar.2 with minecraft:stone_hoe{Damage:84,display:{Name:"{\"italic\":false,\"text\":\"§aBlast Wand §r: Right-click\"}"},AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
+item replace entity @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,scores={blastwandtime=0,blastdur=5}] hotbar.2 with minecraft:stone_hoe{Damage:104,display:{Name:"{\"italic\":false,\"text\":\"§aBlast Wand §r: Right-click\"}"},AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
+item replace entity @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,scores={blastwandtime=0,blastdur=6..}] hotbar.2 with minecraft:stone_hoe{Damage:130,display:{Name:"{\"italic\":false,\"text\":\"§aBlast Wand §r: Right-click\"}"},AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
+
+scoreboard players set @a[gamemode=adventure,scores={blastdur=0}] blastdurt 0
+scoreboard players set @a[gamemode=adventure,scores={blastwandtime=1..}] blastdurt 0
+scoreboard players add @a[gamemode=adventure,scores={blastdur=1..,blastwandtime=..0}] blastdurt 1
+scoreboard players remove @a[gamemode=adventure,scores={blastdurt=20..}] blastdur 1
+scoreboard players set @a[gamemode=adventure,scores={blastdurt=20..}] blastwandtime 1
+scoreboard players set @a[gamemode=adventure,scores={blastdurt=20..}] blastdurt 0
+
+item replace entity @a[gamemode=adventure,scores={blastwandtime=90}] hotbar.2 with minecraft:pink_dye{display:{Name:"{\"italic\":false,\"text\":\"§eBoom Shard §r: Right-click\"}"},AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
+scoreboard players set @a[gamemode=adventure,scores={blastwandtime=89..90}] blastwandtime 90
 
 scoreboard players remove @a[scores={grtest=1..}] grtest 1
 
@@ -648,7 +671,8 @@ execute as @e[type=armor_stand,name=NArrow,scores={NArrow=..1}] at @s run fill ~
 execute as @e[type=armor_stand,name=NArrow,scores={NArrow=41..}] at @s run fill ~1 ~-1 ~1 ~-1 ~2 ~-1 air
 execute as @e[type=armor_stand,name=NArrow,scores={NArrow=..1}] at @s run fill ~ ~-1 ~-1 ~1 ~1 ~-1 black_stained_glass
 execute as @e[type=armor_stand,name=NArrow,scores={NArrow=..1}] at @s run summon tnt ~ ~ ~ {Fuse:34,NoGravity:1}
-execute as @e[type=armor_stand,name=NArrow,scores={NArrow=..1}] at @s run execute as @a[gamemode=adventure,distance=..4.5] at @s if block ~ ~1.8 ~ minecraft:black_stained_glass if block ~ ~.9 ~ minecraft:black_stained_glass run function game:char/reaper/darkpillar
+execute as @e[type=armor_stand,name=NArrow,scores={NArrow=..1}] at @s run execute as @a[gamemode=adventure,distance=..4.5] at @s if block ~ ~1.8 ~ minecraft:black_stained_glass run function game:char/reaper/darkpillar
+execute as @e[type=armor_stand,name=NArrow,scores={NArrow=..1}] at @s run execute as @a[gamemode=adventure,distance=..4.5] at @s if block ~ ~1.8 ~ minecraft:black_stained_glass run function game:char/reaper/darkpillar
 
 # smoke bomb
 execute as @e[type=experience_bottle] at @s run kill @e[type=area_effect_cloud,name=place,distance=..4]
@@ -693,12 +717,12 @@ execute as @a[gamemode=adventure,scores={ender=1..}] at @s run scoreboard player
 
 scoreboard players add @a[gamemode=adventure,scores={ender=1..}] enderct 1
 
-execute as @a[scores={ender=1..,endercount=1,class=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (5 Remaining) ","color":"white"}]
-execute as @a[scores={ender=1..,endercount=2,class=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (4 Remaining) ","color":"white"}]
-execute as @a[scores={ender=1..,endercount=3,class=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (3 Remaining) ","color":"white"}]
-execute as @a[scores={ender=1..,endercount=4,class=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
-execute as @a[scores={ender=1..,endercount=5,class=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
-execute as @a[scores={ender=1..,endercount=6,class=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
+execute as @a[scores={ender=1..,endercount=1,class=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (4 Remaining) ","color":"white"}]
+execute as @a[scores={ender=1..,endercount=2,class=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (3 Remaining) ","color":"white"}]
+execute as @a[scores={ender=1..,endercount=3,class=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
+execute as @a[scores={ender=1..,endercount=4,class=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
+execute as @a[scores={ender=1..,endercount=5,class=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
+#execute as @a[scores={ender=1..,endercount=6,class=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
 
 #execute as @a[scores={ender=1..,endercount=1,class=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (3 Remaining) ","color":"white"}]
 #execute as @a[scores={ender=1..,endercount=2,class=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
@@ -709,8 +733,8 @@ execute as @a[scores={ender=1..,endercount=6,class=0}] at @s run tellraw @a[game
 #effect give @a[gamemode=adventure,scores={ender=1..,class=1..2}] invisibility 2 0 true
 #scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=2}] Invis 40
 #scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=0}] Invis 30
-scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=2}] enderreload 260
-scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=1,endercount=2..}] enderreload 180
+scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=2}] enderreload 280
+scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=1,endercount=2..}] enderreload 200
 scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=1,endercount=2..}] endercount 0
 scoreboard players set @a[gamemode=adventure,scores={ender=1..,class=1}] sneakdisable 40
 clear @a[gamemode=adventure,scores={ender=1..,class=1}] squid_spawn_egg
@@ -778,6 +802,15 @@ execute as @a[gamemode=adventure,scores={class=4,shootBall=1..,wizItem=3}] at @s
 #clear @a[gamemode=adventure,scores={class=4,shootBall=1..,wizItem=3}] tipped_arrow
 #scoreboard players set @a[gamemode=adventure,scores={class=4,shootBall=1..,wizItem=3}] bow 1
 scoreboard players set @a shootBall 0
+
+#ghost bow
+execute as @e[type=arrow,scores={ballArrowT=1,VaporBow=1..}] at @s run function game:arrowvel
+#execute as @e[type=arrow,scores={ballArrowT=1,VaporBow=1..,vel=2850..}] at @s run tag @s add crit
+execute as @e[type=arrow,scores={ballArrowT=1,VaporBow=1..},tag=crit] at @s run playsound minecraft:entity.skeleton.shoot master @a ~ ~ ~ 1 0
+execute as @e[type=arrow,scores={ballArrowT=1,VaporBow=1..},tag=crit] at @s run playsound minecraft:item.armor.equip_netherite master @a ~ ~ ~ 1 1.4
+execute as @e[type=arrow,scores={ballArrowT=1,VaporBow=1..},tag=crit] at @s run playsound minecraft:item.armor.equip_turtle master @a ~ ~ ~ 1 0.6
+execute as @e[type=arrow,scores={ballArrowT=1,VaporBow=1..},tag=crit] at @s run playsound minecraft:block.amethyst_block.hit master @a ~ ~ ~ 0.6 0.8
+execute as @e[type=arrow,scores={ballArrowT=2..,VaporBow=1..},tag=crit] at @s run particle minecraft:poof ~ ~ ~ 0.3 0.3 0.3 0 5 force
 
 #remove fire
 scoreboard players add @e[tag=firecheck] firer 1

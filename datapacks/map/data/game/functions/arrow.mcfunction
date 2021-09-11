@@ -78,11 +78,29 @@ execute as @s[type=arrow,x=599,z=599,y=5,dx=36,dz=36,dy=25,distance=..1000,score
 execute as @s[type=arrow,x=599,z=599,y=5,dx=36,dz=36,dy=25,distance=..1000,scores={Inbarrier=..0,isBall=3}] at @s run scoreboard players operation @e[tag=telebow,limit=1,distance=..1] tntID = @s tntID
 
 #ghost bow
-execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air destroy
-execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run fill ~-1 ~-2 ~ ~1 ~-2 ~ air destroy
-execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run fill ~ ~-2 ~-1 ~ ~-2 ~1 air destroy
+#execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s run fill ~-2 ~-1 ~ ~2 ~ ~ minecraft:air replace cyan_stained_glass
+#execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s run fill ~ ~-1 ~-2 ~ ~ ~2 minecraft:air replace cyan_stained_glass
+#execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run fill ~-1 ~-2 ~-1 ~1 ~1 ~1 minecraft:air replace cyan_stained_glass
+
+#execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s positioned ~-2 ~-1 ~ unless block ~ ~ ~ air run fill ~ ~ ~ ~ ~ ~ minecraft:cyan_stained_glass destroy
+#execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s positioned ~-2 ~ ~ unless block ~ ~ ~ air run fill ~ ~ ~ ~ ~ ~ minecraft:cyan_stained_glass destroy
+#execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s positioned ~2 ~-1 ~ unless block ~ ~ ~ air run fill ~ ~ ~ ~ ~ ~ minecraft:cyan_stained_glass destroy
+#execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s positioned ~2 ~ ~ unless block ~ ~ ~ air run fill ~ ~ ~ ~ ~ ~ minecraft:cyan_stained_glass destroy
+#execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s positioned ~ ~-1 ~-2 unless block ~ ~ ~ air run fill ~ ~ ~ ~ ~ ~ minecraft:cyan_stained_glass destroy
+#execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s positioned ~ ~ ~-2 unless block ~ ~ ~ air run fill ~ ~ ~ ~ ~ ~ minecraft:cyan_stained_glass destroy
+#execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s positioned ~ ~-1 ~2 unless block ~ ~ ~ air run fill ~ ~ ~ ~ ~ ~ minecraft:cyan_stained_glass destroy
+#execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s positioned ~ ~ ~2 unless block ~ ~ ~ air run fill ~ ~ ~ ~ ~ ~ minecraft:cyan_stained_glass destroy
+
+execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=crit,x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s run fill ~-2 ~-1 ~ ~2 ~1 ~ minecraft:air destroy
+execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=crit,x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s run fill ~ ~-1 ~-2 ~ ~1 ~2 minecraft:air destroy
+execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=crit,x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run fill ~-1 ~-2 ~-1 ~1 ~2 ~1 air destroy
+execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=crit,x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run fill ~-1 ~-1 ~-1 ~1 ~2 ~1 air destroy
+execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=!crit,x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air destroy
+execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=!crit,x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run fill ~-1 ~-2 ~ ~1 ~-2 ~ air destroy
+execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=!crit,x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run fill ~ ~-2 ~-1 ~ ~-2 ~1 air destroy
 execute if entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run fill ~-1 ~-2 ~-1 ~1 ~-2 ~1 air destroy
-execute as @s[type=arrow,scores={Inbarrier=2,VaporBow=1..}] at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air replace snow
+
+execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=crit,x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s run particle minecraft:poof ~ ~ ~ 1 1 1 0.2 15 force
 
 #scientist bow
 execute unless entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={SciBow=1..}] at @s run summon tnt ~ ~ ~ {Fuse:6,Motion:[0.0,0.23,0.0]}
@@ -108,5 +126,5 @@ execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000] po
 execute as @s[type=arrow,scores={GardBow=1..}] at @s run summon tnt ~ ~ ~ {Fuse:1}
 
 #frost bow
-execute as @s[type=arrow,scores={FrostBow=1..},nbt={inBlockState:{Name:"minecraft:packed_ice"}}] at @s run summon tnt ~ ~ ~ {Tags:["frost"],Fuse:3}
-execute as @s[type=arrow,scores={FrostBow=1..},nbt=!{inBlockState:{Name:"minecraft:packed_ice"}}] at @s run summon armor_stand ~ ~ ~ {Tags:["frostset"],Marker:1,Invulnerable:1}
+execute as @s[type=arrow,scores={FrostBow=1..},nbt={inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon tnt ~ ~ ~ {Tags:["frost"],Fuse:3}
+execute as @s[type=arrow,scores={FrostBow=1..},nbt=!{inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon armor_stand ~ ~ ~ {Tags:["frostset"],Marker:1,Invulnerable:1}

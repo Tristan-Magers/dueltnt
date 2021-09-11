@@ -19,4 +19,4 @@ function game:velsqr
 
 scoreboard players operation @s vel = @s t1
 
-scoreboard players operation @e[tag=trackshot2,tag=newbomb,limit=1] vel = @s vel
+#scoreboard players operation @e[tag=trackshot2,tag=newbomb,limit=1] vel = @s vel
