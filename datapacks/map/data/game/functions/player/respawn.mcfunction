@@ -45,3 +45,4 @@ execute as @s[scores={Lives=-8}] at @s run scoreboard players set @s Lives 1
 scoreboard players set @s[scores={Lives=1..}] Y 45
 
 tag @s remove grave
+scoreboard players set @s grave 0

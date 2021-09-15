@@ -17,3 +17,5 @@ scoreboard objectives add blastdur dummy
 scoreboard objectives add blastdurt dummy
 
 scoreboard objectives add hitscan dummy
+
+scoreboard objectives add grave dummy

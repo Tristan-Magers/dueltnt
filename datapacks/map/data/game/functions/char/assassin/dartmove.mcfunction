@@ -12,6 +12,6 @@ execute as @s[tag=!in,tag=!boom] at @s run playsound minecraft:ui.loom.select_pa
 execute as @s[tag=!in,tag=!boom] at @s run playsound minecraft:block.basalt.place master @a ~ ~ ~ 1 0.9
 execute as @s[tag=!in,tag=!boom] at @s run playsound minecraft:entity.creeper.primed master @a ~ ~ ~ 1 2
 
-execute as @s[tag=!in,tag=!boom] at @s run summon tnt ~ ~1.4 ~ {Fuse:7,NoGravity:1}
+execute as @s[tag=!in,tag=!boom] at @s run summon tnt ~ ~1.4 ~ {Fuse:6,NoGravity:1}
 tag @s[tag=!in] add boom
 kill @s

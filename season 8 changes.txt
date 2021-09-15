@@ -183,15 +183,25 @@ Shard
 
 Soldier
 - Starts with 1 less Teleport (ender pearl) (6 -> 5)
+- Slimer now punchable (just like Reaper slimes)
 
 Assassin
-- Dart tnt fuse increased by .15s (.2s -> .35s)
+- Dart tnt fuse increased by .1s (.15s -> .25s)
 - Teleport (ender pearl) reload increased by 1s (9s -> 10s)
 
 Ghost
 - The first arrow shot in a clip is "critical", destroying more ground
 	- Added sound and particle effect for crit arrows
-- Teleport (ender pearl) reloads 1s slower (13s -> 14s)
+- Teleport (ender pearl) reloads 2s slower (13s -> 15s)
+
+Trapper
+- Platform gets 1 less use (4 -> 3)
+- Improved Platform sound
+
+Mad Scientist
+- Shift cooldown reduced by 0.6s (1s - 0.4s)
+	- Is an invisible timer
+- Starts with 1 less TNT Egg (4 -> 3)
 
 Reaper
 - Dark Pillar (bow) sucks in players 1 block lower
@@ -200,15 +210,29 @@ Reaper
 	- To help improve feel
 - Max Creeper count reduced by 1 (4 -> 3)
 - Max Slime count reduced by 1 (2 -> 1)
+- Grave trap pull lasts only .6s
+- Grave trap pull speed reduced by 33%
 
 Echo
 - Added 'Unstable Orb' (given after breaking boom wand or blast wand)
+- Boom wand shows damage while recharging
 - Blast Wand travels 2.24 blocks further (20.72 -> 22.96)
 - Blast Wand reloads faster and reloads slower with use
 	- 6 tiers (0.1s, 0.2s, 0.4s, 0.7s, 1.0s, 1.2s) (previously 0.9s)
 	- Takes 1s of no use to heal a tier
-	- Breaks after full use (5.25s reload)
-	
+	- Breaks after full use (3.75s reload, reloads 66% durability)
+- Improved Ground Spell sound
+
+Gardener
+- Reloads lives 3s slower (47s -> 50s)
+- Grave trap pull lasts only .6s
+- Grave trap pull speed reduced by 33%
+
+Overlord
+- Gets 1 less Unstable Mass (shift) (5 -> 4)
+- Matter Bombs cost 1 more (6 -> 7)
+- Boom Halo gives 1s of level 3 levitation
+
 Shard
 - Anti-Ice (Bow) get 1 more ammo (2 -> 3)
 - Anti-Ice (Bow) starts reload after 3 shots (previously 1)
@@ -216,8 +240,15 @@ Shard
 - All ice changed from packed_ice to blue_ice
 	- Blast res (0.5 -> 2.8) (Stone blast res is 6)
 	- Note: The goal is to reduce Shard's destructiveness.
-- Ice Tnt spreads slightly less far (due to blast res change)
+- Ice TNT spreads slightly less far (due to blast res change)
+	- Affects bow and float
 
 [Bug Fixes]
 - Ground spell could double up pushing players off
 - Ground spell would not work very close to void
+- Master Storm didn't make full sound
+- Trapper Platform trigger didn't make sound
+- Being grabbed would remove Shard's jump boost
+
+[Backend]
+- Optimized a large amount of moves and functions

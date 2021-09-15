@@ -33,4 +33,4 @@ item replace entity @s[scores={blastdur=4}] hotbar.2 with minecraft:golden_hoe{D
 item replace entity @s[scores={blastdur=5}] hotbar.2 with minecraft:golden_hoe{Damage:25,display:{Name:"{\"italic\":false,\"text\":\"§aRecharging..\"}"},AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
 item replace entity @s[scores={blastdur=6..}] hotbar.2 with minecraft:golden_hoe{Damage:31,display:{Name:"{\"italic\":false,\"text\":\"§aRecharging..\"}"},AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
 
-scoreboard players set @s[scores={blastdur=6..}] blastdur 0
+scoreboard players set @s[scores={blastdur=6..}] blastdur 2

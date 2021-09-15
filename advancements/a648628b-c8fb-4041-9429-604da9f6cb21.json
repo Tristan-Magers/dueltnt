@@ -47,5 +47,17 @@
     },
     "done": true
   },
+  "classes:class9": {
+    "criteria": {
+      "overlord": "2021-09-13 12:54:24 -0600"
+    },
+    "done": true
+  },
+  "classes:class8": {
+    "criteria": {
+      "gardener": "2021-09-13 12:54:03 -0600"
+    },
+    "done": true
+  },
   "DataVersion": 2730
 }

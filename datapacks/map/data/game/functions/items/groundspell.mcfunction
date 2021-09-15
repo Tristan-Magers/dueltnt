@@ -37,3 +37,10 @@ execute as @s at @s[x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100] run score
 execute as @s at @s[x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100] run playsound minecraft:item.axe.strip master @a ~ ~ ~ 2 .9
 execute as @s at @s[x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100] run playsound minecraft:item.axe.strip master @a ~ ~ ~ 1.5 .4
 execute as @s at @s[x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100] run playsound minecraft:item.shovel.flatten master @a ~ ~ ~ 2 1.1
+
+playsound minecraft:item.armor.equip_iron master @a ~ ~ ~ 1 1
+playsound minecraft:entity.wither.shoot master @a ~ ~ ~ 0.3 1.5
+playsound minecraft:entity.wither.break_block master @a ~ ~ ~ 0.3 0.8
+playsound minecraft:block.piston.extend master @a ~ ~ ~ 0.7 0
+playsound minecraft:block.piston.contract master @a ~ ~ ~ 1 1.2
+playsound minecraft:block.note_block.basedrum master @a ~ ~ ~ 1 2

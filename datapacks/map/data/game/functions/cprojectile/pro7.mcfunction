@@ -6,11 +6,11 @@
 
 function game:items/orb
 
-item replace entity @a[nbt={SelectedItemSlot:1}] hotbar.1 with minecraft:golden_hoe{display:{Name:"{\"italic\":false,\"text\":\"§6Recharging..\"}"},AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
-item replace entity @a[nbt={SelectedItemSlot:2}] hotbar.2 with minecraft:golden_hoe{display:{Name:"{\"italic\":false,\"text\":\"§6Recharging..\"}"},AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
-tag @a[nbt=!{SelectedItemSlot:2}] remove boomshard
+item replace entity @s[nbt={SelectedItemSlot:1}] hotbar.1 with minecraft:golden_hoe{display:{Name:"{\"italic\":false,\"text\":\"§6Recharging..\"}"},AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
+item replace entity @s[nbt={SelectedItemSlot:2}] hotbar.2 with minecraft:golden_hoe{display:{Name:"{\"italic\":false,\"text\":\"§6Recharging..\"}"},AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
+tag @s[nbt=!{SelectedItemSlot:2}] remove boomshard
 
-scoreboard players set @a[gamemode=adventure,scores={blastwandtime=80..}] blastwandtime 79
+scoreboard players set @s[gamemode=adventure,scores={blastwandtime=80..},nbt={SelectedItemSlot:2}] blastwandtime 50
 
 playsound minecraft:entity.skeleton.shoot master @a ~ ~ ~ 1 0
 

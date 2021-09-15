@@ -10,4 +10,4 @@ kill @e[tag=killthisthing]
 effect give @s minecraft:slowness 2 1
 #effect give @s minecraft:slow_falling 2 0
 
-tag @s add grave
+scoreboard players set @s grave 12
