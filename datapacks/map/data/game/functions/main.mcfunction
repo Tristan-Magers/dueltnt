@@ -1,5 +1,5 @@
 execute as @e[type=area_effect_cloud,tag=!a,nbt={Potion:"minecraft:poison"}] at @s run function game:char/gardener/plaguepot
-execute as @e[type=area_effect_cloud,tag=!a,nbt={Potion:"minecraft:swiftness"}] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1,Marker:1,Tags:["a","airnade"]}
+execute as @e[type=area_effect_cloud,tag=!a,nbt={Potion:"minecraft:swiftness"}] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1,Marker:1,Silent:1,Tags:["a","airnade"]}
 kill @e[type=area_effect_cloud,tag=!a,tag=!gameae]
 
 clear @a[gamemode=spectator]
@@ -121,7 +121,7 @@ scoreboard players operation @e[name=Portal] tntID -= @p[scores={SetPortalP=1..}
 kill @e[name=Portal,type=armor_stand,scores={tntID=0}]
 scoreboard players operation @e[name=Portal] tntID += @p[scores={SetPortalP=1..}] tntID
 
-execute as @p[scores={SetPortalP=1..}] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"Portal\"}",Invulnerable:1,Marker:1,Invisible:1}
+execute as @p[scores={SetPortalP=1..}] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"Portal\"}",Invulnerable:1,Marker:1,Silent:1,Invisible:1}
 
 scoreboard players add @e[name=Portal,type=armor_stand] PS 1
 execute as @p[scores={SetPortalP=1..}] at @s run scoreboard players operation @e[name=Portal,type=armor_stand,distance=..1] tntID = @p tntID

@@ -230,6 +230,7 @@ Gardener
 
 Overlord
 - Gets 1 less Unstable Mass (shift) (5 -> 4)
+- Spectators are told Unstable Mass count
 - Matter Bombs cost 1 more (6 -> 7)
 - Boom Halo gives 1s of level 3 levitation
 

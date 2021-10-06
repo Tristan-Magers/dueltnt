@@ -48,7 +48,7 @@ execute as @s[scores={class=6}] at @s run effect give @s slow_falling 1 1 true
 execute as @s[scores={class=7}] at @s run effect give @s slow_falling 3 1
 execute as @s[scores={class=7}] at @s run effect give @s speed 3 3
 
-execute as @s[scores={class=9}] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Invulnerable:1,Invisible:1,CustomName:"{\"italic\":false,\"text\":\"ground2\"}"}
+execute as @s[scores={class=9}] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Silent:1,Invulnerable:1,Invisible:1,CustomName:"{\"italic\":false,\"text\":\"ground2\"}"}
 execute as @s[scores={class=9,Y=4..}] at @s run fill ~-1 ~-3 ~-1 ~1 ~-1 ~1 purple_wool replace air
 execute as @s[scores={class=9,Y=..3}] at @s run fill ~-1 0 ~-1 ~1 ~-1 ~1 purple_wool replace air
 execute as @s[scores={class=9}] at @s run tp @s @s
@@ -92,3 +92,8 @@ execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:10,No
 execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:10,NoGravity:1}
 execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:0,NoGravity:1}
 execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:0,NoGravity:1}
+
+execute as @a[scores={class=9,overlordsc=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Unstable Mass","color":"gray","bold":"true"},{"text":" (3 Remaining) ","color":"white"}]
+execute as @a[scores={class=9,overlordsc=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Unstable Mass","color":"gray","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
+execute as @a[scores={class=9,overlordsc=3}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Unstable Mass","color":"gray","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
+execute as @a[scores={class=9,overlordsc=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Unstable Mass","color":"gray","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
