@@ -250,6 +250,8 @@ Shard
 - Master Storm didn't make full sound
 - Trapper Platform trigger didn't make sound
 - Being grabbed would remove Shard's jump boost
+- Tournament hall mobs make sounds in lobby
 
 [Backend]
 - Optimized a large amount of moves and functions
+- Fixed bugs for Spigot/Paper servers
