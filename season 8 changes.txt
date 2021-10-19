@@ -244,6 +244,13 @@ Shard
 - Ice TNT spreads slightly less far (due to blast res change)
 	- Affects bow and float
 
+[Lobby Changes]
+- Added Pie's #11 and Zephr's #3 to tournament
+
+[Particles]
+- Added "3rd Place Party!"
+- Improved "Flame", "Poof", and "Magic"
+
 [Bug Fixes]
 - Ground spell could double up pushing players off
 - Ground spell would not work very close to void
