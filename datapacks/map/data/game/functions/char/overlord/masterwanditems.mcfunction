@@ -12,9 +12,9 @@ execute if entity @e[scores={mode=1}] run item replace entity @s[scores={masterb
 clear @s[scores={masterb=..12}] beef
 item replace entity @s[scores={masterb=..12}] hotbar.4 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}} 1
 
-item replace entity @s[scores={masterb=6..}] hotbar.1 with minecraft:salmon{display:{Name:"{\"italic\":false,\"text\":\"§4Matter Bomb §r: Right-click (6 Material)\"}"}}
-clear @s[scores={masterb=..5}] salmon
-item replace entity @s[scores={masterb=..5}] hotbar.1 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}} 1
+item replace entity @s[scores={masterb=8..}] hotbar.1 with minecraft:salmon{display:{Name:"{\"italic\":false,\"text\":\"§4Matter Bomb §r: Right-click (8 Material)\"}"}}
+clear @s[scores={masterb=..7}] salmon
+item replace entity @s[scores={masterb=..7}] hotbar.1 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}} 1
 
 item replace entity @s[scores={masterb=17..}] hotbar.2 with minecraft:cooked_cod{display:{Name:"{\"italic\":false,\"text\":\"§2Land Slide §r: Right-click (17 Material)\"}"}}
 clear @s[scores={masterb=..16}] cooked_cod

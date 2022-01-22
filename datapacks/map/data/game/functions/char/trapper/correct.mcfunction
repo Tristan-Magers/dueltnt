@@ -18,14 +18,17 @@ scoreboard players set @s[tag=!first,scores={bowlthrow=0,flintthrow=0,bambthrow=
 clear @s[nbt=!{Inventory:[{id:"minecraft:bone",Slot:1b}]}] bone
 item replace entity @s[nbt=!{Inventory:[{id:"minecraft:bone",Slot:1b}]}] hotbar.1 with minecraft:bone{Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§6Detonate Arrows §f§r: Right-click\"}"}}
 
-clear @s[nbt=!{Inventory:[{id:"minecraft:tnt",Slot:2b}]},scores={PlaceMineTime=..80}] tnt
+clear @s[nbt=!{Inventory:[{id:"minecraft:tnt",Slot:2b}]},scores={PlaceMineTime=..40}] tnt
 scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:tnt",Slot:2b}]},scores={PlaceMineTime=..80}] PlaceMineTime 200
 
-clear @s[nbt=!{Inventory:[{id:"minecraft:redstone",Slot:4b}]},scores={TBtimer=..-2}] redstone
-scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:redstone",Slot:4b}]},scores={TBtimer=..-2}] TBtimer 1
+clear @s[nbt=!{Inventory:[{id:"minecraft:emerald",Slot:3b}]},scores={TBtimer=-199..-2}] redstone
+scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:emerald",Slot:3b}]},scores={TBtimer=-199..-2}] TBtimer 1
 
-clear @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:3b}]},scores={PlatTimer=..0}] diamond_sword
-item replace entity @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:3b}]},scores={PlatTimer=..0,platUse=2}] hotbar.3 with diamond_sword{Damage:390,display:{Name:"{\"italic\":false,\"text\":\"Temporary Platform : Right-click\"}"}}
-item replace entity @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:3b}]},scores={PlatTimer=..0,platUse=1}] hotbar.3 with diamond_sword{Damage:780,display:{Name:"{\"italic\":false,\"text\":\"Temporary Platform : Right-click\"}"}}
-item replace entity @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:3b}]},scores={PlatTimer=..0,platUse=0}] hotbar.3 with diamond_sword{Damage:1170,display:{Name:"{\"italic\":false,\"text\":\"Temporary Platform : Right-click\"}"}}
-item replace entity @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:3b}]},scores={PlatTimer=..0,platUse=3}] hotbar.3 with diamond_sword{Damage:0,display:{Name:"{\"italic\":false,\"text\":\"Temporary Platform : Right-click\"}"}}
+clear @s[nbt=!{Inventory:[{id:"minecraft:redstone",Slot:3b}]},scores={TBtimer=..-200}] redstone
+scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:redstone",Slot:3b}]},scores={TBtimer=..-200}] TBtimer 1001
+
+clear @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0}] diamond_sword
+item replace entity @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0,platUse=2}] hotbar.4 with diamond_sword{Damage:390,display:{Name:"{\"italic\":false,\"text\":\"Temporary Platform : Right-click\"}"}}
+item replace entity @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0,platUse=1}] hotbar.4 with diamond_sword{Damage:780,display:{Name:"{\"italic\":false,\"text\":\"Temporary Platform : Right-click\"}"}}
+item replace entity @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0,platUse=0}] hotbar.4 with diamond_sword{Damage:1170,display:{Name:"{\"italic\":false,\"text\":\"Temporary Platform : Right-click\"}"}}
+item replace entity @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0,platUse=3}] hotbar.4 with diamond_sword{Damage:0,display:{Name:"{\"italic\":false,\"text\":\"Temporary Platform : Right-click\"}"}}

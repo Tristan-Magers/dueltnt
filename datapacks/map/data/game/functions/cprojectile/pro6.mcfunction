@@ -1,4 +1,4 @@
-summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Invulnerable:1,Tags:["slimepro","newbomb"],DisabledSlots:4144959}
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Silent:1,Invulnerable:1,Tags:["slimepro","newbomb"],DisabledSlots:4144959}
 
 tp @e[limit=1,tag=slimepro,sort=nearest] @p
 

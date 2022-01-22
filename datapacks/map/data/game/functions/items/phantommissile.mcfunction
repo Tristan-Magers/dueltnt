@@ -1,4 +1,4 @@
-execute as @s at @s run summon armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Invulnerable:1,Invisible:1,Tags:["phantommissile"]}
+execute as @s at @s run summon armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Silent:1,Invulnerable:1,Invisible:1,Tags:["phantommissile"]}
 execute as @s at @s run tp @e[distance=..0.1,limit=1,tag=phantommissile] @p
 execute as @s at @s run tp @e[distance=..0.1,limit=1,tag=phantommissile] ~ ~1.6 ~
 
