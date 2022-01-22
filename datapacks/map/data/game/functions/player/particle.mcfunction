@@ -1,9 +1,9 @@
-execute as @s[scores={particle=1}] at @s run particle flame ~ ~.1 ~ .3 .1 .3 .02 1 force
-execute as @s[scores={particle=2,parttimer=1}] at @s positioned ~ ~.05 ~ run particle cloud ~ ~.25 ~ .14 .1 .14 0 2 force
-execute as @s[scores={particle=2,parttimer=1}] at @s positioned ~ ~.05 ~ run particle spit ~ ~.25 ~ .14 .1 .14 0 1 force
-#execute as @s[scores={particle=2,parttimer=1}] at @s positioned ~ ~.05 ~ run particle poof ~ ~.25 ~ .3 .1 .3 .1 1 force
-execute as @s[scores={particle=2,parttimer=1}] at @s positioned ~ ~.05 ~ run particle minecraft:block snow ~ ~.3 ~ .3 .1 .3 0 2
-execute as @s[scores={particle=3,parttimer=1}] at @s run particle dragon_breath ~ ~.1 ~ .5 .1 .5 .04 2 force
+execute as @s[scores={particle=1,parttimer=1}] at @s run particle flame ~ ~.2 ~ .3 .12 .3 .03 1 force
+execute as @s[scores={particle=2,parttimer=1..2}] at @s positioned ~ ~.05 ~ run particle dust 0.8 0.8 0.8 2.2 ~ ~.2 ~ .15 .1 .15 0 1 force
+execute as @s[scores={particle=2,gpart=1}] at @s positioned ~ ~.05 ~ run particle minecraft:block snow ~ ~.1 ~ .3 .05 .3 0 2
+execute as @s[scores={particle=2,gpart=11}] at @s positioned ~ ~.05 ~ run particle minecraft:block snow ~ ~.1 ~ .3 .05 .3 0 2
+execute as @s[scores={particle=3,parttimer=1}] at @s run particle dust 1 40 1 1.5 ~ ~.2 ~ .3 .1 .3 2 2 force
+execute as @s[scores={particle=3,gpart=1}] at @s run particle dragon_breath ~ ~.1 ~ .5 .1 .5 .04 3 force
 execute as @s[scores={particle=4}] at @s run particle enchant ~ ~.1 ~ .5 .5 .5 .1 2 force
 execute as @s[scores={particle=5}] at @s run particle minecraft:dust 15277350 20 2 2 ~ ~ ~ .2 .2 .2 0 3 force
 execute as @s[scores={particle=6,parttimer=1}] at @s run particle angry_villager ~ ~2.5 ~ .3 .2 .3 0 1 force
@@ -48,6 +48,20 @@ execute as @s[scores={particle=17,gpart=10}] at @s run particle minecraft:soul ~
 execute as @s[scores={particle=18,OPp=20..30}] at @s run particle minecraft:warped_spore ~ ~0.5 ~ .5 .3 .5 .08 3 force
 execute as @s[scores={particle=18,OPp=0..19}] at @s run particle minecraft:ash ~ ~0.5 ~ .6 .3 .6 .08 1 force
 execute as @s[scores={particle=18,OPp=0..19}] at @s run particle minecraft:block nether_portal ~ ~.2 ~ 0.4 0.1 0.4 0.1 1 force
+
+execute as @s[scores={particle=19,OPp=0}] at @s positioned ~ ~1.6 ~ run particle minecraft:note ^1.0 ^ ^-.2 0.1 0.1 0.1 10 1 force
+execute as @s[scores={particle=19,OPp=10}] at @s positioned ~ ~1.6 ~ run particle minecraft:note ^-1.0 ^ ^-.2 0.1 0.1 0.1 10 1 force
+execute as @s[scores={particle=19,OPp=20}] at @s positioned ~ ~1.6 ~ run particle minecraft:note ^ ^1.0 ^-.2 0.1 0.1 0.1 10 1 force
+execute as @s[scores={particle=19,OPp=40}] at @s positioned ~ ~1.6 ~ run particle minecraft:note ^0.7 ^0.7 ^-.2 0.1 0.1 0.1 10 1 force
+execute as @s[scores={particle=19,OPp=50}] at @s positioned ~ ~1.6 ~ run particle minecraft:note ^-0.7 ^0.7 ^-.2 0.1 0.1 0.1 10 1 force
+
+execute as @s[scores={particle=19,OPp=25}] at @s positioned ~ ~1.6 ~ run particle minecraft:note ^1.0 ^ ^-.2 0.1 0.1 0.1 10 1 force
+execute as @s[scores={particle=19,OPp=35}] at @s positioned ~ ~1.6 ~ run particle minecraft:note ^-1.0 ^ ^-.2 0.1 0.1 0.1 10 1 force
+execute as @s[scores={particle=19,OPp=45}] at @s positioned ~ ~1.6 ~ run particle minecraft:note ^ ^1.0 ^-.2 0.1 0.1 0.1 10 1 force
+execute as @s[scores={particle=19,OPp=5}] at @s positioned ~ ~1.6 ~ run particle minecraft:note ^0.7 ^0.7 ^-.2 0.1 0.1 0.1 10 1 force
+execute as @s[scores={particle=19,OPp=15}] at @s positioned ~ ~1.6 ~ run particle minecraft:note ^-0.7 ^0.7 ^-.2 0.1 0.1 0.1 10 1 force
+
+execute as @s[scores={particle=19}] at @s run particle dust 0.8 0.8 0.8 0.8 ~ ~.2 ~ .6 .1 .6 0 1 force
 
 scoreboard players add @s OPp 1
 scoreboard players set @s[scores={OPp=54..}] OPp 0

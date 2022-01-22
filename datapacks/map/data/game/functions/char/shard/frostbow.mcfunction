@@ -23,7 +23,7 @@ scoreboard players set @s sqval 0
 function game:sqroot
 scoreboard players operation @s mult = @s sqval
 
-summon armor_stand ~ ~ ~ {Tags:["frostmark"],Marker:1,Invulnerable:1}
+summon armor_stand ~ ~ ~ {Tags:["frostmark"],Marker:1,Silent:1,Invulnerable:1}
 tp @e[tag=frostmark,limit=1] @p[gamemode=adventure,distance=..10,scores={class=10}]
 
 #right arrow
