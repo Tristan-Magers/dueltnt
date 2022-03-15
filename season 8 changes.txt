@@ -287,6 +287,13 @@ Trapper
 	- 2.5s to Time Bomb, 7.5s to Track Bomb (previously 10s)
 - Switched Platform and Track Bomb slots
 
+Wizard
+- "Explode Ghost Creeper" cooldown reduced 2.5s (7s -> 4.5s)
+- Added "Throw Creeper"
+    - Active when no creeper out
+    - Causes 1.5s cooldown on "Explode Ghost Creeper"
+    - Thrown Creeper has slowfalling
+
 Reaper
 - Placing Creepers pushes them in the direction you are facing
 - Placing Slimes pushes them in the direction you are facing
@@ -300,6 +307,10 @@ Reaper
 - Placed Slimes create 1 extra tnt (2 -> 3)
 - Placed Slimes grow later and more rapidly
 - Placed Slimes explode 1.35s faster (2.95s -> 1.6s)
+
+Echo
+- *Arrows no longer trigger on barrier blocks
+- Note: bug fix allows for Sky Wand and Blast Want to activate on "void"
 
 Overlord
 - Matter Bomb costs 1 more (7 -> 8)

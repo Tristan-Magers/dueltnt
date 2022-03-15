@@ -5,6 +5,12 @@
     },
     "done": true
   },
+  "classes:class4": {
+    "criteria": {
+      "wizard": "2022-03-14 16:50:28 -0600"
+    },
+    "done": true
+  },
   "classes:root": {
     "criteria": {
       "warrior": "2021-10-15 17:03:09 -0600"
@@ -41,5 +47,5 @@
     },
     "done": true
   },
-  "DataVersion": 2865
+  "DataVersion": 2975
 }

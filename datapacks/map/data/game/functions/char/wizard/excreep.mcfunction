@@ -1,5 +1,7 @@
-item replace entity @s[scores={CPtimer=119..}] armor.feet with air
-clear @s[scores={CPtimer=119..}] minecraft:golden_boots
+scoreboard players set @a[scores={CPtimer=100}] CPtimer 50
+
+item replace entity @s[scores={CPtimer=3..}] armor.feet with air
+clear @s[scores={CPtimer=3..}] minecraft:golden_boots
 scoreboard players remove @s CPtimer 1
 
 execute as @s[scores={CPtimer=139}] at @s run scoreboard players operation @e[type=minecraft:creeper] tntID -= @s tntID
@@ -34,4 +36,6 @@ execute as @s[scores={CPtimer=139}] at @s run execute as @e[type=creeper,scores=
 execute as @s[scores={CPtimer=139}] at @s run execute as @e[type=creeper,scores={tntID=0}] at @s run scoreboard players set @a[scores={CPtimer=139}] CPtimer 138
 execute as @s[scores={CPtimer=139}] at @s run scoreboard players operation @e[type=minecraft:creeper] tntID += @s tntID
 scoreboard players set @a[scores={CPtimer=139}] CPtimer 3
-item replace entity @s[x=600,y=60,z=600,distance=3..95,scores={CPtimer=1}] hotbar.4 with golden_boots{display:{Name:"{\"text\":\"§r§bExplode Ghost Creeper §f: Right Click (summoned by crouch)\"}"}}
+execute as @s[scores={CPtimer=1}] at @s run function game:char/wizard/creeptest
+item replace entity @s[x=600,y=60,z=600,distance=3..95,scores={CPtimer=1},tag=hascreep] hotbar.4 with golden_boots{display:{Name:"{\"text\":\"§r§bExplode Ghost Creepers §f: Right Click\"}"}}
+item replace entity @s[x=600,y=60,z=600,distance=3..95,scores={CPtimer=1},tag=!hascreep] hotbar.4 with gray_dye{display:{Name:"{\"text\":\"§r§bThrow Creeper §f: Right Click\"}"}}

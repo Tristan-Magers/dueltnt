@@ -169,7 +169,13 @@ kill @e[tag=mastertnt,scores={masterb=14}]
 execute as @e[tag=mastertnt,tag=newbomb] at @s anchored eyes run function game:cprojectile/pro2mot
 execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:salmon"}}] at @s run function game:cprojectile/pro2
 
-#creeper projectile
+#creeper projectile wizard
+execute as @e[tag=wizcreep,tag=newbomb] at @s anchored eyes run function game:cprojectile/pro8mot
+execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:gray_dye"}}] at @s run function game:cprojectile/pro8
+
+effect give @e[tag=wizcreep] minecraft:slow_falling 999 0 true
+
+#creeper projectile reaper
 scoreboard players add @e[tag=creepro] masterb 1
 
 execute as @e[tag=creeppro,tag=newbomb] at @s anchored eyes run function game:cprojectile/pro5mot
