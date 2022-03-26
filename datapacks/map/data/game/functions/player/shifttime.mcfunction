@@ -3,9 +3,9 @@ scoreboard players set @a[gamemode=adventure,scores={timer=88..,class=1}] timer 
 scoreboard players set @a[gamemode=adventure,scores={timer=73..,class=2}] timer 0
 scoreboard players set @a[gamemode=adventure,scores={timer=80..,class=3}] timer 0
 
-execute as @a[gamemode=adventure,scores={timer=1..7,class=4},distance=..100,x=620,y=20,z=620] at @s run tp @p ~ ~2 ~
+execute as @a[gamemode=adventure,scores={timer=1..7,class=4,Y=..57},distance=..100,x=620,y=20,z=620] at @s run tp @p ~ ~2 ~
 
-scoreboard players set @a[gamemode=adventure,scores={timer=135..,class=4}] timer 0
+scoreboard players set @a[gamemode=adventure,scores={timer=160..,class=4}] timer 0
 
 execute as @a[gamemode=adventure,distance=..100,scores={timer=1..5,class=4},x=620,y=20,z=620] at @s run effect give @p levitation 1 0 true
 execute as @a[gamemode=adventure,distance=..100,scores={timer=12,class=4},x=620,y=20,z=620] at @s run effect clear @p levitation

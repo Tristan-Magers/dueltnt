@@ -10,6 +10,11 @@ execute as @s at @s run playsound minecraft:entity.enderman.teleport master @a ~
 execute as @s at @s run playsound minecraft:block.amethyst_block.break master @a ~ ~ ~ 1 0
 execute as @s at @s run playsound minecraft:block.amethyst_block.place master @a ~ ~ ~ 1 0
 
+execute as @s at @s positioned ~ ~ ~ run clear @a[distance=..3.5,tag=!timebnohit,scores={tntID=0}] arrow
+execute as @s at @s positioned ~ ~ ~ run clear @a[distance=..3.5,tag=!timebnohit,scores={tntID=0}] tnt
+
+execute as @s at @s positioned ~ ~ ~ run title @a[distance=..3.5,tag=!timebnohit] times 4 16 4
+execute as @s at @s positioned ~ ~ ~ run title @a[distance=..3.5,tag=!timebnohit] title {"text":"Time Reversed"}
 execute as @s at @s positioned ~ ~ ~ run scoreboard players set @a[distance=..3.5,tag=!timebnohit] time_pos 20
 
 execute as @s at @s positioned ~ ~ ~ run execute as @a[distance=..3.5] at @s run playsound minecraft:entity.enderman.scream master @s ~ ~ ~ 1 1.3

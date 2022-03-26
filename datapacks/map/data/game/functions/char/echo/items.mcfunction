@@ -1,5 +1,7 @@
 #blast wand
-scoreboard players set @s[nbt={OnGround:1b},scores={grtest=0}] bwandlimit 0
+scoreboard players set @s[scores={grtest=0}] bwandlimit 0
+#limits uses in air. currently unused and negated by previous command
+#scoreboard players set @s[nbt={OnGround:1b},scores={grtest=0}] bwandlimit 0
 scoreboard players remove @s[scores={blastwandtime=0..}] blastwandtime 1
 execute as @s[scores={click=1..,blastwandtime=..0,bwandlimit=..3},nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] at @s run function game:items/blastwand
 

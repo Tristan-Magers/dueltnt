@@ -4,7 +4,12 @@ scoreboard players set @s[gamemode=adventure,scores={boomwandtime=0..15},tag=boo
 execute as @s[gamemode=adventure,scores={click=1..,boomwandtime=..0},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] at @s anchored eyes positioned ^ ^ ^4 run summon tnt ~ ~ ~ {Fuse:3}
 scoreboard players remove @s[gamemode=adventure,scores={click=1..,boomwandtime=..0},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] boomcharge 1
 scoreboard players set @s[gamemode=adventure,scores={click=1..,boomwandtime=..0},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] boomwandcool 1
-scoreboard players set @s[gamemode=adventure,scores={click=1..,boomwandtime=..0,boomcharge=1..},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] boomwandtime 11
+#controls increasing cooldown
+scoreboard players set @s[gamemode=adventure,scores={click=1..,boomwandtime=..0,boomcharge=5..},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] boomwandtime 11
+scoreboard players set @s[gamemode=adventure,scores={click=1..,boomwandtime=..0,boomcharge=4},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] boomwandtime 12
+scoreboard players set @s[gamemode=adventure,scores={click=1..,boomwandtime=..0,boomcharge=3},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] boomwandtime 13
+scoreboard players set @s[gamemode=adventure,scores={click=1..,boomwandtime=..0,boomcharge=2},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] boomwandtime 14
+scoreboard players set @s[gamemode=adventure,scores={click=1..,boomwandtime=..0,boomcharge=1},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] boomwandtime 14
 scoreboard players set @s[gamemode=adventure,scores={click=1..,boomwandtime=..0,boomcharge=..0},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] boomwandtime 65
 
 scoreboard players add @s[gamemode=adventure,scores={boomwandcool=1..},tag=!boomshard] boomwandcool 1

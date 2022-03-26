@@ -264,17 +264,13 @@ Shard
 
 *Patch 8.2 Update*
 
-Notes: a focus on not just balance, but improvement
-to general strategic enjoyment and counter-play,
-espcially in relation to the layout of the stage
-
 [Character Changes]
 
 Ghost
 - Smoke Bomb's second TNT explodes 0.05s slower (0.8s -> 0.85s) (now 0.15s after first)
 
 Trapper
-- Arrow TNT explodes 0.1s slower (0.1s -> 0.2s) (all bow types)
+- Arrow TNT explodes 0.15s slower (0.1s -> 0.25s) (both bow types)
 - Short Blast TNT explodes 0.05s slower (0.1s -> 0.15s)
 - Added "Time Bomb"
 	- Reverses time of players hit (2 seconds in 1 second) (slows hit players)
@@ -286,9 +282,15 @@ Trapper
 - Track Bomb switches between itself and Time Bomb
 	- 2.5s to Time Bomb, 7.5s to Track Bomb (previously 10s)
 - Switched Platform and Track Bomb slots
+- Track Bomb only has an explosion of 1 tnt if it explodes due to time (previously 2 tnt)
 
 Wizard
 - "Explode Ghost Creeper" cooldown reduced 2.5s (7s -> 4.5s)
+- "Pig Transform" can now be used anywhere (can still be placed to teleport to location)
+- "Pig Transform" 0.5s faster if used on ground (2s -> 1.5s)
+- "Pig Transform" reloads 2s slower (5s -> 7s) (starts after explosion)
+- Shift (Teleport) cooldown increased 1.25s (6.75s -> 8s)
+- Shift (Teleport) can no longer kill self off of top
 - Added "Throw Creeper"
     - Active when no creeper out
     - Causes 1.5s cooldown on "Explode Ghost Creeper"
@@ -309,7 +311,9 @@ Reaper
 - Placed Slimes explode 1.35s faster (2.95s -> 1.6s)
 
 Echo
-- *Arrows no longer trigger on barrier blocks
+- Boom wand takes longer to reload on the last 4 uses (0.6s,0.65s,0.7s,0.7s) (normally .55s)
+- Blast Wand no longer limited to 4 uses in air
+- Arrows no longer trigger on barrier blocks
 - Note: bug fix allows for Sky Wand and Blast Want to activate on "void"
 
 Overlord

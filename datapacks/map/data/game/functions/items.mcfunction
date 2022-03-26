@@ -322,16 +322,22 @@ execute as @e[type=squid] at @s run tp @s ~ ~-1000 ~
 execute as @e[scores={frozen=0..}] at @s run function game:player/frozen
 
 #pig
+execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run scoreboard players set @s pig 41
+execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run summon pig ~ ~ ~ {Tags:["long"],Invulnerable:1}
+execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run clear @s pig_spawn_egg
+scoreboard players set @a pigThrow 0
+
 scoreboard players add @e[type=pig] egg 1
 execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s run execute as @e[scores={egg=..1},limit=1,type=pig] at @s run teleport @p[scores={class=4,egg=1..}] ~ ~ ~
 execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s run tp @s @s
-scoreboard players set @a[gamemode=adventure,scores={class=4,egg=1..}] pig 41
+scoreboard players set @a[gamemode=adventure,scores={class=4,egg=1..}] pig 31
 scoreboard players set @a[gamemode=adventure,scores={class=4}] egg 0
 execute as @e[type=pig] at @s run data merge entity @s {Invulnerable:1}
 scoreboard players set @e[type=pig,scores={egg=..1}] pig 41
-kill @e[type=pig,scores={pig=..0}]
-execute as @a[gamemode=adventure,scores={pig=-100..}] at @s run function game:char/wizard/pig
-scoreboard players remove @e[scores={pig=-100..}] pig 1
+kill @e[type=pig,scores={pig=..0},tag=long]
+kill @e[type=pig,scores={pig=..10},tag=!long]
+execute as @a[gamemode=adventure,scores={pig=-200..}] at @s run function game:char/wizard/pig
+scoreboard players remove @e[scores={pig=-200..}] pig 1
 
 #frost suck
 execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={click=1..},nbt={SelectedItem:{id:"minecraft:lime_dye"}}] at @s run function game:char/shard/frostsuck/use
@@ -385,16 +391,9 @@ scoreboard players set @a BowUse 0
 kill @e[type=arrow,scores={BombBow=1..,BowTime=300..}]
 execute as @e[type=arrow,scores={BombBow=1..}] at @s run data merge entity @s {pickup:0}
 execute as @a[gamemode=adventure,scores={class=3,BowUse=1..}] at @s run scoreboard players operation @e[type=arrow,scores={BowTime=..2},distance=..5] tntID = @p tntID
-scoreboard players set @a[gamemode=adventure,sort=random,limit=1,scores={BombExplode=1..},nbt={SelectedItem:{id:"minecraft:bone"}}] RanExplode 1
-scoreboard players operation @e[scores={BombBow=1..}] tntID -= @p[scores={RanExplode=1..}] tntID
-execute as @e[type=arrow,tag=!trapchick,scores={BombBow=1..,tntID=0}] at @s run summon tnt ~ ~.55 ~ {Fuse:4,NoGravity:0}
-execute as @e[type=arrow,tag=trapchick,scores={BombBow=1..,tntID=0}] at @s run summon chicken ~ ~ ~ {Tags:["exchicken"],Invulnerable:1}
-kill @e[type=arrow,scores={BombBow=1..,tntID=0}]
-scoreboard players operation @e[scores={BombBow=1..}] tntID += @p[scores={RanExplode=1..}] tntID
-scoreboard players set @a[gamemode=adventure,nbt=!{SelectedItem:{id:"minecraft:bone"}}] BombExplode 0
-scoreboard players set @a[gamemode=adventure,scores={RanExplode=1..}] BombExplode 0
-execute as @a[gamemode=adventure,scores={RanExplode=1..}] at @s run playsound minecraft:block.piston.extend master @p ~ ~ ~ 1 2
-scoreboard players set @a[gamemode=adventure,scores={RanExplode=1..}] RanExplode 0
+
+execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:bone"}}] at @s run function game:char/trapper/det
+
 execute as @e[scores={BombBow=1..}] at @s run data merge entity @s {NoGravity:1}
 
 # platform
@@ -621,7 +620,7 @@ execute as @a[scores={time_pos=0..}] at @s run function game:player/revtime
 
 execute as @a[scores={time_pos=19}] at @s run summon husk ~ ~100 ~ {Tags:["timeposmark"],NoAI:1,Invulnerable:1,Silent:1,NoGravity:1,Invisible:1,ArmorItems:[{},{},{},{Count:1,id:ghast_tear}]}
 effect give @a[scores={time_pos=19..}] minecraft:glowing 1 1
-effect give @a[scores={time_pos=1}] minecraft:blindness 2 1 true
+effect give @a[scores={time_pos=-5}] minecraft:blindness 2 1 true
 #clear @a[scores={time_pos=1}] arrow
 #team join Main @e[type=minecraft:husk]
 

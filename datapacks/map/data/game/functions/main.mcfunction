@@ -187,7 +187,7 @@ tp @a[scores={rejoin=1..,inarena=..0}] 500 20.5 500 0 0
 scoreboard players add @a[scores={rejoin=1..}] class 0
 gamemode spectator @a[scores={Y=..0,inarena=1..}]
 tp @a[scores={Y=..0,inarena=1..}] 614 40 614
-title @a times 0 10 20
+title @a[scores={Y=..0,inarena=1..}] times 0 10 20
 effect clear @a[scores={rejoin=1..}] blindness
 scoreboard players reset @a[scores={rejoin=1..}] rejoin
 

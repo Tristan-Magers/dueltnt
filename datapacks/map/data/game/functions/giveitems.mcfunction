@@ -251,7 +251,7 @@ scoreboard players set @a platUse 2
 
 scoreboard players set @a grave 0
 
-scoreboard players set @a time_pos 0
+scoreboard players set @a time_pos -40
 
 tag @a remove boomshard
 
