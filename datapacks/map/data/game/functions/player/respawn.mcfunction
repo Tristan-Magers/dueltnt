@@ -35,6 +35,7 @@ execute as @s[scores={Lives=1..}] at @s run tp @s ~ 45 ~
 execute as @s[x=620,y=20,z=620,distance=..100] at @s run execute as @a[distance=..100] at @s run playsound minecraft:entity.wither.hurt master @s ~ ~ ~ 1 1.5
 effect clear @s blindness
 effect clear @s poison
+tp @s @ß
 scoreboard players set @s fall 3
 scoreboard players set @s platAm -100
 execute as @s[scores={Lives=1..}] at @s positioned ~ ~-1 ~ run fill ~1 44 ~1 ~-1 44 ~-1 white_stained_glass replace air
