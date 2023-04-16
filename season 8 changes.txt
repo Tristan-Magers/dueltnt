@@ -1,0 +1,315 @@
+*Season 8 Update*
+4-year anniversary!
+
+Goals:
+- Shard season event
+- Rework Reaper, Assassin, Wizard, and Gardener
+- Slightly tone down Overlord, Trapper, Echo, and MS
+- Slightly increase power on Solider and Ghost
+- Make code structured better
+
+[General]
+- Updated Minecraft version to 1.17.1
+- Cleaned up and optimized game files
+- Moved remaining command block commands to functions
+
+[General Gameplay]
+- Tells class of winning player
+- Updated lives color for 5 and 6
+
+Teams
+- Only tell team win
+- Shows team wins on sidebar
+- Displays team lives on sidebar
+- Death messages show teams
+- Character picks show team
+
+Phantom Mode
+- Removed invisibility and glowing phase
+
+Hotfeet Mode
+- Reach max tnt level 32% faster (~125s -> ~95s)
+
+[Character Changes]
+
+Soldier
+- Bomb Bow arrows explode 0.05s faster (0.5s -> 0.45s)
+	- Same explosion height (0.51 blocks off ground)
+- Mega Bomb summon 1 more tnt  (7 -> 8)
+- Mega Bomb isn't given until 3s into round
+- Anvil fall speed reduced by 50%
+- Teleport makes sound on hit
+
+Assassin
+- Magics Stars activate .3s faster (.6s -> .3s)
+- Magics Stars start with 40% faster motion
+- Magic Stars fire .7 blocks lower and 1 block out (previously from eyes)
+- Teleport explodes on contact (1 tnt)
+- Teleport (ender pearls) reload after 9 seconds
+- Teleport no longer gives invisibility
+- Teleport makes sound on hit
+- Starts with 2 less teleports (4 -> 2)
+- Mass Freeze reloads 0.5s faster (6s -> 5.5s)
+- Mass Freeze gives speed (level 2, 2s)
+- Mass Freeze gives 0.6s less leviation (2s -> 1.4s)
+- Start with 1 less Sneak Attack (4 -> 3)
+
+Ghost
+- Teleport reloads 4s faster (17s -> 13s)
+- Teleport gives levitation on contact (0.6s, level 2)
+- Teleport no longer gives invisibility
+- Teleport makes sound on hit
+- Primed for Dark gives .5s less full blindess (4.5s -> 4s)
+- Shift reloads .35s faster (4s -> 3.65s)
+
+Trapper
+- Fast Arrows have particle trail
+- Fast Arrows go 15% slower (+100% -> +70%)
+- Fast Trap resets entire bow reload countdown
+- Fast Trap causes first arrow to reload .2s slower (1.45s)
+- Platform stops your motion
+- Platform reloads 7.5s slower (6s -> 13.5s)
+- Spectators told when platform reloads
+- Track Bomb glows
+- Track Bomb only tracks players within 20 bocks
+
+Wizard
+- Shift reloads 0.75s faster (7.5s -> 6.75s)
+- Removed .1s fireball movement delay
+- Fireball speed is based on bow charge
+	- 70% charge as fast as previous
+- Teleport reworked
+	- Teleports up continuously and lingers
+	- Teleports down if near enemy (and not shooter)
+	- After 11 steps or at height limit (y=40 or y=4), summons air pillar
+- Arrows reload .3s faster (1.4s -> 1.1s)
+- Vortex gives slowness (level 3, 1s)
+
+Mad Scientist
+- Explosive Gel (bow) explodes 0.05s slower (.2s -> .25s)
+	- Same explosion height (0.53 blocks off ground)
+
+Reaper
+- Dark Pillar gives .45s longer full blindness (.25s -> .7s)
+- Dark Pillar hitbox more consistent
+- Scythe reloads 1s faster at round start (2s -> 1s)
+- Scythe knockback reduced 4 levels (6 -> 2)
+- Creeper and Slimes can now be used as projectiles
+	- Still placeable
+- Slimes grow 2 sizes bigger (6 -> 8)
+- Slimes explode on death (2 tnt)
+- Creeper and Slime eggs reload 1 every 7 seconds
+- Spawns with 8 less Creepers (10 -> 2) (Max 4)
+- Spawns with 6 less Slimes (8 -> 2) (Max 2)
+- Switched Creeper Egg and Slime Egg positions
+- Shift reloads 1.5s faster (9.5s -> 8s)
+- Shift gives slow_falling (for consistency while falling)
+- Gets 2 more feathers (4 -> 6)
+- Grave Trap always kills players
+- Gets 4 more Grave Traps (8 -> 4)
+
+Echo
+- Space Warp (bow) player teleport hitbox 1 blocks higher (1.5 -> 2.5 blocks)
+	- Functionally makes it harder to spleef players near arrow hitbox
+	- Hitbox still reaches 2 blocks under hit as well
+- Blast wand explosion summons higher and more precisely
+- Blast wand explodes .05s slower (.05s -> .1s)
+
+Gardener
+- Gets an extra life every 47 seconds
+- Removed Scythe Begone (no longer needed)
+- Grave Trap always kills players
+- Starts with 6 less Grave Traps (12 -> 6) (still given by plague)
+
+Overlord
+- Wand can no longer eat unstable mass
+- Wand does not get matter from Power Shield or Dark Pillar glass
+- Wand's upgrade adjusted
+	- Now (+2, +2, +1.6, +1.6)
+	- Previous (+2.8, +2.8, +2.8, +0)
+	- Functionally 1.2 blocks shorter on MAX
+- Wand makes particle and sound on breaking
+- Upgrade makes particle
+- Matter Storm hitbox vastly improved to represent visual
+- Matter Storm moves 38% slower (40 b/s -> 25 b/s)
+
+Shard
+- Added to game
+
+[Map Changes]
+- Made center off bedrock more shallow in Arena
+
+[Lobby Changes]
+- Updated general lobby look for story event
+- Updated Tournament hall (TbT4, Pie #8, Pie #9, Viral's undtt)
+- Added new people to extended credits area
+- Set lobby to night time
+- Added "Book for Nerds"
+- Soldier, Assassin, and Ghost automatically unlocked in Overlord swamp
+- Small settings look and sound improvements
+- Iris ladder <3
+
+[Bug Fixes]
+- Game would take multiple ticks before ending
+- Dart did not keep custom name after use
+- Ghost teleport reload would tell all players
+- Mega Bomb could sometimes never trigger
+- Air Nade killing chickens
+- Trapper short blast did not fire from eyes
+- Plague could be inventory duplicated
+- Fixed issue where blast wand could explode twice
+- Reaper creepers could become double powered
+- Fixed issue where Chicken Bow expired too fast
+- Power shield glass could last between rounds
+- Players could briefly keep levitation after game
+- Some placeables did not recognize granite
+- Placeables did not recognize end stone stairs
+- LOCKED signs still used /tell instead of /tellraw
+- Ender pearls could teleport players after last death
+- Ender pearls could teleport players after leaving match
+- Some items would sometimes have incorrect colors on name
+- Overlord wand not displaying anything when broken
+- Survival would not tell remaining time on loss
+- In part of lobby you could not join/unjoin
+- Wizard grab only had 2 grabs
+- Shooting Wizard Teleport would reload bow
+- Overlord couldn't use phantom mode items
+- Ghost shift could cancle Mass Lev levitation
+
+*Patch 8.1 Update*
+
+[Character Changes]
+
+Soldier
+- Starts with 1 less Teleport (ender pearl) (6 -> 5)
+- Slimer now punchable (just like Reaper slimes)
+
+Assassin
+- Dart tnt fuse increased by .1s (.15s -> .25s)
+- Teleport (ender pearl) reload increased by 1s (9s -> 10s)
+
+Ghost
+- The first arrow shot in a clip is "critical", destroying more ground
+	- Added sound and particle effect for crit arrows
+- Teleport (ender pearl) reloads 2s slower (13s -> 15s)
+
+Trapper
+- Platform gets 1 less use (4 -> 3)
+- Improved Platform sound
+
+Mad Scientist
+- Shift cooldown reduced by 0.6s (1s - 0.4s)
+	- Is an invisible timer
+- Starts with 1 less TNT Egg (4 -> 3)
+
+Reaper
+- Dark Pillar (bow) sucks in players 1 block lower
+- Creepers fired 1 block higher
+- Creeper and Slimes given y-vel boost on throw
+	- To help improve feel
+- Max Creeper count reduced by 1 (4 -> 3)
+- Max Slime count reduced by 1 (2 -> 1)
+- Grave trap pull lasts only .6s
+- Grave trap pull speed reduced by 33%
+
+Echo
+- Added 'Unstable Orb' (given after breaking boom wand or blast wand)
+- Boom wand shows damage while recharging
+- Blast Wand travels 2.24 blocks further (20.72 -> 22.96)
+- Blast Wand reloads faster and reloads slower with use
+	- 6 tiers (0.1s, 0.2s, 0.4s, 0.7s, 1.0s, 1.2s) (previously 0.9s)
+	- Takes 1s of no use to heal a tier
+	- Breaks after full use (3.75s reload, reloads 66% durability)
+- Improved Ground Spell sound
+
+Gardener
+- Reloads lives 3s slower (47s -> 50s)
+- Grave trap pull lasts only .6s
+- Grave trap pull speed reduced by 33%
+
+Overlord
+- Gets 1 less Unstable Mass (shift) (5 -> 4)
+- Spectators are told Unstable Mass count
+- Matter Bombs cost 1 more (6 -> 7)
+- Boom Halo gives 1s of level 3 levitation
+
+Shard
+- Anti-Ice (Bow) get 1 more ammo (2 -> 3)
+- Anti-Ice (Bow) starts reload after 3 shots (previously 1)
+- Anti-Ice (Bow) reloads 1s slower (2.15s -> 3.15s)
+- All ice changed from packed_ice to blue_ice
+	- Blast res (0.5 -> 2.8) (Stone blast res is 6)
+	- Note: The goal is to reduce Shard's destructiveness.
+- Ice TNT spreads slightly less far (due to blast res change)
+	- Affects bow and float
+
+[Lobby Changes]
+- Added Pie's #11 and Zephr's #3 to tournament
+
+[Particles]
+- Added "3rd Place Party!"
+- Improved "Flame", "Poof", and "Magic"
+
+[Bug Fixes]
+- Ground spell could double up pushing players off
+- Ground spell would not work very close to void
+- Master Storm didn't make full sound
+- Trapper Platform trigger didn't make sound
+- Being grabbed would remove Shard's jump boost
+- Tournament hall mobs make sounds in lobby
+
+[Backend]
+- Optimized a large amount of moves and functions
+- Fixed bugs for Spigot/Paper servers
+
+*Patch 8.2 Update*
+
+Notes: a focus on not just balance, but improvement
+to general strategic enjoyment and counter-play,
+espcially in relation to the layout of the stage
+
+[Character Changes]
+
+Ghost
+- Smoke Bomb's second TNT explodes 0.05s slower (0.8s -> 0.85s) (now 0.15s after first)
+
+Trapper
+- Arrow TNT explodes 0.1s slower (0.1s -> 0.2s) (all bow types)
+- Short Blast TNT explodes 0.05s slower (0.1s -> 0.15s)
+- Added "Time Bomb"
+	- Reverses time of players hit (2 seconds in 1 second) (slows hit players)
+	- Gives Slowness 2 for 2 seconds
+	- 3.3 block range
+	- Triggers .35s after hitting ground
+	- Will stun the player who used it (slowness 3, 2s; blindness 2s)
+	- Gives 1 second of slow falling to user
+- Track Bomb switches between itself and Time Bomb
+	- 2.5s to Time Bomb, 7.5s to Track Bomb (previously 10s)
+- Switched Platform and Track Bomb slots
+
+Reaper
+- Placing Creepers pushes them in the direction you are facing
+- Placing Slimes pushes them in the direction you are facing
+- Creepers thrown have a max downwards angle of 45 degrees
+- Slimes thrown have a max downwards angle of 45 degrees
+- Creepers thrown only make  1 explosion (previously 2)
+- Creepers placed on ground make 3 explosions (priously 2)
+	- .15s and .25s after explosion (previously .2s)
+- Thrown Slimes grow 2 less sizes (max 7) (keeping all the same timing)
+- Placed Slimes grow 1 extra size (max 10)
+- Placed Slimes create 1 extra tnt (2 -> 3)
+- Placed Slimes grow later and more rapidly
+- Placed Slimes explode 1.35s faster (2.95s -> 1.6s)
+
+Overlord
+- Matter Bomb costs 1 more (7 -> 8)
+
+Shard
+- Anti-Ice Bow middle arrow explodes 0.05s faster (.15s -> .1s)
+- Anti-Ice Bow side arrows explodes 0.05s slower (.15s -> .2s)
+
+[Particle]
+- Timing fix to "3rd Place Party"
+
+[Bug Fixes]
+- Fixed 1.18 issue where projectiles that would collide with void no longer collided with void

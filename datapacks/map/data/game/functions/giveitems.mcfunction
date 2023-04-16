@@ -152,7 +152,7 @@ team leave @a[x=620,y=20,z=620,distance=..100,scores={class=..7}]
 
 give @a[scores={class=10},x=620,y=20,z=620,distance=..100] bow{Damage:260,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§9Anti-Ice§r : Throw to switch\"}"}}
 item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.6 with arrow 3
-item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.1 with egg{display:{Name:"{\"italic\":false,\"text\":\"§3Frost Nade §f§r: Right-click\"}"}}
+item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.1 with egg{display:{Name:"{\"italic\":false,\"text\":\"§3Frosty Poppy §f§r: Right-click\"}"}}
 item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.3 with lime_dye{display:{Name:"{\"italic\":false,\"text\":\"§3Ice Suck §f§r: Right-click\"}"}}
 #item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.2 with yellow_dye{display:{Name:"{\"italic\":false,\"text\":\"§3Snowman §f§r: Right-click\"}"}}
 item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.2 with trident{display:{Name:"{\"italic\":false,\"text\":\"§9Trident §f§r: Right-click\"}"}}
