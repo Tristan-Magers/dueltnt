@@ -9,25 +9,30 @@ execute as @s[scores={class=3}] at @s run playsound minecraft:entity.tnt.primed 
 execute as @s[scores={class=3}] at @s run summon tnt ~ ~.5 ~ {Fuse:5}
 execute as @s[scores={class=3}] at @s run effect give @p speed 1 1
 execute as @s[scores={class=2}] at @s run effect give @s levitation 1 8
-execute as @s[scores={class=2}] at @s run scoreboard players set @s nolev -10
+execute as @s[scores={class=2}] at @s run scoreboard players set @s nolev 17
 #execute as @s[scores={class=2}] at @s run scoreboard players set @s ghostshift 20
 
-execute unless entity @e[scores={mode=1}] run execute as @s[scores={class=1}] at @s run effect give @s jump_boost 3 4
-execute unless entity @e[scores={mode=1}] run execute as @s[scores={class=1}] at @s run scoreboard players set @p Invis 20
-execute if entity @e[scores={mode=1}] run execute as @s[scores={class=1}] at @s run effect give @s jump_boost 3 5
-execute if entity @e[scores={mode=1}] run execute as @s[scores={class=1}] at @s run scoreboard players set @p Invis 35
+execute as @s[scores={class=1}] at @s run tag @s add divekick
+#execute as @s[scores={class=1}] at @s run effect give @s jump_boost 3 4
+#execute as @s[scores={class=1}] at @s run scoreboard players set @p Invis 20
 
 execute as @s[scores={class=0},distance=..100] at @s run summon creeper ~ ~.05 ~ {ignited:1,Fuse:3,Activeeffect:[{Id:14,Amplifier:1,Duration:999999,ShowParticles:0b}]}
+execute as @s[scores={class=0},distance=..100] at @s run team join noCol @e[type=creeper,distance=..3]
+
+#execute as @s[scores={class=0},distance=..100] at @s run summon minecraft:fireball ~ ~ ~ {Motion:[0.0,-1.0,0.0],ExplosionPower:3}
+#execute as @s[scores={class=0},distance=..100] at @s run summon minecraft:slime ~ ~-0.9 ~ {NoAI:1,Size:0,Invulnerable:1,Tags:["killthis"]}
+
+#execute as @s[scores={class=0}] at @s run summon minecraft:marker ~ ~ ~ {Tags:["soldiershift"]}
 
 scoreboard players set @s timer 1
 
 scoreboard players add @s overlordsc 1
 
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=0,timer=1}] 17 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=1,timer=1}] 88 levels
+execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=1,timer=1}] 100 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=2,timer=1}] 73 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=3,timer=1}] 80 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=4,timer=1}] 135 levels
+execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=4,timer=1}] 160 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=6,timer=1}] 160 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=7,timer=1}] 160 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=9,timer=1}] -1 levels
@@ -54,27 +59,8 @@ execute as @s[scores={class=7}] at @s run effect give @s speed 3 3
 #execute as @s[scores={class=9,Y=..3}] at @s run fill ~-1 0 ~-1 ~1 ~-1 ~1 purple_wool replace air
 #execute as @s[scores={class=9}] at @s run tp @s @s
 
-execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run summon marker ~ ~ ~ {Tags:["overlord_org_tp"]}
-execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run tp @e[limit=1,type=marker,tag=overlord_org_tp,tag=!kill] @s
-
 execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run function game:char/overlord/relocate
 execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run function game:char/overlord/restore_land
-
-execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run summon marker ~ ~ ~ {Tags:["overlord_new_tp"]}
-execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s as @e[limit=1,type=marker,tag=overlord_new_tp,tag=!kill] store result score @s Y run data get entity @s Pos[1]
-
-execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run scoreboard players operation @s t1 = @e[limit=1,type=marker,tag=overlord_new_tp,tag=!kill] Y
-execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run scoreboard players operation @s t1 -= @s Y
-
-execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run effect give @s levitation 1 1
-execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run scoreboard players set @s nolev 4
-execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9,t1=0..}] at @s run scoreboard players set @s nolev 8
-
-execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run tp @s @e[limit=1,type=marker,tag=overlord_org_tp,tag=!kill]
-execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run function game:char/overlord/raise_y
-
-execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run tag @e[type=marker,tag=overlord_org_tp] add kill
-execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run tag @e[type=marker,tag=overlord_new_tp] add kill
 
 execute unless entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run summon tnt ~ ~ ~ {Fuse:23}
 execute unless entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run summon tnt ~ ~ ~ {Fuse:23}
@@ -103,9 +89,25 @@ execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s 
 
 xp add @s[scores={class=8,timer=1}] 45 levels
 
-execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {Fuse:3}
-execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {Fuse:3}
+execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {NoGravity:1,Fuse:4}
+execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {NoGravity:1,Fuse:4}
+
+#execute as @s[scores={class=10}] at @s run effect give @s levitation 1 1
+
+#execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {Fuse:3}
+#execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {Fuse:3}
 
 execute as @s[scores={class=10}] at @s run effect give @s levitation 1 3
 
 xp add @s[scores={class=10,timer=1}] 60 levels
+
+#reaper shift
+execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:10,NoGravity:1}
+execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:10,NoGravity:1}
+execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:0,NoGravity:1}
+execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:0,NoGravity:1}
+
+execute as @s[scores={class=9,overlordsc=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
+execute as @s[scores={class=9,overlordsc=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
+execute as @s[scores={class=9,overlordsc=3}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
+execute as @s[scores={class=9,overlordsc=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]

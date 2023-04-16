@@ -1,0 +1,33 @@
+{
+  "classes:class5": {
+    "criteria": {
+      "mad": "2023-02-17 01:17:05 +0000"
+    },
+    "done": true
+  },
+  "delta:player_setup": {
+    "criteria": {
+      "requirement": "2023-02-17 00:41:44 +0000"
+    },
+    "done": true
+  },
+  "classes:root": {
+    "criteria": {
+      "warrior": "2023-02-17 00:41:44 +0000"
+    },
+    "done": true
+  },
+  "classes:class10": {
+    "criteria": {
+      "overlord": "2023-02-27 04:36:07 +0000"
+    },
+    "done": true
+  },
+  "survival:root": {
+    "criteria": {
+      "warrior": "2023-02-17 00:41:44 +0000"
+    },
+    "done": true
+  },
+  "DataVersion": 3218
+}

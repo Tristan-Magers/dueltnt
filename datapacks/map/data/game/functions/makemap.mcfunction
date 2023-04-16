@@ -116,10 +116,10 @@ execute as @e[name=Map,type=armor_stand,scores={game=4}] at @s run fill 644 2 64
 execute as @e[name=Map,type=armor_stand,scores={game=4}] at @s run fill 590 2 590 590 69 644 minecraft:birch_planks
 execute as @e[name=Map,type=armor_stand,scores={game=4}] at @s run fill 590 2 590 644 69 590 minecraft:birch_planks
 
-execute as @e[name=Map,type=armor_stand,scores={game=5}] at @s run fill 644 2 644 644 69 590 minecraft:packed_ice
-execute as @e[name=Map,type=armor_stand,scores={game=5}] at @s run fill 644 2 644 590 69 644 minecraft:packed_ice
-execute as @e[name=Map,type=armor_stand,scores={game=5}] at @s run fill 590 2 590 644 69 590 minecraft:packed_ice
-execute as @e[name=Map,type=armor_stand,scores={game=5}] at @s run fill 590 2 590 590 69 644 minecraft:packed_ice
+execute as @e[name=Map,type=armor_stand,scores={game=5}] at @s run fill 644 2 644 644 69 590 minecraft:blue_ice
+execute as @e[name=Map,type=armor_stand,scores={game=5}] at @s run fill 644 2 644 590 69 644 minecraft:blue_ice
+execute as @e[name=Map,type=armor_stand,scores={game=5}] at @s run fill 590 2 590 644 69 590 minecraft:blue_ice
+execute as @e[name=Map,type=armor_stand,scores={game=5}] at @s run fill 590 2 590 590 69 644 minecraft:blue_ice
 
 execute as @e[name=Map,type=armor_stand,scores={game=6}] at @s run fill 644 2 644 644 69 590 minecraft:black_wool
 execute as @e[name=Map,type=armor_stand,scores={game=6}] at @s run fill 644 2 644 590 69 644 minecraft:black_wool
@@ -198,3 +198,8 @@ fill 593 1 643 590 1 591 minecraft:stone
 fill 644 1 643 642 1 591 minecraft:stone
 fill 591 1 593 643 1 591 minecraft:stone
 fill 591 1 644 643 1 642 minecraft:stone
+
+# reset area for overlord blocks
+fill 697 22 646 737 11 600 air
+fill 697 35 646 737 23 600 air
+fill 697 36 646 737 45 600 air

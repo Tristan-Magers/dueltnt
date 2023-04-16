@@ -10,4 +10,7 @@ clear @s[scores={class=9,masterc=..24},tag=!hasshov] stone_pickaxe
 clear @s[scores={class=9,masterc=..24},tag=!hasshov] iron_pickaxe
 clear @s[scores={class=9,masterc=..24},tag=!hasshov] golden_pickaxe
 clear @s[scores={class=9,masterc=..24},tag=!hasshov] diamond_pickaxe
+execute as @s[scores={class=9,masterc=..24,gather_cooldown=..0},tag=!hasshov,tag=!gather] at @s run function game:char/overlord/gather
+execute as @s[scores={class=9,masterc=..24,gather_cooldown=1..},tag=!hasshov,tag=!gather] at @s run playsound minecraft:block.note_block.didgeridoo master @a ~ ~ ~ 1 1
+execute as @s[scores={class=9,masterc=..24,gather_cooldown=1..},tag=!hasshov,tag=!gather] at @s run title @s actionbar [{"text":"Gather on cooldown (","color":"white","bold":true},{"score":{"name":"@s","objective":"gather_cooldown"},"color":"light_purple","bold":true},{"text":"s)","color":"white","bold":true}]
 execute as @s[scores={class=9,masterc=..24},tag=!hasshov] at @s run function game:char/overlord/masterwanduse

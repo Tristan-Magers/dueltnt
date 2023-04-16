@@ -1,4 +1,4 @@
-summon minecraft:armor_stand ~ ~ ~ {Small:1,Marker:1,Invulnerable:1,Tags:["groundpath"],Invisible:1,DisabledSlots:4144959}
+summon minecraft:armor_stand ~ ~ ~ {Small:1,Marker:1,Silent:1,Invulnerable:1,Tags:["groundpath"],Invisible:1,DisabledSlots:4144959}
 
 effect give @p minecraft:speed 4 1
 execute unless entity @e[scores={mode=1}] run effect give @p minecraft:jump_boost 3 3
@@ -7,8 +7,10 @@ execute if entity @e[scores={mode=1}] run effect give @p minecraft:jump_boost 3 
 tp @e[limit=1,tag=groundpath,sort=nearest] @p
 execute as @e[limit=1,tag=groundpath,sort=nearest] at @s run tp @s ~ ~-1 ~ ~ 0
 
-scoreboard players remove @s masterb 17
-clear @s gold_ore 17
+scoreboard players remove @s masterb 16
+clear @s gold_ore 16
+
+scoreboard players set @s slide_cooldown 8
 
 function game:char/overlord/masterwanditems
 

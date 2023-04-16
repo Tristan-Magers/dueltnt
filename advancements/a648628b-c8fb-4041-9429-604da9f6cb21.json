@@ -1,15 +1,63 @@
 {
   "classes:root": {
     "criteria": {
-      "warrior": "2021-07-26 01:02:23 -0600"
+      "warrior": "2021-10-15 17:03:09 -0600"
     },
     "done": true
   },
   "survival:root": {
     "criteria": {
-      "warrior": "2021-07-26 01:02:23 -0600"
+      "warrior": "2021-10-15 17:03:09 -0600"
     },
     "done": true
   },
-  "DataVersion": 2730
+  "classes:class10": {
+    "criteria": {
+      "overlord": "2022-01-07 15:44:35 -0700"
+    },
+    "done": true
+  },
+  "classes:class8": {
+    "criteria": {
+      "gardener": "2022-01-07 18:01:14 -0700"
+    },
+    "done": true
+  },
+  "classes:class3": {
+    "criteria": {
+      "trapper": "2022-01-07 18:01:23 -0700"
+    },
+    "done": true
+  },
+  "classes:class7": {
+    "criteria": {
+      "echo": "2022-01-07 21:38:35 -0700"
+    },
+    "done": true
+  },
+  "classes:class6": {
+    "criteria": {
+      "reaper": "2022-01-07 21:53:51 -0700"
+    },
+    "done": true
+  },
+  "classes:class4": {
+    "criteria": {
+      "wizard": "2022-03-14 16:50:28 -0600"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/mangrove_boat": {
+    "criteria": {
+      "in_water": "2022-08-15 18:12:46 -0600"
+    },
+    "done": true
+  },
+  "delta:player_setup": {
+    "criteria": {
+      "requirement": "2022-12-17 21:55:12 -0700"
+    },
+    "done": true
+  },
+  "DataVersion": 3337
 }

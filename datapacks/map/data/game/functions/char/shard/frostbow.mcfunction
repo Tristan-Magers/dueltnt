@@ -23,7 +23,7 @@ scoreboard players set @s sqval 0
 function game:sqroot
 scoreboard players operation @s mult = @s sqval
 
-summon armor_stand ~ ~ ~ {Tags:["frostmark"],Marker:1,Invulnerable:1}
+summon armor_stand ~ ~ ~ {Tags:["frostmark"],Marker:1,Silent:1,Invulnerable:1}
 tp @e[tag=frostmark,limit=1] @p[gamemode=adventure,distance=..10,scores={class=10}]
 
 #right arrow
@@ -45,6 +45,7 @@ scoreboard players operation @s mag *= @s mult
 
 execute store result entity @e[tag=farrowt,limit=1] Motion[0] double -.00001 run scoreboard players get @s mag
 
+tag @e[tag=farrowt] add sidearrow
 tag @e[tag=farrowt] remove farrowt
 
 #left arrow
@@ -66,6 +67,7 @@ scoreboard players operation @s mag *= @s mult
 
 execute store result entity @e[tag=farrowt,limit=1] Motion[0] double -.00001 run scoreboard players get @s mag
 
+tag @e[tag=farrowt] add sidearrow
 tag @e[tag=farrowt] remove farrowt
 
 kill @e[tag=frostmark]

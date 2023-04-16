@@ -16,3 +16,9 @@ execute unless entity @e[scores={mode=1}] run item replace entity @s[nbt=!{Inven
 execute if entity @e[scores={mode=1}] run item replace entity @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:4b}]},scores={groundtime=..0,grounduse=2}] hotbar.4 with minecraft:red_dye{display:{Name:"{\"italic\":false,\"text\":\"§eGround Spell : Right-click\"}"}}
 execute if entity @e[scores={mode=1}] run item replace entity @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:4b}]},scores={groundtime=..0,grounduse=1}] hotbar.4 with minecraft:red_dye{display:{Name:"{\"italic\":false,\"text\":\"§eGround Spell : Right-click\"}"}} 2
 execute if entity @e[scores={mode=1}] run item replace entity @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:4b}]},scores={groundtime=..0,grounduse=0}] hotbar.4 with minecraft:red_dye{display:{Name:"{\"italic\":false,\"text\":\"§eGround Spell : Right-click\"}"}} 3
+
+clear @s[nbt=!{Inventory:[{id:"minecraft:pink_dye",Slot:2b}]},scores={blastwandtime=89..90}] pink_dye
+execute as @s[nbt=!{Inventory:[{id:"minecraft:pink_dye",Slot:2b}]},scores={blastwandtime=89..90}] run scoreboard players set @s blastwandtime 50
+
+clear @s[nbt=!{Inventory:[{id:"minecraft:pink_dye",Slot:1b}]},tag=boomshard,scores={boomwandtime=12..40}] pink_dye
+execute as @s[nbt=!{Inventory:[{id:"minecraft:pink_dye",Slot:1b}]},tag=boomshard,scores={boomwandtime=12..40}] run tag @s remove boomshard

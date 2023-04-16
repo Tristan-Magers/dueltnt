@@ -20,6 +20,7 @@ tp @e[type=slime] ~ ~-1000 ~
 kill @e[type=fireball]
 kill @e[type=creeper]
 kill @e[tag=telebow]
+kill @e[tag=phantom_block]
 
 #win text
 execute as @a[tag=plague] at @s run scoreboard players operation @s class = @s realclass

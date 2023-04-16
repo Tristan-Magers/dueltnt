@@ -1,4 +1,4 @@
-scoreboard players set @p Sreload 105
+scoreboard players set @p Sreload 100
 clear iron_hoe
 
 #function game:takeang

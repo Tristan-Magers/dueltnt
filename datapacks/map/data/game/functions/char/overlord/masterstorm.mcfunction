@@ -1,5 +1,6 @@
 summon minecraft:armor_stand ~ ~ ~ {Small:1,Marker:0,Invulnerable:1,Tags:["stormtnt"],Invisible:1,ArmorItems:[{},{},{},{Count:1,id:lapis_ore}],DisabledSlots:4144959}
 
+scoreboard players operation @e[limit=1,tag=stormtnt,sort=nearest] object_id = @s object_id
 tp @e[limit=1,tag=stormtnt,sort=nearest] @p
 
 #execute as @e[limit=1,tag=stormtnt,sort=nearest] at @s run tp @s ~ ~2.1 ~

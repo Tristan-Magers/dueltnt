@@ -3,7 +3,7 @@ tag @s add frostuser
 function game:char/shard/frostsuck/frostscan
 
 clear @s[gamemode=adventure] lime_dye
-scoreboard players set @s frostsT 185
+scoreboard players set @s frostsT 240
 
 tp @s @s
 tp @s ~ ~.3 ~

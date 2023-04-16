@@ -39,6 +39,11 @@ execute as @s[scores={countdown=15}] at @s run execute as @a[x=620,y=20,z=600,di
 
 execute as @s[scores={countdown=15}] at @s positioned 614 30 614 run kill @e[type=minecraft:armor_stand,distance=..50]
 
+#clone extra map for phantom blocks
+execute as @s[scores={countdown=10}] at @s run clone 596 7 596 639 21 639 596 7 696
+execute as @s[scores={countdown=10}] at @s run clone 596 22 596 639 34 639 596 22 696
+execute as @s[scores={countdown=10}] at @s run clone 596 35 596 639 49 639 596 35 696
+
 execute as @s[scores={countdown=0}] at @s run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"-GO!-","color":"dark_green","bold":"true"}]
 execute as @s[scores={countdown=0}] at @s run execute as @a[x=620,y=20,z=600,distance=..100] at @s run playsound minecraft:entity.player.levelup master @p
 execute as @s[scores={countdown=0}] at @s run execute as @a[x=620,y=20,z=600,distance=..100] at @s run playsound minecraft:entity.shulker_bullet.hit master @p ~ ~ ~ 1 1

@@ -1,5 +1,12 @@
+#
+gamerule mobGriefing true
+
+#
+execute as @e[tag=killthis,type=slime] at @s run fill ~5 ~5 ~5 ~-5 ~-5 ~-5 air replace fire
+tp @e[tag=killthis] ~ ~-1000 ~
+
 execute as @e[type=area_effect_cloud,tag=!a,nbt={Potion:"minecraft:poison"}] at @s run function game:char/gardener/plaguepot
-execute as @e[type=area_effect_cloud,tag=!a,nbt={Potion:"minecraft:swiftness"}] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1,Marker:1,Tags:["a","airnade"]}
+execute as @e[type=area_effect_cloud,tag=!a,nbt={Potion:"minecraft:swiftness"}] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1,Marker:1,Silent:1,Tags:["a","airnade"]}
 kill @e[type=area_effect_cloud,tag=!a,tag=!gameae]
 
 clear @a[gamemode=spectator]
@@ -121,7 +128,7 @@ scoreboard players operation @e[name=Portal] tntID -= @p[scores={SetPortalP=1..}
 kill @e[name=Portal,type=armor_stand,scores={tntID=0}]
 scoreboard players operation @e[name=Portal] tntID += @p[scores={SetPortalP=1..}] tntID
 
-execute as @p[scores={SetPortalP=1..}] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"Portal\"}",Invulnerable:1,Marker:1,Invisible:1}
+execute as @p[scores={SetPortalP=1..}] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"Portal\"}",Invulnerable:1,Marker:1,Silent:1,Invisible:1}
 
 scoreboard players add @e[name=Portal,type=armor_stand] PS 1
 execute as @p[scores={SetPortalP=1..}] at @s run scoreboard players operation @e[name=Portal,type=armor_stand,distance=..1] tntID = @p tntID
@@ -184,7 +191,7 @@ tp @a[scores={rejoin=1..,inarena=..0}] 500 20.5 500 0 0
 scoreboard players add @a[scores={rejoin=1..}] class 0
 gamemode spectator @a[scores={Y=..0,inarena=1..}]
 tp @a[scores={Y=..0,inarena=1..}] 614 40 614
-title @a times 0 10 20
+title @a[scores={Y=..0,inarena=1..}] times 0 10 20
 effect clear @a[scores={rejoin=1..}] blindness
 scoreboard players reset @a[scores={rejoin=1..}] rejoin
 
@@ -196,34 +203,7 @@ execute as @e[type=armor_stand,tag=stnt] at @s run tag @e[type=tnt,tag=!tnt,dist
 execute as @e[tag=timer,scores={timer=1}] at @s run function game:tntblow
 
 # armor
-item replace entity @a[gamemode=adventure,scores={Invis=2..}] armor.chest with minecraft:air{Unbreakable:1}
-item replace entity @a[gamemode=adventure,scores={class=2,ingame=1..,Invis=0..1},nbt=!{Inventory:[{id:"minecraft:diamond_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:diamond_chestplate{Unbreakable:1}
-item replace entity @a[gamemode=adventure,scores={class=0,ingame=1..,Invis=0..1},nbt=!{Inventory:[{id:"minecraft:iron_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:iron_chestplate{Unbreakable:1}
-item replace entity @a[gamemode=adventure,scores={class=1,ingame=1..,Invis=0..1},nbt=!{Inventory:[{id:"minecraft:golden_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:golden_chestplate{Unbreakable:1}
-item replace entity @a[gamemode=adventure,scores={Invis=2..}] armor.head with minecraft:air{Unbreakable:1}
-item replace entity @a[gamemode=adventure,scores={class=3,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:leather_helmet",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:leather_helmet{Unbreakable:1}
-item replace entity @a[gamemode=adventure,tag=red,x=620,y=20,z=620,distance=..500,nbt=!{Inventory:[{id:"minecraft:red_stained_glass",Slot:103b}]},scores={teamed=1..,Invis=0..1,ingame=1..}] armor.head with red_stained_glass{ench:[{id:10,lvl:1}]}
-item replace entity @a[gamemode=adventure,tag=green,x=620,y=20,z=620,distance=..500,nbt=!{Inventory:[{id:"minecraft:green_stained_glass",Slot:103b}]},scores={teamed=1..,Invis=0..1,ingame=1..}] armor.head with green_stained_glass{ench:[{id:10,lvl:1}]}
-item replace entity @a[gamemode=adventure,tag=blue,x=620,y=20,z=620,distance=..500,nbt=!{Inventory:[{id:"minecraft:blue_stained_glass",Slot:103b}]},scores={teamed=1..,Invis=0..1,ingame=1..}] armor.head with blue_stained_glass{ench:[{id:10,lvl:1}]}
-item replace entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={class=0..2,teamed=..0}] armor.head with minecraft:air{Unbreakable:1}
-item replace entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={ingame=..0}] armor.head with minecraft:air{Unbreakable:1}
-item replace entity @a[gamemode=adventure,scores={class=3,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:leather_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:leather_chestplate{Unbreakable:1}
-item replace entity @a[gamemode=adventure,scores={class=4,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:chainmail_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:chainmail_chestplate{Unbreakable:1}
-item replace entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={ingame=..0}] armor.chest with minecraft:air{Unbreakable:1}
-item replace entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={class=4,teamed=..0}] armor.head with minecraft:air{Unbreakable:1}
-item replace entity @a[gamemode=adventure,scores={class=6,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:netherite_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:netherite_chestplate
-item replace entity @a[gamemode=adventure,x=620,y=20,z=620,distance=..500,nbt=!{Inventory:[{id:"minecraft:diamond_helmet",Slot:103b}]},scores={class=5,teamed=..0,Invis=0..1,ingame=1..}] armor.head with minecraft:diamond_helmet{Unbreakable:1}
-item replace entity @a[gamemode=adventure,x=500,y=20,z=500,distance=..80,scores={class=5..6,ingame=..0}] armor.head with minecraft:air{Unbreakable:1}
-item replace entity @a[gamemode=adventure,scores={class=4,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:chainmail_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:chainmail_chestplate{Unbreakable:1}
-item replace entity @a[gamemode=adventure,scores={class=7,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:golden_leggings",Slot:101b}]},x=620,y=20,z=620,distance=..500] armor.legs with minecraft:golden_leggings{Unbreakable:1}
-item replace entity @a[gamemode=adventure,scores={class=7,Invis=0..1,ingame=0},x=620,y=20,z=620,distance=..500] armor.legs with minecraft:air
-item replace entity @a[gamemode=adventure,scores={class=5,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:air{Unbreakable:1}
-item replace entity @a[gamemode=adventure,scores={class=7..,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:air{Unbreakable:1}
-item replace entity @a[gamemode=adventure,scores={class=6..7,teamed=..0,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.head with minecraft:air{Unbreakable:1}
-item replace entity @a[gamemode=adventure,scores={class=8,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:golden_helmet",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:golden_helmet{Unbreakable:1}
-item replace entity @a[gamemode=adventure,scores={class=9,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:chicken",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:chicken
-item replace entity @a[gamemode=adventure,scores={class=10,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:netherite_helmet",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:netherite_helmet
-item replace entity @a[gamemode=adventure,scores={class=99,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:iron_ore",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:iron_ore
+execute as @a[gamemode=adventure] run function game:player/armor
 
 #Modes
 execute if entity @e[scores={mode=1}] run function game:mode/overpowered/overpowered
@@ -375,3 +355,18 @@ execute as @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=blue,scores=
 
 execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run scoreboard players set §aGREEN l 0
 execute as @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run scoreboard players operation §aGREEN l += @s Lives
+
+#testing
+execute as @a[nbt={OnGround:1b},tag=ground_boom] at @s run summon tnt ~ ~ ~ {Fuse:4}
+execute as @a[nbt={OnGround:1b},tag=ground_boom] at @s run summon tnt ~ ~ ~ {Fuse:2}
+execute as @a[nbt={OnGround:1b},tag=ground_boom] at @s run tp @s @s
+execute as @a[nbt={OnGround:1b},tag=ground_boom] at @s run tp @s ~ ~0.1 ~
+execute as @a[nbt={OnGround:1b},tag=ground_boom] at @s run effect give @s levitation 1 10 true
+execute as @a[nbt={OnGround:1b},tag=ground_boom] at @s run scoreboard players set @s nolev 6
+tag @a[nbt={OnGround:1b},tag=ground_boom] remove ground_boom
+execute as @a[tag=divekick] at @s run function game:physics/dive_kick
+
+execute as @a[scores={ass_pearl=0..}] at @s run function game:physics/ass_pearl
+
+execute as @e[tag=blue_tnt] at @s run tp @s @s
+team join blue_color @e[tag=blue_tnt]
