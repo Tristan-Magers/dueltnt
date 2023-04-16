@@ -59,8 +59,27 @@ execute as @s[scores={class=7}] at @s run effect give @s speed 3 3
 #execute as @s[scores={class=9,Y=..3}] at @s run fill ~-1 0 ~-1 ~1 ~-1 ~1 purple_wool replace air
 #execute as @s[scores={class=9}] at @s run tp @s @s
 
+execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run summon marker ~ ~ ~ {Tags:["overlord_org_tp"]}
+execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run tp @e[limit=1,type=marker,tag=overlord_org_tp,tag=!kill] @s
+
 execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run function game:char/overlord/relocate
 execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run function game:char/overlord/restore_land
+
+execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run summon marker ~ ~ ~ {Tags:["overlord_new_tp"]}
+execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s as @e[limit=1,type=marker,tag=overlord_new_tp,tag=!kill] store result score @s Y run data get entity @s Pos[1]
+
+execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run scoreboard players operation @s t1 = @e[limit=1,type=marker,tag=overlord_new_tp,tag=!kill] Y
+execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run scoreboard players operation @s t1 -= @s Y
+
+execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run effect give @s levitation 1 1
+execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run scoreboard players set @s nolev 4
+execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9,t1=0..}] at @s run scoreboard players set @s nolev 8
+
+execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run tp @s @e[limit=1,type=marker,tag=overlord_org_tp,tag=!kill]
+execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run function game:char/overlord/raise_y
+
+execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run tag @e[type=marker,tag=overlord_org_tp] add kill
+execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run tag @e[type=marker,tag=overlord_new_tp] add kill
 
 execute unless entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run summon tnt ~ ~ ~ {Fuse:23}
 execute unless entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run summon tnt ~ ~ ~ {Fuse:23}
