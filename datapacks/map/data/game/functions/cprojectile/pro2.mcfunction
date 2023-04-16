@@ -1,5 +1,5 @@
-clear @s gold_ore 7
-scoreboard players remove @s masterb 7
+clear @s gold_ore 6
+scoreboard players remove @s masterb 6
 
 summon minecraft:armor_stand ~ ~ ~ {Small:1,Marker:0,Invulnerable:1,Tags:["mastertnt","newbomb"],Invisible:1,ArmorItems:[{},{},{},{Count:1,id:diamond_ore}],DisabledSlots:4144959}
 

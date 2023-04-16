@@ -21,8 +21,8 @@ execute as @s[tag=slow] at @s run execute store result entity @e[limit=1,tag=new
 execute as @s[tag=med] at @s run execute store result entity @e[limit=1,tag=newtrack] Motion[0] double .005 run scoreboard players get @s DirX
 execute as @s[tag=med] at @s run execute store result entity @e[limit=1,tag=newtrack] Motion[2] double .005 run scoreboard players get @s DirZ
 
-execute as @s[tag=fast] at @s run execute store result entity @e[limit=1,tag=newtrack] Motion[0] double .0085 run scoreboard players get @s DirX
-execute as @s[tag=fast] at @s run execute store result entity @e[limit=1,tag=newtrack] Motion[2] double .0085 run scoreboard players get @s DirZ
+execute as @s[tag=fast] at @s run execute store result entity @e[limit=1,tag=newtrack] Motion[0] double .008 run scoreboard players get @s DirX
+execute as @s[tag=fast] at @s run execute store result entity @e[limit=1,tag=newtrack] Motion[2] double .008 run scoreboard players get @s DirZ
 
 scoreboard players operation @s y = @s DirY
 
@@ -30,7 +30,7 @@ scoreboard players remove @s y 988
 
 execute as @s[tag=slow] at @s run execute store result entity @e[limit=1,tag=newtrack] Motion[1] double .0025 run scoreboard players get @s y
 execute as @s[tag=med] at @s run execute store result entity @e[limit=1,tag=newtrack] Motion[1] double .005 run scoreboard players get @s y
-execute as @s[tag=fast] at @s run execute store result entity @e[limit=1,tag=newtrack] Motion[1] double .0085 run scoreboard players get @s y
+execute as @s[tag=fast] at @s run execute store result entity @e[limit=1,tag=newtrack] Motion[1] double .008 run scoreboard players get @s y
 
 scoreboard players operation @e[limit=1,tag=newtrack] y = @s y
 

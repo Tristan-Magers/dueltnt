@@ -18,6 +18,7 @@ execute if entity @e[scores={mode=1}] run summon tnt ~-1.83 ~1.5 ~-1.83 {Fuse:11
 
 playsound minecraft:entity.ghast.shoot master @a ~ ~ ~ 1 0
 playsound minecraft:entity.phantom.bite master @a ~ ~ ~ 1 1.5
+
 playsound minecraft:entity.phantom.hurt master @a ~ ~ ~ 1 1.7
 
 

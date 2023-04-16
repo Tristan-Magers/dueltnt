@@ -9,7 +9,7 @@ execute as @s[scores={class=3}] at @s run playsound minecraft:entity.tnt.primed 
 execute as @s[scores={class=3}] at @s run summon tnt ~ ~.5 ~ {Fuse:5}
 execute as @s[scores={class=3}] at @s run effect give @p speed 1 1
 execute as @s[scores={class=2}] at @s run effect give @s levitation 1 8
-execute as @s[scores={class=2}] at @s run scoreboard players set @s nolev 17
+execute as @s[scores={class=2}] at @s run scoreboard players set @s nolev -10
 #execute as @s[scores={class=2}] at @s run scoreboard players set @s ghostshift 20
 
 execute unless entity @e[scores={mode=1}] run execute as @s[scores={class=1}] at @s run effect give @s jump_boost 3 4
@@ -109,14 +109,3 @@ execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-
 execute as @s[scores={class=10}] at @s run effect give @s levitation 1 3
 
 xp add @s[scores={class=10,timer=1}] 60 levels
-
-#reaper shift
-execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:10,NoGravity:1}
-execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:10,NoGravity:1}
-execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:0,NoGravity:1}
-execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:0,NoGravity:1}
-
-execute as @a[scores={class=9,overlordsc=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Unstable Mass","color":"gray","bold":"true"},{"text":" (3 Remaining) ","color":"white"}]
-execute as @a[scores={class=9,overlordsc=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Unstable Mass","color":"gray","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
-execute as @a[scores={class=9,overlordsc=3}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Unstable Mass","color":"gray","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
-execute as @a[scores={class=9,overlordsc=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Unstable Mass","color":"gray","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]

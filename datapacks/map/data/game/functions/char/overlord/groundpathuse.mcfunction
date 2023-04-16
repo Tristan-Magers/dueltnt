@@ -1,4 +1,4 @@
-summon minecraft:armor_stand ~ ~ ~ {Small:1,Marker:1,Silent:1,Invulnerable:1,Tags:["groundpath"],Invisible:1,DisabledSlots:4144959}
+summon minecraft:armor_stand ~ ~ ~ {Small:1,Marker:1,Invulnerable:1,Tags:["groundpath"],Invisible:1,DisabledSlots:4144959}
 
 effect give @p minecraft:speed 4 1
 execute unless entity @e[scores={mode=1}] run effect give @p minecraft:jump_boost 3 3
