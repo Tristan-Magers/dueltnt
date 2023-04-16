@@ -18,8 +18,18 @@ execute as @s[scores={enderct=1,class=0}] run effect give @s minecraft:levitatio
 execute as @s[scores={enderct=1,class=1}] run tp @s @s
 #execute as @s[scores={enderct=1,class=1}] run scoreboard players set @s nolev 12
 #execute as @s[scores={enderct=1,class=1}] run effect give @s minecraft:levitation 1 0 true
-execute as @s[scores={enderct=1,class=1}] unless block ~ ~-1 ~ air run summon tnt ~ ~ ~
-execute as @s[scores={enderct=1,class=1}] if block ~ ~-1 ~ air run summon tnt ~ ~-1 ~
+
+execute as @s[scores={enderct=1,class=1}] run effect give @s speed 2 2
+execute as @s[scores={enderct=1,class=1}] run effect give @s jump_boost 2 4
+
+#execute as @s[scores={enderct=1,class=1}] unless block ~ ~-1 ~ air run summon tnt ~ ~ ~
+#execute as @s[scores={enderct=1,class=1}] if block ~ ~-1 ~ air run summon tnt ~ ~-1 ~
+#execute as @s[scores={enderct=1,class=1}] if block ~ ~-1 ~ air run effect give @s levitation 1 0 true
+#execute as @s[scores={enderct=1,class=1}] if block ~ ~-1 ~ air run scoreboard players set @s nolev 2
+
+#execute as @s[scores={enderct=1,class=1}] run gamerule mobGriefing false
+#execute as @s[scores={enderct=1,class=1}] run summon creeper ~ ~ ~ {ingited:1,Fuse:0}
+#execute as @s[scores={enderct=1,class=1}] run scoreboard players set @s ass_pearl 1
 
 execute as @s[scores={enderct=1,class=2}] run effect give @s minecraft:levitation 1 1 true
 execute as @s[scores={enderct=1,class=2}] run scoreboard players set @s nolev 12

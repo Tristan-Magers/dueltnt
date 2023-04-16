@@ -9,7 +9,10 @@ playsound minecraft:entity.sheep.shear master @a ~ ~ ~ 1 1.5
 playsound minecraft:block.lantern.hit master @a ~ ~ ~ 1 1.9
 
 clear @s leather
+scoreboard players set @s[scores={dartuse=..0}] dartcool 6
+scoreboard players set @s[scores={dartuse=1..}] dartcool 40
 scoreboard players add @s dartuse 1
+
 scoreboard players set @s dartcool 7
 
 execute as @s[scores={dartuse=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Explosive Dart","color":"red","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]

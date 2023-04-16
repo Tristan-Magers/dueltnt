@@ -20,4 +20,5 @@ playsound minecraft:entity.ghast.shoot master @a ~ ~ ~ 1 0
 playsound minecraft:entity.phantom.bite master @a ~ ~ ~ 1 1.5
 playsound minecraft:entity.phantom.hurt master @a ~ ~ ~ 1 1.7
 
+
 effect give @p minecraft:levitation 1 2

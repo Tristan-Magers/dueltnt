@@ -116,7 +116,7 @@ item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.2 with barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}}
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.3 with barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}}
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.4 with barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}}
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=9}] hotbar.6 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Crouch for unstable mass\"}"}}
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=9}] hotbar.6 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Crouch to Restore World (recreates broken blocks and brings you to same level as stage)\"}"}}
 
 scoreboard players set @a boomwandtime 0
 scoreboard players set @a blastwandtime 0
