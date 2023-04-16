@@ -1,0 +1,140 @@
+*Season 9 Update*
+
+[Character Changes]
+
+Assassin
+- Now has Jump Boost level 2 (previously none)
+- Shift (Boost) has been replaced with "Dive Kick"
+- Shift takes .6s longer to reload (4.4s -> 5s)
+- Magic Star now alternates with Explosive Dart (1 of each)
+    - 1.75s to reload each (previously 5.25s to reload stars)
+    - Note: Explosive Darts are therefore now a reloading item
+    - Note: You get 1 less Magic Star (2 -> 1)
+- Magic Stars explode 1s faster (2.5s -> 1.5s)
+- Magic Stars fire 0.4 blocks higher (-0.2 blocks from crosshair) [quality of life]
+- Explosive Darts are now 2 tnt (1 -> 2)
+- Explosive Darts are now a projectile (12 blocks per/s)
+- Explosive Darts Take 0.25s longer to explode (0.2s -> 0.45s)
+- Explosive Darts now collide with Magic Stars
+- Teleport no longer causes you to explode
+- Teleport gives higher levels of jump boost and speed
+- Sneak Attack TNT takes 0.35s longer to explode (0.1s -> 0.45s)
+- Sneak Attack and Dart TNT does not get effected by gravity or knockback
+
+Ghost
+- Smoke Bomb's second TNT explodes 0.05s slower (0.8s -> 0.85s) (now 0.15s after first)
+
+Trapper
+- TNT Trap explodes 0.1s slower (0.05s -> 0.15s)
+- Fast Trap explodes 0.2s slower (0.05s -> 0.25s)
+- Short Blast TNT explodes 0.05s slower (0.05s -> 0.1s)
+- Added "Phantom Blocks"
+    - Recreates blocks of map where-ever you are looking
+    - Phantom blocks break when stepped on
+    - Lasts 16s
+- Track Bomb switches between itself and Time Bomb
+	- 5.5s to Phantom Blocks, 5.5s to Track Bomb (previously 10s)
+- Switched Platform and Track Bomb slots
+- Track Bomb only has an explosion of 1 tnt if it explodes due to time (previously 2 tnt)
+- Platform lasts 1s longer (2.5s -> 3.5s)
+
+Wizard
+- Fireball spawns 0.3 block in front of you
+- Fireball speed increased (bigger increase at minimum than at max)
+- "Explode Ghost Creeper" cooldown reduced 2.5s (7s -> 4.5s)
+- "Pig Transform" can now be used anywhere (can still be placed to teleport to location)
+- "Pig Transform" 0.5s faster if used on ground (2s -> 1.5s)
+- "Pig Transform" reloads 2s slower (5s -> 7s) (starts after explosion)
+- Shift (Teleport) cooldown increased 1.25s (6.75s -> 8s)
+- Shift (Teleport) can no longer kill self off of top
+- Added "Throw Creeper"
+    - Active when no creeper out
+    - Causes 1.5s cooldown on "Explode Ghost Creeper"
+    - Thrown Creeper has slowfalling
+- Note: Bug fix where creepers didn't die when they touched the void
+
+Reaper
+- Reaper now has 112% base speed (previously normal)
+- Scythe reloads 0.25s faster (5.25s -> 5s)
+- Creepers and Slimes have 33% less gravity
+- First Creeper Egg reloads 4.5s faster (6.5s -> 2s) [only at the very start of round]
+- Creeper Eggs reload .75s slower (7s -> 7.75s)
+- Creepers thrown only make 1 explosion (previously 2)
+- Creepers placed on ground make 3 explosions (priously 2)
+	- .15s and .25s after explosion (previously .2s)
+- Slimes reload 2s faster (7s -> 5s)
+- Thrown Slimes grow 2 less sizes (max 7) (keeping all the same timing)
+- Placed Slimes grow 1 extra size (max 10)
+- Placed Slimes create 1 extra tnt (2 -> 3)
+- Placed Slimes grow later and more rapidly
+- Placed Slimes explode 1.35s faster (2.95s -> 1.6s)
+- Placing Creepers/Slimes pushes them in the direction you are facing
+- Creepers/Slimes thrown have a max downwards angle of 70 degrees
+- Slimes thrown come 0.4 blocks further from yourself (making it harder to hit yourself)
+
+Echo
+- Boom wand takes longer to reload on the last 4 uses (0.6s,0.6s,0.65s,0.7s) (normally .55s)
+- The last two uses of blast wand reload (0.05s) faster
+    - (0.1s, 0.2s, 0.4s, 0.65s, 0.95s, 1.2s*) [previously (0.1s, 0.2s, 0.4s, 0.7s, 1.0s, 1.2s*)]
+- Blast Wand limited to 6 uses in air (previously 4) [quality of life and infinite prevention]
+- Note: bug fix allows for Sky Wand and Blast Want to activate on "void"
+- "Boom Shard" renamed "Unstable Orb" (Bug)
+- Reload after Blast Wand's Unstable Orb is 0.25s longer (2.5s -> 2.75s)
+- Reload after Boom Wand's Unstable Orb is 0.25s longer (2.5s -> 2.75s)
+- Reload after Boom Wand's Unstable Orb is locked to max (previously possible for a min of 0.75s if delayed)
+
+Overlord
+- Unstable Mass (shift) replaced with "Restore World" (shift)
+    - replaces destroyed blocks around you with unstable matter (7 diameter cylinder)
+    - unstable matter no longer decays, can now be broken and consumed by wand
+    - unstable matter has higher blast resistance (0.8 -> 3)
+    - raises you to the level of the nearest land
+- Master Wand upgrades every 7s from start of match. No longer repairs wand or costs matter.
+- Master Wand can be thrown/offhanded to "gather" matter
+    - drains wand and gives 1 matter for every 2 durability, then goes into 2.5s cooldown (0.5s longer than normal) [+4 matter at end of use]
+    - 10s cooldown (indicated with sounds and text)
+- Wand upgrades 0.8-1.2 less with each upgrade
+    - (7,9,11,12.6,14.2 -> 7,8.2,9.4,10.6,11.8)
+- Wand Upgrade permanently replaced with matter storm from start
+- Matter storm TNT does not explode until last projectile hits a block (indicated with glowing)
+    - Fuse 0.2s longer (0.05s -> 0.25s) [after trigger] [5s if no trigger occurs]
+- Matter storm projectile has improved hit detection (smaller hitbox higher up)
+    - TNT summon location also improved to be outside block always
+- Matter storm projectiles no longer have 0.1s delay
+- Matter storm projectiles move 10% faster (20 b/s -> 22 b/s)
+- Matter Bomb costs 1 more (7 -> 8)
+- Matter Slide costs 1 less (17 -> 16)
+- Matter Storm and Landslide have 0.4s cooldown on use [Note: quality of life]
+- Boom Halo costs 1 less (13 -> 12)
+- Boom Halo explodes .3s faster (.65s -> 35s)
+- Boom Halo has 0.4 smaller radius (2.6 -> 2.2)
+- Boom Halo levitation adjusted (1s -> .5s) (level 3 -> level 12) [Note: quality of life]
+- Boom Halo TNT starts with 0.2 downward motion [Note: quality of life]
+- General sound improvements for items
+
+Shard
+- Anti-Ice Bow middle arrow explodes 0.05s faster (.15s -> .1s)
+- Anti-Ice Bow side arrows explodes 0.05s slower (.15s -> .2s)
+- Snowman shot is now a projectile (moves 25 blocks per second) [can be blocked]
+- Snowman shots now detect 1.5s faster and has smaller aim assist for first 1.5 blocks [quality of life / bug fix]
+    - Should fix cases where snowman misses blocks directly in front of it or hits the wrong ones
+- Snowman takes 0.05s longer to start firing (.35s -> 0.4s)
+- Snowman takes 0.05s longer between shots (0.35s -> 0.4s)
+- Improved Snowman shot visual
+- Trident Ice add/remove moves faster (.55s -> .3s)
+- Trident summons a .4s fuse tnt on land [no gravity]
+- Trident summons 1 less sky tnt (4 -> 3)
+- Trident sky tnt summon .1s faster and explode .2 faster (functionally .4s intervals)
+- Trident sky tnt fall further
+- Ice Suck takes 2.75s longer to reload (9.25s -> 12s)
+- Ice Suck platform lasts 2.5s shorter (5s base -> 2.50s base) [note: +1 tick per ice sucked]
+- Shift tnt fuse 0.05s longer (.1s -> .15s) [tnt no longer has gravity]
+- "Cold Bomb" renamed "Frost Nade"
+
+[Particle]
+- Timing fix to "3rd Place Party"
+
+[Bug Fixes]
+- Fixed 1.18 issue where projectiles that would collide with void no longer collided with void
+- The achievement for Shard displays the text "Find Overlord" instead of "Find Shard"
+- Overlord shift amount would announce way too many times to spectators

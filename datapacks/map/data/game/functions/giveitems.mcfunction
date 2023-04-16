@@ -80,7 +80,7 @@ scoreboard players set @a[scores={class=5}] bow -2
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=5}] hotbar.3 with stick{display:{Name:"{\"italic\":false,\"text\":\"§9Power Shield §r: Right-click\"}"}}
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=5}] hotbar.1 with ink_sac{display:{Name:"{\"italic\":false,\"text\":\"§2Set Portal §r: Right-click (lasts 6 seconds) [16 block range]\"}"}}
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.7 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Crouch to go to portal (16 block range)\"}"}}
-item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.1 with nether_star{display:{Name:"{\"italic\":false,\"text\":\"Magic Star §f: Right-click\"}"}} 2
+item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.1 with nether_star{display:{Name:"{\"italic\":false,\"text\":\"Magic Star §f: Right-click\"}"}} 1
 scoreboard players set @a[scores={class=1},x=620,y=20,z=620,distance=..100] star 0
 #item replace entity @a[scores={class=6},x=620,y=20,z=620,distance=..100] hotbar.1 with iron_hoe{display:{Name:"{\"italic\":false,\"text\":\"§aScythe §f: Right-click to throw\"}"},Enchantments:[{id:knockback,lvl:6}],Unbreakable:1}
 

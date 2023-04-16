@@ -627,6 +627,16 @@ execute as @a[scores={slimeegguseset=1..}] at @s run function game:cprojectile/g
 scoreboard players set @a[scores={slimeegguseset=1..}] slimeegguseset 0
 tag @e[type=creeper] add beenaround
 
+#dive kick
+scoreboard players set @a[scores={dive_kick=4..9},nbt={OnGround:1b}] dive_kick 3
+scoreboard players remove @a[scores={dive_kick=-5..}] dive_kick 1
+
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={dive_kick=0}] at @s run function game:char/assassin/dive_boom
+
+#darts
+scoreboard players set @e[tag=dart] dart_steps 2
+execute as @e[tag=dart] at @s run function game:char/assassin/dartmove
+
 #Invis 
 effect give @a[scores={Invis=1..}] minecraft:invisibility 5 0 true
 scoreboard players remove @a[scores={Invis=1..}] Invis 1

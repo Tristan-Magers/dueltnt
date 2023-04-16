@@ -1,4 +1,8 @@
 #
+tp @e[tag=kill_this] ~ ~-1000 ~
+kill @e[tag=kill_this]
+
+#
 gamerule mobGriefing true
 
 #
@@ -364,9 +368,13 @@ execute as @a[nbt={OnGround:1b},tag=ground_boom] at @s run tp @s ~ ~0.1 ~
 execute as @a[nbt={OnGround:1b},tag=ground_boom] at @s run effect give @s levitation 1 10 true
 execute as @a[nbt={OnGround:1b},tag=ground_boom] at @s run scoreboard players set @s nolev 6
 tag @a[nbt={OnGround:1b},tag=ground_boom] remove ground_boom
-execute as @a[tag=divekick] at @s run function game:physics/dive_kick
 
 execute as @a[scores={ass_pearl=0..}] at @s run function game:physics/ass_pearl
 
 execute as @e[tag=blue_tnt] at @s run tp @s @s
 team join blue_color @e[tag=blue_tnt]
+
+execute as @a[tag=divekick_end2] at @s run function game:physics/dive_end
+execute as @a[tag=divekick] at @s run function game:physics/dive_kick
+
+tag @a[tag=divekick_end] add divekick_end2
