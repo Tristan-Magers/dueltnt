@@ -1,5 +1,5 @@
 scoreboard players set @a[gamemode=adventure,scores={timer=19..,class=0}] timer 0
-scoreboard players set @a[gamemode=adventure,scores={timer=100..,class=1}] timer 0
+scoreboard players set @a[gamemode=adventure,scores={timer=102..,class=1}] timer 0
 scoreboard players set @a[gamemode=adventure,scores={timer=73..,class=2}] timer 0
 scoreboard players set @a[gamemode=adventure,scores={timer=80..,class=3}] timer 0
 

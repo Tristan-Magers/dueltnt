@@ -4,6 +4,7 @@ execute if entity @e[name=PS,distance=..9] if block ~ ~ ~ white_stained_glass un
 
 particle minecraft:crit ^ ^-.15 ^ 0 0 0 0 1 force
 
+execute if entity @s[tag=!mw] unless block ~ ~ ~ air unless block ~ ~ ~ barrier unless block ~ ~ ~ purple_wool unless entity @s[tag=glass] unless block ~ ~ ~ gold_ore run tag @s add wand_success
 execute if entity @s[tag=!mw] unless block ~ ~ ~ air unless block ~ ~ ~ barrier unless block ~ ~ ~ purple_wool unless entity @s[tag=glass] unless block ~ ~ ~ gold_ore run function game:char/overlord/masterwandget
 
 execute as @s[tag=mw1,tag=mw2,tag=!mw] unless block ~ ~ ~ air unless block ~ ~ ~ barrier unless block ~ ~ ~ purple_wool unless entity @s[tag=glass] unless block ~ ~ ~ gold_ore run tag @s add mw

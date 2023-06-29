@@ -99,11 +99,11 @@ execute if entity @e[name=menu,type=armor_stand,scores={Opt=3}] run function gam
 execute if entity @e[name=menu,type=armor_stand,scores={Opt=2}] run function game:menu/options
 
 #Team Buttons
-execute if entity @e[name=menu,type=armor_stand,scores={Team=3}] run data merge block 475 16 495 {Text2:"{\"text\":\"Teams\",\"bold\":false,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"scoreboard players set @e[name=menu,type=armor_stand] Team 2\"}}",Text3:"{\"text\":\"[disabled]\",\"color\":\"dark_red\",\"bold\":true}"}
+execute if entity @e[name=menu,type=armor_stand,scores={Team=3}] run data merge block 475 16 495 {front_text:{messages:["[{\"text\":\"\"}]","{\"text\":\"Teams\",\"bold\":false,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"scoreboard players set @e[name=menu,type=armor_stand] Team 2\"}}","{\"text\":\"[disabled]\",\"color\":\"dark_red\",\"bold\":true}","[{\"text\":\"\"}]"]}}
 execute if entity @e[name=menu,type=armor_stand,scores={Team=3}] run playsound minecraft:entity.armor_stand.fall master @a 475 18 497 .6 .9
 execute if entity @e[name=menu,type=armor_stand,scores={Team=3}] run scoreboard players set @e[name=menu,type=armor_stand] Team 0
 
-execute if entity @e[name=menu,type=armor_stand,scores={Team=2}] run data merge block 475 16 495 {Text2:"{\"text\":\"Teams\",\"bold\":false,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"scoreboard players set @e[name=menu,type=armor_stand] Team 3\"}}",Text3:"{\"text\":\"[enabled]\",\"color\":\"dark_green\",\"bold\":true}"}
+execute if entity @e[name=menu,type=armor_stand,scores={Team=2}] run data merge block 475 16 495 {front_text:{messages:["[{\"text\":\"\"}]","{\"text\":\"Teams\",\"bold\":false,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"scoreboard players set @e[name=menu,type=armor_stand] Team 3\"}}","{\"text\":\"[enabled]\",\"color\":\"dark_green\",\"bold\":true}","[{\"text\":\"\"}]"]}}
 execute if entity @e[name=menu,type=armor_stand,scores={Team=2}] run playsound minecraft:entity.armor_stand.fall master @a 475 18 497 .6 .9
 execute if entity @e[name=menu,type=armor_stand,scores={Team=2}] run clone 459 3 491 459 3 489 475 18 494
 execute if entity @e[name=menu,type=armor_stand,scores={Team=2}] run scoreboard players set @e[name=menu,type=armor_stand] Team 1
@@ -138,7 +138,7 @@ tag @e[name=Map,type=armor_stand,limit=1] remove removeset
 execute if entity @e[type=player,distance=..100,x=600,y=60,z=600,gamemode=adventure] run tag @e[name=Map,type=armor_stand,limit=1] add removeset
 
 #execute as @e[name=Map,type=armor_stand,limit=1,tag=removeset,tag=!removesett] run function game:menu/setdisable
-execute as @e[name=Map,type=armor_stand,limit=1,tag=!removeset,tag=removesett] run schedule function game:menu/setenable 5t
+execute as @e[name=Map,type=armor_stand,limit=1,tag=!removeset,tag=removesett] run schedule function game:menu/setenable 20t
 
 tag @e[name=Map,type=armor_stand,limit=1,tag=removeset] add removesett
 tag @e[name=Map,type=armor_stand,limit=1,tag=!removeset] remove removesett

@@ -3,8 +3,8 @@
 
 tag @s add divekick_end2
 
-effect give @s levitation 1 0 true
-scoreboard players set @s nolev 10
+effect give @s[scores={nolev=..10}] levitation 1 0 true
+scoreboard players set @s[scores={nolev=..10}] nolev 10
 
 #tp @s @s
 

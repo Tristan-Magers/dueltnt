@@ -33,6 +33,8 @@ kill @e[type=minecraft:wither]
 kill @e[type=minecraft:creeper]
 kill @e[tag=powerupitem]
 
+gamerule reducedDebugInfo true
+
 execute if entity @e[scores={mode=1}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Overpowered","color":"dark_aqua","bold":true},{"text":"] Reload times are a thing of the past. Every single item is much more powerful in this mode.","color":"reset","bold":false}]
 execute if entity @e[scores={mode=2}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Hotfeet","color":"dark_red","bold":true},{"text":"] Be careful in this mode. TNT spawns at your feet at an ever increasing pace. Don't stand still!","color":"reset","bold":false}]
 execute if entity @e[scores={mode=3}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Phantom","color":"dark_purple","bold":true},{"text":"] Sometimes you need more tools. Duel with powerful items spawning across the map.","color":"reset","bold":false}]
@@ -40,6 +42,8 @@ execute if entity @e[scores={mode=4}] run tellraw @a [{"text":"[Selected mode: "
 
 execute if entity @e[tag=Map,scores={mode=0..1}] run tellraw @a[scores={ingame=1..,playercount=1}] [{"text":"You have joined solo. Welcome to training mode.","color":"gold"}]
 execute if entity @e[tag=Map,scores={mode=0..1}] run tellraw @a[scores={ingame=1..,playercount=1}] [{"text":"["},{"text":"Spawn Dummy","color":"dark_green","hoverEvent":{"action":"show_text","value":"Click to spawn dummy"},"clickEvent":{"action":"run_command","value":"/trigger dummytrigger add 1"}},{"text":"] [","color":"reset"},{"text":"Spawn Punchable Dummy","color":"green","hoverEvent":{"action":"show_text","value":"Click to spawn dummy"},"clickEvent":{"action":"run_command","value":"/trigger dummytrigger2 add 1"}},{"text":"]","color":"reset"}]
+
+execute if entity @e[tag=Map,scores={mode=0..1}] run gamerule reducedDebugInfo false
 
 scoreboard players set @a pglow 0
 

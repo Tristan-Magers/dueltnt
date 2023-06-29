@@ -1,4 +1,7 @@
 #
+team modify Main collisionRule never
+
+#
 tp @e[tag=kill_this] ~ ~-1000 ~
 kill @e[tag=kill_this]
 
@@ -359,6 +362,11 @@ execute as @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=blue,scores=
 
 execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run scoreboard players set §aGREEN l 0
 execute as @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run scoreboard players operation §aGREEN l += @s Lives
+
+#Trident Slimes
+tag @e[tag=kill_this_next] add kill_this
+tag @e[tag=kill_next] add kill_this_next
+execute as @e[tag=kill_next] run team modify Main collisionRule always
 
 #testing
 execute as @a[nbt={OnGround:1b},tag=ground_boom] at @s run summon tnt ~ ~ ~ {Fuse:4}

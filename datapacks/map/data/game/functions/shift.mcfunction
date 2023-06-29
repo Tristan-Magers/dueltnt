@@ -29,7 +29,7 @@ scoreboard players set @s timer 1
 scoreboard players add @s overlordsc 1
 
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=0,timer=1}] 17 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=1,timer=1}] 100 levels
+execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=1,timer=1}] 102 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=2,timer=1}] 73 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=3,timer=1}] 80 levels
 execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=4,timer=1}] 160 levels
@@ -71,9 +71,10 @@ execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9
 execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run scoreboard players operation @s t1 = @e[limit=1,type=marker,tag=overlord_new_tp,tag=!kill] Y
 execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run scoreboard players operation @s t1 -= @s Y
 
-execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run effect give @s levitation 1 1
-execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run scoreboard players set @s nolev 4
-execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9,t1=0..}] at @s run scoreboard players set @s nolev 8
+execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run effect give @s levitation 20 15
+execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run scoreboard players set @s nolev 17
+#execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9,t1=0..}] at @s run say test
+#execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9,t1=0..}] at @s run scoreboard players set @s nolev 10
 
 execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run tp @s @e[limit=1,type=marker,tag=overlord_org_tp,tag=!kill]
 execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run function game:char/overlord/raise_y

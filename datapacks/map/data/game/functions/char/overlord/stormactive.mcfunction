@@ -3,6 +3,6 @@ execute as @s[scores={masterstorm=9}] at @s run playsound minecraft:entity.light
 execute as @s[scores={masterstorm=9}] at @s run playsound minecraft:block.beacon.deactivate master @a ~ ~ ~ 1 0
 execute as @s[scores={masterstorm=12}] at @s run function game:char/overlord/masterstorm
 execute as @s[scores={masterstorm=9}] at @s run function game:char/overlord/masterstorm
-execute as @s[scores={masterstorm=6}] at @s run function game:char/overlord/masterstorm
-execute as @s[scores={masterstorm=3}] at @s run function game:char/overlord/masterstorm
+execute as @s[scores={masterstorm=7}] at @s run function game:char/overlord/masterstorm
+execute as @s[scores={masterstorm=5}] at @s run function game:char/overlord/masterstorm
 scoreboard players remove @s masterstorm 1

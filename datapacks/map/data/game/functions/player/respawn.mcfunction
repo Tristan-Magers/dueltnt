@@ -51,3 +51,6 @@ scoreboard players set @s grave 0
 #
 execute as @s[scores={class=9}] at @s run scoreboard players set @s masterc 0
 execute as @s[scores={class=9}] at @s run function game:char/overlord/masterwanduse
+
+#
+scoreboard players set @s dive_kick -1

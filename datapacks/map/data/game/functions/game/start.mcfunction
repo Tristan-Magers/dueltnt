@@ -18,6 +18,7 @@ gamemode adventure @a[scores={ingame=1}]
 execute if entity @e[name=Map,type=armor_stand,scores={CurrentRound=..0}] run tp @a[x=620,y=20,z=620,distance=..100,scores={ingame=1..}] 500 20 500
 execute if entity @e[name=Map,type=armor_stand,scores={CurrentRound=..0}] run scoreboard players set @a PlaceMine 0
 execute if entity @e[name=Map,type=armor_stand,scores={CurrentRound=1..}] run effect give @a[scores={ingame=1..}] blindness 6 4 true
+execute if entity @e[name=Map,type=armor_stand,scores={CurrentRound=1..}] run effect give @a[scores={ingame=1..}] slow_falling 5 4 true
 execute if entity @e[name=Map,type=armor_stand,scores={CurrentRound=1..}] run tp @a[scores={ingame=1..}] 600 60 600
 execute if entity @e[name=Map,type=armor_stand,scores={CurrentRound=1..}] run scoreboard players set @e[name=Map,type=armor_stand] countdown 76
 scoreboard players set @a Y 45

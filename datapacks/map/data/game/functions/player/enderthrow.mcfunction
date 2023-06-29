@@ -15,12 +15,18 @@ execute as @s[scores={endercount=5,class=0}] at @s run tellraw @a[gamemode=spect
 #execute as @s[scores={endercount=4,class=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
 
 #effect give @s[scores={class=0}] invisibility 3 0 true
-#effect give @s[scores={class=1..2}] invisibility 2 0 true
-#scoreboard players set @s[scores={class=2}] Invis 40
+
+execute as @s[scores={endercount=1,class=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
+execute as @s[scores={endercount=2,class=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
+execute as @s[scores={endercount=3,class=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
+
+effect give @s[scores={class=2}] invisibility 2 0 true
+scoreboard players set @s[scores={class=2}] Invis 40
+
 #scoreboard players set @s[scores={class=0}] Invis 30
-scoreboard players set @s[scores={class=2}] enderreload 300
-scoreboard players set @s[scores={class=1,endercount=2..}] enderreload 200
-scoreboard players set @s[scores={class=1,endercount=2..}] endercount 0
+#scoreboard players set @s[scores={class=2}] enderreload 300
+scoreboard players set @s[scores={class=1,endercount=1..}] enderreload 210
+scoreboard players set @s[scores={class=1,endercount=1..}] endercount 0
 scoreboard players set @s[scores={class=1}] sneakdisable 40
 clear @s[scores={class=1}] squid_spawn_egg
 scoreboard players set @s ender 0

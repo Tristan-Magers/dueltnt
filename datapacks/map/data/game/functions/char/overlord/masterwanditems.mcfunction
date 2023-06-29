@@ -15,20 +15,23 @@ clear @s[scores={masterb=..11}] beef
 item replace entity @s[scores={masterb=..11}] hotbar.4 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}} 1
 
 # matter bomb
-item replace entity @s[scores={masterb=8..}] hotbar.1 with minecraft:salmon{display:{Name:"{\"italic\":false,\"text\":\"§4Matter Bomb §r: Right-click (8 Material)\"}"}}
-clear @s[scores={masterb=..7}] salmon
-item replace entity @s[scores={masterb=..7}] hotbar.1 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}} 1
+item replace entity @s[scores={masterb=6..,master_bomb_cooldown=..0}] hotbar.1 with minecraft:salmon{display:{Name:"{\"italic\":false,\"text\":\"§4Matter Bomb §r: Right-click (6 Material)\"}"}}
+clear @s[scores={masterb=..5}] salmon
+item replace entity @s[scores={masterb=..5,master_bomb_cooldown=..0}] hotbar.1 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}} 1
+item replace entity @s[scores={master_bomb_cooldown=1..}] hotbar.1 with minecraft:ghast_tear{display:{Name:"{\"italic\":false,\"text\":\"§9On Cooldown\"}"}} 1
 
 # land slide
-item replace entity @s[scores={masterb=16..,slide_cooldown=..0}] hotbar.2 with minecraft:cooked_cod{display:{Name:"{\"italic\":false,\"text\":\"§2Land Slide §r: Right-click (16 Material)\"}"}}
-clear @s[scores={masterb=..15}] cooked_cod
-item replace entity @s[scores={masterb=..15}] hotbar.2 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}} 1
+item replace entity @s[scores={masterb=12..,slide_cooldown=..0}] hotbar.3 with minecraft:cooked_cod{display:{Name:"{\"italic\":false,\"text\":\"§2Land Slide §r: Right-click (12 Material)\"}"}}
+clear @s[scores={masterb=..11}] cooked_cod
+item replace entity @s[scores={masterb=..11}] hotbar.3 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}} 1
 clear @s[scores={slide_cooldown=1..}] cooked_cod
-item replace entity @s[scores={slide_cooldown=1..}] hotbar.2 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9On Cooldown\"}"}} 1
+item replace entity @s[scores={slide_cooldown=1..}] hotbar.3 with minecraft:ghast_tear{display:{Name:"{\"italic\":false,\"text\":\"§9On Cooldown\"}"}} 1
 
 # matter storm
-item replace entity @s[scores={masterb=16..}] hotbar.3 with minecraft:cooked_salmon{display:{Name:"{\"italic\":false,\"text\":\"§1Matter Storm §r: Right-click (16 Material)\"}"}}
-clear @s[scores={masterb=..15}] cooked_salmon
-item replace entity @s[scores={masterb=..15}] hotbar.3 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}} 1
+item replace entity @s[scores={masterb=8..}] hotbar.2 with minecraft:cooked_salmon{display:{Name:"{\"italic\":false,\"color\":\"#3276DB\",\"text\":\"Matter Storm §f: Right-click (8 Material)\"}"}}
+clear @s[scores={masterb=..7}] cooked_salmon
+item replace entity @s[scores={masterb=..7}] hotbar.2 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}} 1
+item replace entity @s[scores={storm_cooldown=1..}] hotbar.2 with minecraft:ghast_tear{display:{Name:"{\"italic\":false,\"text\":\"§9On Cooldown\"}"}} 1
 
-item replace entity @s[scores={masterc=25..}] hotbar.0 with barrier
+item replace entity @s[scores={masterc=25..}] hotbar.0 with blaze_rod
+clear @s[scores={masterc=..24}] blaze_rod

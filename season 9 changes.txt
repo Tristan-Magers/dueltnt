@@ -1,27 +1,41 @@
 *Season 9 Update*
 
+[Game]
+- Game updated to version 1.20.1
+
+[General]
+- Reduced debug mode enabled during game (disabled during single player training mode)
+
 [Character Changes]
 
 Assassin
 - Now has Jump Boost level 2 (previously none)
 - Shift (Boost) has been replaced with "Dive Kick"
-- Shift takes .6s longer to reload (4.4s -> 5s)
-- Magic Star now alternates with Explosive Dart (1 of each)
+- Shift takes 0.7s longer to reload (4.4s -> 5.1s)
+- Magic Star now alternates with Explosive Dart (2 of each)
     - 1.75s to reload each (previously 5.25s to reload stars)
     - Note: Explosive Darts are therefore now a reloading item
-    - Note: You get 1 less Magic Star (2 -> 1)
 - Magic Stars explode 1s faster (2.5s -> 1.5s)
+- Delay added between firing Magic Stars (0.3s) [same as darts]
 - Magic Stars fire 0.4 blocks higher (-0.2 blocks from crosshair) [quality of life]
-- Explosive Darts are now 2 tnt (1 -> 2)
-- Explosive Darts are now a projectile (12 blocks per/s)
-- Explosive Darts Take 0.25s longer to explode (0.2s -> 0.45s)
+- Explosive Darts fire 0.2 blocks higher (now on crosshair) [quality of life]
+- Explosive Darts are now a projectile (60 blocks per/s)
+- Explosive Darts Take 0.2s longer to explode (0.2s -> 0.4s)
 - Explosive Darts now collide with Magic Stars
-- Teleport no longer causes you to explode
+- Explosive Darts have 0.05s less cooldown between each other (0.3s -> 0.25s)
+- Mass Freeze has 0.5s longer cooldown (6.5s -> 7s)
+- Teleport only causes explosion if you hit the top of a block
+- Teleport explosion higher, with 0.6s longer fuse (0s -> .6s)
 - Teleport gives higher levels of jump boost and speed
+- Get one less Teleport (1 -> 2)
+- Teleport takes 0.5s longer to reload (10s -> 10.5s)
 - Sneak Attack TNT takes 0.35s longer to explode (0.1s -> 0.45s)
+- Get one less Sneak Attack (3 -> 2)
 - Sneak Attack and Dart TNT does not get effected by gravity or knockback
 
 Ghost
+- Gets 3 Teleports (ender pearls) instead of reloading them
+- Enderpearls give 2s of invisibility on use
 - Smoke Bomb's second TNT explodes 0.05s slower (0.8s -> 0.85s) (now 0.15s after first)
 
 Trapper
@@ -85,56 +99,82 @@ Echo
 
 Overlord
 - Unstable Mass (shift) replaced with "Restore World" (shift)
-    - replaces destroyed blocks around you with unstable matter (7 diameter cylinder)
+    - replaces destroyed blocks around you with unstable matter (9 diameter cylinder)
     - unstable matter no longer decays, can now be broken and consumed by wand
-    - unstable matter has higher blast resistance (0.8 -> 3)
+    - unstable matter has higher blast resistance (0.8 -> 6) [blackstone]
     - raises you to the level of the nearest land
+    - gives you levitation (level 7, .85s)
+- Master Wand only uses durabilty when it breaks a block
 - Master Wand upgrades every 7s from start of match. No longer repairs wand or costs matter.
 - Master Wand can be thrown/offhanded to "gather" matter
     - drains wand and gives 1 matter for every 2 durability, then goes into 2.5s cooldown (0.5s longer than normal) [+4 matter at end of use]
     - 10s cooldown (indicated with sounds and text)
-- Wand upgrades 0.8-1.2 less with each upgrade
-    - (7,9,11,12.6,14.2 -> 7,8.2,9.4,10.6,11.8)
+    - The more degraded the wand, the shorter the cooldown on the wand and gather reload. (MAX -0.25s wand, -4s gather)
+- Wand upgrades 0.8-1.2 less with each upgrade but starts 0.8 longer
+    - (7,9,11,12.6,14.2 -> 7.8,9.0,10.2,11.4,12.6)
 - Wand Upgrade permanently replaced with matter storm from start
 - Matter storm TNT does not explode until last projectile hits a block (indicated with glowing)
-    - Fuse 0.2s longer (0.05s -> 0.25s) [after trigger] [5s if no trigger occurs]
+    - Fuse 0.2s longer (0.05s -> 0.25s) [after trigger] [1.5s if no trigger occurs]
 - Matter storm projectile has improved hit detection (smaller hitbox higher up)
     - TNT summon location also improved to be outside block always
 - Matter storm projectiles no longer have 0.1s delay
 - Matter storm projectiles move 10% faster (20 b/s -> 22 b/s)
-- Matter Bomb costs 1 more (7 -> 8)
-- Matter Slide costs 1 less (17 -> 16)
-- Matter Storm and Landslide have 0.4s cooldown on use [Note: quality of life]
+- Matter storm projectiles have smaller hitbox (0.4x0.4x0.4 -> 0.2x0.2x0.2)
+- Matter Storm shoots 0.1s faster (0.3s -> 0.2s) [0.1s delay between shots]
+- Matter Storm costs 8 less (16 -> 8)
+- Matter Slide has 3.5s cooldown on use
+- Matter Bomb costs 1 less (7 -> 6)
+- Matter Bomb has 0.9s delay between uses
+- Matter Slide costs 5 less (17 -> 12)
+- Matter Slide has 4.5s cooldown on use
 - Boom Halo costs 1 less (13 -> 12)
 - Boom Halo explodes .3s faster (.65s -> 35s)
 - Boom Halo has 0.4 smaller radius (2.6 -> 2.2)
-- Boom Halo levitation adjusted (1s -> .5s) (level 3 -> level 12) [Note: quality of life]
+- Boom Halo levitation adjusted (1s -> .65s) (level 3 -> level 13) [Note: quality of life]
 - Boom Halo TNT starts with 0.2 downward motion [Note: quality of life]
+- Matter Slide and Matter Storm has swapped places
+- Icon improvements for unavailable items
 - General sound improvements for items
 
 Shard
+- Ice Spreading tnt has smaller range (~3 blocks -> ~2.4 blocks) [Note: spread is based on a shape and not exact range]
 - Anti-Ice Bow middle arrow explodes 0.05s faster (.15s -> .1s)
 - Anti-Ice Bow side arrows explodes 0.05s slower (.15s -> .2s)
+- Anti-Ice Bow arrows now all shoot in the same direction
+- Anti-Ice Bow side arrows spawn further out to the side (can't spawn in a wall)
 - Snowman shot is now a projectile (moves 25 blocks per second) [can be blocked]
 - Snowman shots now detect 1.5s faster and has smaller aim assist for first 1.5 blocks [quality of life / bug fix]
     - Should fix cases where snowman misses blocks directly in front of it or hits the wrong ones
-- Snowman takes 0.05s longer to start firing (.35s -> 0.4s)
+- Snowman shots now exactly alligned with where player is facing
+- Snowman takes 0.15s shorter to start firing (.35s -> 0.2s)
 - Snowman takes 0.05s longer between shots (0.35s -> 0.4s)
 - Improved Snowman shot visual
-- Trident Ice add/remove moves faster (.55s -> .3s)
-- Trident summons a .4s fuse tnt on land [no gravity]
-- Trident summons 1 less sky tnt (4 -> 3)
-- Trident sky tnt summon .1s faster and explode .2 faster (functionally .4s intervals)
-- Trident sky tnt fall further
+- Trident reworked
+   - Now summons one tnt and pushes players back
+   - Triggers on impact with a player
+   - Explosion creates ice
+- Trident reloads 0.5s faster (6.5s -> 6s)
+- Trident takes 3.5s to reload at start of match
 - Ice Suck takes 2.75s longer to reload (9.25s -> 12s)
-- Ice Suck platform lasts 2.5s shorter (5s base -> 2.50s base) [note: +1 tick per ice sucked]
+- Ice Suck platform lasts 2.5s shorter (5s base -> 2.5s base) [note: +1 tick per ice sucked]
+- Gets 1 less -- (3 -> 2)
 - Shift tnt fuse 0.05s longer (.1s -> .15s) [tnt no longer has gravity]
-- "Cold Bomb" renamed "Frost Nade"
+- "Cold Bomb" renamed "Frosty Poppy"
+
+[Map]
+- Grass and flowers removed from "Flower Temple" (due to gameplay bug and issues)
 
 [Particle]
 - Timing fix to "3rd Place Party"
 
 [Bug Fixes]
+- Fixed 1.20 issue where menu signs stopped working
+- Fixed a wide spanning amount of issues where some projectiles did not get reset between rounds
+- Fixed issue with placable surfaces being buggy and inconsistant accross items (now all intended sufaces are placeable)
 - Fixed 1.18 issue where projectiles that would collide with void no longer collided with void
+- Ground Spell would not work on the last two blocks of the stage
 - The achievement for Shard displays the text "Find Overlord" instead of "Find Shard"
 - Overlord shift amount would announce way too many times to spectators
+- Reaper and Shard armor did not have unbreaking
+- Overlord could break lobby blocks the tick after game ended
+- Fixed bug when players leave world and rejoin, menu may not reset

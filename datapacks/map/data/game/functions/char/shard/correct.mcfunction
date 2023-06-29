@@ -1,9 +1,9 @@
 item replace entity @s[scores={nobow=3..}] hotbar.0 with bow{Damage:260,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§9Anti-Ice§r : Throw to switch\"}"}}
 
 clear @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:white_dye",Slot:4b}]}] white_dye
-item replace entity @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:white_dye",Slot:4b}]},scores={floatuse=0}] hotbar.4 with minecraft:white_dye{display:{Name:"{\"italic\":false,\"text\":\"§6Float §f§r: Right-click\"}"}} 3
-item replace entity @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:white_dye",Slot:4b}]},scores={floatuse=1}] hotbar.4 with minecraft:white_dye{display:{Name:"{\"italic\":false,\"text\":\"§6Float §f§r: Right-click\"}"}} 2
-item replace entity @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:white_dye",Slot:4b}]},scores={floatuse=2}] hotbar.4 with minecraft:white_dye{display:{Name:"{\"italic\":false,\"text\":\"§6Float §f§r: Right-click\"}"}} 1
+item replace entity @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:white_dye",Slot:4b}]},scores={floatuse=0}] hotbar.4 with minecraft:white_dye{display:{Name:"{\"italic\":false,\"text\":\"§6Float §f§r: Right-click\"}"}} 2
+item replace entity @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:white_dye",Slot:4b}]},scores={floatuse=1}] hotbar.4 with minecraft:white_dye{display:{Name:"{\"italic\":false,\"text\":\"§6Float §f§r: Right-click\"}"}} 1
+#item replace entity @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:white_dye",Slot:4b}]},scores={floatuse=2}] hotbar.4 with minecraft:white_dye{display:{Name:"{\"italic\":false,\"text\":\"§6Float §f§r: Right-click\"}"}} 1
 
 clear @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:yellow_dye",Slot:1b}]},nbt=!{Inventory:[{id:"minecraft:egg",Slot:1b}]}] egg
 clear @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:yellow_dye",Slot:1b}]},nbt=!{Inventory:[{id:"minecraft:egg",Slot:1b}]}] yellow_dye

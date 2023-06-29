@@ -13,7 +13,7 @@ item replace entity @s[scores={class=3,Invis=0..1,ingame=1..},nbt=!{Inventory:[{
 item replace entity @s[scores={class=4,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:chainmail_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:chainmail_chestplate{Unbreakable:1}
 item replace entity @s[x=500,y=20,z=500,distance=..80,scores={ingame=..0}] armor.chest with minecraft:air{Unbreakable:1}
 item replace entity @s[x=500,y=20,z=500,distance=..80,scores={class=4,teamed=..0}] armor.head with minecraft:air{Unbreakable:1}
-item replace entity @s[scores={class=6,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:netherite_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:netherite_chestplate
+item replace entity @s[scores={class=6,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:netherite_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:netherite_chestplate{Unbreakable:1}
 item replace entity @s[x=620,y=20,z=620,distance=..500,nbt=!{Inventory:[{id:"minecraft:diamond_helmet",Slot:103b}]},scores={class=5,teamed=..0,Invis=0..1,ingame=1..}] armor.head with minecraft:diamond_helmet{Unbreakable:1}
 item replace entity @s[x=500,y=20,z=500,distance=..80,scores={class=5..6,ingame=..0}] armor.head with minecraft:air{Unbreakable:1}
 item replace entity @s[scores={class=4,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:chainmail_chestplate",Slot:102b}]},x=620,y=20,z=620,distance=..500] armor.chest with minecraft:chainmail_chestplate{Unbreakable:1}
@@ -24,5 +24,5 @@ item replace entity @s[scores={class=7..,Invis=0..1,ingame=1..},x=620,y=20,z=620
 item replace entity @s[scores={class=6..7,teamed=..0,Invis=0..1,ingame=1..},x=620,y=20,z=620,distance=..500] armor.head with minecraft:air{Unbreakable:1}
 item replace entity @s[scores={class=8,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:golden_helmet",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:golden_helmet{Unbreakable:1}
 item replace entity @s[scores={class=9,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:chicken",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:chicken
-item replace entity @s[scores={class=10,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:netherite_helmet",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:netherite_helmet
+item replace entity @s[scores={class=10,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:netherite_helmet",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:netherite_helmet{Unbreakable:1}
 item replace entity @s[scores={class=99,teamed=..0,Invis=0..1,ingame=1..},nbt=!{Inventory:[{id:"minecraft:iron_ore",Slot:103b}]},x=620,y=20,z=620,distance=..500] armor.head with minecraft:iron_ore
