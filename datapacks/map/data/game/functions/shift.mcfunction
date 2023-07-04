@@ -1,9 +1,12 @@
+
+
 execute as @s[scores={class=4}] at @s run effect give @p blindness 1 0 true
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!pig] at @s run summon lightning_bolt
-execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run summon creeper ~ ~.5 ~ {Invulnerable:1,powered:1,Fuse:9999,Attributes:[{Name:generic.followRange,Base:0},{Name:generic.movementSpeed,Base:0}],Tags:["wizcreep"]}
-execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run scoreboard players operation @e[limit=1,sort=nearest,type=minecraft:creeper] tntID = @s tntID
-execute if entity @e[scores={mode=1}] run execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run summon creeper ~ ~.5 ~ {Invulnerable:1,powered:1,Fuse:9999,Attributes:[{Name:generic.followRange,Base:0},{Name:generic.movementSpeed,Base:0}]}
-execute if entity @e[scores={mode=1}] run execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run scoreboard players operation @e[limit=2,sort=nearest,type=minecraft:creeper] tntID = @s tntID
+execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run function game:char/wizard/creeptest
+execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run summon creeper ~ ~.5 ~ {Invulnerable:1,powered:1,ignited:1,Fuse:9999,Attributes:[{Name:generic.followRange,Base:0},{Name:generic.movementSpeed,Base:0}],Tags:["wizcreep"]}
+scoreboard players add @e[type=minecraft:creeper] tntID 0
+execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run scoreboard players operation @e[limit=1,sort=nearest,type=minecraft:creeper,scores={tntID=0}] tntID = @s tntID
+execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run clear @s gray_dye
 scoreboard players set @s[scores={class=5}] GoPortal 1
 execute as @s[scores={class=3}] at @s run playsound minecraft:entity.tnt.primed master @p
 execute as @s[scores={class=3}] at @s run summon tnt ~ ~.5 ~ {Fuse:5}
@@ -119,7 +122,7 @@ execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-
 
 execute as @s[scores={class=10}] at @s run effect give @s levitation 1 3
 
-xp add @s[scores={class=10,timer=1}] 60 levels
+xp add @s[scores={class=10,timer=1}] 95 levels
 
 #reaper shift
 execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:10,NoGravity:1}
@@ -127,7 +130,7 @@ execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:10,No
 execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:0,NoGravity:1}
 execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:0,NoGravity:1}
 
-execute as @s[scores={class=9,overlordsc=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
-execute as @s[scores={class=9,overlordsc=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
+execute as @s[scores={class=9,overlordsc=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
+execute as @s[scores={class=9,overlordsc=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
 execute as @s[scores={class=9,overlordsc=3}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
 execute as @s[scores={class=9,overlordsc=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]

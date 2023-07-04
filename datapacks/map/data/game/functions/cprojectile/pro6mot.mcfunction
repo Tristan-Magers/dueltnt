@@ -4,6 +4,8 @@ execute as @s at @s run function game:cprojectile/getdir4
 
 execute as @s at @s positioned ~ ~1 ~ run summon minecraft:slime ^ ^ ^1.4 {Size:1,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,Tags:["s1","newcreeper","thrown"]}
 
+effect give @e[tag=newcreeper,distance=..5,limit=1,sort=nearest] weakness 1 200 true
+
 effect give @e[tag=newcreeper,distance=..5,limit=1,sort=nearest] slow_falling 999 0 true
 
 scoreboard players add @s DirY 15

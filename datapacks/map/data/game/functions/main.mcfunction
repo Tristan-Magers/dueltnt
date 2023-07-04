@@ -1,5 +1,9 @@
 #
-team modify Main collisionRule never
+execute unless entity @e[tag=pull_vortex,scores={vortex_id=1..}] run team modify Main collisionRule never
+
+#
+execute as @e[tag=pull_vortex,scores={vortex_id=1..}] at @s if entity @e[tag=vortex,distance=..9] run function game:char/wizard/vortex_pull
+tag @e remove pull_vortex
 
 #
 tp @e[tag=kill_this] ~ ~-1000 ~
@@ -203,11 +207,14 @@ effect clear @a[scores={rejoin=1..}] blindness
 scoreboard players reset @a[scores={rejoin=1..}] rejoin
 
 #tnt
-execute as @e[type=armor_stand,tag=stnt] at @s run execute as @e[distance=..15,tag=!tnt,type=tnt] at @s run data merge entity @s {Fuse:360}
-execute as @e[type=armor_stand,tag=stnt] at @s run execute as @e[distance=..15,tag=!tnt,type=tnt] at @s run scoreboard players set @e[type=armor_stand,tag=timer] timer 301
-#execute as @e[type=armor_stand,tag=stnt] at @s run tp @e[distance=..3,tag=tnt,type=tnt] 490 16.4 495
-execute as @e[type=armor_stand,tag=stnt] at @s run tag @e[type=tnt,tag=!tnt,distance=..15] add tnt
+execute as @e[tag=timer,scores={timer=1}] at @s run particle minecraft:explosion_emitter ~ ~ ~
+execute as @e[tag=timer,scores={timer=1}] at @s run execute as @e[tag=tnt_start] at @s run summon creeper ~ ~ ~ {ignited:1,Fuse:1,NoAI:1,ExplosionRadius:3}
 execute as @e[tag=timer,scores={timer=1}] at @s run function game:tntblow
+execute as @e[tag=timer,scores={timer=1}] at @s run kill @e[type=tnt]
+execute as @e[type=armor_stand,tag=stnt] at @s run execute as @e[distance=..15,tag=!tnt_start,type=tnt] at @s run data merge entity @s {Fuse:999999}
+execute as @e[type=armor_stand,tag=stnt] at @s run execute as @e[distance=..15,tag=!tnt_start,type=tnt] at @s run scoreboard players set @e[type=armor_stand,tag=timer,scores={timer=..0}] timer 201
+#execute as @e[type=armor_stand,tag=stnt] at @s run tp @e[distance=..3,tag=tnt,type=tnt] 490 16.4 495
+execute as @e[type=armor_stand,tag=stnt] at @s run execute as @e[distance=..15,tag=!tnt_start,type=tnt] at @s run tag @s add tnt_start
 
 # armor
 execute as @a[gamemode=adventure] run function game:player/armor
@@ -386,3 +393,6 @@ execute as @a[tag=divekick_end2] at @s run function game:physics/dive_end
 execute as @a[tag=divekick] at @s run function game:physics/dive_kick
 
 tag @a[tag=divekick_end] add divekick_end2
+
+#
+tag @e remove pull_vortex_old

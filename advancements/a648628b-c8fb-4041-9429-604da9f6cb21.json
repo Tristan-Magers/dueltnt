@@ -179,5 +179,11 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/bamboo_block": {
+    "criteria": {
+      "has_bamboo": "2023-06-30 20:24:39 -0600"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }

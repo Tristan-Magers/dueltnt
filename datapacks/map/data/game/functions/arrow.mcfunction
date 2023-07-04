@@ -75,7 +75,7 @@ execute if entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={isBal
 
 #wizard tele bow
 execute as @s[type=arrow,x=599,z=599,y=5,dx=36,dz=36,dy=25,distance=..1000,scores={Inbarrier=..0,isBall=3}] at @s run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,Small:1,Marker:1,Silent:1,Invulnerable:1,Tags:["telebow"],DisabledSlots:4144959}
-execute as @s[type=arrow,x=599,z=599,y=5,dx=36,dz=36,dy=25,distance=..1000,scores={Inbarrier=..0,isBall=3}] at @s run scoreboard players operation @e[tag=telebow,limit=1,distance=..1] tntID = @s tntID
+execute as @s[type=arrow,x=599,z=599,y=5,dx=36,dz=36,dy=25,distance=..1000,scores={Inbarrier=..0,isBall=3}] at @s run scoreboard players operation @e[tag=telebow,limit=1,distance=..5,sort=nearest] tntID = @s tntID
 
 #ghost bow
 #execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s run fill ~-2 ~-1 ~ ~2 ~ ~ minecraft:air replace cyan_stained_glass
@@ -133,11 +133,11 @@ execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000] po
 execute as @s[type=arrow,scores={GardBow=1..}] at @s run summon tnt ~ ~ ~ {Fuse:1}
 
 #frost bow
-execute as @s[type=arrow,tag=sidearrow,scores={FrostBow=1..},nbt={inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon tnt ~ ~ ~ {Tags:["frost"],Fuse:4}
-execute as @s[type=arrow,tag=sidearrow,scores={FrostBow=1..},nbt=!{inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon armor_stand ~ ~ ~ {Tags:["frostset"],Marker:1,Silent:1,Invulnerable:1}
+execute as @s[type=arrow,tag=sidearrow,scores={FrostBow=1..},nbt={inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon tnt ~ ~0.5 ~ {Tags:["frost"],Fuse:4}
+execute as @s[type=arrow,tag=sidearrow,scores={FrostBow=1..},nbt=!{inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon armor_stand ~ ~ ~ {Tags:["frostset"],Marker:1,Silent:1,Invulnerable:1,NoGravity:1}
 
-execute as @s[type=arrow,tag=!sidearrow,scores={FrostBow=1..},nbt={inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon tnt ~ ~ ~ {Tags:["frost"],Fuse:2}
-execute as @s[type=arrow,tag=!sidearrow,scores={FrostBow=1..},nbt=!{inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon armor_stand ~ ~ ~ {Tags:["frostset"],Marker:1,Silent:1,Invulnerable:1}
+execute as @s[type=arrow,tag=!sidearrow,scores={FrostBow=1..},nbt={inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon tnt ~ ~0.5 ~ {Tags:["frost"],Fuse:2}
+execute as @s[type=arrow,tag=!sidearrow,scores={FrostBow=1..},nbt=!{inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon armor_stand ~ ~ ~ {Tags:["frostset"],Marker:1,Silent:1,Invulnerable:1,NoGravity:1}
 
 #21 blocks no jump without delay
 #36 blocks with jump without delay

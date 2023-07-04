@@ -45,7 +45,7 @@ execute as @s[scores={squidegg=1..}] at @s run playsound minecraft:entity.enderm
 execute as @s[scores={squidegg=1..}] at @s run playsound minecraft:entity.enderman.teleport master @a ~ ~ ~ 1 0
 
 execute as @s[scores={squidegg=1..}] at @s run tag @a remove sneakat
-execute as @s[scores={squidegg=1..}] at @s run tag @a[gamemode=adventure] add sneakat
+execute as @s[scores={squidegg=1..}] at @s run tag @a[gamemode=adventure,distance=..100] add sneakat
 execute as @s[scores={squidegg=1..}] at @s run tag @e[tag=dummy] add sneakat
 execute as @s[scores={squidegg=1..}] at @s run tag @s remove sneakat
 execute as @s[scores={squidegg=1..}] at @s run execute as @e[tag=sneakat,limit=1,sort=nearest] at @s run tp @a[scores={squidegg=1..}] @s
@@ -79,4 +79,5 @@ tag @s[tag=ender_tnt_land] remove air
 execute at @s[tag=ender_tnt_land] if block ~0.3 ~-0.5 ~0.3 air if block ~0.3 ~-1.5 ~0.3 air if block ~0.3 ~-2.5 ~0.3 air if block ~0.3 ~-0.5 ~-0.3 air if block ~0.3 ~-1.5 ~-0.3 air if block ~0.3 ~-2.5 ~-0.3 air if block ~-0.3 ~-0.5 ~0.3 air if block ~-0.3 ~-1.5 ~0.3 air if block ~-0.3 ~-2.5 ~0.3 air if block ~-0.3 ~-0.5 ~-0.3 air if block ~-0.3 ~-1.5 ~-0.3 air if block ~-0.3 ~-2.5 ~-0.3 air run tag @s add air
 execute as @s[tag=ender_tnt_land,tag=!air] run summon armor_stand ~ ~0.2 ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",Fuse:14,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
 execute as @s[tag=ender_tnt_land,tag=!air] run summon armor_stand ~ ~0.2 ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",Fuse:14,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
+execute as @s[tag=ender_tnt_land,tag=!air] at @s run tp @s ~ ~0.5 ~
 tag @s remove ender_tnt_land

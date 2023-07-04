@@ -85,9 +85,7 @@ scoreboard players set @a[scores={class=1},x=620,y=20,z=620,distance=..100] star
 #item replace entity @a[scores={class=6},x=620,y=20,z=620,distance=..100] hotbar.1 with iron_hoe{display:{Name:"{\"italic\":false,\"text\":\"§aScythe §f: Right-click to throw\"}"},Enchantments:[{id:knockback,lvl:6}],Unbreakable:1}
 
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.2 with slime_spawn_egg{display:{Name:"{\"italic\":false,\"text\":\"§aEnchanted Slime §f: Right-click (Can click on air)\"}"},CanPlaceOn:["#game:bolt_place"],EntityTag:{id:slime,Size:1,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,Tags:["s1"]},HideFlags:16,Enchantments:[{id:knockback,lvl:1}]} 2
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.3 with creeper_spawn_egg{display:{Name:"{\"italic\":false,\"text\":\"§bGhost Creeper §f: Right-click (Can click on air)\"}"},CanPlaceOn:["#game:bolt_place"],EntityTag:{id:creeper,ignited:1,Fuse:17,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"{\"italic\":false,\"text\":\"Bomb\"}",Health:500,powered:1,ExplosionRadius:1,fuse:1000},HideFlags:16,Enchantments:[{id:knockback,lvl:2}]} 2
-execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.3 with slime_spawn_egg{display:{Name:"{\"italic\":false,\"text\":\"§aEnchanted Slime §r: Right-click (Can click on air)\"}"},CanPlaceOn:["#game:bolt_place"],EntityTag:{id:slime,Size:1,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,Tags:["s1"]},HideFlags:16,Enchantments:[{id:knockback,lvl:1}]} 16
-execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.2 with creeper_spawn_egg{display:{Name:"{\"italic\":false,\"text\":\"§bGhost Creeper §r: Right-click (Can click on air)\"}"},CanPlaceOn:["#game:bolt_place"],EntityTag:{id:creeper,ignited:1,Fuse:17,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"{\"italic\":false,\"text\":\"Bomb\"}",Health:500,powered:1,ExplosionRadius:1,fuse:1000},HideFlags:16,Enchantments:[{id:knockback,lvl:2}]} 16
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.3 with creeper_spawn_egg{display:{Name:"{\"italic\":false,\"text\":\"§bGhost Creeper §f: Right-click (Can click on air)\"}"},CanPlaceOn:["#game:bolt_place"],EntityTag:{id:creeper,ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"{\"italic\":false,\"text\":\"Bomb\"}",Health:500,powered:1,ExplosionRadius:1,fuse:1000},HideFlags:16,Enchantments:[{id:knockback,lvl:2}]} 2
 
 item replace entity @a[scores={class=6},x=620,y=20,z=620,distance=..100] hotbar.0 with bow{Damage:180,display:{Name:"{\"italic\":false,\"text\":\"§7Dark Pillar§r : Throw to switch\"}"},Unbreakable:1}
 item replace entity @a[scores={class=6},x=620,y=20,z=620,distance=..100] hotbar.6 with arrow 1
@@ -103,7 +101,7 @@ item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.5 with mooshroom_spawn_egg{CanPlaceOn:["#game:bolt_place"],EntityTag:{id:mooshroom,Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,CustomName:"{\"italic\":false,\"text\":\"tnt\"}",Silent:1},HideFlags:16,display:{Name:"{\"italic\":false,\"text\":\"§cSummon TNT §r: Right-click\"}"}} 12
 execute as @a[x=620,y=20,z=620,distance=..100,scores={class=3}] at @s run item replace entity @s hotbar.3 with redstone{CustomPotionColor:0,CustomPotionEffects:[{Id:25,Amplifier:2,Duration:55},{Id:15,Amplifier:1,Duration:75},{Id:24,Amplifier:1,Duration:65}],display:{Name:"{\"italic\":false,\"text\":\"§cTracking Bomb §r: Right-click\"}"}}
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.7 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Crouch to phantom jump\"}"}}
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.5 with mooshroom_spawn_egg{CanPlaceOn:["#game:bolt_place"],EntityTag:{id:mooshroom,Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,CustomName:"{\"italic\":false,\"text\":\"tnt\"}",Silent:1},HideFlags:16,display:{Name:"{\"italic\":false,\"text\":\"§cSummon TNT §r: Right-click\"}"}} 3
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.5 with mooshroom_spawn_egg{CanPlaceOn:["#game:bolt_place"],EntityTag:{id:mooshroom,Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,CustomName:"{\"italic\":false,\"text\":\"tnt\"}",Silent:1},HideFlags:16,display:{Name:"{\"italic\":false,\"text\":\"§cSummon TNT §r: Right-click\"}"}} 4
 #item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.4 with rabbit_hide{display:{Name:"{\"italic\":false,\"text\":\"§4Laser §r: Right-click\"}"}}
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.4 with mooshroom_spawn_egg{CanPlaceOn:["#game:bolt_place"],EntityTag:{id:mooshroom,Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,CustomName:"{\"italic\":false,\"text\":\"tnt\"}",Silent:1},HideFlags:16,display:{Name:"{\"italic\":false,\"text\":\"§cSummon TNT §r: Right-click\"}"}} 9
 item replace entity @a[scores={class=2},x=620,y=20,z=620,distance=..100] hotbar.4 with splash_potion{CustomPotionColor:0,CustomPotionEffects:[{Id:15,Amplifier:1,Duration:100},{Id:24,Amplifier:1,Duration:80}],display:{Name:"{\"italic\":false,\"text\":\"§5Primed for Dark §r: Right-click\"}"}}
@@ -111,7 +109,7 @@ scoreboard players set @a[scores={class=4},x=620,y=20,z=620,distance=..100] pig 
 
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] hotbar.6 with arrow
 
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.5 with clay_ball{display:{Name:"{\"italic\":false,\"text\":\"§bVortex §r: Right-click\"}"}}
+#item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.5 with clay_ball{display:{Name:"{\"italic\":false,\"text\":\"§bVortex §r: Right-click\"}"}}
 
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.0 with wooden_pickaxe{Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§9Master Wand §r: Right-click Blocks\"}"}}
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.1 with barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}}
@@ -156,7 +154,7 @@ item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar
 item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.3 with lime_dye{display:{Name:"{\"italic\":false,\"text\":\"§3Ice Suck §f§r: Right-click\"}"}}
 #item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.2 with yellow_dye{display:{Name:"{\"italic\":false,\"text\":\"§3Snowman §f§r: Right-click\"}"}}
 #item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.2 with trident{display:{Name:"{\"italic\":false,\"text\":\"§9Trident §f§r: Right-click\"}"}}
-item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.4 with white_dye{display:{Name:"{\"italic\":false,\"text\":\"§6Float §f§r: Right-click\"}"}} 2
+item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.4 with white_dye{display:{Name:"{\"italic\":false,\"text\":\"§6Float §f§r: Right-click\"}"}} 3
 
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=10}] hotbar.5 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Crouch to blast forward\"}"}}
 
@@ -191,6 +189,7 @@ scoreboard players set @a boomcharge 8
 scoreboard players set @a blastwandtime 0
 scoreboard players set @a airwandtime 0
 scoreboard players set @a vortextime 0
+scoreboard players set @a[scores={class=4}] vortextime 30
 scoreboard players set @a pig -101
 scoreboard players set @a groundtime 0
 scoreboard players set @a grounduse 0
@@ -224,7 +223,13 @@ scoreboard players set @a SPorttimer 0
 scoreboard players set @a blastdur 0
 scoreboard players set @a blastdurt 0
 scoreboard players set @a tridentT 0
-scoreboard players set @a[scores={class=10}] tridentT 70
+scoreboard players set @a[scores={class=10}] tridentT 50
+
+scoreboard players set @a feather_cooldown 0
+scoreboard players set @a float_cooldown 0
+
+scoreboard players set @a enderc 0
+scoreboard players set @a enderct 0
 
 scoreboard players set @a dartcool -1
 scoreboard players set @a dartuse 0
@@ -237,7 +242,7 @@ scoreboard players set @a master_bomb_cooldown -1
 scoreboard players set @a dive_kick -1
 
 xp add @a -1000 levels
-xp add @a[scores={class=9}] 3 levels
+xp add @a[scores={class=9}] 2 levels
 
 scoreboard players set @a chickenbow -100
 
@@ -274,6 +279,16 @@ scoreboard players set @a gather_cooldown_T 0
 scoreboard players set @a time_pos -40
 
 scoreboard players set @a masterwand_upgrade_timer 0
+
+scoreboard players set @a x_ender_pos_t 0
+scoreboard players set @a y_ender_pos_t 0
+scoreboard players set @a z_ender_pos_t 0
+scoreboard players set @a x_ender_pos 0
+scoreboard players set @a y_ender_pos 0
+scoreboard players set @a z_ender_pos 0
+scoreboard players set @a x_ender_mot 0
+scoreboard players set @a y_ender_mot 0
+scoreboard players set @a z_ender_mot 0
 
 tag @a remove boomshard
 

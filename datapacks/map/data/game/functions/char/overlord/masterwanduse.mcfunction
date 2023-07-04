@@ -1,4 +1,4 @@
-item replace entity @s[scores={masterc=25..}] hotbar.0 with blaze_rod
+item replace entity @s[scores={masterc=25..}] hotbar.0 with blaze_rod{display:{Name:"{\"italic\":false,\"text\":\"§9On Cooldown\"}"}}
 execute as @s[scores={masterc=25..}] at @s run playsound minecraft:item.shield.break master @a ~ ~ ~ 1 0
 execute as @s[scores={masterc=25..}] at @s run playsound minecraft:item.shield.break master @a ~ ~ ~ 1 1.2
 execute as @s[scores={masterc=25..}] at @s run particle minecraft:campfire_signal_smoke ~ ~1 ~ 0.5 0.3 0.5 0 10 force

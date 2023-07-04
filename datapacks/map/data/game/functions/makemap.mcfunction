@@ -100,90 +100,90 @@ execute as @e[name=Map,type=armor_stand,scores={game=99}] at @s run clone -6 11 
 execute as @e[name=Map,type=armor_stand,scores={game=99}] at @s run clone 2 1 -16 2 1 -16 4 5 -16
 execute as @e[name=Map,type=armor_stand,scores={game=99}] at @s run fill 637 34 637 597 40 597 air
 
-execute as @e[name=Map,type=armor_stand,scores={game=1}] at @s run fill 644 2 644 644 69 590 minecraft:clay
-execute as @e[name=Map,type=armor_stand,scores={game=1}] at @s run fill 644 2 644 590 69 644 minecraft:clay
-execute as @e[name=Map,type=armor_stand,scores={game=1}] at @s run fill 590 2 590 590 69 644 minecraft:clay
-execute as @e[name=Map,type=armor_stand,scores={game=1}] at @s run fill 590 2 590 644 69 590 minecraft:clay
+execute as @e[name=Map,type=armor_stand,scores={game=1}] at @s run fill 644 2 644 644 69 591 minecraft:clay
+execute as @e[name=Map,type=armor_stand,scores={game=1}] at @s run fill 644 2 644 591 69 644 minecraft:clay
+execute as @e[name=Map,type=armor_stand,scores={game=1}] at @s run fill 591 2 591 591 69 644 minecraft:clay
+execute as @e[name=Map,type=armor_stand,scores={game=1}] at @s run fill 591 2 591 644 69 591 minecraft:clay
 
-execute as @e[name=Map,type=armor_stand,scores={game=2}] at @s run fill 644 2 644 644 69 590 minecraft:gravel
-execute as @e[name=Map,type=armor_stand,scores={game=2}] at @s run fill 644 2 644 590 69 644 minecraft:gravel
-execute as @e[name=Map,type=armor_stand,scores={game=2}] at @s run fill 590 2 590 590 69 644 minecraft:gravel
-execute as @e[name=Map,type=armor_stand,scores={game=2}] at @s run fill 590 2 590 644 69 590 minecraft:gravel
+execute as @e[name=Map,type=armor_stand,scores={game=2}] at @s run fill 644 2 644 644 69 591 minecraft:gravel
+execute as @e[name=Map,type=armor_stand,scores={game=2}] at @s run fill 644 2 644 591 69 644 minecraft:gravel
+execute as @e[name=Map,type=armor_stand,scores={game=2}] at @s run fill 591 2 591 591 69 644 minecraft:gravel
+execute as @e[name=Map,type=armor_stand,scores={game=2}] at @s run fill 591 2 591 644 69 591 minecraft:gravel
 
-execute as @e[name=Map,type=armor_stand,scores={game=3}] at @s run fill 644 2 644 644 69 590 minecraft:light_blue_terracotta
-execute as @e[name=Map,type=armor_stand,scores={game=3}] at @s run fill 644 2 644 590 69 644 minecraft:light_blue_terracotta
-execute as @e[name=Map,type=armor_stand,scores={game=3}] at @s run fill 590 2 590 590 69 644 minecraft:light_blue_terracotta
-execute as @e[name=Map,type=armor_stand,scores={game=3}] at @s run fill 590 2 590 644 69 590 minecraft:light_blue_terracotta
+execute as @e[name=Map,type=armor_stand,scores={game=3}] at @s run fill 644 2 644 644 69 591 minecraft:light_blue_terracotta
+execute as @e[name=Map,type=armor_stand,scores={game=3}] at @s run fill 644 2 644 591 69 644 minecraft:light_blue_terracotta
+execute as @e[name=Map,type=armor_stand,scores={game=3}] at @s run fill 591 2 591 591 69 644 minecraft:light_blue_terracotta
+execute as @e[name=Map,type=armor_stand,scores={game=3}] at @s run fill 591 2 591 644 69 591 minecraft:light_blue_terracotta
 
-execute as @e[name=Map,type=armor_stand,scores={game=4}] at @s run fill 644 2 644 644 69 590 minecraft:birch_planks
-execute as @e[name=Map,type=armor_stand,scores={game=4}] at @s run fill 644 2 644 590 69 644 minecraft:birch_planks
-execute as @e[name=Map,type=armor_stand,scores={game=4}] at @s run fill 590 2 590 590 69 644 minecraft:birch_planks
-execute as @e[name=Map,type=armor_stand,scores={game=4}] at @s run fill 590 2 590 644 69 590 minecraft:birch_planks
+execute as @e[name=Map,type=armor_stand,scores={game=4}] at @s run fill 644 2 644 644 69 591 minecraft:birch_planks
+execute as @e[name=Map,type=armor_stand,scores={game=4}] at @s run fill 644 2 644 591 69 644 minecraft:birch_planks
+execute as @e[name=Map,type=armor_stand,scores={game=4}] at @s run fill 591 2 591 591 69 644 minecraft:birch_planks
+execute as @e[name=Map,type=armor_stand,scores={game=4}] at @s run fill 591 2 591 644 69 591 minecraft:birch_planks
 
-execute as @e[name=Map,type=armor_stand,scores={game=5}] at @s run fill 644 2 644 644 69 590 minecraft:blue_ice
-execute as @e[name=Map,type=armor_stand,scores={game=5}] at @s run fill 644 2 644 590 69 644 minecraft:blue_ice
-execute as @e[name=Map,type=armor_stand,scores={game=5}] at @s run fill 590 2 590 644 69 590 minecraft:blue_ice
-execute as @e[name=Map,type=armor_stand,scores={game=5}] at @s run fill 590 2 590 590 69 644 minecraft:blue_ice
+execute as @e[name=Map,type=armor_stand,scores={game=5}] at @s run fill 644 2 644 644 69 591 minecraft:blue_ice
+execute as @e[name=Map,type=armor_stand,scores={game=5}] at @s run fill 644 2 644 591 69 644 minecraft:blue_ice
+execute as @e[name=Map,type=armor_stand,scores={game=5}] at @s run fill 591 2 591 644 69 591 minecraft:blue_ice
+execute as @e[name=Map,type=armor_stand,scores={game=5}] at @s run fill 591 2 591 591 69 644 minecraft:blue_ice
 
-execute as @e[name=Map,type=armor_stand,scores={game=6}] at @s run fill 644 2 644 644 69 590 minecraft:black_wool
-execute as @e[name=Map,type=armor_stand,scores={game=6}] at @s run fill 644 2 644 590 69 644 minecraft:black_wool
-execute as @e[name=Map,type=armor_stand,scores={game=6}] at @s run fill 590 2 590 644 69 590 minecraft:black_wool
-execute as @e[name=Map,type=armor_stand,scores={game=6}] at @s run fill 590 2 590 590 69 644 minecraft:black_wool
+execute as @e[name=Map,type=armor_stand,scores={game=6}] at @s run fill 644 2 644 644 69 591 minecraft:black_wool
+execute as @e[name=Map,type=armor_stand,scores={game=6}] at @s run fill 644 2 644 591 69 644 minecraft:black_wool
+execute as @e[name=Map,type=armor_stand,scores={game=6}] at @s run fill 591 2 591 644 69 591 minecraft:black_wool
+execute as @e[name=Map,type=armor_stand,scores={game=6}] at @s run fill 591 2 591 591 69 644 minecraft:black_wool
 
-execute as @e[name=Map,type=armor_stand,scores={game=7}] at @s run fill 644 2 644 644 69 590 minecraft:coal_block
-execute as @e[name=Map,type=armor_stand,scores={game=7}] at @s run fill 644 2 644 590 69 644 minecraft:coal_block
-execute as @e[name=Map,type=armor_stand,scores={game=7}] at @s run fill 590 2 590 644 69 590 minecraft:coal_block
-execute as @e[name=Map,type=armor_stand,scores={game=7}] at @s run fill 590 2 590 590 69 644 minecraft:coal_block
+execute as @e[name=Map,type=armor_stand,scores={game=7}] at @s run fill 644 2 644 644 69 591 minecraft:coal_block
+execute as @e[name=Map,type=armor_stand,scores={game=7}] at @s run fill 644 2 644 591 69 644 minecraft:coal_block
+execute as @e[name=Map,type=armor_stand,scores={game=7}] at @s run fill 591 2 591 644 69 591 minecraft:coal_block
+execute as @e[name=Map,type=armor_stand,scores={game=7}] at @s run fill 591 2 591 591 69 644 minecraft:coal_block
 
-execute as @e[name=Map,type=armor_stand,scores={game=8}] at @s run fill 644 2 644 644 69 590 minecraft:magenta_terracotta
-execute as @e[name=Map,type=armor_stand,scores={game=8}] at @s run fill 644 2 644 590 69 644 minecraft:magenta_terracotta
-execute as @e[name=Map,type=armor_stand,scores={game=8}] at @s run fill 590 2 590 644 69 590 minecraft:magenta_terracotta
-execute as @e[name=Map,type=armor_stand,scores={game=8}] at @s run fill 590 2 590 590 69 644 minecraft:magenta_terracotta
+execute as @e[name=Map,type=armor_stand,scores={game=8}] at @s run fill 644 2 644 644 69 591 minecraft:magenta_terracotta
+execute as @e[name=Map,type=armor_stand,scores={game=8}] at @s run fill 644 2 644 591 69 644 minecraft:magenta_terracotta
+execute as @e[name=Map,type=armor_stand,scores={game=8}] at @s run fill 591 2 591 644 69 591 minecraft:magenta_terracotta
+execute as @e[name=Map,type=armor_stand,scores={game=8}] at @s run fill 591 2 591 591 69 644 minecraft:magenta_terracotta
 
-execute as @e[name=Map,type=armor_stand,scores={game=9}] at @s run fill 644 2 644 644 69 590 minecraft:dark_oak_log
-execute as @e[name=Map,type=armor_stand,scores={game=9}] at @s run fill 644 2 644 590 69 644 minecraft:dark_oak_log
-execute as @e[name=Map,type=armor_stand,scores={game=9}] at @s run fill 590 2 590 644 69 590 minecraft:dark_oak_log
-execute as @e[name=Map,type=armor_stand,scores={game=9}] at @s run fill 590 2 590 590 69 644 minecraft:dark_oak_log
+execute as @e[name=Map,type=armor_stand,scores={game=9}] at @s run fill 644 2 644 644 69 591 minecraft:dark_oak_log
+execute as @e[name=Map,type=armor_stand,scores={game=9}] at @s run fill 644 2 644 591 69 644 minecraft:dark_oak_log
+execute as @e[name=Map,type=armor_stand,scores={game=9}] at @s run fill 591 2 591 644 69 591 minecraft:dark_oak_log
+execute as @e[name=Map,type=armor_stand,scores={game=9}] at @s run fill 591 2 591 591 69 644 minecraft:dark_oak_log
 
-execute as @e[name=Map,type=armor_stand,scores={game=99}] at @s run fill 644 2 644 644 69 590 minecraft:prismarine
-execute as @e[name=Map,type=armor_stand,scores={game=99}] at @s run fill 644 2 644 590 69 644 minecraft:prismarine
-execute as @e[name=Map,type=armor_stand,scores={game=99}] at @s run fill 590 2 590 644 69 590 minecraft:prismarine
-execute as @e[name=Map,type=armor_stand,scores={game=99}] at @s run fill 590 2 590 590 69 644 minecraft:prismarine
+execute as @e[name=Map,type=armor_stand,scores={game=99}] at @s run fill 644 2 644 644 69 591 minecraft:prismarine
+execute as @e[name=Map,type=armor_stand,scores={game=99}] at @s run fill 644 2 644 591 69 644 minecraft:prismarine
+execute as @e[name=Map,type=armor_stand,scores={game=99}] at @s run fill 591 2 591 644 69 591 minecraft:prismarine
+execute as @e[name=Map,type=armor_stand,scores={game=99}] at @s run fill 591 2 591 591 69 644 minecraft:prismarine
 
-execute as @e[name=Map,type=armor_stand,scores={game=10}] at @s run fill 644 2 644 644 69 590 minecraft:black_concrete
-execute as @e[name=Map,type=armor_stand,scores={game=10}] at @s run fill 644 2 644 590 69 644 minecraft:black_concrete
-execute as @e[name=Map,type=armor_stand,scores={game=10}] at @s run fill 590 2 590 644 69 590 minecraft:black_concrete
-execute as @e[name=Map,type=armor_stand,scores={game=10}] at @s run fill 590 2 590 590 69 644 minecraft:black_concrete
+execute as @e[name=Map,type=armor_stand,scores={game=10}] at @s run fill 644 2 644 644 69 591 minecraft:black_concrete
+execute as @e[name=Map,type=armor_stand,scores={game=10}] at @s run fill 644 2 644 591 69 644 minecraft:black_concrete
+execute as @e[name=Map,type=armor_stand,scores={game=10}] at @s run fill 591 2 591 644 69 591 minecraft:black_concrete
+execute as @e[name=Map,type=armor_stand,scores={game=10}] at @s run fill 591 2 591 591 69 644 minecraft:black_concrete
 
-execute as @e[name=Map,type=armor_stand,scores={game=11}] at @s run fill 644 2 644 644 69 590 minecraft:yellow_terracotta
-execute as @e[name=Map,type=armor_stand,scores={game=11}] at @s run fill 644 2 644 590 69 644 minecraft:yellow_terracotta
-execute as @e[name=Map,type=armor_stand,scores={game=11}] at @s run fill 590 2 590 644 69 590 minecraft:yellow_terracotta
-execute as @e[name=Map,type=armor_stand,scores={game=11}] at @s run fill 590 2 590 590 69 644 minecraft:yellow_terracotta
+execute as @e[name=Map,type=armor_stand,scores={game=11}] at @s run fill 644 2 644 644 69 591 minecraft:yellow_terracotta
+execute as @e[name=Map,type=armor_stand,scores={game=11}] at @s run fill 644 2 644 591 69 644 minecraft:yellow_terracotta
+execute as @e[name=Map,type=armor_stand,scores={game=11}] at @s run fill 591 2 591 644 69 591 minecraft:yellow_terracotta
+execute as @e[name=Map,type=armor_stand,scores={game=11}] at @s run fill 591 2 591 591 69 644 minecraft:yellow_terracotta
 
-execute as @e[name=Map,type=armor_stand,scores={game=12}] at @s run fill 644 2 644 644 69 590 minecraft:dark_prismarine
-execute as @e[name=Map,type=armor_stand,scores={game=12}] at @s run fill 644 2 644 590 69 644 minecraft:dark_prismarine
-execute as @e[name=Map,type=armor_stand,scores={game=12}] at @s run fill 590 2 590 644 69 590 minecraft:dark_prismarine
-execute as @e[name=Map,type=armor_stand,scores={game=12}] at @s run fill 590 2 590 590 69 644 minecraft:dark_prismarine
+execute as @e[name=Map,type=armor_stand,scores={game=12}] at @s run fill 644 2 644 644 69 591 minecraft:dark_prismarine
+execute as @e[name=Map,type=armor_stand,scores={game=12}] at @s run fill 644 2 644 591 69 644 minecraft:dark_prismarine
+execute as @e[name=Map,type=armor_stand,scores={game=12}] at @s run fill 591 2 591 644 69 591 minecraft:dark_prismarine
+execute as @e[name=Map,type=armor_stand,scores={game=12}] at @s run fill 591 2 591 591 69 644 minecraft:dark_prismarine
 
-execute as @e[name=Map,type=armor_stand,scores={game=13}] at @s run fill 644 2 644 644 69 590 minecraft:quartz_pillar
-execute as @e[name=Map,type=armor_stand,scores={game=13}] at @s run fill 644 2 644 590 69 644 minecraft:quartz_pillar
-execute as @e[name=Map,type=armor_stand,scores={game=13}] at @s run fill 590 2 590 644 69 590 minecraft:quartz_pillar
-execute as @e[name=Map,type=armor_stand,scores={game=13}] at @s run fill 590 2 590 590 69 644 minecraft:quartz_pillar
+execute as @e[name=Map,type=armor_stand,scores={game=13}] at @s run fill 644 2 644 644 69 591 minecraft:quartz_pillar
+execute as @e[name=Map,type=armor_stand,scores={game=13}] at @s run fill 644 2 644 591 69 644 minecraft:quartz_pillar
+execute as @e[name=Map,type=armor_stand,scores={game=13}] at @s run fill 591 2 591 644 69 591 minecraft:quartz_pillar
+execute as @e[name=Map,type=armor_stand,scores={game=13}] at @s run fill 591 2 591 591 69 644 minecraft:quartz_pillar
 
-execute as @e[name=Map,type=armor_stand,scores={game=14}] at @s run fill 644 2 644 644 69 590 minecraft:obsidian
-execute as @e[name=Map,type=armor_stand,scores={game=14}] at @s run fill 644 2 644 590 69 644 minecraft:obsidian
-execute as @e[name=Map,type=armor_stand,scores={game=14}] at @s run fill 590 2 590 644 69 590 minecraft:obsidian
-execute as @e[name=Map,type=armor_stand,scores={game=14}] at @s run fill 590 2 590 590 69 644 minecraft:obsidian
+execute as @e[name=Map,type=armor_stand,scores={game=14}] at @s run fill 644 2 644 644 69 591 minecraft:obsidian
+execute as @e[name=Map,type=armor_stand,scores={game=14}] at @s run fill 644 2 644 591 69 644 minecraft:obsidian
+execute as @e[name=Map,type=armor_stand,scores={game=14}] at @s run fill 591 2 591 644 69 591 minecraft:obsidian
+execute as @e[name=Map,type=armor_stand,scores={game=14}] at @s run fill 591 2 591 591 69 644 minecraft:obsidian
 
-execute as @e[name=Map,type=armor_stand,scores={game=15}] at @s run fill 644 2 644 644 69 590 minecraft:clay
-execute as @e[name=Map,type=armor_stand,scores={game=15}] at @s run fill 644 2 644 590 69 644 minecraft:clay
-execute as @e[name=Map,type=armor_stand,scores={game=15}] at @s run fill 590 2 590 644 69 590 minecraft:clay
-execute as @e[name=Map,type=armor_stand,scores={game=15}] at @s run fill 590 2 590 590 69 644 minecraft:clay
+execute as @e[name=Map,type=armor_stand,scores={game=15}] at @s run fill 644 2 644 644 69 591 minecraft:clay
+execute as @e[name=Map,type=armor_stand,scores={game=15}] at @s run fill 644 2 644 591 69 644 minecraft:clay
+execute as @e[name=Map,type=armor_stand,scores={game=15}] at @s run fill 591 2 591 644 69 591 minecraft:clay
+execute as @e[name=Map,type=armor_stand,scores={game=15}] at @s run fill 591 2 591 591 69 644 minecraft:clay
 
-execute as @e[name=Map,type=armor_stand,scores={game=16}] at @s run fill 644 2 644 644 69 590 minecraft:cyan_terracotta
-execute as @e[name=Map,type=armor_stand,scores={game=16}] at @s run fill 644 2 644 590 69 644 minecraft:cyan_terracotta
-execute as @e[name=Map,type=armor_stand,scores={game=16}] at @s run fill 590 2 590 644 69 590 minecraft:cyan_terracotta
-execute as @e[name=Map,type=armor_stand,scores={game=16}] at @s run fill 590 2 590 590 69 644 minecraft:cyan_terracotta
+execute as @e[name=Map,type=armor_stand,scores={game=16}] at @s run fill 644 2 644 644 69 591 minecraft:cyan_terracotta
+execute as @e[name=Map,type=armor_stand,scores={game=16}] at @s run fill 644 2 644 591 69 644 minecraft:cyan_terracotta
+execute as @e[name=Map,type=armor_stand,scores={game=16}] at @s run fill 591 2 591 644 69 591 minecraft:cyan_terracotta
+execute as @e[name=Map,type=armor_stand,scores={game=16}] at @s run fill 591 2 591 591 69 644 minecraft:cyan_terracotta
 
 clone 4 5 -16 4 5 -16 600 10 600
 setblock 600 9 600 redstone_block
@@ -198,10 +198,35 @@ fill 641 1 641 641 1 594 minecraft:stone_bricks
 fill 594 1 594 641 1 594 minecraft:stone_bricks
 fill 594 1 641 641 1 641 minecraft:stone_bricks
 
-fill 593 1 643 590 1 591 minecraft:stone
+fill 592 2 592 592 2 643 minecraft:stone_bricks
+fill 592 2 592 643 2 592 minecraft:stone_bricks
+fill 592 2 643 643 2 643 minecraft:stone_bricks
+fill 643 2 592 643 2 643 minecraft:stone_bricks
+
+fill 594 70 641 594 70 594 minecraft:stone_bricks
+fill 641 70 641 641 70 594 minecraft:stone_bricks
+fill 594 70 594 641 70 594 minecraft:stone_bricks
+fill 594 70 641 641 70 641 minecraft:stone_bricks
+
+fill 592 69 592 592 69 643 minecraft:stone_bricks
+fill 592 69 592 643 69 592 minecraft:stone_bricks
+fill 592 69 643 643 69 643 minecraft:stone_bricks
+fill 643 69 592 643 69 643 minecraft:stone_bricks
+
+fill 593 1 643 591 1 591 minecraft:stone
 fill 644 1 643 642 1 591 minecraft:stone
 fill 591 1 593 643 1 591 minecraft:stone
 fill 591 1 644 643 1 642 minecraft:stone
+
+fill 593 70 643 591 70 591 minecraft:stone
+fill 644 70 643 642 70 591 minecraft:stone
+fill 591 70 593 643 70 591 minecraft:stone
+fill 591 70 644 643 70 642 minecraft:stone
+
+fill 592 1 592 592 69 592 minecraft:stone_bricks
+fill 592 1 643 592 69 643 minecraft:stone_bricks
+fill 643 1 592 643 69 592 minecraft:stone_bricks
+fill 643 1 643 643 69 643 minecraft:stone_bricks
 
 # reset area for overlord blocks
 fill 697 22 646 737 11 600 air

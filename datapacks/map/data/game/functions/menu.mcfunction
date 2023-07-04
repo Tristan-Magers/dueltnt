@@ -68,7 +68,7 @@ execute as @e[name=menu,scores={RoundType=2}] at @s run function game:menu/crdis
 
 #Instant start
 execute as @e[name=menu,tag=instant] at @s run function game:instantstart
-execute as @e[name=menu,scores={instant=1}] at @s run scoreboard players set @e[type=armor_stand,scores={timer=3..}] timer 2
+execute as @e[name=menu,scores={instant=1}] at @s run scoreboard players set @e[type=armor_stand,scores={timer=3..},tag=timer] timer 3
 
 #teams
 tag @a[tag=green] remove Sgreen

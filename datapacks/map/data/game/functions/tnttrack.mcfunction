@@ -42,12 +42,12 @@ function game:finddif
 execute as @s at @s run execute store result entity @s Rotation[0] float 1 run scoreboard players get @s R1
 execute as @s at @s run execute store result entity @s Rotation[1] float 1 run scoreboard players get @s R2
 
-execute as @s[scores={R11=1..}] at @s run tp @s ~ ~ ~ ~2 ~
-execute as @s[scores={R11=..-1}] at @s run tp @s ~ ~ ~ ~-2 ~
-execute as @s[scores={R22=1..}] at @s run tp @s ~ ~ ~ ~ ~2
-execute as @s[scores={R22=..-1}] at @s run tp @s ~ ~ ~ ~ ~-2
+execute as @s[scores={R11=1..}] at @s run tp @s ~ ~ ~ ~2.5 ~
+execute as @s[scores={R11=..-1}] at @s run tp @s ~ ~ ~ ~-2.5 ~
+execute as @s[scores={R22=1..}] at @s run tp @s ~ ~ ~ ~ ~2.5
+execute as @s[scores={R22=..-1}] at @s run tp @s ~ ~ ~ ~ ~-2.5
 
-execute positioned ~ ~-1 ~ unless entity @e[distance=..1,tag=target] if entity @e[distance=1..50,tag=target] positioned ~ ~1 ~ run tp @s ^ ^ ^.18
+execute positioned ~ ~-1 ~ unless entity @e[distance=..1,tag=target] if entity @e[distance=1..50,tag=target] positioned ~ ~1 ~ run tp @s ^ ^ ^.22
 
 scoreboard players add @s TBtimer 1
 

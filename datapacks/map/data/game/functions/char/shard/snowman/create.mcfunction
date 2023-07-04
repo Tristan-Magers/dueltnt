@@ -9,5 +9,7 @@ kill @e[tag=snowmark]
 clear @s yellow_dye
 scoreboard players set @s snowmanT 40
 
+team join noCol @e[type=minecraft:snow_golem]
+
 playsound minecraft:entity.snow_golem.hurt master @a
 playsound minecraft:entity.snow_golem.death master @a

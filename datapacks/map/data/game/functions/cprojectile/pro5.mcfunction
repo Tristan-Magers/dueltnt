@@ -1,5 +1,7 @@
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Silent:1,Invulnerable:1,Tags:["creeppro","newbomb"],DisabledSlots:4144959}
 
+team join noCol @e[limit=1,tag=creeppro,sort=nearest]
+
 tp @e[limit=1,tag=creeppro,sort=nearest] @p
 
 execute as @e[limit=1,tag=creeppro,sort=nearest] at @s run tp @s ~ ~.4 ~

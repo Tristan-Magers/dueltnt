@@ -33,5 +33,5 @@ clear @s[scores={masterb=..7}] cooked_salmon
 item replace entity @s[scores={masterb=..7}] hotbar.2 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}} 1
 item replace entity @s[scores={storm_cooldown=1..}] hotbar.2 with minecraft:ghast_tear{display:{Name:"{\"italic\":false,\"text\":\"§9On Cooldown\"}"}} 1
 
-item replace entity @s[scores={masterc=25..}] hotbar.0 with blaze_rod
+item replace entity @s[scores={masterc=25..}] hotbar.0 with blaze_rod{display:{Name:"{\"italic\":false,\"text\":\"§9On Cooldown\"}"}}
 clear @s[scores={masterc=..24}] blaze_rod

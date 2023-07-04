@@ -52,7 +52,7 @@ tag @s[tag=mw1] add mw
 tag @s[tag=mw2] add mw
 
 scoreboard players add @s[tag=wand_success] masterc 1
-item replace entity @s[scores={masterc=25..}] hotbar.0 with blaze_rod
+item replace entity @s[scores={masterc=25..}] hotbar.0 with blaze_rod{display:{Name:"{\"italic\":false,\"text\":\"§9On Cooldown\"}"}}
 clear @s[scores={masterc=25..}] wooden_shovel
 clear @s[scores={masterc=25..}] stone_shovel
 clear @s[scores={masterc=25..}] iron_shovel

@@ -1,0 +1,14 @@
+{
+  "replace": true,
+  "values": [
+    "minecraft:barrier",
+    "minecraft:ladder",
+    "minecraft:red_carpet",
+    "minecraft:white_stained_glass",
+    "minecraft:snow",
+    "minecraft:grass",
+    "minecraft:azure_bluet",
+    "minecraft:cornflower",
+    "#minecraft:flowers"
+  ]
+}

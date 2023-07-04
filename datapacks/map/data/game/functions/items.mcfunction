@@ -3,6 +3,7 @@
 tp @e[type=minecraft:silverfish] ~ ~-1000 ~
 
 #nolev
+#execute as @a[scores={nolev=1}] run say test
 effect clear @a[scores={nolev=1}] levitation
 scoreboard players remove @a[scores={nolev=0..}] nolev 1
 
@@ -24,6 +25,7 @@ scoreboard players remove @a[gamemode=adventure,scores={class=8,rjump=2..}] rjum
 
 team join Main @a[gamemode=adventure,team=!Main,x=600,y=60,z=600,distance=110..]
 team join Main @a[gamemode=adventure,team=!Main,scores={class=..7}]
+team join Main @a[gamemode=adventure,team=!Main,scores={class=9..}]
 
 # arrow reloading
 scoreboard players set @a[gamemode=adventure,scores={bow=-100}] bow 1
@@ -35,9 +37,9 @@ execute as @a[gamemode=adventure,distance=..100,x=620,y=20,z=620] at @s run func
 
 # shifting specials
 execute as @a unless entity @s[scores={class=9}] run xp add @s -1 levels
-xp add @a[scores={class=9,overlordsc=3..}] -1 levels
+xp add @a[scores={class=9,overlordsc=2..}] -1 levels
 scoreboard players add @a[gamemode=adventure,scores={timer=1..},distance=..100,x=620,y=20,z=620] timer 1
-execute as @a[gamemode=adventure,scores={shift=1..,timer=..0},distance=..100,x=620,y=20,z=620] at @s unless entity @s[scores={class=9,overlordsc=3..}] run function game:shift
+execute as @a[gamemode=adventure,scores={shift=1..,timer=..0},distance=..100,x=620,y=20,z=620] at @s unless entity @s[scores={class=9,overlordsc=2..}] run function game:shift
 
 execute as @a[gamemode=adventure,scores={timer=1..},distance=..100,x=620,y=20,z=620] at @s run function game:player/shifttime
 
@@ -45,6 +47,8 @@ title @a[gamemode=adventure,scores={shift=1..},x=600,y=60,z=600,distance=3..500]
 scoreboard players reset @a[gamemode=adventure,scores={shift=1..}] shift
 
 # arrow effects
+execute as @e[type=arrow,tag=fast] at @s run particle minecraft:crimson_spore ~ ~ ~ 0 0 0 0 1 force
+
 scoreboard players add @e[type=arrow] arrowTime 1
 execute as @e[type=arrow,scores={arrowTime=1}] at @s run function game:items/arrowscores
 
@@ -148,10 +152,10 @@ execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=9
 scoreboard players add @a[gamemode=adventure,scores={gather_cooldown=1..}] gather_cooldown_T 1
 scoreboard players remove @a[gamemode=adventure,scores={gather_cooldown_T=20..}] gather_cooldown 1
 
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={gather_cooldown_T=20..,gather_cooldown=0}] at @s run playsound minecraft:item.bottle.fill_dragonbreath master @s ~ ~ ~ 0.7 1.5
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={gather_cooldown_T=20..,gather_cooldown=0}] at @s run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.2 2
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={gather_cooldown_T=20..,gather_cooldown=0}] at @s run playsound minecraft:ui.loom.select_pattern master @s
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={gather_cooldown_T=20..,gather_cooldown=0}] at @s run title @s actionbar {"text":"Gather Reloaded!","color":"light_purple"}
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={gather_cooldown_T=20..,gather_cooldown=0,class=9}] at @s run playsound minecraft:item.bottle.fill_dragonbreath master @s ~ ~ ~ 0.7 1.5
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={gather_cooldown_T=20..,gather_cooldown=0,class=9}] at @s run playsound minecraft:block.note_block.pling master @s ~ ~ ~ 0.2 2
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={gather_cooldown_T=20..,gather_cooldown=0,class=9}] at @s run playsound minecraft:ui.loom.select_pattern master @s
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={gather_cooldown_T=20..,gather_cooldown=0,class=9}] at @s run title @s actionbar {"text":"Gather Reloaded!","color":"light_purple"}
 
 scoreboard players set @a[gamemode=adventure,scores={gather_cooldown_T=20..}] gather_cooldown_T 0
 
@@ -212,6 +216,11 @@ execute as @e[tag=wizcreep,tag=newbomb] at @s anchored eyes run function game:cp
 execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:gray_dye"}}] at @s run function game:cprojectile/pro8
 
 effect give @e[tag=wizcreep] minecraft:slow_falling 999 0 true
+
+team join noCol @e[tag=wizcreep]
+execute as @e[tag=wizcreep] run scoreboard players add @s wizard_creeper 1 
+execute as @e[tag=wizcreep,scores={wizard_creeper=120..}] run tag @s add time_boom
+execute as @e[tag=wizcreep,scores={wizard_creeper=120..}] run function game:char/wizard/boom_creeper
 
 #creeper projectile reaper
 scoreboard players add @e[tag=creepro] masterb 1
@@ -415,6 +424,8 @@ kill @e[name=snowscan,scores={t2=270..}]
 #execute as @e[type=minecraft:trident,nbt={inGround:1b}] at @s run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["tntstorm","gameae"]}
 #execute as @e[type=minecraft:trident,nbt={inGround:1b}] at @s run function game:char/shard/frostplace2
 
+#execute as @a[scores={tridentuse=1..}] run effect give @s levitation 1 0 true
+#execute as @a[scores={tridentuse=1..}] run scoreboard players set @s nolev 8
 execute as @a[scores={tridentuse=1..}] run scoreboard players operation @e[type=minecraft:trident,limit=1,sort=nearest,tag=!old] tntID = @s tntID
 
 execute as @e[type=minecraft:trident] run function game:char/shard/trident
@@ -463,7 +474,7 @@ effect clear @a wither
 execute as @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,scores={grave=1..}] at @s run function game:char/gardener/grave
 
 # creepers and slimes
-effect give @e[name=Bomb,type=creeper] slow_falling 999 100 true
+effect give @e[name=Bomb,type=creeper,tag=!slow_disable] slow_falling 999 100 true
 effect give @e[name=Bomb,type=creeper] slowness 999 100 true
 effect give @e[type=slime] slowness 999 100 true
 effect give @e[type=slime] resistance 999 100 true
@@ -475,8 +486,15 @@ execute as @e[type=slime,tag=s1] at @s run function game:items/reaperslime
 execute as @e[scores={Ctimer=1..},tag=!nodub] at @s run particle minecraft:wax_off ~ ~1 ~ 0.3 0.6 0.3 0 2 force
 
 scoreboard players add @e[name=Bomb,type=creeper] Ctimer 1
-execute as @e[scores={Ctimer=17},tag=!nodub] at @s run summon minecraft:creeper ~ ~ ~ {NoAI:1,ignited:1,Fuse:3,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"{\"italic\":false,\"text\":\"Bomb\"}",Health:500,powered:1,ExplosionRadius:2,Invulnerable:1,NoAI:1}
-execute as @e[scores={Ctimer=17},tag=!nodub] at @s run summon minecraft:creeper ~ ~ ~ {NoAI:1,ignited:1,Fuse:5,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"{\"italic\":false,\"text\":\"Bomb\"}",Health:500,powered:1,ExplosionRadius:2,Invulnerable:1,NoAI:1}
+execute as @e[scores={Ctimer=17},tag=!nodub,tag=!thrown_creeper] at @s run summon minecraft:creeper ~ ~ ~ {NoAI:1,ignited:1,Fuse:3,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"{\"italic\":false,\"text\":\"Bomb\"}",Health:500,powered:1,ExplosionRadius:2,Invulnerable:1,NoAI:1}
+execute as @e[scores={Ctimer=17},tag=!nodub,tag=!thrown_creeper] at @s run summon minecraft:creeper ~ ~ ~ {NoAI:1,ignited:1,Fuse:5,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"{\"italic\":false,\"text\":\"Bomb\"}",Health:500,powered:1,ExplosionRadius:2,Invulnerable:1,NoAI:1}
+
+execute as @e[scores={Ctimer=15},tag=thrown_creeper] run tag @s add slow_disable
+execute as @e[scores={Ctimer=15},tag=thrown_creeper] run effect clear @s slow_falling
+
+execute as @e[scores={Ctimer=17},tag=thrown_creeper] at @s run data merge entity @s {Fuse:0} 
+execute as @e[scores={Ctimer=17},tag=thrown_creeper] at @s run summon minecraft:creeper ~ ~0.6 ~ {NoAI:1,ignited:1,Fuse:3,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"{\"italic\":false,\"text\":\"Bomb\"}",Health:500,powered:1,ExplosionRadius:2,Invulnerable:1,NoAI:1}
+execute as @e[scores={Ctimer=17},tag=thrown_creeper] at @s run summon minecraft:creeper ~ ~ ~ {NoAI:1,ignited:1,Fuse:5,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"{\"italic\":false,\"text\":\"Bomb\"}",Health:500,powered:1,ExplosionRadius:2,Invulnerable:1,NoAI:1}
 
 #execute as @a[scores={creepegguse=8,creeperegguset=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Creeper","color":"green","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
 #execute as @a[scores={creepegguse=9,creeperegguset=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Creeper","color":"green","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]

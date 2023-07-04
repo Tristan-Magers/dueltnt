@@ -1,6 +1,10 @@
 effect give @s slow_falling 999 0 true
 #function game:physics/negate_gravity
 
+effect give @s[scores={slimeT=..2}] weakness 1 200 true
+
+effect clear @s[scores={slimeT=4}] weakness
+
 scoreboard players add @s slimeT 1
 execute as @s[scores={slimeT=6},tag=thrown] at @s run data merge entity @s {Size:2}
 execute as @s[scores={slimeT=12},tag=thrown] at @s run data merge entity @s {Size:3}
@@ -24,8 +28,8 @@ execute as @s[tag=!thrown] at @s run particle minecraft:wax_off ~ ~1 ~ 1 1 1 0 2
 execute as @s[scores={slimeT=59}] at @s run summon tnt ~ ~1 ~
 execute as @s[scores={slimeT=59}] at @s run summon tnt ~ ~1 ~
 
-execute as @s[scores={slimeT=32},tag=!thrown] at @s run summon tnt ~ ~1 ~
-execute as @s[scores={slimeT=32},tag=!thrown] at @s run summon tnt ~ ~1 ~
-execute as @s[scores={slimeT=32},tag=!thrown] at @s run summon tnt ~ ~1 ~
+execute as @s[scores={slimeT=34},tag=!thrown] at @s run summon tnt ~ ~1 ~
+execute as @s[scores={slimeT=34},tag=!thrown] at @s run summon tnt ~ ~1 ~
+execute as @s[scores={slimeT=34},tag=!thrown] at @s run summon tnt ~ ~1 ~
 
-tp @s[scores={slimeT=32},tag=!thrown] ~ ~-10000 ~
+tp @s[scores={slimeT=34},tag=!thrown] ~ ~-10000 ~

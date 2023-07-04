@@ -5,6 +5,9 @@
 
 [General]
 - Reduced debug mode enabled during game (disabled during single player training mode)
+- Timer for start button reduced to 10 seconds
+- Improved start game effects
+- Enderpearls have improved detection for where player lands
 
 [Character Changes]
 
@@ -30,7 +33,6 @@ Assassin
 - Get one less Teleport (1 -> 2)
 - Teleport takes 0.5s longer to reload (10s -> 10.5s)
 - Sneak Attack TNT takes 0.35s longer to explode (0.1s -> 0.45s)
-- Get one less Sneak Attack (3 -> 2)
 - Sneak Attack and Dart TNT does not get effected by gravity or knockback
 
 Ghost
@@ -39,37 +41,56 @@ Ghost
 - Smoke Bomb's second TNT explodes 0.05s slower (0.8s -> 0.85s) (now 0.15s after first)
 
 Trapper
-- TNT Trap explodes 0.1s slower (0.05s -> 0.15s)
+- TNT Trap explodes 0.05s slower (0.05s -> 0.1s)
 - Fast Trap explodes 0.2s slower (0.05s -> 0.25s)
 - Short Blast TNT explodes 0.05s slower (0.05s -> 0.1s)
+- Fast Trap gives off more particles
 - Added "Phantom Blocks"
     - Recreates blocks of map where-ever you are looking
     - Phantom blocks break when stepped on
-    - Lasts 16s
-- Track Bomb switches between itself and Time Bomb
+    - Lasts 20s
+    - Range of 18 blocks
+- Track Bomb switches between itself and Phantom Blocks
 	- 5.5s to Phantom Blocks, 5.5s to Track Bomb (previously 10s)
 - Switched Platform and Track Bomb slots
 - Track Bomb only has an explosion of 1 tnt if it explodes due to time (previously 2 tnt)
+- Track Bomb Moves and turns faster (3.6 b/s -> 4.4 b/s)
 - Platform lasts 1s longer (2.5s -> 3.5s)
 
 Wizard
 - Fireball spawns 0.3 block in front of you
 - Fireball speed increased (bigger increase at minimum than at max)
-- "Explode Ghost Creeper" cooldown reduced 2.5s (7s -> 4.5s)
+- Teleport bow up detection increased (2.5 -> 3 blocks from user)
+- Teleport bow now has proper resolution between conflicting down/up arrows (stops previous from moving)
+- "Explode Ghost Creeper" cooldown reduced 2.3s (7s -> 5.5s)
 - "Pig Transform" can now be used anywhere (can still be placed to teleport to location)
 - "Pig Transform" 0.5s faster if used on ground (2s -> 1.5s)
 - "Pig Transform" reloads 2s slower (5s -> 7s) (starts after explosion)
 - Shift (Teleport) cooldown increased 1.25s (6.75s -> 8s)
 - Shift (Teleport) can no longer kill self off of top
+- Shift (Teleport) no longer spawns a creeper if one has been spawned (either through shift or throw)
+- Vortex range increased by 1 (8 -> 9)
+- Vortex reworked to push players inwards, instead of completely moving them
+	- No long has a vertical impact, up or down
+        - Strength Ranges (10 [level 1], 5 [level 2], 2.5 [level 3])
+- Vortex Takes 1.5s to load at start of round
 - Added "Throw Creeper"
-    - Active when no creeper out
-    - Causes 1.5s cooldown on "Explode Ghost Creeper"
+    - Replaces "Explode Ghost Creeper" when no creeper out
+    - Causes 1.3s cooldown on "Explode Ghost Creeper"
     - Thrown Creeper has slowfalling
+- Ghost Creepers self explode after 6s
 - Note: Bug fix where creepers didn't die when they touched the void
+
+Mad Scientist
+- Powershield now has 0.1s long period where it can't be broken at start (0.4s -> 0.6s)
+    - Prevents situations where shield seamingly breaks instantly
+- Gets 1 more TNT Egg (3 -> 4)
 
 Reaper
 - Reaper now has 112% base speed (previously normal)
 - Scythe reloads 0.25s faster (5.25s -> 5s)
+- Scythe detection improved
+- Scythe hitbox gets bigger after 0.5s (0.2 x 0.2 x 0.2 -> 0.6 x 0.2 x 0.6)
 - Creepers and Slimes have 33% less gravity
 - First Creeper Egg reloads 4.5s faster (6.5s -> 2s) [only at the very start of round]
 - Creeper Eggs reload .75s slower (7s -> 7.75s)
@@ -81,10 +102,12 @@ Reaper
 - Placed Slimes grow 1 extra size (max 10)
 - Placed Slimes create 1 extra tnt (2 -> 3)
 - Placed Slimes grow later and more rapidly
-- Placed Slimes explode 1.35s faster (2.95s -> 1.6s)
+- Placed Slimes explode 1.25s faster (2.95s -> 1.7s)
+- Slimes have 0.2s delay before they can do damage
 - Placing Creepers/Slimes pushes them in the direction you are facing
 - Creepers/Slimes thrown have a max downwards angle of 70 degrees
 - Slimes thrown come 0.4 blocks further from yourself (making it harder to hit yourself)
+- Feathers have 0.4s cooldown between uses [quality of life]
 
 Echo
 - Boom wand takes longer to reload on the last 4 uses (0.6s,0.6s,0.65s,0.7s) (normally .55s)
@@ -124,13 +147,13 @@ Overlord
 - Matter Storm costs 8 less (16 -> 8)
 - Matter Slide has 3.5s cooldown on use
 - Matter Bomb costs 1 less (7 -> 6)
-- Matter Bomb has 0.9s delay between uses
+- Matter Bomb has 1s delay between uses
 - Matter Slide costs 5 less (17 -> 12)
 - Matter Slide has 4.5s cooldown on use
 - Boom Halo costs 1 less (13 -> 12)
 - Boom Halo explodes .3s faster (.65s -> 35s)
 - Boom Halo has 0.4 smaller radius (2.6 -> 2.2)
-- Boom Halo levitation adjusted (1s -> .65s) (level 3 -> level 13) [Note: quality of life]
+- Boom Halo levitation adjusted (1s -> .65s) (level 3 -> level 16) [Note: quality of life]
 - Boom Halo TNT starts with 0.2 downward motion [Note: quality of life]
 - Matter Slide and Matter Storm has swapped places
 - Icon improvements for unavailable items
@@ -142,6 +165,7 @@ Shard
 - Anti-Ice Bow side arrows explodes 0.05s slower (.15s -> .2s)
 - Anti-Ice Bow arrows now all shoot in the same direction
 - Anti-Ice Bow side arrows spawn further out to the side (can't spawn in a wall)
+- Anti-Ice Bow tnt spawns 0.5 blocks up and has no gravity
 - Snowman shot is now a projectile (moves 25 blocks per second) [can be blocked]
 - Snowman shots now detect 1.5s faster and has smaller aim assist for first 1.5 blocks [quality of life / bug fix]
     - Should fix cases where snowman misses blocks directly in front of it or hits the wrong ones
@@ -157,24 +181,35 @@ Shard
 - Trident takes 3.5s to reload at start of match
 - Ice Suck takes 2.75s longer to reload (9.25s -> 12s)
 - Ice Suck platform lasts 2.5s shorter (5s base -> 2.5s base) [note: +1 tick per ice sucked]
-- Gets 1 less -- (3 -> 2)
+- Shift cooldown 1.75s longer (3s -> 4.75s)
 - Shift tnt fuse 0.05s longer (.1s -> .15s) [tnt no longer has gravity]
+- Fload has 0.8s cooldown between uses [quality of life]
+- Ice placing moves no longer replace carpets,ladders,snow,and plants (breaks them)
 - "Cold Bomb" renamed "Frosty Poppy"
 
 [Map]
-- Grass and flowers removed from "Flower Temple" (due to gameplay bug and issues)
+- Grass and flowers reduced on "Flower Temple" (to improve gameplay)
 
 [Particle]
 - Timing fix to "3rd Place Party"
 
 [Bug Fixes]
 - Fixed 1.20 issue where menu signs stopped working
-- Fixed a wide spanning amount of issues where some projectiles did not get reset between rounds
+- Fixed a wide spanning amount of issues where some projectiles/items did not get reset between rounds
 - Fixed issue with placable surfaces being buggy and inconsistant accross items (now all intended sufaces are placeable)
 - Fixed 1.18 issue where projectiles that would collide with void no longer collided with void
+- Fixed Wizard shift acting extremely inconsistant
 - Ground Spell would not work on the last two blocks of the stage
 - The achievement for Shard displays the text "Find Overlord" instead of "Find Shard"
 - Overlord shift amount would announce way too many times to spectators
 - Reaper and Shard armor did not have unbreaking
 - Overlord could break lobby blocks the tick after game ended
 - Fixed bug when players leave world and rejoin, menu may not reset
+- Fixed sneak attack teleporting you to lobby players (lol)
+- Fixed spectators interacting with a variety of moves
+- Survival mode mobs could spawn on Tremor walls
+- Phantom mode powerups could spawn on Tremor walls
+- Switching from Gardner to Overlord/Shard would cause arrows to collide with players and you still
+- Dummies no longer make sound
+- Arena would not properly reset
+- Arena was uneven (end of an era)

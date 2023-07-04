@@ -39,6 +39,7 @@ kill @e[type=fireball]
 kill @e[type=creeper]
 kill @e[tag=telebow]
 kill @e[tag=phantom_block]
+kill @e[type=minecraft:block_display]
 
 kill @e[type=minecraft:armor_stand,x=621,y=17,z=617,distance=..100]
 kill @e[type=minecraft:marker,x=621,y=17,z=617,distance=..100]
