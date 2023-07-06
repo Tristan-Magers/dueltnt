@@ -8,7 +8,7 @@ execute as @s[scores={NArrow=1..}] at @s run fill ~1 ~-1 ~1 ~-1 ~2 ~-1 air
 execute as @s[scores={PS=1..},x=600,y=60,z=600,distance=3..100] at @s run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air replace white_stained_glass
 execute as @s[scores={PS=1..},x=600,y=60,z=600,distance=3..100] at @s run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air replace blue_ice
 
-execute as @e[name=SP] at @s run fill ~1 ~ ~1 ~-1 ~ ~-1 air replace white_stained_glass
+execute as @e[name=SP] at @s run fill ~1 ~ ~1 ~-1 ~-2 ~-1 air replace white_stained_glass
 
 tag @e[tag=groundpath] add end_game
 execute as @e[tag=groundpath] at @s run function game:char/overlord/groundpath
@@ -36,6 +36,7 @@ kill @e[type=trident]
 kill @e[type=minecraft:snow_golem]
 tp @e[type=slime] ~ ~-1000 ~
 kill @e[type=fireball]
+kill @e[type=experience_bottle]
 kill @e[type=creeper]
 kill @e[tag=telebow]
 kill @e[tag=phantom_block]

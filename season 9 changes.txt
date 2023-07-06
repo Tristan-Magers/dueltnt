@@ -38,7 +38,7 @@ Assassin
 Ghost
 - Gets 3 Teleports (ender pearls) instead of reloading them
 - Enderpearls give 2s of invisibility on use
-- Smoke Bomb's second TNT explodes 0.05s slower (0.8s -> 0.85s) (now 0.15s after first)
+- Second TNT on Smoke Bomb has 0.05s longer fuse (0.55s -> 0.6s)
 
 Trapper
 - TNT Trap explodes 0.05s slower (0.05s -> 0.1s)
@@ -49,12 +49,13 @@ Trapper
     - Recreates blocks of map where-ever you are looking
     - Phantom blocks break when stepped on
     - Lasts 20s
-    - Range of 18 blocks
+    - Range of 14 blocks
 - Track Bomb switches between itself and Phantom Blocks
 	- 5.5s to Phantom Blocks, 5.5s to Track Bomb (previously 10s)
 - Switched Platform and Track Bomb slots
 - Track Bomb only has an explosion of 1 tnt if it explodes due to time (previously 2 tnt)
 - Track Bomb Moves and turns faster (3.6 b/s -> 4.4 b/s)
+- Track Bomb explodes naturally 0.5s faster (4s -> 3.5s)
 - Platform lasts 1s longer (2.5s -> 3.5s)
 
 Wizard
@@ -70,6 +71,7 @@ Wizard
 - Shift (Teleport) can no longer kill self off of top
 - Shift (Teleport) no longer spawns a creeper if one has been spawned (either through shift or throw)
 - Vortex range increased by 1 (8 -> 9)
+- Vortex lasts 1s less (6s -> 5s) [activates 2s in]
 - Vortex reworked to push players inwards, instead of completely moving them
 	- No long has a vertical impact, up or down
         - Strength Ranges (10 [level 1], 5 [level 2], 2.5 [level 3])
@@ -82,7 +84,8 @@ Wizard
 - Note: Bug fix where creepers didn't die when they touched the void
 
 Mad Scientist
-- Powershield now has 0.1s long period where it can't be broken at start (0.4s -> 0.6s)
+- Explosive Gel (bow) reploads 0.15s faster (2.8s -> 2.65s)
+- Powershield now has 0.1s longer period where it can't be broken at start (0.4s -> 0.6s)
     - Prevents situations where shield seamingly breaks instantly
 - Gets 1 more TNT Egg (3 -> 4)
 
@@ -136,18 +139,18 @@ Overlord
 - Wand upgrades 0.8-1.2 less with each upgrade but starts 0.8 longer
     - (7,9,11,12.6,14.2 -> 7.8,9.0,10.2,11.4,12.6)
 - Wand Upgrade permanently replaced with matter storm from start
-- Matter storm TNT does not explode until last projectile hits a block (indicated with glowing)
+- Matter Bomb costs 1 less (7 -> 6)
+- Matter Bomb has 1.5s cooldown on use
+- Matter Storm TNT does not explode until last projectile hits a block (indicated with glowing)
     - Fuse 0.2s longer (0.05s -> 0.25s) [after trigger] [1.5s if no trigger occurs]
-- Matter storm projectile has improved hit detection (smaller hitbox higher up)
+- Matter Storm projectile has improved hit detection (smaller hitbox higher up)
     - TNT summon location also improved to be outside block always
-- Matter storm projectiles no longer have 0.1s delay
-- Matter storm projectiles move 10% faster (20 b/s -> 22 b/s)
-- Matter storm projectiles have smaller hitbox (0.4x0.4x0.4 -> 0.2x0.2x0.2)
+- Matter Storm projectiles no longer have 0.1s delay
+- Matter Storm projectiles move 10% faster (20 b/s -> 22 b/s)
+- Matter Storm projectiles have smaller hitbox (0.4x0.4x0.4 -> 0.2x0.2x0.2)
 - Matter Storm shoots 0.1s faster (0.3s -> 0.2s) [0.1s delay between shots]
 - Matter Storm costs 8 less (16 -> 8)
-- Matter Slide has 3.5s cooldown on use
-- Matter Bomb costs 1 less (7 -> 6)
-- Matter Bomb has 1s delay between uses
+- Matter Storm has 3.5s cooldown on use
 - Matter Slide costs 5 less (17 -> 12)
 - Matter Slide has 4.5s cooldown on use
 - Boom Halo costs 1 less (13 -> 12)

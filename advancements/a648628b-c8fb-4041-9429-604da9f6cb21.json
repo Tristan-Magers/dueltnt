@@ -185,5 +185,17 @@
     },
     "done": true
   },
+  "classes:class5": {
+    "criteria": {
+      "mad": "2023-07-04 03:58:49 -0600"
+    },
+    "done": true
+  },
+  "classes:class9": {
+    "criteria": {
+      "overlord": "2023-07-04 03:59:04 -0600"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }

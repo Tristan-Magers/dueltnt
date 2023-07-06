@@ -3,8 +3,8 @@ scoreboard players add @s t1 1
 particle minecraft:ash ~ ~ ~ 0 0 0 0 1 force @s
 
 execute unless block ~ ~ ~100 air if block ~ ~ ~ air run tag @s add p_hitscan_check
-tag @s[scores={t1=180..}] add p_hitscan_check
-tag @s[scores={t1=180..}] add p_hitscan_check_time
+tag @s[scores={t1=140..}] add p_hitscan_check
+tag @s[scores={t1=140..}] add p_hitscan_check_time
 
 execute as @s[tag=!p_hitscan_check] positioned ^ ^ ^0.1 run function game:char/trapper/phantom_hitscan
 execute as @s[x_rotation=0..90,tag=p_hitscan_check,tag=!phantom_blocks,tag=!p_hitscan_check_time] positioned ~ ~-1 ~ positioned ^ ^ ^1 run function game:char/trapper/phantom_blocks

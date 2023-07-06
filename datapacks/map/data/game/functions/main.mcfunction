@@ -355,8 +355,8 @@ scoreboard players operation TimeReal game = Time game
 scoreboard players operation TimeReal game /= 20 game
 execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run scoreboard players operation Time l = TimeReal game
 
-execute if entity @e[name=Map,type=armor_stand,scores={Time=580}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"","color":"dark_red","bold":"false"}]
-
+execute if entity @e[name=Map,type=armor_stand,scres={Time=580}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"","color":"dark_red","bold":"false"}]
+o
 execute if entity @e[name=Map,type=armor_stand,scores={Time=15}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"TIMES OUT","color":"dark_red","bold":"false"}]
 execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure,scores={teamed=..0}] at @s run scoreboard players operation @s l = @s Lives
 

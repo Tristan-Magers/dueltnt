@@ -19,6 +19,7 @@ execute as @s[scores={endercount=5,class=0}] at @s run tellraw @a[gamemode=spect
 execute as @s[scores={endercount=1,class=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
 execute as @s[scores={endercount=2,class=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
 execute as @s[scores={endercount=3,class=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
+#execute as @s[scores={endercount=4,class=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Teleport","color":"green","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
 
 effect give @s[scores={class=2}] invisibility 2 0 true
 scoreboard players set @s[scores={class=2}] Invis 40
