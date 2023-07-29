@@ -52,6 +52,8 @@ fill 637 19 637 597 36 597 air
 fill 637 37 637 597 55 597 air
 fill 637 56 637 597 74 597 air
 fill 637 75 637 597 83 597 air
+fill 596 43 596 639 45 639 air
+fill 596 -1 596 639 -2 639 air
 
 execute as @e[name=ground,type=armor_stand] at @s run fill ~3 ~1 ~3 ~-3 ~-1 ~-3 air replace end_stone
 kill @e[name=ground,type=armor_stand]
@@ -228,7 +230,20 @@ fill 592 1 643 592 69 643 minecraft:stone_bricks
 fill 643 1 592 643 69 592 minecraft:stone_bricks
 fill 643 1 643 643 69 643 minecraft:stone_bricks
 
+fill 595 0 640 595 70 595 minecraft:barrier
+fill 640 0 595 595 70 595 minecraft:barrier
+fill 595 0 640 640 70 640 minecraft:barrier
+fill 640 0 595 640 70 640 minecraft:barrier
+
 # reset area for overlord blocks
 fill 697 22 646 737 11 600 air
 fill 697 35 646 737 23 600 air
 fill 697 36 646 737 45 600 air
+
+fill 596 7 496 639 21 539 air
+fill 596 22 496 639 34 539 air
+fill 596 35 496 639 49 539 air
+
+fill 596 7 696 639 21 739 air
+fill 596 22 696 639 34 739 air
+fill 596 35 696 639 49 739 air

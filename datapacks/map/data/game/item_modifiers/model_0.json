@@ -1,4 +1,10 @@
-{
-	"function" : "minecraft:set_nbt",
-	"tag" : "{CustomModelData:0}"
-}
+[
+	{
+		"function" : "minecraft:set_nbt",
+		"tag" : "{CustomModelData:0}"
+	},
+	{
+		"function" : "minecraft:set_name",
+		"name" : [{"text":"","italic":false,"color":"white"}]
+	}
+]

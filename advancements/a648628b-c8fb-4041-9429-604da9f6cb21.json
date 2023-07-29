@@ -1,199 +1,25 @@
 {
+  "delta:player_setup": {
+    "criteria": {
+      "requirement": "2023-07-28 16:46:41 -0600"
+    },
+    "done": true
+  },
   "classes:root": {
     "criteria": {
-      "warrior": "2021-10-15 17:03:09 -0600"
+      "warrior": "2023-07-28 16:46:41 -0600"
     },
     "done": true
   },
   "survival:root": {
     "criteria": {
-      "warrior": "2021-10-15 17:03:09 -0600"
+      "warrior": "2023-07-28 16:46:41 -0600"
     },
     "done": true
   },
-  "classes:class10": {
+  "particle:root": {
     "criteria": {
-      "overlord": "2022-01-07 15:44:35 -0700"
-    },
-    "done": true
-  },
-  "classes:class8": {
-    "criteria": {
-      "gardener": "2022-01-07 18:01:14 -0700"
-    },
-    "done": true
-  },
-  "classes:class3": {
-    "criteria": {
-      "trapper": "2022-01-07 18:01:23 -0700"
-    },
-    "done": true
-  },
-  "classes:class7": {
-    "criteria": {
-      "echo": "2022-01-07 21:38:35 -0700"
-    },
-    "done": true
-  },
-  "classes:class6": {
-    "criteria": {
-      "reaper": "2022-01-07 21:53:51 -0700"
-    },
-    "done": true
-  },
-  "classes:class4": {
-    "criteria": {
-      "wizard": "2022-03-14 16:50:28 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/mangrove_boat": {
-    "criteria": {
-      "in_water": "2022-08-15 18:12:46 -0600"
-    },
-    "done": true
-  },
-  "delta:player_setup": {
-    "criteria": {
-      "requirement": "2022-12-17 21:55:12 -0700"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_lime_wool": {
-    "criteria": {
-      "has_needed_dye": "2023-06-26 15:22:31 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_white_carpet": {
-    "criteria": {
-      "has_needed_dye": "2023-06-26 15:22:31 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_white_wool": {
-    "criteria": {
-      "has_needed_dye": "2023-06-26 15:22:31 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_lime_bed": {
-    "criteria": {
-      "has_needed_dye": "2023-06-26 15:22:31 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_white_bed": {
-    "criteria": {
-      "has_needed_dye": "2023-06-26 15:22:31 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_lime_carpet": {
-    "criteria": {
-      "has_needed_dye": "2023-06-26 15:22:31 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_yellow_carpet": {
-    "criteria": {
-      "has_needed_dye": "2023-06-26 15:23:45 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_yellow_wool": {
-    "criteria": {
-      "has_needed_dye": "2023-06-26 15:23:45 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_yellow_bed": {
-    "criteria": {
-      "has_needed_dye": "2023-06-26 15:23:45 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/cherry_boat": {
-    "criteria": {
-      "in_water": "2023-06-26 19:41:27 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/bamboo_raft": {
-    "criteria": {
-      "in_water": "2023-06-26 19:41:27 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_red_bed": {
-    "criteria": {
-      "has_needed_dye": "2023-06-27 12:51:35 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_red_wool": {
-    "criteria": {
-      "has_needed_dye": "2023-06-27 12:51:35 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_red_carpet": {
-    "criteria": {
-      "has_needed_dye": "2023-06-27 12:51:35 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_pink_wool": {
-    "criteria": {
-      "has_needed_dye": "2023-06-27 12:51:52 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_pink_bed": {
-    "criteria": {
-      "has_needed_dye": "2023-06-27 12:51:52 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_pink_carpet": {
-    "criteria": {
-      "has_needed_dye": "2023-06-27 12:51:52 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_gray_carpet": {
-    "criteria": {
-      "has_needed_dye": "2023-06-27 22:11:55 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_gray_wool": {
-    "criteria": {
-      "has_needed_dye": "2023-06-27 22:11:55 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_gray_bed": {
-    "criteria": {
-      "has_needed_dye": "2023-06-27 22:11:55 -0600"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/bamboo_block": {
-    "criteria": {
-      "has_bamboo": "2023-06-30 20:24:39 -0600"
-    },
-    "done": true
-  },
-  "classes:class5": {
-    "criteria": {
-      "mad": "2023-07-04 03:58:49 -0600"
-    },
-    "done": true
-  },
-  "classes:class9": {
-    "criteria": {
-      "overlord": "2023-07-04 03:59:04 -0600"
+      "warrior": "2023-07-28 16:46:41 -0600"
     },
     "done": true
   },

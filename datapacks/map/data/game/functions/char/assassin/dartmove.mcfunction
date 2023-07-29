@@ -23,4 +23,4 @@ execute as @s[tag=!in,tag=!boom] at @s run summon armor_stand ~ ~1.5 ~ {Marker:1
 #execute as @s[tag=!in,tag=!boom] at @s run summon tnt ~ ~1.4 ~ {Fuse:10,NoGravity:1,Tags:["blue_tnt"],Glowing:1}
 tag @s[tag=!in] add boom
 kill @s[tag=!in]
-kill @s[scores={laserDummy=1000..}]
+kill @s[scores={laserDummy=..0}]

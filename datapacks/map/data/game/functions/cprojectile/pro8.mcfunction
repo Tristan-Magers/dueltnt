@@ -12,7 +12,7 @@ clear @s clay_ball
 #scoreboard players add @s creepegguse 1
 
 #explosion delay
-scoreboard players set @s[scores={CPtimer=..26}] CPtimer 26
+scoreboard players set @s[scores={CPtimer=..20}] CPtimer 20
 
 playsound minecraft:entity.skeleton.shoot master @a ~ ~ ~ 1 0
 #playsound minecraft:entity.skeleton.hurt master @a ~ ~ ~ 1 0

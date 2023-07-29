@@ -1,7 +1,7 @@
 scoreboard players add @s t1 1
 
 execute if entity @p[distance=..1.8,gamemode=adventure] run tag @s add kill2
-execute positioned ~ ~0.5 ~ if entity @p[distance=..1.8,gamemode=adventure] run setblock ~ ~ ~ air
+execute positioned ~ ~0.5 ~ if entity @p[distance=..1.8,gamemode=adventure] at @s run setblock ~ ~ ~ air
 execute if entity @p[distance=..1.8,gamemode=adventure] run setblock ~ ~ ~ air
 execute positioned ~ ~0.5 ~ if entity @p[distance=..1.8,gamemode=adventure] run effect give @p[distance=..1.8,gamemode=adventure] minecraft:darkness 2 0 true
 execute if entity @p[distance=..1.8,gamemode=adventure] run effect give @p[distance=..1.8,gamemode=adventure] minecraft:darkness 2 0 true

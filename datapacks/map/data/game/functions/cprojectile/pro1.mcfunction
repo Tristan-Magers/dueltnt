@@ -7,6 +7,9 @@ summon armor_stand ~ ~ ~ {Pose:{RightArm:[90f,40f,0f]},DisabledSlots:4144959,Inv
 tp @e[limit=1,name=pro1,sort=nearest] @p
 execute as @e[limit=1,name=pro1,sort=nearest] at @s run function game:cprojectile/getdir
 
+scoreboard players operation @e[limit=1,name=pro1,sort=nearest] DirY /= .40 .num
+scoreboard players operation @e[limit=1,name=pro1,sort=nearest] DirZ /= .40 .num
+
 scoreboard players add @e[limit=1,name=pro1,sort=nearest] DirX 8
 #scoreboard players set @e[limit=1,name=pro1,sort=nearest] DirZ 0
 #scoreboard players set @e[limit=1,name=pro1,sort=nearest] DirY 0

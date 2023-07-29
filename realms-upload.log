@@ -1,34 +1,39 @@
 Removed world/DIM-1/data/raids.dat: not used
-Removed world/entities/r.-1.-2.mca: 0 size
-Removed world/entities/r.-2.-1.mca: 0 size
-Removed world/entities/r.-2.-2.mca: 0 size
-Removed world/entities/r.2.3.mca: 0 size
-Removed world/entities/r.3.2.mca: 0 size
-Removed world/entities/r.3.3.mca: 0 size
-Removed world/gc-logs/gc-20220315_0327.log: not used
+Removed world/gc-logs/gc-20230305_2336.log: not used
+Removed world/gc-logs/gc-20230306_0110.log: not used
+Removed world/gc-logs/gc-20230306_0140.log: not used
+Removed world/gc-logs/gc-20230714_0636.log: not used
+Removed world/gc-logs/gc-20230714_1647.log: not used
+Removed world/gc-logs/gc-20230714_1806.log: not used
+Removed world/playerdata/0c27e2ac-4f9c-4517-8f6d-7e6635495ce9.dat_old: not used
+Removed world/playerdata/14a78955-817e-4d7f-84e6-1040bf150118.dat_old: not used
 Removed world/playerdata/296923b7-5800-4d8a-bc12-0e06002e68f9.dat_old: not used
+Removed world/playerdata/306df6cd-c790-4324-bbc5-209e61a12f4a.dat_old: not used
+Removed world/playerdata/3184a2a5-8544-4135-89ec-e63fd7a3f12f.dat_old: not used
+Removed world/playerdata/3adddfe5-b3fb-4078-822c-d95fea28b1a1.dat_old: not used
 Removed world/playerdata/3f522c30-5912-46dc-833d-45581c5b8f2d.dat_old: not used
+Removed world/playerdata/454b5f00-ac68-4906-8421-a879936e1fec.dat_old: not used
+Removed world/playerdata/49f81e77-cada-4a5d-9929-c73df0326569.dat_old: not used
+Removed world/playerdata/7bdf4886-de44-42a0-b5ad-d95a5d313601.dat_old: not used
+Removed world/playerdata/982d4b28-048e-47e7-9d97-10922bea6762.dat_old: not used
 Removed world/playerdata/a648628b-c8fb-4041-9429-604da9f6cb21.dat_old: not used
+Removed world/playerdata/bc801f1a-5a2a-450b-ba89-cfd8a36a2a15.dat_old: not used
+Removed world/playerdata/e45bf6a2-9ba2-4f90-8f84-82bbd2a4dd38.dat_old: not used
+Removed world/playerdata/ed3cc0fe-d6d0-4d5d-a002-a051f78d0b5d.dat_old: not used
 Removed world/poi/r.-1.-2.mca: 0 size
 Removed world/poi/r.-1.1.mca: 0 size
 Removed world/poi/r.-1.2.mca: 0 size
 Removed world/poi/r.-2.-1.mca: 0 size
 Removed world/poi/r.-2.-2.mca: 0 size
 Removed world/poi/r.-2.0.mca: 0 size
-Removed world/poi/r.-2.1.mca: 0 size
 Removed world/poi/r.0.-2.mca: 0 size
 Removed world/poi/r.1.-1.mca: 0 size
-Removed world/poi/r.1.-2.mca: 0 size
 Removed world/poi/r.1.2.mca: 0 size
 Removed world/poi/r.2.1.mca: 0 size
-Removed world/poi/r.2.3.mca: 0 size
-Removed world/poi/r.3.2.mca: 0 size
-Removed world/poi/r.3.3.mca: 0 size
 Removed world/season 4 changes.txt: not used
 Removed world/season 5 changes.txt: not used
 Removed world/season 6 changes.txt: not used
 Removed world/season 7 changes.txt: not used
 Removed world/season 8 changes.txt: not used
 Removed world/season 9 changes.txt: not used
-Removed world/todo: not used
-Validated 1757 files, 1724 accepted, 33 rejected.
+Validated 1831 files, 1793 accepted, 38 rejected.

@@ -32,167 +32,167 @@ execute as @s at @s unless block ~1 ~-1 ~-1 white_stained_glass unless block ~1 
 execute as @s at @s unless block ~-1 ~1 ~-1 white_stained_glass unless block ~-1 ~1 ~-1 air unless block ~-1 ~1 ~-1 #game:ice_block run setblock ~-1 ~1 ~-1 blue_ice
 execute as @s at @s unless block ~-1 ~-1 ~-1 white_stained_glass unless block ~-1 ~-1 ~-1 air unless block ~-1 ~-1 ~-1 #game:ice_block run setblock ~-1 ~-1 ~-1 blue_ice
 
-execute as @s at @s unless block ~1.7 ~ ~ white_stained_glass unless block ~1.7 ~ ~ air unless block ~1.7 ~ ~ #game:ice_block run setblock ~1.7 ~ ~ blue_ice
-execute as @s at @s unless block ~-1.7 ~ ~ white_stained_glass unless block ~-1.7 ~ ~ air unless block ~-1.7 ~ ~ #game:ice_block run setblock ~-1.7 ~ ~ blue_ice
-execute as @s at @s unless block ~ ~1.7 ~ white_stained_glass unless block ~ ~1.7 ~ air unless block ~ ~1.7 ~ #game:ice_block run setblock ~ ~1.7 ~ blue_ice
-execute as @s at @s unless block ~ ~-1.7 ~ white_stained_glass unless block ~ ~-1.7 ~ air unless block ~ ~-1.7 ~ #game:ice_block run setblock ~ ~-1.7 ~ blue_ice
-execute as @s at @s unless block ~ ~ ~1.7 white_stained_glass unless block ~ ~ ~1.7 air unless block ~ ~ ~1.7 #game:ice_block run setblock ~ ~ ~1.7 blue_ice
-execute as @s at @s unless block ~ ~ ~-1.7 white_stained_glass unless block ~ ~ ~-1.7 air unless block ~ ~ ~-1.7 #game:ice_block run setblock ~ ~ ~-1.7 blue_ice
+execute as @s at @s unless block ~1.8 ~ ~ white_stained_glass unless block ~1.8 ~ ~ air unless block ~1.8 ~ ~ #game:ice_block run setblock ~1.8 ~ ~ blue_ice
+execute as @s at @s unless block ~-1.8 ~ ~ white_stained_glass unless block ~-1.8 ~ ~ air unless block ~-1.8 ~ ~ #game:ice_block run setblock ~-1.8 ~ ~ blue_ice
+execute as @s at @s unless block ~ ~1.8 ~ white_stained_glass unless block ~ ~1.8 ~ air unless block ~ ~1.8 ~ #game:ice_block run setblock ~ ~1.8 ~ blue_ice
+execute as @s at @s unless block ~ ~-1.8 ~ white_stained_glass unless block ~ ~-1.8 ~ air unless block ~ ~-1.8 ~ #game:ice_block run setblock ~ ~-1.8 ~ blue_ice
+execute as @s at @s unless block ~ ~ ~1.8 white_stained_glass unless block ~ ~ ~1.8 air unless block ~ ~ ~1.8 #game:ice_block run setblock ~ ~ ~1.8 blue_ice
+execute as @s at @s unless block ~ ~ ~-1.8 white_stained_glass unless block ~ ~ ~-1.8 air unless block ~ ~ ~-1.8 #game:ice_block run setblock ~ ~ ~-1.8 blue_ice
 
-execute as @s at @s unless block ~1.7 ~1 ~ white_stained_glass unless block ~1.7 ~1 ~ air unless block ~1.7 ~1 ~ #game:ice_block run setblock ~1.7 ~1 ~ blue_ice
-execute as @s at @s unless block ~1.7 ~ ~1 white_stained_glass unless block ~1.7 ~ ~1 air unless block ~1.7 ~ ~1 #game:ice_block run setblock ~1.7 ~ ~1 blue_ice
-execute as @s at @s unless block ~1.7 ~-1 ~ white_stained_glass unless block ~1.7 ~-1 ~ air unless block ~1.7 ~-1 ~ #game:ice_block run setblock ~1.7 ~-1 ~ blue_ice
-execute as @s at @s unless block ~1.7 ~ ~-1 white_stained_glass unless block ~1.7 ~ ~-1 air unless block ~1.7 ~ ~-1 #game:ice_block run setblock ~1.7 ~ ~-1 blue_ice
-execute as @s at @s unless block ~-1.7 ~1 ~ white_stained_glass unless block ~-1.7 ~1 ~ air unless block ~-1.7 ~1 ~ #game:ice_block run setblock ~-1.7 ~1 ~ blue_ice
-execute as @s at @s unless block ~-1.7 ~ ~1 white_stained_glass unless block ~-1.7 ~ ~1 air unless block ~-1.7 ~ ~1 #game:ice_block run setblock ~-1.7 ~ ~1 blue_ice
-execute as @s at @s unless block ~-1.7 ~-1 ~ white_stained_glass unless block ~-1.7 ~-1 ~ air unless block ~-1.7 ~-1 ~ #game:ice_block run setblock ~-1.7 ~-1 ~ blue_ice
-execute as @s at @s unless block ~-1.7 ~ ~-1 white_stained_glass unless block ~-1.7 ~ ~-1 air unless block ~-1.7 ~ ~-1 #game:ice_block run setblock ~-1.7 ~ ~-1 blue_ice
+execute as @s at @s unless block ~1.8 ~1 ~ white_stained_glass unless block ~1.8 ~1 ~ air unless block ~1.8 ~1 ~ #game:ice_block run setblock ~1.8 ~1 ~ blue_ice
+execute as @s at @s unless block ~1.8 ~ ~1 white_stained_glass unless block ~1.8 ~ ~1 air unless block ~1.8 ~ ~1 #game:ice_block run setblock ~1.8 ~ ~1 blue_ice
+execute as @s at @s unless block ~1.8 ~-1 ~ white_stained_glass unless block ~1.8 ~-1 ~ air unless block ~1.8 ~-1 ~ #game:ice_block run setblock ~1.8 ~-1 ~ blue_ice
+execute as @s at @s unless block ~1.8 ~ ~-1 white_stained_glass unless block ~1.8 ~ ~-1 air unless block ~1.8 ~ ~-1 #game:ice_block run setblock ~1.8 ~ ~-1 blue_ice
+execute as @s at @s unless block ~-1.8 ~1 ~ white_stained_glass unless block ~-1.8 ~1 ~ air unless block ~-1.8 ~1 ~ #game:ice_block run setblock ~-1.8 ~1 ~ blue_ice
+execute as @s at @s unless block ~-1.8 ~ ~1 white_stained_glass unless block ~-1.8 ~ ~1 air unless block ~-1.8 ~ ~1 #game:ice_block run setblock ~-1.8 ~ ~1 blue_ice
+execute as @s at @s unless block ~-1.8 ~-1 ~ white_stained_glass unless block ~-1.8 ~-1 ~ air unless block ~-1.8 ~-1 ~ #game:ice_block run setblock ~-1.8 ~-1 ~ blue_ice
+execute as @s at @s unless block ~-1.8 ~ ~-1 white_stained_glass unless block ~-1.8 ~ ~-1 air unless block ~-1.8 ~ ~-1 #game:ice_block run setblock ~-1.8 ~ ~-1 blue_ice
 
-execute as @s at @s unless block ~1 ~1.7 ~ white_stained_glass unless block ~1 ~1.7 ~ air unless block ~1 ~1.7 ~ #game:ice_block run setblock ~1 ~1.7 ~ blue_ice
-execute as @s at @s unless block ~-1 ~1.7 ~ white_stained_glass unless block ~-1 ~1.7 ~ air unless block ~-1 ~1.7 ~ #game:ice_block run setblock ~-1 ~1.7 ~ blue_ice
-execute as @s at @s unless block ~ ~1.7 ~1 white_stained_glass unless block ~ ~1.7 ~1 air unless block ~ ~1.7 ~1 #game:ice_block run setblock ~ ~1.7 ~1 blue_ice
-execute as @s at @s unless block ~ ~1.7 ~-1 white_stained_glass unless block ~ ~1.7 ~-1 air unless block ~ ~1.7 ~-1 #game:ice_block run setblock ~ ~1.7 ~-1 blue_ice
-execute as @s at @s unless block ~1 ~-1.7 ~ white_stained_glass unless block ~1 ~-1.7 ~ air unless block ~1 ~-1.7 ~ #game:ice_block run setblock ~1 ~-1.7 ~ blue_ice
-execute as @s at @s unless block ~-1 ~-1.7 ~ white_stained_glass unless block ~-1 ~-1.7 ~ air unless block ~-1 ~-1.7 ~ #game:ice_block run setblock ~-1 ~-1.7 ~ blue_ice
-execute as @s at @s unless block ~ ~-1.7 ~1 white_stained_glass unless block ~ ~-1.7 ~1 air unless block ~ ~-1.7 ~1 #game:ice_block run setblock ~ ~-1.7 ~1 blue_ice
-execute as @s at @s unless block ~ ~-1.7 ~-1 white_stained_glass unless block ~ ~-1.7 ~-1 air unless block ~ ~-1.7 ~-1 #game:ice_block run setblock ~ ~-1.7 ~-1 blue_ice
+execute as @s at @s unless block ~1 ~1.8 ~ white_stained_glass unless block ~1 ~1.8 ~ air unless block ~1 ~1.8 ~ #game:ice_block run setblock ~1 ~1.8 ~ blue_ice
+execute as @s at @s unless block ~-1 ~1.8 ~ white_stained_glass unless block ~-1 ~1.8 ~ air unless block ~-1 ~1.8 ~ #game:ice_block run setblock ~-1 ~1.8 ~ blue_ice
+execute as @s at @s unless block ~ ~1.8 ~1 white_stained_glass unless block ~ ~1.8 ~1 air unless block ~ ~1.8 ~1 #game:ice_block run setblock ~ ~1.8 ~1 blue_ice
+execute as @s at @s unless block ~ ~1.8 ~-1 white_stained_glass unless block ~ ~1.8 ~-1 air unless block ~ ~1.8 ~-1 #game:ice_block run setblock ~ ~1.8 ~-1 blue_ice
+execute as @s at @s unless block ~1 ~-1.8 ~ white_stained_glass unless block ~1 ~-1.8 ~ air unless block ~1 ~-1.8 ~ #game:ice_block run setblock ~1 ~-1.8 ~ blue_ice
+execute as @s at @s unless block ~-1 ~-1.8 ~ white_stained_glass unless block ~-1 ~-1.8 ~ air unless block ~-1 ~-1.8 ~ #game:ice_block run setblock ~-1 ~-1.8 ~ blue_ice
+execute as @s at @s unless block ~ ~-1.8 ~1 white_stained_glass unless block ~ ~-1.8 ~1 air unless block ~ ~-1.8 ~1 #game:ice_block run setblock ~ ~-1.8 ~1 blue_ice
+execute as @s at @s unless block ~ ~-1.8 ~-1 white_stained_glass unless block ~ ~-1.8 ~-1 air unless block ~ ~-1.8 ~-1 #game:ice_block run setblock ~ ~-1.8 ~-1 blue_ice
 
-execute as @s at @s unless block ~1 ~ ~1.7 white_stained_glass unless block ~1 ~ ~1.7 air unless block ~1 ~ ~1.7 #game:ice_block run setblock ~1 ~ ~1.7 blue_ice
-execute as @s at @s unless block ~-1 ~ ~1.7 white_stained_glass unless block ~-1 ~ ~1.7 air unless block ~-1 ~ ~1.7 #game:ice_block run setblock ~-1 ~ ~1.7 blue_ice
-execute as @s at @s unless block ~ ~1 ~1.7 white_stained_glass unless block ~ ~1 ~1.7 air unless block ~ ~1 ~1.7 #game:ice_block run setblock ~ ~1 ~1.7 blue_ice
-execute as @s at @s unless block ~ ~-1 ~1.7 white_stained_glass unless block ~ ~-1 ~1.7 air unless block ~ ~-1 ~1.7 #game:ice_block run setblock ~ ~-1 ~1.7 blue_ice
-execute as @s at @s unless block ~1 ~ ~-1.7 white_stained_glass unless block ~1 ~ ~-1.7 air unless block ~1 ~ ~-1.7 #game:ice_block run setblock ~1 ~ ~-1.7 blue_ice
-execute as @s at @s unless block ~-1 ~ ~-1.7 white_stained_glass unless block ~-1 ~ ~-1.7 air unless block ~-1 ~ ~-1.7 #game:ice_block run setblock ~-1 ~ ~-1.7 blue_ice
-execute as @s at @s unless block ~ ~1 ~-1.7 white_stained_glass unless block ~ ~1 ~-1.7 air unless block ~ ~1 ~-1.7 #game:ice_block run setblock ~ ~1 ~-1.7 blue_ice
-execute as @s at @s unless block ~ ~-1 ~-1.7 white_stained_glass unless block ~ ~-1 ~-1.7 air unless block ~ ~-1 ~-1.7 #game:ice_block run setblock ~ ~-1 ~-1.7 blue_ice
+execute as @s at @s unless block ~1 ~ ~1.8 white_stained_glass unless block ~1 ~ ~1.8 air unless block ~1 ~ ~1.8 #game:ice_block run setblock ~1 ~ ~1.8 blue_ice
+execute as @s at @s unless block ~-1 ~ ~1.8 white_stained_glass unless block ~-1 ~ ~1.8 air unless block ~-1 ~ ~1.8 #game:ice_block run setblock ~-1 ~ ~1.8 blue_ice
+execute as @s at @s unless block ~ ~1 ~1.8 white_stained_glass unless block ~ ~1 ~1.8 air unless block ~ ~1 ~1.8 #game:ice_block run setblock ~ ~1 ~1.8 blue_ice
+execute as @s at @s unless block ~ ~-1 ~1.8 white_stained_glass unless block ~ ~-1 ~1.8 air unless block ~ ~-1 ~1.8 #game:ice_block run setblock ~ ~-1 ~1.8 blue_ice
+execute as @s at @s unless block ~1 ~ ~-1.8 white_stained_glass unless block ~1 ~ ~-1.8 air unless block ~1 ~ ~-1.8 #game:ice_block run setblock ~1 ~ ~-1.8 blue_ice
+execute as @s at @s unless block ~-1 ~ ~-1.8 white_stained_glass unless block ~-1 ~ ~-1.8 air unless block ~-1 ~ ~-1.8 #game:ice_block run setblock ~-1 ~ ~-1.8 blue_ice
+execute as @s at @s unless block ~ ~1 ~-1.8 white_stained_glass unless block ~ ~1 ~-1.8 air unless block ~ ~1 ~-1.8 #game:ice_block run setblock ~ ~1 ~-1.8 blue_ice
+execute as @s at @s unless block ~ ~-1 ~-1.8 white_stained_glass unless block ~ ~-1 ~-1.8 air unless block ~ ~-1 ~-1.8 #game:ice_block run setblock ~ ~-1 ~-1.8 blue_ice
 
-execute as @s at @s unless block ~1.7 ~1 ~1 white_stained_glass unless block ~1.7 ~1 ~1 air unless block ~1.7 ~1 ~1 #game:ice_block run setblock ~1.7 ~1 ~1 blue_ice
-execute as @s at @s unless block ~1.7 ~1 ~-1 white_stained_glass unless block ~1.7 ~1 ~-1 air unless block ~1.7 ~1 ~-1 #game:ice_block run setblock ~1.7 ~1 ~-1 blue_ice
-execute as @s at @s unless block ~1.7 ~-1 ~1 white_stained_glass unless block ~1.7 ~-1 ~1 air unless block ~1.7 ~-1 ~1 #game:ice_block run setblock ~1.7 ~-1 ~1 blue_ice
-execute as @s at @s unless block ~1.7 ~-1 ~-1 white_stained_glass unless block ~1.7 ~-1 ~-1 air unless block ~1.7 ~-1 ~-1 #game:ice_block run setblock ~1.7 ~-1 ~-1 blue_ice
-execute as @s at @s unless block ~-1.7 ~1 ~1 white_stained_glass unless block ~-1.7 ~1 ~1 air unless block ~-1.7 ~1 ~1 #game:ice_block run setblock ~-1.7 ~1 ~1 blue_ice
-execute as @s at @s unless block ~-1.7 ~1 ~-1 white_stained_glass unless block ~-1.7 ~1 ~-1 air unless block ~-1.7 ~1 ~-1 #game:ice_block run setblock ~-1.7 ~1 ~-1 blue_ice
-execute as @s at @s unless block ~-1.7 ~-1 ~1 white_stained_glass unless block ~-1.7 ~-1 ~1 air unless block ~-1.7 ~-1 ~1 #game:ice_block run setblock ~-1.7 ~-1 ~1 blue_ice
-execute as @s at @s unless block ~-1.7 ~-1 ~-1 white_stained_glass unless block ~-1.7 ~-1 ~-1 air unless block ~-1.7 ~-1 ~-1 #game:ice_block run setblock ~-1.7 ~-1 ~-1 blue_ice
+execute as @s at @s unless block ~1.8 ~1 ~1 white_stained_glass unless block ~1.8 ~1 ~1 air unless block ~1.8 ~1 ~1 #game:ice_block run setblock ~1.8 ~1 ~1 blue_ice
+execute as @s at @s unless block ~1.8 ~1 ~-1 white_stained_glass unless block ~1.8 ~1 ~-1 air unless block ~1.8 ~1 ~-1 #game:ice_block run setblock ~1.8 ~1 ~-1 blue_ice
+execute as @s at @s unless block ~1.8 ~-1 ~1 white_stained_glass unless block ~1.8 ~-1 ~1 air unless block ~1.8 ~-1 ~1 #game:ice_block run setblock ~1.8 ~-1 ~1 blue_ice
+execute as @s at @s unless block ~1.8 ~-1 ~-1 white_stained_glass unless block ~1.8 ~-1 ~-1 air unless block ~1.8 ~-1 ~-1 #game:ice_block run setblock ~1.8 ~-1 ~-1 blue_ice
+execute as @s at @s unless block ~-1.8 ~1 ~1 white_stained_glass unless block ~-1.8 ~1 ~1 air unless block ~-1.8 ~1 ~1 #game:ice_block run setblock ~-1.8 ~1 ~1 blue_ice
+execute as @s at @s unless block ~-1.8 ~1 ~-1 white_stained_glass unless block ~-1.8 ~1 ~-1 air unless block ~-1.8 ~1 ~-1 #game:ice_block run setblock ~-1.8 ~1 ~-1 blue_ice
+execute as @s at @s unless block ~-1.8 ~-1 ~1 white_stained_glass unless block ~-1.8 ~-1 ~1 air unless block ~-1.8 ~-1 ~1 #game:ice_block run setblock ~-1.8 ~-1 ~1 blue_ice
+execute as @s at @s unless block ~-1.8 ~-1 ~-1 white_stained_glass unless block ~-1.8 ~-1 ~-1 air unless block ~-1.8 ~-1 ~-1 #game:ice_block run setblock ~-1.8 ~-1 ~-1 blue_ice
 
-execute as @s at @s unless block ~1 ~1.7 ~1 white_stained_glass unless block ~1 ~1.7 ~1 air unless block ~1 ~1.7 ~1 #game:ice_block run setblock ~1 ~1.7 ~1 blue_ice
-execute as @s at @s unless block ~1 ~1.7 ~-1 white_stained_glass unless block ~1 ~1.7 ~-1 air unless block ~1 ~1.7 ~-1 #game:ice_block run setblock ~1 ~1.7 ~-1 blue_ice
-execute as @s at @s unless block ~-1 ~1.7 ~1 white_stained_glass unless block ~-1 ~1.7 ~1 air unless block ~-1 ~1.7 ~1 #game:ice_block run setblock ~-1 ~1.7 ~1 blue_ice
-execute as @s at @s unless block ~-1 ~1.7 ~-1 white_stained_glass unless block ~-1 ~1.7 ~-1 air unless block ~-1 ~1.7 ~-1 #game:ice_block run setblock ~-1 ~1.7 ~-1 blue_ice
-execute as @s at @s unless block ~1 ~-1.7 ~1 white_stained_glass unless block ~1 ~-1.7 ~1 air unless block ~1 ~-1.7 ~1 #game:ice_block run setblock ~1 ~-1.7 ~1 blue_ice
-execute as @s at @s unless block ~1 ~-1.7 ~-1 white_stained_glass unless block ~1 ~-1.7 ~-1 air unless block ~1 ~-1.7 ~-1 #game:ice_block run setblock ~1 ~-1.7 ~-1 blue_ice
-execute as @s at @s unless block ~-1 ~-1.7 ~1 white_stained_glass unless block ~-1 ~-1.7 ~1 air unless block ~-1 ~-1.7 ~1 #game:ice_block run setblock ~-1 ~-1.7 ~1 blue_ice
-execute as @s at @s unless block ~-1 ~-1.7 ~-1 white_stained_glass unless block ~-1 ~-1.7 ~-1 air unless block ~-1 ~-1.7 ~-1 #game:ice_block run setblock ~-1 ~-1.7 ~-1 blue_ice
+execute as @s at @s unless block ~1 ~1.8 ~1 white_stained_glass unless block ~1 ~1.8 ~1 air unless block ~1 ~1.8 ~1 #game:ice_block run setblock ~1 ~1.8 ~1 blue_ice
+execute as @s at @s unless block ~1 ~1.8 ~-1 white_stained_glass unless block ~1 ~1.8 ~-1 air unless block ~1 ~1.8 ~-1 #game:ice_block run setblock ~1 ~1.8 ~-1 blue_ice
+execute as @s at @s unless block ~-1 ~1.8 ~1 white_stained_glass unless block ~-1 ~1.8 ~1 air unless block ~-1 ~1.8 ~1 #game:ice_block run setblock ~-1 ~1.8 ~1 blue_ice
+execute as @s at @s unless block ~-1 ~1.8 ~-1 white_stained_glass unless block ~-1 ~1.8 ~-1 air unless block ~-1 ~1.8 ~-1 #game:ice_block run setblock ~-1 ~1.8 ~-1 blue_ice
+execute as @s at @s unless block ~1 ~-1.8 ~1 white_stained_glass unless block ~1 ~-1.8 ~1 air unless block ~1 ~-1.8 ~1 #game:ice_block run setblock ~1 ~-1.8 ~1 blue_ice
+execute as @s at @s unless block ~1 ~-1.8 ~-1 white_stained_glass unless block ~1 ~-1.8 ~-1 air unless block ~1 ~-1.8 ~-1 #game:ice_block run setblock ~1 ~-1.8 ~-1 blue_ice
+execute as @s at @s unless block ~-1 ~-1.8 ~1 white_stained_glass unless block ~-1 ~-1.8 ~1 air unless block ~-1 ~-1.8 ~1 #game:ice_block run setblock ~-1 ~-1.8 ~1 blue_ice
+execute as @s at @s unless block ~-1 ~-1.8 ~-1 white_stained_glass unless block ~-1 ~-1.8 ~-1 air unless block ~-1 ~-1.8 ~-1 #game:ice_block run setblock ~-1 ~-1.8 ~-1 blue_ice
 
-execute as @s at @s unless block ~1 ~1 ~1.7 white_stained_glass unless block ~1 ~1 ~1.7 air unless block ~1 ~1 ~1.7 #game:ice_block run setblock ~1 ~1 ~1.7 blue_ice
-execute as @s at @s unless block ~1 ~-1 ~1.7 white_stained_glass unless block ~1 ~-1 ~1.7 air unless block ~1 ~-1 ~1.7 #game:ice_block run setblock ~1 ~-1 ~1.7 blue_ice
-execute as @s at @s unless block ~-1 ~1 ~1.7 white_stained_glass unless block ~-1 ~1 ~1.7 air unless block ~-1 ~1 ~1.7 #game:ice_block run setblock ~-1 ~1 ~1.7 blue_ice
-execute as @s at @s unless block ~-1 ~-1 ~1.7 white_stained_glass unless block ~-1 ~-1 ~1.7 air unless block ~-1 ~-1 ~1.7 #game:ice_block run setblock ~-1 ~-1 ~1.7 blue_ice
-execute as @s at @s unless block ~1 ~1 ~-1.7 white_stained_glass unless block ~1 ~1 ~-1.7 air unless block ~1 ~1 ~-1.7 #game:ice_block run setblock ~1 ~1 ~-1.7 blue_ice
-execute as @s at @s unless block ~1 ~-1 ~-1.7 white_stained_glass unless block ~1 ~-1 ~-1.7 air unless block ~1 ~-1 ~-1.7 #game:ice_block run setblock ~1 ~-1 ~-1.7 blue_ice
-execute as @s at @s unless block ~-1 ~1 ~-1.7 white_stained_glass unless block ~-1 ~1 ~-1.7 air unless block ~-1 ~1 ~-1.7 #game:ice_block run setblock ~-1 ~1 ~-1.7 blue_ice
-execute as @s at @s unless block ~-1 ~-1 ~-1.7 white_stained_glass unless block ~-1 ~-1 ~-1.7 air unless block ~-1 ~-1 ~-1.7 #game:ice_block run setblock ~-1 ~-1 ~-1.7 blue_ice
+execute as @s at @s unless block ~1 ~1 ~1.8 white_stained_glass unless block ~1 ~1 ~1.8 air unless block ~1 ~1 ~1.8 #game:ice_block run setblock ~1 ~1 ~1.8 blue_ice
+execute as @s at @s unless block ~1 ~-1 ~1.8 white_stained_glass unless block ~1 ~-1 ~1.8 air unless block ~1 ~-1 ~1.8 #game:ice_block run setblock ~1 ~-1 ~1.8 blue_ice
+execute as @s at @s unless block ~-1 ~1 ~1.8 white_stained_glass unless block ~-1 ~1 ~1.8 air unless block ~-1 ~1 ~1.8 #game:ice_block run setblock ~-1 ~1 ~1.8 blue_ice
+execute as @s at @s unless block ~-1 ~-1 ~1.8 white_stained_glass unless block ~-1 ~-1 ~1.8 air unless block ~-1 ~-1 ~1.8 #game:ice_block run setblock ~-1 ~-1 ~1.8 blue_ice
+execute as @s at @s unless block ~1 ~1 ~-1.8 white_stained_glass unless block ~1 ~1 ~-1.8 air unless block ~1 ~1 ~-1.8 #game:ice_block run setblock ~1 ~1 ~-1.8 blue_ice
+execute as @s at @s unless block ~1 ~-1 ~-1.8 white_stained_glass unless block ~1 ~-1 ~-1.8 air unless block ~1 ~-1 ~-1.8 #game:ice_block run setblock ~1 ~-1 ~-1.8 blue_ice
+execute as @s at @s unless block ~-1 ~1 ~-1.8 white_stained_glass unless block ~-1 ~1 ~-1.8 air unless block ~-1 ~1 ~-1.8 #game:ice_block run setblock ~-1 ~1 ~-1.8 blue_ice
+execute as @s at @s unless block ~-1 ~-1 ~-1.8 white_stained_glass unless block ~-1 ~-1 ~-1.8 air unless block ~-1 ~-1 ~-1.8 #game:ice_block run setblock ~-1 ~-1 ~-1.8 blue_ice
 
-execute as @s at @s unless block ~2.4 ~ ~ air unless block ~2.4 ~ ~ #game:ice_block run setblock ~2.4 ~ ~ blue_ice
-execute as @s at @s unless block ~2.4 ~1 ~ air unless block ~2.4 ~1 ~ #game:ice_block run setblock ~2.4 ~1 ~ blue_ice
-execute as @s at @s unless block ~2.4 ~-1 ~ air unless block ~2.4 ~-1 ~ #game:ice_block run setblock ~2.4 ~-1 ~ blue_ice
-execute as @s at @s unless block ~2.4 ~ ~1 air unless block ~2.4 ~ ~1 #game:ice_block run setblock ~2.4 ~ ~1 blue_ice
-execute as @s at @s unless block ~2.4 ~ ~-1 air unless block ~2.4 ~ ~-1 #game:ice_block run setblock ~2.4 ~ ~-1 blue_ice
-execute as @s at @s unless block ~-2.4 ~ ~ air unless block ~-2.4 ~ ~ #game:ice_block run setblock ~-2.4 ~ ~ blue_ice
-execute as @s at @s unless block ~-2.4 ~1 ~ air unless block ~-2.4 ~1 ~ #game:ice_block run setblock ~-2.4 ~1 ~ blue_ice
-execute as @s at @s unless block ~-2.4 ~-1 ~ air unless block ~-2.4 ~-1 ~ #game:ice_block run setblock ~-2.4 ~-1 ~ blue_ice
-execute as @s at @s unless block ~-2.4 ~ ~1 air unless block ~-2.4 ~ ~1 #game:ice_block run setblock ~-2.4 ~ ~1 blue_ice
-execute as @s at @s unless block ~-2.4 ~ ~-1 air unless block ~-2.4 ~ ~-1 #game:ice_block run setblock ~-2.4 ~ ~-1 blue_ice
+execute as @s at @s unless block ~2.5 ~ ~ air unless block ~2.5 ~ ~ #game:ice_block run setblock ~2.5 ~ ~ blue_ice
+execute as @s at @s unless block ~2.5 ~1 ~ air unless block ~2.5 ~1 ~ #game:ice_block run setblock ~2.5 ~1 ~ blue_ice
+execute as @s at @s unless block ~2.5 ~-1 ~ air unless block ~2.5 ~-1 ~ #game:ice_block run setblock ~2.5 ~-1 ~ blue_ice
+execute as @s at @s unless block ~2.5 ~ ~1 air unless block ~2.5 ~ ~1 #game:ice_block run setblock ~2.5 ~ ~1 blue_ice
+execute as @s at @s unless block ~2.5 ~ ~-1 air unless block ~2.5 ~ ~-1 #game:ice_block run setblock ~2.5 ~ ~-1 blue_ice
+execute as @s at @s unless block ~-2.5 ~ ~ air unless block ~-2.5 ~ ~ #game:ice_block run setblock ~-2.5 ~ ~ blue_ice
+execute as @s at @s unless block ~-2.5 ~1 ~ air unless block ~-2.5 ~1 ~ #game:ice_block run setblock ~-2.5 ~1 ~ blue_ice
+execute as @s at @s unless block ~-2.5 ~-1 ~ air unless block ~-2.5 ~-1 ~ #game:ice_block run setblock ~-2.5 ~-1 ~ blue_ice
+execute as @s at @s unless block ~-2.5 ~ ~1 air unless block ~-2.5 ~ ~1 #game:ice_block run setblock ~-2.5 ~ ~1 blue_ice
+execute as @s at @s unless block ~-2.5 ~ ~-1 air unless block ~-2.5 ~ ~-1 #game:ice_block run setblock ~-2.5 ~ ~-1 blue_ice
 
-execute as @s at @s unless block ~ ~2.4 ~ air unless block ~ ~2.4 ~ #game:ice_block run setblock ~ ~2.4 ~ blue_ice
-execute as @s at @s unless block ~1 ~2.4 ~ air unless block ~1 ~2.4 ~ #game:ice_block run setblock ~1 ~2.4 ~ blue_ice
-execute as @s at @s unless block ~-1 ~2.4 ~ air unless block ~-1 ~2.4 ~ #game:ice_block run setblock ~-1 ~2.4 ~ blue_ice
-execute as @s at @s unless block ~ ~2.4 ~1 air unless block ~ ~2.4 ~1 #game:ice_block run setblock ~ ~2.4 ~1 blue_ice
-execute as @s at @s unless block ~ ~2.4 ~-1 air unless block ~ ~2.4 ~-1 #game:ice_block run setblock ~ ~2.4 ~-1 blue_ice
-execute as @s at @s unless block ~ ~-2.4 ~ air unless block ~ ~-2.4 ~ #game:ice_block run setblock ~ ~-2.4 ~ blue_ice
-execute as @s at @s unless block ~1 ~-2.4 ~ air unless block ~1 ~-2.4 ~ #game:ice_block run setblock ~1 ~-2.4 ~ blue_ice
-execute as @s at @s unless block ~-1 ~-2.4 ~ air unless block ~-1 ~-2.4 ~ #game:ice_block run setblock ~-1 ~-2.4 ~ blue_ice
-execute as @s at @s unless block ~ ~-2.4 ~1 air unless block ~ ~-2.4 ~1 #game:ice_block run setblock ~ ~-2.4 ~1 blue_ice
-execute as @s at @s unless block ~ ~-2.4 ~-1 air unless block ~ ~-2.4 ~-1 #game:ice_block run setblock ~ ~-2.4 ~-1 blue_ice
+execute as @s at @s unless block ~ ~2.5 ~ air unless block ~ ~2.5 ~ #game:ice_block run setblock ~ ~2.5 ~ blue_ice
+execute as @s at @s unless block ~1 ~2.5 ~ air unless block ~1 ~2.5 ~ #game:ice_block run setblock ~1 ~2.5 ~ blue_ice
+execute as @s at @s unless block ~-1 ~2.5 ~ air unless block ~-1 ~2.5 ~ #game:ice_block run setblock ~-1 ~2.5 ~ blue_ice
+execute as @s at @s unless block ~ ~2.5 ~1 air unless block ~ ~2.5 ~1 #game:ice_block run setblock ~ ~2.5 ~1 blue_ice
+execute as @s at @s unless block ~ ~2.5 ~-1 air unless block ~ ~2.5 ~-1 #game:ice_block run setblock ~ ~2.5 ~-1 blue_ice
+execute as @s at @s unless block ~ ~-2.5 ~ air unless block ~ ~-2.5 ~ #game:ice_block run setblock ~ ~-2.5 ~ blue_ice
+execute as @s at @s unless block ~1 ~-2.5 ~ air unless block ~1 ~-2.5 ~ #game:ice_block run setblock ~1 ~-2.5 ~ blue_ice
+execute as @s at @s unless block ~-1 ~-2.5 ~ air unless block ~-1 ~-2.5 ~ #game:ice_block run setblock ~-1 ~-2.5 ~ blue_ice
+execute as @s at @s unless block ~ ~-2.5 ~1 air unless block ~ ~-2.5 ~1 #game:ice_block run setblock ~ ~-2.5 ~1 blue_ice
+execute as @s at @s unless block ~ ~-2.5 ~-1 air unless block ~ ~-2.5 ~-1 #game:ice_block run setblock ~ ~-2.5 ~-1 blue_ice
 
-execute as @s at @s unless block ~ ~ ~2.4 air unless block ~ ~ ~2.4 #game:ice_block run setblock ~ ~ ~2.4 blue_ice
-execute as @s at @s unless block ~1 ~ ~2.4 air unless block ~1 ~ ~2.4 #game:ice_block run setblock ~1 ~ ~2.4 blue_ice
-execute as @s at @s unless block ~-1 ~ ~2.4 air unless block ~-1 ~ ~2.4 #game:ice_block run setblock ~-1 ~ ~2.4 blue_ice
-execute as @s at @s unless block ~ ~1 ~2.4 air unless block ~ ~1 ~2.4 #game:ice_block run setblock ~ ~1 ~2.4 blue_ice
-execute as @s at @s unless block ~ ~-1 ~2.4 air unless block ~ ~-1 ~2.4 #game:ice_block run setblock ~ ~-1 ~2.4 blue_ice
-execute as @s at @s unless block ~ ~ ~-2.4 air unless block ~ ~ ~-2.4 #game:ice_block run setblock ~ ~ ~-2.4 blue_ice
-execute as @s at @s unless block ~1 ~ ~-2.4 air unless block ~1 ~ ~-2.4 #game:ice_block run setblock ~1 ~ ~-2.4 blue_ice
-execute as @s at @s unless block ~-1 ~ ~-2.4 air unless block ~-1 ~ ~-2.4 #game:ice_block run setblock ~-1 ~ ~-2.4 blue_ice
-execute as @s at @s unless block ~ ~1 ~-2.4 air unless block ~ ~1 ~-2.4 #game:ice_block run setblock ~ ~1 ~-2.4 blue_ice
-execute as @s at @s unless block ~ ~-1 ~-2.4 air unless block ~ ~-1 ~-2.4 #game:ice_block run setblock ~ ~-1 ~-2.4 blue_ice
+execute as @s at @s unless block ~ ~ ~2.5 air unless block ~ ~ ~2.5 #game:ice_block run setblock ~ ~ ~2.5 blue_ice
+execute as @s at @s unless block ~1 ~ ~2.5 air unless block ~1 ~ ~2.5 #game:ice_block run setblock ~1 ~ ~2.5 blue_ice
+execute as @s at @s unless block ~-1 ~ ~2.5 air unless block ~-1 ~ ~2.5 #game:ice_block run setblock ~-1 ~ ~2.5 blue_ice
+execute as @s at @s unless block ~ ~1 ~2.5 air unless block ~ ~1 ~2.5 #game:ice_block run setblock ~ ~1 ~2.5 blue_ice
+execute as @s at @s unless block ~ ~-1 ~2.5 air unless block ~ ~-1 ~2.5 #game:ice_block run setblock ~ ~-1 ~2.5 blue_ice
+execute as @s at @s unless block ~ ~ ~-2.5 air unless block ~ ~ ~-2.5 #game:ice_block run setblock ~ ~ ~-2.5 blue_ice
+execute as @s at @s unless block ~1 ~ ~-2.5 air unless block ~1 ~ ~-2.5 #game:ice_block run setblock ~1 ~ ~-2.5 blue_ice
+execute as @s at @s unless block ~-1 ~ ~-2.5 air unless block ~-1 ~ ~-2.5 #game:ice_block run setblock ~-1 ~ ~-2.5 blue_ice
+execute as @s at @s unless block ~ ~1 ~-2.5 air unless block ~ ~1 ~-2.5 #game:ice_block run setblock ~ ~1 ~-2.5 blue_ice
+execute as @s at @s unless block ~ ~-1 ~-2.5 air unless block ~ ~-1 ~-2.5 #game:ice_block run setblock ~ ~-1 ~-2.5 blue_ice
 
-execute as @s at @s unless block ~ ~1.7 ~1.7 air unless block ~ ~1.7 ~1.7 #game:ice_block run setblock ~ ~1.7 ~1.7 blue_ice
-execute as @s at @s unless block ~ ~-1.7 ~1.7 air unless block ~ ~-1.7 ~1.7 #game:ice_block run setblock ~ ~-1.7 ~1.7 blue_ice
-execute as @s at @s unless block ~ ~1.7 ~-1.7 air unless block ~ ~1.7 ~-1.7 #game:ice_block run setblock ~ ~1.7 ~-1.7 blue_ice
-execute as @s at @s unless block ~ ~-1.7 ~-1.7 air unless block ~ ~-1.7 ~-1.7 #game:ice_block run setblock ~ ~-1.7 ~-1.7 blue_ice
+execute as @s at @s unless block ~ ~1.8 ~1.8 air unless block ~ ~1.8 ~1.8 #game:ice_block run setblock ~ ~1.8 ~1.8 blue_ice
+execute as @s at @s unless block ~ ~-1.8 ~1.8 air unless block ~ ~-1.8 ~1.8 #game:ice_block run setblock ~ ~-1.8 ~1.8 blue_ice
+execute as @s at @s unless block ~ ~1.8 ~-1.8 air unless block ~ ~1.8 ~-1.8 #game:ice_block run setblock ~ ~1.8 ~-1.8 blue_ice
+execute as @s at @s unless block ~ ~-1.8 ~-1.8 air unless block ~ ~-1.8 ~-1.8 #game:ice_block run setblock ~ ~-1.8 ~-1.8 blue_ice
 
-execute as @s at @s unless block ~1.7 ~1.7 ~ air unless block ~1.7 ~1.7 ~ #game:ice_block run setblock ~1.7 ~1.7 ~ blue_ice
-execute as @s at @s unless block ~1.7 ~-1.7 ~ air unless block ~1.7 ~-1.7 ~ #game:ice_block run setblock ~1.7 ~-1.7 ~ blue_ice
-execute as @s at @s unless block ~-1.7 ~1.7 ~ air unless block ~-1.7 ~1.7 ~ #game:ice_block run setblock ~-1.7 ~1.7 ~ blue_ice
-execute as @s at @s unless block ~-1.7 ~-1.7 ~ air unless block ~-1.7 ~-1.7 ~ #game:ice_block run setblock ~-1.7 ~-1.7 ~ blue_ice
+execute as @s at @s unless block ~1.8 ~1.8 ~ air unless block ~1.8 ~1.8 ~ #game:ice_block run setblock ~1.8 ~1.8 ~ blue_ice
+execute as @s at @s unless block ~1.8 ~-1.8 ~ air unless block ~1.8 ~-1.8 ~ #game:ice_block run setblock ~1.8 ~-1.8 ~ blue_ice
+execute as @s at @s unless block ~-1.8 ~1.8 ~ air unless block ~-1.8 ~1.8 ~ #game:ice_block run setblock ~-1.8 ~1.8 ~ blue_ice
+execute as @s at @s unless block ~-1.8 ~-1.8 ~ air unless block ~-1.8 ~-1.8 ~ #game:ice_block run setblock ~-1.8 ~-1.8 ~ blue_ice
 
-execute as @s at @s unless block ~1.7 ~ ~1.7 air unless block ~1.7 ~ ~1.7 #game:ice_block run setblock ~1.7 ~ ~1.7 blue_ice
-execute as @s at @s unless block ~1.7 ~ ~-1.7 air unless block ~1.7 ~ ~-1.7 #game:ice_block run setblock ~1.7 ~ ~-1.7 blue_ice
-execute as @s at @s unless block ~-1.7 ~ ~1.7 air unless block ~-1.7 ~ ~1.7 #game:ice_block run setblock ~-1.7 ~ ~1.7 blue_ice
-execute as @s at @s unless block ~-1.7 ~ ~-1.7 air unless block ~-1.7 ~ ~-1.7 #game:ice_block run setblock ~-1.7 ~ ~-1.7 blue_ice
+execute as @s at @s unless block ~1.8 ~ ~1.8 air unless block ~1.8 ~ ~1.8 #game:ice_block run setblock ~1.8 ~ ~1.8 blue_ice
+execute as @s at @s unless block ~1.8 ~ ~-1.8 air unless block ~1.8 ~ ~-1.8 #game:ice_block run setblock ~1.8 ~ ~-1.8 blue_ice
+execute as @s at @s unless block ~-1.8 ~ ~1.8 air unless block ~-1.8 ~ ~1.8 #game:ice_block run setblock ~-1.8 ~ ~1.8 blue_ice
+execute as @s at @s unless block ~-1.8 ~ ~-1.8 air unless block ~-1.8 ~ ~-1.8 #game:ice_block run setblock ~-1.8 ~ ~-1.8 blue_ice
 
-#execute as @s at @s unless block ~2.4 ~1 ~1 air unless block ~2.4 ~1 ~1 #game:ice_block run setblock ~2.4 ~1 ~1 blue_ice
-#execute as @s at @s unless block ~2.4 ~1 ~-1 air unless block ~2.4 ~1 ~-1 #game:ice_block run setblock ~2.4 ~1 ~-1 blue_ice
-#execute as @s at @s unless block ~2.4 ~-1 ~1 air unless block ~2.4 ~-1 ~1 #game:ice_block run setblock ~2.4 ~-1 ~1 blue_ice
-#execute as @s at @s unless block ~2.4 ~-1 ~-1 air unless block ~2.4 ~-1 ~-1 #game:ice_block run setblock ~2.4 ~-1 ~-1 blue_ice
-#execute as @s at @s unless block ~-2.4 ~1 ~1 air unless block ~-2.4 ~1 ~1 #game:ice_block run setblock ~-2.4 ~1 ~1 blue_ice
-#execute as @s at @s unless block ~-2.4 ~1 ~-1 air unless block ~-2.4 ~1 ~-1 #game:ice_block run setblock ~-2.4 ~1 ~-1 blue_ice
-#execute as @s at @s unless block ~-2.4 ~-1 ~1 air unless block ~-2.4 ~-1 ~1 #game:ice_block run setblock ~-2.4 ~-1 ~1 blue_ice
-#execute as @s at @s unless block ~-2.4 ~-1 ~-1 air unless block ~-2.4 ~-1 ~-1 #game:ice_block run setblock ~-2.4 ~-1 ~-1 blue_ice
+#execute as @s at @s unless block ~2.5 ~1 ~1 air unless block ~2.5 ~1 ~1 #game:ice_block run setblock ~2.5 ~1 ~1 blue_ice
+#execute as @s at @s unless block ~2.5 ~1 ~-1 air unless block ~2.5 ~1 ~-1 #game:ice_block run setblock ~2.5 ~1 ~-1 blue_ice
+#execute as @s at @s unless block ~2.5 ~-1 ~1 air unless block ~2.5 ~-1 ~1 #game:ice_block run setblock ~2.5 ~-1 ~1 blue_ice
+#execute as @s at @s unless block ~2.5 ~-1 ~-1 air unless block ~2.5 ~-1 ~-1 #game:ice_block run setblock ~2.5 ~-1 ~-1 blue_ice
+#execute as @s at @s unless block ~-2.5 ~1 ~1 air unless block ~-2.5 ~1 ~1 #game:ice_block run setblock ~-2.5 ~1 ~1 blue_ice
+#execute as @s at @s unless block ~-2.5 ~1 ~-1 air unless block ~-2.5 ~1 ~-1 #game:ice_block run setblock ~-2.5 ~1 ~-1 blue_ice
+#execute as @s at @s unless block ~-2.5 ~-1 ~1 air unless block ~-2.5 ~-1 ~1 #game:ice_block run setblock ~-2.5 ~-1 ~1 blue_ice
+#execute as @s at @s unless block ~-2.5 ~-1 ~-1 air unless block ~-2.5 ~-1 ~-1 #game:ice_block run setblock ~-2.5 ~-1 ~-1 blue_ice
 
-#execute as @s at @s unless block ~1 ~1 ~2.4 air unless block ~1 ~1 ~2.4 #game:ice_block run setblock ~1 ~1 ~2.4 blue_ice
-#execute as @s at @s unless block ~1 ~-1 ~2.4 air unless block ~1 ~-1 ~2.4 #game:ice_block run setblock ~1 ~-1 ~2.4 blue_ice
-#execute as @s at @s unless block ~-1 ~1 ~2.4 air unless block ~-1 ~1 ~2.4 #game:ice_block run setblock ~-1 ~1 ~2.4 blue_ice
-#execute as @s at @s unless block ~-1 ~-1 ~2.4 air unless block ~-1 ~-1 ~2.4 #game:ice_block run setblock ~-1 ~-1 ~2.4 blue_ice
-#execute as @s at @s unless block ~1 ~1 ~-2.4 air unless block ~1 ~1 ~-2.4 #game:ice_block run setblock ~1 ~1 ~-2.4 blue_ice
-#execute as @s at @s unless block ~1 ~-1 ~-2.4 air unless block ~1 ~-1 ~-2.4 #game:ice_block run setblock ~1 ~-1 ~-2.4 blue_ice
-#execute as @s at @s unless block ~-1 ~1 ~-2.4 air unless block ~-1 ~1 ~-2.4 #game:ice_block run setblock ~-1 ~1 ~-2.4 blue_ice
-#execute as @s at @s unless block ~-1 ~-1 ~-2.4 air unless block ~-1 ~-1 ~-2.4 #game:ice_block run setblock ~-1 ~-1 ~-2.4 blue_ice
+#execute as @s at @s unless block ~1 ~1 ~2.5 air unless block ~1 ~1 ~2.5 #game:ice_block run setblock ~1 ~1 ~2.5 blue_ice
+#execute as @s at @s unless block ~1 ~-1 ~2.5 air unless block ~1 ~-1 ~2.5 #game:ice_block run setblock ~1 ~-1 ~2.5 blue_ice
+#execute as @s at @s unless block ~-1 ~1 ~2.5 air unless block ~-1 ~1 ~2.5 #game:ice_block run setblock ~-1 ~1 ~2.5 blue_ice
+#execute as @s at @s unless block ~-1 ~-1 ~2.5 air unless block ~-1 ~-1 ~2.5 #game:ice_block run setblock ~-1 ~-1 ~2.5 blue_ice
+#execute as @s at @s unless block ~1 ~1 ~-2.5 air unless block ~1 ~1 ~-2.5 #game:ice_block run setblock ~1 ~1 ~-2.5 blue_ice
+#execute as @s at @s unless block ~1 ~-1 ~-2.5 air unless block ~1 ~-1 ~-2.5 #game:ice_block run setblock ~1 ~-1 ~-2.5 blue_ice
+#execute as @s at @s unless block ~-1 ~1 ~-2.5 air unless block ~-1 ~1 ~-2.5 #game:ice_block run setblock ~-1 ~1 ~-2.5 blue_ice
+#execute as @s at @s unless block ~-1 ~-1 ~-2.5 air unless block ~-1 ~-1 ~-2.5 #game:ice_block run setblock ~-1 ~-1 ~-2.5 blue_ice
 
-#execute as @s at @s unless block ~1 ~2.4 ~1 air unless block ~1 ~2.4 ~1 #game:ice_block run setblock ~1 ~2.4 ~1 blue_ice
-#execute as @s at @s unless block ~1 ~2.4 ~-1 air unless block ~1 ~2.4 ~-1 #game:ice_block run setblock ~1 ~2.4 ~-1 blue_ice
-#execute as @s at @s unless block ~-1 ~2.4 ~1 air unless block ~-1 ~2.4 ~1 #game:ice_block run setblock ~-1 ~2.4 ~1 blue_ice
-#execute as @s at @s unless block ~-1 ~2.4 ~-1 air unless block ~-1 ~2.4 ~-1 #game:ice_block run setblock ~-1 ~2.4 ~-1 blue_ice
-#execute as @s at @s unless block ~1 ~-2.4 ~1 air unless block ~1 ~-2.4 ~1 #game:ice_block run setblock ~1 ~-2.4 ~1 blue_ice
-#execute as @s at @s unless block ~1 ~-2.4 ~-1 air unless block ~1 ~-2.4 ~-1 #game:ice_block run setblock ~1 ~-2.4 ~-1 blue_ice
-#execute as @s at @s unless block ~-1 ~-2.4 ~1 air unless block ~-1 ~-2.4 ~1 #game:ice_block run setblock ~-1 ~-2.4 ~1 blue_ice
-#execute as @s at @s unless block ~-1 ~-2.4 ~-1 air unless block ~-1 ~-2.4 ~-1 #game:ice_block run setblock ~-1 ~-2.4 ~-1 blue_ice
+#execute as @s at @s unless block ~1 ~2.5 ~1 air unless block ~1 ~2.5 ~1 #game:ice_block run setblock ~1 ~2.5 ~1 blue_ice
+#execute as @s at @s unless block ~1 ~2.5 ~-1 air unless block ~1 ~2.5 ~-1 #game:ice_block run setblock ~1 ~2.5 ~-1 blue_ice
+#execute as @s at @s unless block ~-1 ~2.5 ~1 air unless block ~-1 ~2.5 ~1 #game:ice_block run setblock ~-1 ~2.5 ~1 blue_ice
+#execute as @s at @s unless block ~-1 ~2.5 ~-1 air unless block ~-1 ~2.5 ~-1 #game:ice_block run setblock ~-1 ~2.5 ~-1 blue_ice
+#execute as @s at @s unless block ~1 ~-2.5 ~1 air unless block ~1 ~-2.5 ~1 #game:ice_block run setblock ~1 ~-2.5 ~1 blue_ice
+#execute as @s at @s unless block ~1 ~-2.5 ~-1 air unless block ~1 ~-2.5 ~-1 #game:ice_block run setblock ~1 ~-2.5 ~-1 blue_ice
+#execute as @s at @s unless block ~-1 ~-2.5 ~1 air unless block ~-1 ~-2.5 ~1 #game:ice_block run setblock ~-1 ~-2.5 ~1 blue_ice
+#execute as @s at @s unless block ~-1 ~-2.5 ~-1 air unless block ~-1 ~-2.5 ~-1 #game:ice_block run setblock ~-1 ~-2.5 ~-1 blue_ice
 
-execute as @s at @s unless block ~1 ~1.7 ~1.7 air unless block ~1 ~1.7 ~1.7 #game:ice_block run setblock ~1 ~1.7 ~1.7 blue_ice
-execute as @s at @s unless block ~1 ~1.7 ~-1.7 air unless block ~1 ~1.7 ~-1.7 #game:ice_block run setblock ~1 ~1.7 ~-1.7 blue_ice
-execute as @s at @s unless block ~1 ~-1.7 ~1.7 air unless block ~1 ~-1.7 ~1.7 #game:ice_block run setblock ~1 ~-1.7 ~1.7 blue_ice
-execute as @s at @s unless block ~1 ~-1.7 ~-1.7 air unless block ~1 ~-1.7 ~-1.7 #game:ice_block run setblock ~1 ~-1.7 ~-1.7 blue_ice
-execute as @s at @s unless block ~-1 ~1.7 ~1.7 air unless block ~-1 ~1.7 ~1.7 #game:ice_block run setblock ~-1 ~1.7 ~1.7 blue_ice
-execute as @s at @s unless block ~-1 ~1.7 ~-1.7 air unless block ~-1 ~1.7 ~-1.7 #game:ice_block run setblock ~-1 ~1.7 ~-1.7 blue_ice
-execute as @s at @s unless block ~-1 ~-1.7 ~1.7 air unless block ~-1 ~-1.7 ~1.7 #game:ice_block run setblock ~-1 ~-1.7 ~1.7 blue_ice
-execute as @s at @s unless block ~-1 ~-1.7 ~-1.7 air unless block ~-1 ~-1.7 ~-1.7 #game:ice_block run setblock ~-1 ~-1.7 ~-1.7 blue_ice
+execute as @s at @s unless block ~1 ~1.8 ~1.8 air unless block ~1 ~1.8 ~1.8 #game:ice_block run setblock ~1 ~1.8 ~1.8 blue_ice
+execute as @s at @s unless block ~1 ~1.8 ~-1.8 air unless block ~1 ~1.8 ~-1.8 #game:ice_block run setblock ~1 ~1.8 ~-1.8 blue_ice
+execute as @s at @s unless block ~1 ~-1.8 ~1.8 air unless block ~1 ~-1.8 ~1.8 #game:ice_block run setblock ~1 ~-1.8 ~1.8 blue_ice
+execute as @s at @s unless block ~1 ~-1.8 ~-1.8 air unless block ~1 ~-1.8 ~-1.8 #game:ice_block run setblock ~1 ~-1.8 ~-1.8 blue_ice
+execute as @s at @s unless block ~-1 ~1.8 ~1.8 air unless block ~-1 ~1.8 ~1.8 #game:ice_block run setblock ~-1 ~1.8 ~1.8 blue_ice
+execute as @s at @s unless block ~-1 ~1.8 ~-1.8 air unless block ~-1 ~1.8 ~-1.8 #game:ice_block run setblock ~-1 ~1.8 ~-1.8 blue_ice
+execute as @s at @s unless block ~-1 ~-1.8 ~1.8 air unless block ~-1 ~-1.8 ~1.8 #game:ice_block run setblock ~-1 ~-1.8 ~1.8 blue_ice
+execute as @s at @s unless block ~-1 ~-1.8 ~-1.8 air unless block ~-1 ~-1.8 ~-1.8 #game:ice_block run setblock ~-1 ~-1.8 ~-1.8 blue_ice
 
-execute as @s at @s unless block ~1.7 ~1.7 ~1 air unless block ~1.7 ~1.7 ~1 #game:ice_block run setblock ~1.7 ~1.7 ~1 blue_ice
-execute as @s at @s unless block ~1.7 ~1.7 ~-1 air unless block ~1.7 ~1.7 ~-1 #game:ice_block run setblock ~1.7 ~1.7 ~-1 blue_ice
-execute as @s at @s unless block ~1.7 ~-1.7 ~1 air unless block ~1.7 ~-1.7 ~1 #game:ice_block run setblock ~1.7 ~-1.7 ~1 blue_ice
-execute as @s at @s unless block ~1.7 ~-1.7 ~-1 air unless block ~1.7 ~-1.7 ~-1 #game:ice_block run setblock ~1.7 ~-1.7 ~-1 blue_ice
-execute as @s at @s unless block ~-1.7 ~1.7 ~1 air unless block ~-1.7 ~1.7 ~1 #game:ice_block run setblock ~-1.7 ~1.7 ~1 blue_ice
-execute as @s at @s unless block ~-1.7 ~1.7 ~-1 air unless block ~-1.7 ~1.7 ~-1 #game:ice_block run setblock ~-1.7 ~1.7 ~-1 blue_ice
-execute as @s at @s unless block ~-1.7 ~-1.7 ~1 air unless block ~-1.7 ~-1.7 ~1 #game:ice_block run setblock ~-1.7 ~-1.7 ~1 blue_ice
-execute as @s at @s unless block ~-1.7 ~-1.7 ~-1 air unless block ~-1.7 ~-1.7 ~-1 #game:ice_block run setblock ~-1.7 ~-1.7 ~-1 blue_ice
+execute as @s at @s unless block ~1.8 ~1.8 ~1 air unless block ~1.8 ~1.8 ~1 #game:ice_block run setblock ~1.8 ~1.8 ~1 blue_ice
+execute as @s at @s unless block ~1.8 ~1.8 ~-1 air unless block ~1.8 ~1.8 ~-1 #game:ice_block run setblock ~1.8 ~1.8 ~-1 blue_ice
+execute as @s at @s unless block ~1.8 ~-1.8 ~1 air unless block ~1.8 ~-1.8 ~1 #game:ice_block run setblock ~1.8 ~-1.8 ~1 blue_ice
+execute as @s at @s unless block ~1.8 ~-1.8 ~-1 air unless block ~1.8 ~-1.8 ~-1 #game:ice_block run setblock ~1.8 ~-1.8 ~-1 blue_ice
+execute as @s at @s unless block ~-1.8 ~1.8 ~1 air unless block ~-1.8 ~1.8 ~1 #game:ice_block run setblock ~-1.8 ~1.8 ~1 blue_ice
+execute as @s at @s unless block ~-1.8 ~1.8 ~-1 air unless block ~-1.8 ~1.8 ~-1 #game:ice_block run setblock ~-1.8 ~1.8 ~-1 blue_ice
+execute as @s at @s unless block ~-1.8 ~-1.8 ~1 air unless block ~-1.8 ~-1.8 ~1 #game:ice_block run setblock ~-1.8 ~-1.8 ~1 blue_ice
+execute as @s at @s unless block ~-1.8 ~-1.8 ~-1 air unless block ~-1.8 ~-1.8 ~-1 #game:ice_block run setblock ~-1.8 ~-1.8 ~-1 blue_ice
 
-execute as @s at @s unless block ~1.7 ~1 ~1.7 air unless block ~1.7 ~1 ~1.7 #game:ice_block run setblock ~1.7 ~1 ~1.7 blue_ice
-execute as @s at @s unless block ~1.7 ~1 ~-1.7 air unless block ~1.7 ~1 ~-1.7 #game:ice_block run setblock ~1.7 ~1 ~-1.7 blue_ice
-execute as @s at @s unless block ~1.7 ~-1 ~1.7 air unless block ~1.7 ~-1 ~1.7 #game:ice_block run setblock ~1.7 ~-1 ~1.7 blue_ice
-execute as @s at @s unless block ~1.7 ~-1 ~-1.7 air unless block ~1.7 ~-1 ~-1.7 #game:ice_block run setblock ~1.7 ~-1 ~-1.7 blue_ice
-execute as @s at @s unless block ~-1.7 ~1 ~1.7 air unless block ~-1.7 ~1 ~1.7 #game:ice_block run setblock ~-1.7 ~1 ~1.7 blue_ice
-execute as @s at @s unless block ~-1.7 ~1 ~-1.7 air unless block ~-1.7 ~1 ~-1.7 #game:ice_block run setblock ~-1.7 ~1 ~-1.7 blue_ice
-execute as @s at @s unless block ~-1.7 ~-1 ~1.7 air unless block ~-1.7 ~-1 ~1.7 #game:ice_block run setblock ~-1.7 ~-1 ~1.7 blue_ice
-execute as @s at @s unless block ~-1.7 ~-1 ~-1.7 air unless block ~-1.7 ~-1 ~-1.7 #game:ice_block run setblock ~-1.7 ~-1 ~-1.7 blue_ice
+execute as @s at @s unless block ~1.8 ~1 ~1.8 air unless block ~1.8 ~1 ~1.8 #game:ice_block run setblock ~1.8 ~1 ~1.8 blue_ice
+execute as @s at @s unless block ~1.8 ~1 ~-1.8 air unless block ~1.8 ~1 ~-1.8 #game:ice_block run setblock ~1.8 ~1 ~-1.8 blue_ice
+execute as @s at @s unless block ~1.8 ~-1 ~1.8 air unless block ~1.8 ~-1 ~1.8 #game:ice_block run setblock ~1.8 ~-1 ~1.8 blue_ice
+execute as @s at @s unless block ~1.8 ~-1 ~-1.8 air unless block ~1.8 ~-1 ~-1.8 #game:ice_block run setblock ~1.8 ~-1 ~-1.8 blue_ice
+execute as @s at @s unless block ~-1.8 ~1 ~1.8 air unless block ~-1.8 ~1 ~1.8 #game:ice_block run setblock ~-1.8 ~1 ~1.8 blue_ice
+execute as @s at @s unless block ~-1.8 ~1 ~-1.8 air unless block ~-1.8 ~1 ~-1.8 #game:ice_block run setblock ~-1.8 ~1 ~-1.8 blue_ice
+execute as @s at @s unless block ~-1.8 ~-1 ~1.8 air unless block ~-1.8 ~-1 ~1.8 #game:ice_block run setblock ~-1.8 ~-1 ~1.8 blue_ice
+execute as @s at @s unless block ~-1.8 ~-1 ~-1.8 air unless block ~-1.8 ~-1 ~-1.8 #game:ice_block run setblock ~-1.8 ~-1 ~-1.8 blue_ice
 
 kill @s

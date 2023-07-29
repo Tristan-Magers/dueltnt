@@ -27,6 +27,7 @@ clear @a[scores={leave=1..}]
 scoreboard players set @a[scores={leave=1..}] ingame 0
 gamemode adventure @a[scores={leave=1..}]
 tp @a[scores={leave=1..}] 500 20 500 0 0
+tag @a[scores={leave=1..}] remove countdown
 scoreboard players reset @a[scores={leave=1..}] leave
 
 #team join main
@@ -39,8 +40,9 @@ execute if entity @a[scores={tntID=..0}] run scoreboard players add M tntID 1
 execute if entity @a[scores={tntID=..0}] run scoreboard players operation @r[scores={tntID=..0}] tntID = M tntID
 
 #run game
-execute unless entity @a[x=620,y=20,z=620,distance=..100,gamemode=adventure] run function game:game/run
-execute if entity @a[x=620,y=20,z=620,distance=..100,gamemode=adventure] run scoreboard players set ArenaCheck game 0
+execute unless entity @a[x=580,y=-20,z=580,dx=70,dz=70,dy=120,distance=..1000,gamemode=adventure] run function game:game/run
+execute if entity @a[x=580,y=-20,z=580,dx=70,dz=70,dy=120,distance=..1000,gamemode=adventure] run scoreboard players set ArenaCheck game 0
+execute if entity @a[x=580,y=-20,z=580,dx=70,dz=70,dy=120,distance=..1000,tag=countdown] run scoreboard players set ArenaCheck game 0
 
 #menu push
 execute as @a[x=473.7,y=16,z=494,dz=10,dy=4] at @s run tp @s ~.1 ~ ~
@@ -89,11 +91,11 @@ stopsound @a[tag=spec]
 tp @a[tag=spec] 625 40 625
 tag @a remove spec
 
-function game:items
+execute unless entity @e[name=Map,type=armor_stand,scores={countdown=-21..}] run function game:items
 
 function game:menu
 
-execute as @e[name=Map,type=armor_stand,scores={countdown=-11..}] at @s run function game:countdown
+execute as @e[name=Map,type=armor_stand,scores={countdown=-21..}] at @s run function game:countdown
 
 execute as @e[tag=button,scores={timer=1..}] at @s run function game:buttontitle
 
@@ -122,7 +124,11 @@ scoreboard players set @a[scores={CPbomb=1..}] CPtimer 140
 execute as @a[scores={CPtimer=1..,class=4}] at @s run function game:char/wizard/excreep
 
 #particle
-execute as @a[scores={Invis=..0,particle=1..}] at @s run function game:player/particle
+scoreboard players add #goobRot particle 1
+scoreboard players add #haloTicks particle 1
+execute as @a[scores={Invis=..0,particle=1..},gamemode=!spectator] at @s run function game:player/particle
+execute if score #goobRot particle matches 90.. run scoreboard players set #goobRot particle 0
+execute if score #haloTicks particle matches 48.. run scoreboard players set #haloTicks particle 0
 
 #misc
 kill @e[x=595,z=595,y=-10,dx=45,dz=45,dy=10,distance=..1000,type=fireball]
@@ -282,9 +288,27 @@ scoreboard players set @a[scores={LobbyMusic3=40}] LobbyMusic2 0
 scoreboard players set @a[scores={LobbyMusic3=5000..}] LobbyMusic3 0
 stopsound @a[scores={LobbyMusic3=39}]
 
+# eyes in cave
+effect give @a[x=509.5,y=17,z=528.5,distance=..4.5] slowness 1 0 true
+effect give @a[x=509.5,y=17,z=528.5,distance=..4.0] slowness 1 1 true
+effect give @a[x=509.5,y=17,z=528.5,distance=..3.5] slowness 1 2 true
+effect give @a[x=509.5,y=17,z=528.5,distance=..3.0] slowness 1 3 true
+effect give @a[x=509.5,y=17,z=528.5,distance=..2.5] slowness 1 4 true
+effect give @a[x=509.5,y=17,z=528.5,distance=..2.0] slowness 1 5 true
+
+execute if score .creep_sign .data matches 1 if entity @a[x=509.5,y=17,z=528.5,distance=..1.5] run setblock 509 17 528 water
+execute if score .creep_sign .data matches 1 if entity @a[x=509.5,y=17,z=528.5,distance=..1.5] run effect give @a[x=509.5,y=17,z=528.5,distance=..1.5] minecraft:blindness 1 0 true
+execute if score .creep_sign .data matches 1 if entity @a[x=509.5,y=17,z=528.5,distance=..1.5] run playsound minecraft:ambient.crimson_forest.mood master @a[x=509.5,y=17,z=528.5,distance=..1.5] 509 17 528 1 2
+execute if score .creep_sign .data matches 1 if entity @a[x=509.5,y=17,z=528.5,distance=..1.5] run playsound minecraft:ambient.cave master @a[x=509.5,y=17,z=528.5,distance=..1.5] 509 17 528 1 0.8
+execute if score .creep_sign .data matches 1 if entity @a[x=509.5,y=17,z=528.5,distance=..1.5] run scoreboard players set .creep_sign .data 0
+
+execute if score .creep_sign .data matches 0 unless entity @a[x=509.5,y=17,z=528.5,distance=..24] run clone 512 17 528 512 17 528 509 17 528
+execute if score .creep_sign .data matches 0 unless entity @a[x=509.5,y=17,z=528.5,distance=..24] run scoreboard players set .creep_sign .data 1
+
+
 #patreon
-tellraw @a[scores={patclick=1..}] ["",{"text":"Hey there! ","color":"aqua"},{"text":"I made a page where you can see all my future games and work over on Patreon. Over the past half year, I have been making Minecraft maps full time on the Minecraft Marketplace. ","color":"white","bold":false,"underlined":false,"clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"Now I want to move my effort to making games right here on Realms, with higher quality than ever, just for you guys.","color":"yellow","bold":"false","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":" If you want to see the cool games coming, or you want to support me so I can make these games, [","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"color":"blue","text":"CLICK HERE","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"] to go the page about it. Thanks :D ","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"  <3 <3 <3","color":"red"}]
-scoreboard players set @a patclick 0
+#tellraw @a[scores={patclick=1..}] ["",{"text":"Hey there! ","color":"aqua"},{"text":"I made a page where you can see all my future games and work over on Patreon. Over the past half year, I have been making Minecraft maps full time on the Minecraft Marketplace. ","color":"white","bold":false,"underlined":false,"clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"Now I want to move my effort to making games right here on Realms, with higher quality than ever, just for you guys.","color":"yellow","bold":"false","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":" If you want to see the cool games coming, or you want to support me so I can make these games, [","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"color":"blue","text":"CLICK HERE","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"] to go the page about it. Thanks :D ","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"  <3 <3 <3","color":"red"}]
+#scoreboard players set @a patclick 0
 
 #clear
 clear @a[x=520,y=40,z=587,distance=..20]
@@ -292,27 +316,35 @@ clear @a[x=520,y=40,z=587,distance=..20]
 #manage player locations (SPECTATOR, CEILING DEATH, etc.)
 scoreboard players set @a inarena 0
 scoreboard players set @a[x=592,z=592,y=-10,dx=51,dz=51,dy=88,distance=..1000] inarena 1
-tp @a[gamemode=spectator,x=595,z=595,y=-20,dx=45,dz=45,dy=13,distance=..1000] 500 20 500
-tp @a[gamemode=spectator,scores={inarena=..0}] 500 20 500 0 0
-gamemode adventure @a[gamemode=spectator,distance=..2,x=500,y=20,z=500]
+tp @a[tag=!countdown,gamemode=spectator,x=595,z=595,y=-20,dx=45,dz=45,dy=13,distance=..1000] 500 20 500
+tp @a[tag=!countdown,gamemode=spectator,scores={inarena=..0}] 500 20 500 0 0
+gamemode adventure @a[tag=!countdown,gamemode=spectator,distance=..2,x=500,y=20,z=500]
 effect give @a[x=595,z=595,y=65,dx=45,dz=45,dy=68,distance=..1000,gamemode=adventure] blindness 3
 execute as @a[x=595,z=595,y=65,dx=45,dz=45,dy=68,distance=..1000,gamemode=adventure] at @s run tp @s ~ 0 ~
-tp @a[gamemode=spectator,x=595,z=595,y=80,dx=45,dz=45,dy=14,distance=..1000] 500 20 500
+tag @a[tag=!countdown,gamemode=spectator,x=595,z=595,y=80,dx=45,dz=45,dy=14,distance=..1000] add spec_leave
+tp @a[tag=!countdown,gamemode=spectator,x=595,z=595,y=80,dx=45,dz=45,dy=14,distance=..1000] 500 20 500
 
 #running game
 function game:game/main
 
 #Game end conditions
 scoreboard players set gameCheck game 0
-execute as @a[x=620,y=20,z=620,distance=..100,gamemode=adventure,scores={teamed=..0}] at @s run scoreboard players add gameCheck game 1
+execute as @a[x=580,y=-20,z=580,dx=70,dz=70,dy=120,distance=..1000,gamemode=adventure,scores={teamed=..0}] at @s run scoreboard players add gameCheck game 1
+#execute as @a[x=580,y=-20,z=580,dx=70,dz=70,dy=120,distance=..1000,gamemode=spectator,scores={teamed=..0},tag=countdown] at @s run scoreboard players add gameCheck game 1
 scoreboard players set playerCheck game 0
 execute as @a[scores={ingame=1..,teamed=..0}] at @s run scoreboard players add playerCheck game 1
 execute as @p[tag=blue,scores={ingame=1..,teamed=1..}] at @s run scoreboard players add playerCheck game 1
 execute as @p[tag=red,scores={ingame=1..,teamed=1..}] at @s run scoreboard players add playerCheck game 1
 execute as @p[tag=green,scores={ingame=1..,teamed=1..}] at @s run scoreboard players add playerCheck game 1
-execute as @p[x=620,y=20,z=620,distance=..100,gamemode=adventure,tag=blue,scores={teamed=1..}] at @s run scoreboard players add gameCheck game 1
-execute as @p[x=620,y=20,z=620,distance=..100,gamemode=adventure,tag=red,scores={teamed=1..}] at @s run scoreboard players add gameCheck game 1
-execute as @p[x=620,y=20,z=620,distance=..100,gamemode=adventure,tag=green,scores={teamed=1..}] at @s run scoreboard players add gameCheck game 1
+execute as @p[x=580,y=-20,z=580,dx=70,dz=70,dy=120,distance=..1000,gamemode=adventure,tag=blue,scores={teamed=1..}] at @s run scoreboard players add gameCheck game 1
+execute as @p[x=580,y=-20,z=580,dx=70,dz=70,dy=120,distance=..1000,gamemode=adventure,tag=red,scores={teamed=1..}] at @s run scoreboard players add gameCheck game 1
+execute as @p[x=580,y=-20,z=580,dx=70,dz=70,dy=120,distance=..1000,gamemode=adventure,tag=green,scores={teamed=1..}] at @s run scoreboard players add gameCheck game 1
+execute as @p[x=580,y=-20,z=580,dx=70,dz=70,dy=120,distance=..1000,gamemode=spectator,tag=blue,scores={teamed=1..},tag=countdown] at @s run scoreboard players add gameCheck game 1
+execute as @p[x=580,y=-20,z=580,dx=70,dz=70,dy=120,distance=..1000,gamemode=spectator,tag=red,scores={teamed=1..},tag=countdown] at @s run scoreboard players add gameCheck game 1
+execute as @p[x=580,y=-20,z=580,dx=70,dz=70,dy=120,distance=..1000,gamemode=spectator,tag=green,scores={teamed=1..},tag=countdown] at @s run scoreboard players add gameCheck game 1
+
+#execute as @p[x=580,y=-20,z=580,dx=70,dz=70,dy=120,distance=..1000,gamemode=spectator,tag=countdown] at @s run scoreboard players add gameCheck game 1
+
 scoreboard players operation @e[name=Map,type=armor_stand] gameCheck = gameCheck game
 scoreboard players operation @e[name=Map,type=armor_stand] playerCheck = playerCheck game
 execute if entity @e[name=Map,type=armor_stand,scores={gameCheck=0}] if entity @e[name=Map,type=armor_stand,scores={playerCheck=1}] run tag @e[name=Map,type=armor_stand,limit=1] add start
@@ -328,7 +360,11 @@ tag @e[name=Map,type=armor_stand,limit=1,tag=!start] remove startt
 
 #New Player
 scoreboard players add @a NewPlay 1
+stopsound @a[scores={NewPlay=1}]
+tag @a[scores={NewPlay=2}] remove red
+tag @a[scores={NewPlay=2}] remove green
 tag @a[scores={NewPlay=2}] add blue
+scoreboard players set @a[scores={NewPlay=2}] particle 0
 scoreboard players set @a[scores={NewPlay=2}] class 1
 scoreboard players set @a[scores={NewPlay=2}] Invis 0
 tp @a[scores={NewPlay=1..40}] 14 4 1
@@ -340,7 +376,7 @@ gamemode adventure @a[scores={NewPlay=2..8}]
 
 #Tutorial
 effect give @a[x=14,y=4,z=1,distance=..2] blindness 2 99 true
-scoreboard players add @a[x=14,y=4,z=1,distance=..2] tutorial 1
+#scoreboard players add @a[x=14,y=4,z=1,distance=..2] tutorial 1
 scoreboard players set @a[x=500,y=20,z=500,distance=..20] tutorial 0
 effect give @a[x=14,y=4,z=1,distance=..2] jump_boost 2 200 true
 scoreboard players set @a[x=14,y=4,z=1,distance=..2] Invis 3
@@ -353,20 +389,33 @@ execute if entity @e[name=Map,type=armor_stand,scores={Time=1}] run gamemode spe
 
 scoreboard players operation TimeReal game = Time game
 scoreboard players operation TimeReal game /= 20 game
-execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run scoreboard players operation Time l = TimeReal game
+execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run bossbar set minecraft:time name [{"text":"TIME ","bold":"false","color":"#b8ab9d"},{"score":{"name":"TimeReal","objective":"game"},"color":"#cac3bf","bold":true}]
+execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run bossbar set minecraft:time visible true
+#execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run scoreboard players operation Time l = TimeReal game
 
-execute if entity @e[name=Map,type=armor_stand,scres={Time=580}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"","color":"dark_red","bold":"false"}]
-o
+execute if entity @e[name=Map,type=armor_stand,scores={Time=580}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"","color":"dark_red","bold":"false"}]
+
 execute if entity @e[name=Map,type=armor_stand,scores={Time=15}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"TIMES OUT","color":"dark_red","bold":"false"}]
 execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure,scores={teamed=..0}] at @s run scoreboard players operation @s l = @s Lives
 
+tag @a remove time
+tag @a[x=620,y=20,z=620,distance=..100] add time
+tag @a[x=500,y=20,z=500,distance=..30,scores={lobby=..40},tag=!spec_leave] add time
+tag @a[scores={lobby=41..}] remove spec_leave
+
+bossbar set minecraft:time players @a[tag=time]
+#execute if entity @e[name=Map,type=armor_stand,scores={ArenaCheck=0}] run bossbar set minecraft:time players @a[x=620,y=20,z=620,distance=..100]
+
 #Team Lives
+execute unless entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=red,scores={teamed=1..}] run scoreboard players reset §cRED l
 execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=red,scores={teamed=1..}] run scoreboard players set §cRED l 0
 execute as @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=red,scores={teamed=1..}] run scoreboard players operation §cRED l += @s Lives
 
+execute unless entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=blue,scores={teamed=1..}] run scoreboard players reset §bBLUE l
 execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=blue,scores={teamed=1..}] run scoreboard players set §bBLUE l 0
 execute as @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=blue,scores={teamed=1..}] run scoreboard players operation §bBLUE l += @s Lives
 
+execute unless entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run scoreboard players reset §aGREEN l
 execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run scoreboard players set §aGREEN l 0
 execute as @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run scoreboard players operation §aGREEN l += @s Lives
 

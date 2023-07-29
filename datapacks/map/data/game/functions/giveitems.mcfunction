@@ -17,7 +17,7 @@ effect give @a[scores={class=1},x=620,y=20,z=620,distance=..100] speed 300 1 tru
 effect give @a[scores={class=1},x=620,y=20,z=620,distance=..100] jump_boost 300 1 true
 give @a[scores={class=2},x=620,y=20,z=620,distance=..100] bow{Damage:60,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§bVaporizer§r : Throw to switch\"}"}}
 give @a[scores={class=2},x=620,y=20,z=620,distance=..100] experience_bottle{display:{Name:"{\"italic\":false,\"text\":\"§7Smoke Bomb §r: Right-click\"}"}} 2
-item replace entity @a[scores={class=2},x=620,y=20,z=620,distance=..100] hotbar.5 with tipped_arrow{display:{Name:"{\"italic\":false,\"text\":\"Magic arrow\"}"},Potion:"minecraft:swiftness",HideFlags:32} 3
+item replace entity @a[scores={class=2},x=620,y=20,z=620,distance=..100] hotbar.5 with tipped_arrow{display:{Name:"{\"italic\":false,\"text\":\"Magic arrow\"}"},CustomPotionColor:6221823,HideFlags:32} 3
 scoreboard players set @a[scores={class=2},x=620,y=20,z=620,distance=..100] bow -1
 scoreboard players set @a[scores={class=2},x=620,y=20,z=620,distance=..100] snowTime 0
 effect give @a[scores={class=2},x=620,y=20,z=620,distance=..100] speed 300 1 true
@@ -32,7 +32,7 @@ item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=2}] hotbar.
 give @a[scores={class=3},x=620,y=20,z=620,distance=..100] flint{display:{Name:"{\"italic\":false,\"text\":\"§cTNT Trap§r : Throw for mode 2 / Offhand for mode 3\"}"}}
 #give @a[scores={class=3},x=620,y=20,z=620,distance=..100] bow{Damage:80,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§cTNT Trap§r : Throw to switch\"}"}}
 give @a[scores={class=3},x=620,y=20,z=620,distance=..100] bone{Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§6Detonate Arrows §f§r: Right-click\"}"}}
-give @a[scores={class=3},x=620,y=20,z=620,distance=..100] tnt{display:{Name:"{\"italic\":false,\"text\":\"§4Mine §f: Throw/Right-click\"}"},HideFlags:16,CanPlaceOn:["#game:bolt_place"]} 2
+give @a[scores={class=3},x=620,y=20,z=620,distance=..100] tnt{display:{Name:"{\"italic\":false,\"text\":\"§4Mine §f: Throw/Right-click\"}"},HideFlags:16,CanPlaceOn:["#game:tnt_place"]} 2
 scoreboard players set @a[scores={class=3},x=620,y=20,z=620,distance=..100] bow -1
 #effect give @a[scores={class=3},x=620,y=20,z=620,distance=..100] jump_boost 300 0 true
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] hotbar.7 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Crouch to summon TNT\"}"}}
@@ -43,7 +43,7 @@ item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] armor.c
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] armor.head with leather_helmet{Unbreakable:1}
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=2}] armor.chest with diamond_chestplate{Unbreakable:1}
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.6 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Crouch to teleport\"}"}}
-item replace entity @a[scores={class=4},x=620,y=20,z=620,distance=..100] hotbar.7 with tipped_arrow{display:{Name:"{\"italic\":false,\"text\":\"Magic Arrow\"}"},Potion:"swiftness",HideFlags:32} 2
+item replace entity @a[scores={class=4},x=620,y=20,z=620,distance=..100] hotbar.7 with tipped_arrow{display:{Name:"{\"italic\":false,\"text\":\"Magic Arrow\"}"},CustomPotionColor:6221823,HideFlags:32} 2
 scoreboard players set @a[scores={class=4},x=620,y=20,z=620,distance=..100] bow -1
 give @a[scores={class=4},x=620,y=20,z=620,distance=..100] bow{Damage:100,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§4Fireball§r : Throw to switch\"}"}}
 effect give @a[scores={class=4},x=620,y=20,z=620,distance=..100] jump_boost 300 2 true
@@ -104,14 +104,14 @@ item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.5 with mooshroom_spawn_egg{CanPlaceOn:["#game:bolt_place"],EntityTag:{id:mooshroom,Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,CustomName:"{\"italic\":false,\"text\":\"tnt\"}",Silent:1},HideFlags:16,display:{Name:"{\"italic\":false,\"text\":\"§cSummon TNT §r: Right-click\"}"}} 4
 #item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.4 with rabbit_hide{display:{Name:"{\"italic\":false,\"text\":\"§4Laser §r: Right-click\"}"}}
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.4 with mooshroom_spawn_egg{CanPlaceOn:["#game:bolt_place"],EntityTag:{id:mooshroom,Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,CustomName:"{\"italic\":false,\"text\":\"tnt\"}",Silent:1},HideFlags:16,display:{Name:"{\"italic\":false,\"text\":\"§cSummon TNT §r: Right-click\"}"}} 9
-item replace entity @a[scores={class=2},x=620,y=20,z=620,distance=..100] hotbar.4 with splash_potion{CustomPotionColor:0,CustomPotionEffects:[{Id:15,Amplifier:1,Duration:100},{Id:24,Amplifier:1,Duration:80}],display:{Name:"{\"italic\":false,\"text\":\"§5Primed for Dark §r: Right-click\"}"}}
+item replace entity @a[scores={class=2},x=620,y=20,z=620,distance=..100] hotbar.4 with splash_potion{CustomPotionColor:0,CustomPotionEffects:[{Id:15,Amplifier:1,Duration:80},{Id:24,Amplifier:1,Duration:60}],display:{Name:"{\"italic\":false,\"text\":\"§5Primed for Dark §r: Right-click\"}"}}
 scoreboard players set @a[scores={class=4},x=620,y=20,z=620,distance=..100] pig -50
 
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] hotbar.6 with arrow
 
 #item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.5 with clay_ball{display:{Name:"{\"italic\":false,\"text\":\"§bVortex §r: Right-click\"}"}}
 
-item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.0 with wooden_pickaxe{Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§9Master Wand §r: Right-click Blocks\"}"}}
+item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.0 with wooden_pickaxe{Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§9Master Wand §r: Right-click Blocks (throw/offhand to gather)\"}"}}
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.1 with barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}}
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.2 with barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}}
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.3 with barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}}
@@ -170,6 +170,11 @@ execute as @a[scores={class=10},x=620,y=20,z=620,distance=..100] at @s run attri
 item modify entity @a weapon.offhand game:model_0
 
 #
+scoreboard players set @a click 0
+
+scoreboard players set @a shift 0
+scoreboard players set @a timer -1
+
 scoreboard players set @a Sreload 0
 scoreboard players set @a[scores={class=6},x=620,y=20,z=620,distance=..100] Sreload 20
 scoreboard players set @a endercount 0
@@ -222,19 +227,24 @@ scoreboard players set @a featheruse 0
 scoreboard players set @a SPorttimer 0
 scoreboard players set @a blastdur 0
 scoreboard players set @a blastdurt 0
+scoreboard players set @a powerAn -1
 scoreboard players set @a tridentT 0
 scoreboard players set @a[scores={class=10}] tridentT 50
 
 scoreboard players set @a feather_cooldown 0
 scoreboard players set @a float_cooldown 0
 
+scoreboard players set @a ender 0
 scoreboard players set @a enderc 0
 scoreboard players set @a enderct 0
 
 scoreboard players set @a dartcool -1
-scoreboard players set @a dartuse 0
+scoreboard players set @a dartuse 2
+scoreboard players set @a starT 0
+scoreboard players set @a starUse 0
 
 scoreboard players set @a storm_cooldown 0
+scoreboard players set @a halo_cooldown 0
 
 scoreboard players set @a overlordsc 0
 scoreboard players set @a master_bomb_cooldown -1
@@ -258,7 +268,7 @@ scoreboard players set @a grtest 0
 scoreboard players set @a frostsT -1
 scoreboard players set @a snowmanT -1
 
-scoreboard players set @a gardlife 0
+scoreboard players set @a gardlife 20
 
 scoreboard players set @a creepeggr 115
 scoreboard players set @a slimeeggr 0

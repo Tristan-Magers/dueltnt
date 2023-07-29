@@ -7,6 +7,8 @@ scoreboard players add @s otherlord_gather_count 0
 scoreboard players add @s gather_amount 1
 scoreboard players operation @s mastercT -= @s gather_amount
 
+particle minecraft:sculk_charge_pop ~ ~1 ~ 0.7 0.3 0.7 0 2 force
+
 scoreboard players add @s otherlord_gather_count 1
 scoreboard players set @s[scores={otherlord_gather_count=2..}] otherlord_gather_count 0
 

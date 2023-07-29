@@ -31,23 +31,14 @@ scoreboard players set @s timer 1
 
 scoreboard players add @s overlordsc 1
 
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=0,timer=1}] 17 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=1,timer=1}] 102 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=2,timer=1}] 73 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=3,timer=1}] 80 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=4,timer=1}] 160 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=6,timer=1}] 160 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=7,timer=1}] 160 levels
-execute unless entity @e[scores={mode=1}] run xp add @s[scores={class=9,timer=1}] -1 levels
-
-execute if entity @e[scores={mode=1}] run xp add @s[scores={class=0,timer=1}] 12 levels
-execute if entity @e[scores={mode=1}] run xp add @s[scores={class=1,timer=1}] 40 levels
-execute if entity @e[scores={mode=1}] run xp add @s[scores={class=2,timer=1}] 75 levels
-execute if entity @e[scores={mode=1}] run xp add @s[scores={class=3,timer=1}] 30 levels
-execute if entity @e[scores={mode=1}] run xp add @s[scores={class=4,timer=1}] 100 levels
-execute if entity @e[scores={mode=1}] run xp add @s[scores={class=6,timer=1}] 140 levels
-execute if entity @e[scores={mode=1}] run xp add @s[scores={class=7,timer=1}] 130 levels
-execute if entity @e[scores={mode=1}] run xp add @s[scores={class=9,timer=1}] -1 levels
+xp add @s[scores={class=0,timer=1}] 17 levels
+xp add @s[scores={class=1,timer=1}] 102 levels
+xp add @s[scores={class=2,timer=1}] 80 levels
+xp add @s[scores={class=3,timer=1}] 80 levels
+xp add @s[scores={class=4,timer=1}] 155 levels
+xp add @s[scores={class=6,timer=1}] 160 levels
+xp add @s[scores={class=7,timer=1}] 160 levels
+xp add @s[scores={class=9,timer=1}] -1 levels
 
 #reaper
 execute as @s[scores={class=6}] at @s run effect give @s slow_falling 1 1 true
@@ -122,7 +113,7 @@ execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-
 
 execute as @s[scores={class=10}] at @s run effect give @s levitation 1 3
 
-xp add @s[scores={class=10,timer=1}] 95 levels
+xp add @s[scores={class=10,timer=1}] 90 levels
 
 #reaper shift
 execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:10,NoGravity:1}

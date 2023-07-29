@@ -8,6 +8,8 @@ execute if entity @p[distance=..0.6,gamemode=adventure] run playsound minecraft:
 
 #execute as @s[tag=phantomfloat] at @s run item replace entity @p[distance=..0.6,gamemode=adventure] hotbar.0 with minecraft:blaze_powder
 
+scoreboard players set @p[distance=..0.6,gamemode=adventure,scores={phantomrand=10..12,class=9}] phantomrand 15
+
 item replace entity @p[distance=..0.6,gamemode=adventure,scores={phantomrand=0..2}] hotbar.0 with minecraft:blaze_powder{display:{Name:"{\"italic\":false,\"text\":\"§5Phantom Float§r : Right-click\"}"}}
 item replace entity @p[distance=..0.6,gamemode=adventure,scores={phantomrand=3..4}] hotbar.0 with minecraft:apple{display:{Name:"{\"italic\":false,\"text\":\"§2Acid Rain§r : Right-click\"}"}}
 item replace entity @p[distance=..0.6,gamemode=adventure,scores={phantomrand=5..7}] hotbar.0 with minecraft:cookie{display:{Name:"{\"italic\":false,\"text\":\"§3Phantom Boost§r : Right-click\"}"}}

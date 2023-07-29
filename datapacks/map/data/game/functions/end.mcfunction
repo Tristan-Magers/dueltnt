@@ -1,49 +1,4 @@
-
-#
-execute as @e[name=ground] at @s run fill ~-3 ~-1 ~-3 ~3 ~-1 ~3 air replace end_stone
-execute as @e[name=ground] at @s run fill ~-3 ~-1 ~-3 ~3 ~-1 ~3 air replace blue_ice
-
-execute as @s[scores={NArrow=1..}] at @s run fill ~1 ~-1 ~1 ~-1 ~2 ~-1 air
-
-execute as @s[scores={PS=1..},x=600,y=60,z=600,distance=3..100] at @s run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air replace white_stained_glass
-execute as @s[scores={PS=1..},x=600,y=60,z=600,distance=3..100] at @s run fill ~-2 ~-2 ~-2 ~2 ~2 ~2 air replace blue_ice
-
-execute as @e[name=SP] at @s run fill ~1 ~ ~1 ~-1 ~-2 ~-1 air replace white_stained_glass
-
-tag @e[tag=groundpath] add end_game
-execute as @e[tag=groundpath] at @s run function game:char/overlord/groundpath
-
-#kills
-kill @e[tag=phantomairmissile]
-kill @e[tag=tnttrack]
-scoreboard objectives setdisplay sidebar p
-kill @e[tag=powerupitem]
-kill @e[type=creeper]
-kill @e[type=ghast]
-kill @e[type=wither]
-kill @e[type=chicken]
-kill @e[type=skeleton]
-kill @e[type=zombie]
-kill @e[name=Portal,type=armor_stand]
-#kill @e[name=PS,type=armor_stand]
-kill @e[name=acid,type=armor_stand]
-kill @e[type=tnt]
-kill @e[type=ender_pearl]
-kill @e[type=item]
-kill @e[type=arrow]
-kill @e[type=egg]
-kill @e[type=trident]
-kill @e[type=minecraft:snow_golem]
-tp @e[type=slime] ~ ~-1000 ~
-kill @e[type=fireball]
-kill @e[type=experience_bottle]
-kill @e[type=creeper]
-kill @e[tag=telebow]
-kill @e[tag=phantom_block]
-kill @e[type=minecraft:block_display]
-
-kill @e[type=minecraft:armor_stand,x=621,y=17,z=617,distance=..100]
-kill @e[type=minecraft:marker,x=621,y=17,z=617,distance=..100]
+function game:game/kill
 
 #win text
 execute as @a[tag=plague] at @s run scoreboard players operation @s class = @s realclass
@@ -69,18 +24,23 @@ execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=blue,
 execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run title @a[x=615,y=30,z=615,distance=..90] title ["",{"text":"Green Team","color":"green"},{"text":" WINS","color":"white"}]
 execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure] run title @a[x=615,y=30,z=615,distance=..90] title ["",{"selector":"@a[x=615,y=30,z=615,distance=..90,gamemode=adventure]","color":"white"},{"text":" WINS","color":"white"}]
 
+tag @p[x=615,y=30,z=615,distance=..90,gamemode=adventure] add winner
+
 #effect clear
 effect clear @a speed
 effect clear @a jump_boost
 effect clear @a levitation
+effect clear @a slowness
+effect clear @a poison
+effect clear @a blindness
 
 #scores
 scoreboard players reset Time game
 scoreboard players reset Time p
 
-execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=red,scores={teamed=1..}] run scoreboard players add §cRED p 1
-execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=blue,scores={teamed=1..}] run scoreboard players add §cBLUE p 1
-execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run scoreboard players add §aGREEN p 1
+execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=red,scores={teamed=1..}] run scoreboard players add §r§cRED p 1
+execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=blue,scores={teamed=1..}] run scoreboard players add §r§bBLUE p 1
+execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run scoreboard players add §r§aGREEN p 1
 scoreboard players add @a[gamemode=adventure,x=620,y=40,z=620,distance=..100,scores={teamed=..0}] p 1
 
 #blocks

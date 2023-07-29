@@ -43,11 +43,13 @@ execute as @a[gamemode=adventure,scores={shift=1..,timer=..0},distance=..100,x=6
 
 execute as @a[gamemode=adventure,scores={timer=1..},distance=..100,x=620,y=20,z=620] at @s run function game:player/shifttime
 
-title @a[gamemode=adventure,scores={shift=1..},x=600,y=60,z=600,distance=3..500] title {"text":""}
+#title @a[gamemode=adventure,scores={shift=1..},x=600,y=60,z=600,distance=3..500] title {"text":""}
 scoreboard players reset @a[gamemode=adventure,scores={shift=1..}] shift
 
 # arrow effects
-execute as @e[type=arrow,tag=fast] at @s run particle minecraft:crimson_spore ~ ~ ~ 0 0 0 0 1 force
+execute as @e[tag=!inG,type=arrow,tag=fast,scores={BombBow=1..}] at @s run particle minecraft:smoke ~ ~ ~ 0 0 0 0 1 force
+execute as @e[tag=!inG,type=arrow,tag=fast,scores={BombBow=1..}] at @s run particle minecraft:crimson_spore ~ ~ ~ 0 0 0 0 1 force
+execute as @e[tag=!inG,type=arrow,tag=!fast,scores={BombBow=1..}] at @s run particle minecraft:crit ~ ~ ~ 0 0 0 0 1 force
 
 scoreboard players add @e[type=arrow] arrowTime 1
 execute as @e[type=arrow,scores={arrowTime=1}] at @s run function game:items/arrowscores
@@ -82,7 +84,7 @@ execute as @e[type=tnt,nbt={Fuse:1s}] at @s run scoreboard players set @a[gamemo
 
 #slime
 tag @e[name=SM,type=minecraft:marker] add slimerpro
-execute as @e[type=snowball] at @s run kill @e[distance=..8,name=SM,type=minecraft:marker]
+execute as @e[type=snowball] at @s run kill @e[distance=..8,name=SM,type=minecraft:marker,limit=1,sort=nearest]
 execute as @e[type=snowball] at @s run summon minecraft:marker ~ ~ ~ {CustomName:"{\"italic\":false,\"text\":\"SM\"}",Invulnerable:1,Marker:1,Silent:1,NoGravity:1,Invisible:1}
 execute as @e[tag=slimerpro,scores={slimetime=..0}] at @s run summon slime ~ ~-1 ~ {Size:3,NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"slimer\"}",Tags:["slimer"]}
 execute as @e[tag=slimerpro,scores={slimetime=1}] at @s run summon slime ~ ~-1 ~ {Size:4,NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"slimer\"}",Tags:["slimer"]}
@@ -104,7 +106,7 @@ scoreboard players add @e[name=SM,type=minecraft:marker] slimetime 0
 # eggs throw
 scoreboard players add @a snowReset 0
 tag @e[name=AM,type=armor_stand] add slime
-execute as @e[type=egg] at @s run kill @e[distance=..8,name=AM,type=armor_stand]
+execute as @e[type=egg] at @s run kill @e[distance=..8,name=AM,type=armor_stand,limit=1,sort=nearest]
 execute as @e[type=egg] at @s run summon armor_stand ~ ~ ~ {CustomName:"{\"italic\":false,\"text\":\"AM\"}",Invulnerable:1,Marker:1,Silent:1,NoGravity:1,Invisible:1}
 execute as @e[name=AM,type=armor_stand,tag=slime] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1,Marker:1,Silent:1,Tags:["a","frostnade"]}
 scoreboard players set @a[gamemode=adventure,scores={egguse=1..}] eggtimer 40
@@ -125,9 +127,12 @@ tag @a[gamemode=adventure,tag=mwnext,tag=!mwnext2] add mwnext2
 
 #master boom
 execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:beef"}}] at @s run function game:char/overlord/masterboom
-scoreboard players remove @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:beef"}}] masterb 12
-clear @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:beef"}}] gold_ore 12
-execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:beef"}}] at @s run function game:char/overlord/masterwanditems
+scoreboard players remove @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:beef"}}] masterb 14
+clear @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:beef"}}] gold_ore 14
+execute as @a[gamemode=adventure,scores={click=1..,class=9},nbt={SelectedItem:{id:"minecraft:beef"}}] at @s run function game:char/overlord/masterwanditems
+
+scoreboard players remove @e[scores={halo_cooldown=0..}] halo_cooldown 1
+execute as @a[scores={halo_cooldown=0,class=9}] run function game:char/overlord/masterwanditems
 
 #wand upgrade
 scoreboard players add @a[gamemode=adventure,scores={masterc=25..}] mastercT 1
@@ -175,22 +180,24 @@ execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={masters
 execute as @e[tag=stormtnt] at @s run function game:char/overlord/masterstormmove
 
 scoreboard players remove @e[scores={storm_cooldown=0..}] storm_cooldown 1
-execute as @a[scores={storm_cooldown=0}] run function game:char/overlord/masterwanditems
+execute as @a[scores={storm_cooldown=0,class=9}] run function game:char/overlord/masterwanditems
 
 execute as @e[tag=storm_tnt] at @s run function game:char/overlord/storm_tnt
 
 execute as @e[tag=gather_storm] at @s run function game:char/overlord/gather_storm
 
+
 #mastershift
 execute as @e[name=ground2] at @s run function game:char/overlord/masterground
 
 #fireball manage
-scoreboard players add @e[type=fireball] egg 1
+scoreboard players add @e[type=fireball,tag=!boom] egg 1
 kill @e[type=fireball,scores={egg=150..}]
 
 #fireball mot
 execute as @e[tag=trackshot2,tag=newbomb] at @s anchored eyes run function game:cprojectile/pro4mot
-execute as @e[scores={fballtimer=1}] at @s run function game:cprojectile/pro4mot2
+execute as @e[scores={fballtimer=1},tag=!delay] at @s run function game:cprojectile/pro4mot2
+execute as @e[scores={fballtimer=2},tag=delay] at @s run function game:cprojectile/pro4mot2
 scoreboard players add @e[scores={fballtimer=1..}] fballtimer 1
 kill @e[scores={fballtimer=300..}]
 
@@ -200,16 +207,24 @@ kill @e[type=arrow,x=614,y=50,z=614,distance=60..200]
 
 #master tnt
 scoreboard players add @e[tag=mastertnt] masterb 1
+scoreboard players add @e[tag=mastertnt_vis] masterb 1
 #execute as @e[tag=mastertnt,scores={masterb=2}] at @s run data merge entity @s {NoGravity:1}
-execute as @e[tag=mastertnt,scores={masterb=14}] at @s run summon tnt ~ ~.4 ~ {Fuse:2}
-execute as @e[tag=mastertnt,scores={masterb=14}] at @s run summon tnt ~ ~.4 ~ {Fuse:2}
+execute as @e[tag=mastertnt,scores={masterb=1..}] at @s run clone ~-4 ~-4 ~96 ~4 ~4 ~104 ~-4 ~-4 ~-4
+execute as @e[tag=mastertnt,scores={masterb=1}] at @s run summon minecraft:armor_stand ~ ~0.4 ~100 {Small:1,Marker:1,Invulnerable:1,Invisible:1,ArmorItems:[{},{},{},{Count:1,id:air}],DisabledSlots:4144959,Tags:["mastertnt_vis"]}
+#execute as @e[tag=mastertnt,scores={masterb=1}] at @s run summon block_display ~-0.3 ~0.4 ~-100.3 {block_state:{Name:"minecraft:diamond_ore"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.6f,0.6f,0.6f]},Tags:["mastertnt_vis"]}
+execute as @e[tag=mastertnt,scores={masterb=2..14}] at @s positioned ~ ~ ~100 run tp @e[tag=mastertnt_vis,limit=1,sort=nearest,distance=..3] ~ ~0.4 ~
+execute as @e[tag=mastertnt,scores={masterb=1..14}] at @s run particle minecraft:smoke ~ ~0.4 ~100 0 0 0 0 1 force
+execute as @e[tag=mastertnt,scores={masterb=14}] at @s run summon tnt ~ ~.4 ~100 {Fuse:2}
+execute as @e[tag=mastertnt,scores={masterb=14}] at @s run summon tnt ~ ~.4 ~100 {Fuse:2}
+execute as @e[tag=mastertnt_vis,scores={masterb=1}] at @s run item replace entity @s armor.head with minecraft:diamond_ore
 kill @e[tag=mastertnt,scores={masterb=14}]
+kill @e[tag=mastertnt_vis,scores={masterb=13}]
 
 execute as @e[tag=mastertnt,tag=newbomb] at @s anchored eyes run function game:cprojectile/pro2mot
 execute as @a[gamemode=adventure,scores={click=1..,master_bomb_cooldown=..0},nbt={SelectedItem:{id:"minecraft:salmon"}}] at @s run function game:cprojectile/pro2
 
 scoreboard players remove @a[scores={master_bomb_cooldown=0..}] master_bomb_cooldown 1
-execute as @a[scores={master_bomb_cooldown=0}] run function game:char/overlord/masterwanditems
+execute as @a[scores={master_bomb_cooldown=0,class=9}] run function game:char/overlord/masterwanditems
 
 #creeper projectile wizard
 execute as @e[tag=wizcreep,tag=newbomb] at @s anchored eyes run function game:cprojectile/pro8mot
@@ -294,37 +309,56 @@ function game:givegrab
 
 #grab
 scoreboard players add @e[name="Fishing Bobber"] fishingT 1
-execute as @e[name="Fishing Bobber",scores={fishingT=3..}] at @s positioned ~ ~-1 ~ run execute as @p[distance=..1,gamemode=adventure] at @s run effect give @p slowness 3 255
-execute as @e[name="Fishing Bobber",scores={fishingT=3..}] at @s positioned ~ ~-1 ~ run execute as @p[distance=..1,gamemode=adventure] at @s run effect clear @p jump_boost
+
+execute as @e[name="Fishing Bobber",scores={fishingT=1}] at @s run data merge entity @s {Air:1s}
+execute as @e[name="Fishing Bobber",scores={fishingT=1}] at @s run function game:cprojectile/fish_motion
+execute as @e[name="Fishing Bobber",scores={fishingT=2}] at @s run data merge entity @s {Air:1s}
+execute as @e[name="Fishing Bobber",scores={fishingT=3}] at @s run data merge entity @s {Air:0s}
+execute as @e[name="Fishing Bobber",scores={fishingT=4}] at @s run data merge entity @s {Air:1s}
+execute as @e[name="Fishing Bobber",scores={fishingT=5}] at @s run data merge entity @s {Air:0s}
+
+#execute as @e[name="Fishing Bobber",scores={fishingT=120..}] at @s run playsound minecraft:item.shield.break master @a ~ ~ ~ 1 1.12
+kill @e[name="Fishing Bobber",scores={fishingT=120..}]
+
+execute as @e[name="Fishing Bobber",scores={t6=60..}] at @s run playsound minecraft:item.shield.break master @a ~ ~ ~ 1 1.12
+kill @e[name="Fishing Bobber",scores={t6=60..}]
+execute as @e[name="Fishing Bobber",scores={fishingT=3..}] at @s positioned ~ ~-1 ~ if entity @p[distance=..1,gamemode=adventure] at @s run scoreboard players set @s fishingT 60
+execute as @e[name="Fishing Bobber",scores={fishingT=3..}] at @s positioned ~ ~-1 ~ if entity @p[distance=..1,gamemode=adventure] at @s run scoreboard players add @s t6 1
+execute as @e[name="Fishing Bobber",scores={fishingT=3..}] at @s positioned ~ ~-1 ~ if entity @e[distance=..1,tag=dummy] at @s run scoreboard players add @s t6 1
+
+execute as @e[name="Fishing Bobber",scores={t6=2}] at @s run playsound minecraft:entity.player.levelup master @a[distance=..25] ~ ~ ~ 1 1.3 0.5
+execute as @e[name="Fishing Bobber",scores={t6=2}] at @s run scoreboard players add @e[name="Fishing Bobber"] t6 1
+
+#execute as @e[name="Fishing Bobber",scores={fishingT=3..}] at @s positioned ~ ~-1 ~ run execute as @p[distance=..1,gamemode=adventure] at @s run effect give @p slowness 3 255
+#execute as @e[name="Fishing Bobber",scores={fishingT=3..}] at @s positioned ~ ~-1 ~ run execute as @p[distance=..1,gamemode=adventure] at @s run effect clear @p jump_boost
 #execute as @e[name="Fishing Bobber",scores={fishingT=3..}] at @s positioned ~ ~-1 ~ run execute as @p[distance=..1,gamemode=adventure] at @s run effect give @p jump_boost 3 128
-execute as @e[name="Fishing Bobber",scores={fishingT=3..}] at @s positioned ~ ~-1 ~ run execute as @p[distance=..1,gamemode=adventure] at @s run scoreboard players set @p stun 52
-kill @e[type=armor_stand,name=Mark]
-title @a[gamemode=adventure,scores={stun=32..}] title {"text":"SHIFT to escape","color":"red","bold":"true"}
-title @a[gamemode=adventure,scores={stun=2}] title {"text":"","color":"red","bold":"true"}
-scoreboard players remove @a[gamemode=adventure,scores={stun=0..}] stun 1
-effect clear @a[gamemode=adventure,scores={stun=1}] slowness
-#effect clear @a[gamemode=adventure,scores={stun=1}] jump_boost
+#execute as @e[name="Fishing Bobber",scores={fishingT=3..}] at @s positioned ~ ~-1 ~ run execute as @p[distance=..1,gamemode=adventure] at @s run scoreboard players set @p stun 52
+#kill @e[type=armor_stand,name=Mark]
+#title @a[gamemode=adventure,scores={stun=32..}] title {"text":"SHIFT to escape","color":"red","bold":"true"}
+#title @a[gamemode=adventure,scores={stun=2}] title {"text":"","color":"red","bold":"true"}
+#scoreboard players remove @a[gamemode=adventure,scores={stun=0..}] stun 1
+#effect clear @a[gamemode=adventure,scores={stun=1}] slowness
 
-execute as @e[scores={shStun=1..}] at @s positioned ~ ~1 ~ run execute as @e[distance=..1,name="Fishing Bobber",scores={fishingT=3..}] at @s run playsound minecraft:item.shield.break master @a ~ ~ ~ 1 1.12
-execute as @e[scores={shStun=1..}] at @s positioned ~ ~1 ~ run scoreboard players set @a[gamemode=adventure,distance=..1,scores={stun=9..}] stun 9
-execute as @e[name="Fishing Bobber",scores={fishingT=3..}] at @s positioned ~ ~-1 ~ run execute as @p[distance=..1] at @s run scoreboard players add @p TimeStun 1
-scoreboard players set @a[gamemode=adventure,scores={stun=1}] TimeStun 0
-execute as @e[scores={shStun=1..}] at @s positioned ~ ~1 ~ run kill @e[distance=..1,name="Fishing Bobber",scores={fishingT=5..}]
-scoreboard players set @a[gamemode=adventure,scores={shStun=1..,stun=35..}] stun 35
+#execute as @e[scores={shStun=1..}] at @s positioned ~ ~1 ~ run execute as @e[distance=..1,name="Fishing Bobber",scores={fishingT=3..}] at @s run playsound minecraft:item.shield.break master @a ~ ~ ~ 1 1.12
+#execute as @e[scores={shStun=1..}] at @s positioned ~ ~1 ~ run scoreboard players set @a[gamemode=adventure,distance=..1,scores={stun=9..}] stun 9
+#execute as @e[name="Fishing Bobber",scores={fishingT=3..}] at @s positioned ~ ~-1 ~ run execute as @p[distance=..1] at @s run scoreboard players add @p TimeStun 1
+#scoreboard players set @a[gamemode=adventure,scores={stun=1}] TimeStun 0
+#execute as @e[scores={shStun=1..}] at @s positioned ~ ~1 ~ run kill @e[distance=..1,name="Fishing Bobber",scores={fishingT=5..}]
+#scoreboard players set @a[gamemode=adventure,scores={shStun=1..,stun=35..}] stun 35
 
-effect give @a[gamemode=adventure,scores={class=0,stun=1},x=620,y=20,z=620,distance=..100] jump_boost 300 1 true
-effect give @a[gamemode=adventure,scores={class=2,stun=1},x=620,y=20,z=620,distance=..100] jump_boost 300 1 true
-effect give @a[gamemode=adventure,scores={class=4,stun=1},x=620,y=20,z=620,distance=..100] jump_boost 300 2 true
-effect give @a[gamemode=adventure,scores={class=5,stun=1},x=620,y=20,z=620,distance=..100] jump_boost 300 1 true
-effect give @a[gamemode=adventure,scores={class=6,stun=1},x=620,y=20,z=620,distance=..100] jump_boost 300 2 true
-effect give @a[gamemode=adventure,scores={class=7,stun=1},x=620,y=20,z=620,distance=..100] jump_boost 300 1 true
-effect give @a[gamemode=adventure,scores={class=10,stun=1},x=620,y=20,z=620,distance=..100] jump_boost 300 1 true
-scoreboard players set @a[gamemode=adventure,scores={shStun=1}] shStun -3
-scoreboard players set @a[gamemode=adventure,scores={shStunD=1..,shStun=..-1}] shStun -3
-scoreboard players add @a[gamemode=adventure,scores={shStun=..-1}] shStun 1
-scoreboard players set @a[gamemode=adventure,scores={shStunD=1..,shStun=0}] shStun 1
-scoreboard players set @a shStunD 0
-scoreboard players add @a shStun 0
+#effect give @a[gamemode=adventure,scores={class=0,stun=1},x=620,y=20,z=620,distance=..100] jump_boost 300 1 true
+#effect give @a[gamemode=adventure,scores={class=2,stun=1},x=620,y=20,z=620,distance=..100] jump_boost 300 1 true
+#effect give @a[gamemode=adventure,scores={class=4,stun=1},x=620,y=20,z=620,distance=..100] jump_boost 300 2 true
+#effect give @a[gamemode=adventure,scores={class=5,stun=1},x=620,y=20,z=620,distance=..100] jump_boost 300 1 true
+#effect give @a[gamemode=adventure,scores={class=6,stun=1},x=620,y=20,z=620,distance=..100] jump_boost 300 2 true
+#effect give @a[gamemode=adventure,scores={class=7,stun=1},x=620,y=20,z=620,distance=..100] jump_boost 300 1 true
+#effect give @a[gamemode=adventure,scores={class=10,stun=1},x=620,y=20,z=620,distance=..100] jump_boost 300 1 true
+#scoreboard players set @a[gamemode=adventure,scores={shStun=1}] shStun -3
+#scoreboard players set @a[gamemode=adventure,scores={shStunD=1..,shStun=..-1}] shStun -3
+#scoreboard players add @a[gamemode=adventure,scores={shStun=..-1}] shStun 1
+#scoreboard players set @a[gamemode=adventure,scores={shStunD=1..,shStun=0}] shStun 1
+#scoreboard players set @a shStunD 0
+#scoreboard players add @a shStun 0
 
 #boom wand
 execute as @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,scores={class=7}] at @s anchored eyes run function game:items/boomwman
@@ -383,6 +417,7 @@ scoreboard players set @a pigThrow 0
 scoreboard players add @e[type=pig] egg 1
 execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s run execute as @e[scores={egg=..1},limit=1,type=pig] at @s run teleport @p[scores={class=4,egg=1..}] ~ ~ ~
 execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s run tp @s @s
+tag @a[gamemode=adventure,scores={class=4,egg=1..}] add pig_place
 scoreboard players set @a[gamemode=adventure,scores={class=4,egg=1..}] pig 31
 scoreboard players set @a[gamemode=adventure,scores={class=4}] egg 0
 execute as @e[type=pig] at @s run data merge entity @s {Invulnerable:1}
@@ -398,6 +433,7 @@ execute as @e[tag=frostsuck,scores={frostl=-200..}] at @s run function game:char
 execute as @e[tag=frostsuck,tag=org] at @s align x align y align z run function game:char/shard/frostsuck/frosts
 scoreboard players add @e[tag=frostsuck] frostl 0
 
+execute as @a[scores={class=10,frostsT=0},x=620,y=20,z=620,distance=..100] run tellraw @a[gamemode=spectator,x=620,y=20,z=620,distance=..100] [{"selector":"@s","color":"gold"},{"text":" Reloaded ","color":"white"},{"text":"Ice Suck","color":"dark_aqua","bold":"true"}]
 item replace entity @a[scores={class=10,frostsT=0},x=620,y=20,z=620,distance=..100] hotbar.3 with lime_dye{display:{Name:"{\"italic\":false,\"text\":\"§3Ice Suck §f§r: Right-click\"}"}}
 scoreboard players remove @e[scores={frostsT=-100..}] frostsT 1
 
@@ -426,6 +462,7 @@ kill @e[name=snowscan,scores={t2=270..}]
 
 #execute as @a[scores={tridentuse=1..}] run effect give @s levitation 1 0 true
 #execute as @a[scores={tridentuse=1..}] run scoreboard players set @s nolev 8
+execute as @a[scores={tridentuse=1..}] at @s run playsound minecraft:item.trident.riptide_3 master @a[distance=..60] ~ ~ ~ 1 1 0.4
 execute as @a[scores={tridentuse=1..}] run scoreboard players operation @e[type=minecraft:trident,limit=1,sort=nearest,tag=!old] tntID = @s tntID
 
 execute as @e[type=minecraft:trident] run function game:char/shard/trident
@@ -438,7 +475,7 @@ scoreboard players set @a[scores={tridentuse=1..}] tridentuse 0
 execute as @e[tag=tntstorm] at @s run function game:char/shard/tntstorm
 
 #power shield
-execute as @a[gamemode=adventure,scores={powerAn=1},x=600,y=60,z=600,distance=3..100] at @s run summon armor_stand ~ ~ ~ {CustomName:"{\"italic\":false,\"text\":\"PS\"}",Marker:1,Silent:1,NoGravity:1,Invulnerable:1,Invisible:1}
+execute as @a[gamemode=adventure,scores={powerAn=1},x=600,y=60,z=600,distance=3..100] at @s run summon armor_stand ~ ~ ~ {CustomName:"{\"text\":\"PS\"}",Marker:1,Silent:1,NoGravity:1,Invulnerable:1,Invisible:1}
 execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:stick"}}] at @s run function game:char/mads/powershield
 scoreboard players remove @a[gamemode=adventure,scores={PStimer=1..}] PStimer 1
 execute as @a[gamemode=adventure,scores={PStimer=148}] at @s run tp @s @s
@@ -569,6 +606,9 @@ scoreboard players remove @a[gamemode=adventure,scores={enderreload=0..,class=1}
 scoreboard players remove @a[gamemode=adventure,scores={enderreload=0..,class=2}] enderreload 1
 
 # plague
+scoreboard players set @a[gamemode=adventure,scores={plagueuse=1..,class=8},nbt={OnGround:0b}] nolev 16
+effect give @a[gamemode=adventure,scores={plagueuse=1..,class=8},nbt={OnGround:0b}] slow_falling 1 7
+effect give @a[gamemode=adventure,scores={plagueuse=1..,class=8},nbt={OnGround:0b}] levitation 1 8
 tag @a[gamemode=adventure,scores={plagueuse=1..}] remove checkairnade
 scoreboard players set @a[gamemode=adventure,scores={plagueuse=1..}] plaguetimer 200
 scoreboard players set @a[gamemode=adventure,scores={plagueuse=1..}] plagueuse 0
@@ -582,7 +622,9 @@ scoreboard players set @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,sc
 execute as @e[tag=phantommissile] at @s run function game:missile
 
 #phantom air missile
-execute as @e[tag=phantomairmissile] at @s run function game:airmissile
+execute as @e[tag=phantomairmissile,tag=!pause] at @s run function game:airmissile
+scoreboard players remove @e[tag=phantomairmissile,tag=pause] t4 1
+tag @e[tag=phantomairmissile,scores={t4=..0}] remove pause
 
 #chicken bow
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={chickenbow=1..4}] at @s run playsound minecraft:entity.chicken.death master @a ~ ~ ~ 1 1.5
@@ -633,18 +675,12 @@ execute as @e[type=arrow,scores={ballArrowT=1..,VaporBow=1..},tag=crit] at @s ru
 
 #remove fire
 scoreboard players add @e[tag=firecheck] firer 1
-execute as @e[tag=firecheck,scores={firer=2..}] at @s unless entity @e[type=fireball,distance=..6] run fill ~-8 ~-8 ~-8 ~8 ~8 ~8 air replace fire
+execute as @e[tag=firecheck,scores={firer=2..}] at @s unless entity @e[type=fireball,distance=..6,tag=!boom] run fill ~-8 ~-8 ~-8 ~8 ~8 ~8 air replace fire
 kill @e[tag=firecheck,scores={firer=2..}]
-execute as @e[type=fireball] at @s run summon armor_stand ~ ~ ~ {Tags:["firecheck"],Marker:1,Silent:1,Invulnerable:1}
+execute as @e[type=fireball,tag=!boom] at @s run summon armor_stand ~ ~ ~ {Tags:["firecheck"],Marker:1,Silent:1,Invulnerable:1}
 
 #telebow
 execute as @e[tag=telebow] at @s run function game:char/wizard/telebow
-
-#soldier shift
-scoreboard players add @e[tag=soldiershift] timer 1
-execute as @e[tag=soldiershift,scores={timer=3}] at @s run summon minecraft:fireball ~ ~ ~ {Motion:[0.0,-1.0,0.0],ExplosionPower:3}
-execute as @e[tag=soldiershift,scores={timer=3}] at @s run summon minecraft:slime ~ ~-0.9 ~ {NoAI:1,Size:0,Invulnerable:1,Tags:["killthis"]}
-kill @e[tag=soldiershift,scores={timer=3}]
 
 #Time Bomb
 #function game:char/trapper/timebomb_main
@@ -667,6 +703,8 @@ tag @e[type=creeper] add beenaround
 scoreboard players set @a[scores={dive_kick=4..9},nbt={OnGround:1b}] dive_kick 3
 scoreboard players remove @a[scores={dive_kick=-5..}] dive_kick 1
 
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={dive_kick=1..}] at @s run particle minecraft:squid_ink ~ ~ ~ 0 0 0 0 1 force
+
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={dive_kick=0}] at @s run function game:char/assassin/dive_boom
 
 #darts
@@ -676,6 +714,15 @@ execute as @e[tag=dart] at @s run function game:char/assassin/dartmove
 #
 scoreboard players add @e[tag=blue_tnt_marker] t1 1
 kill @e[tag=blue_tnt_marker,scores={t1=40..}]
+
+#
+execute as @e[type=minecraft:fireball,tag=!boom] at @s run function game:char/wizard/fireball_check
+
+#soldier shift
+scoreboard players add @e[tag=soldiershift] timer 1
+execute as @e[tag=soldiershift,scores={timer=3}] at @s run summon minecraft:fireball ~ ~ ~ {Motion:[0.0,-1.0,0.0],ExplosionPower:4,Tags:["boom"]}
+execute as @e[tag=soldiershift,scores={timer=3}] at @s run summon minecraft:endermite ~ ~-0.8 ~ {NoAI:1,Size:0,Invulnerable:1,Tags:["killthis"],Activeeffect:[{Id:14,Amplifier:1,Duration:999999,ShowParticles:0b}]}
+kill @e[tag=soldiershift,scores={timer=3}]
 
 #Invis 
 effect give @a[scores={Invis=1..}] minecraft:invisibility 5 0 true
@@ -699,3 +746,4 @@ clear @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] weapon.offhand with minecraft:carrot_on_a_stick
 
 execute as @e[tag=no_motion] at @s run tp @s @s
+

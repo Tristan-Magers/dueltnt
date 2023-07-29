@@ -35,7 +35,10 @@ execute as @s[scores={laserDummy=17}] at @s run execute as @a[tag=beamhit] at @s
 execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=beamhit,type=zombie] at @s run function game:items/beamhit
 execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=beamhit,type=skeleton] at @s run function game:items/beamhit
 execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=beamhit,type=creeper] at @s run function game:items/beamhit
+execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=beamhit,type=ghast] at @s run function game:items/beamhit
+execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=beamhit,type=chicken] at @s run function game:items/beamhit
 execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=beamhit,type=slime] at @s run function game:items/beamhit
+execute as @s[scores={laserDummy=17}] at @s run damage @e[tag=beamhit,type=wither,limit=1] 200 minecraft:arrow
 
 execute as @s[scores={laserDummy=-230}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Reloaded ","color":"white"},{"text":"Laser","color":"red","bold":"true"}]
 item replace entity @s[scores={laserDummy=-230}] hotbar.4 with rabbit_hide{display:{Name:"{\"italic\":false,\"text\":\"§4Laser §r: Right-click\"}"}}

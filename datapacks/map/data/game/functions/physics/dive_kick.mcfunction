@@ -17,4 +17,7 @@ execute unless entity @s[x_rotation=90] at @s run tp @s ~ ~ ~ facing entity @e[t
 tag @s remove divekick
 tag @e[tag=dive_look] add kill_this
 
+execute as @s at @s run playsound minecraft:entity.firework_rocket.large_blast master @a[distance=..30] ~ ~ ~ 1 1.2 0.5
+execute as @s at @s run playsound minecraft:entity.firework_rocket.launch master @a[distance=..30] ~ ~ ~ 1 0.9 0.5
+
 #tag @s add ground_boom

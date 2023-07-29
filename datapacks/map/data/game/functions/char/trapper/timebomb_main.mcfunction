@@ -54,7 +54,7 @@ execute as @a[scores={time_pos=10}] at @s run playsound minecraft:entity.enderma
 execute as @a[scores={time_pos=0..}] at @s run function game:player/revtime
 execute as @a[scores={time_pos=0..}] at @s run function game:player/revtime
 
-execute as @a[scores={time_pos=19}] at @s run summon husk ~ ~100 ~ {Tags:["timeposmark"],NoAI:1,Invulnerable:1,Silent:1,NoGravity:1,Invisible:1,ArmorItems:[{},{},{},{Count:1,id:ghast_tear}]}
+execute as @a[scores={time_pos=19}] at @s run summon husk ~ ~100 ~ {Tags:["timeposmark"],NoAI:1,Invulnerable:1,Silent:1,NoGravity:1,Invisible:1,ArmorItems:[{},{},{},{Count:1,id:beetroot}]}
 effect give @a[scores={time_pos=19..}] minecraft:glowing 1 1
 effect give @a[scores={time_pos=-5}] minecraft:blindness 2 1 true
 #clear @a[scores={time_pos=1}] arrow

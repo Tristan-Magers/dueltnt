@@ -27,8 +27,8 @@ scoreboard players set @a[tag=plm1] PlaceMineTime 144
 scoreboard players set @a[tag=plm1] PlaceMine 0
 tag @a remove plm1
 
-item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={PlaceMineTime=145}] hotbar.2 with tnt{display:{Name:"{\"italic\":false,\"text\":\"§4Mine §f: Throw/Right-click\"}"},HideFlags:16,CanPlaceOn:["#game:bolt_place"]} 1
-item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={PlaceMineTime=90}] hotbar.2 with tnt{display:{Name:"{\"italic\":false,\"text\":\"§4Mine §f: Throw/Right-click\"}"},HideFlags:16,CanPlaceOn:["#game:bolt_place"]} 2
+item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={PlaceMineTime=145}] hotbar.2 with tnt{display:{Name:"{\"italic\":false,\"text\":\"§4Mine §f: Throw/Right-click\"}"},HideFlags:16,CanPlaceOn:["#game:tnt_place"]} 1
+item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={PlaceMineTime=90}] hotbar.2 with tnt{display:{Name:"{\"italic\":false,\"text\":\"§4Mine §f: Throw/Right-click\"}"},HideFlags:16,CanPlaceOn:["#game:tnt_place"]} 2
 execute as @a[scores={HoldMine=1..}] at @s run effect give @s blindness 1
 execute as @e[type=item,scores={Mine=..0}] at @s run tp @e[distance=..0,limit=1,scores={Mine=..0}] @p
 scoreboard players add @e[type=item] egg 1

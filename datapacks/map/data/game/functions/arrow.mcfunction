@@ -91,14 +91,17 @@ execute as @s[type=arrow,x=599,z=599,y=5,dx=36,dz=36,dy=25,distance=..1000,score
 #execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s positioned ~ ~-1 ~2 unless block ~ ~ ~ air run fill ~ ~ ~ ~ ~ ~ minecraft:cyan_stained_glass destroy
 #execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s positioned ~ ~ ~2 unless block ~ ~ ~ air run fill ~ ~ ~ ~ ~ ~ minecraft:cyan_stained_glass destroy
 
-execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=crit,x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s run fill ~-2 ~-1 ~ ~2 ~1 ~ minecraft:air destroy
-execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=crit,x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s run fill ~ ~-1 ~-2 ~ ~1 ~2 minecraft:air destroy
 execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=crit,x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run fill ~-1 ~-2 ~-1 ~1 ~2 ~1 air destroy
 execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=crit,x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run fill ~-1 ~-1 ~-1 ~1 ~2 ~1 air destroy
+execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=crit,x=620,z=620,y=40,distance=..120] at @s run fill ~-1 ~-2 ~-1 ~1 ~2 ~1 minecraft:air replace #game:bolt_place
+execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=crit,x=620,z=620,y=40,distance=..120] at @s run fill ~-2 ~-1 ~ ~2 ~1 ~ minecraft:air replace #game:bolt_place
+execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=crit,x=620,z=620,y=40,distance=..120] at @s run fill ~ ~-1 ~-2 ~ ~1 ~2 minecraft:air replace #game:bolt_place
 execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=!crit,x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air destroy
 execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=!crit,x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run fill ~-1 ~-2 ~ ~1 ~-2 ~ air destroy
 execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=!crit,x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run fill ~ ~-2 ~-1 ~ ~-2 ~1 air destroy
-execute if entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run fill ~-1 ~-2 ~-1 ~1 ~-2 ~1 air destroy
+execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=!crit,x=620,z=620,y=40,distance=..120] at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 minecraft:air replace #game:bolt_place
+execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=!crit,x=620,z=620,y=40,distance=..120] at @s run fill ~-1 ~-2 ~ ~1 ~-2 ~ minecraft:air replace #game:bolt_place
+execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=!crit,x=620,z=620,y=40,distance=..120] at @s run fill ~ ~-2 ~-1 ~ ~-2 ~1 minecraft:air replace #game:bolt_place
 
 execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=crit,x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s run particle minecraft:poof ~ ~ ~ 1 1 1 0.2 15 force
 
@@ -122,8 +125,8 @@ execute as @s[type=arrow,scores={SolBow=1}] at @s run playsound minecraft:entity
 #execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=598,z=598,y=0,distance=..1000,nbt={inBlockState:{Name:"minecraft:barrier"}}] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=4.5,type=!armor_stand,tag=!nowalllev] at @s run tag @s add nowalllev
 #execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=598,z=598,y=0,distance=..1000] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=4.5,type=!armor_stand] at @s run teleport @s ~ ~4 ~
 
-execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=598,z=598,y=0,dx=39,dz=39,dy=108,distance=..1000] at @s run fill ~-1 0 ~-1 ~1 80 ~1 air
-execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=598,z=598,y=0,dx=39,dz=39,dy=108,distance=..1000] at @s run particle crit ~ ~ ~ 1 10 1 0 100 force
+execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=620,z=620,y=40,distance=..120] at @s run fill ~-1 0 ~-1 ~1 80 ~1 air replace #game:bolt_place
+execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=620,z=620,y=40,distance=..120] at @s run particle crit ~ ~ ~ 1 10 1 0 100 force
 execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=4.5,type=!armor_stand,tag=!nowalllev] at @s run effect give @s levitation 1 1
 execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000,nbt={inBlockState:{Name:"minecraft:barrier"}}] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=4.5,type=!armor_stand,tag=!nowalllev] at @s run scoreboard players set @s grtest 3
 execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000,nbt={inBlockState:{Name:"minecraft:barrier"}}] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=4.5,type=!armor_stand,tag=!nowalllev] at @s run tag @s add nowalllev

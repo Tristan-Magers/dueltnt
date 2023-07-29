@@ -37,6 +37,12 @@ execute as @s[tag=boom] at @s run summon slime ~ ~-2.9 ~ {NoGravity:1b,Silent:1b
 execute as @s[tag=boom] at @s run summon slime ~ ~-3.2 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Size:11,Tags:["kill_next"],ActiveEffects:[{Id:14,Amplifier:1b,Duration:10,ShowParticles:0b}]}
 execute as @s[tag=boom] at @s run summon slime ~ ~-3.2 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Size:11,Tags:["kill_next"],ActiveEffects:[{Id:14,Amplifier:1b,Duration:10,ShowParticles:0b}]}
 
+execute as @s[tag=boom] at @s run particle minecraft:flash ~ ~0.5 ~ 0 0 0 0 1 force
+
+execute as @s[tag=boom] at @s run particle minecraft:item minecraft:lapis_block ~ ~0.5 ~ 0 0 0 0.6 20 force
+execute as @s[tag=boom] at @s run playsound minecraft:item.trident.hit_ground master @a[distance=..16] ~ ~ ~ 1 1 0.5
+execute as @s[tag=boom] at @s run playsound minecraft:item.trident.return master @a[distance=..16] ~ ~ ~ 1 1.1 0.5
+
 execute as @s[tag=boom] at @s run summon block_display ~-2.2 ~-3.2 ~-2.2 {NoGravity:1b,Silent:1b,Tags:["kill_next"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[4.4f,4.4f,4.4f]},block_state:{Name:"minecraft:white_stained_glass"}}
 execute as @s[tag=boom] at @s run summon block_display ~-2.7 ~-3.2 ~-2.7 {NoGravity:1b,Silent:1b,Tags:["kill_next"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[5.4f,5.4f,5.4f]},block_state:{Name:"minecraft:white_stained_glass"}}
 execute as @s[tag=boom] at @s run summon block_display ~-3.2 ~-3.2 ~-3.2 {NoGravity:1b,Silent:1b,Tags:["kill_next"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[6.4f,6.4f,6.4f]},block_state:{Name:"minecraft:white_stained_glass"}}

@@ -49,8 +49,15 @@ tag @s remove grave
 scoreboard players set @s grave 0
 
 #
-execute as @s[scores={class=9}] at @s run scoreboard players set @s masterc 0
-execute as @s[scores={class=9}] at @s run function game:char/overlord/masterwanduse
+execute as @s[scores={class=9},tag=!gather] at @s run scoreboard players set @s masterc 0
+execute as @s[scores={class=9},tag=!gather] at @s run function game:char/overlord/masterwanduse
+
+execute as @s[scores={class=4,pig=1..}] at @s run effect clear @s speed
+execute as @s[scores={class=4,pig=1..}] at @s run effect give @s jump_boost 300 2 true
+execute as @s[scores={class=4,pig=1..}] at @s run scoreboard players set @s pig -500
 
 #
 scoreboard players set @s dive_kick -1
+
+#
+tag @s remove up_speed

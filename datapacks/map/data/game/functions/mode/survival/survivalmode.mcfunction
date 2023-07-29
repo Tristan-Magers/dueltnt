@@ -11,8 +11,8 @@ execute if entity @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure,limit=1
 scoreboard players set @e[tag=Map] ghastcount 0
 execute as @e[type=ghast] run scoreboard players add @e[tag=Map] ghastcount 1
 
-execute run scoreboard players add @e[type=chicken] survival 1
-execute run execute as @e[type=chicken] at @s run function game:mode/survival/survivalchicken
+execute run scoreboard players add @e[type=chicken,x=600,y=60,z=600,distance=3..100] survival 1
+execute run execute as @e[type=chicken,x=600,y=60,z=600,distance=3..100] at @s run function game:mode/survival/survivalchicken
 
 execute run execute as @e[type=ghast,x=580,y=0,z=580,dx=100,dy=15,dz=100] at @s run tp @s ~ ~.08 ~
 execute run execute as @e[type=ghast,x=580,y=56,z=580,dx=100,dy=55,dz=50] at @s run tp @s ~ ~-.08 ~

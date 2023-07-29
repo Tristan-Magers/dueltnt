@@ -14,3 +14,6 @@ playsound minecraft:entity.phantom.hurt master @a ~ ~ ~ 1 1.7
 #tp @s @s
 effect give @p minecraft:levitation 1 15
 scoreboard players set @s nolev 13
+
+#
+scoreboard players set @s halo_cooldown 10

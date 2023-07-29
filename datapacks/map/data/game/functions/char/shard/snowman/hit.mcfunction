@@ -1,8 +1,6 @@
 execute at @s run particle minecraft:electric_spark ~ ~-.1 ~ 0.5 0.5 0.5 0.1 5 force
 
 #turn air
-execute as @s at @s run fill ~-1 ~-1 ~-1 ~1 ~1 ~1 air replace #game:ice_block
-
 execute as @s at @s if block ~ ~ ~ blue_ice run setblock ~ ~ ~ air destroy
 execute as @s at @s if block ~1 ~ ~ blue_ice run setblock ~1 ~ ~ air destroy
 execute as @s at @s if block ~-1 ~ ~ blue_ice run setblock ~-1 ~ ~ air destroy

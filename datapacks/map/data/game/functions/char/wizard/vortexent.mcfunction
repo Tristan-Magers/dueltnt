@@ -15,8 +15,8 @@ execute as @s[scores={vortex=..80}] at @s run particle minecraft:portal ~ ~ ~ 0 
 particle minecraft:crit ~ ~ ~ 0 0 0 .15 10 force
 execute as @s[scores={vortex=40..}] at @s run tag @s add vortex
 #execute as @s[scores={vortex=40..}] at @s run function game:vortexdif
-execute as @s[scores={vortex=100..}] at @s run kill @e[tag=vortex_box,distance=..2] 
-kill @s[scores={vortex=100..}]
+execute as @s[scores={vortex=110..}] at @s run kill @e[tag=vortex_box,distance=..2] 
+kill @s[scores={vortex=110..}]
 
 effect give @e[tag=vortex_box,distance=..2] minecraft:glowing infinite 0 true
 

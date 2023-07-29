@@ -1,6 +1,6 @@
 execute at @s run summon armor_stand ~ ~ ~ {Tags:["dart"],Invulnerable:1b,Marker:1b}
 execute at @s run tp @e[tag=dart,limit=1,sort=nearest] @s
-execute at @s run scoreboard players set @e[tag=dart,limit=1,sort=nearest] laserDummy 300
+execute at @s run scoreboard players set @e[tag=dart,limit=1,sort=nearest] laserDummy 1000
 execute at @s run execute as @e[tag=dart,limit=1,sort=nearest] at @s run function game:char/assassin/dartmove
 
 playsound minecraft:ui.stonecutter.take_result master @a ~ ~ ~ 1 2

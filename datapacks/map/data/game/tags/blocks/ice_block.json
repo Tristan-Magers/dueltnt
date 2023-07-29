@@ -9,6 +9,7 @@
     "minecraft:grass",
     "minecraft:azure_bluet",
     "minecraft:cornflower",
-    "#minecraft:flowers"
+    "#minecraft:flowers",
+    "minecraft:fire"
   ]
 }

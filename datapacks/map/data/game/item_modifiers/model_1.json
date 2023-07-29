@@ -1,4 +1,10 @@
-{
-	"function" : "minecraft:set_nbt",
-	"tag" : "{CustomModelData:1}"
-}
+[
+	{
+		"function" : "minecraft:set_nbt",
+		"tag" : "{CustomModelData:1}"
+	},
+	{
+		"function" : "minecraft:set_name",
+		"name" : [{"text":"Throw/Offhand wand to Gather","italic":false,"color":"white"}]
+	}
+]
