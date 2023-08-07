@@ -29,5 +29,5 @@ tp @e[limit=1,name=pro1,sort=nearest] ~ ~1 ~
 playsound minecraft:entity.player.attack.sweep master @a ~ ~ ~ .7 1.1
 playsound minecraft:entity.player.attack.nodamage master @a ~ ~ ~ 1 .8
 
-playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ 1 1.7
-playsound minecraft:entity.firework_rocket.large_blast_far master @a ~ ~ ~ 1 1.2
+playsound minecraft:entity.firework_rocket.launch master @a[distance=..50] ~ ~ ~ 1 1.7
+playsound minecraft:entity.firework_rocket.large_blast_far master @a[distance=..50] ~ ~ ~ 1 1.2

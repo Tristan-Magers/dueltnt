@@ -3,7 +3,7 @@ effect give @e[type=skeleton] minecraft:resistance 10 10 true
 effect give @e[type=chicken] minecraft:resistance 10 10 true
 effect give @e[type=creeper] minecraft:resistance 10 10 true
 
-effect give @e[type=chicken] minecraft:glowing 10 10 true
+effect give @e[type=chicken,x=600,y=60,z=600,distance=3..100] minecraft:glowing 10 10 true
 effect give @e[type=creeper] minecraft:glowing 10 10 true
 
 execute as @s[scores={survival=2}] run scoreboard players set Time game 4000

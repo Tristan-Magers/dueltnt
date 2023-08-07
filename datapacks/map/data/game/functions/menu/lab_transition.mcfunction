@@ -12,5 +12,5 @@ execute if block 502 11 504 lever[powered=false] if block 502 12 504 lever[power
 
 particle minecraft:explosion ~ ~0.5 ~ 0.5 0.5 0.5 0 15 force
 
-playsound minecraft:entity.zombie.infect master @a ~ ~ ~ 1 0.5
-playsound minecraft:entity.chicken.hurt master @a
+playsound minecraft:entity.zombie.infect master @a[x=500,y=11,z=502,distance=..8] ~ ~ ~ 1 0.5
+playsound minecraft:entity.chicken.hurt master @a[x=500,y=11,z=502,distance=..8]

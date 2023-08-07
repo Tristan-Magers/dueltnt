@@ -6,5 +6,7 @@ playsound minecraft:entity.generic.explode master @a 485.47 11.00 475.05 1 1.2
 playsound minecraft:entity.generic.explode master @a 485.47 11.00 475.05 1 0.5
 clone 482 4 473 488 8 479 482 9 473
 
+tellraw @a[x=485.47,y=13.00,z=475.14,distance=..15] [{"text":"ghkj","color":"#9ABEF5","obfuscated":true},{"text":"The only one allowed to return","color":"#9ABEF5","obfuscated":false},{"text":"tsfd","color":"#9ABEF5","obfuscated":true}]
+
 effect give @a[x=485.47,y=13.00,z=475.14,distance=..15] blindness 2 1 true
 effect give @a[x=485.47,y=13.00,z=475.14,distance=..15] nausea 6 10 true

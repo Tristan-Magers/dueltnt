@@ -9,3 +9,5 @@ execute as @s[nbt={SelectedItem:{id:"minecraft:stone_pickaxe"}}] at @s anchored 
 execute as @s[nbt={SelectedItem:{id:"minecraft:iron_pickaxe"}}] at @s anchored eyes run tag @s add mwnext
 execute as @s[nbt={SelectedItem:{id:"minecraft:golden_pickaxe"}}] at @s anchored eyes run tag @s add mwnext
 execute as @s[nbt={SelectedItem:{id:"minecraft:diamond_pickaxe"}}] at @s anchored eyes run tag @s add mwnext
+
+scoreboard players set @s wand_cooldown 4

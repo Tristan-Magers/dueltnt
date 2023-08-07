@@ -40,6 +40,7 @@ execute as @a[x=496,y=20,z=520,distance=..60] at @s run attribute @p minecraft:g
 execute as @e[name=menu,scores={mastercut=0}] at @s run particle minecraft:falling_water 495.51 26.60 564.52 1.5 1.5 .15 0 2 force
 execute as @e[name=menu,scores={mastercut=10}] at @s run particle minecraft:portal 495 26 564 0 0 0 1 300 force
 execute as @e[name=menu,scores={mastercut=40}] at @s run clone 496 0 565 494 2 564 494 25 564
+execute as @e[name=menu,scores={mastercut=40}] at @s run tellraw @a[x=495.47,y=26.00,z=564.14,distance=..19] [{"text":"What have you done?","color":"#7e7089","obfuscated":true}]
 execute as @e[name=menu,scores={mastercut=40}] at @s run particle minecraft:dragon_breath 495 26 564 .2 .2 0 1 300 force
 execute as @e[name=menu,scores={mastercut=40}] at @s run particle minecraft:end_rod 495 26 564 .2 .2 0 1 300 force
 execute as @e[name=menu,scores={mastercut=40}] at @s run particle minecraft:explosion 495 26 564 .3 .3 .3 1 5 force

@@ -7,7 +7,7 @@
 - Lobby build update (includes updated tournament hall)
 - Reduced debug mode enabled during game (disabled during single player training mode)
 - Timer for start button reduced to 9 seconds
-- Time to for button to reappear after round have ended reduced by 0.5s (7s -> 6.5s)
+- Time for button to reappear after round has ended reduced by 0.5s (7s -> 6.5s)
 - Improved start game effects
 - UI improvements (lives/timer/start game/win game/intro/chat messages)
 - Character colors are now special Hex colors indead of generic
@@ -47,12 +47,14 @@ Assassin
 - Explosive Darts have 0.05s less cooldown between each other (0.3s -> 0.25s)
 - Mass Freeze has 0.5s longer cooldown (6.5s -> 7s)
 - Teleport only causes explosion if you hit the top of a block
+- Teleport explosion increased to two tnt (previously one)
 - Teleport explosion higher, with 0.6s longer fuse (0s -> .6s)
 - Teleport gives higher levels of jump boost and speed
 - Get one less Teleport (1 -> 2)
 - Teleport takes 0.5s longer to reload (10s -> 10.5s)
 - Sneak Attack TNT takes 0.35s longer to explode (0.1s -> 0.45s)
-- Sneak Attack and Dart TNT does not get effected by gravity or knockback
+- Get one less Sneak Attack (3 -> 2)o
+- Sneak Attack and Dart TNT does not get effected by gravity or knockback (blue tnt)
 
 Ghost
 - Visual improvement to costume
@@ -65,7 +67,7 @@ Ghost
 - Mass Levitate can only be used twice without touching the ground (resets if pearl is used) [infinite prevention]
 
 Trapper
-- TNT Trap explodes 0.05s slower (0.05s -> 0.15s)
+- TNT Trap explodes 0.1s slower (0.05s -> 0.15s)
 - Fast Trap explodes 0.2s slower (0.05s -> 0.25s)
 - Short Blast TNT explodes 0.05s slower (0.05s -> 0.1s)
 - Added "Phantom Blocks"
@@ -93,7 +95,7 @@ Wizard
 - Teleport bow up detection increased (2.5 -> 6 blocks from user) [quality of life]
 - Teleport bow down detection increased (16 -> 18 blocks from enemy) [quality of life]
 - Teleport bow now has proper resolution between conflicting down/up arrows (stops previous from moving)
-- "Explode Ghost Creeper" cooldown reduced 2.3s (7s -> 5.5s)
+- "Explode Ghost Creeper" cooldown reduced 2.3s (7s -> 4.7s)
 - "Pig Transform" can now be used anywhere (can still be placed to teleport to location)
 - "Pig Transform" 0.5s faster if used on ground (2s -> 1.5s)
     - Also reloads 0.5s faster if placed
@@ -108,8 +110,8 @@ Wizard
 	- No long has a vertical impact, up or down
         - Strength Ranges (10 [level 1], 5 [level 2], 2.5 [level 3])
 - Vortex takes 1.5s to load at start of round
-- Vortex take 1s longer to reload (15s -> 16s)
-- Vortex has imroved sound and visual
+- Vortex takes 1s longer to reload (15s -> 16s)
+- Vortex has improved sound and visual
 - Added "Throw Creeper"
     - Replaces "Explode Ghost Creeper" when no creeper out
     - Causes 1s cooldown on "Explode Ghost Creeper"
@@ -118,13 +120,14 @@ Wizard
 - Note: Bug fix where creepers didn't die when they touched the void
 
 Mad Scientist
-- Explosive Gel (bow) reploads 0.15s faster (2.8s -> 2.65s)
+- Explosive Gel (bow) reloads 0.15s faster (2.8s -> 2.65s)
 - Explosive Gel (bow) explodes 0.05s faster (0.25s -> 0.2s)
-- Powershield now has 0.1s longer period where it can't be broken at start (0.4s -> 0.6s)
+- Powershield now has 0.2s longer period where it can't be broken at start (0.4s -> 0.6s)
     - Prevents situations where shield seemingly breaks instantly
 - Gets 1 more TNT Egg (3 -> 4)
 - Laser has better detection, especially on non-player mobs
 - Laser kills Chickens, Ghast, and damages Withers in Survival mode
+- Icon appears while within range of portal
 
 Reaper
 - Reaper now has 112% base speed (previously normal)
@@ -135,7 +138,7 @@ Reaper
 - First Creeper Egg reloads 4.5s faster (6.5s -> 2s) [only at the very start of round]
 - Creeper Eggs reload .75s slower (7s -> 7.75s)
 - Creepers thrown only make 1 explosion (previously 2)
-- Creepers placed on ground make 3 explosions (priously 2)
+- Creepers placed on ground make 3 explosions (previously 2)
 	- .15s and .25s after explosion (previously .2s)
 - Slimes reload 2s faster (7s -> 5s)
 - Thrown Slimes grow 2 less sizes (max 7) (keeping all the same timing)
@@ -155,7 +158,7 @@ Echo
 - The last two uses of blast wand reload (0.05s) faster
     - (0.1s, 0.2s, 0.4s, 0.65s, 0.95s, 1.2s*) [previously (0.1s, 0.2s, 0.4s, 0.7s, 1.0s, 1.2s*)]
 - Blast Wand limited to 6 uses in air (previously 4) [quality of life and infinite prevention]
-- Note: bug fix allows for Sky Wand and Blast Want to activate on "void"
+- Note: bug fix allows for Sky Wand and Blast Wand to activate on "void"
 - "Boom Shard" renamed "Unstable Orb" (Bug)
 - Reload after Blast Wand's Unstable Orb is 0.25s longer (2.5s -> 2.75s)
 - Reload after Boom Wand's Unstable Orb is 0.25s longer (2.5s -> 2.75s)
@@ -180,6 +183,7 @@ Overlord
     - drains wand and gives 1 matter for every 2 durability, then goes into 2.5s cooldown (0.5s longer than normal) [+4 matter at end of use]
     - 10s cooldown (indicated with sounds and text)
     - The more degraded the wand, the shorter the cooldown on the wand and gather reload. (MAX -0.25s wand, -4s gather)
+- Master Wand has 0.15s cooldown (no gameplay difference) [prevents spam clicking exploit]
 - Wand upgrades 0.8-1.2 less with each upgrade but starts 0.8 longer
     - (7,9,11,12.6,14.2 -> 7.8,9.0,10.2,11.4,12.6)
 - Wand Upgrade permanently replaced with matter storm from start
@@ -198,12 +202,12 @@ Overlord
 - Matter Slide costs 3 less (17 -> 14)
 - Matter Slide has 4.5s cooldown on use
 - Boom Halo costs 1 more (13 -> 14)
-- Boom Halo explodes .3s faster (.65s -> 35s)
+- Boom Halo explodes .3s faster (.65s -> .35s)
 - Boom Halo has 0.4 smaller radius (2.6 -> 2.2)
 - Boom Halo levitation adjusted (1s -> .65s) (level 3 -> level 16) [Note: quality of life]
 - Boom Halo TNT starts with 0.2 downward motion [Note: quality of life]
 - Boom Halo has 0.5s cooldown on uses
-- Matter Slide and Matter Storm has swapped places
+- Matter Slide and Matter Storm have swapped places
 - Icon improvements for unavailable items
 - General sound improvements for items
 - Matter Bomb and Storm projectiles no longer collide with arrows and other projectiles
@@ -274,7 +278,7 @@ Shard
 [Bug Fixes]
 - Fixed 1.20 issue where menu signs stopped working
 - Fixed a wide spanning amount of issues where some projectiles/items did not get reset between rounds
-- Fixed issue with placable surfaces being buggy and inconsistent across items (now all intended sufaces are placeable)
+- Fixed issue with placeable surfaces being buggy and inconsistent across items (now all intended sufaces are placeable)
 - Fixed 1.18 issue where projectiles that would collide with void no longer collided with void
 - Fixed Wizard shift acting extremely inconsistent
 - Ground Spell would not work on the last two blocks of the stage
@@ -287,7 +291,7 @@ Shard
 - Fixed bug when players leave world and rejoin, menu may not reset
 - Fixed sneak attack teleporting you to lobby players (lol)
 - Fixed spectators interacting with a variety of moves
-- Switching from Gardner to Overlord/Shard would cause arrows to collide with players and you still
+- Switching from Gardener to Overlord/Shard would cause arrows to collide with players and you still
 - Dummies no longer make sound
 - Arena would not properly reset
 - Arena was uneven (end of an era)
@@ -302,11 +306,11 @@ Shard
 - Spectating trapper would sometimes bug its arrows
 - Name visible for "Carrot on a stick"
 - Assassin Magic Star count and timing sometimes was wrong at start of round
-- Viewing tutorial after selecting a team buged team mode
+- Viewing tutorial after selecting a team bugged team mode
 - Blue Team wrong color in points scoreboard
 - Team lives didn't disappear after all members of a team died
-- Winng survival in teams mode would give points to players, not teams
-- Winng survival would sometimes give the "Game Over" text as well
+- Winning survival in teams mode would give points to players, not teams
+- Winning survival would sometimes give the "Game Over" text as well
 - Survival mode mobs could spawn on Tremor walls
 - Phantom mode powerups could spawn on Tremor walls
 - Lobby items could be duped
@@ -321,3 +325,5 @@ Shard
 - Golden apple was visible as an item during the tutorial
 - Bug where sound would be cut off while playing game
 - "Click for future events" sign broken (now links to discord)
+- Throwing Magic Star on respawn platform would prevent it from despawning
+- Some items with firework sound effects could be heard from lobby

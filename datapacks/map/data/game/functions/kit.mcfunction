@@ -12,6 +12,9 @@ execute as @s[scores={kit=8}] at @s run scoreboard players set @p class 8
 execute as @s[scores={kit=9}] at @s run scoreboard players set @p class 9
 execute as @s[scores={kit=10}] at @s run scoreboard players set @p class 10
 
+execute as @s[scores={kit=0},x=484,y=16,z=504,distance=..9] at @s run advancement grant @s only classes:class0
+execute as @s[scores={kit=1},x=484,y=16,z=504,distance=..9] at @s run advancement grant @s only classes:class1
+execute as @s[scores={kit=2},x=484,y=16,z=504,distance=..9] at @s run advancement grant @s only classes:class2
 execute as @s[scores={kit=3},x=482,y=11,z=487,distance=..7] at @s run advancement grant @s only classes:class3
 execute as @s[scores={kit=4},x=479,y=10,z=505,distance=..7] at @s run advancement grant @s only classes:class4
 execute as @s[scores={kit=5},x=500,y=11,z=500,distance=..7] at @s run advancement grant @s only classes:class5
