@@ -16,7 +16,7 @@ function game:char/overlord/masterwanditems
 
 tp @s @s
 
-playsound minecraft:entity.firework_rocket.blast master @a ~ ~ ~ 1 0
+playsound minecraft:entity.firework_rocket.blast master @a[distance=..50] ~ ~ ~ 1 0
 playsound minecraft:block.chest.open master @a ~ ~ ~ 1 2
 playsound minecraft:block.chest.open master @a ~ ~ ~ 1 0
 playsound minecraft:entity.blaze.shoot master @a ~ ~ ~ 1 0

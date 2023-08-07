@@ -1,4 +1,10 @@
-{
-	"function" : "minecraft:set_nbt",
-	"tag" : "{CustomModelData:2}"
-}
+[
+	{
+		"function" : "minecraft:set_nbt",
+		"tag" : "{CustomModelData:2}"
+	},
+	{
+		"function" : "minecraft:set_name",
+		"name" : [{"text":"Portal Nearby","italic":false,"color":"white"}]
+	}
+]

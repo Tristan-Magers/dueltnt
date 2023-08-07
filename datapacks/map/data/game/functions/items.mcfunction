@@ -131,7 +131,8 @@ execute as @a[gamemode=adventure,scores={potion=-200..}] at @s run function game
 #master_wand
 tag @a[gamemode=adventure,tag=!mwnext] remove mwnext2
 tag @a remove mwnext
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={click=1..,class=9}] at @s run function game:char/overlord/wandtrigger
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={click=1..,class=9,wand_cooldown=..0}] at @s run function game:char/overlord/wandtrigger
+scoreboard players remove @a[scores={wand_cooldown=1..}] wand_cooldown 1
 tag @a[gamemode=adventure,tag=mwnext,tag=!mwnext2] add mwnext2
 
 #master boom
@@ -178,6 +179,10 @@ item modify entity @a weapon.offhand game:model_0
 
 item modify entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={gather_cooldown=..0,class=9}] weapon.offhand game:model_1
 item modify entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={gather_cooldown=1..,class=9}] weapon.offhand game:model_0
+
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=5}] at @s run function game:char/mads/check_portal
+item modify entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=5},tag=near_portal] weapon.offhand game:model_2
+item modify entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=5},tag=!near_portal] weapon.offhand game:model_0
 
 #matter refill
 scoreboard players add @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=9}] matfill 1

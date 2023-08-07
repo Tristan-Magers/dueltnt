@@ -2,8 +2,8 @@ execute as @s at @s run summon armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Silent:1,
 execute as @s at @s run tp @e[distance=..0.1,limit=1,name=blast] @p
 execute as @s at @s run tp @e[distance=..0.1,limit=1,name=blast] ~ ~1.6 ~
 
-execute as @s at @s run playsound minecraft:entity.firework_rocket.blast_far master @a ~ ~ ~ .7 1 1
-execute as @s at @s run playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ .2 .9
+execute as @s at @s run playsound minecraft:entity.firework_rocket.blast_far master @a[distance=..50] ~ ~ ~ .7 1 1
+execute as @s at @s run playsound minecraft:entity.firework_rocket.launch master @a[distance=..50] ~ ~ ~ .2 .9
 execute as @s at @s run playsound minecraft:entity.ghast.shoot master @a ~ ~ ~ 1 2
 
 scoreboard players add @s bwandlimit 1

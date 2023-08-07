@@ -6,7 +6,7 @@ tp @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:white_dye"}}] @s
 effect give @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:white_dye"}}] minecraft:levitation 1 50 true
 effect give @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:white_dye"}}] minecraft:speed 2 3 true
 
-execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:white_dye"}}] at @s run playsound minecraft:entity.firework_rocket.twinkle_far master @a ~ ~ ~ 1 2
+execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:white_dye"}}] at @s run playsound minecraft:entity.firework_rocket.twinkle_far master @a[distance=..50] ~ ~ ~ 1 2
 execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:white_dye"}}] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 1 2
 
 execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:white_dye"}}] at @s run summon tnt ~ ~ ~ {Tags:["frost"],Fuse:1}

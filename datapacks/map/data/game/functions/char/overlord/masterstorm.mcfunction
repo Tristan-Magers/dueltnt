@@ -13,6 +13,6 @@ playsound minecraft:block.gravel.place master @a ~ ~ ~ 1 1
 playsound minecraft:entity.item.pickup master @a ~ ~ ~ 1 0
 playsound minecraft:entity.item.pickup master @a ~ ~ ~ 1 1
 #playsound minecraft:block.conduit.attack.target master @a ~ ~ ~ 1 2
-playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ 1 1.8
+playsound minecraft:entity.firework_rocket.launch master @a[distance=..50] ~ ~ ~ 1 1.8
 
 clear @s cooked_salmon

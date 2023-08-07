@@ -12,9 +12,9 @@ execute as @s[scores={laserDummy=30}] at @s run execute as @a[distance=..80] at 
 execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:block.beacon.deactivate master @a ~ ~ ~ 1 2
 execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:block.gravel.break master @a ~ ~ ~ 1 2
 execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:block.grass.break master @a ~ ~ ~ 1 0
-execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:entity.firework_rocket.twinkle master @a ~ ~ ~ 1 2
-execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:entity.firework_rocket.blast master @a ~ ~ ~ 1 0
-execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:entity.firework_rocket.launch master @a ~ ~ ~ 1 1.2
+execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:entity.firework_rocket.twinkle master @a[distance=..50] ~ ~ ~ 1 2
+execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:entity.firework_rocket.blast master @a[distance=..50] ~ ~ ~ 1 0
+execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:entity.firework_rocket.launch master @a[distance=..50] ~ ~ ~ 1 1.2
 
 execute as @s[scores={laserDummy=30}] at @s run summon armor_stand ~ ~ ~ {Tags:["wbeam"]}
 execute as @s[scores={laserDummy=30}] at @s run tp @e[tag=wbeam] @s
