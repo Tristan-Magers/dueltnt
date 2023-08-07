@@ -1,4 +1,4 @@
-function game:menu/setdisable
+execute if score .menu_vis .data matches 1 run function game:menu/setdisable
 
 #
 gamemode adventure @a[scores={ingame=1}]

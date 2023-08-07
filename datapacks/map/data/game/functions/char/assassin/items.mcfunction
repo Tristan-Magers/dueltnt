@@ -35,10 +35,11 @@ scoreboard players add @s[scores={starT=1..}] starT 1
 scoreboard players remove @s[scores={star=1..}] star 1
 
 #sneak attack
-execute as @s[scores={squidegg=1..,squidegguse=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
-execute as @s[scores={squidegg=1..,squidegguse=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
-execute as @s[scores={squidegg=1..,squidegguse=3}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
-execute as @s[scores={squidegg=1..,squidegguse=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
+execute as @s[scores={squidegg=1..,squidegguse=1..}] at @s run function game:player/class_team
+execute as @s[scores={squidegg=1..,squidegguse=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
+execute as @s[scores={squidegg=1..,squidegguse=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
+execute as @s[scores={squidegg=1..,squidegguse=3}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
+execute as @s[scores={squidegg=1..,squidegguse=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
 
 scoreboard players remove @s[scores={sneakdisable=1..}] sneakdisable 1
 

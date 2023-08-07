@@ -8,7 +8,7 @@ execute as @s[type=arrow,scores={isBall=1}] at @s run playsound minecraft:entity
 execute as @s[type=arrow,scores={isBall=1}] at @s run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ .7 2
 
 #wizard powderize bow
-execute as @s[type=arrow,scores={isBall=2}] at @s run summon tnt ~ ~.5 ~ {Fuse:28}
+execute as @s[type=arrow,scores={isBall=2}] at @s run summon tnt ~ ~.5 ~ {Fuse:20}
 execute as @s[type=arrow,scores={isBall=2}] at @s unless block ~ ~ ~ air unless block ~ ~ ~ barrier run setblock ~ ~ ~ minecraft:yellow_concrete_powder
 execute as @s[type=arrow,scores={isBall=2}] at @s unless block ~1 ~ ~ air unless block ~1 ~ ~ barrier run setblock ~1 ~ ~ minecraft:yellow_concrete_powder
 execute as @s[type=arrow,scores={isBall=2}] at @s unless block ~ ~1 ~ air unless block ~ ~1 ~ barrier run setblock ~ ~1 ~ minecraft:yellow_concrete_powder
@@ -106,8 +106,7 @@ execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=!crit,x=620,z=6
 execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=crit,x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s run particle minecraft:poof ~ ~ ~ 1 1 1 0.2 15 force
 
 #scientist bow
-execute unless entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={SciBow=1..}] at @s run summon tnt ~ ~ ~ {Fuse:6,Motion:[0.0,0.23,0.0]}
-execute if entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={SciBow=1..}] at @s run summon tnt ~ ~ ~ {Fuse:4,Motion:[0.0,0.23,0.0]}
+execute unless entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={SciBow=1..}] at @s run summon tnt ~ ~ ~ {Fuse:5,Motion:[0.0,0.23,0.0]}
 execute as @s[type=arrow,scores={SciBow=1..}] at @s run playsound minecraft:entity.tnt.primed master @a ~ ~ ~ .4 1.4
 
 #necro bow

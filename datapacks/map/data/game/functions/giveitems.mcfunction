@@ -145,8 +145,8 @@ item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.5 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Crouch for retro trapper simulator\"}"}}
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.6 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Gain extra life every 50 seconds\"}"}}
 team join gardener @a[x=620,y=20,z=620,distance=..100,scores={class=8}]
-team leave @a[x=620,y=20,z=620,distance=..100,scores={class=9..}]
-team leave @a[x=620,y=20,z=620,distance=..100,scores={class=..7}]
+#team leave @a[x=620,y=20,z=620,distance=..100,scores={class=9..}]
+#team leave @a[x=620,y=20,z=620,distance=..100,scores={class=..7}]
 
 give @a[scores={class=10},x=620,y=20,z=620,distance=..100] bow{Damage:260,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§9Anti-Ice§r : Throw to switch\"}"}}
 item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.6 with arrow 3
@@ -165,6 +165,9 @@ execute as @a[scores={class=10},x=620,y=20,z=620,distance=..100] at @s run attri
 #effect give @a[scores={class=10},x=620,y=20,z=620,distance=..100] speed 300 0 true
 
 #item replace entity @a[scores={class=2},x=620,y=20,z=620,distance=..100] hotbar.5 with minecraft:coal{display:{Name:"{\"italic\":false,\"text\":\"§9Air Missile§r : Right-click\"}"}}
+
+#
+execute as @a[gamemode=adventure,x=620,y=20,z=620,distance=..100] at @s run function game:ui/name_markers
 
 #
 item modify entity @a weapon.offhand game:model_0
@@ -252,7 +255,10 @@ scoreboard players set @a master_bomb_cooldown -1
 scoreboard players set @a dive_kick -1
 
 xp add @a -1000 levels
-xp add @a[scores={class=9}] 2 levels
+#xp add @a[scores={class=9}] 2 levels
+
+scoreboard players set @a shift_cool -100
+scoreboard players set @a[scores={class=9}] shift_cool 2
 
 scoreboard players set @a chickenbow -100
 
@@ -279,6 +285,8 @@ scoreboard players set @a platUse 2
 
 scoreboard players set @a grave 0
 
+scoreboard players set @a mass_lev_air_use 0
+
 scoreboard players set @a masterstorm -1
 
 scoreboard players set @a slide_cooldown -1
@@ -300,6 +308,9 @@ scoreboard players set @a x_ender_mot 0
 scoreboard players set @a y_ender_mot 0
 scoreboard players set @a z_ender_mot 0
 
+scoreboard players remove @a ui_action_text 0
+scoreboard players remove @a ui_action_time 0
+
 tag @a remove boomshard
 
 tag @a remove gather
@@ -309,3 +320,6 @@ tag @a remove checkairnade
 tag @a remove plague
 
 tag @a remove grave
+
+#
+scoreboard players set .ui_varify .data 1

@@ -28,6 +28,7 @@ scoreboard players set @a[scores={leave=1..}] ingame 0
 gamemode adventure @a[scores={leave=1..}]
 tp @a[scores={leave=1..}] 500 20 500 0 0
 tag @a[scores={leave=1..}] remove countdown
+execute as @a[scores={leave=1..}] run function game:ui/name_markers
 scoreboard players reset @a[scores={leave=1..}] leave
 
 #team join main
@@ -167,7 +168,8 @@ execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run e
 execute if entity @e[scores={mode=1}] run execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run execute as @a[scores={GoPortalP=1..},distance=..16] at @s run summon tnt ~ ~ ~ {Fuse:1}
 execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run teleport @a[scores={GoPortalP=1..},distance=..16] ~ ~ ~
 #execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run execute as @a[scores={GoPortalP=1..},distance=..16] at @s run tp @s @s
-execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run xp add @a[scores={GoPortalP=1..},distance=..16] 20 levels
+execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run scoreboard players set @a[scores={GoPortalP=1..},distance=..16] shift_cool 20
+#execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run xp add @a[scores={GoPortalP=1..},distance=..16] 20 levels
 execute as @e[name=Portal,type=armor_stand] at @s positioned ~ ~1 ~ run particle sneeze ~ ~ ~ .1 0 .1 .03 2 force
 execute as @e[name=Portal,type=armor_stand] at @s positioned ~ ~1 ~ run particle minecraft:item_slime ~ ~ ~ .1 0 .1 .03 2 force
 execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run scoreboard players set @a[scores={GoPortalP=1..},distance=..16] timer 1
@@ -175,7 +177,8 @@ scoreboard players set @a[scores={GoPortalP=1..}] haveportal 0
 execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run scoreboard players set @a[scores={GoPortalP=1..},distance=..16] haveportal 1
 execute as @a[scores={GoPortalP=1..}] at @s run kill @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1,distance=..16]
 scoreboard players operation @e[name=Portal] tntID += @p[scores={GoPortalP=1..}] tntID
-title @a[scores={GoPortalP=1..,haveportal=..0}] actionbar {"text":"No portal nearby","color":"green"}
+scoreboard players set @a[scores={GoPortalP=1..,haveportal=..0}] ui_action_text 2
+scoreboard players set @a[scores={GoPortalP=1..,haveportal=..0}] ui_action_time 20
 
 scoreboard players add @e[name=Portal,type=armor_stand] PLife 1
 execute as @e[name=Portal,type=armor_stand,scores={PLife=130..}] at @s positioned ~ ~1 ~ run particle minecraft:totem_of_undying ~ ~ ~ .3 .3 .3 .03 20 force
@@ -198,11 +201,6 @@ execute as @a[scores={Y=..0}] at @s run function game:player/respawn
 scoreboard players add @a[scores={rejoin=1..}] timer 0
 effect give @a[scores={rejoin=1..}] resistance 1000000 255 true
 effect give @a[scores={rejoin=1..}] saturation 1000000 255 true
-execute as @a[scores={Y=..0,teamed=..0},x=620,y=20,z=620,distance=..100] at @s run tellraw @a [{"selector":"@p[scores={Y=..0}]"},{"text":" died!","color":"green"}]
-
-execute as @a[scores={Y=..0,teamed=1..},tag=red,x=620,y=20,z=620,distance=..100] at @s run tellraw @a [{"text":"[","color":"white"},{"text":"RED","color":"red"},{"text":"] ","color":"white"},{"selector":"@p[scores={Y=..0}]"},{"text":" died!","color":"green"}]
-execute as @a[scores={Y=..0,teamed=1..},tag=blue,x=620,y=20,z=620,distance=..100] at @s run tellraw @a [{"text":"[","color":"white"},{"text":"BLUE","color":"aqua"},{"text":"] ","color":"white"},{"selector":"@p[scores={Y=..0}]"},{"text":" died!","color":"green"}]
-execute as @a[scores={Y=..0,teamed=1..},tag=green,x=620,y=20,z=620,distance=..100] at @s run tellraw @a [{"text":"[","color":"white"},{"text":"GREEN","color":"green"},{"text":"] ","color":"white"},{"selector":"@p[scores={Y=..0}]"},{"text":" died!","color":"green"}]
 
 tp @a[scores={rejoin=1..,inarena=..0}] 500 20.5 500 0 0
 scoreboard players add @a[scores={rejoin=1..}] class 0
@@ -237,6 +235,9 @@ execute if entity @e[scores={mode=3}] run function game:mode/phantom/phantommode
 
 execute if entity @e[scores={mode=4}] run function game:mode/survival/survivalmode
 
+#
+function game:ui/run_display
+
 #Training Mode
 scoreboard players enable @a dummytrigger
 execute if entity @e[tag=Map,scores={mode=0..1}] as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure,scores={dummytrigger=1,playercount=1}] at @s run function game:summondummy
@@ -266,27 +267,43 @@ execute as @a unless entity @s[x=600,y=60,z=600,distance=3..100,gamemode=adventu
 #music
 scoreboard players add @a[x=487,y=15,z=499,distance=..16] LobbyMusic 1
 stopsound @a[scores={LobbyMusic=2}]
-playsound minecraft:music_disc.stal record @a[scores={LobbyMusic=2}] 487 16 499 .8 1 0
+playsound minecraft:music_disc.stal record @a[scores={LobbyMusic=4}] 487 16 499 .8 1 0
 scoreboard players add @a[scores={LobbyMusic=1..},x=487,y=15,z=499,distance=16..2000] LobbyMusic 1
 scoreboard players set @a[scores={LobbyMusic=1379..}] LobbyMusic 0
 scoreboard players set @a[scores={LobbyMusic=2}] LobbyMusic2 0
 scoreboard players set @a[scores={LobbyMusic=2}] LobbyMusic3 0
+scoreboard players set @a[scores={LobbyMusic=2}] LobbyMusic4 0
+scoreboard players add @a[scores={LobbyMusic=2}] LobbyMusic 1
 
 scoreboard players add @a[x=486,y=13,z=472,distance=..10] LobbyMusic2 1
-playsound minecraft:music_disc.cat record @a[scores={LobbyMusic2=10}] 486 12 472 .6 1 0
+playsound minecraft:music_disc.cat record @a[scores={LobbyMusic2=11}] 486 12 472 .6 1 0
 scoreboard players add @a[scores={LobbyMusic2=10..},x=486,y=13,z=472,distance=10..2000] LobbyMusic2 1
 scoreboard players set @a[scores={LobbyMusic2=10}] LobbyMusic 0
 scoreboard players set @a[scores={LobbyMusic2=10}] LobbyMusic3 0
+scoreboard players set @a[scores={LobbyMusic2=10}] LobbyMusic4 0
 scoreboard players set @a[scores={LobbyMusic2=560..}] LobbyMusic2 0
 stopsound @a[scores={LobbyMusic2=9}]
+scoreboard players add @a[scores={LobbyMusic2=9}] LobbyMusic2 1
 
 scoreboard players add @a[x=521,y=21,z=505,distance=..15] LobbyMusic3 1
-playsound minecraft:music_disc.far record @a[scores={LobbyMusic3=40}] 521 16 505 1 1 0
+playsound minecraft:music_disc.far record @a[scores={LobbyMusic3=42}] 521 16 505 1 1 0
 scoreboard players add @a[scores={LobbyMusic3=40..},x=521,y=19,z=505,distance=15..2000] LobbyMusic3 1
 scoreboard players set @a[scores={LobbyMusic3=40}] LobbyMusic 0
 scoreboard players set @a[scores={LobbyMusic3=40}] LobbyMusic2 0
+scoreboard players set @a[scores={LobbyMusic3=40}] LobbyMusic4 0
 scoreboard players set @a[scores={LobbyMusic3=5000..}] LobbyMusic3 0
 stopsound @a[scores={LobbyMusic3=39}]
+scoreboard players add @a[scores={LobbyMusic3=39}] LobbyMusic3 1
+
+scoreboard players add @a[x=500,y=19,z=560,distance=..30] LobbyMusic4 1
+playsound minecraft:music_disc.chirp record @a[scores={LobbyMusic4=42}] 500 16 560 1 1 1
+scoreboard players add @a[scores={LobbyMusic4=43..},x=500,y=19,z=560,distance=30..2000] LobbyMusic4 1
+scoreboard players set @a[scores={LobbyMusic4=40}] LobbyMusic 0
+scoreboard players set @a[scores={LobbyMusic4=40}] LobbyMusic2 0
+scoreboard players set @a[scores={LobbyMusic4=40}] LobbyMusic3 0
+scoreboard players set @a[scores={LobbyMusic4=540..}] LobbyMusic4 0
+stopsound @a[scores={LobbyMusic4=39}]
+scoreboard players add @a[scores={LobbyMusic4=39}] LobbyMusic4 1
 
 # eyes in cave
 effect give @a[x=509.5,y=17,z=528.5,distance=..4.5] slowness 1 0 true
@@ -374,6 +391,8 @@ clear @a[scores={NewPlay=2..4}] red_concrete_powder
 clear @a[scores={NewPlay=2..4}] green_concrete_powder
 gamemode adventure @a[scores={NewPlay=2..8}]
 
+execute as @a[scores={NewPlay=6}] run function game:ui/create_marker
+
 #Tutorial
 effect give @a[x=14,y=4,z=1,distance=..2] blindness 2 99 true
 #scoreboard players add @a[x=14,y=4,z=1,distance=..2] tutorial 1
@@ -384,18 +403,18 @@ scoreboard players set @a[x=14,y=4,z=1,distance=..2] Invis 3
 #Timer
 scoreboard players operation @e[name=Map,type=armor_stand] Time = Time game
 execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run scoreboard players remove Time game 1
-execute if entity @e[name=Map,type=armor_stand,scores={Time=600}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"30 seconds","color":"dark_red","bold":"false"}]
+execute if entity @e[name=Map,type=armor_stand,scores={Time=600}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"30 seconds","color":"dark_red","bold":"false","font":"fancy"}]
 execute if entity @e[name=Map,type=armor_stand,scores={Time=1}] run gamemode spectator @a[x=620,y=20,z=620,distance=..100]
 
 scoreboard players operation TimeReal game = Time game
 scoreboard players operation TimeReal game /= 20 game
-execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run bossbar set minecraft:time name [{"text":"TIME ","bold":"false","color":"#b8ab9d"},{"score":{"name":"TimeReal","objective":"game"},"color":"#cac3bf","bold":true}]
+execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run bossbar set minecraft:time name [{"text":"TIME ","bold":"false","color":"#b8ab9d","font":"fancy"},{"score":{"name":"TimeReal","objective":"game"},"color":"#cac3bf","bold":false,"font":"fancy"}]
 execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run bossbar set minecraft:time visible true
 #execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run scoreboard players operation Time l = TimeReal game
 
 execute if entity @e[name=Map,type=armor_stand,scores={Time=580}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"","color":"dark_red","bold":"false"}]
 
-execute if entity @e[name=Map,type=armor_stand,scores={Time=15}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"TIMES OUT","color":"dark_red","bold":"false"}]
+execute if entity @e[name=Map,type=armor_stand,scores={Time=15}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"TIMES OUT","color":"dark_red","bold":"false","font":"fancy"}]
 execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure,scores={teamed=..0}] at @s run scoreboard players operation @s l = @s Lives
 
 tag @a remove time
@@ -445,3 +464,10 @@ tag @a[tag=divekick_end] add divekick_end2
 
 #
 tag @e remove pull_vortex_old
+
+#
+team join Main @a[team=!Main,gamemode=spectator]
+team join Main @a[team=!Main,x=500,y=60,z=500,distance=..80]
+team join Main @a[team=!Main,scores={class=9..}]
+team join Main @a[team=!Main,scores={class=..7}]
+team join gardener @a[team=!gardener,scores={class=8},gamemode=adventure,x=620,y=20,z=620,distance=..100]

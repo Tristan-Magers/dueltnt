@@ -8,6 +8,7 @@ xp set @s 0 levels
 
 scoreboard players set @s Sreload 0
 scoreboard players set @s endercount 0
+scoreboard players set @s shift_cool 0
 scoreboard players set @s potion 0
 scoreboard players set @s snowReset 0
 scoreboard players set @s XPReset 0
@@ -48,3 +49,5 @@ effect clear @s minecraft:jump_boost
 effect clear @s minecraft:speed
 
 tag @s add plague
+
+function game:ui/name_markers

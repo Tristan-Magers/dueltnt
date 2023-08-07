@@ -7,8 +7,10 @@
 - Lobby build update (includes updated tournament hall)
 - Reduced debug mode enabled during game (disabled during single player training mode)
 - Timer for start button reduced to 9 seconds
+- Time to for button to reappear after round have ended reduced by 0.5s (7s -> 6.5s)
 - Improved start game effects
-- UI improvements (timer/start game/win game/intro)
+- UI improvements (lives/timer/start game/win game/intro/chat messages)
+- Character colors are now special Hex colors indead of generic
 
 [Character Changes]
 
@@ -22,6 +24,7 @@ Grab (Multi-class)
 - Grab no longer can be shifted out of
 - Grab breaks after being on a player for 3 seconds
 - Grab breaks after being left out for 6s
+- Grab makes sound on player contact
 
 Soldier
 - Anvil causes you to fall 71% less (7.2 blocks -> 2.07 blocks)
@@ -52,12 +55,14 @@ Assassin
 - Sneak Attack and Dart TNT does not get effected by gravity or knockback
 
 Ghost
-- Shift (Levitation) takes 0.35s longer to reload (3.65s -> 4s)
+- Visual improvement to costume
+- Shift (Levitation) takes 0.1s longer to reload (3.65s -> 3.75s)
 - Gets 3 Teleports (ender pearls) instead of reloading them
 - Enderpearls give 2s of invisibility on use
 - Second TNT on Smoke Bomb has 0.05s longer fuse (0.55s -> 0.6s)
 - Air Missile makes sound when breaking blocks
 - Primed for Dark has 1s less max blindness (5s -> 4s) [Note: 3s max full blindness]
+- Mass Levitate can only be used twice without touching the ground (resets if pearl is used) [infinite prevention]
 
 Trapper
 - TNT Trap explodes 0.05s slower (0.05s -> 0.15s)
@@ -80,9 +85,11 @@ Trapper
 - Improved look of Fast Trap/Short Blast
 
 Wizard
+- Visual improvement to costume
 - Fireball spawns 0.25 blocks lower and 0.4 blocks in front of you [quality of life]
 - Fireball speed increased (bigger increase at minimum than at max) (about 12% increase at min and 2% at max)
 - Fireball detection is better
+- Powerize TNT explodes .4s faster (1.35s -> 0.95s)
 - Teleport bow up detection increased (2.5 -> 6 blocks from user) [quality of life]
 - Teleport bow down detection increased (16 -> 18 blocks from enemy) [quality of life]
 - Teleport bow now has proper resolution between conflicting down/up arrows (stops previous from moving)
@@ -112,8 +119,9 @@ Wizard
 
 Mad Scientist
 - Explosive Gel (bow) reploads 0.15s faster (2.8s -> 2.65s)
+- Explosive Gel (bow) explodes 0.05s faster (0.25s -> 0.2s)
 - Powershield now has 0.1s longer period where it can't be broken at start (0.4s -> 0.6s)
-    - Prevents situations where shield seamingly breaks instantly
+    - Prevents situations where shield seemingly breaks instantly
 - Gets 1 more TNT Egg (3 -> 4)
 - Laser has better detection, especially on non-player mobs
 - Laser kills Chickens, Ghast, and damages Withers in Survival mode
@@ -225,11 +233,12 @@ Shard
 - Ice Suck takes 2.75s longer to reload (9.25s -> 12s)
 - Ice Suck reload announced to spectators
 - Ice Suck platform lasts 2.5s shorter (5s base -> 2.5s base) [note: +1 tick per ice sucked]
-- Shift cooldown 1.5s longer (3s -> 4.75s)
+- Shift cooldown 1.4s longer (3s -> 4.4s)
 - Shift tnt fuse 0.05s longer (.1s -> .15s) [tnt no longer has gravity]
 - Fload has 0.8s cooldown between uses [quality of life]
 - Ice placing moves no longer replace carpets,ladders,snow,and plants (breaks them)
 - "Cold Bomb" renamed "Frosty Poppy"
+- Frosty Poppy explodes after 1.2s if it lands near an emery (4 blocks)
 
 [Map]
 - Grass and flowers reduced on "Flower Temple" (to improve gameplay)
@@ -265,9 +274,9 @@ Shard
 [Bug Fixes]
 - Fixed 1.20 issue where menu signs stopped working
 - Fixed a wide spanning amount of issues where some projectiles/items did not get reset between rounds
-- Fixed issue with placable surfaces being buggy and inconsistant accross items (now all intended sufaces are placeable)
+- Fixed issue with placable surfaces being buggy and inconsistent across items (now all intended sufaces are placeable)
 - Fixed 1.18 issue where projectiles that would collide with void no longer collided with void
-- Fixed Wizard shift acting extremely inconsistant
+- Fixed Wizard shift acting extremely inconsistent
 - Ground Spell would not work on the last two blocks of the stage
 - The achievement for Shard displays the text "Find Overlord" instead of "Find Shard"
 - Overlord shift amount would announce way too many times to spectators
@@ -304,5 +313,11 @@ Shard
 - Overlord could get chicken bow in Phantom Mode despite not having a bow
 - "Whoo" firework would get stuck if shard totem wasn't activated
 - RANDOM class sign incorrectly light gray
-- Achiement roots would display when you joined the world for the first time
-- New items appeared as craftable recipes
+- Achievement roots would display when you joined the world for the first time
+- New minecraft items appeared as craftable recipes
+- Old recipe/achievement disabling system replaced with newer cleaner one (world loads faster)
+- In rare cases, menu could be disabled while game was not active
+- Gardener grave traps/mines/and overlord wand could be duped
+- Golden apple was visible as an item during the tutorial
+- Bug where sound would be cut off while playing game
+- "Click for future events" sign broken (now links to discord)

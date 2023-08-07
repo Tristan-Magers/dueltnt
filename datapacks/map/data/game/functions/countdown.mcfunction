@@ -16,19 +16,21 @@ execute as @s[scores={countdown=75..}] at @s run fill 599 59 599 601 10 601 barr
 execute as @s[scores={countdown=75..}] at @s run fill 599 59 599 601 63 601 barrier hollow
 execute as @s[scores={countdown=75..}] at @s run tp @a[x=600,y=60,z=600,distance=..3,gamemode=adventure] 600 61 600 -45 80
 
+#
+execute as @s[scores={countdown=75}] at @s run function game:game/say_map
+
 #say class names solo
-execute as @s[scores={countdown=74}] at @s run execute as @a[x=600,y=60,z=600,distance=..39,scores={teamed=..0,ingame=1..}] at @s run function game:player/sayclass
+execute as @s[scores={countdown=65}] at @s run execute as @a[x=600,y=60,z=600,distance=..39,scores={teamed=..0,ingame=1..}] at @s run function game:player/sayclass
 
 #say class names teams
 #execute as @s[scores={countdown=72}] at @s run execute as @s[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=red,scores={teamed=1..}] at @s run tellraw @a [{"text":"TEAM RED","color":"red"},{"text":": ","color":"white"}]
-execute as @s[scores={countdown=74}] at @s run execute as @a[x=600,y=60,z=600,distance=..39,scores={teamed=1..,ingame=1..},tag=red] at @s run function game:player/sayclass
+execute as @s[scores={countdown=65}] at @s run execute as @a[x=600,y=60,z=600,distance=..39,scores={teamed=1..,ingame=1..},tag=red] at @s run function game:player/sayclass
 
 #execute as @s[scores={countdown=72}] at @s run execute as @s[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=blue,scores={teamed=1..}] at @s run tellraw @a [{"text":"TEAM BLUE","color":"aqua"},{"text":": ","color":"white"}]
-execute as @s[scores={countdown=74}] at @s run execute as @a[x=600,y=60,z=600,distance=..39,scores={teamed=1..,ingame=1..},tag=blue] at @s run function game:player/sayclass
-
+execute as @s[scores={countdown=65}] at @s run execute as @a[x=600,y=60,z=600,distance=..39,scores={teamed=1..,ingame=1..},tag=blue] at @s run function game:player/sayclass
 
 #execute as @s[scores={countdown=72}] at @s run execute as @s[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] at @s run tellraw @a [{"text":"TEAM GREEN","color":"green"},{"text":": ","color":"white"}]
-execute as @s[scores={countdown=74}] at @s run execute as @a[x=600,y=60,z=600,distance=..39,scores={teamed=1..,ingame=1..},tag=green] at @s run function game:player/sayclass
+execute as @s[scores={countdown=65}] at @s run execute as @a[x=600,y=60,z=600,distance=..39,scores={teamed=1..,ingame=1..},tag=green] at @s run function game:player/sayclass
 
 execute as @s[scores={countdown=75}] at @s run title @a[x=620,y=20,z=620,distance=..100] subtitle [{"text":""}]
 execute as @s[scores={countdown=75}] at @s run bossbar set minecraft:time visible false
@@ -58,11 +60,14 @@ execute as @s[scores={countdown=74}] at @s run tag @a[scores={ingame=1..}] add c
 #execute as @s[scores={countdown=-9..44}] as @e[tag=countdown_spec_p] at @s run tp @s ~ ~0.12 ~
 #execute as @s[scores={countdown=-9..44}] as @e[tag=counddown_spec] at @s run tp @s ~0.1 ~ ~ facing entity @e[tag=countdown_spec_p,limit=1]
 
+execute as @s[scores={countdown=64..}] at @s run tag @e[tag=name_temp,type=marker] remove active
+execute as @s[scores={countdown=64..}] at @s run tag @e[tag=stock_temp,type=marker] remove active
 
 execute as @s[scores={countdown=69}] at @s run function game:makemap
 execute as @s[scores={countdown=69}] at @s run fill 599 59 599 601 10 601 barrier hollow
 execute as @s[scores={countdown=69}] at @s run fill 599 59 599 601 63 601 barrier hollow
-execute as @s[scores={countdown=-10}] at @s run scoreboard objectives setdisplay sidebar l
+#execute as @s[scores={countdown=-10}] at @s run scoreboard objectives setdisplay sidebar l
+execute as @s[scores={countdown=-10}] at @s run scoreboard objectives setdisplay sidebar
 
 execute as @s[scores={countdown=67}] at @s run setblock 600 9 600 air
 execute as @s[scores={countdown=67}] at @s run setblock 600 10 600 air
@@ -193,6 +198,9 @@ execute as @s[scores={countdown=-20}] at @s run fill 599 59 599 601 0 601 air
 #execute as @s[scores={countdown=-10}] at @s run scoreboard players remove CurrentRound game 1
 execute as @s[scores={countdown=-20}] at @s run scoreboard players add RoundAnnounce game 1
 execute as @s[scores={countdown=-20}] at @s run scoreboard players set Time game 6000
+
+execute as @s[scores={countdown=-20}] at @s run execute if entity @e[tag=Map,scores={mode=0..1}] run tellraw @a[scores={ingame=1..,playercount=1}] [{"text":"You have joined solo. Welcome to training mode.","color":"gold"}]
+execute as @s[scores={countdown=-20}] at @s run execute if entity @e[tag=Map,scores={mode=0..1}] run tellraw @a[scores={ingame=1..,playercount=1}] [{"text":"["},{"text":"Spawn Dummy","color":"dark_green","hoverEvent":{"action":"show_text","value":"Click to spawn dummy"},"clickEvent":{"action":"run_command","value":"/trigger dummytrigger add 1"}},{"text":"] [","color":"reset"},{"text":"Spawn Punchable Dummy","color":"green","hoverEvent":{"action":"show_text","value":"Click to spawn dummy"},"clickEvent":{"action":"run_command","value":"/trigger dummytrigger2 add 1"}},{"text":"]","color":"reset"}]
 
 scoreboard players remove @s countdown 1
 

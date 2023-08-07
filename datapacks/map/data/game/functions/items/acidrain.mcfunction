@@ -13,6 +13,7 @@ execute as @a[x=600,y=60,z=600,distance=3..100] at @s run playsound minecraft:we
 execute as @a[x=600,y=60,z=600,distance=3..100] at @s run playsound minecraft:entity.wither.spawn master @s ~ ~ ~ .3 0
 execute as @a[x=600,y=60,z=600,distance=3..100] at @s run playsound minecraft:block.lava.extinguish master @s ~ ~ ~ 1 0
 
+function game:player/class_team
 tellraw @a [{"selector":"@s"},{"text":" used ","color":"gray","bold":false},{"text":"Acid Rain","color":"dark_green","bold":true}]
 
 clear @s apple

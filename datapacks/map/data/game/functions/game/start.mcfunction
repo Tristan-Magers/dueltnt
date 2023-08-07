@@ -2,24 +2,25 @@
 scoreboard players set @a XPReset 0
 title @a actionbar {"text":""}
 
+team join Main @a
+
 execute if entity @a[tag=winner,tag=red,scores={teamed=1..}] run tag @a[tag=red,scores={ingame=1..}] add winner
 execute if entity @a[tag=winner,tag=blue,scores={teamed=1..}] run tag @a[tag=blue,scores={ingame=1..}] add winner
 execute if entity @a[tag=winner,tag=green,scores={teamed=1..}] run tag @a[tag=green,scores={ingame=1..}] add winner
 
-execute if entity @a[tag=winner] run title @a[x=615,y=30,z=615,distance=..90] subtitle [{"selector":"@a[tag=winner]","color":"white"}]
+execute if entity @a[tag=winner] run title @a[x=615,y=30,z=615,distance=..90] subtitle [{"selector":"@a[tag=winner]","color":"white","font":"fancy"}]
 
 execute if entity @a[tag=winner] run effect give @a[x=615,y=30,z=615,distance=..90] minecraft:blindness 2 0 true
 execute if entity @a[tag=winner] run title @a[x=615,y=30,z=615,distance=..90] times 4 16 6
 execute if entity @a[tag=winner,tag=red,scores={teamed=1..}] run title @a[x=615,y=30,z=615,distance=..90] title ["",{"translate":"\u0c0b","font":"title","color":"red"},{"translate":"\u000f","font":"title"}]
 execute if entity @a[tag=winner,tag=blue,scores={teamed=1..}] run title @a[x=615,y=30,z=615,distance=..90] title ["",{"translate":"\u0c0a","font":"title","color":"aqua"},{"translate":"\u000f","font":"title"}]
 execute if entity @a[tag=winner,tag=green,scores={teamed=1..}] run title @a[x=615,y=30,z=615,distance=..90] title ["",{"translate":"\u0c0c","font":"title","color":"green"},{"translate":"\u000f","font":"title"}]
-execute if entity @a[tag=winner,scores={teamed=..0}] run title @a[x=615,y=30,z=615,distance=..90] title [{"selector":"@a[tag=winner]","color":"white"},{"translate":"\u000d","font":"title"}]
-execute if entity @a[tag=winner,scores={teamed=..0,class=1}] run title @a[x=615,y=30,z=615,distance=..90] title [{"translate":"\u0c00","font":"title"},{"translate":"\u000d","font":"title"}]
+execute if entity @a[tag=winner,scores={teamed=..0,class=1}] run title @a[x=615,y=30,z=615,distance=..90] title [{"translate":"\u0c00","font":"title"},{"translate":"\u000e","font":"title"}]
 execute if entity @a[tag=winner,scores={teamed=..0,class=0}] run title @a[x=615,y=30,z=615,distance=..90] title [{"translate":"\u0c01","font":"title"},{"translate":"\u000d","font":"title"}]
 execute if entity @a[tag=winner,scores={teamed=..0,class=2}] run title @a[x=615,y=30,z=615,distance=..90] title [{"translate":"\u0c02","font":"title"},{"translate":"\u000d","font":"title"}]
 execute if entity @a[tag=winner,scores={teamed=..0,class=3}] run title @a[x=615,y=30,z=615,distance=..90] title [{"translate":"\u0c03","font":"title"},{"translate":"\u000d","font":"title"}]
 execute if entity @a[tag=winner,scores={teamed=..0,class=4}] run title @a[x=615,y=30,z=615,distance=..90] title [{"translate":"\u0c04","font":"title"},{"translate":"\u000d","font":"title"}]
-execute if entity @a[tag=winner,scores={teamed=..0,class=5}] run title @a[x=615,y=30,z=615,distance=..90] title [{"translate":"\u0c05","font":"title"},{"translate":"\u000e","font":"title"}]
+execute if entity @a[tag=winner,scores={teamed=..0,class=5}] run title @a[x=615,y=30,z=615,distance=..90] title [{"translate":"\u0c05","font":"title"},{"translate":"\u00aa","font":"title"}]
 execute if entity @a[tag=winner,scores={teamed=..0,class=6}] run title @a[x=615,y=30,z=615,distance=..90] title [{"translate":"\u0c06","font":"title"},{"translate":"\u000d","font":"title"}]
 execute if entity @a[tag=winner,scores={teamed=..0,class=7}] run title @a[x=615,y=30,z=615,distance=..90] title [{"translate":"\u0c07","font":"title"},{"translate":"\u000d","font":"title"}]
 execute if entity @a[tag=winner,scores={teamed=..0,class=8}] run title @a[x=615,y=30,z=615,distance=..90] title [{"translate":"\u0c08","font":"title"},{"translate":"\u000d","font":"title"}]

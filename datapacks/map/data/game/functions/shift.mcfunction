@@ -31,14 +31,23 @@ scoreboard players set @s timer 1
 
 scoreboard players add @s overlordsc 1
 
-xp add @s[scores={class=0,timer=1}] 17 levels
-xp add @s[scores={class=1,timer=1}] 102 levels
-xp add @s[scores={class=2,timer=1}] 80 levels
-xp add @s[scores={class=3,timer=1}] 80 levels
-xp add @s[scores={class=4,timer=1}] 155 levels
-xp add @s[scores={class=6,timer=1}] 160 levels
-xp add @s[scores={class=7,timer=1}] 160 levels
-xp add @s[scores={class=9,timer=1}] -1 levels
+#xp add @s[scores={class=0,timer=1}] 17 levels
+#xp add @s[scores={class=1,timer=1}] 102 levels
+#xp add @s[scores={class=2,timer=1}] 75 levels
+#xp add @s[scores={class=3,timer=1}] 80 levels
+#xp add @s[scores={class=4,timer=1}] 155 levels
+#xp add @s[scores={class=6,timer=1}] 160 levels
+#xp add @s[scores={class=7,timer=1}] 160 levels
+#xp add @s[scores={class=9,timer=1}] -1 levels
+
+scoreboard players set @s[scores={class=0,timer=1}] shift_cool 17
+scoreboard players set @s[scores={class=1,timer=1}] shift_cool 102
+scoreboard players set @s[scores={class=2,timer=1}] shift_cool 75
+scoreboard players set @s[scores={class=3,timer=1}] shift_cool 80
+scoreboard players set @s[scores={class=4,timer=1}] shift_cool 155
+scoreboard players set @s[scores={class=6,timer=1}] shift_cool 160
+scoreboard players set @s[scores={class=7,timer=1}] shift_cool 160
+scoreboard players remove @s[scores={class=9,timer=1}] shift_cool 1
 
 #reaper
 execute as @s[scores={class=6}] at @s run effect give @s slow_falling 1 1 true
@@ -101,7 +110,8 @@ execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s 
 
 execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run effect give @s slow_falling 2 2
 
-xp add @s[scores={class=8,timer=1}] 45 levels
+#xp add @s[scores={class=8,timer=1}] 45 levels
+scoreboard players set @s[scores={class=8,timer=1}] shift_cool 45
 
 execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {NoGravity:1,Fuse:4}
 execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {NoGravity:1,Fuse:4}
@@ -113,7 +123,8 @@ execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-
 
 execute as @s[scores={class=10}] at @s run effect give @s levitation 1 3
 
-xp add @s[scores={class=10,timer=1}] 90 levels
+#xp add @s[scores={class=10,timer=1}] 90 levels
+scoreboard players set @s[scores={class=10,timer=1}] shift_cool 88
 
 #reaper shift
 execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:10,NoGravity:1}
@@ -121,7 +132,8 @@ execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:10,No
 execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:0,NoGravity:1}
 execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:0,NoGravity:1}
 
-execute as @s[scores={class=9,overlordsc=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
-execute as @s[scores={class=9,overlordsc=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
-execute as @s[scores={class=9,overlordsc=3}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
-execute as @s[scores={class=9,overlordsc=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
+execute as @s[scores={class=9,overlordsc=1..}] at @s run function game:player/class_team
+execute as @s[scores={class=9,overlordsc=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
+execute as @s[scores={class=9,overlordsc=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
+execute as @s[scores={class=9,overlordsc=3}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
+execute as @s[scores={class=9,overlordsc=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]

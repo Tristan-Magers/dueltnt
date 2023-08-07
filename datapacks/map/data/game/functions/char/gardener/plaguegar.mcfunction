@@ -1,7 +1,9 @@
 effect give @s minecraft:speed 4 2
 effect give @s minecraft:jump_boost 4 1
 effect give @p minecraft:glowing 4 1 true
-title @p actionbar {"text":"WEAPONS TEMPORARILY BOOSTED","color":"gold","bold":"true"}
+
+scoreboard players set @s ui_action_text 3
+scoreboard players set @s ui_action_time 40
 
 effect clear @s levitation
 effect clear @s slow_falling
@@ -14,6 +16,7 @@ playsound minecraft:entity.player.levelup master @a ~ ~ ~ .7 1
 playsound minecraft:entity.player.levelup master @a ~ ~ ~ .7 2
 playsound minecraft:block.conduit.activate master @a ~ ~ ~ 1 2
 
+clear @s stone_pressure_plate
 scoreboard players remove @s gravuse 4
 scoreboard players set @s[scores={gravuse=..0}] gravuse 0
 

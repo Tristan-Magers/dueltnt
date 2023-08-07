@@ -16,7 +16,9 @@ execute as @a[gamemode=adventure,scores={class=8,garboost=3}] at @s run playsoun
 
 #life boost
 scoreboard players add @s gardlife 1
-execute as @s[scores={gardlife=1000,Lives=..6}] at @s run tellraw @a [{"selector":"@s"},{"text":" gained an ","color":"gray","bold":false},{"text":"Extra Life","color":"green","bold":true},{"text":" as gardener","color":"gray","bold":false}]
+execute as @s[scores={gardlife=1000,Lives=..6}] at @s run function game:player/class_team
+execute as @s[scores={gardlife=1000,Lives=..6}] at @s run tellraw @a [{"selector":"@s"},{"text":" gained an ","color":"gray","bold":false},{"text":"Extra Life","color":"green","bold":true}]
 scoreboard players add @s[scores={gardlife=1000..,Lives=..6}] Lives 1
+execute as @s[scores={gardlife=1000,Lives=..7}] at @s run function game:ui/name_markers
 scoreboard players set @s[scores={gardlife=1000..}] gardlife 0
 scoreboard players set @s[scores={Lives=7..}] gardlife 0

@@ -9,6 +9,7 @@ execute as @s at @s run playsound minecraft:entity.phantom.flap master @a ~ ~ ~ 
 execute as @s at @s run playsound minecraft:item.elytra.flying master @a ~ ~ ~ .1 1.4
 execute as @s at @s run playsound minecraft:entity.ender_eye.launch master @a ~ ~ ~ 1 0
 
+function game:player/class_team
 execute as @s at @s run tellraw @a [{"selector":"@s"},{"text":" used ","color":"gray","bold":false},{"text":"Air Missile","color":"blue","bold":true}]
 
 clear @s cooked_porkchop

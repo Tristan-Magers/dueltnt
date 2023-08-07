@@ -1,20 +1,4 @@
-execute as @e[name=Map,type=armor_stand,scores={game=1}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Core","color":"dark_blue","bold":"true"}]
-execute as @e[name=Map,type=armor_stand,scores={game=2}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Nether Fort","color":"dark_red","bold":"true"}]
-execute as @e[name=Map,type=armor_stand,scores={game=3}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Mesa","color":"gold","bold":"true"}]
-execute as @e[name=Map,type=armor_stand,scores={game=4}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Flower Watch","color":"light_purple","bold":"true"}]
-execute as @e[name=Map,type=armor_stand,scores={game=5}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"The End","color":"red","bold":"true"}]
-execute as @e[name=Map,type=armor_stand,scores={game=6}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Dead Feast","color":"yellow","bold":"true"}]
-execute as @e[name=Map,type=armor_stand,scores={game=7}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Arena","color":"dark_purple","bold":"true"}]
-execute as @e[name=Map,type=armor_stand,scores={game=8}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Fair Fight","color":"gray","bold":"true"}]
-execute as @e[name=Map,type=armor_stand,scores={game=9}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Frost Bite","color":"blue","bold":"true"}]
-execute as @e[name=Map,type=armor_stand,scores={game=99}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Underworld","color":"red","bold":"true"}]
-execute as @e[name=Map,type=armor_stand,scores={game=10}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Catastrophe","color":"blue","bold":"true"}]
-execute as @e[name=Map,type=armor_stand,scores={game=11}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Showtime","color":"light_blue","bold":"true"}]
-execute as @e[name=Map,type=armor_stand,scores={game=12}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Terminal","color":"gold","bold":"true"}]
-execute as @e[name=Map,type=armor_stand,scores={game=13}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Suto","color":"yellow","bold":"true"}]
-execute as @e[name=Map,type=armor_stand,scores={game=14}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Tremor","color":"aqua","bold":"true"}]
-execute as @e[name=Map,type=armor_stand,scores={game=15}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Hollow Keep","color":"red","bold":"true"}]
-execute as @e[name=Map,type=armor_stand,scores={game=16}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Beacon","color":"dark_aqua","bold":"true"}]
+#tellraw @a [{"text":"\n","color":"white"}]
 
 difficulty normal
 
@@ -35,13 +19,10 @@ kill @e[tag=powerupitem]
 
 gamerule reducedDebugInfo true
 
-execute if entity @e[scores={mode=1}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Overpowered","color":"dark_aqua","bold":true},{"text":"] Reload times are a thing of the past. Every single item is much more powerful in this mode.","color":"reset","bold":false}]
-execute if entity @e[scores={mode=2}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Hotfeet","color":"dark_red","bold":true},{"text":"] Be careful in this mode. TNT spawns at your feet at an ever increasing pace. Don't stand still!","color":"reset","bold":false}]
-execute if entity @e[scores={mode=3}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Phantom","color":"dark_purple","bold":true},{"text":"] Sometimes you need more tools. Duel with powerful items spawning across the map.","color":"reset","bold":false}]
-execute if entity @e[scores={mode=4}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Survival","color":"dark_green","bold":true},{"text":"] Survive against hoards of enemies until time runs out. Go solo, outlive your peers, or work with a team to get through the storm. Good luck! Remember: ","color":"reset","bold":false},{"text":"Ghasts are vulnerable...and chickens aren't what they seem","bold":true},{"text":".","bold":false}]
-
-execute if entity @e[tag=Map,scores={mode=0..1}] run tellraw @a[scores={ingame=1..,playercount=1}] [{"text":"You have joined solo. Welcome to training mode.","color":"gold"}]
-execute if entity @e[tag=Map,scores={mode=0..1}] run tellraw @a[scores={ingame=1..,playercount=1}] [{"text":"["},{"text":"Spawn Dummy","color":"dark_green","hoverEvent":{"action":"show_text","value":"Click to spawn dummy"},"clickEvent":{"action":"run_command","value":"/trigger dummytrigger add 1"}},{"text":"] [","color":"reset"},{"text":"Spawn Punchable Dummy","color":"green","hoverEvent":{"action":"show_text","value":"Click to spawn dummy"},"clickEvent":{"action":"run_command","value":"/trigger dummytrigger2 add 1"}},{"text":"]","color":"reset"}]
+execute if entity @e[scores={mode=1}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Overpowered","color":"dark_aqua","bold":true},{"text":"] \nReload times are a thing of the past. Every single item is much more powerful in this mode.","color":"reset","bold":false}]
+execute if entity @e[scores={mode=2}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Hotfeet","color":"dark_red","bold":true},{"text":"] \nBe careful in this mode. TNT spawns at your feet at an ever increasing pace. Don't stand still!","color":"reset","bold":false}]
+execute if entity @e[scores={mode=3}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Phantom","color":"dark_purple","bold":true},{"text":"] \nSometimes you need more tools. Duel with powerful items spawning across the map.","color":"reset","bold":false}]
+execute if entity @e[scores={mode=4}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Survival","color":"dark_green","bold":true},{"text":"] \nSurvive against hoards of enemies until time runs out. Go solo, outlive your peers, or work with a team to get through the storm. Good luck! Remember: ","color":"reset","bold":false},{"text":"Ghasts are vulnerable...and chickens aren't what they seem","bold":true},{"text":".","bold":false}]
 
 execute if entity @e[tag=Map,scores={mode=0..1}] run gamerule reducedDebugInfo false
 

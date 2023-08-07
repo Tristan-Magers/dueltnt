@@ -18,8 +18,8 @@ scoreboard players set @s[tag=!first,scores={bowlthrow=0,flintthrow=0,bambthrow=
 clear @s[nbt=!{Inventory:[{id:"minecraft:bone",Slot:1b}]}] bone
 item replace entity @s[nbt=!{Inventory:[{id:"minecraft:bone",Slot:1b}]}] hotbar.1 with minecraft:bone{Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§6Detonate Arrows §f§r: Right-click\"}"}}
 
-clear @s[nbt=!{Inventory:[{id:"minecraft:tnt",Slot:2b}]},scores={PlaceMineTime=..40}] tnt
-scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:tnt",Slot:2b}]},scores={PlaceMineTime=..80}] PlaceMineTime 200
+clear @s[nbt=!{Inventory:[{id:"minecraft:tnt"}]},scores={PlaceMineTime=..40}] tnt
+scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:tnt"}]},scores={PlaceMineTime=..80}] PlaceMineTime 200
 
 clear @s[nbt=!{Inventory:[{id:"minecraft:emerald",Slot:3b}]},scores={TBtimer=-199..-2}] redstone
 scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:emerald",Slot:3b}]},scores={TBtimer=-199..-2}] TBtimer 1

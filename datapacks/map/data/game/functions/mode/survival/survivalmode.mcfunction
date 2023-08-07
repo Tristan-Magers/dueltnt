@@ -24,10 +24,10 @@ execute if entity @a[scores={survival=1000}] run title @a title {"text":"HEADS U
 execute if entity @a[scores={survival=1400}] run title @a title {"text":"HEADS UP!","color":"dark_red","bold":true,"underlined":true}
 execute if entity @a[scores={survival=2200}] run title @a title {"text":"HEADS UP! D:","color":"dark_red","bold":true,"underlined":true}
 
-execute if entity @a[scores={survival=2700}] run title @a title {"text":"Ok Ok","color":"dark_green","bold":true,"underlined":true}
-execute if entity @a[scores={survival=2730}] run title @a title {"text":"Not Bad","color":"dark_green","bold":true,"underlined":true}
+execute if entity @a[scores={survival=2700}] run title @a title {"text":"Ok Ok","color":"dark_green","bold":true,"underlined":true,"font":"fancy"}
+execute if entity @a[scores={survival=2730}] run title @a title {"text":"Not Bad","color":"dark_green","bold":true,"underlined":true,"font":"fancy"}
 execute if entity @a[scores={survival=2760}] run advancement grant @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] only survival:round2
-execute if entity @a[scores={survival=2760}] run title @a title {"text":"Round 2","color":"dark_green","bold":true,"underlined":true}
+execute if entity @a[scores={survival=2760}] run title @a title {"text":"Round 2","color":"dark_green","bold":true,"underlined":true,"font":"fancy"}
 execute if entity @a[scores={survival=2790}] run title @a title {"text":"","color":"dark_green","bold":true,"underlined":true}
 execute if entity @a[scores={survival=2790}] run scoreboard players set @e[tag=Map] withercount 0
 execute if entity @a[scores={survival=2790}] run scoreboard players set @e[tag=Map] ghastcount 0

@@ -1,2 +1,1 @@
-effect give @s minecraft:levitation 1 30 false
-scoreboard players set @s nolev 2
+title @s actionbar [{"translate":"space.-110","font":"space"},{"text":"[■■■■]","font":"low"},{"translate":"space.-32","font":"space"},{"selector":"@e[tag=name_temp,limit=1]","font":"low2","bold":"true"}]

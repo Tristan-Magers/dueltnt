@@ -9,6 +9,7 @@ execute as @a[x=600,y=60,z=600,distance=3..100] at @s run playsound minecraft:bl
 execute as @a[x=600,y=60,z=600,distance=3..100] at @s run playsound minecraft:entity.experience_orb.pickup master @s ~ ~ ~ 1 1.2
 execute as @a[x=600,y=60,z=600,distance=3..100] at @s run playsound minecraft:block.note_block.cow_bell master @s
 
+function game:player/class_team
 tellraw @a [{"selector":"@s"},{"text":" used ","color":"gray","bold":false},{"text":"Phantom Boost","color":"dark_aqua","bold":true}]
 clear @s cookie
 scoreboard players set @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] phantomboost 101

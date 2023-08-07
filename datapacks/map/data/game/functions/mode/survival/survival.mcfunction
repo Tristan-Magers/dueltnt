@@ -8,6 +8,7 @@ effect give @e[type=creeper] minecraft:glowing 10 10 true
 
 execute as @s[scores={survival=2}] run scoreboard players set Time game 4000
 execute as @s[scores={survival=2}] run scoreboard players set @a Lives 3
+execute as @s[scores={survival=2}] run scoreboard players set .ui_varify .data 1
 
 execute as @s[scores={survival=30}] run summon zombie 615 50 615
 execute as @s[scores={survival=30}] run summon zombie 615 50 615 

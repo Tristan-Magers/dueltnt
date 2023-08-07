@@ -8,6 +8,7 @@ execute as @s at @s run playsound minecraft:entity.ghast.shoot master @a ~ ~ ~ .
 execute as @s at @s run playsound minecraft:entity.phantom.bite master @a ~ ~ ~ .6 2
 execute as @s at @s run playsound minecraft:entity.phantom.death master @a ~ ~ ~ .3 2
 
+function game:player/class_team
 execute as @s at @s run tellraw @a [{"selector":"@s"},{"text":" used ","color":"gray","bold":false},{"text":"Phanton Missile","color":"gold","bold":true}]
 
 clear @s porkchop

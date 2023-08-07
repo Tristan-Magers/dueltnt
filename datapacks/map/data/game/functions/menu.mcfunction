@@ -18,12 +18,16 @@ scoreboard players set @a[x=620,y=30,z=620,distance=..90] lobby 0
 xp add @a[scores={lobby=1..20},x=500,y=20,z=500,distance=..80] -100 levels
 effect clear @a[scores={lobby=1..20},x=500,y=20,z=500,distance=..80] jump_boost
 effect clear @a[scores={lobby=1..20},x=500,y=20,z=500,distance=..80] speed
+effect clear @a[scores={lobby=1..20},x=500,y=20,z=500,distance=..80] minecraft:regeneration
+tag @a[scores={lobby=2},x=500,y=20,z=500,distance=..80,tag=!logo] add delay_items
+tag @a[scores={lobby=75},x=500,y=20,z=500,distance=..80] remove delay_items
 execute as @a[scores={lobby=2},x=500,y=20,z=500,distance=..80,tag=!logo] at @s run playsound minecraft:entity.lightning_bolt.impact master @s ~ ~ ~ 0.7 0
 execute as @a[scores={lobby=2},x=500,y=20,z=500,distance=..80,tag=!logo] at @s run playsound minecraft:entity.lightning_bolt.thunder master @s ~ ~ ~ 0.6 0.6
-title @a[scores={lobby=2},x=500,y=20,z=500,distance=..80,tag=!logo] times 25 25 40
+title @a[scores={lobby=2},x=500,y=20,z=500,distance=..80,tag=!logo] times 20 25 35
 title @a[scores={lobby=2},x=500,y=20,z=500,distance=..80,tag=!logo] title [{"translate":"\u000c","font":"title"}]
 tag @a[scores={lobby=2},x=500,y=20,z=500,distance=..80,tag=!logo] add logo
 #title @a[scores={lobby=1},x=500,y=20,z=500,distance=..80] title {"text":""}
+title @a[scores={lobby=2},x=500,y=20,z=500,distance=..80] actionbar {"text":""}
 title @a[scores={lobby=100},x=500,y=20,z=500,distance=..80] title {"text":""}
 scoreboard players set @a[x=0,y=30,z=0,distance=..190] lobby 0
 scoreboard players set @a[x=496,y=20,z=520,distance=..60] Y 30
@@ -136,6 +140,30 @@ tag @e[name=Map,tag=laddert] remove laddert
 #particle sound
 scoreboard players enable @a particle_trigger
 
+execute if score .part_6 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=6}] particle_trigger 0
+execute if score .part_7 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=7}] particle_trigger 0
+execute if score .part_8 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=8}] particle_trigger 0
+execute if score .part_9 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=9}] particle_trigger 0
+execute if score .part_10 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=10}] particle_trigger 0
+execute if score .part_11 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=11}] particle_trigger 0
+execute if score .part_12 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=12}] particle_trigger 0
+execute if score .part_13 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=13}] particle_trigger 0
+execute if score .part_14 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=14}] particle_trigger 0
+execute if score .part_15 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=15}] particle_trigger 0
+execute if score .part_16 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=16}] particle_trigger 0
+execute if score .part_17 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=17}] particle_trigger 0
+execute if score .part_18 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=18}] particle_trigger 0
+execute if score .part_19 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=19}] particle_trigger 0
+execute if score .part_20 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=20}] particle_trigger 0
+execute if score .part_21 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=21}] particle_trigger 0
+execute if score .part_22 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=22}] particle_trigger 0
+execute if score .part_23 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=23}] particle_trigger 0
+execute if score .part_24 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=24}] particle_trigger 0
+execute if score .part_25 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=25}] particle_trigger 0
+execute if score .part_26 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=26}] particle_trigger 0
+
+scoreboard players set @a[scores={particle_trigger=27..}] particle_trigger 0
+
 execute as @a[scores={particle_trigger=1..}] at @s run scoreboard players operation @s particle = @s particle_trigger
 
 scoreboard players set @a partTest 0
@@ -174,7 +202,7 @@ execute if entity @e[type=player,distance=..100,x=600,y=60,z=600,gamemode=advent
 execute if entity @e[type=player,distance=..100,x=600,y=60,z=600,gamemode=spectator,tag=countdown] run tag @e[name=Map,type=armor_stand,limit=1] add removeset
 
 #execute as @e[name=Map,type=armor_stand,limit=1,tag=removeset,tag=!removesett] run function game:menu/setdisable
-execute as @e[name=Map,type=armor_stand,limit=1,tag=!removeset,tag=removesett] run schedule function game:menu/setenable 20t
+#execute as @e[name=Map,type=armor_stand,limit=1,tag=!removeset,tag=removesett] run schedule function game:menu/setenable 20t
 
 tag @e[name=Map,type=armor_stand,limit=1,tag=removeset] add removesett
 tag @e[name=Map,type=armor_stand,limit=1,tag=!removeset] remove removesett

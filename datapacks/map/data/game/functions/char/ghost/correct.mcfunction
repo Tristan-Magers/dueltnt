@@ -1,7 +1,7 @@
 item replace entity @s[scores={nobow=3..}] hotbar.0 with bow{Damage:60,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§bVaporizer§r : Throw to switch\"}"}}
 
 clear @s[nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]}] ender_pearl
-#execute as @s[nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]},scores={enderreload=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s","color":"gold"},{"text":" Reloaded ","color":"white"},{"text":"Teleport","color":"green","bold":"true"}]
+#execute as @s[nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]},scores={enderreload=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Reloaded ","color":"white"},{"text":"Teleport","color":"green","bold":"true"}]
 #item replace entity @s[nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]},scores={enderreload=..0}] hotbar.2 with minecraft:ender_pearl{display:{Name:"{\"italic\":false,\"text\":\"§aTeleport §r: Right-click\"}"}}
 
 item replace entity @s[nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]},scores={endercount=0}] hotbar.2 with minecraft:ender_pearl{display:{Name:"{\"italic\":false,\"text\":\"§aTeleport §r: Right-click\"}"}} 3

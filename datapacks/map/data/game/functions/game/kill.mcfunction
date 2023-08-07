@@ -21,7 +21,7 @@ kill @e[tag=powerupitem]
 kill @e[type=creeper]
 kill @e[type=ghast]
 kill @e[type=wither]
-kill @e[type=chicken,x=620,y=60,z=620,distance=..120]
+kill @e[type=chicken,x=620,y=20,z=620,distance=..100]
 kill @e[type=skeleton]
 tag @e[type=magma_cube] add kill_this
 kill @e[type=zombie]
