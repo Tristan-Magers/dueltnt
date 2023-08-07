@@ -1,0 +1,323 @@
+*Season 9 Update*
+
+[Game]
+- Game updated to version 1.20.1
+
+[General]
+- Lobby build update (includes updated tournament hall)
+- Reduced debug mode enabled during game (disabled during single player training mode)
+- Timer for start button reduced to 9 seconds
+- Time to for button to reappear after round have ended reduced by 0.5s (7s -> 6.5s)
+- Improved start game effects
+- UI improvements (lives/timer/start game/win game/intro/chat messages)
+- Character colors are now special Hex colors indead of generic
+
+[Character Changes]
+
+General
+- Minor visual improvements to some bows
+- Enderpearls (multi-class) have improved detection for where player lands
+
+Grab (Multi-class)
+- Horizontal speed increased by 47% (vastly increasing range)
+- Grab no longer stuns
+- Grab no longer can be shifted out of
+- Grab breaks after being on a player for 3 seconds
+- Grab breaks after being left out for 6s
+- Grab makes sound on player contact
+
+Soldier
+- Anvil causes you to fall 71% less (7.2 blocks -> 2.07 blocks)
+- Anvil usage communicated to spectators
+
+Assassin
+- Now has Jump Boost level 2 (previously none)
+- Shift (Boost) has been replaced with "Dive Kick"
+- Shift takes 0.7s longer to reload (4.4s -> 5.1s)
+- Magic Star now alternates with Explosive Dart (2 of each)
+    - 1.75s to reload each (previously 5.25s to reload stars)
+    - Note: Explosive Darts are therefore now a reloading item
+- Magic Stars explode 1s faster (2.5s -> 1.5s)
+- Delay added between firing Magic Stars (0.3s) [same as darts]
+- Magic Stars fire 0.4 blocks higher (-0.2 blocks from crosshair) [quality of life]
+- Explosive Darts fire 0.2 blocks higher (now on crosshair) [quality of life]
+- Explosive Darts are now a projectile (30 blocks per/s)
+- Explosive Darts Take 0.2s longer to explode (0.2s -> 0.4s)
+- Explosive Darts now collide with Magic Stars
+- Explosive Darts have 0.05s less cooldown between each other (0.3s -> 0.25s)
+- Mass Freeze has 0.5s longer cooldown (6.5s -> 7s)
+- Teleport only causes explosion if you hit the top of a block
+- Teleport explosion higher, with 0.6s longer fuse (0s -> .6s)
+- Teleport gives higher levels of jump boost and speed
+- Get one less Teleport (1 -> 2)
+- Teleport takes 0.5s longer to reload (10s -> 10.5s)
+- Sneak Attack TNT takes 0.35s longer to explode (0.1s -> 0.45s)
+- Sneak Attack and Dart TNT does not get effected by gravity or knockback
+
+Ghost
+- Visual improvement to costume
+- Shift (Levitation) takes 0.1s longer to reload (3.65s -> 3.75s)
+- Gets 3 Teleports (ender pearls) instead of reloading them
+- Enderpearls give 2s of invisibility on use
+- Second TNT on Smoke Bomb has 0.05s longer fuse (0.55s -> 0.6s)
+- Air Missile makes sound when breaking blocks
+- Primed for Dark has 1s less max blindness (5s -> 4s) [Note: 3s max full blindness]
+- Mass Levitate can only be used twice without touching the ground (resets if pearl is used) [infinite prevention]
+
+Trapper
+- TNT Trap explodes 0.05s slower (0.05s -> 0.15s)
+- Fast Trap explodes 0.2s slower (0.05s -> 0.25s)
+- Short Blast TNT explodes 0.05s slower (0.05s -> 0.1s)
+- Added "Phantom Blocks"
+    - Recreates blocks of map where-ever you are looking
+    - Phantom blocks break when stepped on
+    - Lasts 20s
+    - Range of 14 blocks
+- Track Bomb switches between itself and Phantom Blocks
+	- 5.5s to Phantom Blocks, 5.5s to Track Bomb (previously 10s)
+- Switched Platform and Track Bomb slots
+- Track Bomb only has an explosion of 1 tnt if it explodes due to time (previously 2 tnt)
+- Track Bomb Moves and turns faster (3.6 b/s -> 4.4 b/s)
+- Track Bomb explodes naturally 0.5s faster (4s -> 3.5s)
+- Platform lasts 1s longer (2.5s -> 3.5s)
+- Arrows have more particle effects
+- Bows make sounds
+- Improved look of Fast Trap/Short Blast
+
+Wizard
+- Visual improvement to costume
+- Fireball spawns 0.25 blocks lower and 0.4 blocks in front of you [quality of life]
+- Fireball speed increased (bigger increase at minimum than at max) (about 12% increase at min and 2% at max)
+- Fireball detection is better
+- Powerize TNT explodes .4s faster (1.35s -> 0.95s)
+- Teleport bow up detection increased (2.5 -> 6 blocks from user) [quality of life]
+- Teleport bow down detection increased (16 -> 18 blocks from enemy) [quality of life]
+- Teleport bow now has proper resolution between conflicting down/up arrows (stops previous from moving)
+- "Explode Ghost Creeper" cooldown reduced 2.3s (7s -> 5.5s)
+- "Pig Transform" can now be used anywhere (can still be placed to teleport to location)
+- "Pig Transform" 0.5s faster if used on ground (2s -> 1.5s)
+    - Also reloads 0.5s faster if placed
+- "Pig Transform" reloads 2s slower (5s -> 7s) (starts after explosion)
+- "Pig Transform" is canceled on death and returns pig egg
+- Shift (Teleport) cooldown increased 1s (6.75s -> 7.75s)
+- Shift (Teleport) can no longer kill self off of top
+- Shift (Teleport) no longer spawns a creeper if one has been spawned (either through shift or throw)
+- Vortex range increased by 1 (8 -> 9)
+- Vortex lasts 0.5s less (6s -> 5.5s) [activates 2s in]
+- Vortex reworked to push players inwards, instead of completely moving them
+	- No long has a vertical impact, up or down
+        - Strength Ranges (10 [level 1], 5 [level 2], 2.5 [level 3])
+- Vortex takes 1.5s to load at start of round
+- Vortex take 1s longer to reload (15s -> 16s)
+- Vortex has imroved sound and visual
+- Added "Throw Creeper"
+    - Replaces "Explode Ghost Creeper" when no creeper out
+    - Causes 1s cooldown on "Explode Ghost Creeper"
+    - Thrown Creeper has slowfalling
+- Ghost Creepers self explode after 6s
+- Note: Bug fix where creepers didn't die when they touched the void
+
+Mad Scientist
+- Explosive Gel (bow) reploads 0.15s faster (2.8s -> 2.65s)
+- Explosive Gel (bow) explodes 0.05s faster (0.25s -> 0.2s)
+- Powershield now has 0.1s longer period where it can't be broken at start (0.4s -> 0.6s)
+    - Prevents situations where shield seemingly breaks instantly
+- Gets 1 more TNT Egg (3 -> 4)
+- Laser has better detection, especially on non-player mobs
+- Laser kills Chickens, Ghast, and damages Withers in Survival mode
+
+Reaper
+- Reaper now has 112% base speed (previously normal)
+- Scythe reloads 0.25s faster (5.25s -> 5s)
+- Scythe detection improved (better detection, and detection for non-solid blocks, fences/walls, and slabs)
+- Scythe hitbox gets bigger after 0.5s (0.2 x 0.2 x 0.2 -> 0.6 x 0.2 x 0.6)
+- Creepers and Slimes have 33% less gravity
+- First Creeper Egg reloads 4.5s faster (6.5s -> 2s) [only at the very start of round]
+- Creeper Eggs reload .75s slower (7s -> 7.75s)
+- Creepers thrown only make 1 explosion (previously 2)
+- Creepers placed on ground make 3 explosions (priously 2)
+	- .15s and .25s after explosion (previously .2s)
+- Slimes reload 2s faster (7s -> 5s)
+- Thrown Slimes grow 2 less sizes (max 7) (keeping all the same timing)
+- Placed Slimes grow 1 extra size (max 10)
+- Placed Slimes create 1 extra tnt (2 -> 3)
+- Placed Slimes grow later and more rapidly
+- Placed Slimes explode 1.25s faster (2.95s -> 1.7s)
+- Slimes have 0.2s delay before they can do damage
+- Placing Creepers/Slimes pushes them in the direction you are facing
+- Creepers/Slimes thrown have a max downwards angle of 70 degrees
+- Slimes thrown come 0.4 blocks further from yourself (making it harder to hit yourself)
+- Feathers have 0.4s cooldown between uses [quality of life]
+- Scythe can no longer collide with void (1.17 feature)
+
+Echo
+- Boom wand takes longer to reload on the last 4 uses (0.6s,0.6s,0.65s,0.7s) (normally .55s)
+- The last two uses of blast wand reload (0.05s) faster
+    - (0.1s, 0.2s, 0.4s, 0.65s, 0.95s, 1.2s*) [previously (0.1s, 0.2s, 0.4s, 0.7s, 1.0s, 1.2s*)]
+- Blast Wand limited to 6 uses in air (previously 4) [quality of life and infinite prevention]
+- Note: bug fix allows for Sky Wand and Blast Want to activate on "void"
+- "Boom Shard" renamed "Unstable Orb" (Bug)
+- Reload after Blast Wand's Unstable Orb is 0.25s longer (2.5s -> 2.75s)
+- Reload after Boom Wand's Unstable Orb is 0.25s longer (2.5s -> 2.75s)
+- Reload after Boom Wand's Unstable Orb is locked to max (previously possible for a min of 0.75s if delayed)
+
+Gardener
+- Plague has .1 longer range (1.65 blocks -> 1.75 blocks)
+- Plague gives levitation and slowfalling if thrown in the air (1s slow falling) (0.8s levitation level 9)
+    - Cancels if you hit yourself [quality of life]
+- First extra life now occurs at the 250 second mark (functionally 1s faster) [bug fix]
+
+Overlord
+- Unstable Mass (shift) replaced with "Restore World" (shift)
+    - replaces destroyed blocks around you with unstable matter (9 diameter cylinder)
+    - unstable matter no longer decays, can now be broken and consumed by wand
+    - unstable matter has higher blast resistance (0.8 -> 6) [blackstone]
+    - raises you to the level of the nearest land
+    - gives you levitation (level 7, .85s)
+- Master Wand only uses durabilty when it breaks a block
+- Master Wand upgrades every 7s from start of match. No longer repairs wand or costs matter.
+- Master Wand can be thrown/offhanded to "gather" matter
+    - drains wand and gives 1 matter for every 2 durability, then goes into 2.5s cooldown (0.5s longer than normal) [+4 matter at end of use]
+    - 10s cooldown (indicated with sounds and text)
+    - The more degraded the wand, the shorter the cooldown on the wand and gather reload. (MAX -0.25s wand, -4s gather)
+- Wand upgrades 0.8-1.2 less with each upgrade but starts 0.8 longer
+    - (7,9,11,12.6,14.2 -> 7.8,9.0,10.2,11.4,12.6)
+- Wand Upgrade permanently replaced with matter storm from start
+- Matter Bomb costs 1 less (7 -> 6)
+- Matter Bomb has 1.5s cooldown on use
+- Matter Storm TNT does not explode until last projectile hits a block (indicated with glowing)
+    - Fuse 0.2s longer (0.05s -> 0.25s) [after trigger] [1.5s if no trigger occurs]
+- Matter Storm projectile has improved hit detection (smaller hitbox higher up)
+    - TNT summon location also improved to be outside block always
+- Matter Storm projectiles no longer have 0.1s delay
+- Matter Storm projectiles move 10% faster (20 b/s -> 22 b/s)
+- Matter Storm projectiles have smaller hitbox (0.4x0.4x0.4 -> 0.2x0.2x0.2)
+- Matter Storm shoots 0.1s faster (0.3s -> 0.2s) [0.1s delay between shots]
+- Matter Storm costs 6 less (16 -> 10)
+- Matter Storm has 3.5s cooldown on use
+- Matter Slide costs 3 less (17 -> 14)
+- Matter Slide has 4.5s cooldown on use
+- Boom Halo costs 1 more (13 -> 14)
+- Boom Halo explodes .3s faster (.65s -> 35s)
+- Boom Halo has 0.4 smaller radius (2.6 -> 2.2)
+- Boom Halo levitation adjusted (1s -> .65s) (level 3 -> level 16) [Note: quality of life]
+- Boom Halo TNT starts with 0.2 downward motion [Note: quality of life]
+- Boom Halo has 0.5s cooldown on uses
+- Matter Slide and Matter Storm has swapped places
+- Icon improvements for unavailable items
+- General sound improvements for items
+- Matter Bomb and Storm projectiles no longer collide with arrows and other projectiles
+
+Shard
+- Ice Spreading tnt has smaller range (~3 blocks -> ~2.5 blocks) [Note: spread is based on a shape and not exact range]
+- Anti-Ice Bow reloads 0.3s faster (2.3s -> 2s)
+- Anti-Ice Bow middle arrow explodes 0.05s faster (.15s -> .1s)
+- Anti-Ice Bow side arrows explodes 0.05s slower (.15s -> .2s)
+- Anti-Ice Bow arrows now all shoot in the same direction
+- Anti-Ice Bow side arrows spawn further out to the side (can't spawn in a wall)
+- Anti-Ice Bow tnt spawns 0.5 blocks up and has no gravity
+- Snowman shot is now a projectile (moves 25 blocks per second) [can be blocked]
+- Snowman shots now detect 1.5s faster and has smaller aim assist for first 1.5 blocks [quality of life / bug fix]
+    - Should fix cases where snowman misses blocks directly in front of it or hits the wrong ones
+- Snowman shots now exactly alligned with where player is facing
+- Snowman takes 0.15s shorter to start firing (.35s -> 0.2s)
+- Snowman takes 0.05s longer between shots (0.35s -> 0.4s)
+- Improved Snowman shot visual
+- Trident reworked
+   - Now summons one tnt and pushes players back
+   - Triggers on impact with a player
+   - Explosion creates ice
+- Trident reloads 0.5s faster (6.5s -> 6s)
+- Trident takes 3.5s to reload at start of match
+- Trident has more SFX
+- Ice Suck takes 2.75s longer to reload (9.25s -> 12s)
+- Ice Suck reload announced to spectators
+- Ice Suck platform lasts 2.5s shorter (5s base -> 2.5s base) [note: +1 tick per ice sucked]
+- Shift cooldown 1.4s longer (3s -> 4.4s)
+- Shift tnt fuse 0.05s longer (.1s -> .15s) [tnt no longer has gravity]
+- Fload has 0.8s cooldown between uses [quality of life]
+- Ice placing moves no longer replace carpets,ladders,snow,and plants (breaks them)
+- "Cold Bomb" renamed "Frosty Poppy"
+- Frosty Poppy explodes after 1.2s if it lands near an emery (4 blocks)
+
+[Map]
+- Grass and flowers reduced on "Flower Temple" (to improve gameplay)
+- Packed ice on FrostBite converted to blue ice (due to Shard changes)
+
+[Particle]
+- Added Lectern in lobby where you can select any particles you have found
+- Added achievement for finding all particles. Can you get them all?
+- Added "Cherry"
+- Added "Consumption"
+- Added "SPEEDOMETER"
+- Added "Wake"
+- Added "Clock"
+- Added "Goomb"
+- Added "Lost Spirit"
+- "Flame" visual improvement
+- "Poof" visual improvement
+- "Magic" prevents particles from spawning around face
+- "Cloudy" prevents particles from spawning around face
+- "Notes" visual improvement
+- "Dark Magic" prevents particles from spawning around face
+- "Champion" visual improvements and prevents particles from spawning around face
+- "Ocean Man" prevents particles from spawning around face
+- "Prometheus" visual improvements and prevents particles from spawning around face
+- "Hearts" visual improvements and prevents particles from spawning around face
+- "Space" visual improvements and prevents particles from spawning around face
+- "Glitch" visual improvements and prevents particles from spawning around face
+- "Radiant" visual improvements and prevents particles from spawning around face
+- "Soul" prevents particles from spawning around face
+- "Overpowered" visual improvements and prevents particles from spawning around face
+- "3rd Place Party" timing fix
+
+[Bug Fixes]
+- Fixed 1.20 issue where menu signs stopped working
+- Fixed a wide spanning amount of issues where some projectiles/items did not get reset between rounds
+- Fixed issue with placable surfaces being buggy and inconsistent across items (now all intended sufaces are placeable)
+- Fixed 1.18 issue where projectiles that would collide with void no longer collided with void
+- Fixed Wizard shift acting extremely inconsistent
+- Ground Spell would not work on the last two blocks of the stage
+- The achievement for Shard displays the text "Find Overlord" instead of "Find Shard"
+- Overlord shift amount would announce way too many times to spectators
+- Sneak Attack amount bugged for spectator with multiple assassins
+- Reaper and Shard armor did not have unbreaking
+- Overlord could break lobby blocks the tick after game ended
+- Air Nade could be used to break lobby as soon as game ends
+- Fixed bug when players leave world and rejoin, menu may not reset
+- Fixed sneak attack teleporting you to lobby players (lol)
+- Fixed spectators interacting with a variety of moves
+- Switching from Gardner to Overlord/Shard would cause arrows to collide with players and you still
+- Dummies no longer make sound
+- Arena would not properly reset
+- Arena was uneven (end of an era)
+- Tutorial music didn't play
+- Tutorial didn't play for some returning players
+- Skipping tutorial didn't set direction
+- Scythe caused lag
+- Ghost Bow and Mass Lev could break arena wall under rare conditions
+- Mass Levitate, Ghost Bow, and Echo Bow would not break blocks close to arena walls
+- Echo pants stayed on if you switched characters in lobby
+- Plaguing players gave them "Scythe Begone" item instead of "Reload Lives" (no gameplay effect)
+- Spectating trapper would sometimes bug its arrows
+- Name visible for "Carrot on a stick"
+- Assassin Magic Star count and timing sometimes was wrong at start of round
+- Viewing tutorial after selecting a team buged team mode
+- Blue Team wrong color in points scoreboard
+- Team lives didn't disappear after all members of a team died
+- Winng survival in teams mode would give points to players, not teams
+- Winng survival would sometimes give the "Game Over" text as well
+- Survival mode mobs could spawn on Tremor walls
+- Phantom mode powerups could spawn on Tremor walls
+- Lobby items could be duped
+- Overlord could get chicken bow in Phantom Mode despite not having a bow
+- "Whoo" firework would get stuck if shard totem wasn't activated
+- RANDOM class sign incorrectly light gray
+- Achievement roots would display when you joined the world for the first time
+- New minecraft items appeared as craftable recipes
+- Old recipe/achievement disabling system replaced with newer cleaner one (world loads faster)
+- In rare cases, menu could be disabled while game was not active
+- Gardener grave traps/mines/and overlord wand could be duped
+- Golden apple was visible as an item during the tutorial
+- Bug where sound would be cut off while playing game
+- "Click for future events" sign broken (now links to discord)

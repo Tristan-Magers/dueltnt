@@ -1,0 +1,6 @@
+{
+    "values" : [
+        "game:main",
+        "delta:internal/technical/tick"
+    ]
+}

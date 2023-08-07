@@ -4,8 +4,11 @@ execute as @s[scores={Lives=..6}] at @s run playsound minecraft:ui.cartography_t
 execute as @s[scores={Lives=..6}] at @s run playsound minecraft:entity.elder_guardian.death master @s ~ ~ ~ 1 2
 execute as @s[scores={Lives=..6}] at @s run playsound minecraft:entity.player.levelup master @s ~ ~ ~ .4 .8
 
+execute as @s[scores={Lives=..6}] at @s run function game:player/class_team
 execute as @s[scores={Lives=..6}] at @s run tellraw @a [{"selector":"@s"},{"text":" used ","color":"gray","bold":false},{"text":"Extra Life","color":"red","bold":true}]
 
 scoreboard players add @s[scores={Lives=..6}] Lives 1
+
+function game:ui/name_markers
 
 clear @s bread

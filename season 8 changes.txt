@@ -67,7 +67,6 @@ Trapper
 - Fast Arrows go 15% slower (+100% -> +70%)
 - Fast Trap resets entire bow reload countdown
 - Fast Trap causes first arrow to reload .2s slower (1.45s)
-- First arrow reloads in 2.5s if empty
 - Platform stops your motion
 - Platform reloads 7.5s slower (6s -> 13.5s)
 - Spectators told when platform reloads
@@ -262,3 +261,55 @@ Shard
 [Backend]
 - Optimized a large amount of moves and functions
 - Fixed bugs for Spigot/Paper servers
+
+*Patch 8.2 Update*
+
+Notes: a focus on not just balance, but improvement
+to general strategic enjoyment and counter-play,
+espcially in relation to the layout of the stage
+
+[Character Changes]
+
+Ghost
+- Smoke Bomb's second TNT explodes 0.05s slower (0.8s -> 0.85s) (now 0.15s after first)
+
+Trapper
+- Arrow TNT explodes 0.1s slower (0.1s -> 0.2s) (all bow types)
+- Short Blast TNT explodes 0.05s slower (0.1s -> 0.15s)
+- Added "Time Bomb"
+	- Reverses time of players hit (2 seconds in 1 second) (slows hit players)
+	- Gives Slowness 2 for 2 seconds
+	- 3.3 block range
+	- Triggers .35s after hitting ground
+	- Will stun the player who used it (slowness 3, 2s; blindness 2s)
+	- Gives 1 second of slow falling to user
+- Track Bomb switches between itself and Time Bomb
+	- 2.5s to Time Bomb, 7.5s to Track Bomb (previously 10s)
+- Switched Platform and Track Bomb slots
+
+Reaper
+- Placing Creepers pushes them in the direction you are facing
+- Placing Slimes pushes them in the direction you are facing
+- Creepers thrown have a max downwards angle of 45 degrees
+- Slimes thrown have a max downwards angle of 45 degrees
+- Creepers thrown only make  1 explosion (previously 2)
+- Creepers placed on ground make 3 explosions (priously 2)
+	- .15s and .25s after explosion (previously .2s)
+- Thrown Slimes grow 2 less sizes (max 7) (keeping all the same timing)
+- Placed Slimes grow 1 extra size (max 10)
+- Placed Slimes create 1 extra tnt (2 -> 3)
+- Placed Slimes grow later and more rapidly
+- Placed Slimes explode 1.35s faster (2.95s -> 1.6s)
+
+Overlord
+- Matter Bomb costs 1 more (7 -> 8)
+
+Shard
+- Anti-Ice Bow middle arrow explodes 0.05s faster (.15s -> .1s)
+- Anti-Ice Bow side arrows explodes 0.05s slower (.15s -> .2s)
+
+[Particle]
+- Timing fix to "3rd Place Party"
+
+[Bug Fixes]
+- Fixed 1.18 issue where projectiles that would collide with void no longer collided with void

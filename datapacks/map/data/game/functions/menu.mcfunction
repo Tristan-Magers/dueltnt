@@ -15,11 +15,23 @@ kill @e[type=arrow,x=496,y=20,z=520,distance=..60]
 clear @a[gamemode=adventure,x=496,y=20,z=520,distance=..80,scores={lobby=2}]
 scoreboard players add @a[x=500,y=20,z=500,distance=..80] lobby 1
 scoreboard players set @a[x=620,y=30,z=620,distance=..90] lobby 0
+xp add @a[scores={lobby=1..20},x=500,y=20,z=500,distance=..80] -100 levels
 effect clear @a[scores={lobby=1..20},x=500,y=20,z=500,distance=..80] jump_boost
 effect clear @a[scores={lobby=1..20},x=500,y=20,z=500,distance=..80] speed
-title @a[scores={lobby=49..},x=500,y=20,z=500,distance=..80] title {"text":""}
+effect clear @a[scores={lobby=1..20},x=500,y=20,z=500,distance=..80] minecraft:regeneration
+tag @a[scores={lobby=2},x=500,y=20,z=500,distance=..80,tag=!logo] add delay_items
+tag @a[scores={lobby=75},x=500,y=20,z=500,distance=..80] remove delay_items
+execute as @a[scores={lobby=2},x=500,y=20,z=500,distance=..80,tag=!logo] at @s run playsound minecraft:entity.lightning_bolt.impact master @s ~ ~ ~ 0.7 0
+execute as @a[scores={lobby=2},x=500,y=20,z=500,distance=..80,tag=!logo] at @s run playsound minecraft:entity.lightning_bolt.thunder master @s ~ ~ ~ 0.6 0.6
+title @a[scores={lobby=2},x=500,y=20,z=500,distance=..80,tag=!logo] times 20 25 35
+title @a[scores={lobby=2},x=500,y=20,z=500,distance=..80,tag=!logo] title [{"translate":"\u000c","font":"title"}]
+tag @a[scores={lobby=2},x=500,y=20,z=500,distance=..80,tag=!logo] add logo
+#title @a[scores={lobby=1},x=500,y=20,z=500,distance=..80] title {"text":""}
+title @a[scores={lobby=2},x=500,y=20,z=500,distance=..80] actionbar {"text":""}
+title @a[scores={lobby=100},x=500,y=20,z=500,distance=..80] title {"text":""}
 scoreboard players set @a[x=0,y=30,z=0,distance=..190] lobby 0
 scoreboard players set @a[x=496,y=20,z=520,distance=..60] Y 30
+kill @e[type=minecraft:potion,x=496,y=20,z=520,distance=..60]
 kill @e[type=minecraft:fireball,x=496,y=20,z=520,distance=..60]
 kill @e[tag=mastertnt,x=496,y=20,z=520,distance=..60]
 execute as @a[x=496,y=20,z=520,distance=..60] at @s run attribute @p minecraft:generic.movement_speed base set .1
@@ -68,7 +80,7 @@ execute as @e[name=menu,scores={RoundType=2}] at @s run function game:menu/crdis
 
 #Instant start
 execute as @e[name=menu,tag=instant] at @s run function game:instantstart
-execute as @e[name=menu,scores={instant=1}] at @s run scoreboard players set @e[type=armor_stand,scores={timer=3..}] timer 2
+execute as @e[name=menu,scores={instant=1}] at @s run scoreboard players set @e[type=armor_stand,scores={timer=3..},tag=timer] timer 3
 
 #teams
 tag @a[tag=green] remove Sgreen
@@ -99,11 +111,11 @@ execute if entity @e[name=menu,type=armor_stand,scores={Opt=3}] run function gam
 execute if entity @e[name=menu,type=armor_stand,scores={Opt=2}] run function game:menu/options
 
 #Team Buttons
-execute if entity @e[name=menu,type=armor_stand,scores={Team=3}] run data merge block 475 16 495 {Text2:"{\"text\":\"Teams\",\"bold\":false,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"scoreboard players set @e[name=menu,type=armor_stand] Team 2\"}}",Text3:"{\"text\":\"[disabled]\",\"color\":\"dark_red\",\"bold\":true}"}
+execute if entity @e[name=menu,type=armor_stand,scores={Team=3}] run data merge block 475 16 495 {front_text:{messages:["[{\"text\":\"\"}]","{\"text\":\"Teams\",\"bold\":false,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"scoreboard players set @e[name=menu,type=armor_stand] Team 2\"}}","{\"text\":\"[disabled]\",\"color\":\"dark_red\",\"bold\":true}","[{\"text\":\"\"}]"]}}
 execute if entity @e[name=menu,type=armor_stand,scores={Team=3}] run playsound minecraft:entity.armor_stand.fall master @a 475 18 497 .6 .9
 execute if entity @e[name=menu,type=armor_stand,scores={Team=3}] run scoreboard players set @e[name=menu,type=armor_stand] Team 0
 
-execute if entity @e[name=menu,type=armor_stand,scores={Team=2}] run data merge block 475 16 495 {Text2:"{\"text\":\"Teams\",\"bold\":false,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"scoreboard players set @e[name=menu,type=armor_stand] Team 3\"}}",Text3:"{\"text\":\"[enabled]\",\"color\":\"dark_green\",\"bold\":true}"}
+execute if entity @e[name=menu,type=armor_stand,scores={Team=2}] run data merge block 475 16 495 {front_text:{messages:["[{\"text\":\"\"}]","{\"text\":\"Teams\",\"bold\":false,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"scoreboard players set @e[name=menu,type=armor_stand] Team 3\"}}","{\"text\":\"[enabled]\",\"color\":\"dark_green\",\"bold\":true}","[{\"text\":\"\"}]"]}}
 execute if entity @e[name=menu,type=armor_stand,scores={Team=2}] run playsound minecraft:entity.armor_stand.fall master @a 475 18 497 .6 .9
 execute if entity @e[name=menu,type=armor_stand,scores={Team=2}] run clone 459 3 491 459 3 489 475 18 494
 execute if entity @e[name=menu,type=armor_stand,scores={Team=2}] run scoreboard players set @e[name=menu,type=armor_stand] Team 1
@@ -126,19 +138,71 @@ tag @e[name=Map,tag=laddert] add ladder
 tag @e[name=Map,tag=laddert] remove laddert
 
 #particle sound
+scoreboard players enable @a particle_trigger
+
+execute if score .part_6 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=6}] particle_trigger 0
+execute if score .part_7 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=7}] particle_trigger 0
+execute if score .part_8 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=8}] particle_trigger 0
+execute if score .part_9 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=9}] particle_trigger 0
+execute if score .part_10 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=10}] particle_trigger 0
+execute if score .part_11 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=11}] particle_trigger 0
+execute if score .part_12 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=12}] particle_trigger 0
+execute if score .part_13 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=13}] particle_trigger 0
+execute if score .part_14 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=14}] particle_trigger 0
+execute if score .part_15 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=15}] particle_trigger 0
+execute if score .part_16 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=16}] particle_trigger 0
+execute if score .part_17 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=17}] particle_trigger 0
+execute if score .part_18 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=18}] particle_trigger 0
+execute if score .part_19 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=19}] particle_trigger 0
+execute if score .part_20 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=20}] particle_trigger 0
+execute if score .part_21 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=21}] particle_trigger 0
+execute if score .part_22 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=22}] particle_trigger 0
+execute if score .part_23 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=23}] particle_trigger 0
+execute if score .part_24 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=24}] particle_trigger 0
+execute if score .part_25 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=25}] particle_trigger 0
+execute if score .part_26 .part_unlock matches 0 run scoreboard players set @a[scores={particle_trigger=26}] particle_trigger 0
+
+scoreboard players set @a[scores={particle_trigger=27..}] particle_trigger 0
+
+execute as @a[scores={particle_trigger=1..}] at @s run scoreboard players operation @s particle = @s particle_trigger
+
 scoreboard players set @a partTest 0
 execute as @a at @s run scoreboard players operation @s partTest += @s particle
 execute as @a at @s run scoreboard players operation @s partTest -= @s partPast
-execute as @a[scores={partTest=1..}] at @s run playsound minecraft:block.wooden_pressure_plate.click_off master @s ~ ~ ~ .5 1.3
-execute as @a[scores={partTest=..-1}] at @s run playsound minecraft:block.wooden_pressure_plate.click_off master @s ~ ~ ~ .5 1.3
+execute as @a[scores={partTest=1..}] at @s run function game:player/dif_particle
+execute as @a[scores={partTest=..-1}] at @s run function game:player/dif_particle
 execute as @a at @s run scoreboard players operation @s partPast = @s particle
+
+scoreboard players set @a particle_trigger 0
+
+#lab
+stopsound @a * minecraft:block.water.ambient
+
+execute if score .lab_spawn .data matches 1.. run scoreboard players remove .lab_spawn .data 1
+
+execute if score .lab_spawn .data matches ..0 if block 498 12 503 minecraft:oak_button[powered=true] run function game:menu/lab_new
+
+execute if score .lab_spawn .data matches 110 run setblock 498 12 503 air destroy
+execute if score .lab_spawn .data matches 1 run setblock 498 12 503 minecraft:oak_button[facing=south,powered=false,face=floor] keep
+
+scoreboard players add @e[type=minecraft:chicken,x=504.5,y=12,z=503.5,distance=..3,tag=lab] t1 1
+
+execute as @e[type=minecraft:chicken,x=504.5,y=12,z=503.5,distance=..3,tag=lab,scores={t1=40}] at @s run function game:menu/lab_transition
+
+scoreboard players add @e[tag=lab_result] t1 1
+
+execute as @e[tag=lab_result,scores={t1=20..}] at @s run particle minecraft:explosion ~ ~0.5 ~ 0.5 0.5 0.5 0 15 force
+execute as @e[tag=lab_result,scores={t1=20..}] at @s run playsound minecraft:block.lava.extinguish master @a ~ ~ ~ 0.5 1.5
+
+tag @e[tag=lab_result,scores={t1=20..}] add kill_this
 
 #disable settings while game is in play
 tag @e[name=Map,type=armor_stand,limit=1] remove removeset
 execute if entity @e[type=player,distance=..100,x=600,y=60,z=600,gamemode=adventure] run tag @e[name=Map,type=armor_stand,limit=1] add removeset
+execute if entity @e[type=player,distance=..100,x=600,y=60,z=600,gamemode=spectator,tag=countdown] run tag @e[name=Map,type=armor_stand,limit=1] add removeset
 
 #execute as @e[name=Map,type=armor_stand,limit=1,tag=removeset,tag=!removesett] run function game:menu/setdisable
-execute as @e[name=Map,type=armor_stand,limit=1,tag=!removeset,tag=removesett] run schedule function game:menu/setenable 5t
+#execute as @e[name=Map,type=armor_stand,limit=1,tag=!removeset,tag=removesett] run schedule function game:menu/setenable 20t
 
 tag @e[name=Map,type=armor_stand,limit=1,tag=removeset] add removesett
 tag @e[name=Map,type=armor_stand,limit=1,tag=!removeset] remove removesett

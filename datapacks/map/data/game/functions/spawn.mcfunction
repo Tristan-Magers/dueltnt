@@ -1,4 +1,11 @@
+#
+effect clear @a slow_falling
+effect clear @a slowness
+effect clear @a darkness
+effect clear @a blindness
+effect clear @a invisibility
 
+#
 execute as @e[name=Map,type=armor_stand,scores={game=1}] at @s run tp @e[sort=random,limit=1,x=600,y=60,z=600,distance=..3,gamemode=adventure] 627 18 614 90 0
 execute as @e[name=Map,type=armor_stand,scores={game=1}] at @s run tp @e[sort=random,limit=1,x=600,y=60,z=600,distance=..3,gamemode=adventure] 611 19 618 -90 0
 execute as @e[name=Map,type=armor_stand,scores={game=1}] at @s run tp @e[sort=random,limit=1,x=600,y=60,z=600,distance=..3,gamemode=adventure] 616 22 629 -180 0

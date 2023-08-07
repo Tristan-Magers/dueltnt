@@ -1,6 +1,6 @@
 # summoning entities
 execute positioned 0.0 0.0 0.0 run summon minecraft:area_effect_cloud ^ ^ ^2 {UUIDLeast:0L,UUIDMost:0L,Duration:1}
-execute anchored eyes run summon minecraft:arrow ^-.25 ^ ^0.1 {Tags:["arrow_new","farrowt"],Color:-1,damage:6.0d}
+execute anchored eyes positioned ^-.45 ^ ^ if block ~ ~ ~ air run summon minecraft:arrow ^ ^ ^ {Tags:["arrow_new","farrowt"],Color:-1,damage:6.0d}
 
 # writing uuid data 
 data modify storage proj arrow.OwnerUUIDMost set from entity @s UUIDMost

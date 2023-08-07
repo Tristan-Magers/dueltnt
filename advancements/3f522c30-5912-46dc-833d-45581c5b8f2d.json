@@ -1,1 +1,27 @@
-{}
+{
+  "delta:player_setup": {
+    "criteria": {
+      "requirement": "2023-03-06 01:11:04 +0000"
+    },
+    "done": true
+  },
+  "classes:root": {
+    "criteria": {
+      "warrior": "2022-03-15 03:52:41 +0000"
+    },
+    "done": true
+  },
+  "survival:root": {
+    "criteria": {
+      "warrior": "2022-03-15 03:52:41 +0000"
+    },
+    "done": true
+  },
+  "classes:class6": {
+    "criteria": {
+      "reaper": "2022-03-15 04:14:05 +0000"
+    },
+    "done": true
+  },
+  "DataVersion": 3218
+}

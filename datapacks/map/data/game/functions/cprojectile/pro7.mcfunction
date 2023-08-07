@@ -10,7 +10,7 @@ item replace entity @s[nbt={SelectedItemSlot:1}] hotbar.1 with minecraft:golden_
 item replace entity @s[nbt={SelectedItemSlot:2}] hotbar.2 with minecraft:golden_hoe{display:{Name:"{\"italic\":false,\"text\":\"§6Recharging..\"}"},AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
 tag @s[nbt=!{SelectedItemSlot:2}] remove boomshard
 
-scoreboard players set @s[gamemode=adventure,scores={blastwandtime=80..},nbt={SelectedItemSlot:2}] blastwandtime 50
+scoreboard players set @s[gamemode=adventure,scores={blastwandtime=80..},nbt={SelectedItemSlot:2}] blastwandtime 55
 
 playsound minecraft:entity.skeleton.shoot master @a ~ ~ ~ 1 0
 

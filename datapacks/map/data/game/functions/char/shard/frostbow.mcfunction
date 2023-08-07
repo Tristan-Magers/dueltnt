@@ -45,6 +45,7 @@ scoreboard players operation @s mag *= @s mult
 
 execute store result entity @e[tag=farrowt,limit=1] Motion[0] double -.00001 run scoreboard players get @s mag
 
+tag @e[tag=farrowt] add sidearrow
 tag @e[tag=farrowt] remove farrowt
 
 #left arrow
@@ -66,6 +67,7 @@ scoreboard players operation @s mag *= @s mult
 
 execute store result entity @e[tag=farrowt,limit=1] Motion[0] double -.00001 run scoreboard players get @s mag
 
+tag @e[tag=farrowt] add sidearrow
 tag @e[tag=farrowt] remove farrowt
 
 kill @e[tag=frostmark]

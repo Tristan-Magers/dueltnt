@@ -15,9 +15,11 @@ scoreboard players set @s[scores={blastdur=6..}] blastdur 6
 scoreboard players set @s[scores={blastdur=1}] blastwandtime 2
 scoreboard players set @s[scores={blastdur=2}] blastwandtime 4
 scoreboard players set @s[scores={blastdur=3}] blastwandtime 8
-scoreboard players set @s[scores={blastdur=4}] blastwandtime 14
-scoreboard players set @s[scores={blastdur=5}] blastwandtime 20
+scoreboard players set @s[scores={blastdur=4}] blastwandtime 13
+scoreboard players set @s[scores={blastdur=5}] blastwandtime 19
 scoreboard players set @s[scores={blastdur=6..}] blastwandtime 105
+
+#(0.1s, 0.2s, 0.4s, 0.65s, 0.95s, 1.2s)
 
 clear @s[scores={blastdur=6..}] stone_hoe
 

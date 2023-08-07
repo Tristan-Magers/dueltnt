@@ -1,9 +1,10 @@
-scoreboard players operation @s tDirX = @s DirX
-execute as @s at @s positioned ^ ^1 ^ run function game:physics/xmove
-scoreboard players operation @s tDirZ = @s DirZ
-execute as @s at @s positioned ^ ^1 ^ run function game:physics/zmove
+scoreboard players add @s t4 1
+
 scoreboard players operation @s tDirY = @s DirY
-execute as @s at @s positioned ^ ^1 ^ run function game:physics/ymove
+scoreboard players operation @s tDirX = @s DirX
+scoreboard players operation @s tDirZ = @s DirZ
+
+execute unless entity @s[scores={tDirX=0,tDirY=0,tDirZ=0}] as @s at @s positioned ^ ^1 ^ run function game:physics/card_move
 
 execute as @s at @s run particle poof ^ ^1 ^ 0 0 0 0 2
 

@@ -1,6 +1,12 @@
-execute as @s at @s run function game:cprojectile/getdir2
+execute as @s[x_rotation=70..100] at @s run tp @s ~ ~ ~ ~ 70
 
-summon minecraft:creeper ~ ~1 ~ {Tags:["creeppro","newcreeper"],ignited:1,Fuse:17,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"{\"italic\":false,\"text\":\"Bomb\"}",Health:500,powered:1,ExplosionRadius:2}
+execute as @s at @s run function game:cprojectile/getdir4
+
+summon minecraft:creeper ~ ~1 ~ {Tags:["creeppro","newcreeper","nodub"],ignited:1,Fuse:17,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"{\"italic\":false,\"text\":\"Bomb\"}",Health:500,powered:1,ExplosionRadius:2}
+
+effect give @e[tag=newcreeper,distance=..2] slow_falling 999 0 true
+
+#scoreboard players set @s[scores={DirY=..-80}] DirY -80
 
 scoreboard players add @s DirY 20
 execute unless entity @e[scores={mode=1}] run execute as @s at @s run execute store result entity @e[tag=newcreeper,distance=..2,limit=1] Motion[0] double .0082 run scoreboard players get @s DirX

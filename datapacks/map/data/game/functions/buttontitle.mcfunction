@@ -1,3 +1,5 @@
+scoreboard players set @s[type=armor_stand,scores={timer=180..}] timer 180
+
 data merge entity @s[type=armor_stand,scores={timer=300}] {CustomName:"{\"text\":\"15\"}",CustomNameVisible:1b}
 data merge entity @s[type=armor_stand,scores={timer=280}] {CustomName:"{\"text\":\"14\"}",CustomNameVisible:1b}
 data merge entity @s[type=armor_stand,scores={timer=260}] {CustomName:"{\"text\":\"13\"}",CustomNameVisible:1b}

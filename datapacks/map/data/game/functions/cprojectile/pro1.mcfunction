@@ -1,4 +1,4 @@
-scoreboard players set @p Sreload 105
+scoreboard players set @p Sreload 100
 clear iron_hoe
 
 #function game:takeang
@@ -6,6 +6,9 @@ clear iron_hoe
 summon armor_stand ~ ~ ~ {Pose:{RightArm:[90f,40f,0f]},DisabledSlots:4144959,Invisible:1,NoGravity:1,NoAI:1,Invulnerable:1,Size:0,tags:["newS"],CustomName:"{\"text\":\"pro1\"}",ArmorItems:[{},{},{},{}],HandItems:[{id:"iron_hoe",Count:1b},{}],Pose:{LeftArm:[90f,-70f,0f]}}
 tp @e[limit=1,name=pro1,sort=nearest] @p
 execute as @e[limit=1,name=pro1,sort=nearest] at @s run function game:cprojectile/getdir
+
+scoreboard players operation @e[limit=1,name=pro1,sort=nearest] DirY /= .40 .num
+scoreboard players operation @e[limit=1,name=pro1,sort=nearest] DirZ /= .40 .num
 
 scoreboard players add @e[limit=1,name=pro1,sort=nearest] DirX 8
 #scoreboard players set @e[limit=1,name=pro1,sort=nearest] DirZ 0

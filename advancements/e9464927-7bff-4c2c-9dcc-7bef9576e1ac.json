@@ -1,0 +1,21 @@
+{
+  "delta:player_setup": {
+    "criteria": {
+      "requirement": "2023-07-13 21:15:09 +0000"
+    },
+    "done": true
+  },
+  "classes:root": {
+    "criteria": {
+      "warrior": "2023-07-13 21:15:09 +0000"
+    },
+    "done": true
+  },
+  "survival:root": {
+    "criteria": {
+      "warrior": "2023-07-13 21:15:09 +0000"
+    },
+    "done": true
+  },
+  "DataVersion": 3465
+}
