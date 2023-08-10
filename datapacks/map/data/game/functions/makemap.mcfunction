@@ -34,7 +34,7 @@ fill 637 37 637 597 55 597 air
 fill 637 56 637 597 74 597 air
 fill 637 75 637 597 83 597 air
 fill 596 43 596 639 45 639 air
-fill 596 -1 596 639 -2 639 air
+fill 596 -1 596 639 -3 639 air
 
 execute as @e[name=ground,type=armor_stand] at @s run fill ~3 ~1 ~3 ~-3 ~-1 ~-3 air replace end_stone
 kill @e[name=ground,type=armor_stand]

@@ -1,5 +1,5 @@
 execute as @s[scores={particle=1,parttimer=1}] at @s run particle flame ~ ~.2 ~ .3 .12 .3 .03 1 force
-execute as @s[scores={particle=1,parttimer=1}] at @s run particle minecraft:block fire ~ ~.3 ~ .3 .12 .3 .03 1 force
+execute as @s[scores={particle=1,parttimer=2}] at @s run particle minecraft:block fire ~ ~.3 ~ .3 .12 .3 .03 1 force
 execute as @s[scores={particle=2}] at @s positioned ~ ~.05 ~ run particle dust 0.8 0.8 0.8 2.2 ~ ~.2 ~ .15 .1 .15 0.1 1 force
 execute as @s[scores={particle=2,gpart=1}] at @s positioned ~ ~.05 ~ run particle minecraft:block snow ~ ~.2 ~ .4 .05 .4 0 2
 execute as @s[scores={particle=2,gpart=11}] at @s positioned ~ ~.05 ~ run particle minecraft:block snow ~ ~.2 ~ .4 .05 .4 0 2
@@ -18,7 +18,10 @@ execute as @s[scores={particle=9,parttimer=1}] at @s run particle end_rod ~ ~.2 
 execute as @s[scores={particle=9,parttimer=1}] at @s positioned ~ ~1.6 ~ run particle crit ^ ^-0.8 ^-1 1.5 1 1.5 .05 1 force
 execute as @s[scores={particle=9,parttimer=2}] at @s run particle end_rod ~ ~.2 ~ .2 .1 .2 .05 1 force
 execute as @s[scores={particle=9,parttimer=2}] at @s positioned ~ ~1.6 ~ run particle crit ^ ^-0.8 ^-1 1 1 1 .05 1 force
-execute as @s[scores={particle=10}] at @s rotated ~ 0 positioned ^ ^ ^-1 run particle minecraft:totem_of_undying ~ ~1.4 ~ .4 0.6 .4 0 1 force
+execute as @s[scores={particle=10,parttimer=2}] at @s rotated ~ 0 positioned ^ ^ ^-1 run particle minecraft:totem_of_undying ~ ~1.7 ~ .4 0.4 .4 0 1 force
+execute as @s[scores={particle=10,parttimer=3}] at @s rotated ~ 0 positioned ^ ^ ^-1 run particle minecraft:block minecraft:kelp_plant ~ ~1.6 ~ .4 0.4 .4 0 1 force
+execute as @s[scores={particle=10,parttimer=2}] at @s rotated ~ 0 positioned ^0.6 ^ ^-1 run particle dolphin ~ ~1.0 ~ .2 0.5 .2 0 1 force
+execute as @s[scores={particle=10,parttimer=1}] at @s rotated ~ 0 positioned ^-0.6 ^ ^-1 run particle dolphin ~ ~1.0 ~ .2 0.5 .2 0 1 force
 execute as @s[scores={particle=10}] at @s run particle minecraft:rain ~ ~.2 ~ .3 .1 .3 0 1 force
 execute as @s[scores={particle=11,gpart=0}] at @s rotated ~ 0 positioned ^0.65 ^ ^-0.65 run particle minecraft:lava ~ ~.2 ~ .3 .1 .3 0 1 force
 execute as @s[scores={particle=11,gpart=1}] at @s rotated ~ 0 positioned ^-0.65 ^ ^-0.65 run particle minecraft:lava ~ ~.2 ~ .3 .1 .3 0 1 force

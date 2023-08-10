@@ -131,7 +131,7 @@ execute as @a[gamemode=adventure,scores={potion=-200..}] at @s run function game
 #master_wand
 tag @a[gamemode=adventure,tag=!mwnext] remove mwnext2
 tag @a remove mwnext
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={click=1..,class=9,wand_cooldown=..0}] at @s run function game:char/overlord/wandtrigger
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={click=1..,class=9}] at @s run function game:char/overlord/wandtrigger
 scoreboard players remove @a[scores={wand_cooldown=1..}] wand_cooldown 1
 tag @a[gamemode=adventure,tag=mwnext,tag=!mwnext2] add mwnext2
 
@@ -758,7 +758,8 @@ execute as @a[gamemode=adventure] at @s if block ~-.3 ~ ~ barrier run tp @s ~.4 
 #execute as @e[type=tnt,nbt={Fuse:1s}] at @s run scoreboard players operation @p y = @s y
 
 #manage click
-scoreboard players set @a click 0
+scoreboard players set @a[tag=!click_delay] click 0
+tag @a remove click_delay
 
 clear @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] minecraft:carrot_on_a_stick
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] weapon.offhand with minecraft:carrot_on_a_stick

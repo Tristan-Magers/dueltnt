@@ -114,14 +114,14 @@ Wizard
 - Vortex has improved sound and visual
 - Added "Throw Creeper"
     - Replaces "Explode Ghost Creeper" when no creeper out
-    - Causes 1s cooldown on "Explode Ghost Creeper"
+    - Causes 0.9s cooldown on "Explode Ghost Creeper"
     - Thrown Creeper has slowfalling
 - Ghost Creepers self explode after 6s
 - Note: Bug fix where creepers didn't die when they touched the void
 
 Mad Scientist
 - Explosive Gel (bow) reloads 0.15s faster (2.8s -> 2.65s)
-- Explosive Gel (bow) explodes 0.05s faster (0.25s -> 0.2s)
+- Explosive Gel (bow) explodes 0.1s faster (0.25s -> 0.15s)
 - Powershield now has 0.2s longer period where it can't be broken at start (0.4s -> 0.6s)
     - Prevents situations where shield seemingly breaks instantly
 - Gets 1 more TNT Egg (3 -> 4)
@@ -183,7 +183,7 @@ Overlord
     - drains wand and gives 1 matter for every 2 durability, then goes into 2.5s cooldown (0.5s longer than normal) [+4 matter at end of use]
     - 10s cooldown (indicated with sounds and text)
     - The more degraded the wand, the shorter the cooldown on the wand and gather reload. (MAX -0.25s wand, -4s gather)
-- Master Wand has 0.15s cooldown (no gameplay difference) [prevents spam clicking exploit]
+- Master Wand has 0.15s cooldown (no gameplay difference) [prevents spam clicking exploit] [can be buffered]
 - Wand upgrades 0.8-1.2 less with each upgrade but starts 0.8 longer
     - (7,9,11,12.6,14.2 -> 7.8,9.0,10.2,11.4,12.6)
 - Wand Upgrade permanently replaced with matter storm from start
@@ -265,7 +265,7 @@ Shard
 - "Notes" visual improvement
 - "Dark Magic" prevents particles from spawning around face
 - "Champion" visual improvements and prevents particles from spawning around face
-- "Ocean Man" prevents particles from spawning around face
+- "Ocean Man" visual improvements and prevents particles from spawning around face
 - "Prometheus" visual improvements and prevents particles from spawning around face
 - "Hearts" visual improvements and prevents particles from spawning around face
 - "Space" visual improvements and prevents particles from spawning around face

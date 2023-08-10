@@ -5,6 +5,8 @@ tag @s remove end
 
 tag @s remove wand_success
 
+scoreboard players set @s wand_cooldown 4
+
 execute as @s[tag=!end] at @s anchored eyes positioned ^ ^ ^0.2 run function game:char/overlord/masterwandtest
 execute as @s[tag=!end] at @s anchored eyes positioned ^ ^ ^0.6 run function game:char/overlord/masterwandtest
 execute as @s[tag=!end] at @s anchored eyes positioned ^ ^ ^1.0 run function game:char/overlord/masterwandtest

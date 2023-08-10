@@ -106,7 +106,7 @@ execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=!crit,x=620,z=6
 execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=crit,x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s run particle minecraft:poof ~ ~ ~ 1 1 1 0.2 15 force
 
 #scientist bow
-execute unless entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={SciBow=1..}] at @s run summon tnt ~ ~ ~ {Fuse:5,Motion:[0.0,0.23,0.0]}
+execute unless entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={SciBow=1..}] at @s run summon tnt ~ ~ ~ {Fuse:4,Motion:[0.0,0.23,0.0]}
 execute as @s[type=arrow,scores={SciBow=1..}] at @s run playsound minecraft:entity.tnt.primed master @a ~ ~ ~ .4 1.4
 
 #necro bow
