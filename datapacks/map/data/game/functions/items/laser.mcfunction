@@ -1,4 +1,6 @@
-execute as @s[scores={laserDummy=10..}] at @s run tp @s @s
+execute as @s[scores={laserDummy=30}] at @s rotated ~ ~ run summon marker ^ ^ ^ {Tags:["stay_put"]}
+execute as @s[scores={laserDummy=30}] at @s run tp @e[type=marker,tag=stay_put,limit=1,sort=nearest] @s
+execute as @s[scores={laserDummy=10..}] at @s run tp @s @e[type=marker,tag=stay_put,limit=1,sort=nearest]
 execute as @s[scores={laserDummy=10..}] at @s run particle minecraft:enchanted_hit ~ ~1 ~ 0 0 0 1.2 3
 
 execute as @s[scores={laserDummy=30..}] at @s run clear @s rabbit_hide
@@ -17,14 +19,14 @@ execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at 
 execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:entity.firework_rocket.launch master @a[distance=..50] ~ ~ ~ 1 1.2
 
 execute as @s[scores={laserDummy=30}] at @s run summon armor_stand ~ ~ ~ {Tags:["wbeam"]}
-execute as @s[scores={laserDummy=30}] at @s run tp @e[tag=wbeam] @s
+execute as @s[scores={laserDummy=30}] at @s run tp @e[tag=wbeam] @e[type=marker,tag=stay_put,limit=1,sort=nearest]
 execute as @s[scores={laserDummy=30}] at @s run scoreboard players set @e[tag=wbeam] laserDummy 300
 execute as @s[scores={laserDummy=30}] at @s run execute as @e[tag=wbeam] at @s run function game:items/whitebeam
 
 execute as @s[scores={laserDummy=17}] at @s run tag @e remove beamhit
 tag @s[scores={laserDummy=17}] add nohit
 execute as @s[scores={laserDummy=17}] at @s run summon armor_stand ~ ~ ~ {Tags:["wbeam"]}
-execute as @s[scores={laserDummy=17}] at @s run tp @e[tag=wbeam] @s
+execute as @s[scores={laserDummy=17}] at @s run tp @e[tag=wbeam] @e[type=marker,tag=stay_put,limit=1,sort=nearest]
 execute as @s[scores={laserDummy=17}] at @s run scoreboard players set @e[tag=wbeam] laserDummy 300
 execute as @s[scores={laserDummy=17}] at @s run tag @a[gamemode=spectator] add spectest
 execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=wbeam] at @s run function game:items/redbeam
@@ -39,6 +41,7 @@ execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=beamhit,type=g
 execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=beamhit,type=chicken] at @s run function game:items/beamhit
 execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=beamhit,type=slime] at @s run function game:items/beamhit
 execute as @s[scores={laserDummy=17}] at @s run damage @e[tag=beamhit,type=wither,limit=1] 200 minecraft:arrow
+execute as @s[scores={laserDummy=17}] at @s run kill @e[type=marker,tag=stay_put,limit=1,sort=nearest]
 
 execute as @s[scores={laserDummy=-230}] at @s run function game:player/class_team
 execute as @s[scores={laserDummy=-230}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Reloaded ","color":"white"},{"text":"Laser","color":"red","bold":"true"}]
