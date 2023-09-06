@@ -17,8 +17,10 @@ execute if entity @e[scores={mode=1}] run item replace entity @s[nbt=!{Inventory
 execute if entity @e[scores={mode=1}] run item replace entity @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:4b}]},scores={groundtime=..0,grounduse=1}] hotbar.4 with minecraft:red_dye{display:{Name:"{\"italic\":false,\"text\":\"§eGround Spell : Right-click\"}"}} 2
 execute if entity @e[scores={mode=1}] run item replace entity @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:4b}]},scores={groundtime=..0,grounduse=0}] hotbar.4 with minecraft:red_dye{display:{Name:"{\"italic\":false,\"text\":\"§eGround Spell : Right-click\"}"}} 3
 
-clear @s[nbt=!{Inventory:[{id:"minecraft:pink_dye",Slot:2b}]},scores={blastwandtime=89..90}] pink_dye
+clear @s[nbt=!{Inventory:[{id:"minecraft:pink_dye",Slot:2b}]},scores={blastwandtime=89..90}] minecraft:pink_dye{display:{Name:"{\"italic\":false,\"text\":\"§eUnstable Orb §r: Right-click\"}"},AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attackSpeed",Amount:9,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
+item replace entity @s[nbt=!{Inventory:[{id:"minecraft:pink_dye",Slot:2b}]},scores={blastwandtime=89..90}] hotbar.2 with minecraft:pink_dye{display:{Name:"{\"italic\":false,\"text\":\"§eUnstable Orb §r: Right-click\"}"},AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attackSpeed",Amount:9,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
 execute as @s[nbt=!{Inventory:[{id:"minecraft:pink_dye",Slot:2b}]},scores={blastwandtime=89..90}] run scoreboard players set @s blastwandtime 50
 
-clear @s[nbt=!{Inventory:[{id:"minecraft:pink_dye",Slot:1b}]},tag=boomshard,scores={boomwandtime=12..40}] pink_dye
-execute as @s[nbt=!{Inventory:[{id:"minecraft:pink_dye",Slot:1b}]},tag=boomshard,scores={boomwandtime=12..40}] run tag @s remove boomshard
+clear @s[nbt=!{Inventory:[{id:"minecraft:pink_dye",Slot:1b}]},tag=boomshard,scores={boomwandtime=12..54}] minecraft:pink_dye{display:{Name:"{\"italic\":false,\"text\":\"§eUnstable Orb §r: Right-click\"}"},AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
+item replace entity @s[nbt=!{Inventory:[{id:"minecraft:pink_dye",Slot:1b},{id:"minecraft:pink_dye",Slot:2b}]},tag=boomshard,scores={boomwandtime=12..54}] hotbar.1 with minecraft:pink_dye{display:{Name:"{\"italic\":false,\"text\":\"§eUnstable Orb §r: Right-click\"}"},AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
+execute as @s[nbt=!{Inventory:[{id:"minecraft:pink_dye",Slot:1b}]},tag=boomshard,scores={boomwandtime=12..54}] run tag @s remove boomshard
