@@ -2,23 +2,18 @@
 #   Launches the player in the input direction
 #
 # Inputs:
-#   executed as player at player's position
 #   execute rotated <desired direction>
 #   score $strength delta.api.launch       <<< Strength to launch in looking direction (scaled up by 10000)
 #
 # Outputs
 #   player is launched in the looking direction of the command with the desired strength
 
-#Set up bat + arrow to trigger advancement immediately before explosion
-function delta:internal/subtick/begin_launch_context
+#Flag indicating that players need to be launched, tag the player to be launched
+scoreboard players set $function_called delta.internal.dummy 1
+tag @s add delta.launch
 
-#Figure out offset angle to get reduced motion
-function delta:internal/math/get_angle
+execute as d59ee2c6-58c8-4885-b9db-ecff066e4439 in minecraft:overworld positioned 0.0 0.0 0.0 run function delta:internal/math/polar_to_xyz
 
-#Summon creepers
-execute anchored eyes positioned ^ ^ ^ as @e[type=marker,tag=delta.temp_marker] run function delta:internal/summon/summon_creepers
-scoreboard players operation $temp delta.internal.id = @s delta.internal.id
-execute as @e[type=creeper,tag=delta.init] at @s run function delta:internal/summon/initialize_creepers
-
-#Set up bat + arrow to trigger advancement immediately after explosion
-function delta:internal/subtick/end_launch_context
+scoreboard players operation @s delta.internal.x += $out delta.internal.x
+scoreboard players operation @s delta.internal.y += $out delta.internal.y
+scoreboard players operation @s delta.internal.z += $out delta.internal.z
