@@ -10,7 +10,7 @@ execute as @s[scores={TBtimer=239}] at @s run summon minecraft:armor_stand ~ ~ ~
 execute as @s[scores={TBtimer=239}] at @s run scoreboard players operation @e[distance=..0.1,limit=1,tag=tnttrack] tntID = @s tntID
 execute as @s[scores={TBtimer=239}] at @s run tp @e[distance=..0.1,limit=1,tag=tnttrack] @p
 
-execute as @s[x=620,y=20,z=620,distance=..100,scores={TBtimer=-1}] at @s run item replace entity @s hotbar.3 with minecraft:emerald{CustomPotionColor:0,CustomPotionEffects:[{Id:25,Amplifier:2,Duration:55},{Id:15,Amplifier:1,Duration:75},{Id:24,Amplifier:1,Duration:65}],display:{Name:"{\"italic\":false,\"text\":\"§bPhantom Blocks §r: Right-click\"}"}}
+execute as @s[x=620,y=20,z=620,distance=..100,scores={TBtimer=-1}] at @s run item replace entity @s hotbar.3 with minecraft:emerald{CustomPotionColor:0,custom_potion_effects:[{Id:25,Amplifier:2,Duration:55},{Id:15,Amplifier:1,Duration:75},{Id:24,Amplifier:1,Duration:65}],display:{Name:"{\"italic\":false,\"text\":\"§bPhantom Blocks §r: Right-click\"}"}}
 
-execute as @s[x=620,y=20,z=620,distance=..100,scores={TBtimer=1000}] at @s run item replace entity @s hotbar.3 with minecraft:redstone{CustomPotionColor:0,CustomPotionEffects:[{Id:25,Amplifier:2,Duration:55},{Id:15,Amplifier:1,Duration:75},{Id:24,Amplifier:1,Duration:65}],display:{Name:"{\"italic\":false,\"text\":\"§cTracking Bomb §r: Right-click\"}"}}
+execute as @s[x=620,y=20,z=620,distance=..100,scores={TBtimer=1000}] at @s run item replace entity @s hotbar.3 with minecraft:redstone{CustomPotionColor:0,custom_potion_effects:[{Id:25,Amplifier:2,Duration:55},{Id:15,Amplifier:1,Duration:75},{Id:24,Amplifier:1,Duration:65}],display:{Name:"{\"italic\":false,\"text\":\"§cTracking Bomb §r: Right-click\"}"}}
 scoreboard players set @s[x=620,y=20,z=620,distance=..100,scores={TBtimer=1000}] TBtimer -1000

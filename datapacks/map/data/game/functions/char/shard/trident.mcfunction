@@ -30,12 +30,12 @@ execute as @s[scores={t1=-500..500,t2=-1500..1500,t3=-1500..1500}] at @s positio
 execute as @s[scores={t1=-500..500,t2=-1500..1500,t3=-1500..1500}] at @s positioned ~ ~-1 ~ if entity @e[distance=..2.9,tag=target_trident] run tag @s add boom
 execute as @s[scores={t1=-500..500,t2=-1500..1500,t3=-1500..1500}] at @s positioned ~ ~-2 ~ if entity @e[distance=..2.9,tag=target_trident] run tag @s add boom
 
-execute as @s[tag=boom] at @s run summon slime ~ ~-2.7 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Size:9,Tags:["kill_next"],ActiveEffects:[{Id:14,Amplifier:1b,Duration:10,ShowParticles:0b}]}
-execute as @s[tag=boom] at @s run summon slime ~ ~-2.7 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Size:9,Tags:["kill_next"],ActiveEffects:[{Id:14,Amplifier:1b,Duration:10,ShowParticles:0b}]}
-execute as @s[tag=boom] at @s run summon slime ~ ~-2.9 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Size:10,Tags:["kill_next"],ActiveEffects:[{Id:14,Amplifier:1b,Duration:10,ShowParticles:0b}]}
-execute as @s[tag=boom] at @s run summon slime ~ ~-2.9 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Size:10,Tags:["kill_next"],ActiveEffects:[{Id:14,Amplifier:1b,Duration:10,ShowParticles:0b}]}
-execute as @s[tag=boom] at @s run summon slime ~ ~-3.2 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Size:11,Tags:["kill_next"],ActiveEffects:[{Id:14,Amplifier:1b,Duration:10,ShowParticles:0b}]}
-execute as @s[tag=boom] at @s run summon slime ~ ~-3.2 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Size:11,Tags:["kill_next"],ActiveEffects:[{Id:14,Amplifier:1b,Duration:10,ShowParticles:0b}]}
+execute as @s[tag=boom] at @s run summon slime ~ ~-2.7 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Size:9,Tags:["kill_next"],active_effects:[{Id:14,Amplifier:1b,Duration:10,ShowParticles:0b}]}
+execute as @s[tag=boom] at @s run summon slime ~ ~-2.7 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Size:9,Tags:["kill_next"],active_effects:[{Id:14,Amplifier:1b,Duration:10,ShowParticles:0b}]}
+execute as @s[tag=boom] at @s run summon slime ~ ~-2.9 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Size:10,Tags:["kill_next"],active_effects:[{Id:14,Amplifier:1b,Duration:10,ShowParticles:0b}]}
+execute as @s[tag=boom] at @s run summon slime ~ ~-2.9 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Size:10,Tags:["kill_next"],active_effects:[{Id:14,Amplifier:1b,Duration:10,ShowParticles:0b}]}
+execute as @s[tag=boom] at @s run summon slime ~ ~-3.2 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Size:11,Tags:["kill_next"],active_effects:[{Id:14,Amplifier:1b,Duration:10,ShowParticles:0b}]}
+execute as @s[tag=boom] at @s run summon slime ~ ~-3.2 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Size:11,Tags:["kill_next"],active_effects:[{Id:14,Amplifier:1b,Duration:10,ShowParticles:0b}]}
 
 execute as @s[tag=boom] at @s run particle minecraft:flash ~ ~0.5 ~ 0 0 0 0 1 force
 

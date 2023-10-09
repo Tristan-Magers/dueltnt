@@ -1,30 +1,35 @@
-execute as @s[scores={laserDummy=10..}] at @s run tp @s @s
+execute as @s[scores={laserDummy=30}] at @s rotated ~ ~ run summon marker ~ ~ ~ {Tags:["stay_put"]}
+execute as @s[scores={laserDummy=30}] at @s run tp @e[type=marker,tag=stay_put,limit=1,sort=nearest] @s
+execute as @s[scores={laserDummy=30}] at @s run scoreboard players operation @e[type=marker,tag=stay_put,limit=1,sort=nearest] tntID = @s tntID
+execute as @s[scores={laserDummy=10..}] at @s as @e[type=marker,tag=stay_put] if score @s tntID = @p tntID run tag @s add you_are_my_owner
+execute as @s[scores={laserDummy=10..}] at @s rotated as @e[tag=you_are_my_owner] run tp @e[tag=you_are_my_owner] ~ ~ ~
+execute as @s[scores={laserDummy=10..}] run tp @s @e[tag=you_are_my_owner,sort=nearest,limit=1]
 execute as @s[scores={laserDummy=10..}] at @s run particle minecraft:enchanted_hit ~ ~1 ~ 0 0 0 1.2 3
 
 execute as @s[scores={laserDummy=30..}] at @s run clear @s rabbit_hide
 
 execute as @s[scores={laserDummy=30..}] at @s run effect give @p minecraft:glowing 1 0 true
 
-execute as @s[scores={laserDummy=30}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:item.trident.thunder master @a ~ ~ ~ 1 .7
-execute as @s[scores={laserDummy=30}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:item.trident.riptide_1 master @a ~ ~ ~ 1 0
-execute as @s[scores={laserDummy=30}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:block.conduit.deactivate master @a
+execute as @s[scores={laserDummy=30}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:item.trident.thunder master @s ~ ~ ~ 1 .7
+execute as @s[scores={laserDummy=30}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:item.trident.riptide_1 master @s ~ ~ ~ 1 0
+execute as @s[scores={laserDummy=30}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:block.conduit.deactivate master @s
 
-execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:block.beacon.deactivate master @a ~ ~ ~ 1 2
-execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:block.gravel.break master @a ~ ~ ~ 1 2
-execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:block.grass.break master @a ~ ~ ~ 1 0
-execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:entity.firework_rocket.twinkle master @a[distance=..50] ~ ~ ~ 1 2
-execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:entity.firework_rocket.blast master @a[distance=..50] ~ ~ ~ 1 0
-execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:entity.firework_rocket.launch master @a[distance=..50] ~ ~ ~ 1 1.2
+execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:block.beacon.deactivate master @s ~ ~ ~ 1 2
+execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:block.gravel.break master @s ~ ~ ~ 1 2
+execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:block.grass.break master @s ~ ~ ~ 1 0
+execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:entity.firework_rocket.twinkle master @s[distance=..50] ~ ~ ~ 1 2
+execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:entity.firework_rocket.blast master @s[distance=..50] ~ ~ ~ 1 0
+execute as @s[scores={laserDummy=17}] at @s run execute as @a[distance=..80] at @s run playsound minecraft:entity.firework_rocket.launch master @s[distance=..50] ~ ~ ~ 1 1.2
 
-execute as @s[scores={laserDummy=30}] at @s run summon armor_stand ~ ~ ~ {Tags:["wbeam"]}
-execute as @s[scores={laserDummy=30}] at @s run tp @e[tag=wbeam] @s
+execute as @s[scores={laserDummy=30}] at @s run summon marker ~ ~ ~ {Tags:["wbeam"]}
+execute as @s[scores={laserDummy=30}] at @s run tp @e[tag=wbeam,limit=1] @s
 execute as @s[scores={laserDummy=30}] at @s run scoreboard players set @e[tag=wbeam] laserDummy 300
 execute as @s[scores={laserDummy=30}] at @s run execute as @e[tag=wbeam] at @s run function game:items/whitebeam
 
 execute as @s[scores={laserDummy=17}] at @s run tag @e remove beamhit
 tag @s[scores={laserDummy=17}] add nohit
-execute as @s[scores={laserDummy=17}] at @s run summon armor_stand ~ ~ ~ {Tags:["wbeam"]}
-execute as @s[scores={laserDummy=17}] at @s run tp @e[tag=wbeam] @s
+execute as @s[scores={laserDummy=17}] at @s run summon marker ~ ~ ~ {Tags:["wbeam"]}
+execute as @s[scores={laserDummy=17}] at @s run tp @e[tag=wbeam,limit=1] @e[tag=you_are_my_owner,limit=1,sort=nearest]
 execute as @s[scores={laserDummy=17}] at @s run scoreboard players set @e[tag=wbeam] laserDummy 300
 execute as @s[scores={laserDummy=17}] at @s run tag @a[gamemode=spectator] add spectest
 execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=wbeam] at @s run function game:items/redbeam
@@ -39,9 +44,11 @@ execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=beamhit,type=g
 execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=beamhit,type=chicken] at @s run function game:items/beamhit
 execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=beamhit,type=slime] at @s run function game:items/beamhit
 execute as @s[scores={laserDummy=17}] at @s run damage @e[tag=beamhit,type=wither,limit=1] 200 minecraft:arrow
+execute as @s[scores={laserDummy=10}] at @s run kill @e[type=marker,tag=stay_put,limit=1,sort=nearest]
 
 execute as @s[scores={laserDummy=-230}] at @s run function game:player/class_team
 execute as @s[scores={laserDummy=-230}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Reloaded ","color":"white"},{"text":"Laser","color":"red","bold":"true"}]
 item replace entity @s[scores={laserDummy=-230}] hotbar.4 with rabbit_hide{display:{Name:"{\"italic\":false,\"text\":\"§4Laser §r: Right-click\"}"}}
 
+tag @e remove im_your_owner
 scoreboard players remove @s laserDummy 1

@@ -10,13 +10,11 @@
 # Outputs
 #   player is launched in the specified direction
 
+#Flag indicating that players need to be launched, tag the player to be launched
+scoreboard players set $function_called delta.internal.dummy 1
+tag @s add delta.launch
 
-#Get looking angle and strength
-summon marker ~ ~ ~ {Tags:["delta.xyz_helper"]}
-execute as @e[type=marker,tag=delta.xyz_helper] run function delta:internal/math/xyz_to_polar_wrapper
+scoreboard players operation @s delta.internal.x += $x delta.api.launch
+scoreboard players operation @s delta.internal.y += $y delta.api.launch
+scoreboard players operation @s delta.internal.z += $z delta.api.launch
 
-#Launch
-execute rotated as @e[type=marker,tag=delta.xyz_helper] run function delta:api/launch_looking
-
-#Kill marker
-kill @e[type=marker,tag=delta.xyz_helper]

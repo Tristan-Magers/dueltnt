@@ -722,8 +722,7 @@ scoreboard players set @a[scores={dive_kick=4..9},nbt={OnGround:1b}] dive_kick 3
 scoreboard players remove @a[scores={dive_kick=-5..}] dive_kick 1
 
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={dive_kick=1..}] at @s run particle minecraft:squid_ink ~ ~ ~ 0 0 0 0 1 force
-
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={dive_kick=0}] at @s run function game:char/assassin/dive_boom
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={dive_kick=-1}] at @s run function game:char/assassin/dive_boom
 
 #darts
 scoreboard players set @e[tag=dart] dart_steps 10
