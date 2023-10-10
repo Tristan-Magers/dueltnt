@@ -1,9 +1,8 @@
-execute as @s[scores={laserDummy=30}] at @s rotated ~ ~ run summon marker ~ ~ ~ {Tags:["stay_put"]}
-execute as @s[scores={laserDummy=30}] at @s run tp @e[type=marker,tag=stay_put,limit=1,sort=nearest] @s
+execute as @s[scores={laserDummy=30}] at @s run summon marker ~ ~ ~ {Tags:["stay_put"]}
+execute as @s[scores={laserDummy=30}] at @s run tp @e[type=marker,tag=stay_put,limit=1] @s
 execute as @s[scores={laserDummy=30}] at @s run scoreboard players operation @e[type=marker,tag=stay_put,limit=1,sort=nearest] tntID = @s tntID
-execute as @s[scores={laserDummy=30}] at @s run scoreboard players operation @e[type=marker,tag=stay_put,limit=1,sort=nearest] tntID = @s tntID
-execute at @s[scores={laserDummy=10..}] as @e[type=marker,tag=stay_put] if score @s tntID = @p tntID run tp @s[tag=you_are_my_owner] ~ ~ ~
-execute at @s[scores={laserDummy=10..}] rotated as @e[tag=you_are_my_owner] if score @s tntID = @p tntID run tp @p @s
+execute at @a[scores={laserDummy=10..29}] as @e[type=marker,tag=stay_put] rotated as @s if score @s tntID = @p tntID run tp @s ~ ~ ~
+execute at @a[scores={laserDummy=10..29}] as @e[type=marker,tag=stay_put] rotated as @s if score @s tntID = @p tntID at @p run tp @p @s
 execute as @s[scores={laserDummy=10..}] at @s run particle minecraft:enchanted_hit ~ ~1 ~ 0 0 0 1.2 3
 
 execute as @s[scores={laserDummy=30..}] at @s run clear @s rabbit_hide
@@ -29,10 +28,10 @@ execute as @s[scores={laserDummy=30}] at @s run execute as @e[tag=wbeam] at @s r
 execute as @s[scores={laserDummy=17}] at @s run tag @e remove beamhit
 tag @s[scores={laserDummy=17}] add nohit
 execute as @s[scores={laserDummy=17}] at @s run summon marker ~ ~ ~ {Tags:["wbeam"]}
-execute as @s[scores={laserDummy=17}] at @s run tp @e[tag=wbeam,limit=1] @e[tag=you_are_my_owner,limit=1,sort=nearest]
+execute as @s[scores={laserDummy=17}] at @s run tp @e[tag=wbeam,limit=1] @e[tag=stay_put,limit=1,sort=nearest]
 execute as @s[scores={laserDummy=17}] at @s run scoreboard players set @e[tag=wbeam] laserDummy 300
 execute as @s[scores={laserDummy=17}] at @s run tag @a[gamemode=spectator] add spectest
-execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=wbeam] at @s run function game:items/redbeam
+execute as @s[scores={laserDummy=17}] at @s run execute as @e[tag=wbeam] run function game:items/redbeam
 execute as @s[scores={laserDummy=17}] at @s run tag @a[tag=spectest] remove spectest
 tag @s[scores={laserDummy=17}] remove nohit
 
@@ -50,5 +49,5 @@ execute as @s[scores={laserDummy=-230}] at @s run function game:player/class_tea
 execute as @s[scores={laserDummy=-230}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Reloaded ","color":"white"},{"text":"Laser","color":"red","bold":"true"}]
 item replace entity @s[scores={laserDummy=-230}] hotbar.4 with rabbit_hide{display:{Name:"{\"italic\":false,\"text\":\"§4Laser §r: Right-click\"}"}}
 
-tag @e remove im_your_owner
+
 scoreboard players remove @s laserDummy 1
