@@ -1,8 +1,8 @@
 execute as @s[scores={laserDummy=30}] at @s run summon marker ~ ~ ~ {Tags:["stay_put"]}
 execute as @s[scores={laserDummy=30}] at @s run tp @e[type=marker,tag=stay_put,limit=1] @s
 execute as @s[scores={laserDummy=30}] at @s run scoreboard players operation @e[type=marker,tag=stay_put,limit=1,sort=nearest] tntID = @s tntID
-execute at @a[scores={laserDummy=10..29}] as @e[type=marker,tag=stay_put] rotated as @s if score @s tntID = @p tntID run tp @s ~ ~ ~
-execute at @a[scores={laserDummy=10..29}] as @e[type=marker,tag=stay_put] rotated as @s if score @s tntID = @p tntID at @p run tp @p @s
+execute at @a[scores={laserDummy=10..}] as @e[type=marker,tag=stay_put] rotated as @s if score @s tntID = @p tntID run tp @s ~ ~ ~
+execute as @a[scores={laserDummy=10..}] run tp @s @s
 execute as @s[scores={laserDummy=10..}] at @s run particle minecraft:enchanted_hit ~ ~1 ~ 0 0 0 1.2 3
 
 execute as @s[scores={laserDummy=30..}] at @s run clear @s rabbit_hide
