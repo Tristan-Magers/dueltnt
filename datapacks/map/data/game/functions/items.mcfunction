@@ -423,6 +423,8 @@ execute as @e[type=squid] at @s run tp @s ~ ~-1000 ~
 
 # freeze
 execute as @e[scores={frozen=0..}] at @s run function game:player/frozen
+tag @e remove frozen
+tag @e[scores={frozen=0..}] add frozen
 
 #pig
 execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run scoreboard players set @s pig 41
@@ -485,7 +487,7 @@ execute as @a[scores={tridentuse=1..}] run scoreboard players operation @e[type=
 execute as @e[type=minecraft:trident] run function game:char/shard/trident
 
 scoreboard players remove @a[scores={tridentT=0..}] tridentT 1
-scoreboard players set @a[scores={tridentuse=1..}] tridentT 120
+scoreboard players set @a[scores={tridentuse=1..}] tridentT 112
 
 item replace entity @a[scores={class=10,tridentT=0},x=620,y=20,z=620,distance=..100] hotbar.2 with trident{display:{Name:"{\"italic\":false,\"text\":\"§9Trident §f(hit players) §r: Right-click\"}"}}
 scoreboard players set @a[scores={tridentuse=1..}] tridentuse 0
@@ -718,11 +720,11 @@ scoreboard players set @a[scores={slimeegguseset=1..}] slimeegguseset 0
 tag @e[type=creeper] add beenaround
 
 #dive kick
-scoreboard players set @a[scores={dive_kick=4..9},nbt={OnGround:1b}] dive_kick 3
+scoreboard players set @a[scores={dive_kick=4..9},nbt={OnGround:1b},tag=!ender_tnt_land] dive_kick 3
 scoreboard players remove @a[scores={dive_kick=-5..}] dive_kick 1
 
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={dive_kick=1..}] at @s run particle minecraft:squid_ink ~ ~ ~ 0 0 0 0 1 force
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={dive_kick=-1}] at @s run function game:char/assassin/dive_boom
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={dive_kick=0}] at @s run function game:char/assassin/dive_boom
 
 #darts
 scoreboard players set @e[tag=dart] dart_steps 10

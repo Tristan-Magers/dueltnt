@@ -42,7 +42,7 @@ scoreboard players add @s overlordsc 1
 
 scoreboard players set @s[scores={class=0,timer=1}] shift_cool 17
 scoreboard players set @s[scores={class=1,timer=1}] shift_cool 102
-scoreboard players set @s[scores={class=2,timer=1}] shift_cool 75
+scoreboard players set @s[scores={class=2,timer=1}] shift_cool 76
 scoreboard players set @s[scores={class=3,timer=1}] shift_cool 80
 scoreboard players set @s[scores={class=4,timer=1}] shift_cool 155
 scoreboard players set @s[scores={class=6,timer=1}] shift_cool 160
@@ -124,7 +124,7 @@ execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-
 execute as @s[scores={class=10}] at @s run effect give @s levitation 1 3
 
 #xp add @s[scores={class=10,timer=1}] 90 levels
-scoreboard players set @s[scores={class=10,timer=1}] shift_cool 88
+scoreboard players set @s[scores={class=10,timer=1}] shift_cool 75
 
 #reaper shift
 execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:10,NoGravity:1}

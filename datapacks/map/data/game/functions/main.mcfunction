@@ -1,4 +1,8 @@
 #
+scoreboard players set @a[scores={frozen=1..}] click 0
+scoreboard players set @a[scores={frozen=1..}] shift 0
+
+#
 execute unless entity @e[tag=pull_vortex,scores={vortex_id=1..}] run team modify Main collisionRule never
 
 #
@@ -106,6 +110,8 @@ tp @a[gamemode=!creative,x=500,y=35,z=500,distance=..4] 500 20 500
 
 #bedremove
 scoreboard players set @e[type=tnt,x=615,y=30,z=615,distance=..90,nbt={Fuse:1s}] tntEnd 1
+#execute as @e[scores={tntEnd=1..},tag=frost] at @s store result score @s DirY run data get entity @s Pos[1] 100
+#execute as @e[scores={tntEnd=1..},tag=frost] at @s run tellraw @p {"score":{"name":"@s","objective":"DirY"}}
 execute as @e[scores={tntEnd=1..},tag=frost] at @s run summon minecraft:marker ~ ~ ~ {Tags:["frostmarker"]}
 scoreboard players add @e[tag=frostmarker] t1 1
 execute as @e[scores={t1=2..},tag=frostmarker] at @s run function game:char/shard/tntfill
@@ -457,7 +463,7 @@ execute as @a[scores={ass_pearl=0..}] at @s run function game:physics/ass_pearl
 execute as @e[tag=blue_tnt] at @s run tp @s @s
 team join blue_color @e[tag=blue_tnt]
 
-execute as @a[tag=divekick_end2] at @s run function game:physics/dive_end
+execute as @a[tag=divekick_end] at @s run function game:physics/dive_end
 execute as @a[tag=divekick] at @s run function game:physics/dive_kick
 
 tag @a[tag=divekick_end] add divekick_end2
@@ -471,3 +477,13 @@ team join Main @a[team=!Main,x=500,y=60,z=500,distance=..80]
 team join Main @a[team=!Main,scores={class=9..}]
 team join Main @a[team=!Main,scores={class=..7}]
 team join gardener @a[team=!gardener,scores={class=8},gamemode=adventure,x=620,y=20,z=620,distance=..100]
+
+#
+execute as @a[tag=frozen,scores={frozen=2..}] run item replace entity @s hotbar.0 with ice
+execute as @a[tag=frozen,scores={frozen=2..}] run item replace entity @s hotbar.1 with ice
+execute as @a[tag=frozen,scores={frozen=2..}] run item replace entity @s hotbar.2 with ice
+execute as @a[tag=frozen,scores={frozen=2..}] run item replace entity @s hotbar.3 with ice
+execute as @a[tag=frozen,scores={frozen=2..}] run item replace entity @s hotbar.4 with ice
+execute as @a[tag=frozen,scores={frozen=2..}] run item replace entity @s hotbar.5 with ice
+execute as @a[tag=frozen,scores={frozen=2..}] run item replace entity @s hotbar.6 with ice
+execute as @a[tag=frozen,scores={frozen=2..}] run item replace entity @s hotbar.7 with ice

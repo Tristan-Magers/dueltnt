@@ -53,6 +53,7 @@ item replace entity @a[scores={class=0},x=620,y=20,z=620,distance=..100] hotbar.
 execute if entity @e[scores={mode=1}] run item replace entity @a[scores={class=0},x=620,y=20,z=620,distance=..100] hotbar.2 with ender_pearl{display:{Name:"{\"italic\":false,\"text\":\"§aTeleport §r: Right-click\"}"}} 8
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] armor.chest with chainmail_chestplate{Unbreakable:1}
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.3 with pig_spawn_egg{display:{Name:"{\"italic\":false,\"text\":\"§cPig Transform §r: Right-click\"}"},CanPlaceOn:["#game:bolt_place"],EntityTag:{id:pig},HideFlags:16}
+execute as @a[scores={class=4},x=620,y=20,z=620,distance=..100] at @s run attribute @p minecraft:generic.movement_speed base set .15
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.4 with feather{display:{Name:"{\"italic\":false,\"text\":\"Feather §r: Right-click\"}"}} 6
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.4 with feather{display:{Name:"{\"italic\":false,\"text\":\"Feather §r: Right-click\"}"}} 9
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=2}] hotbar.3 with iron_ingot{display:{Name:"{\"italic\":false,\"text\":\"Mass Levitate §r: Right-click [everyone within 3 blocks]\"}"}}
@@ -101,7 +102,7 @@ item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.5 with mooshroom_spawn_egg{CanPlaceOn:["#game:bolt_place"],EntityTag:{id:mooshroom,Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,CustomName:"{\"italic\":false,\"text\":\"tnt\"}",Silent:1},HideFlags:16,display:{Name:"{\"italic\":false,\"text\":\"§cSummon TNT §r: Right-click\"}"}} 12
 execute as @a[x=620,y=20,z=620,distance=..100,scores={class=3}] at @s run item replace entity @s hotbar.3 with redstone{CustomPotionColor:0,custom_potion_effects:[{Id:25,Amplifier:2,Duration:55},{Id:15,Amplifier:1,Duration:75},{Id:24,Amplifier:1,Duration:65}],display:{Name:"{\"italic\":false,\"text\":\"§cTracking Bomb §r: Right-click\"}"}}
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.7 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Crouch to phantom jump\"}"}}
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.5 with mooshroom_spawn_egg{CanPlaceOn:["#game:bolt_place"],EntityTag:{id:mooshroom,Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,CustomName:"{\"italic\":false,\"text\":\"tnt\"}",Silent:1},HideFlags:16,display:{Name:"{\"italic\":false,\"text\":\"§cSummon TNT §r: Right-click\"}"}} 4
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.5 with mooshroom_spawn_egg{CanPlaceOn:["#game:bolt_place"],EntityTag:{id:mooshroom,Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,CustomName:"{\"italic\":false,\"text\":\"tnt\"}",Silent:1},HideFlags:16,display:{Name:"{\"italic\":false,\"text\":\"§cSummon TNT §r: Right-click\"}"}} 3
 #item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.4 with rabbit_hide{display:{Name:"{\"italic\":false,\"text\":\"§4Laser §r: Right-click\"}"}}
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.4 with mooshroom_spawn_egg{CanPlaceOn:["#game:bolt_place"],EntityTag:{id:mooshroom,Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,CustomName:"{\"italic\":false,\"text\":\"tnt\"}",Silent:1},HideFlags:16,display:{Name:"{\"italic\":false,\"text\":\"§cSummon TNT §r: Right-click\"}"}} 9
 item replace entity @a[scores={class=2},x=620,y=20,z=620,distance=..100] hotbar.4 with splash_potion{display:{Name:'[{"text":"Primed for Dark ","color":"dark_purple","italic":false},{"text":": Right-Click","color":"white","italic":false}]'},custom_potion_effects:[{id:"minecraft:blindness",amplifier:1b,duration:80},{id:"minecraft:glowing",amplifier:1b,duration:60}],CustomPotionColor:0}
@@ -232,7 +233,7 @@ scoreboard players set @a blastdur 0
 scoreboard players set @a blastdurt 0
 scoreboard players set @a powerAn -1
 scoreboard players set @a tridentT 0
-scoreboard players set @a[scores={class=10}] tridentT 50
+scoreboard players set @a[scores={class=10}] tridentT 40
 
 scoreboard players set @a feather_cooldown 0
 scoreboard players set @a float_cooldown 0
@@ -311,6 +312,9 @@ scoreboard players set @a z_ender_mot 0
 
 scoreboard players remove @a ui_action_text 0
 scoreboard players remove @a ui_action_time 0
+
+
+tag @a remove wand_fail_streak
 
 tag @a remove boomshard
 

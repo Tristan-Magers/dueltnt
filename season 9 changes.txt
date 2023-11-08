@@ -327,3 +327,70 @@ Shard
 - "Click for future events" sign broken (now links to discord)
 - Throwing Magic Star on respawn platform would prevent it from despawning
 - Some items with firework sound effects could be heard from lobby
+
+*Season 9.1 Update*
+
+[Character Changes]
+
+Assassin
+- Mass Freeze changed from stopping movement to disabling item use
+- Mass Freeze duration increased 0.3s (2s -> 2.3s)
+- Mass Freeze range increased by 0.5 (3 -> 3.5)
+- Mass Freeze has 0.7s longer reload (7s -> 7.7s)
+- Mass Freeze removes bows from skeletons in survival mode
+- Teleport (Enderpearl) no longer triggers Divekick ending on land
+- Shift (Divekick) tnt breaks bedrock
+
+Ghost
+- Mass Levitate takes 0.25s longer to reload (5s -> 5.25s)
+- Shift (Levitation) takes 0.05s longer to reload (3.65s -> 3.7s)
+
+Trapper
+- Mine reload time increased 0.35s (2.75s -> 3.1s) [each]
+
+Wizard
+- Wizard has a default move speed of 115% (+4% more speed increase while pig)
+- Fireball summons .45 blocks higher and 0.8 blocks further out
+- Vortex places 1.5 blocks further (3.7 -> 5.2) [and 0.4 blocks lower]
+- Vortex triggers 0.1s faster (2s -> 1.9s)
+- Vortex's stronger ranges are bigger (1-2.5,2.5-5,5-9 -> 1-3,3-6,6-9)
+
+Mad Scientist
+- Laser hitbox increased 0.1 blocks (0.5 square -> 0.6 square) [note: added to counter balance the hitbox bug fix]
+- Gets 1 less TNT Egg (4 -> 3)
+- Explosive Gel (bow) explodes 0.05s slower (0.15s -> 0.2s)
+- Explosive Gel (bow) reloads 0.05s slower (2.65s -> 2.7s)
+
+Reaper
+- Minor visual upgrade on bow
+
+Gardener
+- Plague no longer removes levitation and slow falling
+- Extra lives reload 5s faster (50s -> 45s)
+- Extra lives only are given and reloading if under the starting max amount of lives
+
+Overlord
+- Wand starts taking damage after hitting no blocks twice in a row
+- Boom Halo has 6.5s longer cooldown (0.5s -> 7s)
+
+Shard
+- Anti-Ice Bow only shoots 1 arrow
+- Anti-Ice Bow summons three tnt in a pillar when it hits ice
+- Anti-Ice Bow tnt explodes slower (0.05s/0.15s -> .2s/0.3s/0.35s)
+- Snowman summon behind player instead of on player (up 1.2, back 1.3)
+- Snowman shoots 0.1s faster between shots (0.4s -> 0.3s)
+- Trident reloads 0.5s faster at start (2.5s -> 2s)
+- Trident reloads 0.5s faster (6s -> 5.6s)
+- Trident has one more entity of knockback at mid distance
+- Trident explodes 0.2s after hit
+- Ice Suck reloads 0.5s faster (12s -> 11.5s)
+- Ice Suck cancels any levitation you had [quality of life]
+- Shift (Blast forward) reloads 0.65s faster (4.4s -> 3.75s)
+
+[Bug Fixes]
+- Shard bow can no longer break barrier walls (lol)
+- Mad Scientist Laser has unintentional extended hitbox in some directions
+- Mad Scientist Laser could sometimes be turned
+- Fixed Assassin Divekick issues arrising from 1.20.1 and 1.20.2 bugs
+- Assassin Mass Freeze didn't work on dummies
+- Using Phantom Mode items as Overlord would trigger gather

@@ -8,9 +8,9 @@ execute as @e[tag=vortex] if score @s tntID = @e[tag=me,limit=1] vortex_id run t
 
 #execute as @s at @s if entity @e[tag=vortex,tag=current_vortex,distance=..1.0] run tp @s @s
 #execute as @s at @s if entity @e[tag=vortex,tag=current_vortex,distance=1.0..2] positioned ~ ~0.8 ~ facing entity @e[tag=vortex,tag=current_vortex,limit=1,sort=nearest] feet rotated ~ 0 run summon marker ^ ^ ^ {Tags:["kill_this","marker_turtle","p4"]}
-execute as @s at @s if entity @e[tag=vortex,tag=current_vortex,distance=1.0..2.5] positioned ~ ~0.8 ~ facing entity @e[tag=vortex,tag=current_vortex,limit=1,sort=nearest] feet rotated ~ 0 run summon marker ^ ^ ^ {Tags:["kill_this","marker_turtle","p3"]}
-execute as @s at @s if entity @e[tag=vortex,tag=current_vortex,distance=2.5..5] positioned ~ ~0.8 ~ facing entity @e[tag=vortex,tag=current_vortex,limit=1,sort=nearest] feet rotated ~ 0 run summon marker ^ ^ ^ {Tags:["kill_this","marker_turtle","p2"]}
-execute as @s at @s if entity @e[tag=vortex,tag=current_vortex,distance=5.0..] positioned ~ ~0.8 ~ facing entity @e[tag=vortex,tag=current_vortex,limit=1,sort=nearest] feet rotated ~ 0 run summon marker ^ ^ ^ {Tags:["kill_this","marker_turtle","p1"]}
+execute as @s at @s if entity @e[tag=vortex,tag=current_vortex,distance=1.0..3.0] positioned ~ ~0.8 ~ facing entity @e[tag=vortex,tag=current_vortex,limit=1,sort=nearest] feet rotated ~ 0 run summon marker ^ ^ ^ {Tags:["kill_this","marker_turtle","p3"]}
+execute as @s at @s if entity @e[tag=vortex,tag=current_vortex,distance=3.0..6.0] positioned ~ ~0.8 ~ facing entity @e[tag=vortex,tag=current_vortex,limit=1,sort=nearest] feet rotated ~ 0 run summon marker ^ ^ ^ {Tags:["kill_this","marker_turtle","p2"]}
+execute as @s at @s if entity @e[tag=vortex,tag=current_vortex,distance=6.0..] positioned ~ ~0.8 ~ facing entity @e[tag=vortex,tag=current_vortex,limit=1,sort=nearest] feet rotated ~ 0 run summon marker ^ ^ ^ {Tags:["kill_this","marker_turtle","p1"]}
 
 execute as @s store result score @s p_motion_x run data get entity @s Pos[0] 1000
 execute as @s run scoreboard players operation @s p_motion_x -= @s p_motion_x_t

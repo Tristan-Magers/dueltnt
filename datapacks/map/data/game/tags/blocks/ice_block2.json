@@ -1,0 +1,13 @@
+{
+  "replace": true,
+  "values": [
+    "minecraft:ladder",
+    "minecraft:red_carpet",
+    "minecraft:snow",
+    "minecraft:grass",
+    "minecraft:azure_bluet",
+    "minecraft:cornflower",
+    "#minecraft:flowers",
+    "minecraft:fire"
+  ]
+}
