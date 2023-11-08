@@ -10,7 +10,7 @@
 - Time for button to reappear after round has ended reduced by 0.5s (7s -> 6.5s)
 - Improved start game effects
 - UI improvements (lives/timer/start game/win game/intro/chat messages)
-- Character colors are now special Hex colors indead of generic
+- Character colors are now special Hex colors instead of generic
 
 [Character Changes]
 
@@ -330,6 +330,12 @@ Shard
 
 *Season 9.1 Update*
 
+[Game]
+- Game updated to version 1.20.1
+
+[General]
+- Updated tournament hall with three new events
+
 [Character Changes]
 
 Assassin
@@ -372,6 +378,7 @@ Gardener
 Overlord
 - Wand starts taking damage after hitting no blocks twice in a row
 - Boom Halo has 6.5s longer cooldown (0.5s -> 7s)
+- Wand upgrade only announced to spectators on final upgrade
 
 Shard
 - Anti-Ice Bow only shoots 1 arrow
@@ -391,6 +398,10 @@ Shard
 - Shard bow can no longer break barrier walls (lol)
 - Mad Scientist Laser has unintentional extended hitbox in some directions
 - Mad Scientist Laser could sometimes be turned
+- Acid could be spawned in lobby after round, breaking map
 - Fixed Assassin Divekick issues arrising from 1.20.1 and 1.20.2 bugs
 - Assassin Mass Freeze didn't work on dummies
+- Frozen effect could persist between rounds
 - Using Phantom Mode items as Overlord would trigger gather
+- Fixed space in "wand Upgrade" spectator announcement
+- Fixed typo in "Clear Skies" achievement

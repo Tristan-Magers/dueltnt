@@ -67,14 +67,13 @@ scoreboard players remove @s[scores={FZtimer=1..}] FZtimer 1
 execute as @s[scores={FZtimer=169}] at @s run playsound minecraft:block.conduit.deactivate master @a ~ ~ ~ .5 .7
 execute as @s[scores={FZtimer=169}] at @s run playsound minecraft:item.armor.equip_gold master @a ~ ~ ~ .7 1
 
-execute as @s[scores={FZtimer=169}] at @s run scoreboard players set @a[distance=..3.5,gamemode=adventure] frozen 46
+execute as @s[scores={FZtimer=169}] at @s run scoreboard players set @a[distance=0.01..3.5,gamemode=adventure] frozen 46
 execute as @s[scores={FZtimer=169}] at @s run scoreboard players set @e[tag=dummy,distance=..3.5] frozen 46
 execute as @s[scores={FZtimer=169}] at @s run item replace entity @e[type=minecraft:skeleton,distance=..3.5] weapon.mainhand with air
 execute as @s[scores={FZtimer=169}] at @s run item replace entity @e[type=minecraft:skeleton,distance=..3.5] weapon.offhand with air
 execute as @s[scores={FZtimer=169}] at @s run effect give @e[type=minecraft:skeleton,distance=..4] glowing 2 1 true
 item replace entity @s[scores={FZtimer=1}] hotbar.3 with diamond{display:{Name:"{\"italic\":false,\"text\":\"§3Mass Freeze§r §r: Right-click [everyone within 3 blocks]\"}"}}
 execute as @s[scores={FZtimer=169}] at @s run particle dripping_water ~ ~ ~ 2 2 2 0 250 force @a
-execute as @s[scores={FZtimer=169}] at @s run scoreboard players set @p[distance=..2,gamemode=adventure] frozen 0
 execute as @s[scores={FZtimer=169}] at @s run effect give @p minecraft:levitation 2
 execute as @s[scores={FZtimer=169}] at @s run effect give @p minecraft:speed 2 2 true
 execute as @s[scores={FZtimer=169}] at @s run scoreboard players set @s nolev 28
