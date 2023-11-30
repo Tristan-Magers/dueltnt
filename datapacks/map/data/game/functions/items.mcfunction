@@ -90,9 +90,9 @@ execute as @e[type=tnt,nbt={Fuse:1s}] at @s run scoreboard players set @a[gamemo
 #slime
 tag @e[name=SM,type=minecraft:marker] add slimerpro
 execute as @e[type=snowball] at @s run kill @e[distance=..8,name=SM,type=minecraft:marker,limit=1,sort=nearest]
-execute as @e[type=snowball] at @s run summon minecraft:marker ~ ~ ~ {CustomName:"{\"italic\":false,\"text\":\"SM\"}",Invulnerable:1,Marker:1,Silent:1,NoGravity:1,Invisible:1}
-execute as @e[tag=slimerpro,scores={slimetime=..0}] at @s run summon slime ~ ~-1 ~ {Size:3,NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"slimer\"}",Tags:["slimer"]}
-execute as @e[tag=slimerpro,scores={slimetime=1}] at @s run summon slime ~ ~-1 ~ {Size:4,NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"slimer\"}",Tags:["slimer"]}
+execute as @e[type=snowball] at @s run summon minecraft:marker ~ ~ ~ {CustomName:"{\"italic\":false,\"text\":\"SM\"}",Invulnerable:1,Marker:1,Silent:1,NoGravity:1,Invisible:1,Attributes:[{Name:generic.knockback_resistance,Base:0.5}]}
+execute as @e[tag=slimerpro,scores={slimetime=..0}] at @s run summon slime ~ ~-1 ~ {Size:3,NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"slimer\"}",Tags:["slimer"],Attributes:[{Name:generic.knockback_resistance,Base:0.5}]}
+execute as @e[tag=slimerpro,scores={slimetime=1}] at @s run summon slime ~ ~-1 ~ {Size:4,NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"slimer\"}",Tags:["slimer"],Attributes:[{Name:generic.knockback_resistance,Base:0.5}]}
 execute as @e[tag=slimerpro,scores={slimetime=2}] at @s run summon slime ~ ~-1 ~ {Size:6,NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"slimer\"}",Tags:["slimer"]}
 execute as @e[tag=slimerpro,scores={slimetime=2}] at @s run effect give @e[type=slime,distance=..10] minecraft:resistance 999 10 true
 execute as @e[type=snowball] at @s run execute as @a[gamemode=adventure,distance=..3,scores={snow=..0,snowReset=..94}] at @s run kill @e[type=snowball,distance=..2]
@@ -459,7 +459,7 @@ scoreboard players remove @e[scores={frostsT=-100..}] frostsT 1
 execute as @e[tag=frostplat] at @s run function game:char/shard/frostsuck/plat
 
 #snowman
-execute as @e[type=minecraft:snow_golem] at @s run function game:char/shard/snowman/tick
+execute as @e[tag=snowman] at @s run function game:char/shard/snowman/tick
 
 execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={click=1..},nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] at @s run function game:char/shard/snowman/create
 #item replace entity @a[scores={class=10,snowmanT=0},x=620,y=20,z=620,distance=..100] hotbar.2 with yellow_dye{display:{Name:"{\"italic\":false,\"text\":\"§6Snowman §f§r: Right-click\"}"}}

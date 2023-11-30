@@ -53,7 +53,7 @@ item replace entity @a[scores={class=0},x=620,y=20,z=620,distance=..100] hotbar.
 execute if entity @e[scores={mode=1}] run item replace entity @a[scores={class=0},x=620,y=20,z=620,distance=..100] hotbar.2 with ender_pearl{display:{Name:"{\"italic\":false,\"text\":\"§aTeleport §r: Right-click\"}"}} 8
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] armor.chest with chainmail_chestplate{Unbreakable:1}
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.3 with pig_spawn_egg{display:{Name:"{\"italic\":false,\"text\":\"§cPig Transform §r: Right-click\"}"},CanPlaceOn:["#game:bolt_place"],EntityTag:{id:pig},HideFlags:16}
-execute as @a[scores={class=4},x=620,y=20,z=620,distance=..100] at @s run attribute @p minecraft:generic.movement_speed base set .15
+execute as @a[scores={class=4},x=620,y=20,z=620,distance=..100] at @s run attribute @p minecraft:generic.movement_speed base set .13
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.4 with feather{display:{Name:"{\"italic\":false,\"text\":\"Feather §r: Right-click\"}"}} 6
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.4 with feather{display:{Name:"{\"italic\":false,\"text\":\"Feather §r: Right-click\"}"}} 9
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=2}] hotbar.3 with iron_ingot{display:{Name:"{\"italic\":false,\"text\":\"Mass Levitate §r: Right-click [everyone within 3 blocks]\"}"}}

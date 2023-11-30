@@ -67,16 +67,29 @@ scoreboard players remove @s[scores={FZtimer=1..}] FZtimer 1
 execute as @s[scores={FZtimer=169}] at @s run playsound minecraft:block.conduit.deactivate master @a ~ ~ ~ .5 .7
 execute as @s[scores={FZtimer=169}] at @s run playsound minecraft:item.armor.equip_gold master @a ~ ~ ~ .7 1
 
-execute as @s[scores={FZtimer=169}] at @s run scoreboard players set @a[distance=0.01..3.5,gamemode=adventure] frozen 46
-execute as @s[scores={FZtimer=169}] at @s run scoreboard players set @e[tag=dummy,distance=..3.5] frozen 46
-execute as @s[scores={FZtimer=169}] at @s run item replace entity @e[type=minecraft:skeleton,distance=..3.5] weapon.mainhand with air
-execute as @s[scores={FZtimer=169}] at @s run item replace entity @e[type=minecraft:skeleton,distance=..3.5] weapon.offhand with air
-execute as @s[scores={FZtimer=169}] at @s run effect give @e[type=minecraft:skeleton,distance=..4] glowing 2 1 true
+execute as @s[scores={FZtimer=169}] at @s run playsound minecraft:entity.snow_golem.death master @a ~ ~ ~ 1 1.8
+execute as @s[scores={FZtimer=169}] at @s run playsound minecraft:entity.snow_golem.shear master @a ~ ~ ~ 1 1.2
+
+execute as @s[scores={FZtimer=165}] at @s at @a[distance=0.01..3.25,gamemode=adventure] run particle minecraft:snowflake ~ ~1 ~ 0.5 0.3 0.5 0.2 20 force
+execute as @s[scores={FZtimer=165}] at @s at @e[tag=dummy,distance=..3.25] run particle minecraft:snowflake ~ ~1 ~ 0.5 0.3 0.5 0.2 20 force
+
+execute as @s[scores={FZtimer=165}] at @s at @a[distance=0.01..3.25,gamemode=adventure] run playsound minecraft:block.amethyst_block.break master @a ~ ~ ~ 1 0
+execute as @s[scores={FZtimer=165}] at @s at @e[tag=dummy,distance=..3.25] run playsound minecraft:block.amethyst_block.break master @a ~ ~ ~ 1 0
+
+execute as @s[scores={FZtimer=165}] at @s run scoreboard players set @a[distance=0.01..3.25,gamemode=adventure] frozen 36
+execute as @s[scores={FZtimer=165}] at @s run scoreboard players set @e[tag=dummy,distance=..3.25] frozen 36
+execute as @s[scores={FZtimer=165}] at @s run item replace entity @e[type=minecraft:skeleton,distance=..3.25] weapon.mainhand with air
+execute as @s[scores={FZtimer=165}] at @s run item replace entity @e[type=minecraft:skeleton,distance=..3.25] weapon.offhand with air
+execute as @s[scores={FZtimer=165}] at @s run effect give @e[type=minecraft:skeleton,distance=..4] glowing 2 1 true
+
 item replace entity @s[scores={FZtimer=1}] hotbar.3 with diamond{display:{Name:"{\"italic\":false,\"text\":\"§3Mass Freeze§r §r: Right-click [everyone within 3 blocks]\"}"}}
-execute as @s[scores={FZtimer=169}] at @s run particle dripping_water ~ ~ ~ 2 2 2 0 250 force @a
-execute as @s[scores={FZtimer=169}] at @s run effect give @p minecraft:levitation 2
-execute as @s[scores={FZtimer=169}] at @s run effect give @p minecraft:speed 2 2 true
-execute as @s[scores={FZtimer=169}] at @s run scoreboard players set @s nolev 28
+
+execute as @s[scores={FZtimer=165}] at @s run particle dripping_water ~ ~ ~ 2.3 2.3 2.3 0 200 force @a
+execute as @s[scores={FZtimer=165}] at @s run particle block packed_ice ~ ~ ~ 2.3 2.3 2.3 0 100 force @a
+execute as @s[scores={FZtimer=165}] at @s run particle flash ~ ~ ~ 0 0 0 0 1 force @a
+execute as @s[scores={FZtimer=165}] at @s run effect give @p minecraft:levitation 2
+execute as @s[scores={FZtimer=165}] at @s run effect give @p minecraft:speed 2 2 true
+execute as @s[scores={FZtimer=165}] at @s run scoreboard players set @s nolev 28
 
 #
 tag @s[tag=ender_tnt_land] remove air  

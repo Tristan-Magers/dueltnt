@@ -83,5 +83,17 @@
     },
     "done": true
   },
+  "classes:class0": {
+    "criteria": {
+      "trapper": "2023-11-07 17:02:19 -0700"
+    },
+    "done": true
+  },
+  "particle:code": {
+    "criteria": {
+      "trapper": "2023-11-07 19:55:22 -0700"
+    },
+    "done": true
+  },
   "DataVersion": 3578
 }

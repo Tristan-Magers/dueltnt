@@ -22,7 +22,7 @@ execute as @s[tag=!frozen] run item replace entity @s enderchest.8 from entity @
 execute as @s[tag=!frozen] run clear @s
 
 scoreboard players remove @s frozen 1
-title @s[scores={frozen=39..},tag=!frozen] times 10 20 10
+title @s[scores={frozen=39..},tag=!frozen] times 10 20 6
 title @s[scores={frozen=39..},tag=!frozen] title {"text":"FROZEN","color":"dark_aqua","font":"fancy"}
 title @s[scores={frozen=1}] title {"text":"","color":"dark_aqua"}
 #effect give @s[scores={frozen=30..}] levitation 2 0 true

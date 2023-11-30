@@ -1,55 +1,55 @@
 {
   "classes:root": {
     "criteria": {
-      "warrior": "2023-02-15 19:59:54 -0800"
+      "warrior": "2023-02-16 03:59:54 +0000"
     },
     "done": true
   },
   "survival:root": {
     "criteria": {
-      "warrior": "2023-02-15 19:59:54 -0800"
+      "warrior": "2023-02-16 03:59:54 +0000"
     },
     "done": true
   },
   "survival:wither": {
     "criteria": {
-      "wither": "2023-07-18 20:46:54 -0700"
+      "wither": "2023-07-19 03:46:54 +0000"
     },
     "done": true
   },
   "particle:root": {
     "criteria": {
-      "warrior": "2023-10-07 00:43:37 -0700"
+      "warrior": "2023-10-07 07:43:37 +0000"
     },
     "done": true
   },
   "delta:player_setup": {
     "criteria": {
-      "requirement": "2023-10-07 00:50:13 -0700"
+      "requirement": "2023-10-07 07:50:13 +0000"
     },
     "done": true
   },
   "classes:class2": {
     "criteria": {
-      "trapper": "2023-10-07 00:53:17 -0700"
+      "trapper": "2023-10-07 07:53:17 +0000"
     },
     "done": true
   },
   "classes:class1": {
     "criteria": {
-      "trapper": "2023-10-07 01:07:48 -0700"
+      "trapper": "2023-10-07 08:07:48 +0000"
     },
     "done": true
   },
   "classes:class5": {
     "criteria": {
-      "mad": "2023-10-07 10:12:19 -0700"
+      "mad": "2023-10-07 17:12:19 +0000"
     },
     "done": true
   },
   "classes:class7": {
     "criteria": {
-      "echo": "2023-10-07 10:43:23 -0700"
+      "echo": "2023-10-07 17:43:23 +0000"
     },
     "done": true
   },

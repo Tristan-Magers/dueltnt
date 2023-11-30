@@ -17,155 +17,23 @@
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/bamboo_block": {
+  "particle:code": {
     "criteria": {
-      "has_bamboo": "2023-07-13 01:57:05 +0000"
+      "trapper": "2023-11-08 02:55:22 +0000"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/dye_red_bed": {
+  "classes:class10": {
     "criteria": {
-      "has_needed_dye": "2023-07-13 01:59:36 +0000"
+      "overlord": "2023-11-08 03:14:48 +0000"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/dye_red_wool": {
+  "particle:root": {
     "criteria": {
-      "has_needed_dye": "2023-07-13 01:59:36 +0000"
+      "warrior": "2023-11-08 02:20:47 +0000"
     },
     "done": true
   },
-  "minecraft:recipes/building_blocks/dye_red_carpet": {
-    "criteria": {
-      "has_needed_dye": "2023-07-13 01:59:36 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_pink_wool": {
-    "criteria": {
-      "has_needed_dye": "2023-07-13 01:59:59 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_pink_bed": {
-    "criteria": {
-      "has_needed_dye": "2023-07-13 01:59:59 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_pink_carpet": {
-    "criteria": {
-      "has_needed_dye": "2023-07-13 01:59:59 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_lime_wool": {
-    "criteria": {
-      "has_needed_dye": "2023-07-13 02:10:54 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_white_carpet": {
-    "criteria": {
-      "has_needed_dye": "2023-07-13 02:10:54 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_white_wool": {
-    "criteria": {
-      "has_needed_dye": "2023-07-13 02:10:54 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_lime_bed": {
-    "criteria": {
-      "has_needed_dye": "2023-07-13 02:10:54 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_white_bed": {
-    "criteria": {
-      "has_needed_dye": "2023-07-13 02:10:54 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_lime_carpet": {
-    "criteria": {
-      "has_needed_dye": "2023-07-13 02:10:54 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_yellow_carpet": {
-    "criteria": {
-      "has_needed_dye": "2023-07-13 02:11:00 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_yellow_wool": {
-    "criteria": {
-      "has_needed_dye": "2023-07-13 02:11:00 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_yellow_bed": {
-    "criteria": {
-      "has_needed_dye": "2023-07-13 02:11:00 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_gray_carpet": {
-    "criteria": {
-      "has_needed_dye": "2023-07-13 20:02:41 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_gray_wool": {
-    "criteria": {
-      "has_needed_dye": "2023-07-13 20:02:41 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/dye_gray_bed": {
-    "criteria": {
-      "has_needed_dye": "2023-07-13 20:02:41 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/mangrove_boat": {
-    "criteria": {
-      "in_water": "2023-07-19 02:58:05 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/cherry_boat": {
-    "criteria": {
-      "in_water": "2023-07-19 02:58:05 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/transportation/bamboo_raft": {
-    "criteria": {
-      "in_water": "2023-07-19 02:58:05 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/stripped_cherry_wood": {
-    "criteria": {
-      "has_log": "2023-07-19 03:23:50 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/building_blocks/cherry_planks": {
-    "criteria": {
-      "has_log": "2023-07-19 03:23:50 +0000"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/cherry_hanging_sign": {
-    "criteria": {
-      "has_stripped_logs": "2023-07-19 03:23:50 +0000"
-    },
-    "done": true
-  },
-  "DataVersion": 3465
+  "DataVersion": 3578
 }
