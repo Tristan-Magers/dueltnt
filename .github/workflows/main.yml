@@ -3,6 +3,8 @@ on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v2
       - name: Find and Replace
@@ -11,3 +13,5 @@ jobs:
           find: "Fuse"
           replace: "fuse"
           regex: false
+      - name: Push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
