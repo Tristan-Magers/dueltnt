@@ -5,7 +5,7 @@ scoreboard players set @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:re
 execute as @s[scores={TBtimer=-10..}] at @s run function game:items/trackbomb
 
 #bow
-execute as @s[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:bamboo"}},nbt={Inventory:[{id:"minecraft:arrow"}]}] at @s anchored eyes run summon minecraft:tnt ^ ^ ^3 {Fuse:3,NoGravity:1}
+execute as @s[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:bamboo"}},nbt={Inventory:[{id:"minecraft:arrow"}]}] at @s anchored eyes run summon minecraft:tnt ^ ^ ^3 {fuse:3,NoGravity:1}
 #coreboard players set @s[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:bamboo"}},nbt={Inventory:[{id:"minecraft:arrow"}]}] bow 10
 clear @s[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:bamboo"}},nbt={Inventory:[{id:"minecraft:arrow"}]}] arrow 1
 execute as @s[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:flint"}},nbt={Inventory:[{id:"minecraft:arrow"}]}] at @s run tag @s[scores={trapdraw=0}] add med

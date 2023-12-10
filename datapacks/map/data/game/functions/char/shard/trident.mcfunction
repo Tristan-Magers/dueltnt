@@ -58,7 +58,7 @@ execute as @s[scores={t4=4}] at @s run summon block_display ~-3.2 ~-3.2 ~-3.2 {N
 execute as @s[scores={t4=4}] at @s run tag @e remove target_trident_close
 execute as @s[scores={t4=4}] at @s run tag @e[tag=target_trident,limit=1,sort=nearest] add target_trident_close
 
-execute as @s[scores={t4=4}] at @s positioned ~ ~-3 ~ if entity @e[distance=..2.7,tag=target_trident_close] run summon tnt ~ ~3 ~ {Fuse:3,Motion:[0.0,-2.7,0.0],Tags:["frost"]}
-execute as @s[scores={t4=4}] at @s positioned ~ ~-3 ~ unless entity @e[distance=..2.7,tag=target_trident_close] run summon tnt ~ ~3 ~ {Fuse:3,Motion:[0.0,-0.8,0.0],Tags:["frost"]}
+execute as @s[scores={t4=4}] at @s positioned ~ ~-3 ~ if entity @e[distance=..2.7,tag=target_trident_close] run summon tnt ~ ~3 ~ {fuse:3,Motion:[0.0,-2.7,0.0],Tags:["frost"]}
+execute as @s[scores={t4=4}] at @s positioned ~ ~-3 ~ unless entity @e[distance=..2.7,tag=target_trident_close] run summon tnt ~ ~3 ~ {fuse:3,Motion:[0.0,-0.8,0.0],Tags:["frost"]}
 
 execute as @s[scores={t4=4..}] at @s run kill @s

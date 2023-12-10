@@ -16,7 +16,7 @@ execute if block ~ ~ ~ fire run tag @s add in
 execute if block ~ ~ ~ oak_sign run tag @s add in
 execute if block ~ ~ ~ oak_wall_sign run tag @s add in
 execute if block ~ ~ ~ snow run tag @s add in
-execute if block ~ ~ ~ grass run tag @s add in
+execute if block ~ ~ ~ short_grass run tag @s add in
 
 execute if block ~ ~.5 ~ birch_slab[type=top] run tag @s add in
 execute if block ~ ~-.5 ~ birch_slab[type=bottom] run tag @s add in

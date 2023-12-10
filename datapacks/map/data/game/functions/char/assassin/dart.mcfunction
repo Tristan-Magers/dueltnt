@@ -16,8 +16,8 @@ scoreboard players set @s[scores={dartuse=2..}] dartcool 35
 
 #scoreboard players set @s dartcool 7
 
-#execute as @s[scores={dartuse=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Explosive Dart","color":"red","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
-#execute as @s[scores={dartuse=5}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Explosive Dart","color":"red","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
-#execute as @s[scores={dartuse=6}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Explosive Dart","color":"red","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
+#execute as @s[scores={dartuse=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Explosive Dart","color":"red","bold":true},{"text":" (2 Remaining) ","color":"white"}]
+#execute as @s[scores={dartuse=5}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Explosive Dart","color":"red","bold":true},{"text":" (1 Remaining) ","color":"white"}]
+#execute as @s[scores={dartuse=6}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Explosive Dart","color":"red","bold":true},{"text":" (0 Remaining) ","color":"white"}]
 
 

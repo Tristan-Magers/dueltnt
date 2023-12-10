@@ -1,5 +1,5 @@
-execute as @s positioned ~ ~1.4 ~ run summon tnt ~ ~ ~ {Fuse:7,NoGravity:1}
-execute as @s positioned ~ ~1.4 ~ run summon tnt ~ ~ ~ {Fuse:7,NoGravity:1}
+execute as @s positioned ~ ~1.4 ~ run summon tnt ~ ~ ~ {fuse:7,NoGravity:1}
+execute as @s positioned ~ ~1.4 ~ run summon tnt ~ ~ ~ {fuse:7,NoGravity:1}
 
 playsound minecraft:block.anvil.place master @a ~ ~ ~ .35 1.75
 playsound minecraft:block.anvil.place master @a ~ ~ ~ .1 .6

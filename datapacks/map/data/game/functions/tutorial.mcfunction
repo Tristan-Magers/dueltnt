@@ -12,14 +12,14 @@ clear @a[scores={tutorial=1..}] green_concrete_powder
 clear @a[scores={tutorial=1..}] red_concrete_powder
 clear @a[scores={tutorial=1..}] written_book
 effect clear @a[scores={tutSkip=1..}] absorption
-execute as @a[scores={tutSkip=1..}] at @s run title @s title [{"text":"","color":"gold","bold":"false"}]
+execute as @a[scores={tutSkip=1..}] at @s run title @s title [{"text":"","color":"gold","bold":false}]
 scoreboard players set @a[x=500,y=20,z=500,distance=..20] tutorial 0
 execute as @a[scores={tutorial=2}] at @s run title @s title [{"translate":"\ua010","font":"title"}]
 execute as @a[scores={tutorial=6}] at @s run title @s title [{"translate":"\ua011","font":"title"}]
 execute as @a[scores={tutorial=12}] at @s run title @s title [{"translate":"\ua012","font":"title"}]
 execute as @a[scores={tutorial=18}] at @s run title @s title [{"translate":"\ua013","font":"title"}]
 execute as @a[scores={tutorial=24}] at @s run title @s title [{"translate":"\ua014","font":"title"}]
-execute as @a[scores={tutorial=41}] at @s run title @s title [{"text":"You know how this goes","color":"gray","bold":"false","font":"fancy_small"}]
+execute as @a[scores={tutorial=41}] at @s run title @s title [{"text":"You know how this goes","color":"gray","bold":false,"font":"fancy_small"}]
 execute as @a[scores={tutorial=76}] at @s run title @s title [{"translate":"\ua030","font":"title"}]
 execute as @a[scores={tutorial=94}] at @s run playsound minecraft:entity.generic.explode master @s ~ ~ ~ 0.15 0.9
 execute as @a[scores={tutorial=94}] at @s run particle minecraft:explosion_emitter ^ ^1.6 ^2 0 0 0 0 1 force @s
@@ -29,7 +29,7 @@ execute as @a[scores={tutorial=119}] at @s run particle minecraft:explosion_emit
 execute as @a[scores={tutorial=131}] at @s run title @s title [{"translate":"\ua050","font":"title"}]
 execute as @a[scores={tutorial=140}] at @s run playsound minecraft:entity.generic.explode master @s ~ ~ ~ 0.15 0.9
 execute as @a[scores={tutorial=140}] at @s run particle minecraft:explosion_emitter ^ ^1.6 ^2 0 0 0 0 1 force @s
-execute as @a[scores={tutorial=170}] at @s run title @s title [{"text":"And most importantly","color":"gray","bold":"false","font":"fancy_small"}]
+execute as @a[scores={tutorial=170}] at @s run title @s title [{"text":"And most importantly","color":"gray","bold":false,"font":"fancy_small"}]
 execute as @a[scores={tutorial=207}] at @s run title @s title [{"translate":"\ua070","font":"title"}]
 
 stopsound @a[scores={tutorial=228..}]

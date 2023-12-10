@@ -13,8 +13,8 @@ execute as @s[tag=fast,scores={chickenbow=1..}] at @s run summon minecraft:armor
 
 execute as @s[nbt={SelectedItem:{id:"minecraft:bamboo"}}] at @s anchored eyes run playsound minecraft:entity.arrow.shoot master @a ~ ~ ~ 1 0.5
 execute as @s[nbt={SelectedItem:{id:"minecraft:bamboo"}}] at @s anchored eyes run playsound minecraft:ui.loom.select_pattern master @a ~ ~ ~ 1 1.15
-execute as @s[nbt={SelectedItem:{id:"minecraft:bamboo"}}] at @s anchored eyes run summon minecraft:tnt ^ ^ ^3 {Fuse:2}
-#execute as @s[tag=short] at @s anchored eyes run summon minecraft:tnt ^ ^ ^3 {Fuse:2}
+execute as @s[nbt={SelectedItem:{id:"minecraft:bamboo"}}] at @s anchored eyes run summon minecraft:tnt ^ ^ ^3 {fuse:2}
+#execute as @s[tag=short] at @s anchored eyes run summon minecraft:tnt ^ ^ ^3 {fuse:2}
 
 tp @e[limit=1,tag=trackshot,sort=nearest] @p[gamemode=adventure,scores={class=3}]
 

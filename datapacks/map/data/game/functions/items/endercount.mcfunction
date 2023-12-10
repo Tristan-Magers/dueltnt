@@ -71,8 +71,8 @@ execute as @s[scores={enderct=1,class=0}] run effect give @s minecraft:levitatio
 #execute as @s[scores={enderct=1,class=1}] run scoreboard players set @s nolev 12
 #execute as @s[scores={enderct=1,class=1}] run effect give @s minecraft:levitation 1 0 true
 
-#execute as @s[scores={enderct=1,class=1}] unless block ~ ~-1 ~ air run summon armor_stand ~ ~0.4 ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",Fuse:12,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
-#execute as @s[scores={enderct=1,class=1}] unless block ~ ~-1 ~ air run summon armor_stand ~ ~0.4 ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",Fuse:12,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
+#execute as @s[scores={enderct=1,class=1}] unless block ~ ~-1 ~ air run summon armor_stand ~ ~0.4 ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",fuse:12,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
+#execute as @s[scores={enderct=1,class=1}] unless block ~ ~-1 ~ air run summon armor_stand ~ ~0.4 ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",fuse:12,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
 
 execute as @s[scores={enderct=1,class=1}] run tag @s add ender_tnt_land
 
@@ -85,7 +85,7 @@ execute as @s[scores={enderct=1,class=1}] run effect give @s jump_boost 2 4
 #execute as @s[scores={enderct=1,class=1}] if block ~ ~-1 ~ air run scoreboard players set @s nolev 2
 
 #execute as @s[scores={enderct=1,class=1}] run gamerule mobGriefing false
-#execute as @s[scores={enderct=1,class=1}] run summon creeper ~ ~ ~ {ingited:1,Fuse:0}
+#execute as @s[scores={enderct=1,class=1}] run summon creeper ~ ~ ~ {ingited:1,fuse:0}
 #execute as @s[scores={enderct=1,class=1}] run scoreboard players set @s ass_pearl 1
 
 execute as @s[scores={enderct=1,class=2}] run effect give @s minecraft:levitation 1 1 true

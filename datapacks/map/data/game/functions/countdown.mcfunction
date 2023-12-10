@@ -185,7 +185,7 @@ execute as @s[scores={countdown=61}] as @a[tag=countdown,scores={ingame=1..}] at
 execute as @s[scores={countdown=61}] as @a[tag=countdown,scores={ingame=1..}] at @s run effect give @s slow_falling 4 10 true
 execute as @s[scores={countdown=-19..60}] as @a[tag=countdown,scores={ingame=1..}] at @s run tp @s 600 ~0.05 600 -45 50
 
-#execute as @s[scores={countdown=-20}] at @s run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"","color":"dark_green","bold":"true"}]
+#execute as @s[scores={countdown=-20}] at @s run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"","color":"dark_green","bold":true}]
 
 execute as @s[scores={countdown=-20}] at @s run tag @a remove countdown
 execute as @s[scores={countdown=-20}] at @s run gamemode adventure @a[scores={ingame=1..}]
@@ -200,7 +200,7 @@ execute as @s[scores={countdown=-20}] at @s run scoreboard players add RoundAnno
 execute as @s[scores={countdown=-20}] at @s run scoreboard players set Time game 6000
 
 execute as @s[scores={countdown=-20}] at @s run execute if entity @e[tag=Map,scores={mode=0..1}] run tellraw @a[scores={ingame=1..,playercount=1}] [{"text":"You have joined solo. Welcome to training mode.","color":"gold"}]
-execute as @s[scores={countdown=-20}] at @s run execute if entity @e[tag=Map,scores={mode=0..1}] run tellraw @a[scores={ingame=1..,playercount=1}] [{"text":"["},{"text":"Spawn Dummy","color":"dark_green","hoverEvent":{"action":"show_text","value":"Click to spawn dummy"},"clickEvent":{"action":"run_command","value":"/trigger dummytrigger add 1"}},{"text":"] [","color":"reset"},{"text":"Spawn Punchable Dummy","color":"green","hoverEvent":{"action":"show_text","value":"Click to spawn dummy"},"clickEvent":{"action":"run_command","value":"/trigger dummytrigger2 add 1"}},{"text":"]","color":"reset"}]
+execute as @s[scores={countdown=-20}] at @s run execute if entity @e[tag=Map,scores={mode=0..1}] run tellraw @a[scores={ingame=1..,playercount=1}] [{"text":"["},{"text":"Spawn Dummy","color":"dark_green","hoverEvent":{"action":"show_text","value":"Click to spawn dummy"},"clickEvent":{"action":"run_command","value":"/trigger dummytrigger add 1"}},{"text":"] [","color":"white"},{"text":"Spawn Punchable Dummy","color":"green","hoverEvent":{"action":"show_text","value":"Click to spawn dummy"},"clickEvent":{"action":"run_command","value":"/trigger dummytrigger2 add 1"}},{"text":"]","color":"white"}]
 
 scoreboard players remove @s countdown 1
 

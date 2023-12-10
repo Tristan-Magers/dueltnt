@@ -32,8 +32,8 @@ item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={PlaceMineTime=76}
 execute as @a[scores={HoldMine=1..}] at @s run effect give @s blindness 1
 execute as @e[type=item,scores={Mine=..0}] at @s run tp @e[distance=..0,limit=1,scores={Mine=..0}] @p
 scoreboard players add @e[type=item] egg 1
-execute as @e[type=item,scores={egg=30..},nbt={Item:{id:"minecraft:nether_star"}}] at @s run summon tnt ~ ~ ~ {Fuse:2}
-execute as @e[type=item,scores={egg=30..},nbt={Item:{id:"minecraft:nether_star"}}] at @s run summon tnt ~ ~ ~ {Fuse:2}
+execute as @e[type=item,scores={egg=30..},nbt={Item:{id:"minecraft:nether_star"}}] at @s run summon tnt ~ ~ ~ {fuse:2}
+execute as @e[type=item,scores={egg=30..},nbt={Item:{id:"minecraft:nether_star"}}] at @s run summon tnt ~ ~ ~ {fuse:2}
 kill @e[type=item,scores={egg=30..},nbt={Item:{id:"minecraft:nether_star"}}]
 kill @e[type=item,scores={egg=100..},nbt={Item:{id:"minecraft:tnt"}}]
 execute as @e[type=item,scores={Mine=2..}] at @s run data merge entity @s {NoGravity:1,Invulnerable:1,Item:{Count:64b}}

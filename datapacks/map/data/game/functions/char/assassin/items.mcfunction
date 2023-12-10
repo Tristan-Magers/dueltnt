@@ -36,10 +36,10 @@ scoreboard players remove @s[scores={star=1..}] star 1
 
 #sneak attack
 execute as @s[scores={squidegg=1..,squidegguse=1..}] at @s run function game:player/class_team
-execute as @s[scores={squidegg=1..,squidegguse=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
-execute as @s[scores={squidegg=1..,squidegguse=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
-execute as @s[scores={squidegg=1..,squidegguse=3}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
-execute as @s[scores={squidegg=1..,squidegguse=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
+execute as @s[scores={squidegg=1..,squidegguse=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":true},{"text":" (1 Remaining) ","color":"white"}]
+execute as @s[scores={squidegg=1..,squidegguse=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":true},{"text":" (0 Remaining) ","color":"white"}]
+execute as @s[scores={squidegg=1..,squidegguse=3}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":true},{"text":" (0 Remaining) ","color":"white"}]
+execute as @s[scores={squidegg=1..,squidegguse=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Sneak Attack","color":"blue","bold":true},{"text":" (0 Remaining) ","color":"white"}]
 
 scoreboard players remove @s[scores={sneakdisable=1..}] sneakdisable 1
 
@@ -94,7 +94,7 @@ execute as @s[scores={FZtimer=165}] at @s run scoreboard players set @s nolev 28
 #
 tag @s[tag=ender_tnt_land] remove air  
 execute at @s[tag=ender_tnt_land] if block ~0.3 ~-0.5 ~0.3 air if block ~0.3 ~-1.5 ~0.3 air if block ~0.3 ~-2.5 ~0.3 air if block ~0.3 ~-0.5 ~-0.3 air if block ~0.3 ~-1.5 ~-0.3 air if block ~0.3 ~-2.5 ~-0.3 air if block ~-0.3 ~-0.5 ~0.3 air if block ~-0.3 ~-1.5 ~0.3 air if block ~-0.3 ~-2.5 ~0.3 air if block ~-0.3 ~-0.5 ~-0.3 air if block ~-0.3 ~-1.5 ~-0.3 air if block ~-0.3 ~-2.5 ~-0.3 air run tag @s add air
-execute as @s[tag=ender_tnt_land,tag=!air] run summon armor_stand ~ ~0.2 ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",Fuse:14,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
-execute as @s[tag=ender_tnt_land,tag=!air] run summon armor_stand ~ ~0.2 ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",Fuse:14,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
+execute as @s[tag=ender_tnt_land,tag=!air] run summon armor_stand ~ ~0.2 ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",fuse:14,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
+execute as @s[tag=ender_tnt_land,tag=!air] run summon armor_stand ~ ~0.2 ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",fuse:14,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
 execute as @s[tag=ender_tnt_land,tag=!air] at @s run tp @s ~ ~0.5 ~
 tag @s remove ender_tnt_land

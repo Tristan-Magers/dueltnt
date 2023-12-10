@@ -1,6 +1,6 @@
-summon tnt ~ ~30 ~ {Fuse:43}
-summon tnt ~ ~30 ~ {Fuse:43}
-summon tnt ~ ~30 ~ {Fuse:43}
+summon tnt ~ ~30 ~ {fuse:43}
+summon tnt ~ ~30 ~ {fuse:43}
+summon tnt ~ ~30 ~ {fuse:43}
 
 particle minecraft:end_rod ~ ~ ~ .1 .1 .1 .18 20 force
 particle minecraft:end_rod ~ ~ ~ .1 .1 .1 .02 10 force
