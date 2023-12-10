@@ -174,7 +174,7 @@ execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run e
 execute if entity @e[scores={mode=1}] run execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run execute as @a[scores={GoPortalP=1..},distance=..16] at @s run summon tnt ~ ~ ~ {Fuse:1}
 execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run teleport @a[scores={GoPortalP=1..},distance=..16] ~ ~ ~
 #execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run execute as @a[scores={GoPortalP=1..},distance=..16] at @s run tp @s @s
-execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run scoreboard players set @a[scores={GoPortalP=1..},distance=..16] shift_cool 20
+execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run scoreboard players set @a[scores={GoPortalP=1..},distance=..16] shift_cool 0
 #execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run xp add @a[scores={GoPortalP=1..},distance=..16] 20 levels
 execute as @e[name=Portal,type=armor_stand] at @s positioned ~ ~1 ~ run particle sneeze ~ ~ ~ .1 0 .1 .03 2 force
 execute as @e[name=Portal,type=armor_stand] at @s positioned ~ ~1 ~ run particle minecraft:item_slime ~ ~ ~ .1 0 .1 .03 2 force
