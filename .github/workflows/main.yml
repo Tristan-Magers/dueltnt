@@ -1,2 +1,13 @@
-- name: Find and Replace
-  uses: jacobtomlinson/gha-find-replace@v3
+name: My Workflow
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          find: "Fuse"
+          replace: "fuse"
+          regex: false
