@@ -13,5 +13,6 @@ jobs:
           find: "Fuse"
           replace: "fuse"
           regex: false
+          exclude: .
       - name: Push changes
         uses: stefanzweifel/git-auto-commit-action@v4
