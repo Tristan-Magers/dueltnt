@@ -44,7 +44,7 @@ execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green
 scoreboard players add @a[gamemode=adventure,x=620,y=40,z=620,distance=..100,scores={teamed=..0}] p 1
 
 #blocks
-data merge block 475 17 495 {front_text:{messages:["[{\"text\":\"\"}]","[{\"score\":{\"name\":\"Round\",\"objective\":\"game\"},\"bold\":\"true\"}]","[{\"text\":\"Round(s)\"}]","[{\"text\":\"\"}]"]}}
+data merge block 475 17 495 {front_text:{messages:["[{\"text\":\"\"}]","[{\"score\":{\"name\":\"Round\",\"objective\":\"game\"},\"bold\":true}]","[{\"text\":\"Round(s)\"}]","[{\"text\":\"\"}]"]}}
 
 #tags
 tag @a remove grave
