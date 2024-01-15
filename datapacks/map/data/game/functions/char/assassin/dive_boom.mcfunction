@@ -9,5 +9,5 @@ tp @s @s
 
 
 
-summon tnt ~ ~ ~ {fuse:2,NoGravity:1,Tags:["blue_tnt"]}
+summon tnt ~ ~ ~ {fuse:1,NoGravity:1,Tags:["blue_tnt"]}
 summon tnt ~ ~ ~ {fuse:1,NoGravity:1,Tags:["blue_tnt"]}
