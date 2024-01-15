@@ -5,8 +5,8 @@ effect give @p minecraft:glowing 4 1 true
 scoreboard players set @s ui_action_text 3
 scoreboard players set @s ui_action_time 40
 
-#effect clear @s levitation
-#effect clear @s slow_falling
+effect clear @s levitation
+effect clear @s slow_falling
 
 scoreboard players set @s garboost 80
 #item replace entity @s hotbar.0 with minecraft:bow{Damage:240,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§6Blast Jumper§r : Throw to switch\"}"},Enchantments:[{id:punch,lvl:3}]}

@@ -1,7 +1,7 @@
 execute as @s[scores={pig=1..}] at @s run tp @e[limit=1,type=pig] @p
 
 effect give @s[scores={pig=0},x=600,y=40,z=600,distance=..100] slowness 2 2 true
-effect give @s[scores={pig=20..},x=600,y=40,z=600,distance=..100] speed 2 2 true
+effect give @s[scores={pig=20..},x=600,y=40,z=600,distance=..100] speed 2 3 true
 effect give @s[scores={pig=20..},x=600,y=40,z=600,distance=..100] invisibility 2 4 true
 item replace entity @s[x=620,y=20,z=620,distance=..100,scores={class=4,pig=-119},tag=pig_place] hotbar.3 with pig_spawn_egg{display:{Name:"{\"italic\":false,\"text\":\"§cPig Transform §r: Throw or Place\"}"},CanPlaceOn:["#game:bolt_place"],EntityTag:{id:pig},HideFlags:16}
 scoreboard players set @s[x=620,y=20,z=620,distance=..100,scores={class=4,pig=..-119},tag=pig_place] pig -130

@@ -3,7 +3,7 @@
 execute as @s[scores={class=4}] at @s run effect give @p blindness 1 0 true
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!pig] at @s run summon lightning_bolt
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run function game:char/wizard/creeptest
-execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run summon creeper ~ ~.5 ~ {Invulnerable:1,powered:1,ignited:1,Fuse:9999,Attributes:[{Name:generic.followRange,Base:0},{Name:generic.movementSpeed,Base:0}],Tags:["wizcreep"]}
+execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run summon creeper ~ ~.5 ~ {Invulnerable:1,powered:1,ignited:1,Fuse:9999,Attributes:[{Name:generic.follow_range,Base:0},{Name:generic.movement_speed,Base:0}],Tags:["wizcreep"]}
 scoreboard players add @e[type=minecraft:creeper] tntID 0
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run scoreboard players operation @e[limit=1,sort=nearest,type=minecraft:creeper,scores={tntID=0}] tntID = @s tntID
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run clear @s gray_dye
@@ -42,7 +42,7 @@ scoreboard players add @s overlordsc 1
 
 scoreboard players set @s[scores={class=0,timer=1}] shift_cool 17
 scoreboard players set @s[scores={class=1,timer=1}] shift_cool 102
-scoreboard players set @s[scores={class=2,timer=1}] shift_cool 76
+scoreboard players set @s[scores={class=2,timer=1}] shift_cool 75
 scoreboard players set @s[scores={class=3,timer=1}] shift_cool 80
 scoreboard players set @s[scores={class=4,timer=1}] shift_cool 155
 scoreboard players set @s[scores={class=6,timer=1}] shift_cool 160
@@ -124,7 +124,7 @@ execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-
 execute as @s[scores={class=10}] at @s run effect give @s levitation 1 3
 
 #xp add @s[scores={class=10,timer=1}] 90 levels
-scoreboard players set @s[scores={class=10,timer=1}] shift_cool 75
+scoreboard players set @s[scores={class=10,timer=1}] shift_cool 88
 
 #reaper shift
 execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {fuse:10,NoGravity:1}

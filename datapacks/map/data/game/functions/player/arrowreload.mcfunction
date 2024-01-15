@@ -25,9 +25,9 @@ scoreboard players set @s[scores={class=3,bow2=50..},nbt=!{Inventory:[{id:"minec
 item replace entity @s[scores={class=4,bow=22}] hotbar.7 with tipped_arrow{display:{Name:"{\"italic\":false,\"text\":\"Magic arrow\"}"},CustomPotionColor:6221823,HideFlags:32} 2
 execute as @s[scores={class=4,bow=21..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .45 2
 scoreboard players set @s[scores={class=4,bow=22..}] bow -1
-item replace entity @s[scores={class=5,bow=52..}] hotbar.6 with arrow 3
-execute as @s[scores={class=5,bow=49..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .5 2
-scoreboard players set @s[scores={class=5,bow=52..}] bow -2
+item replace entity @s[scores={class=5,bow=51..}] hotbar.6 with arrow 3
+execute as @s[scores={class=5,bow=48..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .5 2
+scoreboard players set @s[scores={class=5,bow=51..}] bow -2
 item replace entity @s[scores={class=6,bow=26..}] hotbar.6 with arrow 1
 execute as @s[scores={class=6,bow=26..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
 scoreboard players set @s[scores={class=6,bow=26..}] bow 0
@@ -37,6 +37,6 @@ scoreboard players set @s[scores={class=7,bow=45..}] bow 0
 item replace entity @s[scores={class=8,bow=22..}] hotbar.7 with arrow{display:{Name:"{\"italic\":false,\"text\":\"Not your father's Blast Off\"}"}}
 execute as @s[scores={class=8,bow=22..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
 scoreboard players set @s[scores={class=8,bow=22..}] bow 0
-item replace entity @s[scores={class=10,bow=38..}] hotbar.6 with arrow 3
-execute as @s[scores={class=10,bow=36..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
-scoreboard players set @s[scores={class=10,bow=38..}] bow -1
+item replace entity @s[scores={class=10,bow=40..}] hotbar.6 with arrow 3
+execute as @s[scores={class=10,bow=38..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
+scoreboard players set @s[scores={class=10,bow=40..}] bow -2

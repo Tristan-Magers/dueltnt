@@ -16,4 +16,4 @@ effect give @p minecraft:levitation 1 15
 scoreboard players set @s nolev 13
 
 #
-scoreboard players set @s halo_cooldown 140
+scoreboard players set @s halo_cooldown 10

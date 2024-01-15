@@ -9,7 +9,7 @@ execute as @e[name=Map,type=armor_stand,scores={game=8}] at @s run tellraw @a [{
 execute as @e[name=Map,type=armor_stand,scores={game=9}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Frost Bite","color":"blue","bold":true}]
 execute as @e[name=Map,type=armor_stand,scores={game=99}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Underworld","color":"red","bold":true}]
 execute as @e[name=Map,type=armor_stand,scores={game=10}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Catastrophe","color":"blue","bold":true}]
-execute as @e[name=Map,type=armor_stand,scores={game=11}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Showtime","color":"aqua","bold":true}]
+execute as @e[name=Map,type=armor_stand,scores={game=11}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Showtime","color":"white","bold":true}]
 execute as @e[name=Map,type=armor_stand,scores={game=12}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Terminal","color":"gold","bold":true}]
 execute as @e[name=Map,type=armor_stand,scores={game=13}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Suto","color":"yellow","bold":true}]
 execute as @e[name=Map,type=armor_stand,scores={game=14}] at @s run tellraw @a [{"text":"Playing on map: ","color":"white"},{"text":"Tremor","color":"aqua","bold":true}]
