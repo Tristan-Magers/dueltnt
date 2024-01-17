@@ -30,6 +30,6 @@ scoreboard players add @s[tag=boom] t1 1
 #execute as @s[scores={t1=4}] at @s run tellraw @a {"score":{"name":"@s","objective":"t4"}}
 #execute as @s[scores={t1=3}] at @s positioned ~0.5 ~0.5 ~0.5 run summon creeper ~ ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Glowing:1b,ExplosionRadius:2b,Fuse:2,ignited:1b,NoAI:1b}
 
-execute as @s[scores={t1=4}] at @s positioned ~0.5 ~0.5 ~0.5 run summon tnt ~ ~ ~ {Fuse:2}
+execute as @s[scores={t1=4}] at @s positioned ~0.5 ~0.5 ~0.5 run summon tnt ~ ~ ~ {fuse:2}
 
 kill @s[scores={t1=4..}]

@@ -1,6 +1,6 @@
-summon tnt ~ ~ ~ {Fuse:1}
-summon tnt ~ ~ ~ {Fuse:1}
-summon tnt ~ ~ ~ {Fuse:1}
+summon tnt ~ ~ ~ {fuse:1}
+summon tnt ~ ~ ~ {fuse:1}
+summon tnt ~ ~ ~ {fuse:1}
 execute as @s at @s run summon armor_stand ^ ^ ^25 {DisabledSlots:4144959,Invisible:1,NoGravity:1,NoAI:1,Invulnerable:1,Size:0,Tags:["killthisthing"]}
 execute as @e[type=tnt,limit=3,sort=nearest] at @s run function game:gridpos
 #tp @e[type=tnt,limit=1,sort=nearest]

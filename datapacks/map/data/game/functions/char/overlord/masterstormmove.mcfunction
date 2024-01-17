@@ -37,7 +37,7 @@ execute as @s[tag=boom] at @s run scoreboard players operation @e[limit=1,tag=ga
 execute as @s[tag=boom] at @s run scoreboard players operation @e[limit=1,tag=gather_storm,sort=nearest,tag=!claimed] tntID = @s tntID
 execute as @s[tag=boom] at @s run tag @e[limit=1,tag=gather_storm,sort=nearest,tag=!claimed] add claimed
 
-#execute as @s[tag=boom] at @s run summon tnt ~ ~.8 ~ {Fuse:19,NoGravity:1,Tags:["storm_tnt"],Glowing:1}
+#execute as @s[tag=boom] at @s run summon tnt ~ ~.8 ~ {fuse:19,NoGravity:1,Tags:["storm_tnt"],Glowing:1}
 #execute as @s[tag=boom] at @s run team join blue_color @e[limit=1,tag=storm_tnt,sort=nearest,tag=!claimed]
 #execute as @s[tag=boom] at @s run scoreboard players operation @e[limit=1,tag=storm_tnt,sort=nearest,tag=!claimed] object_id = @s object_id
 #execute as @s[tag=boom] at @s run tag @e[limit=1,tag=storm_tnt,sort=nearest,tag=!claimed] add claimed

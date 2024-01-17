@@ -78,13 +78,13 @@ execute as @s[scores={survival=860}] run spreadplayers 615 615 14 13 under 40 fa
 
 execute as @s[scores={survival=930}] run summon ghast 615 35 615
 
-execute as @s[scores={survival=1020}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=1050}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=1080}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=1110}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=1140}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=1170}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=1200}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
+execute as @s[scores={survival=1020}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=1050}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=1080}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=1110}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=1140}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=1170}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=1200}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
 
 execute as @s[scores={survival=1240..1270}] run title @a title {"text":""}
 
@@ -100,14 +100,14 @@ execute as @s[scores={survival=1360}] run summon chicken 615 50 615
 
 execute as @s[scores={survival=1360}] run spreadplayers 615 615 14 13 under 40 false @e[type=chicken,x=615,y=50,z=615,distance=..1]
 
-execute as @s[scores={survival=1420}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=1450}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=1480}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=1410}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=1540}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=1570}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
+execute as @s[scores={survival=1420}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=1450}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=1480}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=1410}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=1540}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=1570}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
 
-execute as @s[scores={survival=1600}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
+execute as @s[scores={survival=1600}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
 
 execute as @s[scores={survival=1620}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
 execute as @s[scores={survival=1620}] run summon skeleton 615 50 615 {HandItems:[{id:"minecraft:bow",Count:1b,tag:{Enchantments:[{id:"minecraft:punch",lvl:3s}]}},{}],ArmorItems:[{},{},{},{id:"minecraft:dragon_head",Count:1b}]}
@@ -139,27 +139,27 @@ execute as @s[scores={survival=1960}] run summon chicken 615 50 615
 
 execute as @s[scores={survival=1960}] run spreadplayers 615 615 14 13 under 40 false @e[type=chicken,x=615,y=50,z=615,distance=..1]
 
-execute as @s[scores={survival=2220}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2250}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2280}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2310}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2340}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2370}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2400}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2420}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2450}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2480}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2510}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2520}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2540}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2560}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2580}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2600}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2615}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2630}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2645}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2660}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
-execute as @s[scores={survival=2670}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {Fuse:50}
+execute as @s[scores={survival=2220}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2250}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2280}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2310}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2340}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2370}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2400}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2420}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2450}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2480}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2510}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2520}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2540}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2560}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2580}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2600}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2615}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2630}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2645}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2660}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
+execute as @s[scores={survival=2670}] run execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] at @s run summon tnt ~ ~25 ~ {fuse:50}
 
 execute as @s[scores={survival=2700..2730}] run title @a title {"text":""}
 

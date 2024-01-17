@@ -4,18 +4,18 @@ execute as @s[scores={timer=1}] at @s run playsound minecraft:item.trident.ripti
 execute as @s[scores={timer=1}] at @s run playsound minecraft:item.trident.riptide_3 master @a ~ ~ ~ 0.4 0.5
 #execute as @s[scores={timer=1}] at @s run playsound minecraft:item.trident.thunder master @a ~ ~ ~ 0.3 0.7
 
-execute as @s[scores={timer=1}] at @s run summon tnt ~ ~ ~ {NoGravity:1,Fuse:8,Motion:[0.0,0.0,0.0]}
+execute as @s[scores={timer=1}] at @s run summon tnt ~ ~ ~ {NoGravity:1,fuse:8,Motion:[0.0,0.0,0.0]}
 
-execute as @s[scores={timer=1}] at @s run summon tnt ~ ~23 ~ {Tags:["part"],Fuse:16,Motion:[0.0,-1.38,0.0]}
-execute as @s[scores={timer=9}] at @s run summon tnt ~ ~23 ~ {Tags:["part"],Fuse:16,Motion:[0.0,-1.38,0.0]}
-execute as @s[scores={timer=17}] at @s run summon tnt ~ ~23 ~ {Tags:["part"],Fuse:16,Motion:[0.0,-1.38,0.0]}
+execute as @s[scores={timer=1}] at @s run summon tnt ~ ~23 ~ {Tags:["part"],fuse:16,Motion:[0.0,-1.38,0.0]}
+execute as @s[scores={timer=9}] at @s run summon tnt ~ ~23 ~ {Tags:["part"],fuse:16,Motion:[0.0,-1.38,0.0]}
+execute as @s[scores={timer=17}] at @s run summon tnt ~ ~23 ~ {Tags:["part"],fuse:16,Motion:[0.0,-1.38,0.0]}
 
-#execute as @s[scores={timer=1}] at @s run summon tnt ~ ~23 ~ {Fuse:20,Motion:[0.0,-0.9,0.0]}
-#execute as @s[scores={timer=11}] at @s run summon tnt ~ ~23 ~ {Fuse:20,Motion:[0.0,-0.9,0.0]}
-#execute as @s[scores={timer=21}] at @s run summon tnt ~ ~23 ~ {Fuse:20,Motion:[0.0,-0.9,0.0]}
-#execute as @s[scores={timer=21}] at @s run summon tnt ~ ~23 ~ {Fuse:20,Motion:[0.0,-0.9,0.0]}
+#execute as @s[scores={timer=1}] at @s run summon tnt ~ ~23 ~ {fuse:20,Motion:[0.0,-0.9,0.0]}
+#execute as @s[scores={timer=11}] at @s run summon tnt ~ ~23 ~ {fuse:20,Motion:[0.0,-0.9,0.0]}
+#execute as @s[scores={timer=21}] at @s run summon tnt ~ ~23 ~ {fuse:20,Motion:[0.0,-0.9,0.0]}
+#execute as @s[scores={timer=21}] at @s run summon tnt ~ ~23 ~ {fuse:20,Motion:[0.0,-0.9,0.0]}
 
-#execute as @s[scores={timer=31}] at @s run summon tnt ~ ~23 ~ {Fuse:20,Motion:[0.0,-0.9,0.0]}
+#execute as @s[scores={timer=31}] at @s run summon tnt ~ ~23 ~ {fuse:20,Motion:[0.0,-0.9,0.0]}
 kill @s[scores={timer=31}]
 
 #turn air

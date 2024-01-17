@@ -6,7 +6,6 @@ effect give @s minecraft:glowing 5 10
 
 xp set @s 0 levels
 
-scoreboard players set @s frozen -10
 scoreboard players set @s Sreload 0
 scoreboard players set @s endercount 0
 scoreboard players set @s shift_cool 0
@@ -41,7 +40,7 @@ execute if entity @e[scores={mode=1}] run item replace entity @s hotbar.0 with m
 scoreboard players set @s bow 0
 item replace entity @s hotbar.4 with minecraft:paper{display:{Name:"{\"italic\":false,\"text\":\"§6You can now PvP with players :D\"}"}}
 item replace entity @s hotbar.5 with minecraft:paper{display:{Name:"{\"italic\":false,\"text\":\"§6Shift for retro trapper simulator\"}"}}
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.6 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Regain a life every 45 seconds\"}"}}
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.6 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Gain extra life every 50 seconds\"}"}}
 team join gardener @s
 item replace entity @s hotbar.8 with minecraft:potion{display:{Name:"{\"italic\":false,\"text\":\"§dLeave Game\"}"}}
 item replace entity @s hotbar.3 with stone_pressure_plate{display:{Name:"{\"italic\":false,\"text\":\"§7Grave Trap §r: Right-click\"}"},CanPlaceOn:["#game:bolt_place"],EntityTag:{id:creeper,ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:Bomb,Health:500,ExplosionRadius:4},HideFlags:16} 12

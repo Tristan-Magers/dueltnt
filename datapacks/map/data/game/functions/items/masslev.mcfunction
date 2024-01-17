@@ -1,6 +1,6 @@
 scoreboard players set @s nolev 0
 
-scoreboard players set @s mTtimer 105
+scoreboard players set @s mTtimer 100
 execute as @s at @s run playsound minecraft:entity.elder_guardian.hurt master @a ~ ~ ~ .4 1.7
 execute as @s at @s run playsound minecraft:entity.armor_stand.fall master @a ~ ~ ~ .8 1
 execute as @s at @s run playsound minecraft:block.conduit.activate master @a ~ ~ ~ .2 1.3

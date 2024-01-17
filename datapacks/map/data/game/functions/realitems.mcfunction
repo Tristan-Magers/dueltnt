@@ -23,22 +23,22 @@ scoreboard players set @a[scores={PlaceMine=1,PlaceMineTime=1..}] PlaceMineTime 
 scoreboard players set @a[scores={PlaceMine=1,PlaceMineTime=1..}] PlaceMine 0
 
 tag @a[scores={PlaceMine=1,PlaceMineTime=0}] add plm1
-scoreboard players set @a[tag=plm1] PlaceMineTime 137
+scoreboard players set @a[tag=plm1] PlaceMineTime 144
 scoreboard players set @a[tag=plm1] PlaceMine 0
 tag @a remove plm1
 
-item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={PlaceMineTime=138}] hotbar.2 with tnt{display:{Name:"{\"italic\":false,\"text\":\"§4Mine §f: Throw/Right-click\"}"},HideFlags:16,CanPlaceOn:["#game:tnt_place"]} 1
-item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={PlaceMineTime=76}] hotbar.2 with tnt{display:{Name:"{\"italic\":false,\"text\":\"§4Mine §f: Throw/Right-click\"}"},HideFlags:16,CanPlaceOn:["#game:tnt_place"]} 2
+item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={PlaceMineTime=145}] hotbar.2 with tnt{display:{Name:"{\"italic\":false,\"text\":\"§4Mine §f: Throw/Right-click\"}"},HideFlags:16,CanPlaceOn:["#game:tnt_place"]} 1
+item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={PlaceMineTime=90}] hotbar.2 with tnt{display:{Name:"{\"italic\":false,\"text\":\"§4Mine §f: Throw/Right-click\"}"},HideFlags:16,CanPlaceOn:["#game:tnt_place"]} 2
 execute as @a[scores={HoldMine=1..}] at @s run effect give @s blindness 1
 execute as @e[type=item,scores={Mine=..0}] at @s run tp @e[distance=..0,limit=1,scores={Mine=..0}] @p
 scoreboard players add @e[type=item] egg 1
-execute as @e[type=item,scores={egg=30..},nbt={Item:{id:"minecraft:nether_star"}}] at @s run summon tnt ~ ~ ~ {Fuse:2}
-execute as @e[type=item,scores={egg=30..},nbt={Item:{id:"minecraft:nether_star"}}] at @s run summon tnt ~ ~ ~ {Fuse:2}
+execute as @e[type=item,scores={egg=30..},nbt={Item:{id:"minecraft:nether_star"}}] at @s run summon tnt ~ ~ ~ {fuse:2}
+execute as @e[type=item,scores={egg=30..},nbt={Item:{id:"minecraft:nether_star"}}] at @s run summon tnt ~ ~ ~ {fuse:2}
 kill @e[type=item,scores={egg=30..},nbt={Item:{id:"minecraft:nether_star"}}]
 kill @e[type=item,scores={egg=100..},nbt={Item:{id:"minecraft:tnt"}}]
 execute as @e[type=item,scores={Mine=2..}] at @s run data merge entity @s {NoGravity:1,Invulnerable:1,Item:{Count:64b}}
 
-execute as @a at @s run execute as @e[limit=1,type=item,scores={Mine=2..,egg=6},distance=..20] at @s run summon magma_cube ~ ~ ~ {NoGravity:1,NoAI:0,Invulnerable:1,Size:2,CustomName:"{\"text\":\"star\"}",Silent:1,Attributes:[{Name:generic.followRange,Base:0},{Name:generic.movementSpeed,Base:0}]}
+execute as @a at @s run execute as @e[limit=1,type=item,scores={Mine=2..,egg=6},distance=..20] at @s run summon magma_cube ~ ~ ~ {NoGravity:1,NoAI:0,Invulnerable:1,Size:2,CustomName:"{\"text\":\"star\"}",Silent:1,Attributes:[{Name:generic.follow_range,Base:0},{Name:generic.movement_speed,Base:0}]}
 execute as @e[type=magma_cube] at @s run data merge entity @s {Motion:[0.0,0.0,0.0]}
 execute as @e[type=magma_cube] at @s run tp @s ~ ~ ~ 0 0
 effect give @e[type=magma_cube] invisibility 1 0 true

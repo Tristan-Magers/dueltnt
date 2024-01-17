@@ -76,8 +76,8 @@ kill @e[tag=frostset]
 
 tag @e[type=arrow,tag=!flame,nbt={Fire:1999s}] add flame
 tag @e[tag=inG,tag=flame] add explode
-execute as @e[tag=explode] at @s run summon tnt ~ ~.1 ~ {Fuse:11,Motion:[0.0,0.4,0.0]}
-execute as @e[tag=explode] at @s run summon tnt ~ ~.1 ~ {Fuse:11,Motion:[0.0,0.35,0.0]}
+execute as @e[tag=explode] at @s run summon tnt ~ ~.1 ~ {fuse:11,Motion:[0.0,0.4,0.0]}
+execute as @e[tag=explode] at @s run summon tnt ~ ~.1 ~ {fuse:11,Motion:[0.0,0.35,0.0]}
 kill @e[tag=explode,type=arrow]
 
 scoreboard players set @e[type=arrow] Inbarrier 0
@@ -85,19 +85,19 @@ scoreboard players set @e[type=arrow,nbt={inBlockState:{Name:"minecraft:barrier"
 #scoreboard players set @e[type=arrow,nbt={inBlockState:{Name:"minecraft:white_stained_glass"}}] Inbarrier 2
 execute as @e[tag=inG,type=arrow,scores={BombBow=..0}] at @s run function game:arrow
 kill @e[tag=inG,type=arrow,scores={BombBow=..0}]
-execute as @e[type=tnt,nbt={Fuse:1s}] at @s run scoreboard players set @a[gamemode=adventure,distance=..10,scores={class=8}] rjump 10
+execute as @e[type=tnt,nbt={fuse:1s}] at @s run scoreboard players set @a[gamemode=adventure,distance=..10,scores={class=8}] rjump 10
 
 #slime
 tag @e[name=SM,type=minecraft:marker] add slimerpro
 execute as @e[type=snowball] at @s run kill @e[distance=..8,name=SM,type=minecraft:marker,limit=1,sort=nearest]
-execute as @e[type=snowball] at @s run summon minecraft:marker ~ ~ ~ {CustomName:"{\"italic\":false,\"text\":\"SM\"}",Invulnerable:1,Marker:1,Silent:1,NoGravity:1,Invisible:1,Attributes:[{Name:generic.knockback_resistance,Base:0.5}]}
-execute as @e[tag=slimerpro,scores={slimetime=..0}] at @s run summon slime ~ ~-1 ~ {Size:3,NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"slimer\"}",Tags:["slimer"],Attributes:[{Name:generic.knockback_resistance,Base:0.5}]}
-execute as @e[tag=slimerpro,scores={slimetime=1}] at @s run summon slime ~ ~-1 ~ {Size:4,NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"slimer\"}",Tags:["slimer"],Attributes:[{Name:generic.knockback_resistance,Base:0.5}]}
+execute as @e[type=snowball] at @s run summon minecraft:marker ~ ~ ~ {CustomName:"{\"italic\":false,\"text\":\"SM\"}",Invulnerable:1,Marker:1,Silent:1,NoGravity:1,Invisible:1}
+execute as @e[tag=slimerpro,scores={slimetime=..0}] at @s run summon slime ~ ~-1 ~ {Size:3,NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"slimer\"}",Tags:["slimer"]}
+execute as @e[tag=slimerpro,scores={slimetime=1}] at @s run summon slime ~ ~-1 ~ {Size:4,NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"slimer\"}",Tags:["slimer"]}
 execute as @e[tag=slimerpro,scores={slimetime=2}] at @s run summon slime ~ ~-1 ~ {Size:6,NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"slimer\"}",Tags:["slimer"]}
 execute as @e[tag=slimerpro,scores={slimetime=2}] at @s run effect give @e[type=slime,distance=..10] minecraft:resistance 999 10 true
 execute as @e[type=snowball] at @s run execute as @a[gamemode=adventure,distance=..3,scores={snow=..0,snowReset=..94}] at @s run kill @e[type=snowball,distance=..2]
 scoreboard players add @e[type=slime] time 1
-execute as @e[type=slime,scores={time=40..},tag=slimer] at @s run summon tnt ~ ~ ~ {Fuse:2}
+execute as @e[type=slime,scores={time=40..},tag=slimer] at @s run summon tnt ~ ~ ~ {fuse:2}
 tp @e[type=slime,scores={time=40..},tag=slimer] ~ ~-2000 ~
 
 tp @e[type=slime,scores={time=60..}] ~ ~-2000 ~
@@ -229,8 +229,8 @@ execute as @e[tag=mastertnt,scores={masterb=1}] at @s run summon minecraft:armor
 #execute as @e[tag=mastertnt,scores={masterb=1}] at @s run summon block_display ~-0.3 ~0.4 ~-100.3 {block_state:{Name:"minecraft:diamond_ore"},transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],scale:[0.6f,0.6f,0.6f]},Tags:["mastertnt_vis"]}
 execute as @e[tag=mastertnt,scores={masterb=2..14}] at @s positioned ~ ~ ~100 run tp @e[tag=mastertnt_vis,limit=1,sort=nearest,distance=..3] ~ ~0.4 ~
 execute as @e[tag=mastertnt,scores={masterb=1..14}] at @s run particle minecraft:smoke ~ ~0.4 ~100 0 0 0 0 1 force
-execute as @e[tag=mastertnt,scores={masterb=14}] at @s run summon tnt ~ ~.4 ~100 {Fuse:2}
-execute as @e[tag=mastertnt,scores={masterb=14}] at @s run summon tnt ~ ~.4 ~100 {Fuse:2}
+execute as @e[tag=mastertnt,scores={masterb=14}] at @s run summon tnt ~ ~.4 ~100 {fuse:2}
+execute as @e[tag=mastertnt,scores={masterb=14}] at @s run summon tnt ~ ~.4 ~100 {fuse:2}
 execute as @e[tag=mastertnt_vis,scores={masterb=1}] at @s run item replace entity @s armor.head with minecraft:diamond_ore
 kill @e[tag=mastertnt,scores={masterb=14}]
 kill @e[tag=mastertnt_vis,scores={masterb=13}]
@@ -305,11 +305,11 @@ execute as @a[gamemode=adventure,scores={platAm=6}] at @s run playsound minecraf
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=2}] hotbar.4 with diamond_sword{Damage:520,display:{Name:"{\"italic\":false,\"text\":\"Temporary Platform §r: Right-click\"}"}}
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=1}] hotbar.4 with diamond_sword{Damage:1040,display:{Name:"{\"italic\":false,\"text\":\"Temporary Platform §r: Right-click\"}"}}
 execute as @a[scores={class=10,frostsT=0},x=620,y=20,z=620,distance=..100] run function game:player/class_team
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=2,platUse=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Reloaded ","color":"white"},{"text":"Platform","color":"red","bold":"true"},{"text":"","color":"white"}]
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=2,platUse=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Reloaded ","color":"white"},{"text":"Platform","color":"red","bold":true},{"text":"","color":"white"}]
 
 # tnt egg
-execute as @e[name=tnt] at @s run summon tnt ~ ~.6 ~ {Fuse:4}
-execute as @e[name=tnt] at @s run summon tnt ~ ~.6 ~ {Fuse:4}
+execute as @e[name=tnt] at @s run summon tnt ~ ~.6 ~ {fuse:4}
+execute as @e[name=tnt] at @s run summon tnt ~ ~.6 ~ {fuse:4}
 tp @e[type=mooshroom,name=tnt] ~ ~-1000 ~
 
 execute as @a[x=580,dx=80,y=-1,dy=100,z=580,dz=80,distance=..100,scores={tntegguset=1..,class=5}] at @s run function game:char/mads/tntegguse
@@ -350,8 +350,8 @@ execute as @e[name="Fishing Bobber",scores={t6=2}] at @s run scoreboard players 
 #execute as @e[name="Fishing Bobber",scores={fishingT=3..}] at @s positioned ~ ~-1 ~ run execute as @p[distance=..1,gamemode=adventure] at @s run effect give @p jump_boost 3 128
 #execute as @e[name="Fishing Bobber",scores={fishingT=3..}] at @s positioned ~ ~-1 ~ run execute as @p[distance=..1,gamemode=adventure] at @s run scoreboard players set @p stun 52
 #kill @e[type=armor_stand,name=Mark]
-#title @a[gamemode=adventure,scores={stun=32..}] title {"text":"SHIFT to escape","color":"red","bold":"true"}
-#title @a[gamemode=adventure,scores={stun=2}] title {"text":"","color":"red","bold":"true"}
+#title @a[gamemode=adventure,scores={stun=32..}] title {"text":"SHIFT to escape","color":"red","bold":true}
+#title @a[gamemode=adventure,scores={stun=2}] title {"text":"","color":"red","bold":true}
 #scoreboard players remove @a[gamemode=adventure,scores={stun=0..}] stun 1
 #effect clear @a[gamemode=adventure,scores={stun=1}] slowness
 
@@ -416,15 +416,13 @@ scoreboard players remove @e[tag=!boom,name=pro1,scores={DirX=-70..}] DirX 1
 scoreboard players remove @a[gamemode=adventure,scores={Sreload=0..}] Sreload 1
 
 # sneak attack
-execute as @e[type=squid] at @s run summon armor_stand ~ ~1 ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",Fuse:10,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
-execute as @e[type=squid] at @s run summon armor_stand ~ ~1 ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",Fuse:10,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
-execute as @e[type=squid] at @s run summon armor_stand ~ ~1 ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",Fuse:10,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
+execute as @e[type=squid] at @s run summon armor_stand ~ ~1 ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",fuse:10,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
+execute as @e[type=squid] at @s run summon armor_stand ~ ~1 ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",fuse:10,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
+execute as @e[type=squid] at @s run summon armor_stand ~ ~1 ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",fuse:10,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
 execute as @e[type=squid] at @s run tp @s ~ ~-1000 ~
 
 # freeze
 execute as @e[scores={frozen=0..}] at @s run function game:player/frozen
-tag @e remove frozen
-tag @e[scores={frozen=0..}] add frozen
 
 #pig
 execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run scoreboard players set @s pig 41
@@ -452,14 +450,14 @@ execute as @e[tag=frostsuck,tag=org] at @s align x align y align z run function 
 scoreboard players add @e[tag=frostsuck] frostl 0
 
 execute as @a[scores={class=10,frostsT=0},x=620,y=20,z=620,distance=..100] run function game:player/class_team
-execute as @a[scores={class=10,frostsT=0},x=620,y=20,z=620,distance=..100] run tellraw @a[gamemode=spectator,x=620,y=20,z=620,distance=..100] [{"selector":"@s"},{"text":" Reloaded ","color":"white"},{"text":"Ice Suck","color":"dark_aqua","bold":"true"}]
+execute as @a[scores={class=10,frostsT=0},x=620,y=20,z=620,distance=..100] run tellraw @a[gamemode=spectator,x=620,y=20,z=620,distance=..100] [{"selector":"@s"},{"text":" Reloaded ","color":"white"},{"text":"Ice Suck","color":"dark_aqua","bold":true}]
 item replace entity @a[scores={class=10,frostsT=0},x=620,y=20,z=620,distance=..100] hotbar.3 with lime_dye{display:{Name:"{\"italic\":false,\"text\":\"§3Ice Suck §f§r: Right-click\"}"}}
 scoreboard players remove @e[scores={frostsT=-100..}] frostsT 1
 
 execute as @e[tag=frostplat] at @s run function game:char/shard/frostsuck/plat
 
 #snowman
-execute as @e[tag=snowman] at @s run function game:char/shard/snowman/tick
+execute as @e[type=minecraft:snow_golem] at @s run function game:char/shard/snowman/tick
 
 execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={click=1..},nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] at @s run function game:char/shard/snowman/create
 #item replace entity @a[scores={class=10,snowmanT=0},x=620,y=20,z=620,distance=..100] hotbar.2 with yellow_dye{display:{Name:"{\"italic\":false,\"text\":\"§6Snowman §f§r: Right-click\"}"}}
@@ -487,7 +485,7 @@ execute as @a[scores={tridentuse=1..}] run scoreboard players operation @e[type=
 execute as @e[type=minecraft:trident] run function game:char/shard/trident
 
 scoreboard players remove @a[scores={tridentT=0..}] tridentT 1
-scoreboard players set @a[scores={tridentuse=1..}] tridentT 112
+scoreboard players set @a[scores={tridentuse=1..}] tridentT 120
 
 item replace entity @a[scores={class=10,tridentT=0},x=620,y=20,z=620,distance=..100] hotbar.2 with trident{display:{Name:"{\"italic\":false,\"text\":\"§9Trident §f(hit players) §r: Right-click\"}"}}
 scoreboard players set @a[scores={tridentuse=1..}] tridentuse 0
@@ -552,9 +550,9 @@ execute as @e[scores={Ctimer=17},tag=thrown_creeper] at @s run data merge entity
 execute as @e[scores={Ctimer=17},tag=thrown_creeper] at @s run summon minecraft:creeper ~ ~0.6 ~ {NoAI:1,ignited:1,Fuse:3,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"{\"italic\":false,\"text\":\"Bomb\"}",Health:500,powered:1,ExplosionRadius:2,Invulnerable:1,NoAI:1}
 execute as @e[scores={Ctimer=17},tag=thrown_creeper] at @s run summon minecraft:creeper ~ ~ ~ {NoAI:1,ignited:1,Fuse:5,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"{\"italic\":false,\"text\":\"Bomb\"}",Health:500,powered:1,ExplosionRadius:2,Invulnerable:1,NoAI:1}
 
-#execute as @a[scores={creepegguse=8,creeperegguset=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Creeper","color":"green","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
-#execute as @a[scores={creepegguse=9,creeperegguset=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Creeper","color":"green","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
-#execute as @a[scores={creepegguse=10,creeperegguset=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Creeper","color":"green","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
+#execute as @a[scores={creepegguse=8,creeperegguset=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Creeper","color":"green","bold":true},{"text":" (2 Remaining) ","color":"white"}]
+#execute as @a[scores={creepegguse=9,creeperegguset=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Creeper","color":"green","bold":true},{"text":" (1 Remaining) ","color":"white"}]
+#execute as @a[scores={creepegguse=10,creeperegguset=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Creeper","color":"green","bold":true},{"text":" (0 Remaining) ","color":"white"}]
 
 scoreboard players set @a creeperegguset 0 
 
@@ -584,8 +582,8 @@ execute as @e[type=experience_bottle] at @s run kill @e[type=area_effect_cloud,n
 execute as @a[gamemode=adventure,scores={Escape=1..}] at @s run particle spit ~ ~ ~ .5 1 .5 .1 20 force
 scoreboard players add @e[type=area_effect_cloud,name=place] XPTimer 1
 execute as @e[type=experience_bottle] at @s run summon area_effect_cloud ~ ~ ~ {Potion:"minecraft:strong_healing",Duration:3,Tags:["a"],CustomName:"{\"italic\":false,\"text\":\"place\"}"}
-execute as @e[type=area_effect_cloud,name=place,tag=!gameae,scores={XPTimer=2..}] at @s run summon tnt ~ ~.1 ~ {Fuse:14,Tags:["sit"],NoAI:1,NoGravity:1}
-execute as @e[type=area_effect_cloud,name=place,tag=!gameae,scores={XPTimer=2..}] at @s run summon tnt ~ ~.11 ~ {Fuse:17,Tags:["sit"],NoAI:1,NoGravity:1}
+execute as @e[type=area_effect_cloud,name=place,tag=!gameae,scores={XPTimer=2..}] at @s run summon tnt ~ ~.1 ~ {fuse:14,Tags:["sit"],NoAI:1,NoGravity:1}
+execute as @e[type=area_effect_cloud,name=place,tag=!gameae,scores={XPTimer=2..}] at @s run summon tnt ~ ~.11 ~ {fuse:17,Tags:["sit"],NoAI:1,NoGravity:1}
 # NOTE: 10.5 blocks launch with 3 tick dif, 12.5 block launch with 2 tick dif (no jump) | 17 blocks launch with 3 tick dif, 20 block launch with 2 tick dif (jump)
 clear @a[gamemode=adventure,scores={Escape=1..}] experience_bottle
 kill @e[type=experience_orb]
@@ -720,11 +718,11 @@ scoreboard players set @a[scores={slimeegguseset=1..}] slimeegguseset 0
 tag @e[type=creeper] add beenaround
 
 #dive kick
-scoreboard players set @a[scores={dive_kick=4..9},nbt={OnGround:1b},tag=!ender_tnt_land] dive_kick 3
+scoreboard players set @a[scores={dive_kick=4..9},nbt={OnGround:1b}] dive_kick 3
 scoreboard players remove @a[scores={dive_kick=-5..}] dive_kick 1
 
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={dive_kick=1..}] at @s run particle minecraft:squid_ink ~ ~ ~ 0 0 0 0 1 force
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={dive_kick=0}] at @s run function game:char/assassin/dive_boom
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={dive_kick=-1}] at @s run function game:char/assassin/dive_boom
 
 #darts
 scoreboard players set @e[tag=dart] dart_steps 10
@@ -755,8 +753,8 @@ execute as @a[gamemode=adventure] at @s if block ~.3 ~ ~ barrier run tp @s ~-.4 
 execute as @a[gamemode=adventure] at @s if block ~-.3 ~ ~ barrier run tp @s ~.4 ~ ~
 
 #test
-#execute as @e[type=tnt,nbt={Fuse:1s}] at @s run execute store result score @s y run data get entity @s Pos[1] 100
-#execute as @e[type=tnt,nbt={Fuse:1s}] at @s run scoreboard players operation @p y = @s y
+#execute as @e[type=tnt,nbt={fuse:1s}] at @s run execute store result score @s y run data get entity @s Pos[1] 100
+#execute as @e[type=tnt,nbt={fuse:1s}] at @s run scoreboard players operation @p y = @s y
 
 #manage click
 scoreboard players set @a[tag=!click_delay] click 0

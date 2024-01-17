@@ -3,13 +3,13 @@
 execute as @s[scores={class=4}] at @s run effect give @p blindness 1 0 true
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!pig] at @s run summon lightning_bolt
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run function game:char/wizard/creeptest
-execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run summon creeper ~ ~.5 ~ {Invulnerable:1,powered:1,ignited:1,Fuse:9999,Attributes:[{Name:generic.followRange,Base:0},{Name:generic.movementSpeed,Base:0}],Tags:["wizcreep"]}
+execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run summon creeper ~ ~.5 ~ {Invulnerable:1,powered:1,ignited:1,Fuse:9999,Attributes:[{Name:generic.follow_range,Base:0},{Name:generic.movement_speed,Base:0}],Tags:["wizcreep"]}
 scoreboard players add @e[type=minecraft:creeper] tntID 0
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run scoreboard players operation @e[limit=1,sort=nearest,type=minecraft:creeper,scores={tntID=0}] tntID = @s tntID
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run clear @s gray_dye
 scoreboard players set @s[scores={class=5}] GoPortal 1
 execute as @s[scores={class=3}] at @s run playsound minecraft:entity.tnt.primed master @p
-execute as @s[scores={class=3}] at @s run summon tnt ~ ~.5 ~ {Fuse:5}
+execute as @s[scores={class=3}] at @s run summon tnt ~ ~.5 ~ {fuse:5}
 execute as @s[scores={class=3}] at @s run effect give @p speed 1 1
 execute as @s[scores={class=2}] at @s run effect give @s levitation 1 8
 execute as @s[scores={class=2}] at @s run scoreboard players set @s nolev 17
@@ -42,7 +42,7 @@ scoreboard players add @s overlordsc 1
 
 scoreboard players set @s[scores={class=0,timer=1}] shift_cool 17
 scoreboard players set @s[scores={class=1,timer=1}] shift_cool 102
-scoreboard players set @s[scores={class=2,timer=1}] shift_cool 76
+scoreboard players set @s[scores={class=2,timer=1}] shift_cool 75
 scoreboard players set @s[scores={class=3,timer=1}] shift_cool 80
 scoreboard players set @s[scores={class=4,timer=1}] shift_cool 155
 scoreboard players set @s[scores={class=6,timer=1}] shift_cool 160
@@ -85,8 +85,8 @@ execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9
 execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run tag @e[type=marker,tag=overlord_org_tp] add kill
 execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9}] at @s run tag @e[type=marker,tag=overlord_new_tp] add kill
 
-execute unless entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run summon tnt ~ ~ ~ {Fuse:23}
-execute unless entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run summon tnt ~ ~ ~ {Fuse:23}
+execute unless entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run summon tnt ~ ~ ~ {fuse:23}
+execute unless entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run summon tnt ~ ~ ~ {fuse:23}
 
 execute as @s[scores={class=9}] at @s run playsound minecraft:item.armor.equip_generic master @a ~ ~ ~ 1 0
 execute as @s[scores={class=9}] at @s run playsound minecraft:block.chest.open master @a ~ ~ ~ .5 1.5
@@ -97,43 +97,43 @@ execute as @s[scores={class=9}] at @s run playsound minecraft:block.conduit.atta
 execute as @s[scores={class=9}] at @s run playsound minecraft:block.grass.place master @a ~ ~ ~ 1 0
 execute as @s[scores={class=9}] at @s run playsound minecraft:block.grass.place master @a ~ ~ ~ 1 1
 
-#execute as @s[scores={class=9}] at @s run summon tnt ~ ~ ~ {Fuse:21}
-#execute as @s[scores={class=9}] at @s run summon tnt ~ ~ ~ {Fuse:21}
+#execute as @s[scores={class=9}] at @s run summon tnt ~ ~ ~ {fuse:21}
+#execute as @s[scores={class=9}] at @s run summon tnt ~ ~ ~ {fuse:21}
 #execute as @s[scores={class=9}] at @s run execute as @e[type=tnt,limit=2,sort=nearest] at @s run function game:gridpos
 
 #scoreboard players add @a[scores={class=9}] masterb 3
 #execute as @s[scores={class=9}] at @s run function game:char/overlord/masterwandget
 
-execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run summon tnt ~ ~ ~ {Fuse:16}
-execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run summon tnt ~ ~ ~ {Fuse:16}
-#execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run summon tnt ~ ~ ~ {Fuse:16}
+execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run summon tnt ~ ~ ~ {fuse:16}
+execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run summon tnt ~ ~ ~ {fuse:16}
+#execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run summon tnt ~ ~ ~ {fuse:16}
 
 execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run effect give @s slow_falling 2 2
 
 #xp add @s[scores={class=8,timer=1}] 45 levels
 scoreboard players set @s[scores={class=8,timer=1}] shift_cool 45
 
-execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {NoGravity:1,Fuse:4}
-execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {NoGravity:1,Fuse:4}
+execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {NoGravity:1,fuse:4}
+execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {NoGravity:1,fuse:4}
 
 #execute as @s[scores={class=10}] at @s run effect give @s levitation 1 1
 
-#execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {Fuse:3}
-#execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {Fuse:3}
+#execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {fuse:3}
+#execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {fuse:3}
 
 execute as @s[scores={class=10}] at @s run effect give @s levitation 1 3
 
 #xp add @s[scores={class=10,timer=1}] 90 levels
-scoreboard players set @s[scores={class=10,timer=1}] shift_cool 75
+scoreboard players set @s[scores={class=10,timer=1}] shift_cool 88
 
 #reaper shift
-execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:10,NoGravity:1}
-execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:10,NoGravity:1}
-execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:0,NoGravity:1}
-execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {Fuse:0,NoGravity:1}
+execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {fuse:10,NoGravity:1}
+execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {fuse:10,NoGravity:1}
+execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {fuse:0,NoGravity:1}
+execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {fuse:0,NoGravity:1}
 
 execute as @s[scores={class=9,overlordsc=1..}] at @s run function game:player/class_team
-execute as @s[scores={class=9,overlordsc=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
-execute as @s[scores={class=9,overlordsc=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
-execute as @s[scores={class=9,overlordsc=3}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
-execute as @s[scores={class=9,overlordsc=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
+execute as @s[scores={class=9,overlordsc=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":true},{"text":" (1 Remaining) ","color":"white"}]
+execute as @s[scores={class=9,overlordsc=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":true},{"text":" (0 Remaining) ","color":"white"}]
+execute as @s[scores={class=9,overlordsc=3}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":true},{"text":" (0 Remaining) ","color":"white"}]
+execute as @s[scores={class=9,overlordsc=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":true},{"text":" (0 Remaining) ","color":"white"}]

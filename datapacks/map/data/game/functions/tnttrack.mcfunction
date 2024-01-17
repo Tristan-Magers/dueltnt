@@ -53,8 +53,8 @@ scoreboard players add @s TBtimer 1
 
 execute as @s at @s positioned ~ ~ ~ if entity @e[tag=target,distance=..2.2] run scoreboard players set @s TBtimer 100
 
-execute as @s[scores={TBtimer=80..}] at @s run summon tnt ~ ~.4 ~ {Fuse:1}
-execute as @s[scores={TBtimer=90..}] at @s run summon tnt ~ ~.4 ~ {Fuse:1}
+execute as @s[scores={TBtimer=80..}] at @s run summon tnt ~ ~.4 ~ {fuse:1}
+execute as @s[scores={TBtimer=90..}] at @s run summon tnt ~ ~.4 ~ {fuse:1}
 kill @s[scores={TBtimer=80..}]
 
 particle minecraft:spit ~ ~1 ~ 0.3 0.3 0.3 0 1 force

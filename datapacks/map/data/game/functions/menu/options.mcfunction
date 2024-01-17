@@ -13,7 +13,7 @@ scoreboard players set @e[name=menu,type=armor_stand] Opt 0
 execute if entity @e[name=menu,type=armor_stand,scores={Team=0}] run data merge block 475 16 495 {front_text:{messages:["[{\"text\":\"\"}]","{\"text\":\"Teams\",\"bold\":false,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"scoreboard players set @e[name=menu,type=armor_stand] Team 2\"}}","{\"text\":\"[disabled]\",\"color\":\"dark_red\",\"bold\":true}","[{\"text\":\"\"}]"]}}
 execute if entity @e[name=menu,type=armor_stand,scores={Team=1}] run data merge block 475 16 495 {front_text:{messages:["[{\"text\":\"\"}]","{\"text\":\"Teams\",\"bold\":false,\"clickEvent\":{\"action\":\"run_command\",\"value\":\"scoreboard players set @e[name=menu,type=armor_stand] Team 3\"}}","{\"text\":\"[enabled]\",\"color\":\"dark_green\",\"bold\":true}","[{\"text\":\"\"}]"]}}
 
-data merge block 475 16 494 {front_text:{messages:["[{\"text\":\"\"}]","[{\"score\":{\"name\":\"Lives\",\"objective\":\"game\"},\"bold\":\"true\"}]","[{\"text\":\"Live(s)\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"tag @e[name=menu] add LifeC\"}}]","[{\"text\":\"\"}]"]}}
+data merge block 475 16 494 {front_text:{messages:["[{\"text\":\"\"}]","[{\"score\":{\"name\":\"Lives\",\"objective\":\"game\"},\"bold\":true}]","[{\"text\":\"Live(s)\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"tag @e[name=menu] add LifeC\"}}]","[{\"text\":\"\"}]"]}}
 function game:mode
 
 #

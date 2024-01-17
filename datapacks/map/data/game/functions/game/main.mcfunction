@@ -38,7 +38,7 @@ execute positioned 473.45 10.00 506.54 run effect give @a[distance=..3.5] minecr
 #tell not joined title
 scoreboard players add @a[x=472,y=18,z=503,distance=..80] joinText 1
 scoreboard players set @a[scores={joinText=118..}] joinText 0
-title @a[scores={joinText=30,ingame=..0}] actionbar {"text":"You have not yet joined the game","color":"gold","bold":"false"}
+title @a[scores={joinText=30,ingame=..0}] actionbar {"text":"You have not yet joined the game","color":"gold","bold":false}
 
 #optifine sign
 #tellraw @a[scores={lagtext=1..}] ["",{"text":"Sorry for the inconvenience. Minecraft is currently having lag issues due to new particle code. To fix this issue, you can download OptiFine. [click here for website] Download the latest version for 1.13.2 (don't download anything else), run the executable you download, and restart Minecart. Select the OptiFine profile on the Minecraft Launcher. Once started, go to settings -> video settings -> animations and turn off smoke and explosion animations. That should make your game run 800% faster. If you still have issues, just turn off all the animations. Good luck, and game on!","color":"yellow","bold":false,"underlined":false,"clickEvent":{"action":"open_url","value":"https://optifine.net/downloads"}}]

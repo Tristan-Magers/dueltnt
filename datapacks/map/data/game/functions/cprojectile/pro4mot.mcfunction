@@ -1,6 +1,6 @@
 execute as @s at @s run function game:cprojectile/getdir2
 
-execute positioned ~ ~0.2 ~ run summon minecraft:fireball ^ ^ ^0.9 {Tags:["trackshot2","newtrack"],Motion:[0.0d, 0.0d, 0.0d],Invulnerable:0b,Air:300s,OnGround:0b,Dimension:0,ExplosionPower:4,PortalCooldown:0,Rotation:[0.0f,0.0f],Fire:-1s,power:[0.0d,-0.001d,-0.0d],direction:[0.0d, -0.001d, 0.0d]}
+execute positioned ~ ~-0.25 ~ run summon minecraft:fireball ^ ^ ^0.4 {Tags:["trackshot2","newtrack"],Motion:[0.0d, 0.0d, 0.0d],Invulnerable:0b,Air:300s,OnGround:0b,Dimension:0,ExplosionPower:4,PortalCooldown:0,Rotation:[0.0f,0.0f],Fire:-1s,power:[0.0d,-0.001d,-0.0d],direction:[0.0d, -0.001d, 0.0d]}
 scoreboard players operation @e[limit=1,tag=newtrack,sort=nearest] tntID = @s tntID
 scoreboard players set @e[limit=1,tag=newtrack,sort=nearest] BombBow 1
 

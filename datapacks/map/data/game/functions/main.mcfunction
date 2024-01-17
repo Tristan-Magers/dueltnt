@@ -1,8 +1,4 @@
 #
-scoreboard players set @a[scores={frozen=1..}] click 0
-scoreboard players set @a[scores={frozen=1..}] shift 0
-
-#
 execute unless entity @e[tag=pull_vortex,scores={vortex_id=1..}] run team modify Main collisionRule never
 
 #
@@ -109,9 +105,7 @@ particle cloud 486 15 485 20 10 20 .1 2
 tp @a[gamemode=!creative,x=500,y=35,z=500,distance=..4] 500 20 500
 
 #bedremove
-scoreboard players set @e[type=tnt,x=615,y=30,z=615,distance=..90,nbt={Fuse:1s}] tntEnd 1
-#execute as @e[scores={tntEnd=1..},tag=frost] at @s store result score @s DirY run data get entity @s Pos[1] 100
-#execute as @e[scores={tntEnd=1..},tag=frost] at @s run tellraw @p {"score":{"name":"@s","objective":"DirY"}}
+scoreboard players set @e[type=tnt,x=615,y=30,z=615,distance=..90,nbt={fuse:1s}] tntEnd 1
 execute as @e[scores={tntEnd=1..},tag=frost] at @s run summon minecraft:marker ~ ~ ~ {Tags:["frostmarker"]}
 scoreboard players add @e[tag=frostmarker] t1 1
 execute as @e[scores={t1=2..},tag=frostmarker] at @s run function game:char/shard/tntfill
@@ -169,9 +163,9 @@ tag @e[tag=portstopmove] remove portstopmove
 scoreboard players operation @e[name=Portal] tntID -= @p[scores={GoPortalP=1..}] tntID
 execute as @a[scores={GoPortalP=1..}] at @s if entity @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1,distance=..16] run tag @s add portstopmove
 
-execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run execute as @a[scores={GoPortalP=1..},distance=..16] at @s run summon tnt ~ ~ ~ {Fuse:1,NoGravity:1}
-execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run execute as @a[scores={GoPortalP=1..},distance=..16] at @s run summon tnt ~ ~ ~ {Fuse:2,NoGravity:1}
-execute if entity @e[scores={mode=1}] run execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run execute as @a[scores={GoPortalP=1..},distance=..16] at @s run summon tnt ~ ~ ~ {Fuse:1}
+execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run execute as @a[scores={GoPortalP=1..},distance=..16] at @s run summon tnt ~ ~ ~ {fuse:1,NoGravity:1}
+execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run execute as @a[scores={GoPortalP=1..},distance=..16] at @s run summon tnt ~ ~ ~ {fuse:2,NoGravity:1}
+execute if entity @e[scores={mode=1}] run execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run execute as @a[scores={GoPortalP=1..},distance=..16] at @s run summon tnt ~ ~ ~ {fuse:1}
 execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run teleport @a[scores={GoPortalP=1..},distance=..16] ~ ~ ~
 #execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run execute as @a[scores={GoPortalP=1..},distance=..16] at @s run tp @s @s
 execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run scoreboard players set @a[scores={GoPortalP=1..},distance=..16] shift_cool 20
@@ -221,7 +215,7 @@ execute as @e[tag=timer,scores={timer=1}] at @s run particle minecraft:explosion
 execute as @e[tag=timer,scores={timer=1}] at @s run execute as @e[tag=tnt_start] at @s run summon creeper ~ ~ ~ {ignited:1,Fuse:1,NoAI:1,ExplosionRadius:3}
 execute as @e[tag=timer,scores={timer=1}] at @s run function game:tntblow
 execute as @e[tag=timer,scores={timer=1}] at @s run kill @e[type=tnt]
-execute as @e[type=armor_stand,tag=stnt] at @s run execute as @e[distance=..15,tag=!tnt_start,type=tnt] at @s run data merge entity @s {Fuse:999999}
+execute as @e[type=armor_stand,tag=stnt] at @s run execute as @e[distance=..15,tag=!tnt_start,type=tnt] at @s run data merge entity @s {fuse:999999}
 execute as @e[type=armor_stand,tag=stnt] at @s run execute as @e[distance=..15,tag=!tnt_start,type=tnt] at @s run scoreboard players set @e[type=armor_stand,tag=timer,scores={timer=..0}] timer 201
 #execute as @e[type=armor_stand,tag=stnt] at @s run tp @e[distance=..3,tag=tnt,type=tnt] 490 16.4 495
 execute as @e[type=armor_stand,tag=stnt] at @s run execute as @e[distance=..15,tag=!tnt_start,type=tnt] at @s run tag @s add tnt_start
@@ -330,7 +324,7 @@ execute if score .creep_sign .data matches 0 unless entity @a[x=509.5,y=17,z=528
 
 
 #patreon
-#tellraw @a[scores={patclick=1..}] ["",{"text":"Hey there! ","color":"aqua"},{"text":"I made a page where you can see all my future games and work over on Patreon. Over the past half year, I have been making Minecraft maps full time on the Minecraft Marketplace. ","color":"white","bold":false,"underlined":false,"clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"Now I want to move my effort to making games right here on Realms, with higher quality than ever, just for you guys.","color":"yellow","bold":"false","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":" If you want to see the cool games coming, or you want to support me so I can make these games, [","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"color":"blue","text":"CLICK HERE","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"] to go the page about it. Thanks :D ","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"  <3 <3 <3","color":"red"}]
+#tellraw @a[scores={patclick=1..}] ["",{"text":"Hey there! ","color":"aqua"},{"text":"I made a page where you can see all my future games and work over on Patreon. Over the past half year, I have been making Minecraft maps full time on the Minecraft Marketplace. ","color":"white","bold":false,"underlined":false,"clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"Now I want to move my effort to making games right here on Realms, with higher quality than ever, just for you guys.","color":"yellow","bold":false,"clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":" If you want to see the cool games coming, or you want to support me so I can make these games, [","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"color":"blue","text":"CLICK HERE","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"] to go the page about it. Thanks :D ","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"  <3 <3 <3","color":"red"}]
 #scoreboard players set @a patclick 0
 
 #clear
@@ -409,18 +403,18 @@ scoreboard players set @a[x=14,y=4,z=1,distance=..2] Invis 3
 #Timer
 scoreboard players operation @e[name=Map,type=armor_stand] Time = Time game
 execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run scoreboard players remove Time game 1
-execute if entity @e[name=Map,type=armor_stand,scores={Time=600}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"30 seconds","color":"dark_red","bold":"false","font":"fancy"}]
+execute if entity @e[name=Map,type=armor_stand,scores={Time=600}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"30 seconds","color":"dark_red","bold":false,"font":"fancy"}]
 execute if entity @e[name=Map,type=armor_stand,scores={Time=1}] run gamemode spectator @a[x=620,y=20,z=620,distance=..100]
 
 scoreboard players operation TimeReal game = Time game
 scoreboard players operation TimeReal game /= 20 game
-execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run bossbar set minecraft:time name [{"text":"TIME ","bold":"false","color":"#b8ab9d","font":"fancy"},{"score":{"name":"TimeReal","objective":"game"},"color":"#cac3bf","bold":false,"font":"fancy"}]
+execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run bossbar set minecraft:time name [{"text":"TIME ","bold":false,"color":"#b8ab9d","font":"fancy"},{"score":{"name":"TimeReal","objective":"game"},"color":"#cac3bf","bold":false,"font":"fancy"}]
 execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run bossbar set minecraft:time visible true
 #execute if entity @e[name=Map,type=armor_stand,scores={Time=1..}] run scoreboard players operation Time l = TimeReal game
 
-execute if entity @e[name=Map,type=armor_stand,scores={Time=580}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"","color":"dark_red","bold":"false"}]
+execute if entity @e[name=Map,type=armor_stand,scores={Time=580}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"","color":"dark_red","bold":false}]
 
-execute if entity @e[name=Map,type=armor_stand,scores={Time=15}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"TIMES OUT","color":"dark_red","bold":"false","font":"fancy"}]
+execute if entity @e[name=Map,type=armor_stand,scores={Time=15}] run title @a[x=620,y=20,z=620,distance=..100] title [{"text":"TIMES OUT","color":"dark_red","bold":false,"font":"fancy"}]
 execute as @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure,scores={teamed=..0}] at @s run scoreboard players operation @s l = @s Lives
 
 tag @a remove time
@@ -450,8 +444,8 @@ tag @e[tag=kill_next] add kill_this_next
 execute as @e[tag=kill_next] run team modify Main collisionRule always
 
 #testing
-execute as @a[nbt={OnGround:1b},tag=ground_boom] at @s run summon tnt ~ ~ ~ {Fuse:4}
-execute as @a[nbt={OnGround:1b},tag=ground_boom] at @s run summon tnt ~ ~ ~ {Fuse:2}
+execute as @a[nbt={OnGround:1b},tag=ground_boom] at @s run summon tnt ~ ~ ~ {fuse:4}
+execute as @a[nbt={OnGround:1b},tag=ground_boom] at @s run summon tnt ~ ~ ~ {fuse:2}
 execute as @a[nbt={OnGround:1b},tag=ground_boom] at @s run tp @s @s
 execute as @a[nbt={OnGround:1b},tag=ground_boom] at @s run tp @s ~ ~0.1 ~
 execute as @a[nbt={OnGround:1b},tag=ground_boom] at @s run effect give @s levitation 1 10 true
@@ -463,7 +457,7 @@ execute as @a[scores={ass_pearl=0..}] at @s run function game:physics/ass_pearl
 execute as @e[tag=blue_tnt] at @s run tp @s @s
 team join blue_color @e[tag=blue_tnt]
 
-execute as @a[tag=divekick_end] at @s run function game:physics/dive_end
+execute as @a[tag=divekick_end2] at @s run function game:physics/dive_end
 execute as @a[tag=divekick] at @s run function game:physics/dive_kick
 
 tag @a[tag=divekick_end] add divekick_end2
@@ -477,13 +471,3 @@ team join Main @a[team=!Main,x=500,y=60,z=500,distance=..80]
 team join Main @a[team=!Main,scores={class=9..}]
 team join Main @a[team=!Main,scores={class=..7}]
 team join gardener @a[team=!gardener,scores={class=8},gamemode=adventure,x=620,y=20,z=620,distance=..100]
-
-#
-execute as @a[tag=frozen,scores={frozen=2..}] run item replace entity @s hotbar.0 with ice
-execute as @a[tag=frozen,scores={frozen=2..}] run item replace entity @s hotbar.1 with ice
-execute as @a[tag=frozen,scores={frozen=2..}] run item replace entity @s hotbar.2 with ice
-execute as @a[tag=frozen,scores={frozen=2..}] run item replace entity @s hotbar.3 with ice
-execute as @a[tag=frozen,scores={frozen=2..}] run item replace entity @s hotbar.4 with ice
-execute as @a[tag=frozen,scores={frozen=2..}] run item replace entity @s hotbar.5 with ice
-execute as @a[tag=frozen,scores={frozen=2..}] run item replace entity @s hotbar.6 with ice
-execute as @a[tag=frozen,scores={frozen=2..}] run item replace entity @s hotbar.7 with ice

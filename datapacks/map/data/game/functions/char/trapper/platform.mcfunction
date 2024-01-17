@@ -2,10 +2,10 @@ scoreboard players set @s PlatTimer 270
 scoreboard players set @s platAm 6
 
 function game:player/class_team
-execute as @s[scores={platUse=3},nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Platform","color":"red","bold":"true"},{"text":" (3 Remaining) ","color":"white"}]
-execute as @s[scores={platUse=2},nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Platform","color":"red","bold":"true"},{"text":" (2 Remaining) ","color":"white"}]
-execute as @s[scores={platUse=1},nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Platform","color":"red","bold":"true"},{"text":" (1 Remaining) ","color":"white"}]
-execute as @s[scores={platUse=0},nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Platform","color":"red","bold":"true"},{"text":" (0 Remaining) ","color":"white"}]
+execute as @s[scores={platUse=3},nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Platform","color":"red","bold":true},{"text":" (3 Remaining) ","color":"white"}]
+execute as @s[scores={platUse=2},nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Platform","color":"red","bold":true},{"text":" (2 Remaining) ","color":"white"}]
+execute as @s[scores={platUse=1},nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Platform","color":"red","bold":true},{"text":" (1 Remaining) ","color":"white"}]
+execute as @s[scores={platUse=0},nbt={SelectedItem:{id:"minecraft:diamond_sword"}}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Platform","color":"red","bold":true},{"text":" (0 Remaining) ","color":"white"}]
 
 execute as @s at @s run tp @s @s
 

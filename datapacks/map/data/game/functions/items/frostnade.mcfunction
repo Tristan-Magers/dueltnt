@@ -18,7 +18,7 @@ execute as @s[scores={airnade=1}] at @s run playsound minecraft:block.wooden_doo
 execute as @s[scores={airnade=1}] at @s run playsound minecraft:ui.stonecutter.take_result master @a ~ ~ ~ 1 2
 execute as @s[scores={airnade=1}] at @s run playsound minecraft:ui.stonecutter.take_result master @a ~ ~ ~ 1 0
 
-#execute as @s[scores={airnade=1}] at @s run summon armor_stand ~ ~ ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",Fuse:20,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
+#execute as @s[scores={airnade=1}] at @s run summon armor_stand ~ ~ ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",fuse:20,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
 
 scoreboard players set @s[scores={airnade=2}] airnade 7
 

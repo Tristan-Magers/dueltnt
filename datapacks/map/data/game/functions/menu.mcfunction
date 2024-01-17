@@ -34,7 +34,6 @@ scoreboard players set @a[x=496,y=20,z=520,distance=..60] Y 30
 kill @e[type=minecraft:potion,x=496,y=20,z=520,distance=..60]
 kill @e[type=minecraft:fireball,x=496,y=20,z=520,distance=..60]
 kill @e[tag=mastertnt,x=496,y=20,z=520,distance=..60]
-kill @e[name=acid,x=496,y=20,z=520,distance=..60]
 execute as @a[x=496,y=20,z=520,distance=..60] at @s run attribute @p minecraft:generic.movement_speed base set .1
 
 #master portal
