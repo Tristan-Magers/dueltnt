@@ -51,6 +51,7 @@ tag @a remove grave
 
 #
 scoreboard players set @a click 0
+scoreboard players set @a frozen -10
 
 #
 gamerule reducedDebugInfo false

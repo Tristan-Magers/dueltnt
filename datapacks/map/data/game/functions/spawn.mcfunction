@@ -96,6 +96,7 @@ spreadplayers 615 615 0 6 false @a[x=600,y=60,z=600,distance=..3,gamemode=advent
 setblock -5 5 -14 redstone_block
 
 effect clear @a[x=600,y=60,z=600,distance=..90] minecraft:invisibility
+scoreboard players operation Lives_start game = Lives game
 scoreboard players operation @a Lives = Lives game
 
 function game:giveitems

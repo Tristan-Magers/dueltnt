@@ -1,3 +1,7 @@
+
+execute as @s[scores={class=0}] run scoreboard players operation @s soldier_shifts_t = @s shift_cool
+execute as @s[scores={class=0}] run scoreboard players operation @s shift_cool = @s soldier_shifts
+
 #
 tag @e[tag=name_temp,type=marker] remove mine
 tag @e[tag=stock_temp,type=marker] remove mine
@@ -94,3 +98,6 @@ tag @e[tag=stock_temp,type=marker] remove mine
 #
 execute as @e[tag=stock_temp,type=marker] run scoreboard players operation @s stocks_slot = @s stocks_slot_t
 execute as @e[tag=name_temp,type=marker] run scoreboard players operation @s stocks_slot = @s stocks_slot_t
+
+#
+execute as @s[scores={class=0}] run scoreboard players operation @s shift_cool = @s soldier_shifts_t

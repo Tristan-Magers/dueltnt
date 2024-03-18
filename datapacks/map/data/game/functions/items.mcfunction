@@ -44,7 +44,7 @@ scoreboard players remove @a[scores={class=9,overlordsc=2..}] shift_cool 1
 execute as @a unless entity @s[scores={class=9}] run xp add @s -1 levels
 xp add @a[scores={class=9,overlordsc=2..}] -1 levels
 scoreboard players add @a[gamemode=adventure,scores={timer=1..},distance=..100,x=620,y=20,z=620] timer 1
-execute as @a[gamemode=adventure,scores={shift=1..,timer=..0},distance=..100,x=620,y=20,z=620] at @s unless entity @s[scores={class=9,overlordsc=2..}] run function game:shift
+execute as @a[gamemode=adventure,scores={shift=1..,timer=..0},distance=..100,x=620,y=20,z=620] at @s unless entity @s[scores={class=9,overlordsc=2..}] unless entity @s[scores={class=0,soldier_shifts=..0}] run function game:shift
 
 execute as @a[gamemode=adventure,scores={timer=1..},distance=..100,x=620,y=20,z=620] at @s run function game:player/shifttime
 
@@ -90,9 +90,10 @@ execute as @e[type=tnt,nbt={fuse:1s}] at @s run scoreboard players set @a[gamemo
 #slime
 tag @e[name=SM,type=minecraft:marker] add slimerpro
 execute as @e[type=snowball] at @s run kill @e[distance=..8,name=SM,type=minecraft:marker,limit=1,sort=nearest]
-execute as @e[type=snowball] at @s run summon minecraft:marker ~ ~ ~ {CustomName:"{\"italic\":false,\"text\":\"SM\"}",Invulnerable:1,Marker:1,Silent:1,NoGravity:1,Invisible:1}
-execute as @e[tag=slimerpro,scores={slimetime=..0}] at @s run summon slime ~ ~-1 ~ {Size:3,NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"slimer\"}",Tags:["slimer"]}
-execute as @e[tag=slimerpro,scores={slimetime=1}] at @s run summon slime ~ ~-1 ~ {Size:4,NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"slimer\"}",Tags:["slimer"]}
+execute as @e[type=snowball] at @s run summon minecraft:marker ~ ~ ~ {CustomName:"{\"italic\":false,\"text\":\"SM\"}",Invulnerable:1,Marker:1,Silent:1,NoGravity:1,Invisible:1,Attributes:[{Name:generic.knockback_resistance,Base:0.6}]}
+execute as @e[tag=slimerpro] at @s run function game:cprojectile/correct_landing
+execute as @e[tag=slimerpro,scores={slimetime=..0}] at @s run summon slime ~ ~-1 ~ {Size:3,NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"slimer\"}",Tags:["slimer"],Attributes:[{Name:generic.knockback_resistance,Base:0.6}]}
+execute as @e[tag=slimerpro,scores={slimetime=1}] at @s run summon slime ~ ~-1 ~ {Size:4,NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"slimer\"}",Tags:["slimer"],Attributes:[{Name:generic.knockback_resistance,Base:0.6}]}
 execute as @e[tag=slimerpro,scores={slimetime=2}] at @s run summon slime ~ ~-1 ~ {Size:6,NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"slimer\"}",Tags:["slimer"]}
 execute as @e[tag=slimerpro,scores={slimetime=2}] at @s run effect give @e[type=slime,distance=..10] minecraft:resistance 999 10 true
 execute as @e[type=snowball] at @s run execute as @a[gamemode=adventure,distance=..3,scores={snow=..0,snowReset=..94}] at @s run kill @e[type=snowball,distance=..2]
@@ -104,6 +105,12 @@ tp @e[type=slime,scores={time=60..}] ~ ~-2000 ~
 execute as @e[tag=slimerpro] at @s run playsound minecraft:entity.slime.attack master @a
 kill @e[tag=slimerpro]
 scoreboard players add @e[type=snowball] slimetime 1
+execute as @e[type=snowball] store result score @s x_mot run data get entity @s Motion[0] 10
+execute as @e[type=snowball] store result score @s y_mot run data get entity @s Motion[1] 10
+execute as @e[type=snowball] store result score @s z_mot run data get entity @s Motion[2] 10
+execute as @e[type=snowball] at @s run scoreboard players operation @e[distance=..8,name=SM,type=minecraft:marker,limit=1,sort=nearest] x_mot = @s x_mot
+execute as @e[type=snowball] at @s run scoreboard players operation @e[distance=..8,name=SM,type=minecraft:marker,limit=1,sort=nearest] y_mot = @s y_mot
+execute as @e[type=snowball] at @s run scoreboard players operation @e[distance=..8,name=SM,type=minecraft:marker,limit=1,sort=nearest] z_mot = @s z_mot
 execute as @e[type=snowball,scores={slimetime=6..}] at @s run scoreboard players set @e[distance=..8,name=SM,type=minecraft:marker] slimetime 1
 execute as @e[type=snowball,scores={slimetime=16..}] at @s run scoreboard players set @e[distance=..8,name=SM,type=minecraft:marker] slimetime 2
 scoreboard players add @e[name=SM,type=minecraft:marker] slimetime 0
@@ -111,11 +118,18 @@ scoreboard players add @e[name=SM,type=minecraft:marker] slimetime 0
 # eggs throw
 execute as @a[gamemode=adventure,scores={egguse=1..}] at @s run scoreboard players operation @e[distance=..8,type=egg,limit=1,sort=nearest,tag=!old] tntID = @s tntID
 tag @e[type=egg] add old
+execute as @e[type=egg] store result score @s x_mot run data get entity @s Motion[0] 10
+execute as @e[type=egg] store result score @s y_mot run data get entity @s Motion[1] 10
+execute as @e[type=egg] store result score @s z_mot run data get entity @s Motion[2] 10
 scoreboard players add @a snowReset 0
 tag @e[name=AM,type=armor_stand] add slime
 execute as @e[type=egg] at @s run kill @e[distance=..8,name=AM,type=armor_stand,limit=1,sort=nearest]
 execute as @e[type=egg] at @s run summon armor_stand ~ ~ ~ {CustomName:"{\"italic\":false,\"text\":\"AM\"}",Invulnerable:1,Marker:1,Silent:1,NoGravity:1,Invisible:1}
 execute as @e[type=egg] at @s run scoreboard players operation @e[distance=..8,name=AM,type=armor_stand,limit=1,sort=nearest] tntID = @s tntID
+execute as @e[type=egg] at @s run scoreboard players operation @e[distance=..8,name=AM,type=armor_stand,limit=1,sort=nearest] x_mot = @s x_mot
+execute as @e[type=egg] at @s run scoreboard players operation @e[distance=..8,name=AM,type=armor_stand,limit=1,sort=nearest] y_mot = @s y_mot
+execute as @e[type=egg] at @s run scoreboard players operation @e[distance=..8,name=AM,type=armor_stand,limit=1,sort=nearest] z_mot = @s z_mot
+execute as @e[name=AM,type=armor_stand,tag=slime] at @s run function game:cprojectile/correct_landing
 execute as @e[name=AM,type=armor_stand,tag=slime] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1,Marker:1,Silent:1,Tags:["a","frostnade"]}
 execute as @e[name=AM,type=armor_stand,tag=slime] at @s run scoreboard players operation @e[distance=..8,tag=frostnade,tag=a,type=armor_stand,limit=1,sort=nearest] tntID = @s tntID
 scoreboard players set @a[gamemode=adventure,scores={egguse=1..}] eggtimer 40
@@ -423,6 +437,8 @@ execute as @e[type=squid] at @s run tp @s ~ ~-1000 ~
 
 # freeze
 execute as @e[scores={frozen=0..}] at @s run function game:player/frozen
+tag @e remove frozen
+tag @e[scores={frozen=0..}] add frozen
 
 #pig
 execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run scoreboard players set @s pig 41
@@ -457,7 +473,7 @@ scoreboard players remove @e[scores={frostsT=-100..}] frostsT 1
 execute as @e[tag=frostplat] at @s run function game:char/shard/frostsuck/plat
 
 #snowman
-execute as @e[type=minecraft:snow_golem] at @s run function game:char/shard/snowman/tick
+execute as @e[tag=snowman] at @s run function game:char/shard/snowman/tick
 
 execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={click=1..},nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] at @s run function game:char/shard/snowman/create
 #item replace entity @a[scores={class=10,snowmanT=0},x=620,y=20,z=620,distance=..100] hotbar.2 with yellow_dye{display:{Name:"{\"italic\":false,\"text\":\"§6Snowman §f§r: Right-click\"}"}}
@@ -485,7 +501,7 @@ execute as @a[scores={tridentuse=1..}] run scoreboard players operation @e[type=
 execute as @e[type=minecraft:trident] run function game:char/shard/trident
 
 scoreboard players remove @a[scores={tridentT=0..}] tridentT 1
-scoreboard players set @a[scores={tridentuse=1..}] tridentT 120
+scoreboard players set @a[scores={tridentuse=1..}] tridentT 112
 
 item replace entity @a[scores={class=10,tridentT=0},x=620,y=20,z=620,distance=..100] hotbar.2 with trident{display:{Name:"{\"italic\":false,\"text\":\"§9Trident §f(hit players) §r: Right-click\"}"}}
 scoreboard players set @a[scores={tridentuse=1..}] tridentuse 0
@@ -624,9 +640,9 @@ scoreboard players remove @a[gamemode=adventure,scores={enderreload=0..,class=1}
 scoreboard players remove @a[gamemode=adventure,scores={enderreload=0..,class=2}] enderreload 1
 
 # plague
-scoreboard players set @a[gamemode=adventure,scores={plagueuse=1..,class=8},nbt={OnGround:0b}] nolev 16
+scoreboard players set @a[gamemode=adventure,scores={plagueuse=1..,class=8},nbt={OnGround:0b}] nolev 15
 effect give @a[gamemode=adventure,scores={plagueuse=1..,class=8},nbt={OnGround:0b}] slow_falling 1 7
-effect give @a[gamemode=adventure,scores={plagueuse=1..,class=8},nbt={OnGround:0b}] levitation 1 8
+effect give @a[gamemode=adventure,scores={plagueuse=1..,class=8},nbt={OnGround:0b}] levitation 1 7
 tag @a[gamemode=adventure,scores={plagueuse=1..}] remove checkairnade
 scoreboard players set @a[gamemode=adventure,scores={plagueuse=1..}] plaguetimer 200
 scoreboard players set @a[gamemode=adventure,scores={plagueuse=1..}] plagueuse 0
@@ -718,11 +734,11 @@ scoreboard players set @a[scores={slimeegguseset=1..}] slimeegguseset 0
 tag @e[type=creeper] add beenaround
 
 #dive kick
-scoreboard players set @a[scores={dive_kick=4..9},nbt={OnGround:1b}] dive_kick 3
+scoreboard players set @a[scores={dive_kick=4..9},nbt={OnGround:1b},tag=!ender_tnt_land] dive_kick 3
 scoreboard players remove @a[scores={dive_kick=-5..}] dive_kick 1
 
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={dive_kick=1..}] at @s run particle minecraft:squid_ink ~ ~ ~ 0 0 0 0 1 force
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={dive_kick=-1}] at @s run function game:char/assassin/dive_boom
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={dive_kick=0}] at @s run function game:char/assassin/dive_boom
 
 #darts
 scoreboard players set @e[tag=dart] dart_steps 10

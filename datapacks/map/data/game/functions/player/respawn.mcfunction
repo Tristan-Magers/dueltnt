@@ -66,6 +66,8 @@ execute as @s[scores={class=4,pig=1..}] at @s run scoreboard players set @s pig 
 
 #
 scoreboard players set @s dive_kick -1
+scoreboard players set @s soldier_shifts 10
+scoreboard players set @s soldier_shift_reload 0
 
 #
 tag @s remove up_speed

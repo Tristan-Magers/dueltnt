@@ -28,7 +28,7 @@ scoreboard players set @s[scores={class=2}] Invis 40
 
 #scoreboard players set @s[scores={class=0}] Invis 30
 #scoreboard players set @s[scores={class=2}] enderreload 300
-scoreboard players set @s[scores={class=1,endercount=1..}] enderreload 210
+scoreboard players set @s[scores={class=1,endercount=1..}] enderreload 220
 scoreboard players set @s[scores={class=1,endercount=1..}] endercount 0
 scoreboard players set @s[scores={class=1}] sneakdisable 40
 clear @s[scores={class=1}] squid_spawn_egg

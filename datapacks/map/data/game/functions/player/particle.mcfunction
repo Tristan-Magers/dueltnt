@@ -141,6 +141,8 @@ scoreboard players operation #rubixRot particle = #haloTicks particle
 execute as @s[scores={particle=26}] at @s rotated 0 0 positioned ~ ~.2 ~ run function game:player/particle/halo2
 execute as @s[scores={particle=26}] at @s rotated ~ 0 positioned ~ ~1.6 ~ run function game:player/particle/halo_top
 
+execute store result score #woa1Val .num run random value 1..10
+execute as @s[scores={particle=900}] at @s rotated ~ 0 run function game:player/particle/woa1
 
 scoreboard players add @s OPp 1
 scoreboard players set @s[scores={OPp=51..}] OPp 0

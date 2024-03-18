@@ -1,15 +1,16 @@
-summon minecraft:snow_golem ~ ~ ~ {NoAI:1,Tags:["new"],Invulnerable:1}
-summon area_effect_cloud ^ ^ ^12 {Duration:999,Tags:["snowmark","gameae"]}
-tp @e[type=minecraft:snow_golem,tag=new] @s
-tp @e[type=minecraft:snow_golem,tag=new] ~ ~-0.4 ~
-execute as @e[type=minecraft:snow_golem,tag=new] at @s run tp @s ~ ~ ~ facing entity @e[tag=snowmark,limit=1]
-tag @e[type=snow_golem] remove new
+execute positioned ~ ~-0.5 ~ run summon minecraft:armor_stand ^ ^ ^0.2 {NoAI:1,Tags:["new","snowman"],Invulnerable:1,Marker:1,ArmorItems:[{},{},{},{id:"minecraft:carved_pumpkin",Count:1b,tag:{CustomModelData:1}}]}
+summon area_effect_cloud ^ ^ ^30 {Duration:999,Tags:["snowmark","gameae"]}
+tp @e[tag=snowman,tag=new] @s
+tp @e[tag=snowman,tag=new] ~ ~-0.5 ~
+execute as @e[tag=snowman,tag=new] at @s run tp @s ~ ~ ~ facing entity @e[tag=snowmark,limit=1]
+execute as @e[tag=snowman,tag=new] at @s run tp @s ^ ^ ^0.2 facing entity @e[tag=snowmark,limit=1]
+tag @e[tag=snowman] remove new
 kill @e[tag=snowmark]
 
 clear @s yellow_dye
 scoreboard players set @s snowmanT 40
 
-team join noCol @e[type=minecraft:snow_golem]
+team join noCol @e[tag=snowman]
 
 playsound minecraft:entity.snow_golem.hurt master @a
 playsound minecraft:entity.snow_golem.death master @a
