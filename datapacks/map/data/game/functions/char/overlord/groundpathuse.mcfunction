@@ -10,7 +10,7 @@ execute as @e[limit=1,tag=groundpath,sort=nearest] at @s run tp @s ~ ~-1 ~ ~ 0
 scoreboard players remove @s masterb 14
 clear @s gold_ore 14
 
-scoreboard players set @s slide_cooldown 90
+scoreboard players set @s slide_cooldown 110
 
 function game:char/overlord/masterwanditems
 

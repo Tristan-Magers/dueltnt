@@ -3,12 +3,12 @@ tag @s add gather
 
 scoreboard players set @s otherlord_gather_count 0
 
-scoreboard players set @s gather_cooldown 10
+scoreboard players set @s gather_cooldown 40
 
-scoreboard players set @s[scores={masterc=5..}] gather_cooldown 9
-scoreboard players set @s[scores={masterc=10..}] gather_cooldown 8
-scoreboard players set @s[scores={masterc=15..}] gather_cooldown 7
-scoreboard players set @s[scores={masterc=20..}] gather_cooldown 6
+scoreboard players set @s[scores={masterc=5..}] gather_cooldown 35
+scoreboard players set @s[scores={masterc=10..}] gather_cooldown 30
+scoreboard players set @s[scores={masterc=15..}] gather_cooldown 25
+scoreboard players set @s[scores={masterc=20..}] gather_cooldown 20
 
 scoreboard players set @s gather_cooldown_T 0
 

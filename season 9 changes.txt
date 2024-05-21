@@ -442,6 +442,7 @@ Soldier
 - Anvils reload one shift
  
 Assassin
+- Mass Freeze freezes 0.3s longer (1.2s -> 1.5s)
 - Shift reloads 4s faster (6.5s -> 2.5s)
 - Shift only reloads while on ground
 - Using Sneak Attack reloads shift
@@ -449,11 +450,32 @@ Assassin
 - Darts move 10% faster (30 b/s -> 33 b/s)
 - Darts explode 0.05s faster (0.4s -> 0.35s)
 
+Ghost
+- Using Air Missile shoots a line of particles that show the path of the missile
+
 Trapper
 - TNT Trap explodes 0.05s faster (0.15s -> 0.1s)
 - Fast Trap explodes 0.05s faster (0.25s -> 0.2s)
- 
+- Shift reloads 2.25s faster (8s -> 1.75s)
+- Shift only reloads while on ground
+
+Wizard
+- Creepers explode 2.5s faster if not detonated (6s -> 3.5s)
+- Reloads shift on death
+
+Reaper
+- Dark Pillar arrow reloads 0.2s faster
+- Dark Pillar explodes 0.2s faster (1.65s -> 1.45s)
+- Dark Pillar removes glass 0.2s faster (2.05s -> 1.85s)
+- Reloads shift on death
+
+Overlord
+- Matter Slide reload increased 1s (4.5s -> 5.5s)
+- Gather causes longer reload on wand (2s with 0.25s faster reload for each 5 uses)
+    - previously 0.5s with 0.05s faster reload for each 5 uses
+
 Shard
+- Ice Suck reloads 0.5s slower (11.5s -> 12s)
 - Shift reloads 2.1s faster (3.75s -> 1.65s)
 - Shift only reloads while on the ground
 - Using Float reloads shift

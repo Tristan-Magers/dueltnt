@@ -42,6 +42,7 @@ execute as @a[gamemode=adventure,distance=..100,x=620,y=20,z=620] at @s run func
 tag @a remove shift_lock
 
 tag @a[scores={class=10},nbt={OnGround:0b}] add shift_lock
+tag @a[scores={class=3},nbt={OnGround:0b}] add shift_lock
 tag @a[scores={class=1},nbt={OnGround:0b}] add shift_lock
 
 scoreboard players set @a[tag=!shift_lock] coyote_frames 4
@@ -279,8 +280,8 @@ effect give @e[tag=wizcreep] minecraft:slow_falling 999 0 true
 
 team join noCol @e[tag=wizcreep]
 execute as @e[tag=wizcreep] run scoreboard players add @s wizard_creeper 1 
-execute as @e[tag=wizcreep,scores={wizard_creeper=120..}] run tag @s add time_boom
-execute as @e[tag=wizcreep,scores={wizard_creeper=120..}] run function game:char/wizard/boom_creeper
+execute as @e[tag=wizcreep,scores={wizard_creeper=70..}] run tag @s add time_boom
+execute as @e[tag=wizcreep,scores={wizard_creeper=70..}] run function game:char/wizard/boom_creeper
 
 #creeper projectile reaper
 scoreboard players add @e[tag=creepro] masterb 1

@@ -53,5 +53,47 @@
     },
     "done": true
   },
+  "classes:class4": {
+    "criteria": {
+      "wizard": "2024-05-20 19:06:09 -0600"
+    },
+    "done": true
+  },
+  "classes:class6": {
+    "criteria": {
+      "reaper": "2024-05-20 19:07:30 -0600"
+    },
+    "done": true
+  },
+  "classes:class7": {
+    "criteria": {
+      "echo": "2024-05-21 15:14:03 -0600"
+    },
+    "done": true
+  },
+  "classes:class3": {
+    "criteria": {
+      "trapper": "2024-05-21 15:14:13 -0600"
+    },
+    "done": true
+  },
+  "classes:class5": {
+    "criteria": {
+      "mad": "2024-05-21 15:14:27 -0600"
+    },
+    "done": true
+  },
+  "classes:class9": {
+    "criteria": {
+      "overlord": "2024-05-21 15:14:44 -0600"
+    },
+    "done": true
+  },
+  "classes:class2": {
+    "criteria": {
+      "trapper": "2024-05-21 15:46:15 -0600"
+    },
+    "done": true
+  },
   "DataVersion": 3700
 }

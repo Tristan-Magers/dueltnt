@@ -78,8 +78,8 @@ execute as @s[scores={FZtimer=165}] at @s at @e[tag=dummy,distance=..3.25] run p
 execute as @s[scores={FZtimer=165}] at @s at @a[distance=0.01..3.25,gamemode=adventure] run playsound minecraft:block.amethyst_block.break master @a ~ ~ ~ 1 0
 execute as @s[scores={FZtimer=165}] at @s at @e[tag=dummy,distance=..3.25] run playsound minecraft:block.amethyst_block.break master @a ~ ~ ~ 1 0
 
-execute as @s[scores={FZtimer=165}] at @s run scoreboard players set @a[distance=0.01..3.25,gamemode=adventure] frozen 24
-execute as @s[scores={FZtimer=165}] at @s run scoreboard players set @e[tag=dummy,distance=..3.25] frozen 24
+execute as @s[scores={FZtimer=165}] at @s run scoreboard players set @a[distance=0.01..3.25,gamemode=adventure] frozen 30
+execute as @s[scores={FZtimer=165}] at @s run scoreboard players set @e[tag=dummy,distance=..3.25] frozen 30
 execute as @s[scores={FZtimer=165}] at @s run item replace entity @e[type=minecraft:skeleton,distance=..3.25] weapon.mainhand with air
 execute as @s[scores={FZtimer=165}] at @s run item replace entity @e[type=minecraft:skeleton,distance=..3.25] weapon.offhand with air
 execute as @s[scores={FZtimer=165}] at @s run effect give @e[type=minecraft:skeleton,distance=..4] glowing 2 1 true

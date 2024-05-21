@@ -28,9 +28,9 @@ scoreboard players set @s[scores={class=4,bow=22..}] bow -1
 item replace entity @s[scores={class=5,bow=52..}] hotbar.6 with arrow 3
 execute as @s[scores={class=5,bow=49..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .5 2
 scoreboard players set @s[scores={class=5,bow=52..}] bow -2
-item replace entity @s[scores={class=6,bow=26..}] hotbar.6 with arrow 1
-execute as @s[scores={class=6,bow=26..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
-scoreboard players set @s[scores={class=6,bow=26..}] bow 0
+item replace entity @s[scores={class=6,bow=22..}] hotbar.6 with arrow 1
+execute as @s[scores={class=6,bow=22..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
+scoreboard players set @s[scores={class=6,bow=22..}] bow 0
 item replace entity @s[scores={class=7,bow=45..}] hotbar.6 with arrow 1
 execute as @s[scores={class=7,bow=45..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
 scoreboard players set @s[scores={class=7,bow=45..}] bow 0
