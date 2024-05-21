@@ -56,6 +56,11 @@ execute as @a unless entity @s[scores={class=9},tag=!shift_lock] run xp add @s -
 xp add @a[scores={class=9,overlordsc=2..},tag=!shift_lock] -1 levels
 scoreboard players add @a[gamemode=adventure,scores={timer=1..},distance=..100,x=620,y=20,z=620,tag=!shift_lock] timer 1
 execute as @a[gamemode=adventure,scores={shift=1..,timer=..0},distance=..100,x=620,y=20,z=620] at @s unless entity @s[scores={class=9,overlordsc=2..}] unless entity @s[scores={class=0,soldier_shifts=..0}] run function game:shift
+execute as @a[gamemode=adventure,scores={shift=1..,timer=..0},distance=..100,x=620,y=20,z=620] at @s unless entity @s[scores={class=9,overlordsc=2..}] as @s[scores={class=0,soldier_shifts=..0,soldier_shift_sound=..0}] at @s run playsound minecraft:block.note_block.basedrum master @s
+execute as @a[gamemode=adventure,scores={shift=1..,timer=..0},distance=..100,x=620,y=20,z=620] at @s unless entity @s[scores={class=9,overlordsc=2..}] as @s[scores={class=0,soldier_shifts=..0,soldier_shift_sound=..0}] at @s run playsound minecraft:block.note_block.snare master @s
+execute as @a[gamemode=adventure,scores={shift=1..,timer=..0},distance=..100,x=620,y=20,z=620] at @s unless entity @s[scores={class=9,overlordsc=2..}] as @s[scores={class=0,soldier_shifts=..0,soldier_shift_sound=..0}] at @s run scoreboard players set @s soldier_shift_sound 10
+
+scoreboard players remove @a[scores={soldier_shift_sound=1..}] soldier_shift_sound 1
 
 execute as @a[gamemode=adventure,scores={timer=1..},distance=..100,x=620,y=20,z=620] at @s run function game:player/shifttime
 
@@ -752,7 +757,7 @@ execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={dive_k
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={dive_kick=0}] at @s run function game:char/assassin/dive_boom
 
 #darts
-scoreboard players set @e[tag=dart] dart_steps 10
+scoreboard players set @e[tag=dart] dart_steps 11
 execute as @e[tag=dart] at @s run function game:char/assassin/dartmove
 
 #

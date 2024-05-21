@@ -144,7 +144,7 @@ scoreboard players set @a[scores={class=8},x=620,y=20,z=620,distance=..100] bow 
 scoreboard players set @a[scores={class=8},x=620,y=20,z=620,distance=..100] plaguetimer 160
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.4 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6You can now PvP with players :D\"}"}}
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.5 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Crouch for retro trapper simulator\"}"}}
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.6 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Gain extra life every 50 seconds\"}"}}
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.6 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Gain extra life every 45 seconds (if under max)\"}"}}
 team join gardener @a[x=620,y=20,z=620,distance=..100,scores={class=8}]
 #team leave @a[x=620,y=20,z=620,distance=..100,scores={class=9..}]
 #team leave @a[x=620,y=20,z=620,distance=..100,scores={class=..7}]
@@ -313,8 +313,11 @@ scoreboard players set @a z_ender_mot 0
 scoreboard players remove @a ui_action_text 0
 scoreboard players remove @a ui_action_time 0
 
+scoreboard objectives add soldier_shift_sound dummy
+
 scoreboard players set @a soldier_shifts 5
 scoreboard players set @a soldier_shift_reload 0
+scoreboard players set @a soldier_shift_sound 0
 
 scoreboard players set @a coyote_frames -1
 

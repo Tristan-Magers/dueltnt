@@ -16,7 +16,7 @@ execute as @s[tag=!in,tag=!boom] at @s run playsound minecraft:ui.loom.select_pa
 execute as @s[tag=!in,tag=!boom] at @s run playsound minecraft:block.basalt.place master @a ~ ~ ~ 1 0.9
 execute as @s[tag=!in,tag=!boom] at @s run playsound minecraft:entity.creeper.primed master @a ~ ~ ~ 1 2
 
-execute as @s[tag=!in,tag=!boom] at @s run summon armor_stand ~ ~1.5 ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",fuse:9,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
+execute as @s[tag=!in,tag=!boom] at @s run summon armor_stand ~ ~1.5 ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",fuse:8,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
 #execute as @s[tag=!in,tag=!boom] at @s run summon armor_stand ~ ~1.4 ~ {Marker:1b,Tags:["blue_tnt_marker"],Passengers:[{id:"minecraft:tnt",fuse:10,NoGravity:1,Tags:["blue_tnt"],Glowing:1}]}
 
 #execute as @s[tag=!in,tag=!boom] at @s run summon tnt ~ ~1.5 ~ {fuse:10,NoGravity:1,Tags:["blue_tnt"],Glowing:1}
