@@ -428,3 +428,36 @@ Shard
 - Fixed space in "Wand Upgrade" spectator announcement
 - Fixed typo in "Clear Skies" achievement
 - Updated resource pack version to be current with Minecraft 1.20.4
+
+*Season 9.1.1 Update*
+ 
+[Character Changes]
+ 
+Soldier
+- 5 less max shifts (10 -> 5)
+- Shifts reload 0.75s slower each (2.25s -> 3.0s)
+- Shifts reload  x3 faster on ground
+- Shift fully reload on pearl hit
+- Anvils reload one shift
+ 
+Assassin
+- Shift reloads 4s faster (6.5s -> 2.5s)
+- Shift only reloads while on ground
+- Using Sneak Attack reloads shift
+- Respawning reloads shift
+- Darts move 10% faster (30 b/s -> 33 b/s)
+- Darts explode 0.05s faster (0.4s -> 0.35s)
+
+Trapper
+- TNT Trap explodes 0.05s faster (0.15s -> 0.1s)
+- Fast Trap explodes 0.05s faster (0.25s -> 0.2s)
+ 
+Shard
+- Shift reloads 2.1s faster (3.75s -> 1.65s)
+- Shift only reloads while on the ground
+- Using Float reloads shift
+- Respawning reloads shift
+ 
+Bug Fixes
+- Soldier TNT had a visible name
+- Gardener life reload text not updated to 9.1 functionality

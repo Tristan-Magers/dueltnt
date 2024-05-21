@@ -27,7 +27,7 @@ item replace entity @a[x=620,y=20,z=620,distance=..100] hotbar.8 with potion{dis
 scoreboard players set @a snow 0
 #item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.4 with leather{display:{Name:"{\"italic\":false,\"text\":\"§7Explosive Dart §r: Right-click\"}"}} 6
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=0}] hotbar.6 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Crouch to explode\"}"}}
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.7 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Crouch for Dive Kick\"}"}}
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.7 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Crouch for Dive Kick [reloads on ground]\"}"}}
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=2}] hotbar.6 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Crouch for Levitation\"}"}}
 give @a[scores={class=3},x=620,y=20,z=620,distance=..100] flint{display:{Name:"{\"italic\":false,\"text\":\"§cTNT Trap§r : Throw for mode 2 / Offhand for mode 3\"}"}}
 #give @a[scores={class=3},x=620,y=20,z=620,distance=..100] bow{Damage:80,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§cTNT Trap§r : Throw to switch\"}"}}
@@ -157,7 +157,7 @@ item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar
 #item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.2 with trident{display:{Name:"{\"italic\":false,\"text\":\"§9Trident §f§r: Right-click\"}"}}
 item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.4 with white_dye{display:{Name:"{\"italic\":false,\"text\":\"§6Float §f§r: Right-click\"}"}} 3
 
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=10}] hotbar.5 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Crouch to blast forward\"}"}}
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=10}] hotbar.5 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Crouch to blast forward [reloads on ground]\"}"}}
 
 scoreboard players set @a[scores={class=10},x=620,y=20,z=620,distance=..100] bow -2
 
@@ -313,8 +313,10 @@ scoreboard players set @a z_ender_mot 0
 scoreboard players remove @a ui_action_text 0
 scoreboard players remove @a ui_action_time 0
 
-scoreboard players set @a soldier_shifts 10
+scoreboard players set @a soldier_shifts 5
 scoreboard players set @a soldier_shift_reload 0
+
+scoreboard players set @a coyote_frames -1
 
 tag @a remove wand_fail_streak
 

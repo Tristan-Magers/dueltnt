@@ -10,6 +10,8 @@ execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:white_dye"}}] 
 execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:white_dye"}}] at @s run playsound minecraft:entity.blaze.death master @a ~ ~ ~ 1 2
 
 execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:white_dye"}}] at @s run summon tnt ~ ~ ~ {Tags:["frost"],fuse:1}
+scoreboard players set @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:white_dye"}}] shift_cool 0
+scoreboard players set @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:white_dye"}}] timer 0
 scoreboard players set @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:white_dye"}}] float_cooldown 16
 scoreboard players set @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:white_dye"}}] nolev 3
 scoreboard players add @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:white_dye"}}] floatuse 1

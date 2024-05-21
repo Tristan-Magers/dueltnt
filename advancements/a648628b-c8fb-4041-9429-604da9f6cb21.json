@@ -23,5 +23,35 @@
     },
     "done": true
   },
+  "classes:class1": {
+    "criteria": {
+      "trapper": "2024-04-13 19:30:14 -0600"
+    },
+    "done": true
+  },
+  "classes:class10": {
+    "criteria": {
+      "overlord": "2024-04-13 19:37:42 -0600"
+    },
+    "done": true
+  },
+  "classes:class8": {
+    "criteria": {
+      "gardener": "2024-04-13 20:07:23 -0600"
+    },
+    "done": true
+  },
+  "classes:class0": {
+    "criteria": {
+      "trapper": "2024-04-13 20:17:30 -0600"
+    },
+    "done": true
+  },
+  "particle:code": {
+    "criteria": {
+      "trapper": "2024-04-14 12:31:35 -0600"
+    },
+    "done": true
+  },
   "DataVersion": 3700
 }

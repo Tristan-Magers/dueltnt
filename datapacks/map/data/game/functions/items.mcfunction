@@ -39,11 +39,22 @@ execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={bow=1..
 execute as @a[gamemode=adventure,distance=..100,x=620,y=20,z=620] at @s run function game:items/endercount
 
 # shifting specials
-execute as @a unless entity @s[scores={class=9}] run scoreboard players remove @s shift_cool 1
-scoreboard players remove @a[scores={class=9,overlordsc=2..}] shift_cool 1
-execute as @a unless entity @s[scores={class=9}] run xp add @s -1 levels
-xp add @a[scores={class=9,overlordsc=2..}] -1 levels
-scoreboard players add @a[gamemode=adventure,scores={timer=1..},distance=..100,x=620,y=20,z=620] timer 1
+tag @a remove shift_lock
+
+tag @a[scores={class=10},nbt={OnGround:0b}] add shift_lock
+tag @a[scores={class=1},nbt={OnGround:0b}] add shift_lock
+
+scoreboard players set @a[tag=!shift_lock] coyote_frames 4
+scoreboard players remove @a[tag=shift_lock] coyote_frames 1
+tag @a[tag=shift_lock,scores={coyote_frames=1..}] remove shift_lock
+
+execute as @a[tag=!shift_lock] unless entity @s[scores={class=9}] run scoreboard players remove @s shift_cool 1
+execute as @a[tag=shift_lock,scores={shift_cool=..1}] unless entity @s[scores={class=9}] run scoreboard players remove @s shift_cool 1
+
+scoreboard players remove @a[scores={class=9,overlordsc=2..},tag=!shift_lock] shift_cool 1
+execute as @a unless entity @s[scores={class=9},tag=!shift_lock] run xp add @s -1 levels
+xp add @a[scores={class=9,overlordsc=2..},tag=!shift_lock] -1 levels
+scoreboard players add @a[gamemode=adventure,scores={timer=1..},distance=..100,x=620,y=20,z=620,tag=!shift_lock] timer 1
 execute as @a[gamemode=adventure,scores={shift=1..,timer=..0},distance=..100,x=620,y=20,z=620] at @s unless entity @s[scores={class=9,overlordsc=2..}] unless entity @s[scores={class=0,soldier_shifts=..0}] run function game:shift
 
 execute as @a[gamemode=adventure,scores={timer=1..},distance=..100,x=620,y=20,z=620] at @s run function game:player/shifttime

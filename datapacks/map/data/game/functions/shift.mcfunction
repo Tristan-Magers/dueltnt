@@ -43,7 +43,7 @@ scoreboard players add @s overlordsc 1
 scoreboard players remove @s[scores={class=0,timer=1}] soldier_shifts 1
 
 scoreboard players set @s[scores={class=0,timer=1}] shift_cool 17
-scoreboard players set @s[scores={class=1,timer=1}] shift_cool 130
+scoreboard players set @s[scores={class=1,timer=1}] shift_cool 50
 scoreboard players set @s[scores={class=2,timer=1}] shift_cool 76
 scoreboard players set @s[scores={class=3,timer=1}] shift_cool 80
 scoreboard players set @s[scores={class=4,timer=1}] shift_cool 150
@@ -126,7 +126,7 @@ execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-
 execute as @s[scores={class=10}] at @s run effect give @s levitation 1 3
 
 #xp add @s[scores={class=10,timer=1}] 90 levels
-scoreboard players set @s[scores={class=10,timer=1}] shift_cool 75
+scoreboard players set @s[scores={class=10,timer=1}] shift_cool 33
 
 #reaper shift
 execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {fuse:10,NoGravity:1}
@@ -139,3 +139,5 @@ execute as @s[scores={class=9,overlordsc=1}] at @s run tellraw @a[gamemode=spect
 execute as @s[scores={class=9,overlordsc=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":true},{"text":" (0 Remaining) ","color":"white"}]
 execute as @s[scores={class=9,overlordsc=3}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":true},{"text":" (0 Remaining) ","color":"white"}]
 execute as @s[scores={class=9,overlordsc=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":true},{"text":" (0 Remaining) ","color":"white"}]
+
+scoreboard players set @s coyote_frames -1

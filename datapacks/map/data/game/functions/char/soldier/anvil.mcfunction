@@ -1,4 +1,7 @@
 #
+scoreboard players add @s[scores={soldier_shifts=..4}] soldier_shifts 1
+
+#
 execute as @s at @s run summon tnt ~ ~ ~ {fuse:0}
 execute as @s at @s run playsound minecraft:block.anvil.land master @a ~ ~ ~ .4 1
 scoreboard players set @s fall 10

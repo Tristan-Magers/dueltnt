@@ -1,7 +1,7 @@
 scoreboard players set @s RanExplode 1
 scoreboard players operation @e[scores={BombBow=1..}] tntID -= @s tntID
-execute as @e[type=arrow,tag=!fast,tag=!trapchick,scores={BombBow=1..,tntID=0}] at @s run summon tnt ~ ~.55 ~ {fuse:4,NoGravity:1}
-execute as @e[type=arrow,tag=fast,tag=!trapchick,scores={BombBow=1..,tntID=0}] at @s run summon tnt ~ ~.55 ~ {fuse:6,NoGravity:1}
+execute as @e[type=arrow,tag=!fast,tag=!trapchick,scores={BombBow=1..,tntID=0}] at @s run summon tnt ~ ~.55 ~ {fuse:3,NoGravity:1}
+execute as @e[type=arrow,tag=fast,tag=!trapchick,scores={BombBow=1..,tntID=0}] at @s run summon tnt ~ ~.55 ~ {fuse:5,NoGravity:1}
 execute as @e[type=arrow,tag=trapchick,scores={BombBow=1..,tntID=0}] at @s run summon chicken ~ ~ ~ {Tags:["exchicken"],Invulnerable:1}
 kill @e[type=arrow,scores={BombBow=1..,tntID=0}]
 scoreboard players operation @e[scores={BombBow=1..}] tntID += @s tntID

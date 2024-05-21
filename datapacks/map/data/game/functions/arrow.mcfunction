@@ -113,7 +113,7 @@ execute as @s[type=arrow,scores={SciBow=1..}] at @s run playsound minecraft:enti
 execute as @s[type=arrow,scores={NecroBow=1..},x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,Invulnerable:1,Marker:1,Silent:1,Invisible:1,CustomName:"{\"text\":\"NArrow\"}",NoAI:1}
 
 #soldier arrow
-execute as @s[type=arrow,scores={SolBow=1}] at @s run summon tnt ~ ~ ~ {fuse:10,Motion:[0.0,0.26,0.0],CustomName:"{\"text\":\"TNTarrow\"}"}
+execute as @s[type=arrow,scores={SolBow=1}] at @s run summon tnt ~ ~ ~ {fuse:10,Motion:[0.0,0.26,0.0]}
 execute as @s[type=arrow,scores={SolBow=1}] at @s run playsound minecraft:entity.tnt.primed master @a ~ ~ ~ 1 1
 
 #echo bow
