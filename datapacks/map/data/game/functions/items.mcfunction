@@ -668,7 +668,9 @@ scoreboard players set @a[gamemode=adventure,scores={plagueuse=1..}] plaguetimer
 scoreboard players set @a[gamemode=adventure,scores={plagueuse=1..}] plagueuse 0
 scoreboard players remove @a[gamemode=adventure,scores={plaguetimer=0..}] plaguetimer 1
 item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={plaguetimer=0,class=8}] hotbar.2 with minecraft:lingering_potion[custom_name='{"italic":false,"text":"§2Plague §r: Right-click"}',potion_contents={potion:"minecraft:poison"}]
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={plaguetimer=150,class=0}] hotbar.1 with minecraft:snowball[custom_name='{"italic":false,"text":"§2Slimer §f§r: Right-click (hit players)"}']
+
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={plaguetimer=150,class=0}] run function game:char/soldier/give/slimer
+
 clear @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={class=8,plaguetimer=-1},nbt=!{Inventory:[{id:"minecraft:lingering_potion"}]}] lingering_potion
 scoreboard players set @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100,scores={class=8,plaguetimer=-1},nbt=!{Inventory:[{id:"minecraft:lingering_potion"}]}] plaguetimer 1
 

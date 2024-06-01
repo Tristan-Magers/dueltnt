@@ -9,7 +9,9 @@ scoreboard players set @a[scores={ThrFish=1..}] ThrFishT 1
 scoreboard players remove @a ThrFishT 1 
 scoreboard players set @a ThrFish 0
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=3}] hotbar.0 with minecraft:bow[damage=80,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§cTNT Trap§r : Throw to switch"}',hide_additional_tooltip={}]
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=..0}] hotbar.0 with minecraft:bow[damage=20,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§cBomb Bow§r : Throw to switch"}',hide_additional_tooltip={}]
+
+execute as @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=..0}] run function game:char/soldier/give/bow
+
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=1}] hotbar.0 with minecraft:bow[damage=40,unbreakable={show_in_tooltip:false},enchantments={levels:{"minecraft:flame":1},show_in_tooltip:false},custom_name='{"italic":false,"text":"§dBazooka Bow§f : Throw to switch"}',hide_additional_tooltip={}]
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=2}] hotbar.0 with minecraft:bow[damage=60,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§bVaporizer§r : Throw to switch"}',hide_additional_tooltip={}]
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=10}] hotbar.0 with minecraft:bow[damage=260,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§9Anti-Ice§r : Throw to switch"}',hide_additional_tooltip={}]

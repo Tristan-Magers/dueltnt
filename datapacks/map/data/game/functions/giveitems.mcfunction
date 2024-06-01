@@ -3,8 +3,9 @@ effect give @a fire_resistance 1000000 255 true
 
 execute as @a at @s run attribute @p minecraft:generic.movement_speed base set .1
 
-give @a[scores={class=0},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=20,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§cBomb Bow §r: Throw to switch"}',hide_additional_tooltip={}]
-give @a[scores={class=0},x=620,y=20,z=620,distance=..100] minecraft:snowball[custom_name='{"italic":false,"text":"§2Slimer §f§r: Right-click (hit players)"}']
+execute as @a[scores={class=0},x=620,y=20,z=620,distance=..100] run function game:char/soldier/give/bow
+execute as @a[scores={class=0},x=620,y=20,z=620,distance=..100] run function game:char/soldier/give/slimer
+
 item replace entity @a[scores={class=0},x=620,y=20,z=620,distance=..100] hotbar.5 with arrow 2
 scoreboard players set @a[scores={class=0},x=620,y=20,z=620,distance=..100] bow -1
 item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.0 with minecraft:bow[damage=40,unbreakable={show_in_tooltip:false},enchantments={levels:{"minecraft:flame":1},show_in_tooltip:false},custom_name='{"italic":false,"text":"§dBazooka Bow§f : Throw to switch"}',hide_additional_tooltip={}]

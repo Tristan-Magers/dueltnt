@@ -1,4 +1,4 @@
-item replace entity @s[scores={nobow=3..}] hotbar.0 with bow[damage=20,unbreakable={show_in_tooltip:false},custom_name='{"color":"red","italic":false,"text":"§cBomb Bow§f : Throw to switch"}',hide_additional_tooltip={}]
+execute as @s[scores={nobow=3..}] run function game:char/soldier/give/bow
 
 clear @s[nbt=!{Inventory:[{id:"minecraft:lingering_potion",Slot:1b}]},scores={snowReset=..50},tag=checkairnade] lingering_potion
 scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:lingering_potion",Slot:1b}]},scores={snowReset=..50},tag=checkairnade] snowReset 51
