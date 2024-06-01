@@ -38,12 +38,12 @@ execute as @s[x=599,z=599,y=5,dx=36,dz=36,dy=25,distance=..1000,scores={t1=1,t2=
 execute as @s[x=599,z=599,y=0,dx=36,dz=36,dy=55,distance=..1000,scores={t1=1,t2=11},tag=!stay] at @s run playsound minecraft:item.bone_meal.use master @a ~ ~ ~ 1 1
 execute as @s[x=599,z=599,y=0,dx=36,dz=36,dy=55,distance=..1000,scores={t1=1,t2=11},tag=!stay] at @s run playsound minecraft:entity.chicken.egg master @a ~ ~ ~ 0.6 0.5
 execute as @s[x=599,z=599,y=0,dx=36,dz=36,dy=55,distance=..1000,scores={t1=1,t2=11},tag=!stay] at @s run fill ~-1 0 ~-1 ~1 ~2 ~1 air
-execute as @s[x=599,z=599,y=0,dx=36,dz=36,dy=55,distance=..1000,scores={t1=1,t2=11},tag=!stay] at @s run execute as @s at @s run particle minecraft:falling_dust snow ~ ~ ~ 1 10 1 0 120 force @a
+execute as @s[x=599,z=599,y=0,dx=36,dz=36,dy=55,distance=..1000,scores={t1=1,t2=11},tag=!stay] at @s run execute as @s at @s run particle minecraft:falling_dust{block_state: 'minecraft:snow'} ~ ~ ~ 1 10 1 0 120 force @a
 
 execute as @s[x=599,z=599,y=0,dx=36,dz=36,dy=55,distance=..1000,scores={t1=1,t2=60},tag=stay] at @s run playsound minecraft:item.bone_meal.use master @a ~ ~ ~ 1 1
 execute as @s[x=599,z=599,y=0,dx=36,dz=36,dy=55,distance=..1000,scores={t1=1,t2=60},tag=stay] at @s run playsound minecraft:entity.chicken.egg master @a ~ ~ ~ 0.6 0.5
 execute as @s[x=599,z=599,y=0,dx=36,dz=36,dy=55,distance=..1000,scores={t1=1,t2=60},tag=stay] at @s run fill ~-1 0 ~-1 ~1 ~2 ~1 air
-execute as @s[x=599,z=599,y=0,dx=36,dz=36,dy=55,distance=..1000,scores={t1=1,t2=60},tag=stay] at @s run execute as @s at @s run particle minecraft:falling_dust snow ~ ~ ~ 1 10 1 0 120 force @a
+execute as @s[x=599,z=599,y=0,dx=36,dz=36,dy=55,distance=..1000,scores={t1=1,t2=60},tag=stay] at @s run execute as @s at @s run particle minecraft:falling_dust{block_state: 'minecraft:snow'} ~ ~ ~ 1 10 1 0 120 force @a
 
 kill @s[scores={t2=12..},tag=!stay]
 kill @s[scores={t2=61..},tag=stay]

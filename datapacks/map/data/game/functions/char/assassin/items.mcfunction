@@ -4,9 +4,9 @@
 #dart
 execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:leather"}}] at @s run function game:char/assassin/dart
 
-item replace entity @s[scores={dartcool=0,dartuse=2..}] hotbar.1 with nether_star{display:{Name:"{\"italic\":false,\"text\":\"Magic Star §f: Right-click\"}"}} 2
-item replace entity @s[scores={dartcool=0,dartuse=1}] hotbar.1 with minecraft:leather{display:{Name:"{\"italic\":false,\"text\":\"§7Explosive Dart §r: Right-click\"}"}} 1
-item replace entity @s[scores={dartcool=0,dartuse=..0}] hotbar.1 with minecraft:leather{display:{Name:"{\"italic\":false,\"text\":\"§7Explosive Dart §r: Right-click\"}"}} 2
+item replace entity @s[scores={dartcool=0,dartuse=2..}] hotbar.1 with nether_star[custom_name='{"italic":false,"text":"Magic Star §f: Right-click"}'] 2
+item replace entity @s[scores={dartcool=0,dartuse=1}] hotbar.1 with minecraft:leather[custom_name='{"italic":false,"text":"§7Explosive Dart §r: Right-click"}'] 1
+item replace entity @s[scores={dartcool=0,dartuse=..0}] hotbar.1 with minecraft:leather[custom_name='{"italic":false,"text":"§7Explosive Dart §r: Right-click"}'] 2
 #item replace entity @s[scores={dartcool=0,dartuse=0}] hotbar.4 with minecraft:leather{display:{Name:"{\"italic\":false,\"text\":\"§7Explosive Dart §r: Right-click\"}"}} 6
 #item replace entity @s[scores={dartcool=0,dartuse=1}] hotbar.4 with minecraft:leather{display:{Name:"{\"italic\":false,\"text\":\"§7Explosive Dart §r: Right-click\"}"}} 5
 #item replace entity @s[scores={dartcool=0,dartuse=2}] hotbar.4 with minecraft:leather{display:{Name:"{\"italic\":false,\"text\":\"§7Explosive Dart §r: Right-click\"}"}} 4
@@ -23,9 +23,9 @@ scoreboard players add @s[scores={star=1..},nbt={SelectedItem:{id:"minecraft:net
 scoreboard players set @s[scores={starT=..0,starUse=2..}] starT 1
 execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:nether_star"}}] at @s run function game:items/magicstar
 
-item replace entity @s[scores={starT=7..,starUse=1}] hotbar.1 with nether_star{display:{Name:"{\"italic\":false,\"text\":\"Magic Star §f: Right-click\"}"}} 1
+item replace entity @s[scores={starT=7..,starUse=1}] hotbar.1 with nether_star[custom_name='{"italic":false,"text":"Magic Star §f: Right-click"}'] 1
 scoreboard players set @s[scores={starT=7..,starUse=1}] starT 0
-item replace entity @s[scores={starT=35..}] hotbar.1 with minecraft:leather{display:{Name:"{\"italic\":false,\"text\":\"§7Explosive Dart §r: Right-click\"}"}} 2
+item replace entity @s[scores={starT=35..}] hotbar.1 with minecraft:leather[custom_name='{"italic":false,"text":"§7Explosive Dart §r: Right-click"}'] 2
 #item replace entity @s[scores={starT=40..}] hotbar.1 with nether_star{display:{Name:"{\"italic\":false,\"text\":\"Magic Star §f: Right-click\"}"}} 2
 scoreboard players set @s[scores={starT=35..}] starUse 0
 scoreboard players set @s[scores={starT=35..}] dartuse 0
@@ -84,10 +84,10 @@ execute as @s[scores={FZtimer=165}] at @s run item replace entity @e[type=minecr
 execute as @s[scores={FZtimer=165}] at @s run item replace entity @e[type=minecraft:skeleton,distance=..3.25] weapon.offhand with air
 execute as @s[scores={FZtimer=165}] at @s run effect give @e[type=minecraft:skeleton,distance=..4] glowing 2 1 true
 
-item replace entity @s[scores={FZtimer=1}] hotbar.3 with diamond{display:{Name:"{\"italic\":false,\"text\":\"§3Mass Freeze§r §r: Right-click [everyone within 3 blocks]\"}"}}
+item replace entity @s[scores={FZtimer=1}] hotbar.3 with diamond[custom_name='{"italic":false,"text":"§3Mass Freeze§r §r: Right-click [everyone within 3 blocks]"}']
 
 execute as @s[scores={FZtimer=169}] at @s run particle dripping_water ~ ~ ~ 2.3 2.3 2.3 0 200 force @a
-execute as @s[scores={FZtimer=165}] at @s run particle block packed_ice ~ ~ ~ 2.3 2.3 2.3 0 100 force @a
+execute as @s[scores={FZtimer=165}] at @s run particle block{block_state: 'minecraft:packed_ice'} ~ ~ ~ 2.3 2.3 2.3 0 100 force @a
 execute as @s[scores={FZtimer=165}] at @s run particle flash ~ ~ ~ 0 0 0 0 1 force @a
 execute as @s[scores={FZtimer=165}] at @s run effect give @p minecraft:levitation 2
 execute as @s[scores={FZtimer=165}] at @s run effect give @p minecraft:speed 2 2 true

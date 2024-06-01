@@ -1,0 +1,1 @@
+$item replace entity @s hotbar.0 with $(item)[damage=$(damage),max_damage=24,custom_name='{"italic":false,"text":"§9Master Wand §r: Right-click Blocks (throw/offhand to gather)"}']

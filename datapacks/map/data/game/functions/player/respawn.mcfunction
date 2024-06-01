@@ -78,6 +78,9 @@ scoreboard players set @s[scores={class=4}] timer 0
 scoreboard players set @s[scores={class=6}] shift_cool 0
 scoreboard players set @s[scores={class=6}] timer 0
 
+scoreboard players set @s[scores={class=7}] shift_cool 0
+scoreboard players set @s[scores={class=7}] timer 0
+
 scoreboard players set @s[scores={class=10}] shift_cool 0
 scoreboard players set @s[scores={class=10}] timer 0
 

@@ -1,9 +1,9 @@
 function game:char/gardener/boosttrap
 
 #wizard fireball bow
-execute unless entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={isBall=1}] at @s run summon minecraft:fireball ~ ~4 ~ {Motion:[0.0d, 0.0d, 0.0d],Invulnerable:0b,Air:300s,OnGround:0b,Dimension:0,ExplosionPower:3,PortalCooldown:0,Rotation:[0.0f,0.0f],Fire:-1s,power:[0.0d,-0.3d,-0.0d],direction:[0.0d, -0.3d, 0.0d]}
-#execute if entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={isBall=1}] at @s run summon minecraft:fireball ~ ~1.2 ~ {Motion:[0.0d, 0.0d, 0.0d],Invulnerable:0b,Air:300s,OnGround:0b,Dimension:0,ExplosionPower:5,PortalCooldown:0,Rotation:[0.0f,0.0f],Fire:-1s,power:[0.0d,0.001d,-0.0d],direction:[0.0d, 0.0d, 0.0d]}
-#execute as @s[type=arrow,scores={isBall=1}] at @s positioned ~ ~1.2 ~ run data merge entity @e[type=minecraft:fireball,limit=1,sort=nearest] {power: [0.0d,0.0d,0.0d],Motion:[0.0d,0.0d,0.0d],direction:[0.0d,0.0d,0.0d]}
+execute unless entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={isBall=1}] at @s run summon minecraft:fireball ~ ~4 ~ {Motion:[0.0d,0.0d,0.0d],Invulnerable:0b,Air:300s,OnGround:0b,Dimension:0,ExplosionPower:3,PortalCooldown:0,Rotation:[0.0f,0.0f],Fire:-1s,power:[0.0d,-0.3d,-0.0d],direction:[0.0d,-0.3d,0.0d]}
+#execute if entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={isBall=1}] at @s run summon minecraft:fireball ~ ~1.2 ~ {Motion:[0.0d,0.0d,0.0d],Invulnerable:0b,Air:300s,OnGround:0b,Dimension:0,ExplosionPower:5,PortalCooldown:0,Rotation:[0.0f,0.0f],Fire:-1s,power:[0.0d,0.001d,-0.0d],direction:[0.0d,0.0d,0.0d]}
+#execute as @s[type=arrow,scores={isBall=1}] at @s positioned ~ ~1.2 ~ run data merge entity @e[type=minecraft:fireball,limit=1,sort=nearest] {power:[0.0d,0.0d,0.0d],Motion:[0.0d,0.0d,0.0d],direction:[0.0d,0.0d,0.0d]}
 execute as @s[type=arrow,scores={isBall=1}] at @s run playsound minecraft:entity.blaze.shoot master @a ~ ~ ~ .4 1.5
 execute as @s[type=arrow,scores={isBall=1}] at @s run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ .7 2
 
@@ -106,14 +106,14 @@ execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=!crit,x=620,z=6
 execute as @s[type=arrow,scores={Inbarrier=..0,VaporBow=1..},tag=crit,x=598.1,z=598.1,y=0,dx=38.8,dz=38.8,dy=108,distance=..1000] at @s run particle minecraft:poof ~ ~ ~ 1 1 1 0.2 15 force
 
 #scientist bow
-execute unless entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={SciBow=1..}] at @s run summon tnt ~ ~ ~ {fuse:5,Motion:[0.0,0.24,0.0]}
+execute unless entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={SciBow=1..}] at @s run summon tnt ~ ~ ~ {fuse:5,Motion:[0.0d,0.24d,0.0d]}
 execute as @s[type=arrow,scores={SciBow=1..}] at @s run playsound minecraft:entity.tnt.primed master @a ~ ~ ~ .4 1.4
 
 #necro bow
-execute as @s[type=arrow,scores={NecroBow=1..},x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,Invulnerable:1,Marker:1,Silent:1,Invisible:1,CustomName:"{\"text\":\"NArrow\"}",NoAI:1}
+execute as @s[type=arrow,scores={NecroBow=1..},x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,Invulnerable:1,Marker:1,Silent:1,Invisible:1,CustomName:'{"text":"NArrow"}',NoAI:1}
 
 #soldier arrow
-execute as @s[type=arrow,scores={SolBow=1}] at @s run summon tnt ~ ~ ~ {fuse:10,Motion:[0.0,0.26,0.0]}
+execute as @s[type=arrow,scores={SolBow=1}] at @s run summon tnt ~ ~ ~ {fuse:9,Motion:[0.0d,0.26d,0.0d]}
 execute as @s[type=arrow,scores={SolBow=1}] at @s run playsound minecraft:entity.tnt.primed master @a ~ ~ ~ 1 1
 
 #echo bow
@@ -137,9 +137,9 @@ execute as @s[type=arrow,scores={GardBow=1..}] at @s run summon tnt ~ ~ ~ {fuse:
 #frost bow
 #execute as @s[type=arrow,scores={FrostBow=1..},nbt={inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon wither_skeleton ~ ~0.5 ~ {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["kill_next"],active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:999,show_particles:0b}]}
 #execute as @s[type=arrow,scores={FrostBow=1..},nbt={inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon wither_skeleton ~ ~0.7 ~ {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["kill_next"],active_effects:[{id:"minecraft:invisibility",amplifier:1b,duration:999,show_particles:0b}]}
-execute as @s[type=arrow,scores={FrostBow=1..},nbt={inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon tnt ~ ~0.6 ~ {Tags:["frost"],fuse:5,NoGravity:1,Motion:[0.0,0.61,0.0]}
-execute as @s[type=arrow,scores={FrostBow=1..},nbt={inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon tnt ~ ~0.5 ~ {Tags:["frost"],fuse:7,NoGravity:1,Motion:[0.0,0.35,0.0]}
-execute as @s[type=arrow,scores={FrostBow=1..},nbt={inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon tnt ~ ~0.5 ~ {Tags:["frost"],fuse:8,NoGravity:1,Motion:[0.0,0.18,0.0]}
+execute as @s[type=arrow,scores={FrostBow=1..},nbt={inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon tnt ~ ~0.6 ~ {Tags:["frost"],fuse:5,NoGravity:1,Motion:[0.0d,0.61d,0.0d]}
+execute as @s[type=arrow,scores={FrostBow=1..},nbt={inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon tnt ~ ~0.5 ~ {Tags:["frost"],fuse:7,NoGravity:1,Motion:[0.0d,0.35d,0.0d]}
+execute as @s[type=arrow,scores={FrostBow=1..},nbt={inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon tnt ~ ~0.5 ~ {Tags:["frost"],fuse:8,NoGravity:1,Motion:[0.0d,0.18d,0.0d]}
 execute as @s[type=arrow,scores={FrostBow=1..},nbt=!{inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon armor_stand ~ ~ ~ {Tags:["frostset"],Marker:1,Silent:1,Invulnerable:1,NoGravity:1}
 
 #execute as @s[type=arrow,tag=sidearrow,scores={FrostBow=1..},nbt={inBlockState:{Name:"minecraft:blue_ice"}}] at @s run summon tnt ~ ~0.5 ~ {Tags:["frost"],fuse:4}

@@ -45,22 +45,22 @@ execute as @s[nbt={OnGround:1b},tag=up_speed] at @s run particle minecraft:spit 
 tag @s[nbt={OnGround:1b}] remove up_speed
 tag @s[scores={temp3=6001..}] add up_speed
 
-execute as @s[tag=!up_speed,scores={particle=22,temp=10..200}] at @s positioned ^ ^ ^-1.5 run particle minecraft:item minecraft:gray_wool ~ ~0.1 ~ 0.1 0.05 0.1 0 1 force
-execute as @s[tag=!up_speed,scores={particle=22,temp=201..400}] at @s positioned ^ ^ ^-1.5 run particle minecraft:item minecraft:light_gray_wool ~ ~0.3 ~ 0.1 0.15 0.1 0 1 force
-execute as @s[tag=!up_speed,scores={particle=22,temp=401..600}] at @s positioned ^ ^ ^-1.5 run particle minecraft:item minecraft:brown_wool ~ ~0.5 ~ 0.1 0.25 0.1 0 1 force
-execute as @s[tag=!up_speed,scores={particle=22,temp=601..900}] at @s positioned ^ ^ ^-1.5 run particle minecraft:item minecraft:orange_wool ~ ~0.7 ~ 0.1 0.35 0.1 0 1 force
-execute as @s[tag=!up_speed,scores={particle=22,temp=901..1200}] at @s positioned ^ ^ ^-1.5 run particle minecraft:item minecraft:yellow_wool ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force
-execute as @s[tag=!up_speed,scores={particle=22,temp=1201..22001}] at @s positioned ^ ^ ^-1.5 run particle minecraft:item minecraft:white_wool ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force
-execute as @s[tag=!up_speed,scores={particle=22,temp=22001..30000}] at @s positioned ^ ^ ^-1.5 run particle minecraft:item minecraft:light_blue_wool ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force
-execute as @s[tag=!up_speed,scores={particle=22,temp=30001..70000}] at @s positioned ^ ^ ^-1.5 run particle minecraft:item minecraft:blue_wool ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force
-execute as @s[tag=!up_speed,scores={particle=22,temp=70001..}] at @s positioned ^ ^ ^-1.5 run particle minecraft:item minecraft:purple_wool ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force
+execute as @s[tag=!up_speed,scores={particle=22,temp=10..200}] at @s positioned ^ ^ ^-1.5 run particle item{item:{id:"minecraft:gray_wool"}} ~ ~0.1 ~ 0.1 0.05 0.1 0 1 force
+execute as @s[tag=!up_speed,scores={particle=22,temp=201..400}] at @s positioned ^ ^ ^-1.5 run particle item{item:{id:"minecraft:light_gray_wool"}} ~ ~0.3 ~ 0.1 0.15 0.1 0 1 force
+execute as @s[tag=!up_speed,scores={particle=22,temp=401..600}] at @s positioned ^ ^ ^-1.5 run particle item{item:{id:"minecraft:brown_wool"}} ~ ~0.5 ~ 0.1 0.25 0.1 0 1 force
+execute as @s[tag=!up_speed,scores={particle=22,temp=601..900}] at @s positioned ^ ^ ^-1.5 run particle item{item:{id:"minecraft:orange_wool"}} ~ ~0.7 ~ 0.1 0.35 0.1 0 1 force
+execute as @s[tag=!up_speed,scores={particle=22,temp=901..1200}] at @s positioned ^ ^ ^-1.5 run particle item{item:{id:"minecraft:yellow_wool"}} ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force
+execute as @s[tag=!up_speed,scores={particle=22,temp=1201..22001}] at @s positioned ^ ^ ^-1.5 run particle item{item:{id:"minecraft:white_wool"}} ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force
+execute as @s[tag=!up_speed,scores={particle=22,temp=22001..30000}] at @s positioned ^ ^ ^-1.5 run particle item{item:{id:"minecraft:light_blue_wool"}} ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force
+execute as @s[tag=!up_speed,scores={particle=22,temp=30001..70000}] at @s positioned ^ ^ ^-1.5 run particle item{item:{id:"minecraft:blue_wool"}} ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force
+execute as @s[tag=!up_speed,scores={particle=22,temp=70001..}] at @s positioned ^ ^ ^-1.5 run particle item{item:{id:"minecraft:purple_wool"}} ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force
 
-execute as @s[tag=up_speed,scores={particle=22,temp=..1500}] at @s positioned ^ ^ ^-1.5 run particle minecraft:item minecraft:gray_wool ~ ~0.1 ~ 0.1 0.05 0.1 0 1 force
-execute as @s[tag=up_speed,scores={particle=22,temp=1501..3500}] at @s positioned ^ ^ ^-1.5 run particle minecraft:item minecraft:light_gray_wool ~ ~0.3 ~ 0.1 0.15 0.1 0 1 force
-execute as @s[tag=up_speed,scores={particle=22,temp=3501..7000}] at @s positioned ^ ^ ^-1.5 run particle minecraft:item minecraft:brown_wool ~ ~0.5 ~ 0.1 0.25 0.1 0 1 force
-execute as @s[tag=up_speed,scores={particle=22,temp=7001..10000}] at @s positioned ^ ^ ^-1.5 run particle minecraft:item minecraft:orange_wool ~ ~0.7 ~ 0.1 0.35 0.1 0 1 force
-execute as @s[tag=up_speed,scores={particle=22,temp=10001..15000}] at @s positioned ^ ^ ^-1.5 run particle minecraft:item minecraft:yellow_wool ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force
-execute as @s[tag=up_speed,scores={particle=22,temp=15001..20000}] at @s positioned ^ ^ ^-1.5 run particle minecraft:item minecraft:white_wool ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force
-execute as @s[tag=up_speed,scores={particle=22,temp=20001..30000}] at @s positioned ^ ^ ^-1.5 run particle minecraft:item minecraft:light_blue_wool ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force
-execute as @s[tag=up_speed,scores={particle=22,temp=30001..70000}] at @s positioned ^ ^ ^-1.5 run particle minecraft:item minecraft:blue_wool ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force
-execute as @s[tag=up_speed,scores={particle=22,temp=70001..}] at @s positioned ^ ^ ^-1.5 run particle minecraft:item minecraft:purple_wool ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force
+execute as @s[tag=up_speed,scores={particle=22,temp=..1500}] at @s positioned ^ ^ ^-1.5 run particle item{item:{id:"minecraft:gray_wool"}} ~ ~0.1 ~ 0.1 0.05 0.1 0 1 force
+execute as @s[tag=up_speed,scores={particle=22,temp=1501..3500}] at @s positioned ^ ^ ^-1.5 run particle item{item:{id:"minecraft:light_gray_wool"}} ~ ~0.3 ~ 0.1 0.15 0.1 0 1 force
+execute as @s[tag=up_speed,scores={particle=22,temp=3501..7000}] at @s positioned ^ ^ ^-1.5 run particle item{item:{id:"minecraft:brown_wool"}} ~ ~0.5 ~ 0.1 0.25 0.1 0 1 force
+execute as @s[tag=up_speed,scores={particle=22,temp=7001..10000}] at @s positioned ^ ^ ^-1.5 run particle item{item:{id:"minecraft:orange_wool"}} ~ ~0.7 ~ 0.1 0.35 0.1 0 1 force
+execute as @s[tag=up_speed,scores={particle=22,temp=10001..15000}] at @s positioned ^ ^ ^-1.5 run particle item{item:{id:"minecraft:yellow_wool"}} ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force
+execute as @s[tag=up_speed,scores={particle=22,temp=15001..20000}] at @s positioned ^ ^ ^-1.5 run particle item{item:{id:"minecraft:white_wool"}} ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force
+execute as @s[tag=up_speed,scores={particle=22,temp=20001..30000}] at @s positioned ^ ^ ^-1.5 run particle item{item:{id:"minecraft:light_blue_wool"}} ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force
+execute as @s[tag=up_speed,scores={particle=22,temp=30001..70000}] at @s positioned ^ ^ ^-1.5 run particle item{item:{id:"minecraft:blue_wool"}} ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force
+execute as @s[tag=up_speed,scores={particle=22,temp=70001..}] at @s positioned ^ ^ ^-1.5 run particle item{item:{id:"minecraft:purple_wool"}} ~ ~0.8 ~ 0.1 0.4 0.1 0 1 force

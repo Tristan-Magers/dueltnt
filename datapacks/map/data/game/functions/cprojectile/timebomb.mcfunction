@@ -1,4 +1,4 @@
-summon minecraft:armor_stand ~ ~ ~ {Small:1,Marker:0,Invulnerable:1,Tags:["timebombpro","newbomb"],Invisible:1,ArmorItems:[{},{},{},{Count:1,id:sculk_sensor}],DisabledSlots:4144959}
+summon minecraft:armor_stand ~ ~ ~ {Small:1,Marker:0,Invulnerable:1,Tags:["timebombpro","newbomb"],Invisible:1,ArmorItems:[{},{},{},{id:"sculk_sensor",count:1}],DisabledSlots:4144959}
 scoreboard players operation @e[tag=newbomb,tag=timebombpro] tntID = @s tntID
 
 tp @e[limit=1,tag=timebombpro,sort=nearest] @p

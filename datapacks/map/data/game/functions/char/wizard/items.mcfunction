@@ -7,11 +7,11 @@ scoreboard players add @s[nbt={Inventory:[{Slot:1b,id:"minecraft:bow"}]}] wizChe
 scoreboard players add @s[nbt={Inventory:[{Slot:2b,id:"minecraft:bow"}]}] wizCheck 1
 clear @s[scores={wizCheck=..2}] bow
 clear @s[scores={wizCheck=..2},tag=!pig,tag=!haspup] gray_stained_glass_pane
-item replace entity @s[scores={wizCheck=..2},tag=!pig,tag=!haspup] hotbar.0 with bow{Damage:100,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§4Fireball§r : Throw to switch\"}"}}
-item replace entity @s[scores={wizCheck=..2},tag=!pig,tag=!haspup] hotbar.1 with bow{Damage:120,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§ePowderize§r : Throw to switch\"}"}}
-item replace entity @s[scores={wizCheck=..2},tag=!pig,tag=!haspup] hotbar.2 with bow{Damage:140,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§3Teleport§r : Throw to switch\"}"}}
-item replace entity @s[scores={wizCheck=..2},tag=!pig,tag=haspup] hotbar.1 with gray_stained_glass_pane{display:{Name:"{\"italic\":false,\"text\":\"§7Unavailable\"}"}}
-item replace entity @s[scores={wizCheck=..2},tag=!pig,tag=haspup] hotbar.2 with gray_stained_glass_pane{display:{Name:"{\"italic\":false,\"text\":\"§7Unavailable\"}"}}
+item replace entity @s[scores={wizCheck=..2},tag=!pig,tag=!haspup] hotbar.0 with bow[damage=100,unbreakable={},custom_name='{"italic":false,"text":"§4Fireball§r : Throw to switch"}']
+item replace entity @s[scores={wizCheck=..2},tag=!pig,tag=!haspup] hotbar.1 with bow[damage=120,unbreakable={},custom_name='{"italic":false,"text":"§ePowderize§r : Throw to switch"}']
+item replace entity @s[scores={wizCheck=..2},tag=!pig,tag=!haspup] hotbar.2 with bow[damage=140,unbreakable={},custom_name='{"italic":false,"text":"§3Teleport§r : Throw to switch"}']
+item replace entity @s[scores={wizCheck=..2},tag=!pig,tag=haspup] hotbar.1 with gray_stained_glass_pane[custom_name='{"italic":false,"text":"§7Unavailable"}']
+item replace entity @s[scores={wizCheck=..2},tag=!pig,tag=haspup] hotbar.2 with gray_stained_glass_pane[custom_name='{"italic":false,"text":"§7Unavailable"}']
 clear @s[scores={wizCheck=..2}] fishing_rod
 item replace entity @s[scores={pig=2..}] hotbar.0 with minecraft:pink_stained_glass_pane
 item replace entity @s[scores={pig=2..}] hotbar.1 with minecraft:pink_stained_glass_pane

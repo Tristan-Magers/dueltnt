@@ -10,29 +10,29 @@ execute if entity @e[scores={mode=1}] run clear @s[scores={masterb=..19,masterup
 #execute if entity @e[scores={mode=1}] run item replace entity @s[scores={masterb=..19,masterup=..3}] hotbar.3 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}} 1
 
 # boom halo
-item replace entity @s[scores={masterb=14..,halo_cooldown=..0}] hotbar.4 with minecraft:beef{display:{Name:"{\"italic\":false,\"text\":\"§cBoom Halo §r: Right-click (14 Material)\"}",Lore:["{\"italic\":false,\"text\":\"§4Beef\"}"]}}
+item replace entity @s[scores={masterb=14..,halo_cooldown=..0}] hotbar.4 with minecraft:beef[custom_name='{"italic":false,"text":"§cBoom Halo §r: Right-click (14 Material)"}',lore=['{"italic":false,"text":"§4Beef"}']]
 clear @s[scores={masterb=..13}] beef
-item replace entity @s[scores={masterb=..13,halo_cooldown=..0}] hotbar.4 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}} 1
-item replace entity @s[scores={halo_cooldown=1..}] hotbar.4 with minecraft:beetroot{display:{Name:"{\"italic\":false,\"text\":\"§9On Cooldown\"}"}} 1
+item replace entity @s[scores={masterb=..13,halo_cooldown=..0}] hotbar.4 with minecraft:barrier[custom_name='{"italic":false,"text":"§9Not enough material"}'] 1
+item replace entity @s[scores={halo_cooldown=1..}] hotbar.4 with minecraft:beetroot[custom_name='{"italic":false,"text":"§9On Cooldown"}'] 1
 
 # matter bomb
-item replace entity @s[scores={masterb=6..,master_bomb_cooldown=..0}] hotbar.1 with minecraft:salmon{display:{Name:"{\"italic\":false,\"text\":\"§4Matter Bomb §r: Right-click (6 Material)\"}"}}
+item replace entity @s[scores={masterb=6..,master_bomb_cooldown=..0}] hotbar.1 with minecraft:salmon[custom_name='{"italic":false,"text":"§4Matter Bomb §r: Right-click (6 Material)"}']
 clear @s[scores={masterb=..5}] salmon
-item replace entity @s[scores={masterb=..5,master_bomb_cooldown=..0}] hotbar.1 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}} 1
-item replace entity @s[scores={master_bomb_cooldown=1..}] hotbar.1 with minecraft:beetroot{display:{Name:"{\"italic\":false,\"text\":\"§9On Cooldown\"}"}} 1
+item replace entity @s[scores={masterb=..5,master_bomb_cooldown=..0}] hotbar.1 with minecraft:barrier[custom_name='{"italic":false,"text":"§9Not enough material"}'] 1
+item replace entity @s[scores={master_bomb_cooldown=1..}] hotbar.1 with minecraft:beetroot[custom_name='{"italic":false,"text":"§9On Cooldown"}'] 1
 
 # land slide
-item replace entity @s[scores={masterb=14..,slide_cooldown=..0}] hotbar.3 with minecraft:cooked_cod{display:{Name:"{\"italic\":false,\"text\":\"§2Land Slide §r: Right-click (14 Material)\"}"}}
+item replace entity @s[scores={masterb=14..,slide_cooldown=..0}] hotbar.3 with minecraft:cooked_cod[custom_name='{"italic":false,"text":"§2Land Slide §r: Right-click (14 Material)"}']
 clear @s[scores={masterb=..13}] cooked_cod
-item replace entity @s[scores={masterb=..13}] hotbar.3 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}} 1
+item replace entity @s[scores={masterb=..13}] hotbar.3 with minecraft:barrier[custom_name='{"italic":false,"text":"§9Not enough material"}'] 1
 clear @s[scores={slide_cooldown=1..}] cooked_cod
-item replace entity @s[scores={slide_cooldown=1..}] hotbar.3 with minecraft:beetroot{display:{Name:"{\"italic\":false,\"text\":\"§9On Cooldown\"}"}} 1
+item replace entity @s[scores={slide_cooldown=1..}] hotbar.3 with minecraft:beetroot[custom_name='{"italic":false,"text":"§9On Cooldown"}'] 1
 
 # matter storm
-item replace entity @s[scores={masterb=10..}] hotbar.2 with minecraft:cooked_salmon{display:{Name:"{\"italic\":false,\"color\":\"#3276DB\",\"text\":\"Matter Storm §f: Right-click (10 Material)\"}"}}
+item replace entity @s[scores={masterb=10..}] hotbar.2 with minecraft:cooked_salmon[custom_name='{"italic":false,"color":"#3276DB","text":"Matter Storm §f: Right-click (10 Material)"}']
 clear @s[scores={masterb=..9}] cooked_salmon
-item replace entity @s[scores={masterb=..9}] hotbar.2 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}} 1
-item replace entity @s[scores={storm_cooldown=1..}] hotbar.2 with minecraft:beetroot{display:{Name:"{\"italic\":false,\"text\":\"§9On Cooldown\"}"}} 1
+item replace entity @s[scores={masterb=..9}] hotbar.2 with minecraft:barrier[custom_name='{"italic":false,"text":"§9Not enough material"}'] 1
+item replace entity @s[scores={storm_cooldown=1..}] hotbar.2 with minecraft:beetroot[custom_name='{"italic":false,"text":"§9On Cooldown"}'] 1
 
-item replace entity @s[scores={masterc=25..}] hotbar.0 with blaze_rod{display:{Name:"{\"italic\":false,\"text\":\"§9On Cooldown\"}"}}
+item replace entity @s[scores={masterc=25..}] hotbar.0 with blaze_rod[custom_name='{"italic":false,"text":"§9On Cooldown"}']
 clear @s[scores={masterc=..24}] blaze_rod

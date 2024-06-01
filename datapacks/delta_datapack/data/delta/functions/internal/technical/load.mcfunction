@@ -34,17 +34,22 @@ scoreboard objectives add delta.internal.id dummy
 scoreboard objectives add delta.internal.x dummy
 scoreboard objectives add delta.internal.y dummy
 scoreboard objectives add delta.internal.z dummy
+scoreboard objectives add delta.internal.blastprot.feet dummy
+scoreboard objectives add delta.internal.blastprot.legs dummy
+scoreboard objectives add delta.internal.blastprot.chest dummy
+scoreboard objectives add delta.internal.blastprot.head dummy
+
 
 #TEAMS
 team add delta.no_collide
     team modify delta.no_collide collisionRule never
 
-forceload remove 0 0
-forceload add 0 0
 
 #MARKERS
+forceload remove 0 0
+forceload add 0 0
 kill d59ee2c6-58c8-4885-b9db-ecff066e4439
-summon marker ~ ~ ~ {UUID: [I;-711007546,1489520773,-1176769281,107889721],Tags:["global.ignore"]}
+summon marker ~ ~ ~ {UUID: [I;-711007546,1489520773,-1176769281,107889721],Tags:["smithed.strict","smithed.entity"]}
 
 #STORAGE 
 data modify storage delta:macros rotation set value {"positive":0,"negative":0}

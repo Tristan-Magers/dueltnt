@@ -3,7 +3,7 @@ scoreboard players remove @s masterb 6
 
 scoreboard players set @s master_bomb_cooldown 30
 
-summon minecraft:armor_stand ~ ~ ~ {Small:1,Marker:0,Invulnerable:1,Tags:["mastertnt","newbomb"],Invisible:1,ArmorItems:[{},{},{},{Count:1,id:air}],DisabledSlots:4144959}
+summon minecraft:armor_stand ~ ~ ~ {Small:1,Marker:0,Invulnerable:1,Tags:["mastertnt","newbomb"],Invisible:1,ArmorItems:[{},{},{},{id:"air",count:1}],DisabledSlots:4144959}
 
 tp @e[limit=1,tag=mastertnt,sort=nearest] @p
 

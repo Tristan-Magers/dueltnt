@@ -1,9 +1,9 @@
 execute as @s at @s if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:char/gardener/gravetrapactive
-execute as @s at @s positioned ~.15 ~ ~ if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:char/gardener/gravetrapactive
-execute as @s at @s positioned ~-.15 ~ ~ if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:char/gardener/gravetrapactive
-execute as @s at @s positioned ~-.15 ~ ~.15 if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:char/gardener/gravetrapactive
-execute as @s at @s positioned ~-.15 ~ ~-.15 if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:char/gardener/gravetrapactive
-execute as @s at @s positioned ~.15 ~ ~.15 if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:char/gardener/gravetrapactive
-execute as @s at @s positioned ~.15 ~ ~-.15 if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:char/gardener/gravetrapactive
-execute as @s at @s positioned ~ ~ ~.15 if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:char/gardener/gravetrapactive
-execute as @s at @s positioned ~ ~ ~-.15 if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:char/gardener/gravetrapactive
+execute as @s at @s positioned ~.25 ~ ~ if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:char/gardener/gravetrapactive
+execute as @s at @s positioned ~-.25 ~ ~ if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:char/gardener/gravetrapactive
+execute as @s at @s positioned ~-.25 ~ ~.25 if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:char/gardener/gravetrapactive
+execute as @s at @s positioned ~-.25 ~ ~-.25 if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:char/gardener/gravetrapactive
+execute as @s at @s positioned ~.25 ~ ~.25 if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:char/gardener/gravetrapactive
+execute as @s at @s positioned ~.25 ~ ~-.25 if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:char/gardener/gravetrapactive
+execute as @s at @s positioned ~ ~ ~.25 if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:char/gardener/gravetrapactive
+execute as @s at @s positioned ~ ~ ~-.25 if block ~ ~ ~ minecraft:stone_pressure_plate[powered=true] run function game:char/gardener/gravetrapactive

@@ -3,7 +3,7 @@
 execute as @s[scores={class=4}] at @s run effect give @p blindness 1 0 true
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!pig] at @s run summon lightning_bolt
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run function game:char/wizard/creeptest
-execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run summon creeper ~ ~.5 ~ {Invulnerable:1,powered:1,ignited:1,Fuse:9999,Attributes:[{Name:generic.followRange,Base:0},{Name:generic.movementSpeed,Base:0}],Tags:["wizcreep"]}
+execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run summon creeper ~ ~.5 ~ {Invulnerable:1,powered:1,ignited:1,Fuse:9999,Attributes:[{Name:"generic.followRange",Base:0},{Name:"generic.movementSpeed",Base:0}],Tags:["wizcreep"]}
 scoreboard players add @e[type=minecraft:creeper] tntID 0
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run scoreboard players operation @e[limit=1,sort=nearest,type=minecraft:creeper,scores={tntID=0}] tntID = @s tntID
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run clear @s gray_dye
@@ -22,7 +22,7 @@ execute as @s[scores={class=1}] at @s run tag @s add divekick
 execute as @s[scores={class=0},distance=..100] at @s run summon creeper ~ ~.05 ~ {ignited:1,Fuse:3,Activeeffect:[{Id:14,Amplifier:1,Duration:999999,ShowParticles:0b}]}
 execute as @s[scores={class=0},distance=..100] at @s run team join noCol @e[type=creeper,distance=..3]
 
-#execute as @s[scores={class=0},distance=..100] at @s run summon minecraft:fireball ~ ~ ~ {Motion:[0.0,-1.0,0.0],ExplosionPower:3}
+#execute as @s[scores={class=0},distance=..100] at @s run summon minecraft:fireball ~ ~ ~ {Motion:[0.0d,-1.0d,0.0d],ExplosionPower:3}
 #execute as @s[scores={class=0},distance=..100] at @s run summon minecraft:slime ~ ~-0.9 ~ {NoAI:1,Size:0,Invulnerable:1,Tags:["killthis"]}
 
 #execute as @s[scores={class=0}] at @s run summon minecraft:marker ~ ~ ~ {Tags:["soldiershift"]}
@@ -43,12 +43,12 @@ scoreboard players add @s overlordsc 1
 scoreboard players remove @s[scores={class=0,timer=1}] soldier_shifts 1
 
 scoreboard players set @s[scores={class=0,timer=1}] shift_cool 17
-scoreboard players set @s[scores={class=1,timer=1}] shift_cool 50
+scoreboard players set @s[scores={class=1,timer=1}] shift_cool 45
 scoreboard players set @s[scores={class=2,timer=1}] shift_cool 76
-scoreboard players set @s[scores={class=3,timer=1}] shift_cool 80
+scoreboard players set @s[scores={class=3,timer=1}] shift_cool 30
 scoreboard players set @s[scores={class=4,timer=1}] shift_cool 150
 scoreboard players set @s[scores={class=6,timer=1}] shift_cool 160
-scoreboard players set @s[scores={class=7,timer=1}] shift_cool 170
+scoreboard players set @s[scores={class=7,timer=1}] shift_cool 80
 scoreboard players remove @s[scores={class=9,timer=1}] shift_cool 1
 
 #reaper
@@ -59,7 +59,7 @@ execute as @s[scores={class=7}] at @s run effect give @s slow_falling 3 1
 execute as @s[scores={class=7}] at @s run effect give @s speed 3 3
 
 # Unstable mass shift (removed)
-#execute as @s[scores={class=9}] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Silent:1,Invulnerable:1,Invisible:1,CustomName:"{\"italic\":false,\"text\":\"ground2\"}"}
+#execute as @s[scores={class=9}] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Silent:1,Invulnerable:1,Invisible:1,CustomName:'{"italic":false,"text":"ground2"}'}
 #execute as @s[scores={class=9,Y=4..}] at @s run fill ~-1 ~-3 ~-1 ~1 ~-1 ~1 purple_wool replace air
 #execute as @s[scores={class=9,Y=..3}] at @s run fill ~-1 0 ~-1 ~1 ~-1 ~1 purple_wool replace air
 #execute as @s[scores={class=9}] at @s run tp @s @s
@@ -113,7 +113,7 @@ execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s 
 execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run effect give @s slow_falling 2 2
 
 #xp add @s[scores={class=8,timer=1}] 45 levels
-scoreboard players set @s[scores={class=8,timer=1}] shift_cool 45
+scoreboard players set @s[scores={class=8,timer=1}] shift_cool 55
 
 execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {NoGravity:1,fuse:4}
 execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {NoGravity:1,fuse:4}

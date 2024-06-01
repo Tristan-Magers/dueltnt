@@ -77,9 +77,9 @@ execute as @s[scores={countdown=75}] at @s run execute as @a[x=620,y=20,z=600,di
 execute as @s[scores={countdown=60..}] at @s run time set 11000
 execute as @s[scores={countdown=60..}] at @s run execute as @e[name=Map,type=armor_stand,scores={game=99}] at @s run time set 12800
 
-execute as @s[scores={countdown=42}] as @a[x=620,y=20,z=620,distance=..100] at @s positioned ~ ~1.6 ~ run particle minecraft:item minecraft:redstone_block ^ ^ ^3.5 0 0 0 1 10 force @s
-execute as @s[scores={countdown=27}] as @a[x=620,y=20,z=620,distance=..100] at @s positioned ~ ~1.6 ~ run particle minecraft:item minecraft:gold_block ^ ^ ^3.0 0 0 0 1 10 force @s
-execute as @s[scores={countdown=12}] as @a[x=620,y=20,z=620,distance=..100] at @s positioned ~ ~1.6 ~ run particle minecraft:item minecraft:emerald_block ^ ^ ^2.5 0 0 0 1 10 force @s
+execute as @s[scores={countdown=42}] as @a[x=620,y=20,z=620,distance=..100] at @s positioned ~ ~1.6 ~ run particle item{item:{id:"minecraft:redstone_block"}} ^ ^ ^3.5 0 0 0 1 10 force @s
+execute as @s[scores={countdown=27}] as @a[x=620,y=20,z=620,distance=..100] at @s positioned ~ ~1.6 ~ run particle item{item:{id:"minecraft:gold_block"}} ^ ^ ^3.0 0 0 0 1 10 force @s
+execute as @s[scores={countdown=12}] as @a[x=620,y=20,z=620,distance=..100] at @s positioned ~ ~1.6 ~ run particle item{item:{id:"minecraft:emerald_block"}} ^ ^ ^2.5 0 0 0 1 10 force @s
 execute as @s[scores={countdown=0}] as @a[x=620,y=20,z=620,distance=..100] at @s positioned ~ ~1.6 ~ run particle minecraft:explosion_emitter ^ ^ ^2.5 0.1 0.1 0.1 0.0 2 force @s
 
 execute as @s[scores={countdown=45}] at @s run title @a[x=620,y=20,z=620,distance=..100] title [{"translate":"\u3000","font":"title","color":"#E34634"}]

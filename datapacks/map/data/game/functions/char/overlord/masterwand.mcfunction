@@ -57,7 +57,7 @@ tag @s[tag=wand_success] remove wand_fail_streak
 
 scoreboard players add @s[tag=wand_success] masterc 1
 scoreboard players add @s[tag=!wand_success,tag=wand_fail_streak] masterc 1
-item replace entity @s[scores={masterc=25..}] hotbar.0 with blaze_rod{display:{Name:"{\"italic\":false,\"text\":\"§9On Cooldown\"}"}}
+item replace entity @s[scores={masterc=25..}] hotbar.0 with blaze_rod[custom_name='{"italic":false,"text":"§9On Cooldown"}']
 clear @s[scores={masterc=25..}] wooden_shovel
 clear @s[scores={masterc=25..}] stone_shovel
 clear @s[scores={masterc=25..}] iron_shovel

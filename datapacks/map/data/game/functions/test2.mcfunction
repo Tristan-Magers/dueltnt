@@ -1,6 +1,6 @@
 item replace block 0 4 -2 container.0 with minecraft:player_head
 loot replace block 0 4 -2 container.0 loot game:player_head
-data modify storage ns:main SkullName set from block 0 4 -2 Items[0].tag.SkullOwner.Name
+data modify storage ns:main SkullName set from block 0 4 -2 Items[0].components."minecraft:profile".name
 
 data modify storage ns:main Characters set value ["#","#","#","#","#"]
 data modify storage ns:main Characters[0] set string storage ns:main SkullName 0 1
