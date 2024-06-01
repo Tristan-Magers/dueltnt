@@ -445,7 +445,7 @@ Soldier
  
 Assassin
 - Mass Freeze freezes 0.3s longer (1.2s -> 1.5s)
-- Shift reloads 4s faster (6.5s -> 2.5s)
+- Shift reloads 4.25s faster (6.5s -> 2.25s)
 - Shift only reloads while on ground
 - Using Sneak Attack reloads shift
 - Respawning reloads shift
