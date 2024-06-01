@@ -1,5 +1,5 @@
 #
-scoreboard players set @s TBtimer 1150
+scoreboard players set @s TBtimer 1140
 
 scoreboard players operation @s TBtimer -= @s trapper_swap_extra
 

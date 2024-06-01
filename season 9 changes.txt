@@ -462,7 +462,7 @@ Trapper
 - TNT Trap explodes 0.05s faster (0.15s -> 0.1s)
 - Fast Trap explodes 0.05s faster (0.25s -> 0.2s)
 - Phantom Blocks and Tacking Bomb reload starts imediately after reloading one of them, reloads invisibility down to 0.75s
-- Phantom Block and Tracking Bomb reload 2s slower (5.5s -> 7.5s)
+- Phantom Block and Tracking Bomb reload 1.5s slower (5.5s -> 7s)
 - Shift reloads 2.4s faster (4s -> 1.6s)
 - Shift only reloads while on ground
 - Shift reloads on death
