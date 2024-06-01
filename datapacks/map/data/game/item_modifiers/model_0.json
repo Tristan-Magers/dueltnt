@@ -1,13 +1,15 @@
 [
   {
-    "function": "minecraft:set_custom_data",
-    "tag": "{CustomModelData:0}"
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:custom_model_data": 0
+    }
   },
   {
     "function": "minecraft:set_name",
     "name": [
       {
-        "text": "",
+        "text": "Throw/Offhand wand to Gather",
         "italic": false,
         "color": "white"
       }

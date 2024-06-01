@@ -1,5 +1,8 @@
 # tracking bomb
 effect give @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:redstone"}}] minecraft:levitation 1
+execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:redstone"}}] at @s run playsound minecraft:block.piston.contract master @a ~ ~ ~ 1 1.5
+execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:redstone"}}] at @s run playsound minecraft:block.note_block. master @a ~ ~ ~ 1 0
+execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:redstone"}}] at @s run playsound minecraft:block.note_block.didgeridoo master @a ~ ~ ~ 0.5 2
 scoreboard players set @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:redstone"}}] TBtimer 140
 #execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:redstone"}}] at @s run tp @s @s
 execute as @s[scores={TBtimer=-10..}] at @s run function game:items/trackbomb

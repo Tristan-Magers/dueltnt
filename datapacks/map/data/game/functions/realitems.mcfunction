@@ -1,3 +1,6 @@
+execute as @a[scores={PlaceMine=1..}] at @s run playsound minecraft:entity.item_frame.add_item master @a ~ ~ ~ 1 2
+execute as @a[scores={PlaceMine=2..}] at @s run playsound minecraft:entity.item_frame.add_item master @a ~ ~ ~ 1 1
+
 scoreboard players set @e[type=item] Mine 0
 scoreboard players set @e[type=item,nbt={Item:{id:"minecraft:nether_star"}}] Mine 2
 scoreboard players set @e[type=item,nbt={Item:{id:"minecraft:tnt"}},tag=!new] Mine 1

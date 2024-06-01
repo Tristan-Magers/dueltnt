@@ -5,6 +5,8 @@ scoreboard players set @s[scores={click=1..,feather_cooldown=1..},nbt={SelectedI
 effect give @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:feather"}}] speed 1 4
 effect give @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:feather"}}] levitation 1 0
 execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:feather"}}] at @s run playsound minecraft:item.armor.equip_generic master @a ~ ~ ~ .6 .8
+execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:feather"}}] at @s run playsound minecraft:entity.armadillo.peek master @a ~ ~ ~ 1 2
+execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:feather"}}] at @s run playsound minecraft:entity.phantom.flap master @a ~ ~ ~ 1 1.5
 scoreboard players set @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:feather"}}] feather_cooldown 8
 scoreboard players add @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:feather"}}] featheruse 1
 

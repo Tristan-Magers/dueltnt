@@ -3,19 +3,19 @@ effect give @a fire_resistance 1000000 255 true
 
 execute as @a at @s run attribute @p minecraft:generic.movement_speed base set .1
 
-give @a[scores={class=0},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=20,unbreakable={},custom_name='{"italic":false,"text":"§cBomb Bow §r: Throw to switch"}']
+give @a[scores={class=0},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=20,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§cBomb Bow §r: Throw to switch"}',hide_additional_tooltip={}]
 give @a[scores={class=0},x=620,y=20,z=620,distance=..100] minecraft:snowball[custom_name='{"italic":false,"text":"§2Slimer §f§r: Right-click (hit players)"}']
 item replace entity @a[scores={class=0},x=620,y=20,z=620,distance=..100] hotbar.5 with arrow 2
 scoreboard players set @a[scores={class=0},x=620,y=20,z=620,distance=..100] bow -1
-item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.0 with minecraft:bow[damage=40,unbreakable={},enchantments={flame:1},custom_name='{"italic":false,"text":"§dBazooka Bow§f : Throw to switch"}']
+item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.0 with minecraft:bow[damage=40,unbreakable={show_in_tooltip:false},enchantments={levels:{"minecraft:flame":1},show_in_tooltip:false},custom_name='{"italic":false,"text":"§dBazooka Bow§f : Throw to switch"}',hide_additional_tooltip={}]
 item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:ender_pearl[custom_name='{"italic":false,"text":"§aTeleport §r: Right-click"}'] 1
-execute if entity @e[scores={mode=1}] run item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:ender_pearl[custom_name='{"italic":false,"text":"§aTeleport §r: Right-click"}'] 12
+execute if entity @e[scores={mode=1}] run item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:ender_pearl[custom_name='{"italic":false,"text":"§aTeleport §r: Right-click"}',hide_additional_tooltip={}] 12
 #item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.1 with minecraft:splash_potion[custom_name='{"italic":false,"text":"§5Primed for Death §r: Right-click"}',potion_contents={custom_color:0,custom_effects:[{Id:2,Amplifier:1,Duration:60},{Id:15,Amplifier:1,Duration:60},{Id:24,Amplifier:1,Duration:60}]}]
 scoreboard players set @a[scores={class=1},x=620,y=20,z=620,distance=..100] bow 0
-item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.6 with arrow 1
+item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.5 with arrow 1
 effect give @a[scores={class=1},x=620,y=20,z=620,distance=..100] speed 300 1 true
 effect give @a[scores={class=1},x=620,y=20,z=620,distance=..100] jump_boost 300 1 true
-give @a[scores={class=2},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=60,unbreakable={},custom_name='{"italic":false,"text":"§bVaporizer§r : Throw to switch"}']
+give @a[scores={class=2},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=60,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§bVaporizer§r : Throw to switch"}',hide_additional_tooltip={}]
 give @a[scores={class=2},x=620,y=20,z=620,distance=..100] minecraft:experience_bottle[custom_name='{"italic":false,"text":"§7Smoke Bomb §r: Right-click"}'] 2
 item replace entity @a[scores={class=2},x=620,y=20,z=620,distance=..100] hotbar.5 with minecraft:tipped_arrow[custom_name='{"italic":false,"text":"Magic arrow"}',potion_contents={custom_color:6221823},hide_additional_tooltip={}] 3
 scoreboard players set @a[scores={class=2},x=620,y=20,z=620,distance=..100] bow -1
@@ -23,59 +23,59 @@ scoreboard players set @a[scores={class=2},x=620,y=20,z=620,distance=..100] snow
 effect give @a[scores={class=2},x=620,y=20,z=620,distance=..100] speed 300 1 true
 effect give @a[scores={class=2},x=620,y=20,z=620,distance=..100] jump_boost 300 1 true
 scoreboard players set @a[x=1000,y=20,z=1000,distance=..300] timer 0
-item replace entity @a[x=620,y=20,z=620,distance=..100] hotbar.8 with minecraft:potion[potion_contents={custom_color:16711918},custom_name='{"italic":false,"text":"§dLeave game §r: Right-click"}']
+item replace entity @a[x=620,y=20,z=620,distance=..100] hotbar.8 with minecraft:potion[potion_contents={custom_color:16711918},custom_name='{"italic":false,"text":"§dLeave game §r: Right-click"}',hide_additional_tooltip={}]
 scoreboard players set @a snow 0
 #item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.4 with minecraft:leather[custom_name='{"italic":false,"text":"§7Explosive Dart §r: Right-click"}'] 6
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=0}] hotbar.6 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch to explode"}']
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.7 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch for Dive Kick [reloads on ground]"}']
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.6 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch for Dive Kick [reloads on ground]"}']
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=2}] hotbar.6 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch for Levitation"}']
 give @a[scores={class=3},x=620,y=20,z=620,distance=..100] minecraft:flint[custom_name='{"italic":false,"text":"§cTNT Trap§r : Throw for mode 2 / Offhand for mode 3"}']
-#give @a[scores={class=3},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=80,unbreakable={},custom_name='{"italic":false,"text":"§cTNT Trap§r : Throw to switch"}']
-give @a[scores={class=3},x=620,y=20,z=620,distance=..100] minecraft:bone[unbreakable={},custom_name='{"italic":false,"text":"§6Detonate Arrows §f§r: Right-click"}']
+#give @a[scores={class=3},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=80,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§cTNT Trap§r : Throw to switch"}']
+give @a[scores={class=3},x=620,y=20,z=620,distance=..100] minecraft:bone[unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§6Detonate Arrows §f§r: Right-click"}']
 give @a[scores={class=3},x=620,y=20,z=620,distance=..100] minecraft:tnt[custom_name='{"italic":false,"text":"§4Mine §f: Throw/Right-click"}',can_place_on={predicates:[{blocks:"#game:tnt_place"}],show_in_tooltip:0b}] 2
 scoreboard players set @a[scores={class=3},x=620,y=20,z=620,distance=..100] bow -1
 #effect give @a[scores={class=3},x=620,y=20,z=620,distance=..100] jump_boost 300 0 true
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] hotbar.7 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch to summon TNT"}']
 item replace entity @a[scores={class=3},x=620,y=20,z=620,distance=..100] hotbar.5 with arrow 1
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=0}] armor.chest with minecraft:iron_chestplate[unbreakable={}]
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] armor.chest with minecraft:golden_chestplate[unbreakable={}]
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] armor.chest with minecraft:leather_chestplate[unbreakable={}]
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] armor.head with minecraft:leather_helmet[unbreakable={}]
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=2}] armor.chest with minecraft:diamond_chestplate[unbreakable={}]
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=0}] armor.chest with minecraft:iron_chestplate[unbreakable={show_in_tooltip:false}]
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] armor.chest with minecraft:golden_chestplate[unbreakable={show_in_tooltip:false}]
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] armor.chest with minecraft:leather_chestplate[unbreakable={show_in_tooltip:false}]
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] armor.head with minecraft:leather_helmet[unbreakable={show_in_tooltip:false}]
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=2}] armor.chest with minecraft:diamond_chestplate[unbreakable={show_in_tooltip:false}]
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.6 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch to teleport"}']
 item replace entity @a[scores={class=4},x=620,y=20,z=620,distance=..100] hotbar.7 with minecraft:tipped_arrow[custom_name='{"italic":false,"text":"Magic Arrow"}',potion_contents={custom_color:6221823},hide_additional_tooltip={}] 2
 scoreboard players set @a[scores={class=4},x=620,y=20,z=620,distance=..100] bow -1
-give @a[scores={class=4},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=100,unbreakable={},custom_name='{"italic":false,"text":"§4Fireball§r : Throw to switch"}']
+give @a[scores={class=4},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=100,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§4Fireball§r : Throw to switch"}']
 effect give @a[scores={class=4},x=620,y=20,z=620,distance=..100] jump_boost 300 2 true
-give @a[scores={class=4},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=120,unbreakable={},custom_name='{"italic":false,"text":"§ePowderize§r : Throw to switch"}']
-give @a[scores={class=4},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=140,unbreakable={},custom_name='{"italic":false,"text":"§3Teleport§r : Throw to switch"}']
+give @a[scores={class=4},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=120,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§ePowderize§r : Throw to switch"}']
+give @a[scores={class=4},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=140,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§3Teleport§r : Throw to switch"}']
 item replace entity @a[scores={class=0},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:ender_pearl[custom_name='{"italic":false,"text":"§aTeleport §r: Right-click"}'] 5
 execute if entity @e[scores={mode=1}] run item replace entity @a[scores={class=0},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:ender_pearl[custom_name='{"italic":false,"text":"§aTeleport §r: Right-click"}'] 8
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] armor.chest with minecraft:chainmail_chestplate[unbreakable={}]
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.3 with minecraft:pig_spawn_egg[custom_name='{"italic":false,"text":"§cPig Transform §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"pig"}]
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] armor.chest with minecraft:chainmail_chestplate[unbreakable={show_in_tooltip:false}]
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.3 with minecraft:pig_spawn_egg[custom_name='{"italic":false,"text":"§cPig Transform §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"pig"},hide_additional_tooltip={}]
 execute as @a[scores={class=4},x=620,y=20,z=620,distance=..100] at @s run attribute @p minecraft:generic.movement_speed base set .13
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.4 with minecraft:feather[custom_name='{"italic":false,"text":"Feather §r: Right-click"}'] 6
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.4 with minecraft:feather[custom_name='{"italic":false,"text":"Feather §r: Right-click"}'] 9
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=2}] hotbar.3 with minecraft:iron_ingot[custom_name='{"italic":false,"text":"Mass Levitate §r: Right-click [everyone within 3 blocks]"}']
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] hotbar.3 with minecraft:diamond_sword[custom_name='{"italic":false,"text":"Temporary Platform §r: Right-click"}']
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] hotbar.3 with minecraft:diamond_sword[custom_name='{"italic":false,"text":"Temporary Platform §r: Right-click"}',hide_additional_tooltip={},attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:0.9,operation:"add_value",uuid:[I;2016337811,-1510259727,-1143610979,661859754],slot:"mainhand"},{type:"generic.attack_damage",name:"generic.attack_damage",amount:9,operation:"add_value",uuid:[I;-1708916597,1794000556,-1199725791,1224881908],slot:"mainhand"}],show_in_tooltip:false}]
 effect give @a[scores={class=0},x=620,y=20,z=620,distance=..100] jump_boost 300 1 true
 effect give @a[scores={class=0},x=620,y=20,z=620,distance=..100] speed 300 0 true
 item replace entity @a[tag=blue,scores={teamed=1..}] armor.head with minecraft:light_blue_stained_glass[enchantments={binding_curse:1}]
 item replace entity @a[tag=red,scores={teamed=1..}] armor.head with minecraft:red_stained_glass[enchantments={binding_curse:1}]
 item replace entity @a[tag=green,scores={teamed=1..}] armor.head with minecraft:lime_stained_glass[enchantments={binding_curse:1}]
 item replace entity @a[scores={teamed=..0}] armor.head with air
-item replace entity @a[tag=!team,x=620,y=20,z=620,distance=..100,scores={class=3}] armor.head with minecraft:leather_helmet[unbreakable={},enchantments={binding_curse:1}]
+item replace entity @a[tag=!team,x=620,y=20,z=620,distance=..100,scores={class=3}] armor.head with minecraft:leather_helmet[unbreakable={show_in_tooltip:false},enchantments={binding_curse:1}]
 item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.3 with minecraft:diamond[custom_name='{"italic":false,"text":"§3Mass Freeze§r §r: Right-click [everyone within 3 blocks]"}']
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.4 with minecraft:golden_boots[custom_name='{"italic":false,"text":"§r§bExplode Ghost Creeper §r: Right-click (summoned by crouch)"}']
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.4 with minecraft:golden_boots[custom_name='{"italic":false,"text":"§r§bExplode Ghost Creeper §r: Right-click (summoned by crouch)"}',entity_data={id:"pig"},hide_additional_tooltip={}]
 #item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=0}] hotbar.3 with minecraft:kelp[custom_name='{"italic":false,"text":"§4Mega Bomb§r §r: Right-click"}',dyed_color=16777215]
 item replace entity @a[scores={class=2},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:ender_pearl[custom_name='{"italic":false,"text":"§aTeleport §r: Right-click"}'] 3
 execute if entity @e[scores={mode=1}] run item replace entity @a[scores={class=2},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:ender_pearl[custom_name='{"italic":false,"text":"§aTeleport §r: Right-click"}'] 6
 item replace entity @a[scores={class=5},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:sugar[custom_name='{"italic":false,"text":"§aAcid §r: Right-click"}']
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] armor.head with minecraft:diamond_helmet[unbreakable={}]
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] armor.head with minecraft:diamond_helmet[unbreakable={show_in_tooltip:false}]
 effect give @a[scores={class=5},x=620,y=20,z=620,distance=..100] jump_boost 300 2 true
 effect give @a[scores={class=5},x=620,y=20,z=620,distance=..100] speed 300 0 true
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] armor.head with minecraft:diamond_helmet[unbreakable={},dyed_color=0]
-give @a[scores={class=5},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=160,unbreakable={},custom_name='{"italic":false,"text":"§aExplosive Gel§r : Throw to switch"}']
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] armor.head with minecraft:diamond_helmet[unbreakable={show_in_tooltip:false},dyed_color=0]
+give @a[scores={class=5},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=160,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§aExplosive Gel§r : Throw to switch"}']
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=5}] hotbar.6 with arrow 3
 scoreboard players set @a[scores={class=5}] bow -2
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=5}] hotbar.3 with minecraft:stick[custom_name='{"italic":false,"text":"§9Power Shield §r: Right-click"}']
@@ -83,12 +83,12 @@ item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=5}] hotbar.
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.7 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch to go to portal (16 block range)"}']
 item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.1 with minecraft:nether_star[custom_name='{"italic":false,"text":"Magic Star §f: Right-click"}'] 2
 scoreboard players set @a[scores={class=1},x=620,y=20,z=620,distance=..100] star 0
-#item replace entity @a[scores={class=6},x=620,y=20,z=620,distance=..100] hotbar.1 with minecraft:iron_hoe[custom_name='{"italic":false,"text":"§aScythe §f: Right-click to throw"}',enchantments={knockback:6},unbreakable={}]
+#item replace entity @a[scores={class=6},x=620,y=20,z=620,distance=..100] hotbar.1 with minecraft:iron_hoe[custom_name='{"italic":false,"text":"§aScythe §f: Right-click to throw"}',enchantments={knockback:6},unbreakable={show_in_tooltip:false}]
 
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.2 with minecraft:slime_spawn_egg[custom_name='{"italic":false,"text":"§aEnchanted Slime §f: Right-click (Can click on air)"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"slime",Size:1,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,Tags:["s1"]},enchantments={knockback:1}] 2
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.3 with minecraft:creeper_spawn_egg[custom_name='{"italic":false,"text":"§bGhost Creeper §f: Right-click (Can click on air)"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"creeper",ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:'{"italic":false,"text":"Bomb"}',Health:500,powered:1,ExplosionRadius:1,fuse:1000},enchantments={knockback:2}] 2
 
-item replace entity @a[scores={class=6},x=620,y=20,z=620,distance=..100] hotbar.0 with minecraft:bow[damage=180,custom_name='{"italic":false,"text":"§7Dark Pillar§r : Throw to switch"}',unbreakable={}]
+item replace entity @a[scores={class=6},x=620,y=20,z=620,distance=..100] hotbar.0 with minecraft:bow[damage=180,custom_name='{"italic":false,"text":"§7Dark Pillar§r : Throw to switch"}',unbreakable={show_in_tooltip:false}]
 item replace entity @a[scores={class=6},x=620,y=20,z=620,distance=..100] hotbar.6 with arrow 1
 scoreboard players set @a[scores={class=6}] bow 0
 effect give @a[scores={class=6},x=620,y=20,z=620,distance=..100] jump_boost 300 2 true
@@ -112,7 +112,7 @@ item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] hotbar.
 
 #item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.5 with minecraft:clay_ball[custom_name='{"italic":false,"text":"§bVortex §r: Right-click"}']
 
-item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.0 with minecraft:wooden_pickaxe[unbreakable={},custom_name='{"italic":false,"text":"§9Master Wand §r: Right-click Blocks (throw/offhand to gather)"}']
+item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.0 with minecraft:wooden_pickaxe[unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§9Master Wand §r: Right-click Blocks (throw/offhand to gather)"}',attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:0.9,operation:"add_value",uuid:[I;2016337811,-1510259727,-1143610979,661859754],slot:"mainhand"},{type:"generic.attack_damage",name:"generic.attack_damage",amount:9,operation:"add_value",uuid:[I;-1708916597,1794000556,-1199725791,1224881908],slot:"mainhand"}],show_in_tooltip:false}]
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.1 with minecraft:barrier[custom_name='{"italic":false,"text":"§9Not enough material"}']
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.2 with minecraft:barrier[custom_name='{"italic":false,"text":"§9Not enough material"}']
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.3 with minecraft:barrier[custom_name='{"italic":false,"text":"§9Not enough material"}']
@@ -122,12 +122,12 @@ item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=9}] hotbar.
 scoreboard players set @a boomwandtime 0
 scoreboard players set @a blastwandtime 0
 
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.1 with minecraft:wooden_hoe[custom_name='{"italic":false,"text":"§6Boom Wand §r: Right-click"}',attribute_modifiers=[{operation:"add_value",type:"generic.attack_speed",amount:10,name:"generic.attack_speed",uuid:[I;1,2,3,4]}]]
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.2 with minecraft:stone_hoe[custom_name='{"italic":false,"text":"§aBlast Wand §r: Right-click"}',attribute_modifiers=[{operation:"add_value",type:"generic.attack_speed",amount:10,name:"generic.attack_speed",uuid:[I;1,2,3,4]}]]
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.3 with minecraft:diamond_hoe[custom_name='{"italic":false,"text":"§bSky Wand §r: Right-click"}',attribute_modifiers=[{operation:"add_value",type:"generic.attack_speed",amount:10,name:"generic.attack_speed",uuid:[I;1,2,3,4]}]]
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.0 with minecraft:bow[damage=200,unbreakable={},custom_name='{"italic":false,"text":"§3Space Warp§r : Throw to switch"}']
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.6 with arrow
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.5 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch for Slow Falling and Speed"}']
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.1 with minecraft:wooden_hoe[custom_name='{"italic":false,"text":"§6Boom Wand §r: Right-click"}',attribute_modifiers={modifiers:[{operation:"add_value",type:"generic.attack_speed",amount:10,name:"generic.attack_speed",uuid:[I;1,2,3,4]}],show_in_tooltip:false}]
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.2 with minecraft:stone_hoe[custom_name='{"italic":false,"text":"§aBlast Wand §r: Right-click"}',attribute_modifiers={modifiers:[{operation:"add_value",type:"generic.attack_speed",amount:10,name:"generic.attack_speed",uuid:[I;1,2,3,4]}],show_in_tooltip:false}]
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.3 with minecraft:diamond_hoe[custom_name='{"italic":false,"text":"§bSky Wand §r: Right-click"}',attribute_modifiers={modifiers:[{operation:"add_value",type:"generic.attack_speed",amount:10,name:"generic.attack_speed",uuid:[I;1,2,3,4]}],show_in_tooltip:false}]
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.0 with minecraft:bow[damage=200,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§3Space Warp§r : Throw to switch"}']
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.5 with arrow
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.6 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch for Slow Falling and Speed"}']
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.4 with minecraft:red_dye[custom_name='{"italic":false,"text":"§eGround Spell §r: Right-click"}'] 2
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.4 with minecraft:red_dye[custom_name='{"italic":false,"text":"§eGround Spell §r: Right-click"}'] 3
 
@@ -136,8 +136,8 @@ scoreboard players set @a[scores={class=7},x=620,y=20,z=620,distance=..100] bow 
 
 scoreboard players set @a plaguetimer -1
 
-execute unless entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.0 with minecraft:bow[damage=220,unbreakable={},custom_name='{"italic":false,"text":"§6Blast Jumper§r : Throw to switch"}',enchantments={punch:2}]
-execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.0 with minecraft:bow[damage=220,unbreakable={},custom_name='{"italic":false,"text":"§6Blast Jumper§r : Throw to switch"}',enchantments={punch:3}]
+execute unless entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.0 with minecraft:bow[damage=220,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§6Blast Jumper§r : Throw to switch"}',enchantments={punch:2}]
+execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.0 with minecraft:bow[damage=220,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§6Blast Jumper§r : Throw to switch"}',enchantments={punch:3}]
 
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.7 with minecraft:arrow[custom_name='{"italic":false,"text":"Not your father\'s Blast Off"}']
 scoreboard players set @a[scores={class=8},x=620,y=20,z=620,distance=..100] bow 0
@@ -149,7 +149,7 @@ team join gardener @a[x=620,y=20,z=620,distance=..100,scores={class=8}]
 #team leave @a[x=620,y=20,z=620,distance=..100,scores={class=9..}]
 #team leave @a[x=620,y=20,z=620,distance=..100,scores={class=..7}]
 
-give @a[scores={class=10},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=260,unbreakable={},custom_name='{"italic":false,"text":"§9Anti-Ice§r : Throw to switch"}']
+give @a[scores={class=10},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=260,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§9Anti-Ice§r : Throw to switch"}']
 item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.6 with arrow 3
 item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.1 with minecraft:egg[custom_name='{"italic":false,"text":"§3Frosty Poppy §f§r: Right-click (explodes on enemies)"}']
 item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.3 with minecraft:lime_dye[custom_name='{"italic":false,"text":"§3Ice Suck §f§r: Right-click"}']

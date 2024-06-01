@@ -430,7 +430,10 @@ Shard
 - Updated resource pack version to be current with Minecraft 1.20.4
 
 *Season 9.2 Update*
- 
+
+[Game]
+- Game updated to version 1.20.6
+
 [Character Changes]
  
 Soldier
@@ -457,15 +460,20 @@ Ghost
 - Smoke Bomb gives 0.05s less invisibility (2.2s -> 2.15s)
 - Primed for Dark has 0.5s less max blindness (4s -> 3.5s)
 - Using Air Missile shoots a line of particles that show the path of the missile
+- Ghost shift causes sound
 
 Trapper
 - TNT Trap explodes 0.05s faster (0.15s -> 0.1s)
 - Fast Trap explodes 0.05s faster (0.25s -> 0.2s)
 - Phantom Blocks and Tacking Bomb reload starts imediately after reloading one of them, reloads invisibility down to 0.75s
 - Phantom Block and Tracking Bomb reload 1.5s slower (5.5s -> 7s)
+- Throwing Mine causes sound
+- Using Track Bomb causes sound
+- Using Phantom Blocks causes sound (not audible for other players)
 - Shift reloads 2.4s faster (4s -> 1.6s)
 - Shift only reloads while on ground
 - Shift reloads on death
+- Shift audio is audible to all players
 
 Wizard
 - Creepers explode 3s faster if not detonated (6s -> 3s)
@@ -476,17 +484,24 @@ Reaper
 - Dark Pillar arrow reloads 0.1s faster (2.3s -> 2.2s)
 - Dark Pillar explodes 0.2s faster (1.65s -> 1.45s)
 - Dark Pillar hits a player, it explodes 0.1s faster
+- Dark Pillar detection for stunning/lifting player 0.3 blocks bigger in each direction to reflect player size
+- Sound added for hitting player with Dark Pillar
 - Dark Pillar removes glass 0.2s faster (2.05s -> 1.85s)
+- Sound improved for Feather
 - Reloads shift on death
 - Grave Trap hitbox increased 0.1 blocks to reflect visual
 
 Echo
+- Space Warp (bow) reloads 0.25s faster (2.25s -> 2s)
+- Space Warp causes sound on land
 - Shift reloads 4.5s faster (8.5s -> 4s)
 - Shift only reloads on ground
 - Shift reloads on death
+- Shift causes sound
 
 Gardener
 - Shift reloads 0.5s slower (2.25s -> 2.75s)
+- Shift causes sound
 - Grave Trap hitbox increased 0.1 blocks to reflect visual
 
 Overlord
@@ -502,5 +517,9 @@ Shard
 - Respawning reloads shift
  
 Bug Fixes
+- "Points" scoreboard would appear if no player actually had a point
+- Dark Pillar (repaer bow) didn't properly work with dummies
+- Fixed a variety of tags still being visible on the lore of items
+- Fixed position of arrow and coruch move in Assassin hotbar
 - Soldier TNT had a visible name
 - Gardener life reload text not updated to 9.1 functionality

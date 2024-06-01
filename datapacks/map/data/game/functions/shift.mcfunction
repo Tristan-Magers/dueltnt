@@ -8,11 +8,13 @@ scoreboard players add @e[type=minecraft:creeper] tntID 0
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run scoreboard players operation @e[limit=1,sort=nearest,type=minecraft:creeper,scores={tntID=0}] tntID = @s tntID
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run clear @s gray_dye
 scoreboard players set @s[scores={class=5}] GoPortal 1
-execute as @s[scores={class=3}] at @s run playsound minecraft:entity.tnt.primed master @p
+execute as @s[scores={class=3}] at @s run playsound minecraft:entity.tnt.primed master @a
 execute as @s[scores={class=3}] at @s run summon tnt ~ ~.5 ~ {fuse:5}
 execute as @s[scores={class=3}] at @s run effect give @p speed 1 1
 execute as @s[scores={class=2}] at @s run effect give @s levitation 1 8
 execute as @s[scores={class=2}] at @s run scoreboard players set @s nolev 17
+execute as @s[scores={class=2}] at @s run playsound minecraft:entity.breeze.land master @a ~ ~ ~ 0.5 1
+execute as @s[scores={class=2}] at @s run playsound minecraft:entity.breeze.land master @a ~ ~ ~ 1 0
 #execute as @s[scores={class=2}] at @s run scoreboard players set @s ghostshift 20
 
 execute as @s[scores={class=1}] at @s run tag @s add divekick
@@ -58,6 +60,8 @@ execute as @s[scores={class=6}] at @s run effect give @s slow_falling 1 1 true
 execute as @s[scores={class=7}] at @s run effect give @s slow_falling 3 1
 execute as @s[scores={class=7}] at @s run effect give @s speed 3 3
 
+execute as @s[scores={class=7}] at @s run playsound minecraft:entity.breeze.charge master @a ~ ~ ~ 1 1.1
+
 # Unstable mass shift (removed)
 #execute as @s[scores={class=9}] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Silent:1,Invulnerable:1,Invisible:1,CustomName:'{"italic":false,"text":"ground2"}'}
 #execute as @s[scores={class=9,Y=4..}] at @s run fill ~-1 ~-3 ~-1 ~1 ~-1 ~1 purple_wool replace air
@@ -89,6 +93,8 @@ execute as @s[gamemode=adventure,distance=..100,x=620,y=20,z=620,scores={class=9
 
 execute unless entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run summon tnt ~ ~ ~ {fuse:23}
 execute unless entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run summon tnt ~ ~ ~ {fuse:23}
+
+execute as @s[scores={class=8}] at @s run playsound minecraft:entity.tnt.primed master @a ~ ~ ~ 0.8 1.1
 
 execute as @s[scores={class=9}] at @s run playsound minecraft:item.armor.equip_generic master @a ~ ~ ~ 1 0
 execute as @s[scores={class=9}] at @s run playsound minecraft:block.chest.open master @a ~ ~ ~ .5 1.5

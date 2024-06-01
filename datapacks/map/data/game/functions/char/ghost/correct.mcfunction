@@ -1,4 +1,4 @@
-item replace entity @s[scores={nobow=3..}] hotbar.0 with bow[damage=60,unbreakable={},custom_name='{"italic":false,"text":"§bVaporizer§r : Throw to switch"}']
+item replace entity @s[scores={nobow=3..}] hotbar.0 with bow[damage=60,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§bVaporizer§r : Throw to switch"}']
 
 clear @s[nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]}] ender_pearl
 #execute as @s[nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]},scores={enderreload=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Reloaded ","color":"white"},{"text":"Teleport","color":"green","bold":true}]

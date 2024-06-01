@@ -1,5 +1,5 @@
 clear @a[nbt=!{Inventory:[{id:"minecraft:potion",Slot:8b}]},x=620,y=20,z=620,distance=3..100] potion
-item replace entity @a[nbt=!{Inventory:[{id:"minecraft:potion",Slot:8b}]},x=620,y=20,z=620,distance=3..100] hotbar.8 with minecraft:potion[potion_contents={custom_color:16711918},custom_name='{"italic":false,"text":"§dLeave game §r: Right-click"}']
+item replace entity @a[nbt=!{Inventory:[{id:"minecraft:potion",Slot:8b}]},x=620,y=20,z=620,distance=3..100] hotbar.8 with minecraft:potion[potion_contents={custom_color:16711918},custom_name='{"italic":false,"text":"§dLeave game §r: Right-click"}',hide_additional_tooltip={}]
 
 tag @s remove hasbow
 tag @s remove haspup
@@ -39,5 +39,5 @@ execute as @s[scores={class=7}] at @s run function game:char/echo/correct
 execute as @s[scores={class=9}] at @s run function game:char/overlord/correct
 execute as @s[scores={class=10}] at @s run function game:char/shard/correct
 
-execute unless entity @e[scores={mode=1}] run item replace entity @s[scores={nobow=3..,class=8}] hotbar.0 with minecraft:bow[damage=220,unbreakable={},custom_name='{"italic":false,"text":"§6Blast Jumper §r : Throw to switch"}',enchantments={punch:2}]
-execute if entity @e[scores={mode=1}] run item replace entity @s[scores={nobow=3..,class=8}] hotbar.0 with minecraft:bow[damage=220,unbreakable={},custom_name='{"italic":false,"text":"§6Blast Jumper §r : Throw to switch"}',enchantments={punch:3}]
+execute unless entity @e[scores={mode=1}] run item replace entity @s[scores={nobow=3..,class=8}] hotbar.0 with minecraft:bow[damage=220,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§6Blast Jumper §r : Throw to switch"}',enchantments={punch:2}]
+execute if entity @e[scores={mode=1}] run item replace entity @s[scores={nobow=3..,class=8}] hotbar.0 with minecraft:bow[damage=220,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§6Blast Jumper §r : Throw to switch"}',enchantments={punch:3}]
