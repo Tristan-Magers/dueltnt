@@ -72,6 +72,9 @@ scoreboard players set @s soldier_shift_reload 0
 scoreboard players set @s[scores={class=1}] shift_cool 0
 scoreboard players set @s[scores={class=1}] timer 0
 
+scoreboard players set @s[scores={class=3}] shift_cool 0
+scoreboard players set @s[scores={class=3}] timer 0
+
 scoreboard players set @s[scores={class=4}] shift_cool 0
 scoreboard players set @s[scores={class=4}] timer 0
 

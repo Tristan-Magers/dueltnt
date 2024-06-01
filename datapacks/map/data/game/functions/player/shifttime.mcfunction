@@ -1,7 +1,7 @@
 scoreboard players set @s[gamemode=adventure,scores={timer=19..,class=0}] timer 0
 scoreboard players set @s[gamemode=adventure,scores={timer=45..,class=1}] timer 0
 scoreboard players set @s[gamemode=adventure,scores={timer=76..,class=2}] timer 0
-scoreboard players set @s[gamemode=adventure,scores={timer=30..,class=3}] timer 0
+scoreboard players set @s[gamemode=adventure,scores={timer=32..,class=3}] timer 0
 
 execute as @s[gamemode=adventure,scores={timer=1..7,class=4,Y=..57},distance=..100,x=620,y=20,z=620] at @s run tp @p ~ ~2 ~
 

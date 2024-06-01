@@ -40,4 +40,4 @@ scoreboard players add @s[scores={TBtimer=-1000}] trapper_swap_extra 1
 scoreboard players set @s[scores={TBtimer=0..3}] trapper_swap_extra 0
 scoreboard players set @s[scores={TBtimer=1001..}] trapper_swap_extra 0
 
-scoreboard players set @s[scores={trapper_swap_extra=100..}] trapper_swap_extra 100
+scoreboard players set @s[scores={trapper_swap_extra=135..}] trapper_swap_extra 135

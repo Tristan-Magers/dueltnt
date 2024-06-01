@@ -1,6 +1,6 @@
 # tracking bomb
 effect give @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:redstone"}}] minecraft:levitation 1
-scoreboard players set @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:redstone"}}] TBtimer 110
+scoreboard players set @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:redstone"}}] TBtimer 150
 #execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:redstone"}}] at @s run tp @s @s
 execute as @s[scores={TBtimer=-10..}] at @s run function game:items/trackbomb
 
