@@ -441,6 +441,7 @@ Soldier
 - Air Nade sharts breaking 0.1s faster (0.3s -> 0.2s)
     - Note: still takes 0.35s to break full radius
 - Air Nade vertical collision detection improved
+- Mega Bomb reloads 0.5s faster
 - 5 less max shifts (10 -> 5)
 - Shifts reload 0.75s slower each (2.25s -> 3.0s)
 - Shifts reload  x3 faster on ground
