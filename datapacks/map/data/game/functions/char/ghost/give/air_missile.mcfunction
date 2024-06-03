@@ -1,0 +1,1 @@
+item replace entity @s hotbar.1 with minecraft:coal[custom_name='{"italic":false,"text":"§9Air Missile§r : Right-click"}',lore=['{"italic":false,"color":"white","text":"Reload: 1.9s (alternates)"}','{"italic":false,"color":"white","text":"Speed: 30bps"}','{"italic":false,"color":"white","text":"Range: 1.5 blocks"}']]

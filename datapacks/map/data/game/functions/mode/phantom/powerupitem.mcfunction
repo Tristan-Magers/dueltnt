@@ -16,7 +16,7 @@ item replace entity @p[distance=..0.6,gamemode=adventure,scores={phantomrand=5..
 item replace entity @p[distance=..0.6,gamemode=adventure,scores={phantomrand=8..9}] hotbar.0 with minecraft:bread[custom_name='{"italic":false,"text":"§cExtra Life§r : Right-click"}']
 item replace entity @p[distance=..0.6,gamemode=adventure,scores={phantomrand=10..12}] hotbar.0 with minecraft:potato[custom_name='{"italic":false,"text":"§7Chicken Bow§r : Right-click"}']
 item replace entity @p[distance=..0.6,gamemode=adventure,scores={phantomrand=13..14}] hotbar.0 with minecraft:porkchop[custom_name='{"italic":false,"text":"§6Phantom Missile§r : Right-click"}']
-item replace entity @p[distance=..0.6,gamemode=adventure,scores={phantomrand=15..16}] hotbar.0 with minecraft:cooked_porkchop[custom_name='{"italic":false,"text":"§9Air Missile§r : Right-click"}']
+item replace entity @p[distance=..0.6,gamemode=adventure,scores={phantomrand=15..16}] hotbar.0 with minecraft:cooked_porkchop[custom_name='{"italic":false,"text":"§9Air Missile§r : Right-click"}',]
 
 tag @p[distance=..0.6] add haspup
 

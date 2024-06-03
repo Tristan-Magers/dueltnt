@@ -13,7 +13,7 @@ item replace entity @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=
 execute as @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=..0}] run function game:char/soldier/give/bow
 
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=1}] hotbar.0 with minecraft:bow[damage=40,unbreakable={show_in_tooltip:false},enchantments={levels:{"minecraft:flame":1},show_in_tooltip:false},custom_name='{"italic":false,"text":"§dBazooka Bow§f : Throw to switch"}',hide_additional_tooltip={},lore=['{"italic":false,"color":"white","text":"2 TNT"}','{"italic":false,"color":"white","text":"Reload: 1.2s"}','{"italic":false,"color":"white","text":"Fuse: 0.55s"}']]
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=2}] hotbar.0 with minecraft:bow[damage=60,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§bVaporizer§r : Throw to switch"}',hide_additional_tooltip={}]
+execute as @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=2}] run function game:char/ghost/give/bow
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=10}] hotbar.0 with minecraft:bow[damage=260,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§9Anti-Ice§r : Throw to switch"}',hide_additional_tooltip={}]
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=4}] hotbar.0 with air
 clear @a[x=620,y=20,z=620,distance=..100,scores={class=0..4,ThrFishT=0..1}] fishing_rod

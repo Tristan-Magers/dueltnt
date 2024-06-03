@@ -629,9 +629,9 @@ effect give @a[gamemode=adventure,scores={Escape=1..}] invisibility 2 1
 scoreboard players remove @a[gamemode=adventure,scores={XPReset=0..89}] XPReset 1
 scoreboard players remove @a[gamemode=adventure,scores={XPReset=91..}] XPReset 1
 #item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={XPReset=1}] hotbar.1 with minecraft:experience_bottle[custom_name='{"italic":false,"text":"§7Smoke Bomb §r: Right-click"}'] 2
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={XPReset=50}] hotbar.1 with minecraft:coal[custom_name='{"italic":false,"text":"§9Air Missile§r : Right-click"}']
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={XPReset=50}] run function game:char/ghost/give/air_missile
 tag @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={XPReset=50}] add coal
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={XPReset=91}] hotbar.1 with minecraft:experience_bottle[custom_name='{"italic":false,"text":"§7Smoke Bomb §r: Right-click"}']
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={XPReset=91}] run function game:char/ghost/give/smoke_bomb {count:1}
 scoreboard players set @a[gamemode=adventure,scores={Escape=1..}] Invis 23
 execute as @e[type=experience_bottle] at @s run particle spit ~ ~ ~ .5 .5 .5 .1 4 force
 scoreboard players reset @a Escape
@@ -649,7 +649,7 @@ scoreboard players set @a[nbt={OnGround:1b}] mass_lev_air_use 0
 execute as @a[gamemode=adventure,scores={click=1..,mass_lev_air_use=..1},nbt={SelectedItem:{id:"minecraft:iron_ingot"}}] at @s run function game:items/masslev
 #effect give @a[gamemode=adventure,scores={mTtimer=119}] levitation 1 1
 scoreboard players remove @a[gamemode=adventure,scores={mTtimer=1..}] mTtimer 1
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={mTtimer=1}] hotbar.3 with minecraft:iron_ingot[custom_name='{"italic":false,"text":"Mass Levitate §r: Right-click [everyone within 3 blocks]"}']
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={mTtimer=1}] run function game:char/ghost/give/masslev
 
 # pearls
 scoreboard players add @e[type=minecraft:ender_pearl] enderT 1
