@@ -45,7 +45,7 @@ scoreboard players add @s overlordsc 1
 scoreboard players remove @s[scores={class=0,timer=1}] soldier_shifts 1
 
 scoreboard players set @s[scores={class=0,timer=1}] shift_cool 17
-scoreboard players set @s[scores={class=1,timer=1}] shift_cool 45
+scoreboard players set @s[scores={class=1,timer=1}] shift_cool 44
 scoreboard players set @s[scores={class=2,timer=1}] shift_cool 76
 scoreboard players set @s[scores={class=3,timer=1}] shift_cool 32
 scoreboard players set @s[scores={class=4,timer=1}] shift_cool 150

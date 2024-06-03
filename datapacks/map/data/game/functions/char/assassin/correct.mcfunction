@@ -1,8 +1,9 @@
-item replace entity @s[scores={nobow=3..}] hotbar.0 with bow[damage=40,unbreakable={show_in_tooltip:false},enchantments={levels:{"minecraft:flame":1},show_in_tooltip:false},custom_name='{"italic":false,"text":"§dBazooka Bow§f : Throw to switch"}',hide_additional_tooltip={},lore=['{"italic":false,"color":"white","text":"2 TNT"}','{"italic":false,"color":"white","text":"Reload: 1.2s"}','{"italic":false,"color":"white","text":"Fuse: 0.55s"}']]
+execute as @s[scores={nobow=3..}] run function game:char/assassin/give/bow
 
 clear @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]}] ender_pearl
 #item replace entity @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]},scores={endercount=1,enderreload=..0}] hotbar.2 with minecraft:ender_pearl{display:{Name:"{\"italic\":false,\"text\":\"§aTeleport §r: Right-click\"}"}} 1
-item replace entity @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]},scores={endercount=0,enderreload=..0}] hotbar.2 with minecraft:ender_pearl[custom_name='{"italic":false,"text":"§aTeleport §r: Right-click"}',lore=['{"italic":false,"color":"white","text":"2 TNT (immovable)"}','{"italic":false,"color":"white","text":"Reload: 11s"}','{"italic":false,"color":"white","text":"Fuse: 0.7s"}','{"italic":false,"color":"white","text":"2s Jump Boost 5 and Speed 3 when teleported"}','{"italic":false,"color":"white","text":"Only creates TNT when landing on the top of a block"}','{"italic":false,"color":"white","text":"Sneak Attacks removed for 2s when thrown"}']] 1
+
+execute as @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]},scores={endercount=0,enderreload=..0}] run function game:char/assassin/give/teleport
 
 #clear @s[nbt=!{Inventory:[{id:"minecraft:splash_potion",Slot:1b}]},scores={potion=-1..0}] splash_potion
 #scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:splash_potion",Slot:1b}]},scores={potion=-1..0}] potion -4
@@ -25,8 +26,6 @@ scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:leather",Slot:1b}]},sc
 #scoreboard players set @s[scores={dartcool=..0},nbt=!{Inventory:[{id:"minecraft:leather",Slot:1b}]},nbt=!{Inventory:[{id:"minecraft:nether_star",Slot:1b}]}] dartcool 35
 
 clear @s[nbt=!{Inventory:[{id:"minecraft:squid_spawn_egg",Slot:4b}]}] squid_spawn_egg
-item replace entity @s[nbt=!{Inventory:[{id:"minecraft:squid_spawn_egg",Slot:4b}]},scores={squidegguse=0,sneakdisable=0}] hotbar.4 with minecraft:squid_spawn_egg[custom_name='{"italic":false,"text":"§9Sneak Attack §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"squid",Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500}] 2
-item replace entity @s[nbt=!{Inventory:[{id:"minecraft:squid_spawn_egg",Slot:4b}]},scores={squidegguse=1,sneakdisable=0}] hotbar.4 with minecraft:squid_spawn_egg[custom_name='{"italic":false,"text":"§9Sneak Attack §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"squid",Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500}] 1
-#item replace entity @s[nbt=!{Inventory:[{id:"minecraft:squid_spawn_egg",Slot:4b}]},scores={squidegguse=2,sneakdisable=0}] hotbar.4 with minecraft:squid_spawn_egg[custom_name='{"italic":false,"text":"§9Sneak Attack §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"squid",Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500}] 1
-#item replace entity @s[nbt=!{Inventory:[{id:"minecraft:squid_spawn_egg",Slot:5b}]},scores={squidegguse=3,sneakdisable=0}] hotbar.5 with minecraft:squid_spawn_egg[custom_name='{"italic":false,"text":"§9Sneak Attack §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"squid",Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500}] 1
- 
+
+execute as @s[nbt=!{Inventory:[{id:"minecraft:squid_spawn_egg",Slot:4b}]},scores={squidegguse=0,sneakdisable=0}] run function game:char/assassin/give/sneak_attack {"amount":2}
+execute as @s[nbt=!{Inventory:[{id:"minecraft:squid_spawn_egg",Slot:4b}]},scores={squidegguse=1,sneakdisable=0}] run function game:char/assassin/give/sneak_attack {"amount":1}

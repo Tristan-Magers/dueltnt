@@ -8,8 +8,9 @@ execute as @a[scores={class=0},x=620,y=20,z=620,distance=..100] run function gam
 
 item replace entity @a[scores={class=0},x=620,y=20,z=620,distance=..100] hotbar.5 with arrow 2
 scoreboard players set @a[scores={class=0},x=620,y=20,z=620,distance=..100] bow -1
-item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.0 with minecraft:bow[damage=40,unbreakable={show_in_tooltip:false},enchantments={levels:{"minecraft:flame":1},show_in_tooltip:false},custom_name='{"italic":false,"text":"§dBazooka Bow§f : Throw to switch"}',hide_additional_tooltip={},lore=['{"italic":false,"color":"white","text":"2 TNT"}','{"italic":false,"color":"white","text":"Reload: 1.2s"}','{"italic":false,"color":"white","text":"Fuse: 0.55s"}']]
-item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:ender_pearl[custom_name='{"italic":false,"text":"§aTeleport §r: Right-click"}',lore=['{"italic":false,"color":"white","text":"2 TNT (immovable)"}','{"italic":false,"color":"white","text":"Reload: 11s"}','{"italic":false,"color":"white","text":"Fuse: 0.7s"}','{"italic":false,"color":"white","text":"2s Jump Boost 5 and Speed 3 when teleported"}','{"italic":false,"color":"white","text":"Only creates TNT when landing on the top of a block"}','{"italic":false,"color":"white","text":"Sneak Attacks removed for 2s when thrown"}']] 1
+execute as @a[scores={class=1},x=620,y=20,z=620,distance=..100] run function game:char/assassin/give/bow
+execute as @a[scores={class=1},x=620,y=20,z=620,distance=..100] run function game:char/assassin/give/teleport
+
 execute if entity @e[scores={mode=1}] run item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:ender_pearl[custom_name='{"italic":false,"text":"§aTeleport §r: Right-click"}',hide_additional_tooltip={}] 12
 #item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.1 with minecraft:splash_potion[custom_name='{"italic":false,"text":"§5Primed for Death §r: Right-click"}',potion_contents={custom_color:0,custom_effects:[{Id:2,Amplifier:1,Duration:60},{Id:15,Amplifier:1,Duration:60},{Id:24,Amplifier:1,Duration:60}]}]
 scoreboard players set @a[scores={class=1},x=620,y=20,z=620,distance=..100] bow 0
@@ -70,7 +71,9 @@ item replace entity @a[tag=red,scores={teamed=1..}] armor.head with minecraft:re
 item replace entity @a[tag=green,scores={teamed=1..}] armor.head with minecraft:lime_stained_glass[enchantments={binding_curse:1}]
 item replace entity @a[scores={teamed=..0}] armor.head with air
 item replace entity @a[tag=!team,x=620,y=20,z=620,distance=..100,scores={class=3}] armor.head with minecraft:leather_helmet[unbreakable={show_in_tooltip:false},enchantments={binding_curse:1}]
-item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.3 with minecraft:diamond[custom_name='{"italic":false,"text":"§3Mass Freeze§r §r: Right-click [everyone within 3 blocks]"}']
+
+execute as @a[scores={class=1},x=620,y=20,z=620,distance=..100] run function game:char/assassin/give/mass_freeze
+
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.4 with minecraft:golden_boots[custom_name='{"italic":false,"text":"§r§bExplode Ghost Creeper §r: Right-click (summoned by crouch)"}',entity_data={id:"pig"},hide_additional_tooltip={}]
 #item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=0}] hotbar.3 with minecraft:kelp[custom_name='{"italic":false,"text":"§4Mega Bomb§r §r: Right-click"}',dyed_color=16777215]
 item replace entity @a[scores={class=2},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:ender_pearl[custom_name='{"italic":false,"text":"§aTeleport §r: Right-click"}'] 3
@@ -86,7 +89,9 @@ scoreboard players set @a[scores={class=5}] bow -2
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=5}] hotbar.3 with minecraft:stick[custom_name='{"italic":false,"text":"§9Power Shield §r: Right-click"}']
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=5}] hotbar.1 with minecraft:ink_sac[custom_name='{"italic":false,"text":"§2Set Portal §r: Right-click (lasts 6 seconds) [16 block range]"}']
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.7 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch to go to portal (16 block range)"}']
-item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.1 with minecraft:nether_star[custom_name='{"italic":false,"text":"Magic Star §f: Right-click"}',lore=['{"italic":false,"color":"white","text":"2 TNT"}','{"italic":false,"color":"white","text":"Reload: 1.75s (alternates)"}','{"italic":false,"color":"white","text":"Fuse: 1.5s/0.1s"}','{"italic":false,"color":"white","text":"Activation delay: 0.3s"}','{"italic":false,"color":"white","text":"Cooldown: 0.35s"}','{"italic":false,"color":"white","text":"Blocks projectiles"}','{"italic":false,"color":"white","text":"Can hit players"}']] 2
+
+execute as @a[scores={class=1},x=620,y=20,z=620,distance=..100] run function game:char/assassin/give/magic_star {"amount":2}
+
 scoreboard players set @a[scores={class=1},x=620,y=20,z=620,distance=..100] star 0
 #item replace entity @a[scores={class=6},x=620,y=20,z=620,distance=..100] hotbar.1 with minecraft:iron_hoe[custom_name='{"italic":false,"text":"§aScythe §f: Right-click to throw"}',enchantments={knockback:6},unbreakable={show_in_tooltip:false}]
 
@@ -104,7 +109,9 @@ execute as @a[scores={class=0},x=620,y=20,z=620,distance=..100] run function gam
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.5 with minecraft:stone_pressure_plate[custom_name='{"italic":false,"text":"§7Grave Trap §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"creeper",ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"Bomb",Health:500,ExplosionRadius:4}] 12
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.3 with minecraft:stone_pressure_plate[custom_name='{"italic":false,"text":"§7Grave Trap §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"creeper",ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"Bomb",Health:500,ExplosionRadius:4}] 6
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.5 with minecraft:stone_pressure_plate[custom_name='{"italic":false,"text":"§7Grave Trap §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"creeper",ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"Bomb",Health:500,ExplosionRadius:4}] 64
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.4 with minecraft:squid_spawn_egg[can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"squid",Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500},custom_name='{"italic":false,"text":"§9Sneak Attack §r: Right-click"}'] 2
+
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=1}] run function game:char/assassin/give/sneak_attack {"amount":2}
+
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.5 with minecraft:mooshroom_spawn_egg[can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"mooshroom",Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,CustomName:'{"italic":false,"text":"tnt"}'},custom_name='{"italic":false,"text":"§cSummon TNT §r: Right-click"}'] 12
 execute as @a[x=620,y=20,z=620,distance=..100,scores={class=3}] at @s run item replace entity @s hotbar.3 with minecraft:redstone[custom_name='{"italic":false,"text":"§cTracking Bomb §r: Right-click"}',potion_contents={custom_color:0,custom_effects:[{id:"minecraft:levitation",amplifier:2,duration:55},{id:"minecraft:blindness",amplifier:1,duration:75},{id:"minecraft:glowing",amplifier:1,duration:65}]}]
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.7 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch to phantom jump"}']
