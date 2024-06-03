@@ -49,10 +49,12 @@ item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=2}] armor.c
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.6 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch to teleport"}']
 item replace entity @a[scores={class=4},x=620,y=20,z=620,distance=..100] hotbar.7 with minecraft:tipped_arrow[custom_name='{"italic":false,"text":"Magic Arrow"}',potion_contents={custom_color:6221823},hide_additional_tooltip={}] 2
 scoreboard players set @a[scores={class=4},x=620,y=20,z=620,distance=..100] bow -1
-give @a[scores={class=4},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=100,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§4Fireball§r : Throw to switch"}']
+
+execute as @a[scores={class=4},x=620,y=20,z=620,distance=..100] run function game:char/wizard/give/fireball
+execute as @a[scores={class=4},x=620,y=20,z=620,distance=..100] run function game:char/wizard/give/powderize
+execute as @a[scores={class=4},x=620,y=20,z=620,distance=..100] run function game:char/wizard/give/teleport
+
 effect give @a[scores={class=4},x=620,y=20,z=620,distance=..100] jump_boost 300 2 true
-give @a[scores={class=4},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=120,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§ePowderize§r : Throw to switch"}']
-give @a[scores={class=4},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=140,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§3Teleport§r : Throw to switch"}']
 
 execute as @a[scores={class=0},x=620,y=20,z=620,distance=..100] run function game:char/soldier/give/teleport {"amount":5}
 

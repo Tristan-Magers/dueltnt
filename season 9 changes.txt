@@ -524,3 +524,4 @@ Bug Fixes
 - Fixed position of arrow and coruch move in Assassin hotbar
 - Soldier TNT had a visible name
 - Gardener life reload text not updated to 9.1 functionality
+- Unavailable slots for pig transform weren't named

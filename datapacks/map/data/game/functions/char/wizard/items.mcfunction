@@ -7,14 +7,16 @@ scoreboard players add @s[nbt={Inventory:[{Slot:1b,id:"minecraft:bow"}]}] wizChe
 scoreboard players add @s[nbt={Inventory:[{Slot:2b,id:"minecraft:bow"}]}] wizCheck 1
 clear @s[scores={wizCheck=..2}] bow
 clear @s[scores={wizCheck=..2},tag=!pig,tag=!haspup] gray_stained_glass_pane
-item replace entity @s[scores={wizCheck=..2},tag=!pig,tag=!haspup] hotbar.0 with bow[damage=100,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§4Fireball§r : Throw to switch"}']
-item replace entity @s[scores={wizCheck=..2},tag=!pig,tag=!haspup] hotbar.1 with bow[damage=120,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§ePowderize§r : Throw to switch"}']
-item replace entity @s[scores={wizCheck=..2},tag=!pig,tag=!haspup] hotbar.2 with bow[damage=140,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§3Teleport§r : Throw to switch"}']
+
+execute as @s[scores={wizCheck=..2},tag=!pig,tag=!haspup] run function game:char/wizard/give/fireball
+execute as @s[scores={wizCheck=..2},tag=!pig,tag=!haspup] run function game:char/wizard/give/powderize
+execute as @s[scores={wizCheck=..2},tag=!pig,tag=!haspup] run function game:char/wizard/give/teleport
+
 item replace entity @s[scores={wizCheck=..2},tag=!pig,tag=haspup] hotbar.1 with gray_stained_glass_pane[custom_name='{"italic":false,"text":"§7Unavailable"}']
 item replace entity @s[scores={wizCheck=..2},tag=!pig,tag=haspup] hotbar.2 with gray_stained_glass_pane[custom_name='{"italic":false,"text":"§7Unavailable"}']
 clear @s[scores={wizCheck=..2}] fishing_rod
-item replace entity @s[scores={pig=2..}] hotbar.0 with minecraft:pink_stained_glass_pane
-item replace entity @s[scores={pig=2..}] hotbar.1 with minecraft:pink_stained_glass_pane
-item replace entity @s[scores={pig=2..}] hotbar.2 with minecraft:pink_stained_glass_pane
+item replace entity @s[scores={pig=2..}] hotbar.0 with minecraft:pink_stained_glass_pane[custom_name='{"italic":false,"text":"§7Unavailable"}']
+item replace entity @s[scores={pig=2..}] hotbar.1 with minecraft:pink_stained_glass_pane[custom_name='{"italic":false,"text":"§7Unavailable"}']
+item replace entity @s[scores={pig=2..}] hotbar.2 with minecraft:pink_stained_glass_pane[custom_name='{"italic":false,"text":"§7Unavailable"}']
 tag @s[scores={pig=1..}] add pig
 tag @s[scores={pig=..0}] remove pig
