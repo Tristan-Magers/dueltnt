@@ -4,9 +4,9 @@
 #dart
 execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:leather"}}] at @s run function game:char/assassin/dart
 
-item replace entity @s[scores={dartcool=0,dartuse=2..}] hotbar.1 with nether_star[custom_name='{"italic":false,"text":"Magic Star §f: Right-click"}'] 2
-item replace entity @s[scores={dartcool=0,dartuse=1}] hotbar.1 with minecraft:leather[custom_name='{"italic":false,"text":"§7Explosive Dart §r: Right-click"}'] 1
-item replace entity @s[scores={dartcool=0,dartuse=..0}] hotbar.1 with minecraft:leather[custom_name='{"italic":false,"text":"§7Explosive Dart §r: Right-click"}'] 2
+item replace entity @s[scores={dartcool=0,dartuse=2..}] hotbar.1 with nether_star[custom_name='{"italic":false,"text":"Magic Star §f: Right-click"}',lore=['{"italic":false,"color":"white","text":"2 TNT"}','{"italic":false,"color":"white","text":"Reload: 1.75s (alternates)"}','{"italic":false,"color":"white","text":"Fuse: 1.5s/0.1s"}','{"italic":false,"color":"white","text":"Activation delay: 0.3s"}','{"italic":false,"color":"white","text":"Speed: ~9bps"}','{"italic":false,"color":"white","text":"Cooldown: 0.35s"}','{"italic":false,"color":"white","text":"Blocks projectiles"}','{"italic":false,"color":"white","text":"Can hit players"}']] 2
+item replace entity @s[scores={dartcool=0,dartuse=1}] hotbar.1 with minecraft:leather[custom_name='{"italic":false,"text":"§7Explosive Dart §r: Right-click"}',lore=['{"italic":false,"color":"white","text":"1 TNT (immovable)"}','{"italic":false,"color":"white","text":"Reload: 1.75s (alternates)"}','{"italic":false,"color":"white","text":"Fuse: 0.4s"}','{"italic":false,"color":"white","text":"Speed: 30bps"}','{"italic":false,"color":"white","text":"Cooldown: 0.25s"}']] 1
+item replace entity @s[scores={dartcool=0,dartuse=..0}] hotbar.1 with minecraft:leather[custom_name='{"italic":false,"text":"§7Explosive Dart §r: Right-click"}',lore=['{"italic":false,"color":"white","text":"1 TNT (immovable)"}','{"italic":false,"color":"white","text":"Reload: 1.75s (alternates)"}','{"italic":false,"color":"white","text":"Fuse: 0.4s"}','{"italic":false,"color":"white","text":"Speed: 30bps"}','{"italic":false,"color":"white","text":"Cooldown: 0.25s"}']] 2
 #item replace entity @s[scores={dartcool=0,dartuse=0}] hotbar.4 with minecraft:leather{display:{Name:"{\"italic\":false,\"text\":\"§7Explosive Dart §r: Right-click\"}"}} 6
 #item replace entity @s[scores={dartcool=0,dartuse=1}] hotbar.4 with minecraft:leather{display:{Name:"{\"italic\":false,\"text\":\"§7Explosive Dart §r: Right-click\"}"}} 5
 #item replace entity @s[scores={dartcool=0,dartuse=2}] hotbar.4 with minecraft:leather{display:{Name:"{\"italic\":false,\"text\":\"§7Explosive Dart §r: Right-click\"}"}} 4
@@ -23,9 +23,9 @@ scoreboard players add @s[scores={star=1..},nbt={SelectedItem:{id:"minecraft:net
 scoreboard players set @s[scores={starT=..0,starUse=2..}] starT 1
 execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:nether_star"}}] at @s run function game:items/magicstar
 
-item replace entity @s[scores={starT=7..,starUse=1}] hotbar.1 with nether_star[custom_name='{"italic":false,"text":"Magic Star §f: Right-click"}'] 1
+item replace entity @s[scores={starT=7..,starUse=1}] hotbar.1 with nether_star[custom_name='{"italic":false,"text":"Magic Star §f: Right-click"}',lore=['{"italic":false,"color":"white","text":"2 TNT"}','{"italic":false,"color":"white","text":"Reload: 1.75s (alternates)"}','{"italic":false,"color":"white","text":"Fuse: 1.5s/0.1s"}','{"italic":false,"color":"white","text":"Activation delay: 0.3s"}','{"italic":false,"color":"white","text":"Cooldown: 0.35s"}','{"italic":false,"color":"white","text":"Blocks projectiles"}','{"italic":false,"color":"white","text":"Can hit players"}']] 1
 scoreboard players set @s[scores={starT=7..,starUse=1}] starT 0
-item replace entity @s[scores={starT=35..}] hotbar.1 with minecraft:leather[custom_name='{"italic":false,"text":"§7Explosive Dart §r: Right-click"}'] 2
+item replace entity @s[scores={starT=35..}] hotbar.1 with minecraft:leather[custom_name='{"italic":false,"text":"§7Explosive Dart §r: Right-click"}',lore=['{"italic":false,"color":"white","text":"1 TNT (immovable)"}','{"italic":false,"color":"white","text":"Reload: 1.75s (alternates)"}','{"italic":false,"color":"white","text":"Fuse: 0.4s"}','{"italic":false,"color":"white","text":"Speed: 30bps"}','{"italic":false,"color":"white","text":"Cooldown: 0.25s"}']] 2
 #item replace entity @s[scores={starT=40..}] hotbar.1 with nether_star{display:{Name:"{\"italic\":false,\"text\":\"Magic Star §f: Right-click\"}"}} 2
 scoreboard players set @s[scores={starT=35..}] starUse 0
 scoreboard players set @s[scores={starT=35..}] dartuse 0
