@@ -19,7 +19,7 @@ scoreboard players set @s[scores={snowReset=2..}] snow 0
 scoreboard players remove @s[scores={snowReset=1..}] snowReset 1
 #item replace entity @s[scores={snowReset=1}] hotbar.1 with snowball{display:{Name:"{\"italic\":false,\"text\":\"§2Slimer §f§r: Right-click (hit players)\"}"}}
 tag @s[scores={snowReset=50}] add checkairnade
-item replace entity @s[scores={snowReset=50}] hotbar.1 with minecraft:lingering_potion[custom_name='{"italic":false,"text":"§3Air Grenade §r: Right-click"}',potion_contents="minecraft:swiftness",hide_additional_tooltip={},lore=['{"italic":false,"color":"white","text":"Fuse: 0.25s"}','{"italic":false,"color":"white","text":"Reload: 2.5s (alternates)"}','{"italic":false,"color":"white","text":"Range: 3.5 blocks"}']]
+execute as @s[scores={snowReset=50}] run function game:char/soldier/give/air_nade
 
 #
 scoreboard players add @s[scores={soldier_shifts=..4}] soldier_shift_reload 1

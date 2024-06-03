@@ -27,7 +27,9 @@ scoreboard players set @a[x=1000,y=20,z=1000,distance=..300] timer 0
 item replace entity @a[x=620,y=20,z=620,distance=..100] hotbar.8 with minecraft:potion[potion_contents={custom_color:16711918},custom_name='{"italic":false,"text":"§dLeave game §r: Right-click"}',hide_additional_tooltip={}]
 scoreboard players set @a snow 0
 #item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.4 with minecraft:leather[custom_name='{"italic":false,"text":"§7Explosive Dart §r: Right-click"}'] 6
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=0}] hotbar.6 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch to explode"}',lore=['{"italic":false,"color":"white","text":"1 Creeper"}','{"italic":false,"color":"white","text":"Fuse: 0.15s"}','{"italic":false,"color":"white","text":"Reload: 3s (per charge)"}','{"italic":false,"color":"white","text":"Charges reload 3x faster on ground"}','{"italic":false,"color":"white","text":"0.85s cooldown between uses"}','{"italic":false,"color":"white","text":"All charges reload on death"}']]
+
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=0}] run function game:char/soldier/give/shift
+
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.6 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch for Dive Kick [reloads on ground]"}']
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=2}] hotbar.6 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch for Levitation"}']
 give @a[scores={class=3},x=620,y=20,z=620,distance=..100] minecraft:flint[custom_name='{"italic":false,"text":"§cTNT Trap§r : Throw for mode 2 / Offhand for mode 3"}']
@@ -50,7 +52,9 @@ give @a[scores={class=4},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=1
 effect give @a[scores={class=4},x=620,y=20,z=620,distance=..100] jump_boost 300 2 true
 give @a[scores={class=4},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=120,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§ePowderize§r : Throw to switch"}']
 give @a[scores={class=4},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=140,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§3Teleport§r : Throw to switch"}']
-item replace entity @a[scores={class=0},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:ender_pearl[custom_name='{"italic":false,"text":"§aTeleport §r: Right-click"}',lore=['{"italic":false,"color":"white","text":"1s Levitation 9 when teleported"}','{"italic":false,"color":"white","text":"Reloads all shift charges when teleported"}','{"italic":false,"color":"white","text":"Does not reload"}']] 5
+
+execute as @a[scores={class=0},x=620,y=20,z=620,distance=..100] run function game:char/soldier/give/teleport {"amount":5}
+
 execute if entity @e[scores={mode=1}] run item replace entity @a[scores={class=0},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:ender_pearl[custom_name='{"italic":false,"text":"§aTeleport §r: Right-click"}'] 8
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] armor.chest with minecraft:chainmail_chestplate[unbreakable={show_in_tooltip:false}]
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.3 with minecraft:pig_spawn_egg[custom_name='{"italic":false,"text":"§cPig Transform §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"pig"},hide_additional_tooltip={}]
@@ -94,8 +98,9 @@ item replace entity @a[scores={class=6},x=620,y=20,z=620,distance=..100] hotbar.
 scoreboard players set @a[scores={class=6}] bow 0
 effect give @a[scores={class=6},x=620,y=20,z=620,distance=..100] jump_boost 300 2 true
 execute as @a[scores={class=6},x=620,y=20,z=620,distance=..100] at @s run attribute @s minecraft:generic.movement_speed base set .112
-item replace entity @a[scores={class=0},x=620,y=20,z=620,distance=..100] hotbar.4 with minecraft:anvil[custom_name='{"italic":false,"text":"Anvil §r: Right-click"}',lore=['{"italic":false,"color":"white","text":"1 TNT"}','{"italic":false,"color":"white","text":"Resets momentum on use"}','{"italic":false,"color":"white","text":"Immune to knockback for 0.5s"}','{"italic":false,"color":"white","text":"Moves downwards by 2.3 blocks"}','{"italic":false,"color":"white","text":"Reloads 1 shift charge on use"}','{"italic":false,"color":"white","text":"Does not reload"}']] 10
-execute if entity @e[scores={mode=1}] run item replace entity @a[scores={class=0},x=620,y=20,z=620,distance=..100] hotbar.4 with minecraft:anvil[custom_name='{"italic":false,"text":"Anvil §r: Right-click"}'] 45
+
+execute as @a[scores={class=0},x=620,y=20,z=620,distance=..100] run function game:char/soldier/give/anvil {"amount":10}
+
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.5 with minecraft:stone_pressure_plate[custom_name='{"italic":false,"text":"§7Grave Trap §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"creeper",ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"Bomb",Health:500,ExplosionRadius:4}] 12
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.3 with minecraft:stone_pressure_plate[custom_name='{"italic":false,"text":"§7Grave Trap §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"creeper",ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"Bomb",Health:500,ExplosionRadius:4}] 6
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.5 with minecraft:stone_pressure_plate[custom_name='{"italic":false,"text":"§7Grave Trap §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"creeper",ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"Bomb",Health:500,ExplosionRadius:4}] 64

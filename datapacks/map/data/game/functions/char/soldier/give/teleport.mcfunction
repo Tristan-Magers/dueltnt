@@ -1,0 +1,1 @@
+$item replace entity @s hotbar.2 with minecraft:ender_pearl[custom_name='{"italic":false,"text":"§aTeleport §r: Right-click"}',lore=['{"italic":false,"color":"white","text":"1s Levitation 9 when teleported"}','{"italic":false,"color":"white","text":"Reloads all shift charges when teleported"}','{"italic":false,"color":"white","text":"Does not reload"}']] $(amount)

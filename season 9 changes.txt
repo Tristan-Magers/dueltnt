@@ -495,7 +495,7 @@ Reaper
 Echo
 - Space Warp (bow) reloads 0.25s faster (2.25s -> 2s)
 - Space Warp causes sound on land
-- Shift reloads 4.5s faster (8.5s -> 4s)
+- Shift reloads 5s faster (8.5s -> 3.5s)
 - Shift only reloads on ground
 - Shift reloads on death
 - Shift causes sound
