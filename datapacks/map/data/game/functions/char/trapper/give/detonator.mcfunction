@@ -1,0 +1,1 @@
+item replace entity @s hotbar.1 with minecraft:bone[custom_name='{"italic":false,"text":"§6Detonate Arrows §f§r: Right-click"}',lore=['{"italic":false,"color":"white","text":"It detonates the arrows, duh"}','{"italic":false,"color":"white","text":"I have no stats or anything to put"}','{"italic":false,"color":"white","text":"here it\'s very straightforward"}']]

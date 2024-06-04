@@ -30,8 +30,8 @@ scoreboard players set @a[tag=plm1] PlaceMineTime 137
 scoreboard players set @a[tag=plm1] PlaceMine 0
 tag @a remove plm1
 
-item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={PlaceMineTime=138}] hotbar.2 with minecraft:tnt[custom_name='{"italic":false,"text":"§4Mine §f: Throw/Right-click"}',can_place_on={predicates:[{blocks:"#game:tnt_place"}],show_in_tooltip:0b}] 1
-item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={PlaceMineTime=76}] hotbar.2 with minecraft:tnt[custom_name='{"italic":false,"text":"§4Mine §f: Throw/Right-click"}',can_place_on={predicates:[{blocks:"#game:tnt_place"}],show_in_tooltip:0b}] 2
+execute as @a[x=600,y=60,z=600,distance=3..95,scores={PlaceMineTime=138}] run function game:char/trapper/give/mines {count:1}
+execute as @a[x=600,y=60,z=600,distance=3..95,scores={PlaceMineTime=76}] run function game:char/trapper/give/mines {count:2}
 execute as @a[scores={HoldMine=1..}] at @s run effect give @s blindness 1
 execute as @e[type=item,scores={Mine=..0}] at @s run tp @e[distance=..0,limit=1,scores={Mine=..0}] @p
 scoreboard players add @e[type=item] egg 1

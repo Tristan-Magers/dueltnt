@@ -8,7 +8,7 @@ item replace entity @a[scores={ThrBowT=0,class=4}] hotbar.2 with minecraft:fishi
 scoreboard players set @a[scores={ThrFish=1..}] ThrFishT 1
 scoreboard players remove @a ThrFishT 1 
 scoreboard players set @a ThrFish 0
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=3}] hotbar.0 with minecraft:bow[damage=80,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§cTNT Trap§r : Throw to switch"}',hide_additional_tooltip={}]
+execute as @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=3}] run function game:char/trapper/give/tnttrap
 
 execute as @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=..0}] run function game:char/soldier/give/bow
 

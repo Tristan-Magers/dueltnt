@@ -325,7 +325,7 @@ scoreboard players remove @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,
 
 scoreboard players remove @a[gamemode=adventure,scores={PlatTimer=1..}] PlatTimer 1
 execute as @a[gamemode=adventure,scores={platAm=1}] at @s positioned ~ ~-.1 ~ run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 white_stained_glass replace air
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=4}] hotbar.4 with minecraft:diamond_sword[damage=100,custom_name='{"italic":false,"text":"Temporary Platform §r: Right-click"}',hide_additional_tooltip={},attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:0.9,operation:"add_value",uuid:[I;2016337811,-1510259727,-1143610979,661859754],slot:"mainhand"},{type:"generic.attack_damage",name:"generic.attack_damage",amount:9,operation:"add_value",uuid:[I;-1708916597,1794000556,-1199725791,1224881908],slot:"mainhand"}],show_in_tooltip:false}]
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=4}] run function game:char/trapper/give/platform {damage:100}
 scoreboard players add @e[name=SP] PlatTimer 1
 execute as @e[name=SP,tag=!extra,scores={PlatTimer=50..}] at @s run fill ~1 ~ ~1 ~-1 ~ ~-1 air replace white_stained_glass
 kill @e[name=SP,tag=!extra,scores={PlatTimer=50..}]
@@ -336,8 +336,8 @@ execute as @a at @s if block ~ ~ ~ white_stained_glass run teleport @s ~ ~1 ~
 execute as @a[gamemode=adventure,scores={platAm=1}] at @s positioned ~ ~-.1 ~ run summon armor_stand ~ ~-1 ~ {NoGravity:1,Invlunerable:1,Marker:1,Silent:1,CustomName:'{"italic":false,"text":"SP"}',Invisible:1,Tags:["extra"]}
 scoreboard players remove @a[gamemode=adventure,scores={platAm=1..}] platAm 1
 execute as @a[gamemode=adventure,scores={platAm=6}] at @s run playsound minecraft:entity.illusion_illager.cast_spell master @a ~ ~ ~ 1 1.2
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=2}] hotbar.4 with minecraft:diamond_sword[damage=520,custom_name='{"italic":false,"text":"Temporary Platform §r: Right-click"}',hide_additional_tooltip={},attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:0.9,operation:"add_value",uuid:[I;2016337811,-1510259727,-1143610979,661859754],slot:"mainhand"},{type:"generic.attack_damage",name:"generic.attack_damage",amount:9,operation:"add_value",uuid:[I;-1708916597,1794000556,-1199725791,1224881908],slot:"mainhand"}],show_in_tooltip:false}]
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=1}] hotbar.4 with minecraft:diamond_sword[damage=1040,custom_name='{"italic":false,"text":"Temporary Platform §r: Right-click"}',hide_additional_tooltip={},attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:0.9,operation:"add_value",uuid:[I;2016337811,-1510259727,-1143610979,661859754],slot:"mainhand"},{type:"generic.attack_damage",name:"generic.attack_damage",amount:9,operation:"add_value",uuid:[I;-1708916597,1794000556,-1199725791,1224881908],slot:"mainhand"}],show_in_tooltip:false}]
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=2}] run function game:char/trapper/give/platform {damage:520}
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=1}] run function game:char/trapper/give/platform {damage:1040}
 execute as @a[scores={class=10,frostsT=0},x=620,y=20,z=620,distance=..100] run function game:player/class_team
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=2,platUse=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Reloaded ","color":"white"},{"text":"Platform","color":"red","bold":true},{"text":"","color":"white"}]
 
