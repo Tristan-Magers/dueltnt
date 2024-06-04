@@ -53,5 +53,17 @@
     },
     "done": true
   },
+  "classes:class8": {
+    "criteria": {
+      "gardener": "2024-06-03 23:38:07 -0600"
+    },
+    "done": true
+  },
+  "classes:class10": {
+    "criteria": {
+      "overlord": "2024-06-03 23:42:26 -0600"
+    },
+    "done": true
+  },
   "DataVersion": 3839
 }

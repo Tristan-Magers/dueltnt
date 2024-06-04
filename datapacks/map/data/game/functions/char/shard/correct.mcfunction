@@ -1,4 +1,4 @@
-item replace entity @s[scores={nobow=3..}] hotbar.0 with bow[damage=260,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§9Anti-Ice§r : Throw to switch"}']
+execute as @s[scores={nobow=3..}] run function game:char/shard/give/bow
 
 clear @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:white_dye",Slot:4b}]}] white_dye
 item replace entity @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:white_dye",Slot:4b}]},scores={floatuse=0}] hotbar.4 with minecraft:white_dye[custom_name='{"italic":false,"text":"§6Float §f§r: Right-click"}'] 3

@@ -530,3 +530,4 @@ Bug Fixes
 - Gardener life reload text not updated to 9.1 functionality
 - Unavailable slots for pig transform weren't named
 - Shift abilities could be deleted from inventory
+- Fixed minor build error on "The End"

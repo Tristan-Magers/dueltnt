@@ -161,7 +161,7 @@ team join gardener @a[x=620,y=20,z=620,distance=..100,scores={class=8}]
 #team leave @a[x=620,y=20,z=620,distance=..100,scores={class=9..}]
 #team leave @a[x=620,y=20,z=620,distance=..100,scores={class=..7}]
 
-give @a[scores={class=10},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=260,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§9Anti-Ice§r : Throw to switch"}']
+execute as @a[scores={class=10},x=620,y=20,z=620,distance=..100] run function game:char/shard/give/bow
 item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.6 with arrow 3
 item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.1 with minecraft:egg[custom_name='{"italic":false,"text":"§3Frosty Poppy §f§r: Right-click (explodes on enemies)"}']
 item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.3 with minecraft:lime_dye[custom_name='{"italic":false,"text":"§3Ice Suck §f§r: Right-click"}']
