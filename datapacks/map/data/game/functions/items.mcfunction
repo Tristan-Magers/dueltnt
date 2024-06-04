@@ -313,7 +313,7 @@ execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={slide_c
 
 #vortex
 scoreboard players remove @a[gamemode=adventure,scores={vortextime=0..}] vortextime 1
-item replace entity @a[gamemode=adventure,scores={vortextime=1}] hotbar.5 with minecraft:clay_ball[custom_name='{"italic":false,"text":"§bVortex §r: Right-click"}']
+execute as @a[gamemode=adventure,scores={vortextime=1}] run function game:char/wizard/give/vortex
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=..90,scores={click=1..},nbt={SelectedItem:{id:"minecraft:clay_ball"}}] at @s run function game:char/wizard/vortex
 
 execute as @e[name=vortex] at @s run function game:char/wizard/vortexent
@@ -462,6 +462,8 @@ tag @e[scores={frozen=0..}] add frozen
 
 #pig
 execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run scoreboard players set @s pig 41
+execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run effect give @s levitation 1 15 true
+execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run scoreboard players set @s nolev 6
 execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run summon pig ~ ~ ~ {Tags:["long"],Invulnerable:1}
 execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run clear @s pig_spawn_egg
 scoreboard players set @a pigThrow 0
@@ -470,6 +472,8 @@ scoreboard players add @e[type=pig] egg 1
 execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s run execute as @e[scores={egg=..1},limit=1,type=pig] at @s run teleport @p[scores={class=4,egg=1..}] ~ ~ ~
 execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s run tp @s @s
 tag @a[gamemode=adventure,scores={class=4,egg=1..}] add pig_place
+execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s if block ~ ~-1 ~ air run effect give @s levitation 1 15 true
+execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s if block ~ ~-1 ~ air run scoreboard players set @s nolev 6
 scoreboard players set @a[gamemode=adventure,scores={class=4,egg=1..}] pig 31
 scoreboard players set @a[gamemode=adventure,scores={class=4}] egg 0
 execute as @e[type=pig] at @s run data merge entity @s {Invulnerable:1}

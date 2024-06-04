@@ -37,3 +37,6 @@ execute as @s[nbt=!{Inventory:[{id:"minecraft:anvil",Slot:4b}]},scores={anviluse
 
 clear @s[nbt=!{Inventory:[{id:"minecraft:kelp",Slot:3b}]},scores={BBtimer=..0}] kelp
 scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:kelp",Slot:3b}]},scores={BBtimer=..0}] BBtimer 4
+
+clear @s[nbt=!{Inventory:[{id:"minecraft:paper",Slot:6b}]}] paper
+execute as @s[nbt=!{Inventory:[{id:"minecraft:paper",Slot:6b}]}] run function game:char/soldier/give/shift

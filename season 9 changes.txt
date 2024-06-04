@@ -450,12 +450,13 @@ Soldier
  
 Assassin
 - Mass Freeze freezes 0.3s longer (1.2s -> 1.5s)
+- Darts move 10% faster (30 b/s -> 33 b/s)
+- Darts explode 0.05s faster (0.4s -> 0.35s)
+- Ender Pearl no longer disables Sneak Attack
 - Shift reloads 4.3s faster (6.5s -> 2.2s)
 - Shift only reloads while on ground
 - Using Sneak Attack reloads shift
 - Respawning reloads shift
-- Darts move 10% faster (30 b/s -> 33 b/s)
-- Darts explode 0.05s faster (0.4s -> 0.35s)
 
 Ghost
 - Smoke Bomb first tnt has slight upward motion
@@ -477,6 +478,9 @@ Trapper
 - Shift reloads on death
 
 Wizard
+- Fireball summons 0.3 blocks further out while in air (0.9 blocks -> 1.2 blocks)
+- Fireball summons 0.6 blocks closer while on ground (0.9 blocks -> 0.3 blocks)
+- Pig Transform gives 0.25s of levitation 16 unless clicked on top of ground
 - Creepers explode 3s faster if not detonated (6s -> 3s)
 - Vertical motion on creeper throw is decreased
 - Reloads shift on death
@@ -525,3 +529,4 @@ Bug Fixes
 - Soldier TNT had a visible name
 - Gardener life reload text not updated to 9.1 functionality
 - Unavailable slots for pig transform weren't named
+- Shift abilities could be deleted from inventory

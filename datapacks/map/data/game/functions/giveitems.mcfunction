@@ -30,8 +30,8 @@ scoreboard players set @a snow 0
 #item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.4 with minecraft:leather[custom_name='{"italic":false,"text":"§7Explosive Dart §r: Right-click"}'] 6
 
 execute as @a[x=620,y=20,z=620,distance=..100,scores={class=0}] run function game:char/soldier/give/shift
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=1}] run function game:char/assassin/give/shift
 
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.6 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch for Dive Kick [reloads on ground]"}']
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=2}] hotbar.6 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch for Levitation"}']
 give @a[scores={class=3},x=620,y=20,z=620,distance=..100] minecraft:flint[custom_name='{"italic":false,"text":"§cTNT Trap§r : Throw for mode 2 / Offhand for mode 3"}']
 #give @a[scores={class=3},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=80,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§cTNT Trap§r : Throw to switch"}']
@@ -124,8 +124,6 @@ item replace entity @a[scores={class=2},x=620,y=20,z=620,distance=..100] hotbar.
 scoreboard players set @a[scores={class=4},x=620,y=20,z=620,distance=..100] pig -50
 
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] hotbar.6 with arrow
-
-#item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.5 with minecraft:clay_ball[custom_name='{"italic":false,"text":"§bVortex §r: Right-click"}']
 
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.0 with minecraft:wooden_pickaxe[unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§9Master Wand §r: Right-click Blocks (throw/offhand to gather)"}',attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:0.9,operation:"add_value",uuid:[I;2016337811,-1510259727,-1143610979,661859754],slot:"mainhand"},{type:"generic.attack_damage",name:"generic.attack_damage",amount:9,operation:"add_value",uuid:[I;-1708916597,1794000556,-1199725791,1224881908],slot:"mainhand"}],show_in_tooltip:false}]
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.1 with minecraft:barrier[custom_name='{"italic":false,"text":"§9Not enough material"}']

@@ -29,3 +29,7 @@ clear @s[nbt=!{Inventory:[{id:"minecraft:squid_spawn_egg",Slot:4b}]}] squid_spaw
 
 execute as @s[nbt=!{Inventory:[{id:"minecraft:squid_spawn_egg",Slot:4b}]},scores={squidegguse=0,sneakdisable=0}] run function game:char/assassin/give/sneak_attack {"amount":2}
 execute as @s[nbt=!{Inventory:[{id:"minecraft:squid_spawn_egg",Slot:4b}]},scores={squidegguse=1,sneakdisable=0}] run function game:char/assassin/give/sneak_attack {"amount":1}
+
+
+clear @s[nbt=!{Inventory:[{id:"minecraft:paper",Slot:6b}]}] paper
+execute as @a[nbt=!{Inventory:[{id:"minecraft:paper",Slot:6b}]}] run function game:char/assassin/give/shift
