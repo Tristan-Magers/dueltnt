@@ -78,16 +78,16 @@ item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.
 #item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=0}] hotbar.3 with minecraft:kelp[custom_name='{"italic":false,"text":"§4Mega Bomb§r §r: Right-click"}',dyed_color=16777215]
 item replace entity @a[scores={class=2},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:ender_pearl[custom_name='{"italic":false,"text":"§aTeleport §r: Right-click"}'] 3
 execute if entity @e[scores={mode=1}] run item replace entity @a[scores={class=2},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:ender_pearl[custom_name='{"italic":false,"text":"§aTeleport §r: Right-click"}'] 6
-item replace entity @a[scores={class=5},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:sugar[custom_name='{"italic":false,"text":"§aAcid §r: Right-click"}']
+execute as @a[scores={class=5},x=620,y=20,z=620,distance=..100] run function game:char/mads/give/acid
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] armor.head with minecraft:diamond_helmet[unbreakable={show_in_tooltip:false}]
 effect give @a[scores={class=5},x=620,y=20,z=620,distance=..100] jump_boost 300 2 true
 effect give @a[scores={class=5},x=620,y=20,z=620,distance=..100] speed 300 0 true
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] armor.head with minecraft:diamond_helmet[unbreakable={show_in_tooltip:false},dyed_color=0]
-give @a[scores={class=5},x=620,y=20,z=620,distance=..100] minecraft:bow[damage=160,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§aExplosive Gel§r : Throw to switch"}']
+execute as @a[scores={class=5},x=620,y=20,z=620,distance=..100] run function game:char/mads/give/bow
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=5}] hotbar.6 with arrow 3
 scoreboard players set @a[scores={class=5}] bow -2
-item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=5}] hotbar.3 with minecraft:stick[custom_name='{"italic":false,"text":"§9Power Shield §r: Right-click"}']
-item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=5}] hotbar.1 with minecraft:ink_sac[custom_name='{"italic":false,"text":"§2Set Portal §r: Right-click (lasts 6 seconds) [16 block range]"}']
+execute as @a[x=600,y=60,z=600,distance=3..95,scores={class=5}] run function game:char/mads/give/powershield
+execute as @a[x=600,y=60,z=600,distance=3..95,scores={class=5}] run function game:char/mads/give/portal
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.7 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch to go to portal (16 block range)"}']
 
 execute as @a[scores={class=1},x=620,y=20,z=620,distance=..100] run function game:char/assassin/give/magic_star {"amount":2}
@@ -115,9 +115,9 @@ execute as @a[x=620,y=20,z=620,distance=..100,scores={class=1}] run function gam
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.5 with minecraft:mooshroom_spawn_egg[can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"mooshroom",Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,CustomName:'{"italic":false,"text":"tnt"}'},custom_name='{"italic":false,"text":"§cSummon TNT §r: Right-click"}'] 12
 execute as @a[x=620,y=20,z=620,distance=..100,scores={class=3}] at @s run item replace entity @s hotbar.3 with minecraft:redstone[custom_name='{"italic":false,"text":"§cTracking Bomb §r: Right-click"}',potion_contents={custom_color:0,custom_effects:[{id:"minecraft:levitation",amplifier:2,duration:55},{id:"minecraft:blindness",amplifier:1,duration:75},{id:"minecraft:glowing",amplifier:1,duration:65}]}]
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.7 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch to phantom jump"}']
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.5 with minecraft:mooshroom_spawn_egg[can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"mooshroom",Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,CustomName:'{"italic":false,"text":"tnt"}'},custom_name='{"italic":false,"text":"§cSummon TNT §r: Right-click"}'] 3
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=5}] run function game:char/mads/give/tntegg {"amount":3}
 #item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.4 with minecraft:rabbit_hide[custom_name='{"italic":false,"text":"§4Laser §r: Right-click"}']
-execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.4 with minecraft:mooshroom_spawn_egg[can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"mooshroom",Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,CustomName:'{"italic":false,"text":"tnt"}'},custom_name='{"italic":false,"text":"§cSummon TNT §r: Right-click"}'] 9
+execute if entity @e[scores={mode=1}] run execute as @a[x=620,y=20,z=620,distance=..100,scores={class=5}] run function game:char/mads/give/tntegg {"amount":9}
 item replace entity @a[scores={class=2},x=620,y=20,z=620,distance=..100] hotbar.4 with minecraft:splash_potion[custom_name='[{"text":"Primed for Dark ","color":"dark_purple","italic":false},{"text":": Right-Click","color":"white","italic":false}]',potion_contents={custom_effects:[{id:"minecraft:blindness",amplifier:1b,duration:70},{id:"minecraft:glowing",amplifier:1b,duration:50}],custom_color:0}]
 scoreboard players set @a[scores={class=4},x=620,y=20,z=620,distance=..100] pig -50
 

@@ -532,7 +532,7 @@ execute as @a[gamemode=adventure,scores={powerAn=1},x=600,y=60,z=600,distance=3.
 execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:stick"}}] at @s run function game:char/mads/powershield
 scoreboard players remove @a[gamemode=adventure,scores={PStimer=1..}] PStimer 1
 execute as @a[gamemode=adventure,scores={PStimer=148}] at @s run tp @s @s
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PStimer=1}] hotbar.3 with minecraft:stick[custom_name='{"italic":false,"text":"§9Power Shield §r: Right-click"}']
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PStimer=1}] run function game:char/mads/give/powershield
 
 execute as @e[name=PS,type=armor_stand] at @s run function game:char/mads/powershieldent
 

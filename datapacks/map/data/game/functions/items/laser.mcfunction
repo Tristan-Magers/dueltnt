@@ -47,7 +47,7 @@ execute as @s[scores={laserDummy=10}] at @s run kill @e[type=marker,tag=stay_put
 
 execute as @s[scores={laserDummy=-230}] at @s run function game:player/class_team
 execute as @s[scores={laserDummy=-230}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Reloaded ","color":"white"},{"text":"Laser","color":"red","bold":true}]
-item replace entity @s[scores={laserDummy=-230}] hotbar.4 with rabbit_hide[custom_name='{"italic":false,"text":"§4Laser §r: Right-click"}']
+execute as @s[scores={laserDummy=-230}] run function game:char/mads/give/laser
 
 
 scoreboard players remove @s laserDummy 1
