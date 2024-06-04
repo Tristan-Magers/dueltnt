@@ -608,7 +608,7 @@ scoreboard players set @a[scores={creepeggr=155..}] creepeggr 0
 scoreboard players set @a[scores={slimeeggr=100..}] slimeeggr 0
 
 # sythe reloading
-item replace entity @a[gamemode=adventure,scores={class=6,Sreload=0},x=600,y=60,z=600,distance=3..100] hotbar.1 with minecraft:iron_hoe[attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:0.9,operation:"add_value",uuid:[I;2016337811,-1510259727,-1143610979,661859754],slot:"mainhand"},{type:"generic.attack_damage",name:"generic.attack_damage",amount:9,operation:"add_value",uuid:[I;-1708916597,1794000556,-1199725791,1224881908],slot:"mainhand"}],show_in_tooltip:false},custom_name='{"italic":false,"text":"§aScythe §f: Right-click to throw"}',enchantments={knockback:2},unbreakable={show_in_tooltip:false},hide_additional_tooltip={}]
+execute as @a[gamemode=adventure,scores={class=6,Sreload=0},x=600,y=60,z=600,distance=3..100] run function game:char/reaper/give/scythe
 
 #dark pillar
 execute as @e[type=armor_stand,name=NArrow] at @s run function game:char/reaper/darkpillararrow

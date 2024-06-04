@@ -59,7 +59,7 @@ execute if entity @e[scores={mode=1}] run item replace entity @a[scores={class=0
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] armor.chest with minecraft:chainmail_chestplate[unbreakable={show_in_tooltip:false}]
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.3 with minecraft:pig_spawn_egg[custom_name='{"italic":false,"text":"§cPig Transform §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"pig"},hide_additional_tooltip={}]
 execute as @a[scores={class=4},x=620,y=20,z=620,distance=..100] at @s run attribute @p minecraft:generic.movement_speed base set .13
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.4 with minecraft:feather[custom_name='{"italic":false,"text":"Feather §r: Right-click"}'] 6
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=6}] run function game:char/reaper/give/feather {amount:6}
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.4 with minecraft:feather[custom_name='{"italic":false,"text":"Feather §r: Right-click"}'] 9
 execute as @a[x=620,y=20,z=620,distance=..100,scores={class=2}] run function game:char/ghost/give/masslev
 execute as @a[x=620,y=20,z=620,distance=..100,scores={class=3}] run function game:char/trapper/give/platform {damage:0}
@@ -90,10 +90,10 @@ item replace entity @a[scores={class=1},x=620,y=20,z=620,distance=..100] hotbar.
 scoreboard players set @a[scores={class=1},x=620,y=20,z=620,distance=..100] star 0
 #item replace entity @a[scores={class=6},x=620,y=20,z=620,distance=..100] hotbar.1 with minecraft:iron_hoe[custom_name='{"italic":false,"text":"§aScythe §f: Right-click to throw"}',enchantments={knockback:6},unbreakable={show_in_tooltip:false}]
 
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.2 with minecraft:slime_spawn_egg[custom_name='{"italic":false,"text":"§aEnchanted Slime §f: Right-click (Can click on air)"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"slime",Size:1,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,Tags:["s1"]},enchantments={knockback:1}] 2
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.3 with minecraft:creeper_spawn_egg[custom_name='{"italic":false,"text":"§bGhost Creeper §f: Right-click (Can click on air)"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"creeper",ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:'{"italic":false,"text":"Bomb"}',Health:500,powered:1,ExplosionRadius:1,fuse:1000},enchantments={knockback:2}] 2
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=6}] run function game:char/reaper/give/slime
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=6}] run function game:char/reaper/give/creeper {amount:2}
 
-item replace entity @a[scores={class=6},x=620,y=20,z=620,distance=..100] hotbar.0 with minecraft:bow[damage=180,custom_name='{"italic":false,"text":"§7Dark Pillar§r : Throw to switch"}',unbreakable={show_in_tooltip:false}]
+execute as @a[scores={class=6},x=620,y=20,z=620,distance=..100] run function game:char/reaper/give/bow
 item replace entity @a[scores={class=6},x=620,y=20,z=620,distance=..100] hotbar.6 with arrow 1
 scoreboard players set @a[scores={class=6}] bow 0
 effect give @a[scores={class=6},x=620,y=20,z=620,distance=..100] jump_boost 300 2 true
@@ -107,7 +107,7 @@ execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=62
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.4 with minecraft:squid_spawn_egg[can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"squid",Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500},custom_name='{"italic":false,"text":"§9Sneak Attack §r: Right-click"}'] 2
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.5 with minecraft:mooshroom_spawn_egg[can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"mooshroom",Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,CustomName:'{"italic":false,"text":"tnt"}'},custom_name='{"italic":false,"text":"§cSummon TNT §r: Right-click"}'] 12
 execute as @a[x=620,y=20,z=620,distance=..100,scores={class=3}] run function game:char/trapper/give/tracking_bomb
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.7 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch to phantom jump"}']
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=6}] run function game:char/reaper/give/paper
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.5 with minecraft:mooshroom_spawn_egg[can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"mooshroom",Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,CustomName:'{"italic":false,"text":"tnt"}'},custom_name='{"italic":false,"text":"§cSummon TNT §r: Right-click"}'] 3
 #item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.4 with minecraft:rabbit_hide[custom_name='{"italic":false,"text":"§4Laser §r: Right-click"}']
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.4 with minecraft:mooshroom_spawn_egg[can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"mooshroom",Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,CustomName:'{"italic":false,"text":"tnt"}'},custom_name='{"italic":false,"text":"§cSummon TNT §r: Right-click"}'] 9
