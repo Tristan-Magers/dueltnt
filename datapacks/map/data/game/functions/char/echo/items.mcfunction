@@ -5,13 +5,13 @@ scoreboard players set @s[nbt={OnGround:1b},scores={grtest=0}] bwandlimit 0
 scoreboard players remove @s[scores={blastwandtime=0..}] blastwandtime 1
 execute as @s[scores={click=1..,blastwandtime=..0,bwandlimit=..5},nbt={SelectedItem:{id:"minecraft:stone_hoe"}}] at @s run function game:items/blastwand
 
-item replace entity @s[scores={blastwandtime=0,blastdur=0}] hotbar.2 with minecraft:stone_hoe[damage=0,custom_name='{"italic":false,"text":"§aBlast Wand §r: Right-click"}',attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:10,operation:"add_value",uuid:[I;1,2,3,4]}],show_in_tooltip:false}]
-item replace entity @s[scores={blastwandtime=0,blastdur=1}] hotbar.2 with minecraft:stone_hoe[damage=22,custom_name='{"italic":false,"text":"§aBlast Wand §r: Right-click"}',attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:10,operation:"add_value",uuid:[I;1,2,3,4]}],show_in_tooltip:false}]
-item replace entity @s[scores={blastwandtime=0,blastdur=2}] hotbar.2 with minecraft:stone_hoe[damage=43,custom_name='{"italic":false,"text":"§aBlast Wand §r: Right-click"}',attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:10,operation:"add_value",uuid:[I;1,2,3,4]}],show_in_tooltip:false}]
-item replace entity @s[scores={blastwandtime=0,blastdur=3}] hotbar.2 with minecraft:stone_hoe[damage=65,custom_name='{"italic":false,"text":"§aBlast Wand §r: Right-click"}',attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:10,operation:"add_value",uuid:[I;1,2,3,4]}],show_in_tooltip:false}]
-item replace entity @s[scores={blastwandtime=0,blastdur=4}] hotbar.2 with minecraft:stone_hoe[damage=84,custom_name='{"italic":false,"text":"§aBlast Wand §r: Right-click"}',attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:10,operation:"add_value",uuid:[I;1,2,3,4]}],show_in_tooltip:false}]
-item replace entity @s[scores={blastwandtime=0,blastdur=5}] hotbar.2 with minecraft:stone_hoe[damage=104,custom_name='{"italic":false,"text":"§aBlast Wand §r: Right-click"}',attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:10,operation:"add_value",uuid:[I;1,2,3,4]}],show_in_tooltip:false}]
-item replace entity @s[scores={blastwandtime=0,blastdur=6..}] hotbar.2 with minecraft:stone_hoe[damage=130,custom_name='{"italic":false,"text":"§aBlast Wand §r: Right-click"}',attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:10,operation:"add_value",uuid:[I;1,2,3,4]}],show_in_tooltip:false}]
+execute as @s[scores={blastwandtime=0,blastdur=0}] run function game:char/echo/give/blastwand {damage:0}
+execute as @s[scores={blastwandtime=0,blastdur=1}] run function game:char/echo/give/blastwand {damage:22}
+execute as @s[scores={blastwandtime=0,blastdur=2}] run function game:char/echo/give/blastwand {damage:43}
+execute as @s[scores={blastwandtime=0,blastdur=3}] run function game:char/echo/give/blastwand {damage:65}
+execute as @s[scores={blastwandtime=0,blastdur=4}] run function game:char/echo/give/blastwand {damage:84}
+execute as @s[scores={blastwandtime=0,blastdur=5}] run function game:char/echo/give/blastwand {damage:104}
+execute as @s[scores={blastwandtime=0,blastdur=6..}] run function game:char/echo/give/blastwand {damage:130}
 
 scoreboard players set @s[scores={blastdur=0}] blastdurt 0
 scoreboard players set @s[scores={blastwandtime=1..}] blastdurt 0
@@ -20,8 +20,7 @@ scoreboard players remove @s[scores={blastdurt=20..}] blastdur 1
 scoreboard players set @s[scores={blastdurt=20..}] blastwandtime 1
 scoreboard players set @s[scores={blastdurt=20..}] blastdurt 0
 
-item replace entity @s[scores={blastwandtime=90}] hotbar.2 with minecraft:pink_dye[custom_name='{"italic":false,"text":"§eUnstable Orb §r: Right-click"}',attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:10,operation:"add_value",uuid:[I;1,2,3,4]}],show_in_tooltip:false},custom_data={BlastOrb:1b}]
+execute as @s[scores={blastwandtime=90}] run function game:char/echo/give/orb {wand:"§aBlast Wand§r",orb_id:{BlastOrb:1b},slot:2}
 scoreboard players set @s[scores={blastwandtime=89..90}] blastwandtime 90
-
 
 scoreboard players remove @s[scores={grtest=1..}] grtest 1

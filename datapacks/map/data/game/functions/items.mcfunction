@@ -325,7 +325,7 @@ scoreboard players remove @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,
 
 scoreboard players remove @a[gamemode=adventure,scores={PlatTimer=1..}] PlatTimer 1
 execute as @a[gamemode=adventure,scores={platAm=1}] at @s positioned ~ ~-.1 ~ run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 white_stained_glass replace air
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=4}] hotbar.4 with minecraft:diamond_sword[damage=100,custom_name='{"italic":false,"text":"Temporary Platform §r: Right-click"}',hide_additional_tooltip={},attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:0.9,operation:"add_value",uuid:[I;2016337811,-1510259727,-1143610979,661859754],slot:"mainhand"},{type:"generic.attack_damage",name:"generic.attack_damage",amount:9,operation:"add_value",uuid:[I;-1708916597,1794000556,-1199725791,1224881908],slot:"mainhand"}],show_in_tooltip:false}]
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=4}] run function game:char/trapper/give/platform {damage:100}
 scoreboard players add @e[name=SP] PlatTimer 1
 execute as @e[name=SP,tag=!extra,scores={PlatTimer=50..}] at @s run fill ~1 ~ ~1 ~-1 ~ ~-1 air replace white_stained_glass
 kill @e[name=SP,tag=!extra,scores={PlatTimer=50..}]
@@ -336,8 +336,8 @@ execute as @a at @s if block ~ ~ ~ white_stained_glass run teleport @s ~ ~1 ~
 execute as @a[gamemode=adventure,scores={platAm=1}] at @s positioned ~ ~-.1 ~ run summon armor_stand ~ ~-1 ~ {NoGravity:1,Invlunerable:1,Marker:1,Silent:1,CustomName:'{"italic":false,"text":"SP"}',Invisible:1,Tags:["extra"]}
 scoreboard players remove @a[gamemode=adventure,scores={platAm=1..}] platAm 1
 execute as @a[gamemode=adventure,scores={platAm=6}] at @s run playsound minecraft:entity.illusion_illager.cast_spell master @a ~ ~ ~ 1 1.2
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=2}] hotbar.4 with minecraft:diamond_sword[damage=520,custom_name='{"italic":false,"text":"Temporary Platform §r: Right-click"}',hide_additional_tooltip={},attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:0.9,operation:"add_value",uuid:[I;2016337811,-1510259727,-1143610979,661859754],slot:"mainhand"},{type:"generic.attack_damage",name:"generic.attack_damage",amount:9,operation:"add_value",uuid:[I;-1708916597,1794000556,-1199725791,1224881908],slot:"mainhand"}],show_in_tooltip:false}]
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=1}] hotbar.4 with minecraft:diamond_sword[damage=1040,custom_name='{"italic":false,"text":"Temporary Platform §r: Right-click"}',hide_additional_tooltip={},attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:0.9,operation:"add_value",uuid:[I;2016337811,-1510259727,-1143610979,661859754],slot:"mainhand"},{type:"generic.attack_damage",name:"generic.attack_damage",amount:9,operation:"add_value",uuid:[I;-1708916597,1794000556,-1199725791,1224881908],slot:"mainhand"}],show_in_tooltip:false}]
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=2}] run function game:char/trapper/give/platform {damage:520}
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=1}] run function game:char/trapper/give/platform {damage:1040}
 execute as @a[scores={class=10,frostsT=0},x=620,y=20,z=620,distance=..100] run function game:player/class_team
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=2,platUse=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Reloaded ","color":"white"},{"text":"Platform","color":"red","bold":true},{"text":"","color":"white"}]
 
@@ -426,7 +426,7 @@ execute as @e[name=blast] at @s run function game:char/echo/blast/blasttick
 #sky wand
 scoreboard players remove @a[gamemode=adventure,scores={airwandtime=0..}] airwandtime 1
 execute as @a[gamemode=adventure,scores={click=1..,airwandtime=..0},nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] at @s run function game:items/airwand
-item replace entity @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,scores={airwandtime=0}] hotbar.3 with minecraft:diamond_hoe[custom_name='{"italic":false,"text":"§bSky Wand §r: Right-click"}',attribute_modifiers={modifiers:[{operation:"add_value",type:"generic.attack_speed",amount:10,name:"generic.attack_speed",uuid:[I;1,2,3,4]}],show_in_tooltip:false}]
+execute as @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,scores={airwandtime=0}] run function game:char/echo/give/skywand
 
 #ground spell
 execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={click=1..},nbt={SelectedItem:{id:"minecraft:red_dye"}}] at @s run function game:items/groundspell
@@ -612,7 +612,7 @@ scoreboard players set @a[scores={creepeggr=155..}] creepeggr 0
 scoreboard players set @a[scores={slimeeggr=100..}] slimeeggr 0
 
 # sythe reloading
-item replace entity @a[gamemode=adventure,scores={class=6,Sreload=0},x=600,y=60,z=600,distance=3..100] hotbar.1 with minecraft:iron_hoe[attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:0.9,operation:"add_value",uuid:[I;2016337811,-1510259727,-1143610979,661859754],slot:"mainhand"},{type:"generic.attack_damage",name:"generic.attack_damage",amount:9,operation:"add_value",uuid:[I;-1708916597,1794000556,-1199725791,1224881908],slot:"mainhand"}],show_in_tooltip:false},custom_name='{"italic":false,"text":"§aScythe §f: Right-click to throw"}',enchantments={knockback:2},unbreakable={show_in_tooltip:false},hide_additional_tooltip={}]
+execute as @a[gamemode=adventure,scores={class=6,Sreload=0},x=600,y=60,z=600,distance=3..100] run function game:char/reaper/give/scythe
 
 #dark pillar
 execute as @e[type=armor_stand,name=NArrow] at @s run function game:char/reaper/darkpillararrow
@@ -633,9 +633,9 @@ effect give @a[gamemode=adventure,scores={Escape=1..}] invisibility 2 1
 scoreboard players remove @a[gamemode=adventure,scores={XPReset=0..89}] XPReset 1
 scoreboard players remove @a[gamemode=adventure,scores={XPReset=91..}] XPReset 1
 #item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={XPReset=1}] hotbar.1 with minecraft:experience_bottle[custom_name='{"italic":false,"text":"§7Smoke Bomb §r: Right-click"}'] 2
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={XPReset=50}] hotbar.1 with minecraft:coal[custom_name='{"italic":false,"text":"§9Air Missile§r : Right-click"}']
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={XPReset=50}] run function game:char/ghost/give/air_missile
 tag @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={XPReset=50}] add coal
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={XPReset=91}] hotbar.1 with minecraft:experience_bottle[custom_name='{"italic":false,"text":"§7Smoke Bomb §r: Right-click"}']
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={XPReset=91}] run function game:char/ghost/give/smoke_bomb {count:1}
 scoreboard players set @a[gamemode=adventure,scores={Escape=1..}] Invis 23
 execute as @e[type=experience_bottle] at @s run particle spit ~ ~ ~ .5 .5 .5 .1 4 force
 scoreboard players reset @a Escape
@@ -653,7 +653,7 @@ scoreboard players set @a[nbt={OnGround:1b}] mass_lev_air_use 0
 execute as @a[gamemode=adventure,scores={click=1..,mass_lev_air_use=..1},nbt={SelectedItem:{id:"minecraft:iron_ingot"}}] at @s run function game:items/masslev
 #effect give @a[gamemode=adventure,scores={mTtimer=119}] levitation 1 1
 scoreboard players remove @a[gamemode=adventure,scores={mTtimer=1..}] mTtimer 1
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={mTtimer=1}] hotbar.3 with minecraft:iron_ingot[custom_name='{"italic":false,"text":"Mass Levitate §r: Right-click [everyone within 3 blocks]"}']
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={mTtimer=1}] run function game:char/ghost/give/masslev
 
 # pearls
 scoreboard players add @e[type=minecraft:ender_pearl] enderT 1

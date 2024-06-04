@@ -1,0 +1,1 @@
+$item replace entity @s hotbar.4 with minecraft:feather[custom_name='{"italic":false,"text":"Feather §r: Right-click"}',lore=['{"italic":false,"color":"white","text":"1s Levitation 1 and Speed 4 on use"}','{"italic":false,"color":"white","text":"Cooldown: 0.4s"}','{"italic":false,"color":"white","text":"Does not reload"}']] $(amount)
