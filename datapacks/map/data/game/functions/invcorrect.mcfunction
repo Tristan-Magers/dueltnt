@@ -39,5 +39,4 @@ execute as @s[scores={class=7}] at @s run function game:char/echo/correct
 execute as @s[scores={class=9}] at @s run function game:char/overlord/correct
 execute as @s[scores={class=10}] at @s run function game:char/shard/correct
 
-execute unless entity @e[scores={mode=1}] run item replace entity @s[scores={nobow=3..,class=8}] hotbar.0 with minecraft:bow[damage=220,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§6Blast Jumper §r : Throw to switch"}',enchantments={punch:2}]
-execute if entity @e[scores={mode=1}] run item replace entity @s[scores={nobow=3..,class=8}] hotbar.0 with minecraft:bow[damage=220,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§6Blast Jumper §r : Throw to switch"}',enchantments={punch:3}]
+execute as @s[scores={nobow=3..,class=8}] run function game:char/gardener/give/bow

@@ -149,8 +149,7 @@ scoreboard players set @a[scores={class=7},x=620,y=20,z=620,distance=..100] bow 
 
 scoreboard players set @a plaguetimer -1
 
-execute unless entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.0 with minecraft:bow[damage=220,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§6Blast Jumper§r : Throw to switch"}',enchantments={punch:2}]
-execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.0 with minecraft:bow[damage=220,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§6Blast Jumper§r : Throw to switch"}',enchantments={punch:3}]
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=8}] run function game:char/gardener/give/bow
 
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.7 with minecraft:arrow[custom_name='{"italic":false,"text":"Not your father\'s Blast Off"}']
 scoreboard players set @a[scores={class=8},x=620,y=20,z=620,distance=..100] bow 0
