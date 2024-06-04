@@ -108,9 +108,8 @@ execute as @a[scores={class=6},x=620,y=20,z=620,distance=..100] at @s run attrib
 
 execute as @a[scores={class=0},x=620,y=20,z=620,distance=..100] run function game:char/soldier/give/anvil {"amount":10}
 
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.5 with minecraft:stone_pressure_plate[custom_name='{"italic":false,"text":"§7Grave Trap §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"creeper",ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"Bomb",Health:500,ExplosionRadius:4}] 12
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.3 with minecraft:stone_pressure_plate[custom_name='{"italic":false,"text":"§7Grave Trap §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"creeper",ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"Bomb",Health:500,ExplosionRadius:4}] 6
-execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.5 with minecraft:stone_pressure_plate[custom_name='{"italic":false,"text":"§7Grave Trap §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"creeper",ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"Bomb",Health:500,ExplosionRadius:4}] 64
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=6}] run function game:char/gardener/give/gravetrap {"amount":12}
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=8}] run function game:char/gardener/give/gravetrap {"amount":6}
 
 execute as @a[x=620,y=20,z=620,distance=..100,scores={class=1}] run function game:char/assassin/give/sneak_attack {"amount":2}
 
@@ -125,12 +124,14 @@ scoreboard players set @a[scores={class=4},x=620,y=20,z=620,distance=..100] pig 
 
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] hotbar.6 with arrow
 
-item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.0 with minecraft:wooden_pickaxe[unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§9Master Wand §r: Right-click Blocks (throw/offhand to gather)"}',attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:0.9,operation:"add_value",uuid:[I;2016337811,-1510259727,-1143610979,661859754],slot:"mainhand"},{type:"generic.attack_damage",name:"generic.attack_damage",amount:9,operation:"add_value",uuid:[I;-1708916597,1794000556,-1199725791,1224881908],slot:"mainhand"}],show_in_tooltip:false}]
-item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.1 with minecraft:barrier[custom_name='{"italic":false,"text":"§9Not enough material"}']
-item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.2 with minecraft:barrier[custom_name='{"italic":false,"text":"§9Not enough material"}']
-item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.3 with minecraft:barrier[custom_name='{"italic":false,"text":"§9Not enough material"}']
-item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.4 with minecraft:barrier[custom_name='{"italic":false,"text":"§9Not enough material"}']
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=9}] hotbar.6 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch to Restore World (recreates broken blocks and brings you to same level as stage)"}']
+#item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.5 with minecraft:clay_ball[custom_name='{"italic":false,"text":"§bVortex §r: Right-click"}']
+
+item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.0 with minecraft:wooden_pickaxe[unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§9Master Wand §r: Right-click Blocks (throw/offhand to gather)"}',attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:0.9,operation:"add_value",uuid:[I;2016337811,-1510259727,-1143610979,661859754],slot:"mainhand"},{type:"generic.attack_damage",name:"generic.attack_damage",amount:9,operation:"add_value",uuid:[I;-1708916597,1794000556,-1199725791,1224881908],slot:"mainhand"}],show_in_tooltip:false},lore=['{"italic":false,"color":"white","text":"Mines blocks for material"}','{"italic":false,"color":"white","text":"Reach: 7.8 blocks"}']]
+item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.1 with minecraft:barrier[custom_name='{"italic":false,"text":"§9Not enough material"}',lore=['{"italic":false,"color":"white","text":"2 TNT"}','{"italic":false,"color":"white","text":"Reload: 1.5s"}','{"italic":false,"color":"white","text":"Fuse: 0.75s"}']]
+item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.2 with minecraft:barrier[custom_name='{"italic":false,"text":"§9Not enough material"}',lore=['{"italic":false,"color":"white","text":"3x1 TNT"}','{"italic":false,"color":"white","text":"Reload: 3.5s"}','{"italic":false,"color":"white","text":"Delay: 0s, 0.1s, 0.2s"}','{"italic":false,"color":"white","text":"Velocity: 4.4 bps"}']]
+item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.3 with minecraft:barrier[custom_name='{"italic":false,"text":"§9Not enough material"}',lore=['{"italic":false,"color":"white","text":"Duration: 2.5s"}','{"italic":false,"color":"white","text":"Reload: 5.5s"}','{"italic":false,"color":"white","text":"Max Length: 10 blocks"}']]
+item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.4 with minecraft:barrier[custom_name='{"italic":false,"text":"§9Not enough material"}',lore=['{"italic":false,"text":"§4Beef"}','{"italic":false,"color":"white","text":"8 TNT"}','{"italic":false,"color":"white","text":"Reload: 7s"}','{"italic":false,"color":"white","text":"Fuse: 0.35s"}','{"italic":false,"color":"white","text":"Levitation 16 for 0.65s"}']]
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=9}] hotbar.6 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch to Restore World"}',lore=['{"italic":false,"color":"white","text":"Recreates broken blocks and teleports you up to them"}','{"italic":false,"color":"white","text":"Does not reload"}']]
 
 scoreboard players set @a boomwandtime 0
 scoreboard players set @a blastwandtime 0
