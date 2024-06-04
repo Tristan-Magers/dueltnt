@@ -20,6 +20,6 @@ clear @a[x=620,y=20,z=620,distance=..100,scores={class=0..4,ThrFishT=0..1}] fish
 clear @a[scores={ThrBowT=0,class=0..4}] bow
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=5}] hotbar.0 with minecraft:bow[damage=160,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§aExplosive Gel§r : Throw to switch"}',hide_additional_tooltip={}]
 execute as @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=6}] run function game:char/reaper/give/bow
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=7}] hotbar.0 with minecraft:bow[damage=200,custom_name='{"italic":false,"text":"§3Space Warp§r : Throw to switch"}',unbreakable={show_in_tooltip:false},hide_additional_tooltip={}]
+execute as @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=7}] run function game:char/echo/give/bow
 execute unless entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=8}] hotbar.0 with minecraft:bow[damage=220,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§6Blast Jumper§r : Throw to switch"}',enchantments={punch:2},hide_additional_tooltip={}]
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={ThrFishT=0,class=8}] hotbar.0 with minecraft:bow[damage=220,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§6Blast Jumper§r : Throw to switch"}',enchantments={punch:3},hide_additional_tooltip={}]

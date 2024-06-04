@@ -426,7 +426,7 @@ execute as @e[name=blast] at @s run function game:char/echo/blast/blasttick
 #sky wand
 scoreboard players remove @a[gamemode=adventure,scores={airwandtime=0..}] airwandtime 1
 execute as @a[gamemode=adventure,scores={click=1..,airwandtime=..0},nbt={SelectedItem:{id:"minecraft:diamond_hoe"}}] at @s run function game:items/airwand
-item replace entity @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,scores={airwandtime=0}] hotbar.3 with minecraft:diamond_hoe[custom_name='{"italic":false,"text":"§bSky Wand §r: Right-click"}',attribute_modifiers={modifiers:[{operation:"add_value",type:"generic.attack_speed",amount:10,name:"generic.attack_speed",uuid:[I;1,2,3,4]}],show_in_tooltip:false}]
+execute as @a[gamemode=adventure,x=620,y=20,z=620,distance=..100,scores={airwandtime=0}] run function game:char/echo/give/skywand
 
 #ground spell
 execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={click=1..},nbt={SelectedItem:{id:"minecraft:red_dye"}}] at @s run function game:items/groundspell

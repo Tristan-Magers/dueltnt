@@ -128,13 +128,13 @@ item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=9}] hotbar.
 scoreboard players set @a boomwandtime 0
 scoreboard players set @a blastwandtime 0
 
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.1 with minecraft:wooden_hoe[custom_name='{"italic":false,"text":"§6Boom Wand §r: Right-click"}',attribute_modifiers={modifiers:[{operation:"add_value",type:"generic.attack_speed",amount:10,name:"generic.attack_speed",uuid:[I;1,2,3,4]}],show_in_tooltip:false}]
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.2 with minecraft:stone_hoe[custom_name='{"italic":false,"text":"§aBlast Wand §r: Right-click"}',attribute_modifiers={modifiers:[{operation:"add_value",type:"generic.attack_speed",amount:10,name:"generic.attack_speed",uuid:[I;1,2,3,4]}],show_in_tooltip:false}]
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.3 with minecraft:diamond_hoe[custom_name='{"italic":false,"text":"§bSky Wand §r: Right-click"}',attribute_modifiers={modifiers:[{operation:"add_value",type:"generic.attack_speed",amount:10,name:"generic.attack_speed",uuid:[I;1,2,3,4]}],show_in_tooltip:false}]
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.0 with minecraft:bow[damage=200,unbreakable={show_in_tooltip:false},custom_name='{"italic":false,"text":"§3Space Warp§r : Throw to switch"}']
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=7}] run function game:char/echo/give/boomwand {damage:0}
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=7}] run function game:char/echo/give/blastwand {damage:0}
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=7}] run function game:char/echo/give/skywand
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=7}] run function game:char/echo/give/bow
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.5 with arrow
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.6 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch for Slow Falling and Speed"}']
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.4 with minecraft:red_dye[custom_name='{"italic":false,"text":"§eGround Spell §r: Right-click"}'] 2
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=7}] run function game:char/echo/give/paper
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=7}] run function game:char/echo/give/groundspell {amount:2}
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=7}] hotbar.4 with minecraft:red_dye[custom_name='{"italic":false,"text":"§eGround Spell §r: Right-click"}'] 3
 
 effect give @a[scores={class=7},x=620,y=20,z=620,distance=..100] jump_boost 300 1 true
