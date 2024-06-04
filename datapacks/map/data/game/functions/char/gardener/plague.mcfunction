@@ -35,8 +35,8 @@ scoreboard players set @s plaguetimer 60
 
 scoreboard players operation @s realclass = @s class
 scoreboard players set @p class 8
-execute unless entity @e[scores={mode=1}] run item replace entity @s hotbar.0 with minecraft:bow[damage=220,unbreakable={show_in_tooltip:false},enchantments={punch:2},custom_name='{"italic":false,"text":"§6Blast Jumper§r : Throw to switch"}']
-execute if entity @e[scores={mode=1}] run item replace entity @s hotbar.0 with minecraft:bow[damage=220,unbreakable={show_in_tooltip:false},enchantments={punch:3},custom_name='{"italic":false,"text":"§6Blast Jumper§r : Throw to switch"}']
+function game:char/gardener/give/bow
+#execute if entity @e[scores={mode=1}] run item replace entity @s hotbar.0 with minecraft:bow[damage=220,unbreakable={show_in_tooltip:false},enchantments={punch:3},custom_name='{"italic":false,"text":"§6Blast Jumper§r : Throw to switch"}']
 #item replace entity @s hotbar.5 with arrow{display:{Name:"{\"italic\":false,\"text\":\"Not your father's Blast Off\"}"}}
 scoreboard players set @s bow 0
 item replace entity @s hotbar.4 with minecraft:paper[custom_name='{"italic":false,"text":"§6You can now PvP with players :D"}']

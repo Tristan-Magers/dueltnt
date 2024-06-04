@@ -21,4 +21,4 @@ tag @s remove woa1Portal
 clear @s[scores={SPorttimer=210}] ink_sac
 scoreboard players remove @s[scores={SPorttimer=1..}] SPorttimer 1
 scoreboard players set @s[scores={SPorttimer=209}] SetPortal 1
-item replace entity @s[scores={SPorttimer=1}] hotbar.1 with ink_sac[custom_name='{"italic":false,"text":"§2Set Portal §r: Right-click (lasts 6 seconds) [16 block range]"}']
+execute as @s[scores={SPorttimer=1}] run function game:char/mads/give/portal

@@ -1,0 +1,1 @@
+item replace entity @s hotbar.0 with minecraft:bow[damage=220,unbreakable={show_in_tooltip:false},enchantments={punch:2},custom_name='{"italic":false,"text":"§6Blast Jumper§r : Throw to switch"}',lore=['{"italic":false,"color":"white","text":"1 TNT"}','{"italic":false,"color":"white","text":"Reload: 1.2s"}','{"italic":false,"color":"white","text":"Reload: 1.2s"}']]
