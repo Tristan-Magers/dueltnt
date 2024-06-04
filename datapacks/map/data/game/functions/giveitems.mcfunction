@@ -90,7 +90,7 @@ item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=5}] hotbar.
 scoreboard players set @a[scores={class=5}] bow -2
 execute as @a[x=600,y=60,z=600,distance=3..95,scores={class=5}] run function game:char/mads/give/powershield
 execute as @a[x=600,y=60,z=600,distance=3..95,scores={class=5}] run function game:char/mads/give/portal
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=5}] hotbar.7 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch to go to portal (16 block range)"}']
+execute as @a[x=600,y=60,z=600,distance=3..95,scores={class=5}] run function game:char/mads/give/shift
 
 execute as @a[scores={class=1},x=620,y=20,z=620,distance=..100] run function game:char/assassin/give/magic_star {"amount":2}
 

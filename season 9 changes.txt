@@ -511,8 +511,8 @@ Gardener
 
 Overlord
 - Matter Slide reload increased 1s (4.5s -> 5.5s)
-- Gather causes longer reload on wand (2s with 0.25s faster reload for each 5 uses)
-    - previously 0.5s with 0.05s faster reload for each 5 uses
+- Wand disabled 0.5s longer after breaking (2s -> 2.5s)
+- Wand disabled 0.5s longer after gather (1.75s -> 2.25s, plus 0.1s for each durability used)
 
 Shard
 - Ice Suck reloads 0.5s slower (11.5s -> 12s)

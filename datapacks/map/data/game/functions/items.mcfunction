@@ -182,11 +182,11 @@ execute as @a[scores={halo_cooldown=0,class=9}] run function game:char/overlord/
 scoreboard players add @a[gamemode=adventure,scores={masterc=25..}] mastercT 1
 execute if entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adventure,scores={mastercT=1}] mastercT 4
 
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={mastercT=125..,class=9},tag=gather] at @s run function game:char/overlord/gather_reload
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={mastercT=135..,class=9},tag=gather] at @s run function game:char/overlord/gather_reload
 
-scoreboard players set @a[gamemode=adventure,scores={mastercT=40..},tag=!gather] masterc 0
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={mastercT=40..,class=9},tag=!gather] at @s run function game:char/overlord/masterwandreload
-scoreboard players set @a[gamemode=adventure,scores={mastercT=40..},tag=!gather] mastercT 0
+scoreboard players set @a[gamemode=adventure,scores={mastercT=50..},tag=!gather] masterc 0
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={mastercT=50..,class=9},tag=!gather] at @s run function game:char/overlord/masterwandreload
+scoreboard players set @a[gamemode=adventure,scores={mastercT=50..},tag=!gather] mastercT 0
 
 scoreboard players add @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=9,masterup=..3}] masterwand_upgrade_timer 1
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=9,masterwand_upgrade_timer=140..,masterup=..3}] at @s anchored eyes run function game:char/overlord/masterwandup

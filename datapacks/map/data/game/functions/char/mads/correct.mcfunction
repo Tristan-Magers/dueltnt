@@ -19,3 +19,6 @@ scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:ink_sac",Slot:1b}]},sc
 
 clear @s[nbt=!{Inventory:[{id:"minecraft:rabbit_hide",Slot:4b}]},scores={laserDummy=..-231}] rabbit_hide
 scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:rabbit_hide",Slot:4b}]},scores={laserDummy=..-231}] laserDummy -229
+
+clear @s[nbt=!{Inventory:[{id:"minecraft:paper",Slot:7b}]}] paper
+execute as @a[nbt=!{Inventory:[{id:"minecraft:paper",Slot:7b}]}] run function game:char/mads/give/shift
