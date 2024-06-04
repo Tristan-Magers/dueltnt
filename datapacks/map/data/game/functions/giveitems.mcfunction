@@ -46,7 +46,7 @@ item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] armor.c
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] armor.chest with minecraft:leather_chestplate[unbreakable={show_in_tooltip:false}]
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] armor.head with minecraft:leather_helmet[unbreakable={show_in_tooltip:false}]
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=2}] armor.chest with minecraft:diamond_chestplate[unbreakable={show_in_tooltip:false}]
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.6 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch to teleport"}']
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=4}] run function game:char/assassin/give/shift
 item replace entity @a[scores={class=4},x=620,y=20,z=620,distance=..100] hotbar.7 with minecraft:tipped_arrow[custom_name='{"italic":false,"text":"Magic Arrow"}',potion_contents={custom_color:6221823},hide_additional_tooltip={}] 2
 scoreboard players set @a[scores={class=4},x=620,y=20,z=620,distance=..100] bow -1
 
@@ -60,7 +60,7 @@ execute as @a[scores={class=0},x=620,y=20,z=620,distance=..100] run function gam
 
 execute if entity @e[scores={mode=1}] run item replace entity @a[scores={class=0},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:ender_pearl[custom_name='{"italic":false,"text":"§aTeleport §r: Right-click"}'] 8
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] armor.chest with minecraft:chainmail_chestplate[unbreakable={show_in_tooltip:false}]
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.3 with minecraft:pig_spawn_egg[custom_name='{"italic":false,"text":"§cPig Transform §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"pig"},hide_additional_tooltip={}]
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=4}] run function game:char/wizard/give/pig
 execute as @a[scores={class=4},x=620,y=20,z=620,distance=..100] at @s run attribute @p minecraft:generic.movement_speed base set .13
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.4 with minecraft:feather[custom_name='{"italic":false,"text":"Feather §r: Right-click"}'] 6
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.4 with minecraft:feather[custom_name='{"italic":false,"text":"Feather §r: Right-click"}'] 9
