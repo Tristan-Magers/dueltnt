@@ -106,9 +106,8 @@ execute as @a[scores={class=6},x=620,y=20,z=620,distance=..100] at @s run attrib
 
 execute as @a[scores={class=0},x=620,y=20,z=620,distance=..100] run function game:char/soldier/give/anvil {"amount":10}
 
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.5 with minecraft:stone_pressure_plate[custom_name='{"italic":false,"text":"§7Grave Trap §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"creeper",ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"Bomb",Health:500,ExplosionRadius:4}] 12
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.3 with minecraft:stone_pressure_plate[custom_name='{"italic":false,"text":"§7Grave Trap §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"creeper",ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"Bomb",Health:500,ExplosionRadius:4}] 6
-execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.5 with minecraft:stone_pressure_plate[custom_name='{"italic":false,"text":"§7Grave Trap §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"creeper",ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"Bomb",Health:500,ExplosionRadius:4}] 64
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=6}] run function game:char/gardener/give/gravetrap {"amount":12}
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=8}] run function game:char/gardener/give/gravetrap {"amount":6}
 
 execute as @a[x=620,y=20,z=620,distance=..100,scores={class=1}] run function game:char/assassin/give/sneak_attack {"amount":2}
 
