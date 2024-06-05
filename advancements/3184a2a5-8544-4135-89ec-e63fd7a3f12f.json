@@ -1,39 +1,39 @@
 {
   "classes:root": {
     "criteria": {
-      "warrior": "2021-07-01 00:46:52 +0000"
+      "warrior": "2024-05-03 17:50:44 -0700"
     },
     "done": true
   },
   "survival:root": {
     "criteria": {
-      "warrior": "2021-07-01 00:46:52 +0000"
+      "warrior": "2024-05-03 17:50:44 -0700"
     },
     "done": true
   },
   "delta:player_setup": {
     "criteria": {
-      "requirement": "2023-02-16 03:51:37 +0000"
-    },
-    "done": true
-  },
-  "particle:code": {
-    "criteria": {
-      "trapper": "2023-11-08 02:55:22 +0000"
-    },
-    "done": true
-  },
-  "classes:class10": {
-    "criteria": {
-      "overlord": "2023-11-08 03:14:48 +0000"
+      "requirement": "2024-05-03 17:50:44 -0700"
     },
     "done": true
   },
   "particle:root": {
     "criteria": {
-      "warrior": "2023-11-08 02:20:47 +0000"
+      "warrior": "2024-05-03 17:50:44 -0700"
     },
     "done": true
   },
-  "DataVersion": 3578
+  "classes:class0": {
+    "criteria": {
+      "trapper": "2024-06-03 13:58:42 -0700"
+    },
+    "done": true
+  },
+  "classes:class2": {
+    "criteria": {
+      "trapper": "2024-06-03 14:01:03 -0700"
+    },
+    "done": true
+  },
+  "DataVersion": 3839
 }

@@ -1,25 +1,27 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
-    "display": {
-        "title": {
-            "text": "Warrior Soldier"
-        },
-        "description": {
-            "text": "Survive as Soldier"
-        },
-        "icon": {
-            "item": "minecraft:bow",
-            "nbt": "{Damage:20}"
-        },
-        "frame": "goal",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": false
+  "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+  "display": {
+    "title": {
+      "text": "Warrior Soldier"
     },
-    "criteria": {
-        "warriorsoldier": {
-            "trigger": "minecraft:impossible"
-        }
+    "description": {
+      "text": "Survive as Soldier"
     },
-    "parent": "survival:warrior"
+    "icon": {
+      "id": "minecraft:bow",
+      "components": {
+        "minecraft:damage": 20
+      }
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "warriorsoldier": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "survival:warrior"
 }

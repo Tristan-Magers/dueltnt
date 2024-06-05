@@ -35,16 +35,17 @@ scoreboard players set @s plaguetimer 60
 
 scoreboard players operation @s realclass = @s class
 scoreboard players set @p class 8
-execute unless entity @e[scores={mode=1}] run item replace entity @s hotbar.0 with minecraft:bow{Damage:220,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§6Blast Jumper§r : Throw to switch\"}"},Enchantments:[{id:punch,lvl:2}]}
-execute if entity @e[scores={mode=1}] run item replace entity @s hotbar.0 with minecraft:bow{Damage:220,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§6Blast Jumper§r : Throw to switch\"}"},Enchantments:[{id:punch,lvl:3}]}
+function game:char/gardener/give/bow
+#execute if entity @e[scores={mode=1}] run item replace entity @s hotbar.0 with minecraft:bow[damage=220,unbreakable={show_in_tooltip:false},enchantments={punch:3},custom_name='{"italic":false,"text":"§6Blast Jumper§r : Throw to switch"}']
 #item replace entity @s hotbar.5 with arrow{display:{Name:"{\"italic\":false,\"text\":\"Not your father's Blast Off\"}"}}
 scoreboard players set @s bow 0
-item replace entity @s hotbar.4 with minecraft:paper{display:{Name:"{\"italic\":false,\"text\":\"§6You can now PvP with players :D\"}"}}
-item replace entity @s hotbar.5 with minecraft:paper{display:{Name:"{\"italic\":false,\"text\":\"§6Shift for retro trapper simulator\"}"}}
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.6 with paper{display:{Name:"{\"italic\":false,\"text\":\"§6Regain a life every 45 seconds\"}"}}
+execute as @s run function game:char/gardener/give/pvp_paper
+execute as @s run function game:char/gardener/give/shift
+execute as @s run function game:char/gardener/give/lives_paper
+
 team join gardener @s
-item replace entity @s hotbar.8 with minecraft:potion{display:{Name:"{\"italic\":false,\"text\":\"§dLeave Game\"}"}}
-item replace entity @s hotbar.3 with stone_pressure_plate{display:{Name:"{\"italic\":false,\"text\":\"§7Grave Trap §r: Right-click\"}"},CanPlaceOn:["#game:bolt_place"],EntityTag:{id:creeper,ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:Bomb,Health:500,ExplosionRadius:4},HideFlags:16} 12
+item replace entity @s hotbar.8 with minecraft:potion[potion_contents={custom_color:16711918},custom_name='{"italic":false,"text":"§dLeave Game"}',hide_additional_tooltip={}]
+item replace entity @s hotbar.3 with stone_pressure_plate[custom_name='{"italic":false,"text":"§7Grave Trap §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"creeper",ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"Bomb",Health:500,ExplosionRadius:4}] 12
 
 effect clear @s minecraft:jump_boost
 effect clear @s minecraft:speed

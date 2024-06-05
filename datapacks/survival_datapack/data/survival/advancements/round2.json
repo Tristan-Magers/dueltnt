@@ -1,24 +1,24 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
-    "display": {
-        "title": {
-            "text": "Round 2"
-        },
-        "description": {
-            "text": "Survive to Round 2"
-        },
-        "icon": {
-            "item": "minecraft:clock"
-        },
-        "frame": "task",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": false
+  "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+  "display": {
+    "title": {
+      "text": "Round 2"
     },
-    "criteria": {
-        "round2": {
-            "trigger": "minecraft:impossible"
-        }
+    "description": {
+      "text": "Survive to Round 2"
     },
-    "parent": "survival:root"
+    "icon": {
+      "id": "minecraft:clock"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "round2": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "survival:root"
 }

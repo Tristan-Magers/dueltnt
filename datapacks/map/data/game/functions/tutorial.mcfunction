@@ -1,7 +1,7 @@
 title @a[scores={tutorial=1..2}] times 0 50 10
 
 clear @a[scores={tutorial=10..32}]
-item replace entity @a[scores={tutorial=34}] hotbar.0 with golden_apple{display:{Name:"{\"italic\":false,\"text\":\"§r§6Skip Intro\"}"}}
+item replace entity @a[scores={tutorial=34}] hotbar.0 with minecraft:golden_apple[custom_name='{"italic":false,"text":"§r§6Skip Intro"}']
 scoreboard players add @a[x=14,y=4,z=1,distance=..2] tutorial 1
 execute as @a[x=14,y=4,z=1,distance=..2] at @s run tp @s ~ ~ ~ 0 0
 

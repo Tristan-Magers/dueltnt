@@ -1,4 +1,10 @@
+execute as @s at @s run tp @s ~ ~70 ~
+
 execute as @s at @s run function game:cprojectile/getdir2
+
+execute as @s at @s run tp @s ~ ~-70 ~
+
+#data merge entity @s {Marker:0}
 
 #scoreboard players add @s DirX 8
 
@@ -11,9 +17,11 @@ execute if entity @e[scores={mode=1}] run execute as @s at @s run execute store 
 
 scoreboard players operation @s y = @s DirY
 
-scoreboard players remove @s y 870
+scoreboard players remove @s y 1868
 
-execute as @s at @s run execute store result entity @s Motion[1] double .004 run scoreboard players get @s y
+#execute as @s at @s run execute store result entity @s Motion[1] double .004 run scoreboard players get @s y
+
+execute unless entity @e[scores={mode=1}] run execute as @s at @s run execute store result entity @s Motion[1] double .004 run scoreboard players get @s y
 
 #execute as @s at @s run tp @s ~ ~ ~ ~ 0
 

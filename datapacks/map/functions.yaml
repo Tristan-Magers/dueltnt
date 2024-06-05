@@ -1,0 +1,35 @@
+- function: game:char/shard/trident
+  - tag_references: errored while parsing
+- function: game:countdown
+  - tag_references: errored while parsing
+- function: game:cprojectile/pro6mot
+  - tag_references: errored while parsing
+- function: game:end
+  - tag_references: errored while parsing
+- function: game:giveitems
+  - tag_references: errored while parsing
+- function: game:items/reaperslime
+  - tag_references: errored while parsing
+- function: game:items/redbeam
+  - tag_references: errored while parsing
+- function: game:main
+  - tag_references: errored while parsing
+- function: game:menu/particle_book
+  - tag_references:
+    - line: 58
+      - path: Book.tag
+      - path: Items[0].tag
+- function: game:player/particle/speedo
+  - tag_references: errored while parsing
+- function: game:player/particle
+  - tag_references: errored while parsing
+- function: game:test2
+  - tag_references:
+    - line: 3
+      - path: Items[0].tag.SkullOwner.Name
+         fix: Items[0].components."minecraft:profile".name
+- function: game:ui/create_marker
+  - tag_references:
+    - line: 3
+      - path: Items[0].tag.SkullOwner.Name
+         fix: Items[0].components."minecraft:profile".name

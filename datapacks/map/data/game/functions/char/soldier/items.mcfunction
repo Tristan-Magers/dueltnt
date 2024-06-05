@@ -1,5 +1,5 @@
 # mega bomb
-scoreboard players set @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:kelp"}}] BBtimer 160
+scoreboard players set @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:kelp"}}] BBtimer 150
 execute as @s[scores={BBtimer=-10..}] at @s run function game:items/megab
 execute as @s[scores={class=0}] at @s run function game:char/soldier/megabombtrigger
 
@@ -19,7 +19,7 @@ scoreboard players set @s[scores={snowReset=2..}] snow 0
 scoreboard players remove @s[scores={snowReset=1..}] snowReset 1
 #item replace entity @s[scores={snowReset=1}] hotbar.1 with snowball{display:{Name:"{\"italic\":false,\"text\":\"§2Slimer §f§r: Right-click (hit players)\"}"}}
 tag @s[scores={snowReset=50}] add checkairnade
-item replace entity @s[scores={snowReset=50}] hotbar.1 with minecraft:lingering_potion{Potion:"minecraft:swiftness",display:{Name:"{\"italic\":false,\"text\":\"§3Air Grenade §r: Right-click\"}"}}
+execute as @s[scores={snowReset=50}] run function game:char/soldier/give/air_nade
 
 #
 scoreboard players add @s[scores={soldier_shifts=..4}] soldier_shift_reload 1

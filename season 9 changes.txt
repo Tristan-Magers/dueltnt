@@ -76,7 +76,7 @@ Trapper
     - Lasts 20s
     - Range of 14 blocks
 - Track Bomb switches between itself and Phantom Blocks
-	- 5.5s to Phantom Blocks, 5.5s to Track Bomb (previously 10s)
+	- 8.5s to Phantom Blocks, 5.5s to Track Bomb (previously 10s)
 - Switched Platform and Track Bomb slots
 - Track Bomb only has an explosion of 1 tnt if it explodes due to time (previously 2 tnt)
 - Track Bomb Moves and turns faster (3.6 b/s -> 4.4 b/s)
@@ -408,7 +408,7 @@ Shard
 - Snowman no longer blocks projectiles
 - Snowman shoots 0.1s faster between shots (0.4s -> 0.3s)
 - Trident reloads 0.5s faster at start (2.5s -> 2s)
-- Trident reloads 0.5s faster (6s -> 5.6s)
+- Trident reloads 0.4s faster (6s -> 5.6s)
 - Trident has one more entity of knockback at mid-distance
 - Trident explodes 0.2s after hit
 - Ice Suck reloads 0.5s faster (12s -> 11.5s)
@@ -429,11 +429,22 @@ Shard
 - Fixed typo in "Clear Skies" achievement
 - Updated resource pack version to be current with Minecraft 1.20.4
 
-*Season 9.1.1 Update*
- 
+*Season 9.2 Update*
+
+[Game]
+- Game updated to version 1.20.6
+
+[General]
+- Added item descriptions for each item in lore
+
 [Character Changes]
  
 Soldier
+- Bomb Bow tnt explodes 0.05s faster (0.45s -> 0.4s)
+- Air Nade sharts breaking 0.1s faster (0.3s -> 0.2s)
+    - Note: still takes 0.35s to break full radius
+- Air Nade vertical collision detection improved
+- Mega Bomb reloads 0.5s faster
 - 5 less max shifts (10 -> 5)
 - Shifts reload 0.75s slower each (2.25s -> 3.0s)
 - Shifts reload  x3 faster on ground
@@ -441,23 +452,93 @@ Soldier
 - Anvils reload one shift
  
 Assassin
-- Shift reloads 4s faster (6.5s -> 2.5s)
+- Mass Freeze freezes 0.3s longer (1.2s -> 1.5s)
+- Darts move 10% faster (30 b/s -> 33 b/s)
+- Darts explode 0.05s faster (0.4s -> 0.35s)
+- Ender Pearl no longer disables Sneak Attack
+- Shift reloads 4.3s faster (6.5s -> 2.2s)
 - Shift only reloads while on ground
 - Using Sneak Attack reloads shift
 - Respawning reloads shift
-- Darts move 10% faster (30 b/s -> 33 b/s)
-- Darts explode 0.05s faster (0.4s -> 0.35s)
+
+Ghost
+- Smoke Bomb first tnt has slight upward motion
+- Smoke Bomb gives 0.05s less invisibility (2.2s -> 2.15s)
+- Primed for Dark has 0.5s less max blindness (4s -> 3.5s)
+- Using Air Missile shoots a line of particles that show the path of the missile
+- Ghost shift causes sound
 
 Trapper
 - TNT Trap explodes 0.05s faster (0.15s -> 0.1s)
 - Fast Trap explodes 0.05s faster (0.25s -> 0.2s)
- 
+- Phantom Blocks and Tacking Bomb reload starts imediately after reloading one of them, reloads invisibility down to 0.75s
+- Phantom Block and Tracking Bomb reload 1.5s slower (5.5s -> 7s)
+- Throwing Mine causes sound
+- Using Track Bomb causes sound
+- Using Phantom Blocks causes sound (not audible for other players)
+- Shift reloads 2.4s faster (4s -> 1.6s)
+- Shift only reloads while on ground
+- Shift reloads on death
+
+Wizard
+- Fireball summons 1 blocks further out while in air (0.9 blocks -> 1.9 blocks) [if space is avaiable]
+- Fireball summons 0.6 blocks closer while on ground (0.9 blocks -> 0.3 blocks)
+    - Note: these changes help prevent hitting self midair and make fireball jumps more consistant
+- Powderize TNT has 0.05s faster fuse (0.95s -> 0.9s)
+- Pig Transform gives 0.25s of levitation 16 unless clicked on top of ground
+- Creepers explode 3s faster if not detonated (6s -> 3s)
+- Vertical motion on creeper throw is decreased
+- Reloads shift on death
+
+Reaper
+- Dark Pillar arrow reloads 0.15s faster (2.3s -> 2.15s)
+- Dark Pillar explodes 0.2s faster (1.65s -> 1.45s)
+- Dark Pillar hits a player, it explodes 0.1s faster
+- Dark Pillar detection for stunning/lifting player 0.3 blocks bigger in each direction to reflect player size
+- Dark Pillar makes a sound when it hits
+- Dark Pillar makes sound when it traps player
+- Dark Pillar removes glass 0.2s faster (2.05s -> 1.85s)
+- Sound improved for Feather
+- Reloads shift on death
+- Grave Trap hitbox increased 0.1 blocks to reflect visual
+
+Echo
+- Space Warp (bow) reloads 0.25s faster (2.25s -> 2s)
+- Space Warp causes sound on land
+- Space Warp makes sound when it levitates player
+- Shift reloads 5.5s faster (8.5s -> 3s)
+- Shift only reloads on ground
+- Shift reloads on death
+- Shift causes sound
+
+Gardener
+- Shift reloads 0.5s slower (2.25s -> 2.75s)
+- Shift causes sound
+- Grave Trap hitbox increased 0.1 blocks to reflect visual
+- Fixed bug where plague boost didn't buff bow
+
+Overlord
+- Matter Slide reload increased 1s (4.5s -> 5.5s)
+- Wand disabled 0.5s longer after breaking (2s -> 2.5s)
+- Wand disabled 0.5s longer after gather (1.75s -> 2.25s, plus 0.1s for each durability used)
+
 Shard
+- Ice Suck reloads 0.5s slower (11.5s -> 12s)
 - Shift reloads 2.1s faster (3.75s -> 1.65s)
 - Shift only reloads while on the ground
 - Using Float reloads shift
 - Respawning reloads shift
  
 Bug Fixes
+- "Points" scoreboard would appear if no player actually had a point
+- Dark Pillar (repaer bow) didn't properly work with dummies
+- Fixed a variety of tags still being visible on the lore of items
+- Fixed position of arrow and coruch move in Assassin hotbar
 - Soldier TNT had a visible name
 - Gardener life reload text not updated to 9.1 functionality
+- Unavailable slots for pig transform weren't named
+- Shift abilities could be deleted from inventory
+- Fixed minor build error on "The End"
+- Throwing laser spams spectator chat
+- Slimes and Creeper could get summoned in lobby in rare cases
+- Fixed bugs with UI stocks when in teams

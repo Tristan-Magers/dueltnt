@@ -1,25 +1,25 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
-    "display": {
-        "title": {
-            "text": "Survival Mode",
-            "color": "dark_green"
-        },
-        "description": {
-            "text": "Tackling the hoards begins here"
-        },
-        "icon": {
-            "item": "minecraft:wither_skeleton_skull"
-        },
-        "frame": "task",
-        "show_toast": false,
-        "announce_to_chat": false,
-        "hidden": true,
-        "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+  "display": {
+    "title": {
+      "text": "Survival Mode",
+      "color": "dark_green"
     },
-    "criteria": {
-        "warrior": {
-            "trigger": "minecraft:tick"
-        }
+    "description": {
+      "text": "Tackling the hoards begins here"
+    },
+    "icon": {
+      "id": "minecraft:wither_skeleton_skull"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "warrior": {
+      "trigger": "minecraft:tick"
     }
+  }
 }

@@ -1,25 +1,27 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
-    "display": {
-        "title": {
-            "text": "Warrior Wizard"
-        },
-        "description": {
-            "text": "Survive as Wizard"
-        },
-        "icon": {
-            "item": "minecraft:bow",
-            "nbt": "{Damage:100}"
-        },
-        "frame": "goal",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": true
+  "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+  "display": {
+    "title": {
+      "text": "Warrior Wizard"
     },
-    "criteria": {
-        "warriorwizard": {
-            "trigger": "minecraft:impossible"
-        }
+    "description": {
+      "text": "Survive as Wizard"
     },
-    "parent": "survival:warrior"
+    "icon": {
+      "id": "minecraft:bow",
+      "components": {
+        "minecraft:damage": 100
+      }
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "warriorwizard": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "survival:warrior"
 }

@@ -16,7 +16,7 @@ scoreboard players set @s[tag=!first,scores={bowlthrow=0,flintthrow=0,bambthrow=
 #scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:splash_potion",Slot:4b}]},scores={potion=-1..0}] potion -2
 
 clear @s[nbt=!{Inventory:[{id:"minecraft:bone",Slot:1b}]}] bone
-item replace entity @s[nbt=!{Inventory:[{id:"minecraft:bone",Slot:1b}]}] hotbar.1 with minecraft:bone{Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§6Detonate Arrows §f§r: Right-click\"}"}}
+execute as @s[nbt=!{Inventory:[{id:"minecraft:bone",Slot:1b}]}] run function game:char/trapper/give/detonator
 
 clear @s[nbt=!{Inventory:[{id:"minecraft:tnt"}]},scores={PlaceMineTime=..40}] tnt
 scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:tnt"}]},scores={PlaceMineTime=..80}] PlaceMineTime 200
@@ -28,7 +28,19 @@ clear @s[nbt=!{Inventory:[{id:"minecraft:redstone",Slot:3b}]},scores={TBtimer=..
 scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:redstone",Slot:3b}]},scores={TBtimer=..-200}] TBtimer 1001
 
 clear @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0}] diamond_sword
-item replace entity @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0,platUse=2}] hotbar.4 with diamond_sword{Damage:0,display:{Name:"{\"italic\":false,\"text\":\"Temporary Platform : Right-click\"}"}}
-item replace entity @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0,platUse=1}] hotbar.4 with diamond_sword{Damage:520,display:{Name:"{\"italic\":false,\"text\":\"Temporary Platform : Right-click\"}"}}
-item replace entity @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0,platUse=0}] hotbar.4 with diamond_sword{Damage:1040,display:{Name:"{\"italic\":false,\"text\":\"Temporary Platform : Right-click\"}"}}
-item replace entity @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0,platUse=3}] hotbar.4 with diamond_sword{Damage:0,display:{Name:"{\"italic\":false,\"text\":\"Temporary Platform : Right-click\"}"}}
+execute as @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0,platUse=2}] run function game:char/trapper/give/platform {damage:0}
+execute as @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0,platUse=1}] run function game:char/trapper/give/platform {damage:520}
+execute as @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0,platUse=0}] run function game:char/trapper/give/platform {damage:1040}
+execute as @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0,platUse=3}] run function game:char/trapper/give/platform {damage:0}
+
+clear @s[nbt=!{Inventory:[{id:"minecraft:paper",Slot:7b}]}] paper
+execute as @s[nbt=!{Inventory:[{id:"minecraft:paper",Slot:7b}]}] run function game:char/trapper/give/paper
+
+#
+scoreboard players add @s[scores={TBtimer=..-1}] trapper_swap_extra 1
+scoreboard players add @s[scores={TBtimer=-1000}] trapper_swap_extra 1
+
+scoreboard players set @s[scores={TBtimer=0..3}] trapper_swap_extra 0
+scoreboard players set @s[scores={TBtimer=1001..}] trapper_swap_extra 0
+
+scoreboard players set @s[scores={trapper_swap_extra=135..}] trapper_swap_extra 125

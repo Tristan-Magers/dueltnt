@@ -1,26 +1,26 @@
 {
-    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
-    "display": {
-        "title": {
-            "text": "All Particles Found!",
-            "color": "gold"
-        },
-        "description": {
-            "text": "Totally legit",
-            "color": "white"
-        },
-        "icon": {
-            "item": "minecraft:clay_ball"
-        },
-        "frame": "challenge",
-        "show_toast": true,
-        "announce_to_chat": true,
-        "hidden": true
+  "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+  "display": {
+    "title": {
+      "text": "All Particles Found!",
+      "color": "gold"
     },
-    "criteria": {
-        "trapper": {
-            "trigger": "minecraft:impossible"
-        }
+    "description": {
+      "text": "Totally legit",
+      "color": "white"
     },
-    "parent": "particle:root"
+    "icon": {
+      "id": "minecraft:clay_ball"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "trapper": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "particle:root"
 }

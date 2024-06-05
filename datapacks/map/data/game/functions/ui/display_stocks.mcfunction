@@ -24,7 +24,7 @@ execute as @e[tag=stock_temp,type=marker] run scoreboard players operation @s st
 execute as @e[tag=name_temp,type=marker] run scoreboard players operation @s stocks_slot_t = @s stocks_slot
 
 #
-execute as @s[scores={ingame=1..,teamed=1..},gamemode=adventure,tag=!red] run function game:ui/team_order
+execute as @s[scores={ingame=1..,teamed=1..},gamemode=adventure] run function game:ui/team_order
 
 #
 team leave @e[tag=actionbar_temp,limit=1]

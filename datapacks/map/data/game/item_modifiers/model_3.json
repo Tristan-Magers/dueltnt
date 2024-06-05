@@ -1,4 +1,6 @@
 {
-	"function" : "minecraft:set_nbt",
-	"tag" : "{CustomModelData:3}"
+  "function": "minecraft:set_components",
+  "components": {
+    "minecraft:custom_model_data": 3
+  }
 }

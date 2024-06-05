@@ -23,8 +23,8 @@ gamerule mobGriefing true
 execute as @e[tag=killthis,type=slime] at @s run fill ~5 ~5 ~5 ~-5 ~-5 ~-5 air replace fire
 tp @e[tag=killthis] ~ ~-1000 ~
 
-execute as @e[type=area_effect_cloud,tag=!a,nbt={Potion:"minecraft:poison"}] at @s run function game:char/gardener/plaguepot
-execute as @e[type=area_effect_cloud,tag=!a,nbt={Potion:"minecraft:swiftness"}] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1,Marker:1,Silent:1,Tags:["a","airnade"]}
+execute as @e[type=area_effect_cloud,tag=!a,nbt={potion_contents:{potion:"minecraft:poison"}}] at @s run function game:char/gardener/plaguepot
+execute as @e[type=area_effect_cloud,tag=!a,nbt={potion_contents:{potion:"minecraft:swiftness"}}] at @s run summon armor_stand ~ ~ ~ {Invulnerable:1,Marker:1,Silent:1,Tags:["a","airnade"]}
 kill @e[type=area_effect_cloud,tag=!a,tag=!gameae]
 
 clear @a[gamemode=spectator]
@@ -59,8 +59,8 @@ execute as @e[type=arrow,nbt={pickup:1b}] run data merge entity @s {pickup:0b}
 #execute as @e[type=arrow,tag=!checked] at @s run data merge entity @s {pickup:1}
 tag @e[type=arrow,tag=!checked] add checked
 
-execute as @e[type=slime] run data merge entity @s {CustomName:"{\"italic\":false,\"text\":\"Slime\"}"}
-execute as @e[type=pig] run data merge entity @s {CustomName:"{\"italic\":false,\"text\":\"Not a wizard\"}"}
+execute as @e[type=slime] run data merge entity @s {CustomName:'{"italic":false,"text":"Slime"}'}
+execute as @e[type=pig] run data merge entity @s {CustomName:'{"italic":false,"text":"Not a wizard"}'}
 
 effect clear @a minecraft:absorption
 
@@ -155,10 +155,12 @@ scoreboard players operation @e[name=Portal] tntID -= @p[scores={SetPortalP=1..}
 kill @e[name=Portal,type=armor_stand,scores={tntID=0}]
 scoreboard players operation @e[name=Portal] tntID += @p[scores={SetPortalP=1..}] tntID
 
-execute as @p[scores={SetPortalP=1..}] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,CustomName:"{\"italic\":false,\"text\":\"Portal\"}",Invulnerable:1,Marker:1,Silent:1,Invisible:1}
+execute as @p[scores={SetPortalP=1..}] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,CustomName:'{"italic":false,"text":"Portal"}',Invulnerable:1,Marker:1,Silent:1,Invisible:1}
 
 scoreboard players add @e[name=Portal,type=armor_stand] PS 1
 execute as @p[scores={SetPortalP=1..}] at @s run scoreboard players operation @e[name=Portal,type=armor_stand,distance=..1] tntID = @p tntID
+execute as 3a39fd32-c01f-489e-9536-22ad5eb307f8 if entity @s[scores={SetPortalP=1..}] unless score #woa1Portal .num matches 0 at @s run tag @e[name=Portal,type=armor_stand,distance=..1] add woa1Portal
+execute as 3a39fd32-c01f-489e-9536-22ad5eb307f8 if entity @s[scores={SetPortalP=1..}] unless score #woa1Portal .num matches 0 at @e[tag=woa1Portal,limit=1] run particle sonic_boom ~ ~1 ~ 0 0 0 0 1 force @a
 
 scoreboard players set @a[scores={GoPortal=0}] GoPortal -1
 scoreboard players set @a GoPortalP 0
@@ -174,13 +176,16 @@ execute as @a[scores={GoPortalP=1..}] at @s if entity @e[name=Portal,type=armor_
 
 execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run execute as @a[scores={GoPortalP=1..},distance=..16] at @s run summon tnt ~ ~ ~ {fuse:1,NoGravity:1}
 execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run execute as @a[scores={GoPortalP=1..},distance=..16] at @s run summon tnt ~ ~ ~ {fuse:2,NoGravity:1}
+execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1,tag=woa1Portal] at @s run execute as @a[scores={GoPortalP=1..},distance=..16] at @s run particle minecraft:sonic_boom ~ ~1 ~ 0 0 0 0 1 force @a
+execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1,tag=woa1Portal] at @s if entity @a[scores={GoPortalP=1..},distance=..16] run particle minecraft:sonic_boom ~ ~1 ~ 0 0 0 0 1 force @a
 execute if entity @e[scores={mode=1}] run execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run execute as @a[scores={GoPortalP=1..},distance=..16] at @s run summon tnt ~ ~ ~ {fuse:1}
 execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run teleport @a[scores={GoPortalP=1..},distance=..16] ~ ~ ~
 #execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run execute as @a[scores={GoPortalP=1..},distance=..16] at @s run tp @s @s
 execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run scoreboard players set @a[scores={GoPortalP=1..},distance=..16] shift_cool 20
 #execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run xp add @a[scores={GoPortalP=1..},distance=..16] 20 levels
-execute as @e[name=Portal,type=armor_stand] at @s positioned ~ ~1 ~ run particle sneeze ~ ~ ~ .1 0 .1 .03 2 force
-execute as @e[name=Portal,type=armor_stand] at @s positioned ~ ~1 ~ run particle minecraft:item_slime ~ ~ ~ .1 0 .1 .03 2 force
+execute as @e[name=Portal,type=armor_stand,tag=!woa1Portal] at @s positioned ~ ~1 ~ run particle sneeze ~ ~ ~ .1 0 .1 .03 2 force
+execute as @e[name=Portal,type=armor_stand,tag=!woa1Portal] at @s positioned ~ ~1 ~ run particle minecraft:item_slime ~ ~ ~ .1 0 .1 .03 2 force
+execute as @e[name=Portal,type=armor_stand,tag=woa1Portal] at @s positioned ~ ~1 ~ run function game:tournament_rewards/woa1/portal
 execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run scoreboard players set @a[scores={GoPortalP=1..},distance=..16] timer 1
 scoreboard players set @a[scores={GoPortalP=1..}] haveportal 0
 execute as @e[name=Portal,type=armor_stand,scores={tntID=0},limit=1] at @s run scoreboard players set @a[scores={GoPortalP=1..},distance=..16] haveportal 1
@@ -190,8 +195,9 @@ scoreboard players set @a[scores={GoPortalP=1..,haveportal=..0}] ui_action_text 
 scoreboard players set @a[scores={GoPortalP=1..,haveportal=..0}] ui_action_time 20
 
 scoreboard players add @e[name=Portal,type=armor_stand] PLife 1
-execute as @e[name=Portal,type=armor_stand,scores={PLife=130..}] at @s positioned ~ ~1 ~ run particle minecraft:totem_of_undying ~ ~ ~ .3 .3 .3 .03 20 force
-execute as @e[name=Portal,type=armor_stand,scores={PLife=130..}] at @s positioned ~ ~1 ~ run particle minecraft:large_smoke ~ ~ ~ .2 .2 .2 .1 20 force
+execute as @e[name=Portal,type=armor_stand,scores={PLife=130..},tag=!woa1Portal] at @s positioned ~ ~1 ~ run particle minecraft:totem_of_undying ~ ~ ~ .3 .3 .3 .03 20 force
+execute as @e[name=Portal,type=armor_stand,scores={PLife=130..},tag=!woa1Portal] at @s positioned ~ ~1 ~ run particle minecraft:large_smoke ~ ~ ~ .2 .2 .2 .1 20 force
+execute as @e[name=Portal,type=armor_stand,scores={PLife=130..},tag=woa1Portal] at @s positioned ~ ~1 ~ run particle minecraft:scrape ~ ~ ~ .3 .3 .3 .03 20 force
 kill @e[name=Portal,type=armor_stand,scores={PLife=130..}]
 
 #Y
@@ -484,3 +490,7 @@ team join gardener @a[team=!gardener,scores={class=8},gamemode=adventure,x=620,y
 #
 execute as @a[tag=frozen,scores={frozen=2..}] run function game:player/frozen3
 execute as @a[tag=!frozen] run clear @s ice
+
+#> Tournament Rewards
+# Implemented by TheViralMelon
+scoreboard players enable d1f4d3f7-02c6-40e8-a2ff-1d7b5385f5eb Woa1ParticleTrail

@@ -1,5 +1,21 @@
 scoreboard players add @s airnade 1
 
+execute as @s[scores={airnade=1}] at @s if block ~ ~ ~ air if block ~ ~-1 ~ air unless block ~ ~-2 ~ air run tp @s ~ ~-0.2 ~
+execute as @s[scores={airnade=1}] at @s if block ~ ~ ~ air if block ~ ~-1 ~ air unless block ~ ~-2 ~ air run tp @s ~ ~-0.2 ~
+execute as @s[scores={airnade=1}] at @s if block ~ ~ ~ air if block ~ ~-1 ~ air unless block ~ ~-2 ~ air run tp @s ~ ~-0.2 ~
+execute as @s[scores={airnade=1}] at @s if block ~ ~ ~ air if block ~ ~-1 ~ air unless block ~ ~-2 ~ air run tp @s ~ ~-0.2 ~
+execute as @s[scores={airnade=1}] at @s if block ~ ~ ~ air if block ~ ~-1 ~ air unless block ~ ~-2 ~ air run tp @s ~ ~-0.2 ~
+
+execute as @s[scores={airnade=1}] at @s if block ~ ~-0.1 ~ air unless block ~ ~-1.1 ~ air run tp @s ~ ~-0.1 ~
+execute as @s[scores={airnade=1}] at @s if block ~ ~-0.1 ~ air unless block ~ ~-1.1 ~ air run tp @s ~ ~-0.1 ~
+execute as @s[scores={airnade=1}] at @s if block ~ ~-0.1 ~ air unless block ~ ~-1.1 ~ air run tp @s ~ ~-0.1 ~
+execute as @s[scores={airnade=1}] at @s if block ~ ~-0.1 ~ air unless block ~ ~-1.1 ~ air run tp @s ~ ~-0.1 ~
+execute as @s[scores={airnade=1}] at @s if block ~ ~-0.1 ~ air unless block ~ ~-1.1 ~ air run tp @s ~ ~-0.1 ~
+execute as @s[scores={airnade=1}] at @s if block ~ ~-0.1 ~ air unless block ~ ~-1.1 ~ air run tp @s ~ ~-0.1 ~
+execute as @s[scores={airnade=1}] at @s if block ~ ~-0.1 ~ air unless block ~ ~-1.1 ~ air run tp @s ~ ~-0.1 ~
+execute as @s[scores={airnade=1}] at @s if block ~ ~-0.1 ~ air unless block ~ ~-1.1 ~ air run tp @s ~ ~-0.1 ~
+execute as @s[scores={airnade=1}] at @s if block ~ ~-0.1 ~ air unless block ~ ~-1.1 ~ air run tp @s ~ ~-0.1 ~
+
 #execute as @s[scores={airnade=1}] at @s run tp @e[type=chicken,distance=..2] ~ ~-1000 ~
 
 #execute as @s[scores={airnade=1}] if block ~ ~-1 ~ air run tp @s ~ ~-1 ~

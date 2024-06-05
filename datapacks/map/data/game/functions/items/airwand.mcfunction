@@ -7,4 +7,4 @@ execute as @s at @s run tp @e[limit=1,name=air] ~ ~1.6 ~
 execute as @e[name=air] at @s run function game:hitscan
 execute as @e[name=air] at @s run function game:airstike
 scoreboard players set @s airwandtime 120
-item replace entity @s hotbar.3 with minecraft:golden_hoe{display:{Name:"{\"italic\":false,\"text\":\"§bRecharging..\"}"},AttributeModifiers:[{AttributeName:"generic.attackSpeed",Name:"generic.attackSpeed",Amount:10,Operation:0,UUIDLeast:77216,UUIDMost:618122}]}
+item replace entity @s hotbar.3 with minecraft:golden_hoe[custom_name='{"italic":false,"text":"§bRecharging.."}',attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:10,operation:"add_value",uuid:[I;1,2,3,4]}],show_in_tooltip:false}]

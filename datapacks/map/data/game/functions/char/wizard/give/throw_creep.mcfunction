@@ -1,0 +1,1 @@
+item replace entity @s hotbar.4 with gray_dye[custom_name='{"text":"§r§bThrow Creeper §f: Right Click"}',lore=['{"italic":false,"color":"white","text":"Throw ghost creeper"}','{"italic":false,"color":"white","text":"Causes 0.9s reload"}']]

@@ -1,0 +1,1 @@
+item replace entity @s hotbar.6 with paper[custom_name='{"italic":false,"text":"§6Regain a life every 45 seconds"}']

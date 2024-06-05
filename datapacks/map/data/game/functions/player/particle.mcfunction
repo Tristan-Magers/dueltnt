@@ -1,14 +1,14 @@
 execute as @s[scores={particle=1,parttimer=1}] at @s run particle flame ~ ~.2 ~ .3 .12 .3 .03 1 force
-execute as @s[scores={particle=1,parttimer=2}] at @s run particle minecraft:block fire ~ ~.3 ~ .3 .12 .3 .03 1 force
-execute as @s[scores={particle=2}] at @s positioned ~ ~.05 ~ run particle dust 0.8 0.8 0.8 2.2 ~ ~.2 ~ .15 .1 .15 0.1 1 force
-execute as @s[scores={particle=2,gpart=1}] at @s positioned ~ ~.05 ~ run particle minecraft:block snow ~ ~.2 ~ .4 .05 .4 0 2
-execute as @s[scores={particle=2,gpart=11}] at @s positioned ~ ~.05 ~ run particle minecraft:block snow ~ ~.2 ~ .4 .05 .4 0 2
+execute as @s[scores={particle=1,parttimer=2}] at @s run particle minecraft:block{block_state: 'minecraft:fire'} ~ ~.3 ~ .3 .12 .3 .03 1 force
+execute as @s[scores={particle=2}] at @s positioned ~ ~.05 ~ run particle minecraft:dust{color:[0.8, 0.8, 0.8], scale:2.2} ~ ~.2 ~ .15 .1 .15 0.1 1 force
+execute as @s[scores={particle=2,gpart=1}] at @s positioned ~ ~.05 ~ run particle minecraft:block{block_state: 'minecraft:snow'} ~ ~.2 ~ .4 .05 .4 0 2
+execute as @s[scores={particle=2,gpart=11}] at @s positioned ~ ~.05 ~ run particle minecraft:block{block_state: 'minecraft:snow'} ~ ~.2 ~ .4 .05 .4 0 2
 #execute as @s[scores={particle=2,parttimer=1}] at @s positioned ~ ~.05 ~ run particle minecraft:spit ~ ~.1 ~ .3 0 .3 0 1
 execute as @s[scores={particle=2,parttimer=1}] at @s rotated ~ 0 positioned ^ ^ ^-0.8 run particle minecraft:poof ~ ~.1 ~ .3 0 .3 0 1
-execute as @s[scores={particle=3,parttimer=1}] at @s run particle dust 1 40 1 1.5 ~ ~.2 ~ .3 .1 .3 2 2 force
+execute as @s[scores={particle=3,parttimer=1}] at @s run particle minecraft:dust{color:[1.0, 40.0, 1.0], scale:1.5} ~ ~.2 ~ .3 .1 .3 2 2 force
 execute as @s[scores={particle=3,gpart=1}] at @s rotated ~ 0 positioned ^ ^ ^-0.8 run particle dragon_breath ~ ~.1 ~ .4 .1 .4 .04 3 force
 execute as @s[scores={particle=4}] at @s run particle enchant ~ ~.1 ~ .5 .5 .5 .1 2 force
-execute as @s[scores={particle=5}] at @s run particle minecraft:dust 15277350 20 2 2 ~ ~ ~ .2 .2 .2 0 3 force
+execute as @s[scores={particle=5}] at @s run particle minecraft:dust{color:[15277350.0, 20.0, 2.0], scale:2.0} ~ ~ ~ .2 .2 .2 0 3 force
 execute as @s[scores={particle=6,parttimer=1}] at @s positioned ~ ~1.6 ~ positioned ^ ^0.7 ^-0.7 run particle angry_villager ~ ~.1 ~ .3 .2 .3 0 1 force
 execute as @s[scores={particle=6,parttimer=1}] at @s positioned ~ ~1.6 ~ positioned ^ ^0.7 ^-0.7 run particle falling_water ~ ~ ~ .25 .3 .25 0 1 force
 execute as @s[scores={particle=7,parttimer=1}] at @s run particle note ~ ~.2 ~ .3 .1 .3 0.5 1 force
@@ -19,7 +19,7 @@ execute as @s[scores={particle=9,parttimer=1}] at @s positioned ~ ~1.6 ~ run par
 execute as @s[scores={particle=9,parttimer=2}] at @s run particle end_rod ~ ~.2 ~ .2 .1 .2 .05 1 force
 execute as @s[scores={particle=9,parttimer=2}] at @s positioned ~ ~1.6 ~ run particle crit ^ ^-0.8 ^-1 1 1 1 .05 1 force
 execute as @s[scores={particle=10,parttimer=2}] at @s rotated ~ 0 positioned ^ ^ ^-1 run particle minecraft:totem_of_undying ~ ~1.7 ~ .4 0.4 .4 0 1 force
-execute as @s[scores={particle=10,parttimer=3}] at @s rotated ~ 0 positioned ^ ^ ^-1 run particle minecraft:block minecraft:kelp_plant ~ ~1.6 ~ .4 0.4 .4 0 1 force
+execute as @s[scores={particle=10,parttimer=3}] at @s rotated ~ 0 positioned ^ ^ ^-1 run particle minecraft:block{block_state: 'minecraft:kelp_plant'} ~ ~1.6 ~ .4 0.4 .4 0 1 force
 execute as @s[scores={particle=10,parttimer=2}] at @s rotated ~ 0 positioned ^0.6 ^ ^-1 run particle dolphin ~ ~1.0 ~ .2 0.5 .2 0 1 force
 execute as @s[scores={particle=10,parttimer=1}] at @s rotated ~ 0 positioned ^-0.6 ^ ^-1 run particle dolphin ~ ~1.0 ~ .2 0.5 .2 0 1 force
 execute as @s[scores={particle=10}] at @s run particle minecraft:rain ~ ~.2 ~ .3 .1 .3 0 1 force
@@ -80,9 +80,9 @@ execute as @s[scores={particle=17,gpart=10}] at @s run particle minecraft:soul ~
 
 execute as @s[scores={particle=18,OPp=19..30}] at @s positioned ~ ~1.1 ~ run particle minecraft:warped_spore ^ ^ ^-1 .5 .3 .5 .08 3 force
 execute as @s[scores={particle=18,OPp=19}] at @s run particle minecraft:ash ~ ~0.5 ~ .6 .3 .6 .08 1 force
-#execute as @s[scores={particle=18,OPp=9..18}] at @s run particle minecraft:block nether_portal ~ ~.5 ~ 0.2 0.1 0.4 0.1 1 force
-execute as @s[scores={particle=18,OPp=18}] at @s run particle minecraft:block nether_portal ~ ~.4 ~ 0.4 0.1 0.4 0.2 8 force
-execute as @s[scores={particle=18,OPp=43}] at @s run particle minecraft:block nether_portal ~ ~.25 ~ 0.4 0.1 0.4 0.1 8 force
+#execute as @s[scores={particle=18,OPp=9..18}] at @s run particle minecraft:block{block_state: 'minecraft:nether_portal'} ~ ~.5 ~ 0.2 0.1 0.4 0.1 1 force
+execute as @s[scores={particle=18,OPp=18}] at @s run particle minecraft:block{block_state: 'minecraft:nether_portal'} ~ ~.4 ~ 0.4 0.1 0.4 0.2 8 force
+execute as @s[scores={particle=18,OPp=43}] at @s run particle minecraft:block{block_state: 'minecraft:nether_portal'} ~ ~.25 ~ 0.4 0.1 0.4 0.1 8 force
 execute as @s[scores={particle=18,OPp=25..40,parttimer=1}] at @s run particle minecraft:crit ~ ~.5 ~ 0.4 0.1 0.4 0.1 2 force
 
 execute as @s[scores={particle=19,OPp=0}] at @s positioned ~ ~1.6 ~ run particle minecraft:note ^1.0 ^ ^-.2 0.1 0.1 0.1 10 1 force
@@ -97,7 +97,7 @@ execute as @s[scores={particle=19,OPp=45}] at @s positioned ~ ~1.6 ~ run particl
 execute as @s[scores={particle=19,OPp=5}] at @s positioned ~ ~1.6 ~ run particle minecraft:note ^0.7 ^0.7 ^-.2 0.1 0.1 0.1 10 1 force
 execute as @s[scores={particle=19,OPp=15}] at @s positioned ~ ~1.6 ~ run particle minecraft:note ^-0.7 ^0.7 ^-.2 0.1 0.1 0.1 10 1 force
 
-execute as @s[scores={particle=19}] at @s run particle dust 0.8 0.8 0.8 0.8 ~ ~.2 ~ .6 .1 .6 0 1 force
+execute as @s[scores={particle=19}] at @s run particle minecraft:dust{color:[0.8, 0.8, 0.8], scale:0.8} ~ ~.2 ~ .6 .1 .6 0 1 force
 
 execute as @s[scores={particle=20,gpart=1}] at @s run particle minecraft:spore_blossom_air ~ ~0.4 ~ 0.8 0.2 0.8 0 1 force
 execute as @s[scores={particle=20,gpart=4}] at @s run particle minecraft:cherry_leaves ~ ~0.5 ~ 0.8 0.25 0.8 0 1 force
@@ -105,13 +105,13 @@ execute as @s[scores={particle=20,gpart=9}] at @s run particle minecraft:spore_b
 execute as @s[scores={particle=20,gpart=11}] at @s run particle minecraft:cherry_leaves ~ ~0.5 ~ 0.8 0.25 0.8 0 1 force
 execute as @s[scores={particle=20,gpart=17}] at @s run particle minecraft:cherry_leaves ~ ~0.5 ~ 0.8 0.25 0.8 0 1 force
 
-execute as @s[scores={particle=20,fall_cm=1..,jump=..0}] at @s run particle minecraft:block oak_leaves ~ ~0.3 ~ 0.35 0.1 0.35 0 10 force
-execute as @s[scores={particle=20,jump=1..}] at @s run particle minecraft:block oak_leaves ~ ~0.3 ~ 0.35 0.1 0.35 0 10 force
+execute as @s[scores={particle=20,fall_cm=1..,jump=..0}] at @s run particle minecraft:block{block_state: 'minecraft:oak_leaves'} ~ ~0.3 ~ 0.35 0.1 0.35 0 10 force
+execute as @s[scores={particle=20,jump=1..}] at @s run particle minecraft:block{block_state: 'minecraft:oak_leaves'} ~ ~0.3 ~ 0.35 0.1 0.35 0 10 force
 
-execute as @s[scores={particle=21,OPp=1,parttimer=1}] at @s run particle minecraft:sculk_charge 1 ~ ~0.8 ~ 0.7 0.3 0.7 0 2 force
-execute as @s[scores={particle=21,OPp=4,parttimer=1}] at @s run particle minecraft:sculk_charge 0 ~ ~0.8 ~ 0.7 0.3 0.7 0 2 force
-execute as @s[scores={particle=21,OPp=10,parttimer=1}] at @s run particle minecraft:sculk_charge 3 ~ ~0.8 ~ 0.7 0.3 0.7 0 2 force
-execute as @s[scores={particle=21,OPp=14,parttimer=1}] at @s run particle minecraft:sculk_charge 6 ~ ~0.8 ~ 0.7 0.3 0.7 0 2 force
+execute as @s[scores={particle=21,OPp=1,parttimer=1}] at @s run particle minecraft:sculk_charge{roll:1} ~ ~0.8 ~ 0.7 0.3 0.7 0 2 force
+execute as @s[scores={particle=21,OPp=4,parttimer=1}] at @s run particle minecraft:sculk_charge{roll:0} ~ ~0.8 ~ 0.7 0.3 0.7 0 2 force
+execute as @s[scores={particle=21,OPp=10,parttimer=1}] at @s run particle minecraft:sculk_charge{roll:3} ~ ~0.8 ~ 0.7 0.3 0.7 0 2 force
+execute as @s[scores={particle=21,OPp=14,parttimer=1}] at @s run particle minecraft:sculk_charge{roll:6} ~ ~0.8 ~ 0.7 0.3 0.7 0 2 force
 execute as @s[scores={particle=21,OPp=17..19,parttimer=1}] at @s run particle minecraft:sculk_charge_pop ~ ~0.8 ~ 0.7 0.3 0.7 0 2 force
 execute as @s[scores={particle=21,OPp=21..24,parttimer=2}] at @s run particle minecraft:sculk_soul ~0.3 ~0.5 ~0.3 0.5 0.25 0.5 0 1 force
 execute as @s[scores={particle=21,OPp=22..25,parttimer=3}] at @s run particle minecraft:sculk_soul ~-0.3 ~0.5 ~-0.3 0.5 0.25 0.5 0 1 force
@@ -120,7 +120,7 @@ execute as @s[scores={particle=21,OPp=25..28,parttimer=1}] at @s run particle mi
 execute as @s[scores={particle=21,OPp=24..42,parttimer=3}] at @s run particle minecraft:sculk_soul ~ ~0.5 ~ 0.7 0.25 0.7 0 1 force
 execute as @s[scores={particle=21,OPp=24..42,parttimer=2}] at @s run particle minecraft:enchanted_hit ~ ~0.5 ~ 0.7 0.25 0.7 0 1 force
 
-#execute as @s[scores={particle=22}] at @s run particle minecraft:dust_color_transition 2 2 0 1 0 0 100 ~ ~1 ~ 1 1 1 0 1 force
+#execute as @s[scores={particle=22}] at @s run particle minecraft:dust_color_transition{from_color: [2.0, 2.0, 0.0], scale: 1.0, to_color: [0.0, 0.0, 100.0]} ~ ~1 ~ 1 1 1 0 1 force
 
 execute as @s[scores={particle=22}] at @s run function game:player/particle/speedo
 
@@ -141,8 +141,8 @@ scoreboard players operation #rubixRot particle = #haloTicks particle
 execute as @s[scores={particle=26}] at @s rotated 0 0 positioned ~ ~.2 ~ run function game:player/particle/halo2
 execute as @s[scores={particle=26}] at @s rotated ~ 0 positioned ~ ~1.6 ~ run function game:player/particle/halo_top
 
-execute store result score #woa1Val .num run random value 1..10
-execute as @s[scores={particle=900}] at @s rotated ~ 0 run function game:player/particle/woa1
+#> Tournament Particles
+execute if entity @a[scores={particle=900..}] run function game:tournament_rewards/particle
 
 scoreboard players add @s OPp 1
 scoreboard players set @s[scores={OPp=51..}] OPp 0

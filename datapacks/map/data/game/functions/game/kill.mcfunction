@@ -16,7 +16,6 @@ execute as @e[tag=groundpath] at @s run function game:char/overlord/groundpath
 #kills
 kill @e[tag=phantomairmissile]
 kill @e[tag=tnttrack]
-scoreboard objectives setdisplay sidebar p
 kill @e[tag=powerupitem]
 kill @e[type=creeper]
 kill @e[type=ghast]

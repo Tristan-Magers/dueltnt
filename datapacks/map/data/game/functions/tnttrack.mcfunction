@@ -3,7 +3,7 @@ effect give @s minecraft:glowing 10
 execute store result score @s R1 run data get entity @s Rotation[0] 1
 execute store result score @s R2 run data get entity @s Rotation[1] 1
 
-data merge entity @s {Motion:[0.0,0.0,0.0]}
+data merge entity @s {Motion:[0.0d,0.0d,0.0d]}
 #tp @s ~ ~ ~ facing entity @e[limit=1,type=villager,distance=2..50] eyes
 #execute unless entity @e[limit=1,type=villager,distance=..2] run tp @s ^ ^ ^.2
 

@@ -1,10 +1,18 @@
 [
-	{
-		"function" : "minecraft:set_nbt",
-		"tag" : "{CustomModelData:2}"
-	},
-	{
-		"function" : "minecraft:set_name",
-		"name" : [{"text":"Portal Nearby","italic":false,"color":"white"}]
-	}
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:custom_model_data": 2
+    }
+  },
+  {
+    "function": "minecraft:set_name",
+    "name": [
+      {
+        "text": "Portal Nearby",
+        "italic": false,
+        "color": "white"
+      }
+    ]
+  }
 ]

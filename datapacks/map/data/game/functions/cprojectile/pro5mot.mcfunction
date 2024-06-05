@@ -2,7 +2,7 @@ execute as @s[x_rotation=70..100] at @s run tp @s ~ ~ ~ ~ 70
 
 execute as @s at @s run function game:cprojectile/getdir4
 
-summon minecraft:creeper ~ ~1 ~ {Tags:["creeppro","newcreeper","nodub"],ignited:1,Fuse:17,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"{\"italic\":false,\"text\":\"Bomb\"}",Health:500,powered:1,ExplosionRadius:2}
+summon minecraft:creeper ~ ~1 ~ {Tags:["creeppro","newcreeper","nodub"],ignited:1,Fuse:17,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:'{"italic":false,"text":"Bomb"}',Health:500,powered:1,ExplosionRadius:2}
 
 effect give @e[tag=newcreeper,distance=..2] slow_falling 999 0 true
 

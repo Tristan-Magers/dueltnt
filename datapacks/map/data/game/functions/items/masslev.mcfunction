@@ -17,7 +17,7 @@ execute as @s at @s run effect give @e[distance=..3,tag=dummy] slowness 2 1
 execute as @s at @s run effect give @e[distance=..3,tag=dummy] levitation 1 1
 
 execute as @s[x=620,z=620,y=40,distance=..120] at @s run fill ~-1 0 ~-1 ~1 80 ~1 air replace #game:bolt_place
-execute as @s at @s run particle minecraft:falling_dust snow ~ ~ ~ 1 10 1 0 200 force @a
+execute as @s at @s run particle minecraft:falling_dust{block_state: 'minecraft:snow'} ~ ~ ~ 1 10 1 0 200 force @a
 
 tag @s add keeplev
 

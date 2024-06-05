@@ -6,7 +6,7 @@ execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=red,s
 execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=blue,scores={teamed=1..}] run tellraw @a ["",{"text":"Blue Team","color":"aqua"},{"text":" WINS","color":"white"}]
 execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run tellraw @a ["",{"text":"Green Team","color":"green"},{"text":" WINS","color":"white"}]
 
-execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,scores={teamed=..0,class=0}] run tellraw @a ["",{"selector":"@a[x=615,y=30,z=615,distance=..90,gamemode=adventure,scores={class=0}]","color":"white"},{"text":" WINS (","color":"white"},{"text":"Soldier","color":"#da1b1b"},{"text":")","color":"white"}]]
+execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,scores={teamed=..0,class=0}] run tellraw @a ["",{"selector":"@a[x=615,y=30,z=615,distance=..90,gamemode=adventure,scores={class=0}]","color":"white"},{"text":" WINS (","color":"white"},{"text":"Soldier","color":"#da1b1b"},{"text":")","color":"white"}]
 execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,scores={teamed=..0,class=1}] run tellraw @a ["",{"selector":"@a[x=615,y=30,z=615,distance=..90,gamemode=adventure,scores={class=1}]","color":"white"},{"text":" WINS (","color":"white"},{"text":"Assassin","color":"#edd11d"},{"text":")","color":"white"}]
 execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,scores={teamed=..0,class=2}] run tellraw @a ["",{"selector":"@a[x=615,y=30,z=615,distance=..90,gamemode=adventure,scores={class=2}]","color":"white"},{"text":" WINS (","color":"white"},{"text":"Ghost","color":"#2d87b4"},{"text":")","color":"white"}]
 execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,scores={teamed=..0,class=3}] run tellraw @a ["",{"selector":"@a[x=615,y=30,z=615,distance=..90,gamemode=adventure,scores={class=3}]","color":"white"},{"text":" WINS (","color":"white"},{"text":"Trapper","color":"#c03411"},{"text":")","color":"white"}]
@@ -43,8 +43,10 @@ execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=blue,
 execute if entity @a[x=615,y=30,z=615,distance=..90,gamemode=adventure,tag=green,scores={teamed=1..}] run scoreboard players add §r§aGREEN p 1
 scoreboard players add @a[gamemode=adventure,x=620,y=40,z=620,distance=..100,scores={teamed=..0}] p 1
 
+execute if entity @a[scores={p=1..}] run scoreboard objectives setdisplay sidebar p
+
 #blocks
-data merge block 475 17 495 {front_text:{messages:["[{\"text\":\"\"}]","[{\"score\":{\"name\":\"Round\",\"objective\":\"game\"},\"bold\":true}]","[{\"text\":\"Round(s)\"}]","[{\"text\":\"\"}]"]}}
+data merge block 475 17 495 {front_text:{messages:['[{"text":""}]','[{"score":{"name":"Round","objective":"game"},"bold":true}]','[{"text":"Round(s)"}]','[{"text":""}]']}}
 
 #tags
 tag @a remove grave
