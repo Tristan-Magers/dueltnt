@@ -28,7 +28,7 @@ execute as @s[scores={NArrow=..1}] at @s run execute as @a[gamemode=adventure,di
 execute as @s[scores={NArrow=..1}] at @s run execute as @a[gamemode=adventure,distance=..4.5] at @s if block ~-0.3 ~1.8 ~-0.3 minecraft:black_stained_glass run function game:char/reaper/darkpillar
 execute as @s[scores={NArrow=..1}] at @s run execute as @a[gamemode=adventure,distance=..4.5] at @s if block ~-0.3 ~1.8 ~-0.3 minecraft:black_stained_glass run function game:char/reaper/darkpillar
 
-execute as @s[scores={NArrow=..1},tag=hit_player] at @s run playsound minecraft:entity.armadillo.brush master @a ~ ~ ~ 1 0
+execute as @s[scores={NArrow=..1}] at @s run playsound minecraft:entity.armadillo.brush master @a ~ ~ ~ 1 0
 execute as @s[scores={NArrow=..1},tag=hit_player] at @s run playsound minecraft:entity.iron_golem.step master @a ~ ~ ~ 1 0
 execute as @s[scores={NArrow=..1},tag=hit_player] at @s run playsound minecraft:block.vault.hit master @a ~ ~ ~ 1 0
 execute as @s[scores={NArrow=..1},tag=hit_player] at @s run playsound minecraft:block.wool.break master @a ~ ~ ~ 1 0

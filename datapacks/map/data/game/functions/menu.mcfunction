@@ -33,6 +33,8 @@ scoreboard players set @a[x=0,y=30,z=0,distance=..190] lobby 0
 scoreboard players set @a[x=496,y=20,z=520,distance=..60] Y 30
 kill @e[type=minecraft:potion,x=496,y=20,z=520,distance=..60]
 kill @e[type=minecraft:fireball,x=496,y=20,z=520,distance=..60]
+tp @e[type=creeper,x=496,y=20,z=520,distance=..60] ~ -1000 ~
+tp @e[type=slime,x=496,y=20,z=520,distance=..60] ~ -1000 ~
 kill @e[tag=mastertnt,x=496,y=20,z=520,distance=..60]
 kill @e[name=acid,x=496,y=20,z=520,distance=..60]
 execute as @a[x=496,y=20,z=520,distance=..60] at @s run attribute @p minecraft:generic.movement_speed base set .1

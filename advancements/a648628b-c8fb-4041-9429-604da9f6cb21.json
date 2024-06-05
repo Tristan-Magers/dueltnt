@@ -1,91 +1,25 @@
 {
   "delta:player_setup": {
     "criteria": {
-      "requirement": "2024-06-01 15:59:47 -0600"
+      "requirement": "2024-06-04 21:53:14 -0600"
     },
     "done": true
   },
   "classes:root": {
     "criteria": {
-      "warrior": "2024-06-01 15:59:47 -0600"
+      "warrior": "2024-06-04 21:53:14 -0600"
     },
     "done": true
   },
   "survival:root": {
     "criteria": {
-      "warrior": "2024-06-01 15:59:47 -0600"
+      "warrior": "2024-06-04 21:53:14 -0600"
     },
     "done": true
   },
   "particle:root": {
     "criteria": {
-      "warrior": "2024-06-01 15:59:47 -0600"
-    },
-    "done": true
-  },
-  "classes:class0": {
-    "criteria": {
-      "trapper": "2024-06-03 14:00:39 -0600"
-    },
-    "done": true
-  },
-  "classes:class7": {
-    "criteria": {
-      "echo": "2024-06-03 14:12:17 -0600"
-    },
-    "done": true
-  },
-  "classes:class1": {
-    "criteria": {
-      "trapper": "2024-06-03 14:47:54 -0600"
-    },
-    "done": true
-  },
-  "classes:class4": {
-    "criteria": {
-      "wizard": "2024-06-03 16:36:28 -0600"
-    },
-    "done": true
-  },
-  "classes:class5": {
-    "criteria": {
-      "mad": "2024-06-03 22:25:46 -0600"
-    },
-    "done": true
-  },
-  "classes:class8": {
-    "criteria": {
-      "gardener": "2024-06-03 23:38:07 -0600"
-    },
-    "done": true
-  },
-  "classes:class10": {
-    "criteria": {
-      "overlord": "2024-06-03 23:42:26 -0600"
-    },
-    "done": true
-  },
-  "classes:class2": {
-    "criteria": {
-      "trapper": "2024-06-04 17:00:00 -0600"
-    },
-    "done": true
-  },
-  "classes:class3": {
-    "criteria": {
-      "trapper": "2024-06-04 17:05:31 -0600"
-    },
-    "done": true
-  },
-  "classes:class6": {
-    "criteria": {
-      "reaper": "2024-06-04 17:30:06 -0600"
-    },
-    "done": true
-  },
-  "classes:class9": {
-    "criteria": {
-      "overlord": "2024-06-04 17:37:42 -0600"
+      "warrior": "2024-06-04 21:53:14 -0600"
     },
     "done": true
   },

@@ -131,7 +131,9 @@ execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000,nbt
 execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000,nbt={inBlockState:{Name:"minecraft:barrier"}}] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=4.5,type=!armor_stand,tag=!nowalllev] at @s run tag @s add nowalllev
 execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=4.5,type=!armor_stand] at @s run teleport @s ~ ~4 ~
 
-execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=620,z=620,y=40,distance=..120] at @s run playsound minecraft:entity.allay.item_given master @a ~ ~ ~ 0.4 0
+execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=4.5,type=!armor_stand] at @s run playsound minecraft:entity.breeze.deflect master @a ~ ~ ~ 0.6 0.75
+
+#execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=620,z=620,y=40,distance=..120] at @s run playsound minecraft:entity.allay.item_given master @a ~ ~ ~ 0.4 0
 execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=620,z=620,y=40,distance=..120] at @s run playsound minecraft:entity.wind_charge.wind_burst master @a ~ ~ ~ 0.7 1.4
 execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=620,z=620,y=40,distance=..120] at @s run playsound minecraft:block.stem.break master @a ~ ~ ~ 1 0
 

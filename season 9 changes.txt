@@ -434,6 +434,9 @@ Shard
 [Game]
 - Game updated to version 1.20.6
 
+[General]
+- Added item descriptions for each item in lore
+
 [Character Changes]
  
 Soldier
@@ -488,11 +491,12 @@ Wizard
 - Reloads shift on death
 
 Reaper
-- Dark Pillar arrow reloads 0.1s faster (2.3s -> 2.2s)
+- Dark Pillar arrow reloads 0.15s faster (2.3s -> 2.15s)
 - Dark Pillar explodes 0.2s faster (1.65s -> 1.45s)
 - Dark Pillar hits a player, it explodes 0.1s faster
 - Dark Pillar detection for stunning/lifting player 0.3 blocks bigger in each direction to reflect player size
-- Sound added for hitting player with Dark Pillar
+- Dark Pillar makes a sound when it hits
+- Dark Pillar makes sound when it traps player
 - Dark Pillar removes glass 0.2s faster (2.05s -> 1.85s)
 - Sound improved for Feather
 - Reloads shift on death
@@ -501,6 +505,7 @@ Reaper
 Echo
 - Space Warp (bow) reloads 0.25s faster (2.25s -> 2s)
 - Space Warp causes sound on land
+- Space Warp makes sound when it levitates player
 - Shift reloads 5.5s faster (8.5s -> 3s)
 - Shift only reloads on ground
 - Shift reloads on death
@@ -534,3 +539,5 @@ Bug Fixes
 - Unavailable slots for pig transform weren't named
 - Shift abilities could be deleted from inventory
 - Fixed minor build error on "The End"
+- Throwing laser spams spectator chat
+- Slimes and Creeper could get summoned in lobby in rare cases
