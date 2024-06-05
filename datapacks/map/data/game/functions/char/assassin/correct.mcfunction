@@ -32,4 +32,4 @@ execute as @s[nbt=!{Inventory:[{id:"minecraft:squid_spawn_egg",Slot:4b}]},scores
 
 
 clear @s[nbt=!{Inventory:[{id:"minecraft:paper",Slot:6b}]}] paper
-execute as @a[nbt=!{Inventory:[{id:"minecraft:paper",Slot:6b}]}] run function game:char/assassin/give/shift
+execute as @s[nbt=!{Inventory:[{id:"minecraft:paper",Slot:6b}]}] run function game:char/assassin/give/shift

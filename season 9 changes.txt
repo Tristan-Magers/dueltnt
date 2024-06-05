@@ -541,3 +541,4 @@ Bug Fixes
 - Fixed minor build error on "The End"
 - Throwing laser spams spectator chat
 - Slimes and Creeper could get summoned in lobby in rare cases
+- Fixed bugs with UI stocks when in teams
