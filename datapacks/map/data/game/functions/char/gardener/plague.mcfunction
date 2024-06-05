@@ -40,7 +40,7 @@ function game:char/gardener/give/bow
 #item replace entity @s hotbar.5 with arrow{display:{Name:"{\"italic\":false,\"text\":\"Not your father's Blast Off\"}"}}
 scoreboard players set @s bow 0
 item replace entity @s hotbar.4 with minecraft:paper[custom_name='{"italic":false,"text":"§6You can now PvP with players :D"}']
-item replace entity @s hotbar.5 with minecraft:paper[custom_name='{"italic":false,"text":"§6Shift for retro trapper simulator"}']
+execute as @s run function game:char/gardener/give/shift
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.6 with paper[custom_name='{"italic":false,"text":"§6Regain a life every 45 seconds"}']
 team join gardener @s
 item replace entity @s hotbar.8 with minecraft:potion[potion_contents={custom_color:16711918},custom_name='{"italic":false,"text":"§dLeave Game"}',hide_additional_tooltip={}]

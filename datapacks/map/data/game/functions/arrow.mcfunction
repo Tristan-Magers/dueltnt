@@ -8,7 +8,7 @@ execute as @s[type=arrow,scores={isBall=1}] at @s run playsound minecraft:entity
 execute as @s[type=arrow,scores={isBall=1}] at @s run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ .7 2
 
 #wizard powderize bow
-execute as @s[type=arrow,scores={isBall=2}] at @s run summon tnt ~ ~.5 ~ {fuse:20}
+execute as @s[type=arrow,scores={isBall=2}] at @s run summon tnt ~ ~.5 ~ {fuse:19}
 execute as @s[type=arrow,scores={isBall=2}] at @s unless block ~ ~ ~ air unless block ~ ~ ~ barrier run setblock ~ ~ ~ minecraft:yellow_concrete_powder
 execute as @s[type=arrow,scores={isBall=2}] at @s unless block ~1 ~ ~ air unless block ~1 ~ ~ barrier run setblock ~1 ~ ~ minecraft:yellow_concrete_powder
 execute as @s[type=arrow,scores={isBall=2}] at @s unless block ~ ~1 ~ air unless block ~ ~1 ~ barrier run setblock ~ ~1 ~ minecraft:yellow_concrete_powder

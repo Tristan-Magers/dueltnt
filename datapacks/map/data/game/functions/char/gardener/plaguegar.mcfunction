@@ -10,7 +10,7 @@ scoreboard players set @s ui_action_time 40
 
 scoreboard players set @s garboost 80
 # piss bow
-#item replace entity @s hotbar.0 with minecraft:bow{Damage:240,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§6Blast Jumper§r : Throw to switch\"}"},Enchantments:[{id:punch,lvl:3}]}
+function game:char/gardener/give/bow_boost
 
 playsound minecraft:item.trident.riptide_3 master @a ~ ~ ~ 1 2
 playsound minecraft:entity.player.levelup master @a ~ ~ ~ .7 1

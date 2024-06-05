@@ -65,5 +65,29 @@
     },
     "done": true
   },
+  "classes:class2": {
+    "criteria": {
+      "trapper": "2024-06-04 17:00:00 -0600"
+    },
+    "done": true
+  },
+  "classes:class3": {
+    "criteria": {
+      "trapper": "2024-06-04 17:05:31 -0600"
+    },
+    "done": true
+  },
+  "classes:class6": {
+    "criteria": {
+      "reaper": "2024-06-04 17:30:06 -0600"
+    },
+    "done": true
+  },
+  "classes:class9": {
+    "criteria": {
+      "overlord": "2024-06-04 17:37:42 -0600"
+    },
+    "done": true
+  },
   "DataVersion": 3839
 }
