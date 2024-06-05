@@ -48,7 +48,7 @@ item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] armor.c
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] armor.head with minecraft:leather_helmet[unbreakable={show_in_tooltip:false}]
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=2}] armor.chest with minecraft:diamond_chestplate[unbreakable={show_in_tooltip:false}]
 execute as @a[x=620,y=20,z=620,distance=..100,scores={class=4}] run function game:char/assassin/give/shift
-item replace entity @a[scores={class=4},x=620,y=20,z=620,distance=..100] hotbar.7 with minecraft:tipped_arrow[custom_name='{"italic":false,"text":"Magic Arrow"}',potion_contents={custom_color:6221823},hide_additional_tooltip={}] 2
+item replace entity @a[scores={class=4},x=620,y=20,z=620,distance=..100] hotbar.6 with minecraft:tipped_arrow[custom_name='{"italic":false,"text":"Magic Arrow"}',potion_contents={custom_color:6221823},hide_additional_tooltip={}] 2
 scoreboard players set @a[scores={class=4},x=620,y=20,z=620,distance=..100] bow -1
 
 execute as @a[scores={class=4},x=620,y=20,z=620,distance=..100] run function game:char/wizard/give/fireball
@@ -160,22 +160,25 @@ execute as @a[x=620,y=20,z=620,distance=..100,scores={class=8}] run function gam
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.7 with minecraft:arrow[custom_name='{"italic":false,"text":"Not your father\'s Blast Off"}']
 scoreboard players set @a[scores={class=8},x=620,y=20,z=620,distance=..100] bow 0
 scoreboard players set @a[scores={class=8},x=620,y=20,z=620,distance=..100] plaguetimer 160
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.4 with minecraft:paper[custom_name='{"italic":false,"text":"§6You can now PvP with players :D"}']
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=8}] run function game:char/gardener/give/pvp_paper
 execute as @a[x=620,y=20,z=620,distance=..100,scores={class=8}] run function game:char/gardener/give/shift
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=8}] hotbar.6 with minecraft:paper[custom_name='{"italic":false,"text":"§6Gain extra life every 45 seconds (if under max)"}']
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=8}] run function game:char/gardener/give/lives_paper
 team join gardener @a[x=620,y=20,z=620,distance=..100,scores={class=8}]
 #team leave @a[x=620,y=20,z=620,distance=..100,scores={class=9..}]
 #team leave @a[x=620,y=20,z=620,distance=..100,scores={class=..7}]
 
 execute as @a[scores={class=10},x=620,y=20,z=620,distance=..100] run function game:char/shard/give/bow
-item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.6 with arrow 3
-item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.1 with minecraft:egg[custom_name='{"italic":false,"text":"§3Frosty Poppy §f§r: Right-click (explodes on enemies)"}']
-item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.3 with minecraft:lime_dye[custom_name='{"italic":false,"text":"§3Ice Suck §f§r: Right-click"}']
+item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.5 with arrow 3
+
+execute as @a[scores={class=10},x=620,y=20,z=620,distance=..100] run function game:char/shard/give/frosty_poppy
+
+execute as @a[scores={class=10},x=620,y=20,z=620,distance=..100] run function game:char/shard/give/ice_suck
 #item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:yellow_dye[custom_name='{"italic":false,"text":"§3Snowman §f§r: Right-click"}']
 #item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:trident[custom_name='{"italic":false,"text":"§9Trident §f§r: Right-click"}']
-item replace entity @a[scores={class=10},x=620,y=20,z=620,distance=..100] hotbar.4 with minecraft:white_dye[custom_name='{"italic":false,"text":"§6Float §f§r: Right-click"}'] 3
 
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=10}] hotbar.5 with minecraft:paper[custom_name='{"italic":false,"text":"§6Crouch to blast forward [reloads on ground]"}']
+execute as @a[scores={class=10},x=620,y=20,z=620,distance=..100] run function game:char/shard/give/float {"amount":3}
+
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=10}] run function game:char/shard/give/shift
 
 scoreboard players set @a[scores={class=10},x=620,y=20,z=620,distance=..100] bow -2
 

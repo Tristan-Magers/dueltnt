@@ -22,7 +22,7 @@ execute as @s[scores={class=3,bow2=50..}] at @s run playsound minecraft:entity.i
 scoreboard players set @s[scores={class=3,bow2=50..},nbt={Inventory:[{id:"minecraft:arrow",Slot:6b}]}] bow -1
 scoreboard players set @s[scores={class=3,bow2=50..},nbt=!{Inventory:[{id:"minecraft:arrow",Slot:6b}]}] bow 25
 
-item replace entity @s[scores={class=4,bow=22}] hotbar.7 with tipped_arrow[custom_name='{"italic":false,"text":"Magic arrow"}',potion_contents={custom_color:6221823},hide_additional_tooltip={}] 2
+item replace entity @s[scores={class=4,bow=22}] hotbar.6 with tipped_arrow[custom_name='{"italic":false,"text":"Magic Arrow"}',potion_contents={custom_color:6221823},hide_additional_tooltip={}] 2
 execute as @s[scores={class=4,bow=21..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .45 2
 scoreboard players set @s[scores={class=4,bow=22..}] bow -1
 item replace entity @s[scores={class=5,bow=52..}] hotbar.6 with arrow 3
@@ -37,6 +37,6 @@ scoreboard players set @s[scores={class=7,bow=40..}] bow 0
 item replace entity @s[scores={class=8,bow=22..}] hotbar.7 with arrow[custom_name='{"italic":false,"text":"Not your father\'s Blast Off"}']
 execute as @s[scores={class=8,bow=22..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
 scoreboard players set @s[scores={class=8,bow=22..}] bow 0
-item replace entity @s[scores={class=10,bow=38..}] hotbar.6 with arrow 3
+item replace entity @s[scores={class=10,bow=38..}] hotbar.5 with arrow 3
 execute as @s[scores={class=10,bow=36..}] at @s run playsound minecraft:entity.item.pickup master @p ~ ~ ~ .4 2
 scoreboard players set @s[scores={class=10,bow=38..}] bow -1

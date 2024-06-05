@@ -36,6 +36,7 @@ execute as @s[scores={class=4}] at @s run function game:char/wizard/correct
 execute as @s[scores={class=5}] at @s run function game:char/mads/correct
 execute as @s[scores={class=6}] at @s run function game:char/reaper/correct
 execute as @s[scores={class=7}] at @s run function game:char/echo/correct
+execute as @s[scores={class=8}] at @s run function game:char/gardener/correct
 execute as @s[scores={class=9}] at @s run function game:char/overlord/correct
 execute as @s[scores={class=10}] at @s run function game:char/shard/correct
 

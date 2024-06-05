@@ -156,7 +156,7 @@ scoreboard players set @a[gamemode=adventure,scores={egguse=1..}] eggtimer 40
 scoreboard players set @a[gamemode=adventure,scores={egguse=1..}] egguse 0
 scoreboard players remove @a[gamemode=adventure,scores={eggtimer=-1..}] eggtimer 1
 #item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={eggtimer=1}] hotbar.1 with minecraft:egg[custom_name='{"italic":false,"text":"§3Frost Nade §f§r: Right-click"}']
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={eggtimer=1}] hotbar.1 with minecraft:yellow_dye[custom_name='{"italic":false,"text":"§3Snowman §f§r: Right-click"}']
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={eggtimer=1}] run function game:char/shard/give/snowman
 kill @e[tag=slime,name=AM,type=armor_stand]
 
 # potions
@@ -491,7 +491,7 @@ scoreboard players add @e[tag=frostsuck] frostl 0
 
 execute as @a[scores={class=10,frostsT=0},x=620,y=20,z=620,distance=..100] run function game:player/class_team
 execute as @a[scores={class=10,frostsT=0},x=620,y=20,z=620,distance=..100] run tellraw @a[gamemode=spectator,x=620,y=20,z=620,distance=..100] [{"selector":"@s"},{"text":" Reloaded ","color":"white"},{"text":"Ice Suck","color":"dark_aqua","bold":true}]
-item replace entity @a[scores={class=10,frostsT=0},x=620,y=20,z=620,distance=..100] hotbar.3 with minecraft:lime_dye[custom_name='{"italic":false,"text":"§3Ice Suck §f§r: Right-click"}']
+execute as @a[scores={class=10,frostsT=0},x=620,y=20,z=620,distance=..100] run function game:char/shard/give/ice_suck
 scoreboard players remove @e[scores={frostsT=-100..}] frostsT 1
 
 execute as @e[tag=frostplat] at @s run function game:char/shard/frostsuck/plat
@@ -500,8 +500,7 @@ execute as @e[tag=frostplat] at @s run function game:char/shard/frostsuck/plat
 execute as @e[tag=snowman] at @s run function game:char/shard/snowman/tick
 
 execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={click=1..},nbt={SelectedItem:{id:"minecraft:yellow_dye"}}] at @s run function game:char/shard/snowman/create
-#item replace entity @a[scores={class=10,snowmanT=0},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:yellow_dye[custom_name='{"italic":false,"text":"§6Snowman §f§r: Right-click"}']
-item replace entity @a[scores={class=10,snowmanT=0},x=620,y=20,z=620,distance=..100] hotbar.1 with minecraft:egg[custom_name='{"italic":false,"text":"§3Frosty Poppy §f§r: Right-click (explodes on enemies)"}']
+execute as @a[scores={class=10,snowmanT=0},x=620,y=20,z=620,distance=..100] run function game:char/shard/give/frosty_poppy
 scoreboard players remove @e[scores={snowmanT=-100..}] snowmanT 1
 
 #snowman bolt
@@ -527,7 +526,7 @@ execute as @e[type=minecraft:trident] run function game:char/shard/trident
 scoreboard players remove @a[scores={tridentT=0..}] tridentT 1
 scoreboard players set @a[scores={tridentuse=1..}] tridentT 112
 
-item replace entity @a[scores={class=10,tridentT=0},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:trident[custom_name='{"italic":false,"text":"§9Trident §f(hit players) §r: Right-click"}',attribute_modifiers={modifiers:[{type:"generic.attack_speed",name:"generic.attack_speed",amount:0.9,operation:"add_value",uuid:[I;2016337811,-1510259727,-1143610979,661859754],slot:"mainhand"},{type:"generic.attack_damage",name:"generic.attack_damage",amount:9,operation:"add_value",uuid:[I;-1708916597,1794000556,-1199725791,1224881908],slot:"mainhand"}],show_in_tooltip:false}]
+execute as @a[scores={class=10,tridentT=0},x=620,y=20,z=620,distance=..100] run function game:char/shard/give/trident
 scoreboard players set @a[scores={tridentuse=1..}] tridentuse 0
 execute as @e[tag=tntstorm] at @s run function game:char/shard/tntstorm
 

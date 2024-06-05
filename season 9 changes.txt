@@ -408,7 +408,7 @@ Shard
 - Snowman no longer blocks projectiles
 - Snowman shoots 0.1s faster between shots (0.4s -> 0.3s)
 - Trident reloads 0.5s faster at start (2.5s -> 2s)
-- Trident reloads 0.5s faster (6s -> 5.6s)
+- Trident reloads 0.4s faster (6s -> 5.6s)
 - Trident has one more entity of knockback at mid-distance
 - Trident explodes 0.2s after hit
 - Ice Suck reloads 0.5s faster (12s -> 11.5s)
