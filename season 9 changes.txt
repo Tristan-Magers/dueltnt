@@ -529,7 +529,7 @@ Shard
 - Using Float reloads shift
 - Respawning reloads shift
  
-Bug Fixes
+[Bug Fixes]
 - "Points" scoreboard would appear if no player actually had a point
 - Dark Pillar (repaer bow) didn't properly work with dummies
 - Fixed a variety of tags still being visible on the lore of items
@@ -542,3 +542,24 @@ Bug Fixes
 - Throwing laser spams spectator chat
 - Slimes and Creeper could get summoned in lobby in rare cases
 - Fixed bugs with UI stocks when in teams
+
+*Season 9.2.1 Update*
+
+Note: Small update for minecraft 1.21. I would rather release these features now since they are done.
+Update is focused on tweaking balance of 9.2 and fixing lingering bugs.
+
+[Game]
+- Game updated to version 1.21
+
+[Character Changes]
+
+Ghost
+- Primed for dark lasts 0.1s longer (3.5s -> 3.6s)
+
+Shard
+- Ice Suck reloads 0.25s faster (12s -> 11.75s)
+    - Note: This is the last time this changes I promise
+
+[Bug Fixes]
+- Fixed default advancements from showing up (lingering 1.20.5 bug)
+- Fixed enchantments on monsters in survival mode (lingering 1.20.5 bug)

@@ -1,6 +1,19 @@
 {
-  "pack": {
-    "pack_format": -2,
-    "description": "Datapack Fortress Frenzy"
-  }
+    "pack": {
+        "pack_format": 48,
+        "description": "Main datapack Duel TNT"
+    },
+    "filter": {
+        "block": [
+            {
+                "namespace": "minecraft",
+                "path": "recipe/.*"
+            },
+            {
+                "namespace": "minecraft",
+                "path": "advancement/.*"
+            }
+        ]
+    }
+    
 }
