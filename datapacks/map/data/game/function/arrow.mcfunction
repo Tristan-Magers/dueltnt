@@ -1,7 +1,7 @@
 function game:char/gardener/boosttrap
 
 #wizard fireball bow
-execute unless entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={isBall=1}] at @s run summon minecraft:fireball ~ ~4 ~ {Motion:[0.0d,0.0d,0.0d],Invulnerable:0b,Air:300s,OnGround:0b,Dimension:0,ExplosionPower:3,PortalCooldown:0,Rotation:[0.0f,0.0f],Fire:-1s,power:[0.0d,-0.3d,-0.0d],direction:[0.0d,-0.3d,0.0d]}
+execute unless entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={isBall=1}] at @s run summon minecraft:fireball ~ ~4 ~ {Motion:[0.0d,0.0d,0.0d],Invulnerable:0b,Air:300s,OnGround:0b,Dimension:0,ExplosionPower:3,PortalCooldown:0,Rotation:[0.0f,0.0f],Fire:-1s,acceleration_power:1d,direction:[0.0d,-0.3d,0.0d]}
 #execute if entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={isBall=1}] at @s run summon minecraft:fireball ~ ~1.2 ~ {Motion:[0.0d,0.0d,0.0d],Invulnerable:0b,Air:300s,OnGround:0b,Dimension:0,ExplosionPower:5,PortalCooldown:0,Rotation:[0.0f,0.0f],Fire:-1s,power:[0.0d,0.001d,-0.0d],direction:[0.0d,0.0d,0.0d]}
 #execute as @s[type=arrow,scores={isBall=1}] at @s positioned ~ ~1.2 ~ run data merge entity @e[type=minecraft:fireball,limit=1,sort=nearest] {power:[0.0d,0.0d,0.0d],Motion:[0.0d,0.0d,0.0d],direction:[0.0d,0.0d,0.0d]}
 execute as @s[type=arrow,scores={isBall=1}] at @s run playsound minecraft:entity.blaze.shoot master @a ~ ~ ~ .4 1.5

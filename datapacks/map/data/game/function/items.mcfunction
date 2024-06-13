@@ -472,9 +472,10 @@ scoreboard players add @e[type=pig] egg 1
 execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s run execute as @e[scores={egg=..1},limit=1,type=pig] at @s run teleport @p[scores={class=4,egg=1..}] ~ ~ ~
 execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s run tp @s @s
 tag @a[gamemode=adventure,scores={class=4,egg=1..}] add pig_place
+scoreboard players set @a[gamemode=adventure,scores={class=4,egg=1..}] pig 31
 execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s if block ~ ~-1 ~ air run effect give @s levitation 1 15 true
 execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s if block ~ ~-1 ~ air run scoreboard players set @s nolev 6
-scoreboard players set @a[gamemode=adventure,scores={class=4,egg=1..}] pig 31
+execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s unless block ~ ~-1 ~ air run scoreboard players set @s pig 21
 scoreboard players set @a[gamemode=adventure,scores={class=4}] egg 0
 execute as @e[type=pig] at @s run data merge entity @s {Invulnerable:1}
 scoreboard players set @e[type=pig,scores={egg=..1}] pig 41

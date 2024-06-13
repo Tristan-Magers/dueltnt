@@ -551,10 +551,18 @@ Update is focused on tweaking balance of 9.2 and fixing lingering bugs.
 [Game]
 - Game updated to version 1.21
 
+[General]
+- Custom Random menu shows maps that are tournament legal with "competitive" tag
+
 [Character Changes]
 
 Ghost
 - Primed for dark lasts 0.1s longer (3.5s -> 3.6s)
+
+Wizard
+- Pig explodes 0.5s faster if placed on top of a block (1.5s -> 1s)
+- Ghost Creeper isn't impacted by gravity after being ignited (quality of life)
+- Note: Fireball physics updated to 1.21 and therefore is very slightly different
 
 Shard
 - Ice Suck reloads 0.25s faster (12s -> 11.75s)
