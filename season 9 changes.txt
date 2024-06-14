@@ -435,6 +435,7 @@ Shard
 - Game updated to version 1.20.6
 
 [General]
+- Updated tournament hall with three new events
 - Added item descriptions for each item in lore
 
 [Character Changes]
