@@ -3,7 +3,7 @@ clear @s[scores={masterc=25..}] stone_pickaxe
 clear @s[scores={masterc=25..}] iron_pickaxe
 clear @s[scores={masterc=25..}] golden_pickaxe
 clear @s[scores={masterc=25..}] diamond_pickaxe
-item replace entity @s[scores={masterc=25..}] hotbar.0 with blaze_rod[custom_name='{"italic":false,"text":"§9On Cooldown"}',lore=['{"italic":false,"color":"white","text":"Mines 3 blocks for material"}']]
+item replace entity @s[scores={masterc=25..}] hotbar.0 with blaze_rod[custom_name='{"italic":false,"text":"§9On Cooldown"}',lore=['{"italic":false,"color":"white","text":"Mines 3 blocks for material"}','{"italic":false,"color":"white","text":"Reload: 2.5s"}','{"italic":false,"color":"white","text":"Offhand/Throw to Gather"}','{"italic":false,"color":"white","text":"Gather reload: 10s"}']]
 execute as @s[scores={masterc=25..}] at @s run playsound minecraft:item.shield.break master @a ~ ~ ~ 1 0
 execute as @s[scores={masterc=25..}] at @s run playsound minecraft:item.shield.break master @a ~ ~ ~ 1 1.2
 execute as @s[scores={masterc=25..}] at @s run particle minecraft:campfire_signal_smoke ~ ~1 ~ 0.5 0.3 0.5 0 10 force

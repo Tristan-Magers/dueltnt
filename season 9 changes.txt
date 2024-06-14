@@ -571,3 +571,4 @@ Shard
 [Bug Fixes]
 - Fixed default advancements from showing up (lingering 1.20.5 bug)
 - Fixed enchantments on monsters in survival mode (lingering 1.20.5 bug)
+- Added missing information on Overlord wand
