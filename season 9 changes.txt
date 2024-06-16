@@ -445,7 +445,7 @@ Soldier
 - Air Nade sharts breaking 0.1s faster (0.3s -> 0.2s)
     - Note: still takes 0.35s to break full radius
 - Air Nade vertical collision detection improved
-- Mega Bomb reloads 0.5s faster
+- Mega Bomb reloads 0.5s faster (8s - 7.5s)
 - 5 less max shifts (10 -> 5)
 - Shifts reload 0.75s slower each (2.25s -> 3.0s)
 - Shifts reload  x3 faster on ground
@@ -557,6 +557,9 @@ Update is focused on tweaking balance of 9.2 and fixing lingering bugs.
 
 [Character Changes]
 
+Soldier
+- Mega Bomb reloads 0.25s slower (7.5s - 7.75s)
+
 Ghost
 - Primed for dark lasts 0.1s longer (3.5s -> 3.6s)
 
@@ -564,6 +567,10 @@ Wizard
 - Pig explodes 0.5s faster if placed on top of a block (1.5s -> 1s)
 - Ghost Creeper isn't impacted by gravity after being ignited (quality of life)
 - Note: Fireball physics updated to 1.21 and therefore is very slightly different
+
+Gardener
+- Plague reloads 1s faster if you hit yourself (10s -> 9s)
+- Shift reloads 0.25s faster (2.75s -> 2.5s)
 
 Shard
 - Ice Suck reloads 0.25s faster (12s -> 11.75s)

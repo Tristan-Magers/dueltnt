@@ -119,7 +119,7 @@ execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s 
 execute if entity @e[scores={mode=1}] run execute as @s[scores={class=8}] at @s run effect give @s slow_falling 2 2
 
 #xp add @s[scores={class=8,timer=1}] 45 levels
-scoreboard players set @s[scores={class=8,timer=1}] shift_cool 55
+scoreboard players set @s[scores={class=8,timer=1}] shift_cool 50
 
 execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {NoGravity:1,fuse:4}
 execute as @s[scores={class=10}] at @s positioned ~ ~.36 ~ run summon tnt ^ ^ ^-.36 {NoGravity:1,fuse:4}

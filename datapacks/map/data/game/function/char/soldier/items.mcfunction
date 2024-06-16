@@ -1,5 +1,5 @@
 # mega bomb
-scoreboard players set @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:kelp"}}] BBtimer 150
+scoreboard players set @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:kelp"}}] BBtimer 155
 execute as @s[scores={BBtimer=-10..}] at @s run function game:items/megab
 execute as @s[scores={class=0}] at @s run function game:char/soldier/megabombtrigger
 

@@ -40,3 +40,5 @@ data remove storage shuba_fix amount
 #item replace entity @s[x=620,y=20,z=620,distance=..100,scores={gravuse=11}] hotbar.3 with minecraft:stone_pressure_plate[custom_name='{"italic":false,"text":"§7Grave Trap §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"creeper",ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"Bomb",Health:500,ExplosionRadius:4}] 1
 
 tag @s add boosted
+
+scoreboard players remove @s[scores={plaguetimer=22..}] plaguetimer 20
