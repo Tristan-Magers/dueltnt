@@ -23,6 +23,6 @@ scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:iron_hoe",Slot:1b}]},s
 
 #> Paper shift display correction because it's necessary for phantom jump cosmetic to work
 # Implemented by TheViralMelon
-execute as 3184a2a5-8544-4135-89ec-e63fd7a3f12f unless items entity @s hotbar.7 minecraft:paper run function game:tournament_rewards/toggle_cosmetic {fakeplayer:"#woa1PhantomJump"}
+execute as @s[nbt={UUID:[I;830775973,-2059124427,-1980963265,-677121745]}] unless items entity @s hotbar.7 minecraft:paper run function game:tournament_rewards/toggle_cosmetic {fakeplayer:"#woa1PhantomJump"}
 clear @s[nbt=!{Inventory:[{id:"minecraft:paper",Slot:7b}]}] paper
 execute as @s[nbt=!{Inventory:[{id:"minecraft:paper",Slot:7b}]}] run function game:char/reaper/give/paper
