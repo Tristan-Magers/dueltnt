@@ -257,6 +257,7 @@ scoreboard players set @a tridentT 0
 scoreboard players set @a[scores={class=10}] tridentT 40
 
 scoreboard players set @a feather_cooldown 0
+scoreboard players set #woa1PJumpTimer .num 0
 scoreboard players set @a float_cooldown 0
 
 scoreboard players set @a ender 0
