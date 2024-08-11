@@ -23,5 +23,17 @@
     },
     "done": true
   },
-  "DataVersion": 3953
+  "classes:class0": {
+    "criteria": {
+      "trapper": "2024-07-20 20:57:13 -0600"
+    },
+    "done": true
+  },
+  "classes:class10": {
+    "criteria": {
+      "overlord": "2024-07-20 21:45:12 -0600"
+    },
+    "done": true
+  },
+  "DataVersion": 3955
 }
