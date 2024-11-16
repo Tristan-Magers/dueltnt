@@ -26,12 +26,12 @@ scoreboard players set @a[scores={PlaceMine=1,PlaceMineTime=1..}] PlaceMineTime 
 scoreboard players set @a[scores={PlaceMine=1,PlaceMineTime=1..}] PlaceMine 0
 
 tag @a[scores={PlaceMine=1,PlaceMineTime=0}] add plm1
-scoreboard players set @a[tag=plm1] PlaceMineTime 137
+scoreboard players set @a[tag=plm1] PlaceMineTime 139
 scoreboard players set @a[tag=plm1] PlaceMine 0
 tag @a remove plm1
 
-execute as @a[x=600,y=60,z=600,distance=3..95,scores={PlaceMineTime=138}] run function game:char/trapper/give/mines {count:1}
-execute as @a[x=600,y=60,z=600,distance=3..95,scores={PlaceMineTime=76}] run function game:char/trapper/give/mines {count:2}
+execute as @a[x=600,y=60,z=600,distance=3..95,scores={PlaceMineTime=140}] run function game:char/trapper/give/mines {count:1}
+execute as @a[x=600,y=60,z=600,distance=3..95,scores={PlaceMineTime=80}] run function game:char/trapper/give/mines {count:2}
 execute as @a[scores={HoldMine=1..}] at @s run effect give @s blindness 1
 execute as @e[type=item,scores={Mine=..0}] at @s run tp @e[distance=..0,limit=1,scores={Mine=..0}] @p
 scoreboard players add @e[type=item] egg 1
@@ -41,7 +41,7 @@ kill @e[type=item,scores={egg=30..},nbt={Item:{id:"minecraft:nether_star"}}]
 kill @e[type=item,scores={egg=100..},nbt={Item:{id:"minecraft:tnt"}}]
 execute as @e[type=item,scores={Mine=2..}] at @s run data merge entity @s {NoGravity:1,Invulnerable:1,Item:{count:64}}
 
-execute as @a at @s run execute as @e[limit=1,type=item,scores={Mine=2..,egg=6},distance=..20] at @s run summon magma_cube ~ ~ ~ {NoGravity:1,NoAI:0,Invulnerable:1,Size:2,CustomName:'{"text":"star"}',Silent:1,Attributes:[{Name:"generic.followRange",Base:0},{Name:"generic.movementSpeed",Base:0}]}
+execute as @a at @s run execute as @e[limit=1,type=item,scores={Mine=2..,egg=6},distance=..20] at @s run summon magma_cube ~ ~ ~ {NoGravity:1,NoAI:0,Invulnerable:1,Size:2,CustomName:'{"text":"star"}',Silent:1,Attributes:[{Name:"followRange",Base:0},{Name:"movementSpeed",Base:0}]}
 execute as @e[type=magma_cube] at @s run data merge entity @s {Motion:[0.0d,0.0d,0.0d]}
 execute as @e[type=magma_cube] at @s run tp @s ~ ~ ~ 0 0
 effect give @e[type=magma_cube] invisibility 1 0 true

@@ -11,8 +11,8 @@ execute as @s at @s run execute store result score @s x run data get entity @s M
 execute as @s at @s run execute store result score @s y run data get entity @s Motion[1] 100
 execute as @s at @s run execute store result score @s z run data get entity @s Motion[2] 100
 
-execute as @s at @s run summon creeper ~ ~ ~ {Invulnerable:1,ignited:1,powered:1,Fuse:7,Attributes:[{Name:generic.followRange,Base:0},{Name:generic.movementSpeed,Base:0}],Tags:["newmotme"],Motion:[0.0,0.0,0.0],NoGravity:1}
-execute as @s at @s run summon creeper ~ ~ ~ {Invulnerable:1,ignited:1,powered:1,Fuse:7,Attributes:[{Name:generic.followRange,Base:0},{Name:generic.movementSpeed,Base:0}],Tags:["newmotme"],Motion:[0.0,0.0,0.0],NoGravity:1}
+execute as @s at @s run summon creeper ~ ~ ~ {Invulnerable:1,ignited:1,powered:1,Fuse:7,Attributes:[{Name:followRange,Base:0},{Name:movementSpeed,Base:0}],Tags:["newmotme"],Motion:[0.0,0.0,0.0],NoGravity:1}
+execute as @s at @s run summon creeper ~ ~ ~ {Invulnerable:1,ignited:1,powered:1,Fuse:7,Attributes:[{Name:followRange,Base:0},{Name:movementSpeed,Base:0}],Tags:["newmotme"],Motion:[0.0,0.0,0.0],NoGravity:1}
 
 team join noCol @e[tag=newmotme]
 

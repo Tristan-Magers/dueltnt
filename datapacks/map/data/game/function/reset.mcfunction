@@ -28,6 +28,9 @@ setblock 490 27 564 minecraft:blue_glazed_terracotta[facing=north]
 scoreboard objectives remove NewPlay
 scoreboard objectives add NewPlay dummy
 
+scoreboard objectives remove class
+scoreboard objectives add class dummy
+
 #
 scoreboard players set .part_1 .part_unlock 1
 scoreboard players set .part_2 .part_unlock 1

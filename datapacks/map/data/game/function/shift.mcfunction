@@ -3,7 +3,7 @@
 execute as @s[scores={class=4}] at @s run effect give @p blindness 1 0 true
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!pig] at @s run summon lightning_bolt
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4}] at @s run function game:char/wizard/creeptest
-execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run summon creeper ~ ~.5 ~ {Invulnerable:1,powered:1,ignited:1,Fuse:9999,Attributes:[{Name:"generic.followRange",Base:0},{Name:"generic.movementSpeed",Base:0}],Tags:["wizcreep"]}
+execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run summon creeper ~ ~.5 ~ {Invulnerable:1,powered:1,ignited:1,Fuse:9999,Attributes:[{Name:"followRange",Base:0},{Name:"movementSpeed",Base:0}],Tags:["wizcreep"]}
 scoreboard players add @e[type=minecraft:creeper] tntID 0
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run scoreboard players operation @e[limit=1,sort=nearest,type=minecraft:creeper,scores={tntID=0}] tntID = @s tntID
 execute as @s[x=600,y=60,z=600,distance=..100,scores={class=4},tag=!hascreep] at @s run clear @s gray_dye

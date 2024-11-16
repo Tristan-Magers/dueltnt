@@ -110,10 +110,10 @@ execute as @e[type=tnt,nbt={fuse:1s}] at @s run scoreboard players set @a[gamemo
 #slime
 tag @e[name=SM,type=minecraft:marker] add slimerpro
 execute as @e[type=snowball] at @s run kill @e[distance=..8,name=SM,type=minecraft:marker,limit=1,sort=nearest]
-execute as @e[type=snowball] at @s run summon minecraft:marker ~ ~ ~ {CustomName:'{"italic":false,"text":"SM"}',Invulnerable:1,Marker:1,Silent:1,NoGravity:1,Invisible:1,Attributes:[{Name:"generic.knockback_resistance",Base:0.6d}]}
+execute as @e[type=snowball] at @s run summon minecraft:marker ~ ~ ~ {CustomName:'{"italic":false,"text":"SM"}',Invulnerable:1,Marker:1,Silent:1,NoGravity:1,Invisible:1,Attributes:[{Name:"knockback_resistance",Base:0.6d}]}
 execute as @e[tag=slimerpro] at @s run function game:cprojectile/correct_landing
-execute as @e[tag=slimerpro,scores={slimetime=..0}] at @s run summon slime ~ ~-1 ~ {Size:3,NoGravity:1,CustomName:'{"italic":false,"text":"slimer"}',Tags:["slimer"],Attributes:[{Name:"generic.knockback_resistance",Base:0.6d}]}
-execute as @e[tag=slimerpro,scores={slimetime=1}] at @s run summon slime ~ ~-1 ~ {Size:4,NoGravity:1,CustomName:'{"italic":false,"text":"slimer"}',Tags:["slimer"],Attributes:[{Name:"generic.knockback_resistance",Base:0.6d}]}
+execute as @e[tag=slimerpro,scores={slimetime=..0}] at @s run summon slime ~ ~-1 ~ {Size:3,NoGravity:1,CustomName:'{"italic":false,"text":"slimer"}',Tags:["slimer"],Attributes:[{Name:"knockback_resistance",Base:0.6d}]}
+execute as @e[tag=slimerpro,scores={slimetime=1}] at @s run summon slime ~ ~-1 ~ {Size:4,NoGravity:1,CustomName:'{"italic":false,"text":"slimer"}',Tags:["slimer"],Attributes:[{Name:"knockback_resistance",Base:0.6d}]}
 execute as @e[tag=slimerpro,scores={slimetime=2}] at @s run summon slime ~ ~-1 ~ {Size:6,NoGravity:1,CustomName:'{"italic":false,"text":"slimer"}',Tags:["slimer"]}
 execute as @e[tag=slimerpro,scores={slimetime=2}] at @s run effect give @e[type=slime,distance=..10] minecraft:resistance 999 10 true
 execute as @e[type=snowball] at @s run execute as @a[gamemode=adventure,distance=..3,scores={snow=..0,snowReset=..94}] at @s run kill @e[type=snowball,distance=..2]
@@ -525,7 +525,7 @@ execute as @a[scores={tridentuse=1..}] run scoreboard players operation @e[type=
 execute as @e[type=minecraft:trident] run function game:char/shard/trident
 
 scoreboard players remove @a[scores={tridentT=0..}] tridentT 1
-scoreboard players set @a[scores={tridentuse=1..}] tridentT 112
+scoreboard players set @a[scores={tridentuse=1..}] tridentT 116
 
 execute as @a[scores={class=10,tridentT=0},x=620,y=20,z=620,distance=..100] run function game:char/shard/give/trident
 scoreboard players set @a[scores={tridentuse=1..}] tridentuse 0

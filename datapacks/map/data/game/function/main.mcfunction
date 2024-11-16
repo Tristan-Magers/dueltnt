@@ -397,7 +397,7 @@ tag @a[scores={NewPlay=2}] remove red
 tag @a[scores={NewPlay=2}] remove green
 tag @a[scores={NewPlay=2}] add blue
 scoreboard players set @a[scores={NewPlay=2}] particle 0
-scoreboard players set @a[scores={NewPlay=2}] class 1
+execute as @a[scores={NewPlay=2}] unless entity @s[scores={class=0..}] run scoreboard players set @s class 1
 scoreboard players set @a[scores={NewPlay=2}] Invis 0
 tp @a[scores={NewPlay=1..40}] 14 4 1
 scoreboard players set @a[scores={NewPlay=1..2}] ingame 0

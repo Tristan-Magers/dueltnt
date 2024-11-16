@@ -37,7 +37,7 @@ tp @e[type=creeper,x=496,y=20,z=520,distance=..60] ~ -1000 ~
 tp @e[type=slime,x=496,y=20,z=520,distance=..60] ~ -1000 ~
 kill @e[tag=mastertnt,x=496,y=20,z=520,distance=..60]
 kill @e[name=acid,x=496,y=20,z=520,distance=..60]
-execute as @a[x=496,y=20,z=520,distance=..60] at @s run attribute @p minecraft:generic.movement_speed base set .1
+execute as @a[x=496,y=20,z=520,distance=..60] at @s run attribute @p minecraft:movement_speed base set .1
 
 #master portal
 execute as @e[name=menu,scores={mastercut=0}] at @s run particle minecraft:falling_water 495.51 26.60 564.52 1.5 1.5 .15 0 2 force

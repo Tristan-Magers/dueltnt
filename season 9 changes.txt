@@ -584,20 +584,20 @@ Shard
 *Season 9.2.2 Update*
 
 [Game]
-- Game updated to version 1.21.1
+- Game updated to version 1.21.3
 
 [Character Changes]
 
 Trapper
-- *Mines reload 0.1s faster (3.1s -> 3s)
+- Mines reload 0.1s faster (3.1s -> 3s)
 
 Gardener
 - Extra lives reload 5s faster (45s -> 40s)
 
 Shard
-- *Trident reloads 0.2s slower (5.6s -> 5.8s)
+- Trident reloads 0.2s slower (5.6s -> 5.8s)
 
 [Bug Fixes]
 - Throwing multiple smoke bombs could delete the tnt
 - Smoke bombs could summon tnt while moving quickly
-- *Re-watching intro would reset your class and particle
+- Re-watching intro would reset your class and particle
