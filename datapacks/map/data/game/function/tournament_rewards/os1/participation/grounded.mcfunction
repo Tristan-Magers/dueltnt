@@ -1,0 +1,2 @@
+execute if score #trVal .num matches 3..10 run particle dust{color:[0.4,0.3,0.1],scale:1.5} ~ ~ ~ 0.2 0 0.2 0 1 force @a
+execute if score #trVal .num matches 8..10 run function game:tournament_rewards/os1/participation/root_calc

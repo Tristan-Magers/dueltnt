@@ -2,7 +2,7 @@
 # Implemented by TheViralMelon
 
 # Calculations
-execute store result score #woa1Val .num run random value 1..10
+execute store result score #trVal .num run random value 1..10
 
 scoreboard players add #woa1DoublesCycle .num 75
 execute if score #woa1DoublesCycle .num matches 3600.. run scoreboard players set #woa1DoublesCycle .num 0
@@ -18,3 +18,6 @@ tag @s remove woa1SinglesSwap
 execute as @s[scores={particle=900}] at @s rotated ~ 0 run function game:tournament_rewards/woa1/participation
 execute as @s[scores={particle=902}] at @s rotated ~ 0 positioned ^ ^ ^-0.4 run execute positioned ~ ~1 ~ rotated ~90 ~ run function game:tournament_rewards/woa1/doubles with storage game:woa1 doublesCycle
 execute as @s[scores={particle=901,woa1SinglesTimer=0..}] at @s rotated ~ 0 positioned ^ ^ ^-0.4 run function game:tournament_rewards/woa1/singles
+
+execute as @s[scores={particle=903}] at @s rotated ~ 0 positioned ^ ^ ^-0.3 run function game:tournament_rewards/os1/participation/main
+execute as @s[scores={particle=904}] at @s rotated ~ 0 run function game:tournament_rewards/os1/singles/main

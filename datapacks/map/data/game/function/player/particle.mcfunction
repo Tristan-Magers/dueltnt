@@ -141,6 +141,9 @@ scoreboard players operation #rubixRot particle = #haloTicks particle
 execute as @s[scores={particle=26}] at @s rotated 0 0 positioned ~ ~.2 ~ run function game:player/particle/halo2
 execute as @s[scores={particle=26}] at @s rotated ~ 0 positioned ~ ~1.6 ~ run function game:player/particle/halo_top
 
+#>GGC3 Particle
+execute if entity @s[scores={particle=500}] run function game:player/particle/ggc3
+
 #> Tournament Particles
 execute if entity @a[scores={particle=900..}] run function game:tournament_rewards/particle
 

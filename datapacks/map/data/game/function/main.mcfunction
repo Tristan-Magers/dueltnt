@@ -396,7 +396,7 @@ stopsound @a[scores={NewPlay=1}]
 tag @a[scores={NewPlay=2}] remove red
 tag @a[scores={NewPlay=2}] remove green
 tag @a[scores={NewPlay=2}] add blue
-scoreboard players set @a[scores={NewPlay=2}] particle 0
+execute as @a[scores={NewPlay=2}] unless entity @s[scores={particle=1..}] run scoreboard players set @s particle 0
 execute as @a[scores={NewPlay=2}] unless entity @s[scores={class=0..}] run scoreboard players set @s class 1
 scoreboard players set @a[scores={NewPlay=2}] Invis 0
 tp @a[scores={NewPlay=1..40}] 14 4 1

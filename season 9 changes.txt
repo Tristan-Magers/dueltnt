@@ -586,6 +586,9 @@ Shard
 [Game]
 - Game updated to version 1.21.3
 
+[General]
+- Updated tournament hall with two new events
+
 [Character Changes]
 
 Trapper
