@@ -115,13 +115,18 @@ execute as @e[tag=slimerpro] at @s run function game:cprojectile/correct_landing
 execute as @e[tag=slimerpro,scores={slimetime=..0}] at @s run summon slime ~ ~-1 ~ {Size:3,NoGravity:1,CustomName:'{"italic":false,"text":"slimer"}',Tags:["slimer"],Attributes:[{Name:"knockback_resistance",Base:0.6d}]}
 execute as @e[tag=slimerpro,scores={slimetime=1}] at @s run summon slime ~ ~-1 ~ {Size:4,NoGravity:1,CustomName:'{"italic":false,"text":"slimer"}',Tags:["slimer"],Attributes:[{Name:"knockback_resistance",Base:0.6d}]}
 execute as @e[tag=slimerpro,scores={slimetime=2}] at @s run summon slime ~ ~-1 ~ {Size:6,NoGravity:1,CustomName:'{"italic":false,"text":"slimer"}',Tags:["slimer"]}
+
 execute as @e[tag=slimerpro,scores={slimetime=2}] at @s run effect give @e[type=slime,distance=..10] minecraft:resistance 999 10 true
 execute as @e[type=snowball] at @s run execute as @a[gamemode=adventure,distance=..3,scores={snow=..0,snowReset=..94}] at @s run kill @e[type=snowball,distance=..2]
 scoreboard players add @e[type=slime] time 1
 execute as @e[type=slime,scores={time=40..},tag=slimer] at @s run summon tnt ~ ~ ~ {fuse:2}
+execute as @e[type=slime,scores={time=40..},tag=slimer] run data merge entity @s {Size:1,Invulnerable:0,Health:1}
 tp @e[type=slime,scores={time=40..},tag=slimer] ~ ~-2000 ~
+#kill @e[type=slime,scores={time=40..},tag=slimer]
 
+execute as @e[type=slime,scores={time=60..}] run data merge entity @s {Size:1,Invulnerable:0,Health:1}
 tp @e[type=slime,scores={time=60..}] ~ ~-2000 ~
+#kill @e[type=slime,scores={time=60..}]
 execute as @e[tag=slimerpro] at @s run playsound minecraft:entity.slime.attack master @a
 kill @e[tag=slimerpro]
 scoreboard players add @e[type=snowball] slimetime 1
@@ -528,7 +533,7 @@ scoreboard players remove @a[scores={tridentT=0..}] tridentT 1
 scoreboard players set @a[scores={tridentuse=1..}] tridentT 116
 
 execute as @a[scores={class=10,tridentT=0},x=620,y=20,z=620,distance=..100] run function game:char/shard/give/trident
-scoreboard players set @a[scores={tridentuse=1..}] tridentuse 0
+#scoreboard players set @a[scores={tridentuse=1..}] tridentuse 0
 execute as @e[tag=tntstorm] at @s run function game:char/shard/tntstorm
 
 #power shield

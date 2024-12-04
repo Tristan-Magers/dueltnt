@@ -1,0 +1,27 @@
+{
+  "classes:root": {
+    "criteria": {
+      "warrior": "2024-11-27 20:41:01 -0700"
+    },
+    "done": true
+  },
+  "survival:root": {
+    "criteria": {
+      "warrior": "2024-11-27 20:41:01 -0700"
+    },
+    "done": true
+  },
+  "delta:player_setup": {
+    "criteria": {
+      "requirement": "2024-11-27 20:41:01 -0700"
+    },
+    "done": true
+  },
+  "particle:root": {
+    "criteria": {
+      "warrior": "2024-11-27 20:41:01 -0700"
+    },
+    "done": true
+  },
+  "DataVersion": 4082
+}

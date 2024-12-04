@@ -11,7 +11,7 @@ clear @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:yellow_
 scoreboard players set @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:yellow_dye",Slot:1b}]},nbt=!{Inventory:[{id:"minecraft:egg",Slot:1b}]},scores={snowmanT=..-10,eggtimer=..-1}] snowmanT 20
 
 clear @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:trident",Slot:2b}]}] trident
-scoreboard players set @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:trident",Slot:2b}]},scores={tridentT=..0}] tridentT 2
+scoreboard players set @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:trident",Slot:2b}]},scores={tridentT=..0}] tridentT 116
 
 clear @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:lime_dye",Slot:3b}]}] lime_dye
 scoreboard players set @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:lime_dye",Slot:3b}]},scores={frostsT=..-1}] frostsT 2

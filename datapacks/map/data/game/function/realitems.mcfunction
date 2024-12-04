@@ -51,7 +51,9 @@ execute as @e[type=item,scores={Mine=2..,egg=6..}] at @s positioned ~ ~-.4 ~ run
 tp @e[type=magma_cube,tag=!star] ~ ~-1000 ~
 effect give @e[type=magma_cube] glowing
 
+execute as @e[type=magma_cube,limit=1,scores={egg=288..}] run data merge entity @s {Size:1,Invulnerable:0,Health:1}
 tp @e[type=magma_cube,limit=1,scores={egg=288..}] ~ ~-2000 ~
+#kill @e[type=magma_cube,limit=1,scores={egg=288..}]
 effect give @e[type=magma_cube] invisibility 5 1 true
 scoreboard players add @e[type=magma_cube] egg 1
 tag @e[type=item,nbt={Item:{id:"bow"}}] add killI

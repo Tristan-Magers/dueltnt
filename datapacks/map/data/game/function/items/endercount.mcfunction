@@ -95,4 +95,6 @@ execute as @s[scores={enderct=1,class=2}] run scoreboard players set @s nolev 12
 
 execute as @s[x=600,y=60,z=600,distance=6..100,scores={enderct=1}] run playsound entity.enderman.teleport master @a
 
+execute as @s[scores={enderct=1}] at @s run tp @s @s
+
 scoreboard players operation @s enderct = @s enderc

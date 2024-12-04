@@ -1,27 +1,27 @@
 {
   "delta:player_setup": {
     "criteria": {
-      "requirement": "2024-11-16 17:39:48 -0700"
+      "requirement": "2024-12-03 16:47:32 -0700"
     },
     "done": true
   },
   "survival:root": {
     "criteria": {
-      "warrior": "2024-11-16 17:39:48 -0700"
+      "warrior": "2024-12-03 16:47:32 -0700"
     },
     "done": true
   },
   "particle:root": {
     "criteria": {
-      "warrior": "2024-11-16 17:39:48 -0700"
+      "warrior": "2024-12-03 16:47:32 -0700"
     },
     "done": true
   },
   "classes:root": {
     "criteria": {
-      "warrior": "2024-11-16 17:39:48 -0700"
+      "warrior": "2024-12-03 16:47:32 -0700"
     },
     "done": true
   },
-  "DataVersion": 4082
+  "DataVersion": 4189
 }

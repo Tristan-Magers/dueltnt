@@ -1,7 +1,7 @@
 clear @s gold_ore 6
 scoreboard players remove @s masterb 6
 
-scoreboard players set @s master_bomb_cooldown 30
+scoreboard players set @s master_bomb_cooldown 24
 
 summon minecraft:armor_stand ~ ~ ~ {Small:1,Marker:0,Invulnerable:1,Tags:["mastertnt","newbomb"],Invisible:1,ArmorItems:[{},{},{},{id:"air",count:1}],DisabledSlots:4144959}
 
