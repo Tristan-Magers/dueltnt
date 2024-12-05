@@ -581,7 +581,8 @@ Shard
 - Fixed enchantments on monsters in survival mode (lingering 1.20.5 bug)
 - Added missing information on Overlord wand
 
-*Season 9.2.2 Update*
+*Season 9.2.2-3-4 Update*
+Note: Minecraft game updates foced this update to be a rapid succession of micro updates
 
 [Game]
 - Game updated to version 1.21.3
@@ -601,6 +602,8 @@ Gardener
 - Extra lives reload 5s faster (45s -> 40s)
 
 Overlord
+- Master Wand needs to miss twice before it starts breaking (previously once)
+- Reloading/Upgrading Master Wand resets two misses you need to damage wand
 - Matter Bomb reload is 0.3s faster (1.5s -> 1.2s)
 
 Shard

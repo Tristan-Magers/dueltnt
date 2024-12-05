@@ -54,9 +54,10 @@ tag @s[tag=mw1] add mw
 tag @s[tag=mw2] add mw
 
 tag @s[tag=wand_success] remove wand_fail_streak
+tag @s[tag=wand_success] remove wand_fail_streak2
 
 scoreboard players add @s[tag=wand_success] masterc 1
-scoreboard players add @s[tag=!wand_success,tag=wand_fail_streak] masterc 1
+scoreboard players add @s[tag=!wand_success,tag=wand_fail_streak2] masterc 1
 item replace entity @s[scores={masterc=25..}] hotbar.0 with blaze_rod[custom_name='{"italic":false,"text":"§9On Cooldown"}']
 clear @s[scores={masterc=25..}] wooden_shovel
 clear @s[scores={masterc=25..}] stone_shovel
@@ -65,9 +66,10 @@ clear @s[scores={masterc=25..}] golden_shovel
 clear @s[scores={masterc=25..}] diamond_shovel
 
 execute as @s[tag=wand_success] run function game:char/overlord/masterwanduse
-execute as @s[tag=!wand_success,tag=wand_fail_streak] run function game:char/overlord/masterwanduse
+execute as @s[tag=!wand_success,tag=wand_fail_streak2] run function game:char/overlord/masterwanduse
 
-tag @s[tag=!wand_success] add wand_fail_streak
+tag @s[tag=!wand_success,tag=wand_fail_streak] add wand_fail_streak2
+tag @s[tag=!wand_success,tag=!wand_fail_streak] add wand_fail_streak
 
 tag @s remove wand_success
 

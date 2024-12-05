@@ -7,3 +7,6 @@ item replace entity @s[scores={masterup=4..}] hotbar.0 with diamond_pickaxe[cust
 playsound minecraft:item.trident.return master @a ~ ~ ~ 0.5 2
 playsound minecraft:item.bundle.insert master @a
 playsound minecraft:item.armor.equip_netherite master @a
+
+tag @s remove wand_fail_streak
+tag @s remove wand_fail_streak2
