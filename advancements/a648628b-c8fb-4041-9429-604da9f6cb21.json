@@ -1,25 +1,25 @@
 {
   "delta:player_setup": {
     "criteria": {
-      "requirement": "2024-12-04 18:48:39 -0700"
+      "requirement": "2025-01-11 13:23:36 -0700"
     },
     "done": true
   },
   "survival:root": {
     "criteria": {
-      "warrior": "2024-12-04 18:48:39 -0700"
+      "warrior": "2025-01-11 13:23:36 -0700"
     },
     "done": true
   },
   "particle:root": {
     "criteria": {
-      "warrior": "2024-12-04 18:48:39 -0700"
+      "warrior": "2025-01-11 13:23:36 -0700"
     },
     "done": true
   },
   "classes:root": {
     "criteria": {
-      "warrior": "2024-12-04 18:48:39 -0700"
+      "warrior": "2025-01-11 13:23:36 -0700"
     },
     "done": true
   },
