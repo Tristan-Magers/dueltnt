@@ -494,3 +494,6 @@ execute as @a[tag=!frozen] run clear @s ice
 #> Tournament Rewards
 # Implemented by TheViralMelon
 scoreboard players enable d1f4d3f7-02c6-40e8-a2ff-1d7b5385f5eb Woa1ParticleTrail
+
+#
+scoreboard players set @a tridentuse 0
