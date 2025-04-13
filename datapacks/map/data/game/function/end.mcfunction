@@ -46,7 +46,7 @@ scoreboard players add @a[gamemode=adventure,x=620,y=40,z=620,distance=..100,sco
 execute if entity @a[scores={p=1..}] run scoreboard objectives setdisplay sidebar p
 
 #blocks
-data merge block 475 17 495 {front_text:{messages:['[{"text":""}]','[{"score":{"name":"Round","objective":"game"},"bold":true}]','[{"text":"Round(s)"}]','[{"text":""}]']}}
+data merge block 475 17 495 {front_text:{messages:[[{"text":""}],[{"score":{"name":"Round","objective":"game"},"bold":true}],[{"text":"Round(s)"}],[{"text":""}]]}}
 
 #tags
 tag @a remove grave

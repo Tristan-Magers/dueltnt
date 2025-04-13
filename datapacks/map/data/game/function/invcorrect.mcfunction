@@ -1,5 +1,5 @@
 clear @a[nbt=!{Inventory:[{id:"minecraft:potion",Slot:8b}]},x=620,y=20,z=620,distance=3..100] potion
-item replace entity @a[nbt=!{Inventory:[{id:"minecraft:potion",Slot:8b}]},x=620,y=20,z=620,distance=3..100] hotbar.8 with minecraft:potion[potion_contents={custom_color:16711918},custom_name='{"italic":false,"text":"§dLeave game §r: Right-click"}',hide_additional_tooltip={}]
+item replace entity @a[nbt=!{Inventory:[{id:"minecraft:potion",Slot:8b}]},x=620,y=20,z=620,distance=3..100] hotbar.8 with minecraft:potion[potion_contents={custom_color:16711918},custom_name={"italic":false,"text":"§dLeave game §r: Right-click"}]
 
 tag @s remove hasbow
 tag @s remove haspup

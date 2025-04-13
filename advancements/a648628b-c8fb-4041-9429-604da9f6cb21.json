@@ -1,27 +1,39 @@
 {
-  "delta:player_setup": {
-    "criteria": {
-      "requirement": "2025-02-01 11:56:48 -0700"
-    },
-    "done": true
-  },
-  "survival:root": {
-    "criteria": {
-      "warrior": "2025-02-01 11:56:48 -0700"
-    },
-    "done": true
-  },
   "particle:root": {
     "criteria": {
-      "warrior": "2025-02-01 11:56:48 -0700"
+      "warrior": "2025-04-13 17:21:30 -0600"
     },
     "done": true
   },
   "classes:root": {
     "criteria": {
-      "warrior": "2025-02-01 11:56:48 -0700"
+      "warrior": "2025-04-13 17:21:30 -0600"
     },
     "done": true
   },
-  "DataVersion": 4189
+  "delta:player_setup": {
+    "criteria": {
+      "requirement": "2025-04-13 17:21:30 -0600"
+    },
+    "done": true
+  },
+  "survival:root": {
+    "criteria": {
+      "warrior": "2025-04-13 17:21:30 -0600"
+    },
+    "done": true
+  },
+  "classes:class0": {
+    "criteria": {
+      "trapper": "2025-04-13 17:23:13 -0600"
+    },
+    "done": true
+  },
+  "classes:class10": {
+    "criteria": {
+      "overlord": "2025-04-13 17:22:47 -0600"
+    },
+    "done": true
+  },
+  "DataVersion": 4325
 }

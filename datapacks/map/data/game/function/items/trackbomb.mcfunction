@@ -4,7 +4,7 @@ clear @s[scores={TBtimer=139}] redstone
 
 effect clear @s[scores={TBtimer=128}] minecraft:levitation
 
-execute as @s[scores={TBtimer=139}] at @s run summon minecraft:armor_stand ~ ~ ~ {Small:1,Marker:1,Silent:1,Invulnerable:1,Tags:["tnttrack"],Invisible:1,ArmorItems:[{},{},{},{Count:1,id:tnt}]}
+execute as @s[scores={TBtimer=139}] at @s run summon minecraft:armor_stand ~ ~ ~ {Small:1,Marker:1,Silent:1,Invulnerable:1,Tags:["tnttrack"],Invisible:1,equipment:{head:{id:"minecraft:tnt",count:1}}}
 execute as @s[scores={TBtimer=139}] at @s run scoreboard players operation @e[distance=..0.1,limit=1,tag=tnttrack] tntID = @s tntID
 execute as @s[scores={TBtimer=139}] at @s run tp @e[distance=..0.1,limit=1,tag=tnttrack] @p
 

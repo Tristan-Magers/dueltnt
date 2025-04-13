@@ -1,1 +1,1 @@
-item replace entity @s hotbar.2 with sugar[custom_name='{"italic":false,"text":"§aAcid §r: Right-click"}',lore=['{"italic":false,"color":"white","text":"Reload: 3s"}','{"italic":false,"color":"white","text":"Spawns 5 blocks away"}']]
+item replace entity @s hotbar.2 with sugar[custom_name={"italic":false,"text":"§aAcid §r: Right-click"},lore=[{"italic":false,"color":"white","text":"Reload: 3s"},{"italic":false,"color":"white","text":"Spawns 5 blocks away"}]]

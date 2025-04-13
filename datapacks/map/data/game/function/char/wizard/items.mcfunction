@@ -12,11 +12,11 @@ execute as @s[scores={wizCheck=..2},tag=!pig,tag=!haspup] run function game:char
 execute as @s[scores={wizCheck=..2},tag=!pig,tag=!haspup] run function game:char/wizard/give/powderize
 execute as @s[scores={wizCheck=..2},tag=!pig,tag=!haspup] run function game:char/wizard/give/teleport
 
-item replace entity @s[scores={wizCheck=..2},tag=!pig,tag=haspup] hotbar.1 with gray_stained_glass_pane[custom_name='{"italic":false,"text":"§7Unavailable"}']
-item replace entity @s[scores={wizCheck=..2},tag=!pig,tag=haspup] hotbar.2 with gray_stained_glass_pane[custom_name='{"italic":false,"text":"§7Unavailable"}']
+item replace entity @s[scores={wizCheck=..2},tag=!pig,tag=haspup] hotbar.1 with gray_stained_glass_pane[custom_name={"italic":false,"text":"§7Unavailable"}]
+item replace entity @s[scores={wizCheck=..2},tag=!pig,tag=haspup] hotbar.2 with gray_stained_glass_pane[custom_name={"italic":false,"text":"§7Unavailable"}]
 clear @s[scores={wizCheck=..2}] fishing_rod
-item replace entity @s[scores={pig=2..}] hotbar.0 with minecraft:pink_stained_glass_pane[custom_name='{"italic":false,"text":"§7Unavailable"}']
-item replace entity @s[scores={pig=2..}] hotbar.1 with minecraft:pink_stained_glass_pane[custom_name='{"italic":false,"text":"§7Unavailable"}']
-item replace entity @s[scores={pig=2..}] hotbar.2 with minecraft:pink_stained_glass_pane[custom_name='{"italic":false,"text":"§7Unavailable"}']
+item replace entity @s[scores={pig=2..}] hotbar.0 with minecraft:pink_stained_glass_pane[custom_name={"italic":false,"text":"§7Unavailable"}]
+item replace entity @s[scores={pig=2..}] hotbar.1 with minecraft:pink_stained_glass_pane[custom_name={"italic":false,"text":"§7Unavailable"}]
+item replace entity @s[scores={pig=2..}] hotbar.2 with minecraft:pink_stained_glass_pane[custom_name={"italic":false,"text":"§7Unavailable"}]
 tag @s[scores={pig=1..}] add pig
 tag @s[scores={pig=..0}] remove pig

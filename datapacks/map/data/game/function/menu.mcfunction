@@ -31,7 +31,7 @@ title @a[scores={lobby=2},x=500,y=20,z=500,distance=..80] actionbar {"text":""}
 title @a[scores={lobby=100},x=500,y=20,z=500,distance=..80] title {"text":""}
 scoreboard players set @a[x=0,y=30,z=0,distance=..190] lobby 0
 scoreboard players set @a[x=496,y=20,z=520,distance=..60] Y 30
-kill @e[type=minecraft:potion,x=496,y=20,z=520,distance=..60]
+kill @e[type=minecraft:splash_potion,x=496,y=20,z=520,distance=..60]
 kill @e[type=minecraft:fireball,x=496,y=20,z=520,distance=..60]
 tp @e[type=creeper,x=496,y=20,z=520,distance=..60] ~ -1000 ~
 tp @e[type=slime,x=496,y=20,z=520,distance=..60] ~ -1000 ~
@@ -115,11 +115,11 @@ execute if entity @e[name=menu,type=armor_stand,scores={Opt=3}] run function gam
 execute if entity @e[name=menu,type=armor_stand,scores={Opt=2}] run function game:menu/options
 
 #Team Buttons
-execute if entity @e[name=menu,type=armor_stand,scores={Team=3}] run data merge block 475 16 495 {front_text:{messages:['[{"text":""}]','{"text":"Teams","bold":false,"clickEvent":{"action":"run_command","value":"scoreboard players set @e[name=menu,type=armor_stand] Team 2"}}','{"text":"[disabled]","color":"dark_red","bold":true}','[{"text":""}]']}}
+execute if entity @e[name=menu,type=armor_stand,scores={Team=3}] run data merge block 475 16 495 {front_text:{messages:[[{"text":""}],{"text":"Teams","bold":false,"clickEvent":{"action":"run_command","value":"scoreboard players set @e[name=menu,type=armor_stand] Team 2"}},{"text":"[disabled]","color":"dark_red","bold":true},[{"text":""}]]}}
 execute if entity @e[name=menu,type=armor_stand,scores={Team=3}] run playsound minecraft:entity.armor_stand.fall master @a 475 18 497 .6 .9
 execute if entity @e[name=menu,type=armor_stand,scores={Team=3}] run scoreboard players set @e[name=menu,type=armor_stand] Team 0
 
-execute if entity @e[name=menu,type=armor_stand,scores={Team=2}] run data merge block 475 16 495 {front_text:{messages:['[{"text":""}]','{"text":"Teams","bold":false,"clickEvent":{"action":"run_command","value":"scoreboard players set @e[name=menu,type=armor_stand] Team 3"}}','{"text":"[enabled]","color":"dark_green","bold":true}','[{"text":""}]']}}
+execute if entity @e[name=menu,type=armor_stand,scores={Team=2}] run data merge block 475 16 495 {front_text:{messages:[[{"text":""}],{"text":"Teams","bold":false,"clickEvent":{"action":"run_command","value":"scoreboard players set @e[name=menu,type=armor_stand] Team 3"}},{"text":"[enabled]","color":"dark_green","bold":true},[{"text":""}]]}}
 execute if entity @e[name=menu,type=armor_stand,scores={Team=2}] run playsound minecraft:entity.armor_stand.fall master @a 475 18 497 .6 .9
 execute if entity @e[name=menu,type=armor_stand,scores={Team=2}] run clone 459 3 491 459 3 489 475 18 494
 execute if entity @e[name=menu,type=armor_stand,scores={Team=2}] run scoreboard players set @e[name=menu,type=armor_stand] Team 1

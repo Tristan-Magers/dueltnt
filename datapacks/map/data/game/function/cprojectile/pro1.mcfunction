@@ -3,7 +3,7 @@ clear iron_hoe
 
 #function game:takeang
 
-summon armor_stand ~ ~ ~ {Pose:{LeftArm:[90.0f,-70.0f,0.0f]},DisabledSlots:4144959,Invisible:1,NoGravity:1,NoAI:1,Invulnerable:1,Size:0,tags:["newS"],CustomName:'{"text":"pro1"}',ArmorItems:[{},{},{},{}],HandItems:[{id:"iron_hoe",count:1},{}]}
+summon armor_stand ~ ~ ~ {Pose:{LeftArm:[90.0f,-70.0f,0.0f]},DisabledSlots:4144959,Invisible:1,NoGravity:1,NoAI:1,Invulnerable:1,Size:0,tags:["newS"],CustomName:{"text":"pro1"},ArmorItems:[{},{},{},{}],HandItems:[{id:"iron_hoe",count:1},{}]}
 tp @e[limit=1,name=pro1,sort=nearest] @p
 execute as @e[limit=1,name=pro1,sort=nearest] at @s run function game:cprojectile/getdir
 

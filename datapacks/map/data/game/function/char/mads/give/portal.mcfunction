@@ -1,1 +1,1 @@
-item replace entity @s hotbar.1 with ink_sac[custom_name='{"italic":false,"text":"§2Set Portal §r: Right-click"}',lore=['{"italic":false,"color":"white","text":"Disappears after teleport or 6s"}','{"italic":false,"color":"white","text":"Shift to return"}']]
+item replace entity @s hotbar.1 with ink_sac[custom_name={"italic":false,"text":"§2Set Portal §r: Right-click"},lore=[{"italic":false,"color":"white","text":"Disappears after teleport or 6s"},{"italic":false,"color":"white","text":"Shift to return"}]]

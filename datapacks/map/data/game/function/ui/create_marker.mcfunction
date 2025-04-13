@@ -12,7 +12,7 @@ data modify storage ns:main Characters[5] set string storage ns:main SkullName 5
 data modify storage ns:main Characters[6] set string storage ns:main SkullName 6 7
 data modify storage ns:main Characters[7] set string storage ns:main SkullName 7 8
 
-setblock 1 4 -2 oak_sign{front_text:{messages:['[{"nbt":"Characters[0]","storage":"ns:main"},{"nbt":"Characters[1]","storage":"ns:main"},{"nbt":"Characters[2]","storage":"ns:main"},{"nbt":"Characters[3]","storage":"ns:main"},{"nbt":"Characters[4]","storage":"ns:main"},{"nbt":"Characters[5]","storage":"ns:main"},{"nbt":"Characters[6]","storage":"ns:main"},{"nbt":"Characters[7]","storage":"ns:main"}]','{"text":""}','{"text":""}','{"text":""}']}} destroy
+setblock 1 4 -2 oak_sign{front_text:{messages:[[{"nbt":"Characters[0]","storage":"ns:main"},{"nbt":"Characters[1]","storage":"ns:main"},{"nbt":"Characters[2]","storage":"ns:main"},{"nbt":"Characters[3]","storage":"ns:main"},{"nbt":"Characters[4]","storage":"ns:main"},{"nbt":"Characters[5]","storage":"ns:main"},{"nbt":"Characters[6]","storage":"ns:main"},{"nbt":"Characters[7]","storage":"ns:main"}],{"text":""},{"text":""},{"text":""}]}} destroy
 
 tag @e[type=marker,tag=name_temp,tag=!old] add old
 

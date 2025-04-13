@@ -1,7 +1,7 @@
 #scoreboard players set @a[x=600,y=60,z=600,distance=3..100,gamemode=adventure] Invis 4
 scoreboard players add @r[x=600,y=60,z=600,distance=3..100,gamemode=adventure] phantom 1
 execute unless entity @e[tag=powerupitem] run scoreboard players add @r[x=600,y=60,z=600,distance=3..100,gamemode=adventure] phantom 1
-execute as @a[scores={phantom=240..}] at @s run summon armor_stand ~ ~100 ~ {Marker:0,Tags:["powerupitem","new"],Small:1,Invulnerable:1,ArmorItems:[{},{},{},{id:"minecraft:carrot",Count:1b}]}
+execute as @a[scores={phantom=240..}] at @s run summon armor_stand ~ ~100 ~ {Marker:0,Tags:["powerupitem","new"],Small:1,Invulnerable:1,equipment:{head:{id:"minecraft:carrot",count:1}}}
 execute as @a[scores={phantom=240..}] at @s run execute as @e[tag=new] at @s run function game:mode/phantom/phantomsummonitem
 scoreboard players set @a[scores={phantom=240..}] phantom 0
 scoreboard players add @r[x=600,y=60,z=600,distance=3..100,gamemode=adventure] phantomrand 1

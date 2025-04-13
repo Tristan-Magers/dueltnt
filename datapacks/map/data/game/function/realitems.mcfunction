@@ -41,7 +41,7 @@ kill @e[type=item,scores={egg=30..},nbt={Item:{id:"minecraft:nether_star"}}]
 kill @e[type=item,scores={egg=100..},nbt={Item:{id:"minecraft:tnt"}}]
 execute as @e[type=item,scores={Mine=2..}] at @s run data merge entity @s {NoGravity:1,Invulnerable:1,Item:{count:64}}
 
-execute as @a at @s run execute as @e[limit=1,type=item,scores={Mine=2..,egg=6},distance=..20] at @s run summon magma_cube ~ ~ ~ {NoGravity:1,NoAI:0,Invulnerable:1,Size:2,CustomName:'{"text":"star"}',Silent:1,Attributes:[{Name:"followRange",Base:0},{Name:"movementSpeed",Base:0}]}
+execute as @a at @s run execute as @e[limit=1,type=item,scores={Mine=2..,egg=6},distance=..20] at @s run summon magma_cube ~ ~ ~ {NoGravity:1,NoAI:0,Invulnerable:1,Size:2,CustomName:{"text":"star"},Silent:1,Attributes:[{Name:"followRange",Base:0},{Name:"movementSpeed",Base:0}]}
 execute as @e[type=magma_cube] at @s run data merge entity @s {Motion:[0.0d,0.0d,0.0d]}
 execute as @e[type=magma_cube] at @s run tp @s ~ ~ ~ 0 0
 effect give @e[type=magma_cube] invisibility 1 0 true
