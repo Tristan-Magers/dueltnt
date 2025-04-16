@@ -48,7 +48,7 @@ scoreboard players set @s[scores={class=0,timer=1}] shift_cool 17
 scoreboard players set @s[scores={class=1,timer=1}] shift_cool 42
 scoreboard players set @s[scores={class=2,timer=1}] shift_cool 76
 scoreboard players set @s[scores={class=3,timer=1}] shift_cool 32
-scoreboard players set @s[scores={class=4,timer=1}] shift_cool 155
+scoreboard players set @s[scores={class=4,timer=1}] shift_cool 150
 scoreboard players set @s[scores={class=6,timer=1}] shift_cool 160
 scoreboard players set @s[scores={class=7,timer=1}] shift_cool 50
 scoreboard players remove @s[scores={class=9,timer=1}] shift_cool 1

@@ -626,11 +626,11 @@ Note: Minor update with some changes. Due To updating to 1.21.5. Bigger update c
 [Character Changes]
 
 Assassin
-- Using shift on ground reduces it's cooldown by 0.3s
+- Using shift on ground reduces it's cooldown by 0.4s
 
 Wizard
 - Throwing Creeper gives 1 second of slowfalling
-- Shift reloads 0.25s slower (7.5s -> 7.75s)
+- Throwing pig gives 0.1s more levitation (0.3s -> 0.4s)
 
 Echo
 - Note: an attempt to make character feel less clunky after recent shift change has prevented certain issues
