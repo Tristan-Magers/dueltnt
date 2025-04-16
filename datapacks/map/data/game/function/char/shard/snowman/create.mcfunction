@@ -1,5 +1,5 @@
-execute positioned ~ ~-0.5 ~ run summon minecraft:armor_stand ^ ^ ^0.2 {NoAI:1,Tags:["new","snowman"],Invulnerable:1,Marker:1,equipment:{head:{id:"minecraft:carved_pumpkin",count:1,components:{"minecraft:custom_model_data":{floats:[1]}}}}}
-summon area_effect_cloud ^ ^ ^30 {Duration:999,Tags:["snowmark","gameae"]}
+execute positioned ~ ~-0.5 ~ run summon minecraft:armor_stand ^ ^ ^0.2 {NoAI:1,Tags:["new","snowman"],Invulnerable:1,Marker:1,equipment:{head:{id:"minecraft:carved_pumpkin",count:1}}}
+summon marker ^ ^ ^30 {Tags:["snowmark","gameae"]}
 tp @e[tag=snowman,tag=new] @s
 tp @e[tag=snowman,tag=new] ~ ~-0.5 ~
 execute as @e[tag=snowman,tag=new] at @s run tp @s ~ ~ ~ facing entity @e[tag=snowmark,limit=1]

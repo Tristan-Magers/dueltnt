@@ -347,9 +347,9 @@ execute as @a[scores={class=10,frostsT=0},x=620,y=20,z=620,distance=..100] run f
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=2,platUse=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Reloaded ","color":"white"},{"text":"Platform","color":"red","bold":true},{"text":"","color":"white"}]
 
 # tnt egg
-execute as @e[name=tnt] at @s run summon tnt ~ ~.6 ~ {fuse:4}
-execute as @e[name=tnt] at @s run summon tnt ~ ~.6 ~ {fuse:4}
-tp @e[type=mooshroom,name=tnt] ~ ~-1000 ~
+execute as @e[type=mooshroom] at @s run summon tnt ~ ~.6 ~ {fuse:4}
+execute as @e[type=mooshroom] at @s run summon tnt ~ ~.6 ~ {fuse:4}
+tp @e[type=mooshroom] ~ ~-1000 ~
 
 execute as @a[x=580,dx=80,y=-1,dy=100,z=580,dz=80,distance=..100,scores={tntegguset=1..,class=5}] at @s run function game:char/mads/tntegguse
 
@@ -519,8 +519,6 @@ kill @e[name=snowscan,tag=!in,scores={t1=15..}]
 kill @e[name=snowscan,scores={t2=270..}]
 
 #trident trow
-#execute as @e[type=minecraft:trident,nbt={inGround:1b}] at @s run summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["tntstorm","gameae"]}
-#execute as @e[type=minecraft:trident,nbt={inGround:1b}] at @s run function game:char/shard/frostplace2
 
 #execute as @a[scores={tridentuse=1..}] run effect give @s levitation 1 0 true
 #execute as @a[scores={tridentuse=1..}] run scoreboard players set @s nolev 8
@@ -623,12 +621,13 @@ execute as @a[gamemode=adventure,scores={class=6,Sreload=0},x=600,y=60,z=600,dis
 execute as @e[type=armor_stand,name=NArrow] at @s run function game:char/reaper/darkpillararrow
 
 # smoke bomb
-execute as @e[type=experience_bottle] at @s run kill @e[type=area_effect_cloud,name=place,distance=..4]
+execute as @e[type=experience_bottle] at @s run kill @e[type=marker,name=place,distance=..4]
 execute as @a[gamemode=adventure,scores={Escape=1..}] at @s run particle spit ~ ~ ~ .5 1 .5 .1 20 force
-scoreboard players add @e[type=area_effect_cloud,name=place] XPTimer 1
-execute as @e[type=experience_bottle] at @s run summon area_effect_cloud ~ ~ ~ {potion_contents:{potion:"minecraft:strong_healing"},Duration:3,Tags:["a"],CustomName:{"italic":false,"text":"place"}}
-execute as @e[type=area_effect_cloud,name=place,tag=!gameae,scores={XPTimer=2..}] at @s run summon tnt ~ ~.1 ~ {fuse:14,Tags:["sit"],NoAI:1,NoGravity:1,Motion:[0.0d,0.26d,0.0d]}
-execute as @e[type=area_effect_cloud,name=place,tag=!gameae,scores={XPTimer=2..}] at @s run summon tnt ~ ~.11 ~ {fuse:17,Tags:["sit"],NoAI:1,NoGravity:1}
+scoreboard players add @e[type=marker,name=place] XPTimer 1
+execute as @e[type=experience_bottle] at @s run summon marker ~ ~ ~ {Tags:["a"],CustomName:{"italic":false,"text":"place"}}
+execute as @e[type=marker,name=place,tag=!gameae,scores={XPTimer=2..}] at @s run summon tnt ~ ~.1 ~ {fuse:14,Tags:["sit"],NoAI:1,NoGravity:1,Motion:[0.0d,0.26d,0.0d]}
+execute as @e[type=marker,name=place,tag=!gameae,scores={XPTimer=2..}] at @s run summon tnt ~ ~.11 ~ {fuse:17,Tags:["sit"],NoAI:1,NoGravity:1}
+execute as @e[type=marker,name=place,tag=!gameae,scores={XPTimer=2..}] at @s run kill @s
 # NOTE: 10.5 blocks launch with 3 tick dif, 12.5 block launch with 2 tick dif (no jump) | 17 blocks launch with 3 tick dif, 20 block launch with 2 tick dif (jump)
 clear @a[gamemode=adventure,scores={Escape=1..}] experience_bottle
 kill @e[type=experience_orb]
@@ -807,7 +806,7 @@ execute as @a[gamemode=adventure] at @s if block ~-.3 ~ ~ barrier run tp @s ~.4 
 scoreboard players set @a[tag=!click_delay] click 0
 tag @a remove click_delay
 
-clear @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] minecraft:carrot_on_a_stick
-item replace entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:carrot_on_a_stick",Slot:-106b}]}] weapon.offhand with minecraft:carrot_on_a_stick
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95] unless items entity @s weapon.offhand minecraft:carrot_on_a_stick run clear @s  minecraft:carrot_on_a_stick
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95] unless items entity @s weapon.offhand minecraft:carrot_on_a_stick run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick
 
 execute as @e[tag=no_motion] at @s run tp @s @s

@@ -1,6 +1,6 @@
 execute as @s at @s[x=580,dx=80,y=-2,dy=100,z=580,dz=80,distance=..100] run execute as @s at @s run tp @s @s
-execute as @s[x=580,dx=80,y=-2,dy=46,z=580,dz=80,distance=..100] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Silent:1,Invulnerable:1,Invisible:1,CustomName:"{\"italic\":false,\"text\":\"ground\"}"}
-execute as @s[x=580,dx=80,y=45,dy=20,z=580,dz=80,distance=..100] at @s run summon armor_stand ~ 44 ~ {NoGravity:1,Marker:1,Silent:1,Invulnerable:1,Invisible:1,CustomName:"{\"italic\":false,\"text\":\"ground\"}"}
+execute as @s[x=580,dx=80,y=-2,dy=46,z=580,dz=80,distance=..100] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Silent:1,Invulnerable:1,Invisible:1,CustomName:{"italic":false,"text":"ground"}}
+execute as @s[x=580,dx=80,y=45,dy=20,z=580,dz=80,distance=..100] at @s run summon armor_stand ~ 44 ~ {NoGravity:1,Marker:1,Silent:1,Invulnerable:1,Invisible:1,CustomName:{"italic":false,"text":"ground"}}
 
 execute as @s[x=580,dx=80,y=-1,dy=100,z=580,dz=80,distance=..100,scores={grounduse=0..1}] at @s run function game:player/class_team
 execute as @s[x=580,dx=80,y=-1,dy=100,z=580,dz=80,distance=..100,scores={grounduse=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Ground Spell","color":"yellow","bold":true},{"text":" (1 Remaining) ","color":"white"}]

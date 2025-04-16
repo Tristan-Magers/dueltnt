@@ -5,7 +5,7 @@ scoreboard players set @s[gamemode=adventure,scores={timer=32..,class=3}] timer 
 
 execute as @s[gamemode=adventure,scores={timer=1..7,class=4,Y=..57},distance=..100,x=620,y=20,z=620] at @s run tp @p ~ ~2 ~
 
-scoreboard players set @s[gamemode=adventure,scores={timer=150..,class=4}] timer 0
+scoreboard players set @s[gamemode=adventure,scores={timer=155..,class=4}] timer 0
 
 execute as @s[gamemode=adventure,distance=..100,scores={timer=1..5,class=4},x=620,y=20,z=620] at @s run effect give @p levitation 1 0 true
 execute as @s[gamemode=adventure,distance=..100,scores={timer=12,class=4},x=620,y=20,z=620] at @s run effect clear @p levitation
@@ -22,9 +22,9 @@ execute unless entity @e[scores={mode=1}] run scoreboard players set @s[gamemode
 execute if entity @e[scores={mode=1}] run scoreboard players set @s[gamemode=adventure,scores={timer=140..,class=6}] timer 0
 
 #execute unless entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adventure,scores={timer=160..,class=7}] timer 0
-execute unless entity @e[scores={mode=1}] run scoreboard players set @s[gamemode=adventure,scores={timer=60..,class=7}] timer 0
+execute unless entity @e[scores={mode=1}] run scoreboard players set @s[gamemode=adventure,scores={timer=50..,class=7}] timer 0
 execute unless entity @e[scores={mode=1}] run scoreboard players set @s[gamemode=adventure,scores={timer=30..,class=9}] timer 0
 execute if entity @e[scores={mode=1}] run scoreboard players set @s[gamemode=adventure,scores={timer=30..,class=9}] timer 0
 scoreboard players set @s[gamemode=adventure,scores={timer=50..,class=8}] timer 0
 
-scoreboard players set @s[gamemode=adventure,scores={timer=33..,class=10}] timer 0
+scoreboard players set @s[gamemode=adventure,scores={timer=32..,class=10}] timer 0

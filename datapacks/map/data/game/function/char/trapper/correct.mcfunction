@@ -1,5 +1,3 @@
-#item replace entity @s[scores={nobow=3..}] hotbar.0 with bow{Damage:80,Unbreakable:1,display:{Name:"{\"italic\":false,\"text\":\"§cTNT Trap§r : Throw to switch\"}"}}
-
 tag @s remove first
 tag @s[tag=haspup] add first
 tag @s[nbt={Inventory:[{id:"minecraft:bamboo",Slot:0b}]}] add first

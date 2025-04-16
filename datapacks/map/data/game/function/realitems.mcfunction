@@ -15,8 +15,9 @@ execute as @e[type=item,scores={Mine=1..}] at @s run data merge entity @s {Invul
 scoreboard players set @a HoldMine 0
 scoreboard players set @a[nbt={Inventory:[{components:{"minecraft:custom_name":'"Mine"'}}]}] HoldMine 1
 clear @a[scores={HoldMine=1..}] tnt[custom_name='"Mine"'] 1
-execute as @a[scores={HoldMine=1..},x=600,z=600,y=60,distance=..100] at @s run summon tnt ~ ~ ~
-execute as @a[scores={HoldMine=1..},x=600,z=600,y=60,distance=..100] at @s run summon tnt ~ ~ ~
+execute as @a[scores={HoldMine=1..},x=600,z=600,y=60,distance=..100] at @s run summon tnt ~ ~ ~ {fuse:0}
+execute as @a[scores={HoldMine=1..},x=600,z=600,y=60,distance=..100] at @s run summon tnt ~ ~ ~ {fuse:0}
+
 scoreboard players add @a[scores={placetnt=1..}] PlaceMine 1
 scoreboard players remove @a[scores={placetnt=1..}] placetnt 1
 scoreboard players set @a[scores={PlaceMine=2..}] PlaceMineTime 200

@@ -19,13 +19,13 @@ effect give @a[scores={class=1},x=620,y=20,z=620,distance=..100] speed 300 1 tru
 effect give @a[scores={class=1},x=620,y=20,z=620,distance=..100] jump_boost 300 1 true
 execute as @a[scores={class=2},x=620,y=20,z=620,distance=..100] run function game:char/ghost/give/bow
 execute as @a[scores={class=2},x=620,y=20,z=620,distance=..100] run function game:char/ghost/give/smoke_bomb {count:2}
-item replace entity @a[scores={class=2},x=620,y=20,z=620,distance=..100] hotbar.5 with minecraft:tipped_arrow[custom_name={"italic":false,"text":"Magic arrow"},potion_contents={custom_color:6221823}] 3
+item replace entity @a[scores={class=2},x=620,y=20,z=620,distance=..100] hotbar.5 with minecraft:tipped_arrow[custom_name={"italic":false,"text":"Crit arrow"},potion_contents={custom_color:6221823},tooltip_display={hidden_components:["attribute_modifiers","can_break","custom_model_data","unbreakable","tooltip_display","weapon","max_damage","can_place_on","trim","dyed_color","damage","enchantments","food","tool","tooltip_display","potion_contents","item_model"]}] 3
 scoreboard players set @a[scores={class=2},x=620,y=20,z=620,distance=..100] bow -1
 scoreboard players set @a[scores={class=2},x=620,y=20,z=620,distance=..100] snowTime 0
 effect give @a[scores={class=2},x=620,y=20,z=620,distance=..100] speed 300 1 true
 effect give @a[scores={class=2},x=620,y=20,z=620,distance=..100] jump_boost 300 1 true
 scoreboard players set @a[x=1000,y=20,z=1000,distance=..300] timer 0
-item replace entity @a[x=620,y=20,z=620,distance=..100] hotbar.8 with minecraft:potion[potion_contents={custom_color:16711918},custom_name={"italic":false,"text":"§dLeave game §r: Right-click"}]
+item replace entity @a[x=620,y=20,z=620,distance=..100] hotbar.8 with minecraft:potion[potion_contents={custom_color:16711918},custom_name={"italic":false,"text":"§dLeave game §r: Right-click"},tooltip_display={hidden_components:["attribute_modifiers","can_break","custom_model_data","unbreakable","tooltip_display","weapon","max_damage","can_place_on","trim","dyed_color","damage","enchantments","food","tool","tooltip_display","potion_contents","item_model"]}]
 scoreboard players set @a snow 0
 #item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.4 with minecraft:leather[custom_name={"italic":false,"text":"§7Explosive Dart §r: Right-click"}] 6
 
@@ -48,7 +48,7 @@ item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] armor.c
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] armor.head with minecraft:leather_helmet[unbreakable={}]
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=2}] armor.chest with minecraft:diamond_chestplate[unbreakable={}]
 execute as @a[x=620,y=20,z=620,distance=..100,scores={class=4}] run function game:char/assassin/give/shift
-item replace entity @a[scores={class=4},x=620,y=20,z=620,distance=..100] hotbar.6 with minecraft:tipped_arrow[custom_name={"italic":false,"text":"Magic Arrow"},potion_contents={custom_color:6221823}] 2
+item replace entity @a[scores={class=4},x=620,y=20,z=620,distance=..100] hotbar.6 with minecraft:tipped_arrow[custom_name={"italic":false,"text":"Magic Arrow"},potion_contents={custom_color:6221823},tooltip_display={hidden_components:["attribute_modifiers","can_break","custom_model_data","unbreakable","tooltip_display","weapon","max_damage","can_place_on","trim","dyed_color","damage","enchantments","food","tool","tooltip_display","potion_contents","item_model"]}] 2
 scoreboard players set @a[scores={class=4},x=620,y=20,z=620,distance=..100] bow -1
 
 execute as @a[scores={class=4},x=620,y=20,z=620,distance=..100] run function game:char/wizard/give/fireball
@@ -77,7 +77,7 @@ item replace entity @a[tag=!team,x=620,y=20,z=620,distance=..100,scores={class=3
 
 execute as @a[scores={class=1},x=620,y=20,z=620,distance=..100] run function game:char/assassin/give/mass_freeze
 
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.4 with minecraft:golden_boots[custom_name={"italic":false,"text":"§r§bExplode Ghost Creeper §r: Right-click (summoned by crouch)"},entity_data={id:"pig"}]
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.4 with minecraft:golden_boots[custom_name={"italic":false,"text":"§r§bExplode Ghost Creeper §r: Right-click (summoned by crouch)"},entity_data={id:"pig"},tooltip_display={hidden_components:["attribute_modifiers","can_break","custom_model_data","unbreakable","tooltip_display","weapon","max_damage","can_place_on","trim","dyed_color","damage","enchantments","food","tool","tooltip_display","potion_contents","item_model"]}]
 #item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=0}] hotbar.3 with minecraft:kelp[custom_name={"italic":false,"text":"§4Mega Bomb§r §r: Right-click"},dyed_color=16777215]
 execute as @a[scores={class=2},x=620,y=20,z=620,distance=..100] run function game:char/ghost/give/pearl {count:3}
 execute if entity @e[scores={mode=1}] run item replace entity @a[scores={class=2},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:ender_pearl[custom_name={"italic":false,"text":"§aTeleport §r: Right-click"}] 6
@@ -114,7 +114,7 @@ execute as @a[x=620,y=20,z=620,distance=..100,scores={class=8}] run function gam
 
 execute as @a[x=620,y=20,z=620,distance=..100,scores={class=1}] run function game:char/assassin/give/sneak_attack {"amount":2}
 
-execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.5 with minecraft:mooshroom_spawn_egg[can_place_on=[{blocks:"#game:bolt_place"}],entity_data={id:"mooshroom",Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,CustomName:{"italic":false,"text":"tnt"}},custom_name={"italic":false,"text":"§cSummon TNT §r: Right-click"}] 12
+execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=1}] hotbar.5 with minecraft:mooshroom_spawn_egg[can_place_on=[{blocks:"#game:bolt_place"}],entity_data={id:"mooshroom",Size:2,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,Health:500,CustomName:{"italic":false,"text":"tnt"}},custom_name={"italic":false,"text":"§cSummon TNT §r: Right-click"},tooltip_display={hidden_components:["attribute_modifiers","can_break","custom_model_data","unbreakable","tooltip_display","weapon","max_damage","can_place_on","trim","dyed_color","damage","enchantments","food","tool","tooltip_display","potion_contents","item_model"]}] 12
 
 execute as @a[x=620,y=20,z=620,distance=..100,scores={class=5}] run function game:char/mads/give/tntegg {"amount":3}
 
@@ -131,7 +131,7 @@ item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=3}] hotbar.
 
 #item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] hotbar.5 with minecraft:clay_ball[custom_name={"italic":false,"text":"§bVortex §r: Right-click"}]
 
-item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.0 with minecraft:wooden_pickaxe[unbreakable={},custom_name={"italic":false,"text":"§9Master Wand §r: Right-click Blocks (throw/offhand to gather)"},attribute_modifiers=[{id:"attack_speed",type:"attack_speed",amount:0.9,operation:"add_value",slot:"any"},{id:"attack_damage",type:"attack_damage",amount:1,operation:"add_value",slot:"any"}],lore=[{"italic":false,"color":"white","text":"Mines 3 blocks for material"},{"italic":false,"color":"white","text":"Reach: 7.8 blocks"},{"italic":false,"color":"white","text":"Reload: 2.5s"},{"italic":false,"color":"white","text":"Offhand/Throw to Gather"},{"italic":false,"color":"white","text":"Gather reload: 10s"}]]
+item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.0 with minecraft:wooden_pickaxe[unbreakable={},custom_name={"italic":false,"text":"§9Master Wand §r: Right-click Blocks (throw/offhand to gather)"},attribute_modifiers=[{id:"attack_speed",type:"attack_speed",amount:0.9,operation:"add_value",slot:"any"},{id:"attack_damage",type:"attack_damage",amount:1,operation:"add_value",slot:"any"}],lore=[{"italic":false,"color":"white","text":"Mines 3 blocks for material"},{"italic":false,"color":"white","text":"Reach: 7.8 blocks"},{"italic":false,"color":"white","text":"Reload: 2.5s"},{"italic":false,"color":"white","text":"Offhand/Throw to Gather"},{"italic":false,"color":"white","text":"Gather reload: 10s"}],tooltip_display={hidden_components:["attribute_modifiers","can_break","custom_model_data","unbreakable","tooltip_display","weapon","max_damage","can_place_on","trim","dyed_color","damage","enchantments","food","tool","tooltip_display","potion_contents","item_model"]}]
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.1 with minecraft:barrier[custom_name={"italic":false,"text":"§9Not enough material"},lore=[{"italic":false,"color":"white","text":"2 TNT"},{"italic":false,"color":"white","text":"Reload: 1.5s"},{"italic":false,"color":"white","text":"Fuse: 0.75s"}]]
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.2 with minecraft:barrier[custom_name={"italic":false,"text":"§9Not enough material"},lore=[{"italic":false,"color":"white","text":"3x1 TNT"},{"italic":false,"color":"white","text":"Reload: 3.5s"},{"italic":false,"color":"white","text":"Delay: 0s, 0.1s, 0.2s"},{"italic":false,"color":"white","text":"Velocity: 4.4 bps"}]]
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.3 with minecraft:barrier[custom_name={"italic":false,"text":"§9Not enough material"},lore=[{"italic":false,"color":"white","text":"Duration: 2.5s"},{"italic":false,"color":"white","text":"Reload: 5.5s"},{"italic":false,"color":"white","text":"Max Length: 10 blocks"}]]
@@ -215,7 +215,7 @@ scoreboard players set @a PlatTimer 0
 scoreboard players set @a PlaceMineTime 0
 scoreboard players set @a tntegguse 0
 scoreboard players set @a boomwandtime 0
-scoreboard players set @a boomcharge 8
+scoreboard players set @a boomcharge 7
 scoreboard players set @a blastwandtime 0
 scoreboard players set @a airwandtime 0
 scoreboard players set @a vortextime 0

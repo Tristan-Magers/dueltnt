@@ -1,13 +1,10 @@
 execute as @s[scores={nobow=3..}] run function game:char/ghost/give/bow
 
 clear @s[nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]}] ender_pearl
-#execute as @s[nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]},scores={enderreload=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Reloaded ","color":"white"},{"text":"Teleport","color":"green","bold":true}]
-#item replace entity @s[nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]},scores={enderreload=..0}] hotbar.2 with minecraft:ender_pearl{display:{Name:"{\"italic\":false,\"text\":\"§aTeleport §r: Right-click\"}"}}
 
 execute as @s[nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]},scores={endercount=0}] run function game:char/ghost/give/pearl {count:3}
 execute as @s[nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]},scores={endercount=1}] run function game:char/ghost/give/pearl {count:2}
 execute as @s[nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]},scores={endercount=2}] run function game:char/ghost/give/pearl {count:1}
-#item replace entity @s[nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]},scores={endercount=3}] hotbar.2 with minecraft:ender_pearl{display:{Name:"{\"italic\":false,\"text\":\"§aTeleport §r: Right-click\"}"}} 1
 
 clear @s[nbt=!{Inventory:[{id:"minecraft:experience_bottle",Slot:1b}]},scores={XPReset=90}] experience_bottle
 scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:experience_bottle",Slot:1b}]},scores={XPReset=90}] XPReset 92

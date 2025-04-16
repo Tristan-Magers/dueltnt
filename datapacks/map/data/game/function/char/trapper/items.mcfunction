@@ -33,14 +33,14 @@ execute as @s[gamemode=adventure,scores={class=3,bambthrow=1..},x=620,y=20,z=620
 
 execute as @s[gamemode=adventure,scores={class=3,flintthrow=1..},x=620,y=20,z=620,distance=..100] at @s run playsound minecraft:block.note_block.xylophone master @a ~ ~ ~ 1 1
 
-execute as @s[gamemode=adventure,scores={class=3},x=620,y=20,z=620,distance=..100,nbt={Inventory:[{id:"minecraft:bamboo",Slot:-106b}]}] run function game:char/trapper/give/fasttrap
-execute as @s[gamemode=adventure,scores={class=3},x=620,y=20,z=620,distance=..100,nbt={Inventory:[{id:"minecraft:flint",Slot:-106b}]}] run function game:char/trapper/give/fasttrap
+execute as @s[gamemode=adventure,scores={class=3},x=620,y=20,z=620,distance=..100] if items entity @s weapon.offhand minecraft:bamboo run function game:char/trapper/give/fasttrap
+execute as @s[gamemode=adventure,scores={class=3},x=620,y=20,z=620,distance=..100] if items entity @s weapon.offhand minecraft:flint run function game:char/trapper/give/fasttrap
 
-execute as @s[gamemode=adventure,scores={class=3},x=620,y=20,z=620,distance=..100,nbt={Inventory:[{id:"minecraft:bamboo",Slot:-106b}]}] at @s run playsound minecraft:block.chest.locked master @a ~ ~ ~ 1 1.4
-execute as @s[gamemode=adventure,scores={class=3},x=620,y=20,z=620,distance=..100,nbt={Inventory:[{id:"minecraft:flint",Slot:-106b}]}] at @s run playsound minecraft:block.chest.locked master @a ~ ~ ~ 1 1.4
+execute as @s[gamemode=adventure,scores={class=3},x=620,y=20,z=620,distance=..100] if items entity @s weapon.offhand minecraft:bamboo at @s run playsound minecraft:block.chest.locked master @a ~ ~ ~ 1 1.4
+execute as @s[gamemode=adventure,scores={class=3},x=620,y=20,z=620,distance=..100] if items entity @s weapon.offhand minecraft:flint at @s run playsound minecraft:block.chest.locked master @a ~ ~ ~ 1 1.4
 
-execute as @s[gamemode=adventure,scores={class=3},x=620,y=20,z=620,distance=..100,nbt={Inventory:[{id:"minecraft:bamboo",Slot:-106b}]}] at @s run playsound minecraft:block.chest.close master @a ~ ~ ~ 1 2
-execute as @s[gamemode=adventure,scores={class=3},x=620,y=20,z=620,distance=..100,nbt={Inventory:[{id:"minecraft:flint",Slot:-106b}]}] at @s run playsound minecraft:block.chest.close master @a ~ ~ ~ 1 2
+execute as @s[gamemode=adventure,scores={class=3},x=620,y=20,z=620,distance=..100] if items entity @s weapon.offhand minecraft:bamboo at @s run playsound minecraft:block.chest.close master @a ~ ~ ~ 1 2
+execute as @s[gamemode=adventure,scores={class=3},x=620,y=20,z=620,distance=..100] if items entity @s weapon.offhand minecraft:flint at @s run playsound minecraft:block.chest.close master @a ~ ~ ~ 1 2
 
 scoreboard players set @s bambthrow 0
 scoreboard players set @s flintthrow 0

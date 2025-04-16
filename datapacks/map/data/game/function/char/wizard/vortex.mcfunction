@@ -1,4 +1,4 @@
-execute as @s at @s anchored eyes positioned ^ ^ ^5.2 positioned ~ ~-0.4 ~ run summon minecraft:armor_stand ~ ~1 ~ {Small:1,NoGravity:1,Marker:1,Silent:1,Invulnerable:1,Invisible:1,CustomName:"{\"italic\":false,\"text\":\"vortex\"}"}
+execute as @s at @s anchored eyes positioned ^ ^ ^5.2 positioned ~ ~-0.4 ~ run summon minecraft:armor_stand ~ ~1 ~ {Small:1,NoGravity:1,Marker:1,Silent:1,Invulnerable:1,Invisible:1,CustomName:{"italic":false,"text":"vortex"}}
 execute as @s at @s anchored eyes positioned ^ ^ ^5.2 positioned ~ ~-0.4 ~ run summon minecraft:armor_stand ~ ~ ~ {Small:1,NoGravity:1,Marker:1,Silent:1,Invulnerable:1,Invisible:1,equipment:{head:{id:"minecraft:white_stained_glass",count:1}},Tags:["vortex_box"]}
 scoreboard players add @e[name=vortex] tntID 0
 execute as @s at @s anchored eyes positioned ^ ^ ^5.2 positioned ~ ~-0.4 ~ run team join gray @e[tag=vortex_box,limit=1,sort=nearest]

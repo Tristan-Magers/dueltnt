@@ -3,12 +3,6 @@ clear @s barrier
 execute unless entity @e[scores={mode=1}] run clear @s[scores={masterb=..25,masterup=..3}] cod
 execute if entity @e[scores={mode=1}] run clear @s[scores={masterb=..19,masterup=..3}] cod
 
-#Upgrade wand item (removed in season 9)
-#execute unless entity @e[scores={mode=1}] run item replace entity @s[scores={masterb=26..,masterup=..3}] hotbar.3 with minecraft:cod{display:{Name:"{\"italic\":false,\"text\":\"§9Upgrade Wand §r: Right-click (26 Material)\"}"}}
-#execute if entity @e[scores={mode=1}] run item replace entity @s[scores={masterb=20..,masterup=..3}] hotbar.3 with minecraft:cod{display:{Name:"{\"italic\":false,\"text\":\"§9Upgrade Wand §r: Right-click (20 Material)\"}"}}
-#execute unless entity @e[scores={mode=1}] run item replace entity @s[scores={masterb=..25,masterup=..3}] hotbar.3 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}} 1
-#execute if entity @e[scores={mode=1}] run item replace entity @s[scores={masterb=..19,masterup=..3}] hotbar.3 with minecraft:barrier{display:{Name:"{\"italic\":false,\"text\":\"§9Not enough material\"}"}} 1
-
 # boom halo
 item replace entity @s[scores={masterb=14..,halo_cooldown=..0}] hotbar.4 with minecraft:beef[custom_name={"italic":false,"text":"§cBoom Halo §r: Right-click (14 Material)"},lore=[{"italic":false,"text":"§4Beef"},{"italic":false,"color":"white","text":"8 TNT"},{"italic":false,"color":"white","text":"Reload: 7s"},{"italic":false,"color":"white","text":"Fuse: 0.35s"},{"italic":false,"color":"white","text":"Levitation 16 for 0.65s"}]]
 clear @s[scores={masterb=..13}] beef
