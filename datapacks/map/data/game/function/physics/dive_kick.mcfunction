@@ -6,8 +6,8 @@ scoreboard players set $strength delta.api.launch 11000
 scoreboard players set @s dive_kick 16
 scoreboard players set @s[nbt={OnGround:1b}] dive_kick 11
 
-scoreboard players add @s[nbt={OnGround:1b}] timer 6
-scoreboard players remove @s[nbt={OnGround:1b}] shift_cool 6
+scoreboard players add @s[nbt={OnGround:1b}] timer 8
+scoreboard players remove @s[nbt={OnGround:1b}] shift_cool 8
 
 effect give @s[nbt={OnGround:1b},scores={nolev=..8}] minecraft:levitation 1 1 false
 scoreboard players set @s[nbt={OnGround:1b},scores={nolev=..8}] nolev 8
