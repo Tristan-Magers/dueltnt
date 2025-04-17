@@ -11,7 +11,7 @@ effect clear @s levitation
 tp @s @s
 tp @s ~ ~.3 ~
 
-summon area_effect_cloud ~ ~ ~ {Duration:999,Tags:["gameae","frostplat"]}
+summon marker ~ ~ ~ {Tags:["gameae","frostplat"]}
 scoreboard players operation @e[tag=frostplat,limit=1,sort=nearest] objID = @s tntID
 
 tag @s remove frostuser

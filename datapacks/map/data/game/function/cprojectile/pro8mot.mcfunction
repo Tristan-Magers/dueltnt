@@ -2,7 +2,7 @@
 
 execute as @s at @s run function game:cprojectile/getdir4
 
-summon minecraft:creeper ~ ~1 ~ {Tags:["newcreeper","nodub","wizcreep"],ignited:1,Fuse:1000,Invulnerable:1,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:'{"italic":false,"text":"Bomb"}',Health:500,powered:1,ExplosionRadius:2}
+summon minecraft:creeper ~ ~1 ~ {Tags:["newcreeper","nodub","wizcreep"],ignited:1,Fuse:1000,Invulnerable:1,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:{"italic":false,"text":"Bomb"},Health:500,powered:1,ExplosionRadius:2}
 
 scoreboard players set @s[scores={DirY=..-80}] DirY -80
 

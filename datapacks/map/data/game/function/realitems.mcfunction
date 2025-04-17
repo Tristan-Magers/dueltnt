@@ -15,8 +15,9 @@ execute as @e[type=item,scores={Mine=1..}] at @s run data merge entity @s {Invul
 scoreboard players set @a HoldMine 0
 scoreboard players set @a[nbt={Inventory:[{components:{"minecraft:custom_name":'"Mine"'}}]}] HoldMine 1
 clear @a[scores={HoldMine=1..}] tnt[custom_name='"Mine"'] 1
-execute as @a[scores={HoldMine=1..},x=600,z=600,y=60,distance=..100] at @s run summon tnt ~ ~ ~
-execute as @a[scores={HoldMine=1..},x=600,z=600,y=60,distance=..100] at @s run summon tnt ~ ~ ~
+execute as @a[scores={HoldMine=1..},x=600,z=600,y=60,distance=..100] at @s run summon tnt ~ ~ ~ {fuse:0}
+execute as @a[scores={HoldMine=1..},x=600,z=600,y=60,distance=..100] at @s run summon tnt ~ ~ ~ {fuse:0}
+
 scoreboard players add @a[scores={placetnt=1..}] PlaceMine 1
 scoreboard players remove @a[scores={placetnt=1..}] placetnt 1
 scoreboard players set @a[scores={PlaceMine=2..}] PlaceMineTime 200
@@ -41,7 +42,7 @@ kill @e[type=item,scores={egg=30..},nbt={Item:{id:"minecraft:nether_star"}}]
 kill @e[type=item,scores={egg=100..},nbt={Item:{id:"minecraft:tnt"}}]
 execute as @e[type=item,scores={Mine=2..}] at @s run data merge entity @s {NoGravity:1,Invulnerable:1,Item:{count:64}}
 
-execute as @a at @s run execute as @e[limit=1,type=item,scores={Mine=2..,egg=6},distance=..20] at @s run summon magma_cube ~ ~ ~ {NoGravity:1,NoAI:0,Invulnerable:1,Size:2,CustomName:'{"text":"star"}',Silent:1,Attributes:[{Name:"followRange",Base:0},{Name:"movementSpeed",Base:0}]}
+execute as @a at @s run execute as @e[limit=1,type=item,scores={Mine=2..,egg=6},distance=..20] at @s run summon magma_cube ~ ~ ~ {NoGravity:1,NoAI:0,Invulnerable:1,Size:2,CustomName:{"text":"star"},Silent:1,Attributes:[{Name:"followRange",Base:0},{Name:"movementSpeed",Base:0}]}
 execute as @e[type=magma_cube] at @s run data merge entity @s {Motion:[0.0d,0.0d,0.0d]}
 execute as @e[type=magma_cube] at @s run tp @s ~ ~ ~ 0 0
 effect give @e[type=magma_cube] invisibility 1 0 true

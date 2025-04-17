@@ -1,4 +1,4 @@
-summon minecraft:armor_stand ~ ~ ~ {Small:1,Marker:1,Invulnerable:1,Tags:["stormtnt"],Invisible:1,ArmorItems:[{},{},{},{Count:1,id:lapis_ore}],DisabledSlots:4144959}
+summon minecraft:armor_stand ~ ~ ~ {Small:1,Marker:1,Invulnerable:1,Tags:["stormtnt"],Invisible:1,equipment:{head:{id:"minecraft:lapis_ore",count:1}},DisabledSlots:4144959}
 
 scoreboard players operation @e[limit=1,tag=stormtnt,sort=nearest] object_id = @s object_id
 tp @e[limit=1,tag=stormtnt,sort=nearest] @p

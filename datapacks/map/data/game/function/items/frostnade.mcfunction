@@ -414,6 +414,6 @@ execute as @s[scores={airnade=14}] at @s unless block ~-2 ~-1 ~-2 air unless blo
 
 execute as @s[scores={airnade=2..},tag=boom_me] at @s run particle minecraft:explosion ~ ~ ~ .1 .1 .1 0 1 force
 execute as @s[scores={airnade=2..},tag=boom_me] at @s run particle minecraft:cloud ~ ~ ~ .1 .1 .1 .2 1 force
-execute as @s[scores={airnade=24},tag=boom_me] at @s run summon tnt ~ ~ ~
+execute as @s[scores={airnade=24},tag=boom_me] at @s run summon tnt ~ ~ ~ {fuse:0}
 
 kill @s[scores={airnade=24..}]

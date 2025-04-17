@@ -59,8 +59,8 @@ execute as @e[type=arrow,nbt={pickup:1b}] run data merge entity @s {pickup:0b}
 #execute as @e[type=arrow,tag=!checked] at @s run data merge entity @s {pickup:1}
 tag @e[type=arrow,tag=!checked] add checked
 
-execute as @e[type=slime] run data merge entity @s {CustomName:'{"italic":false,"text":"Slime"}'}
-execute as @e[type=pig] run data merge entity @s {CustomName:'{"italic":false,"text":"Not a wizard"}'}
+execute as @e[type=slime] run data merge entity @s {CustomName:{"italic":false,"text":"Slime"}}
+execute as @e[type=pig] run data merge entity @s {CustomName:{"italic":false,"text":"Not a wizard"}}
 
 effect clear @a minecraft:absorption
 
@@ -129,7 +129,7 @@ execute as @a[scores={kit=0..}] at @s run function game:kit
 
 #explode creepers
 scoreboard players set @a CPbomb 0
-scoreboard players set @a[nbt={Inventory:[{Slot:100b,id:"minecraft:golden_boots"}]}] CPbomb 1
+execute as @a[scores={class=4}] if items entity @s armor.feet minecraft:golden_boots run scoreboard players set @s CPbomb 1
 scoreboard players set @a[scores={CPbomb=1..}] CPtimer 140
 execute as @a[scores={CPtimer=1..,class=4}] at @s run function game:char/wizard/excreep
 
@@ -155,7 +155,7 @@ scoreboard players operation @e[name=Portal] tntID -= @p[scores={SetPortalP=1..}
 kill @e[name=Portal,type=armor_stand,scores={tntID=0}]
 scoreboard players operation @e[name=Portal] tntID += @p[scores={SetPortalP=1..}] tntID
 
-execute as @p[scores={SetPortalP=1..}] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,CustomName:'{"italic":false,"text":"Portal"}',Invulnerable:1,Marker:1,Silent:1,Invisible:1}
+execute as @p[scores={SetPortalP=1..}] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,CustomName:{"italic":false,"text":"Portal"},Invulnerable:1,Marker:1,Silent:1,Invisible:1}
 
 scoreboard players add @e[name=Portal,type=armor_stand] PS 1
 execute as @p[scores={SetPortalP=1..}] at @s run scoreboard players operation @e[name=Portal,type=armor_stand,distance=..1] tntID = @p tntID
@@ -339,7 +339,7 @@ execute if score .creep_sign .data matches 0 unless entity @a[x=509.5,y=17,z=528
 
 
 #patreon
-#tellraw @a[scores={patclick=1..}] ["",{"text":"Hey there! ","color":"aqua"},{"text":"I made a page where you can see all my future games and work over on Patreon. Over the past half year, I have been making Minecraft maps full time on the Minecraft Marketplace. ","color":"white","bold":false,"underlined":false,"clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"Now I want to move my effort to making games right here on Realms, with higher quality than ever, just for you guys.","color":"yellow","bold":false,"clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":" If you want to see the cool games coming, or you want to support me so I can make these games, [","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"color":"blue","text":"CLICK HERE","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"] to go the page about it. Thanks :D ","clickEvent":{"action":"open_url","value":"https://www.patreon.com/chainsawninja"}},{"text":"  <3 <3 <3","color":"red"}]
+#tellraw @a[scores={patclick=1..}] ["",{"text":"Hey there! ","color":"aqua"},{"text":"I made a page where you can see all my future games and work over on Patreon. Over the past half year, I have been making Minecraft maps full time on the Minecraft Marketplace. ","color":"white","bold":false,"underlined":false,"click_event":{"action":"open_url","url":"https://www.patreon.com/chainsawninja"}},{"text":"Now I want to move my effort to making games right here on Realms, with higher quality than ever, just for you guys.","color":"yellow","bold":false,"click_event":{"action":"open_url","url":"https://www.patreon.com/chainsawninja"}},{"text":" If you want to see the cool games coming, or you want to support me so I can make these games, [","click_event":{"action":"open_url","url":"https://www.patreon.com/chainsawninja"}},{"color":"blue","text":"CLICK HERE","click_event":{"action":"open_url","url":"https://www.patreon.com/chainsawninja"}},{"text":"] to go the page about it. Thanks :D ","click_event":{"action":"open_url","url":"https://www.patreon.com/chainsawninja"}},{"text":"  <3 <3 <3","color":"red"}]
 #scoreboard players set @a patclick 0
 
 #clear

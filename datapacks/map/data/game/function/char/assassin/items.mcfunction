@@ -5,20 +5,12 @@
 execute as @s[scores={click=1..},nbt={SelectedItem:{id:"minecraft:leather"}}] at @s run function game:char/assassin/dart
 
 execute as @s[scores={dartcool=0,dartuse=2..}] run function game:char/assassin/give/magic_star {"amount":2}
-item replace entity @s[scores={dartcool=0,dartuse=1}] hotbar.1 with minecraft:leather[custom_name='{"italic":false,"text":"§7Explosive Dart §r: Right-click"}',lore=['{"italic":false,"color":"white","text":"1 TNT (immovable)"}','{"italic":false,"color":"white","text":"Reload: 1.75s (alternates)"}','{"italic":false,"color":"white","text":"Fuse: 0.4s"}','{"italic":false,"color":"white","text":"Speed: 30bps"}','{"italic":false,"color":"white","text":"Cooldown: 0.25s"}']] 1
-item replace entity @s[scores={dartcool=0,dartuse=..0}] hotbar.1 with minecraft:leather[custom_name='{"italic":false,"text":"§7Explosive Dart §r: Right-click"}',lore=['{"italic":false,"color":"white","text":"1 TNT (immovable)"}','{"italic":false,"color":"white","text":"Reload: 1.75s (alternates)"}','{"italic":false,"color":"white","text":"Fuse: 0.4s"}','{"italic":false,"color":"white","text":"Speed: 30bps"}','{"italic":false,"color":"white","text":"Cooldown: 0.25s"}']] 2
+item replace entity @s[scores={dartcool=0,dartuse=1}] hotbar.1 with minecraft:leather[custom_name={"italic":false,"text":"§7Explosive Dart §r: Right-click"},lore=[{"italic":false,"color":"white","text":"1 TNT (immovable)"},{"italic":false,"color":"white","text":"Reload: 1.75s (alternates)"},{"italic":false,"color":"white","text":"Fuse: 0.4s"},{"italic":false,"color":"white","text":"Speed: 30bps"},{"italic":false,"color":"white","text":"Cooldown: 0.25s"}]] 1
+item replace entity @s[scores={dartcool=0,dartuse=..0}] hotbar.1 with minecraft:leather[custom_name={"italic":false,"text":"§7Explosive Dart §r: Right-click"},lore=[{"italic":false,"color":"white","text":"1 TNT (immovable)"},{"italic":false,"color":"white","text":"Reload: 1.75s (alternates)"},{"italic":false,"color":"white","text":"Fuse: 0.4s"},{"italic":false,"color":"white","text":"Speed: 30bps"},{"italic":false,"color":"white","text":"Cooldown: 0.25s"}]] 2
 
 execute as @s[scores={dartcool=0,dartuse=1}] run function game:char/assassin/give/dart {"amount":1}
 execute as @s[scores={dartcool=0,dartuse=..0}] run function game:char/assassin/give/dart {"amount":2}
 
-#item replace entity @s[scores={dartcool=0,dartuse=0}] hotbar.4 with minecraft:leather{display:{Name:"{\"italic\":false,\"text\":\"§7Explosive Dart §r: Right-click\"}"}} 6
-#item replace entity @s[scores={dartcool=0,dartuse=1}] hotbar.4 with minecraft:leather{display:{Name:"{\"italic\":false,\"text\":\"§7Explosive Dart §r: Right-click\"}"}} 5
-#item replace entity @s[scores={dartcool=0,dartuse=2}] hotbar.4 with minecraft:leather{display:{Name:"{\"italic\":false,\"text\":\"§7Explosive Dart §r: Right-click\"}"}} 4
-#item replace entity @s[scores={dartcool=0,dartuse=3}] hotbar.4 with minecraft:leather{display:{Name:"{\"italic\":false,\"text\":\"§7Explosive Dart §r: Right-click\"}"}} 3
-#item replace entity @s[scores={dartcool=0,dartuse=4}] hotbar.4 with minecraft:leather{display:{Name:"{\"italic\":false,\"text\":\"§7Explosive Dart §r: Right-click\"}"}} 2
-#item replace entity @s[scores={dartcool=0,dartuse=5}] hotbar.4 with minecraft:leather{display:{Name:"{\"italic\":false,\"text\":\"§7Explosive Dart §r: Right-click\"}"}} 1
-
-#item replace entity @s[scores={dartcool=0,dartuse=6}] hotbar.4 with minecraft:leather{display:{Name:"{\"italic\":false,\"text\":\"§7Explosive Dart §r: Right-click\"}"}} 1
 scoreboard players remove @s[scores={dartcool=0..}] dartcool 1
 
 # star reloading

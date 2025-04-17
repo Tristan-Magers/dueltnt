@@ -6,8 +6,8 @@
 
 function game:items/orb
 
-item replace entity @s[nbt={SelectedItemSlot:1}] hotbar.1 with minecraft:golden_hoe[custom_name='{"italic":false,"text":"§6Recharging.."}',attribute_modifiers={modifiers:[{id:"attack_speed",type:"attack_speed",amount:10,operation:"add_value",slot:"any"},{id:"attack_damage",type:"attack_damage",amount:1,operation:"add_value",slot:"any"}],show_in_tooltip:false}]
-item replace entity @s[nbt={SelectedItemSlot:2}] hotbar.2 with minecraft:golden_hoe[custom_name='{"italic":false,"text":"§6Recharging.."}',attribute_modifiers={modifiers:[{id:"attack_speed",type:"attack_speed",amount:10,operation:"add_value",slot:"any"},{id:"attack_damage",type:"attack_damage",amount:1,operation:"add_value",slot:"any"}],show_in_tooltip:false}]
+item replace entity @s[nbt={SelectedItemSlot:1}] hotbar.1 with minecraft:golden_hoe[custom_name={"italic":false,"text":"§6Recharging.."},attribute_modifiers=[{id:"attack_speed",type:"attack_speed",amount:10,operation:"add_value",slot:"any"},{id:"attack_damage",type:"attack_damage",amount:1,operation:"add_value",slot:"any"}],tooltip_display={hidden_components:["attribute_modifiers","can_break","custom_model_data","unbreakable","tooltip_display","weapon","max_damage","can_place_on","trim","dyed_color","damage","enchantments","food","tool","tooltip_display","potion_contents","item_model"]}]
+item replace entity @s[nbt={SelectedItemSlot:2}] hotbar.2 with minecraft:golden_hoe[custom_name={"italic":false,"text":"§6Recharging.."},attribute_modifiers=[{id:"attack_speed",type:"attack_speed",amount:10,operation:"add_value",slot:"any"},{id:"attack_damage",type:"attack_damage",amount:1,operation:"add_value",slot:"any"}],tooltip_display={hidden_components:["attribute_modifiers","can_break","custom_model_data","unbreakable","tooltip_display","weapon","max_damage","can_place_on","trim","dyed_color","damage","enchantments","food","tool","tooltip_display","potion_contents","item_model"]}]
 tag @s[nbt=!{SelectedItemSlot:2}] remove boomshard
 
 scoreboard players set @s[gamemode=adventure,scores={blastwandtime=80..},nbt={SelectedItemSlot:2}] blastwandtime 55

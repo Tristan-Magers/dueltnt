@@ -36,16 +36,16 @@ scoreboard players set @s plaguetimer 60
 scoreboard players operation @s realclass = @s class
 scoreboard players set @p class 8
 function game:char/gardener/give/bow
-#execute if entity @e[scores={mode=1}] run item replace entity @s hotbar.0 with minecraft:bow[damage=220,unbreakable={show_in_tooltip:false},enchantments={punch:3},custom_name='{"italic":false,"text":"§6Blast Jumper§r : Throw to switch"}']
-#item replace entity @s hotbar.5 with arrow{display:{Name:"{\"italic\":false,\"text\":\"Not your father's Blast Off\"}"}}
+#execute if entity @e[scores={mode=1}] run item replace entity @s hotbar.0 with minecraft:bow[damage=220,unbreakable={},enchantments={punch:3},custom_name={"italic":false,"text":"§6Blast Jumper§r : Throw to switch"}]
+
 scoreboard players set @s bow 0
 execute as @s run function game:char/gardener/give/pvp_paper
 execute as @s run function game:char/gardener/give/shift
 execute as @s run function game:char/gardener/give/lives_paper
 
 team join gardener @s
-item replace entity @s hotbar.8 with minecraft:potion[potion_contents={custom_color:16711918},custom_name='{"italic":false,"text":"§dLeave Game"}',hide_additional_tooltip={}]
-item replace entity @s hotbar.3 with stone_pressure_plate[custom_name='{"italic":false,"text":"§7Grave Trap §r: Right-click"}',can_place_on={predicates:[{blocks:"#game:bolt_place"}],show_in_tooltip:0b},entity_data={id:"creeper",ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"Bomb",Health:500,ExplosionRadius:4}] 12
+item replace entity @s hotbar.8 with minecraft:potion[potion_contents={custom_color:16711918},custom_name={"italic":false,"text":"§dLeave Game"},tooltip_display={hidden_components:["attribute_modifiers","can_break","custom_model_data","unbreakable","tooltip_display","weapon","max_damage","can_place_on","trim","dyed_color","damage","enchantments","food","tool","tooltip_display","potion_contents","item_model"]}]
+item replace entity @s hotbar.3 with stone_pressure_plate[custom_name={"italic":false,"text":"§7Grave Trap §r: Right-click"},can_place_on=[{blocks:"#game:bolt_place"}],entity_data={id:"creeper",ignited:1,Fuse:28,Invulnerable:0,PersistenceRequired:1,Silent:1,NoAI:0,CustomName:"Bomb",Health:500,ExplosionRadius:4},tooltip_display={hidden_components:["attribute_modifiers","can_break","custom_model_data","unbreakable","tooltip_display","weapon","max_damage","can_place_on","trim","dyed_color","damage","enchantments","food","tool","tooltip_display","potion_contents","item_model"]}] 12
 
 effect clear @s minecraft:jump_boost
 effect clear @s minecraft:speed

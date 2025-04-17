@@ -141,6 +141,16 @@ scoreboard players operation #rubixRot particle = #haloTicks particle
 execute as @s[scores={particle=26}] at @s rotated 0 0 positioned ~ ~.2 ~ run function game:player/particle/halo2
 execute as @s[scores={particle=26}] at @s rotated ~ 0 positioned ~ ~1.6 ~ run function game:player/particle/halo_top
 
+execute as @s[scores={particle=27,parttimer=1}] at @s rotated ~ 0 positioned ^0.3 ^ ^-0.7 run particle minecraft:ominous_spawning ~ ~1 ~ .2 .8 .2 0 2 force
+execute as @s[scores={particle=27,parttimer=3}] at @s rotated ~ 0 positioned ^-0.3 ^ ^-0.7 run particle minecraft:ominous_spawning ~ ~1 ~ .2 .8 .2 0 2 force
+execute as @s[scores={particle=27,parttimer=2}] at @s rotated ~ 0 positioned ^ ^ ^-0.7 run particle minecraft:trial_omen ~ ~1.4 ~ 0.2 0.2 0.2 0 1 force
+
+execute as @s[scores={particle=28,gpart=1}] at @s rotated ~ 0 positioned ^0.4 ^ ^-0.8 run particle tinted_leaves{color:[0.847,0.831,1.000,1.00]} ~ ~1.8 ~ 0.2 0.2 0.2 0.1 1 normal
+execute as @s[scores={particle=28,gpart=4}] at @s rotated ~ 0 positioned ^-0.4 ^ ^-0.8 run particle tinted_leaves{color:[1.000,0.949,0.741,1.00]} ~ ~1.8 ~ 0.2 0.2 0.2 0.1 1 normal
+
+execute as @s[scores={particle=28,gpart=10}] at @s rotated ~ 0 positioned ^-0.4 ^ ^-0.8 run particle tinted_leaves{color:[0.847,0.831,1.000,1.00]} ~ ~1.8 ~ 0.2 0.2 0.2 0.1 1 normal
+execute as @s[scores={particle=28,gpart=14}] at @s rotated ~ 0 positioned ^0.4 ^ ^-0.8 run particle tinted_leaves{color:[1.000,0.949,0.741,1.00]} ~ ~1.8 ~ 0.2 0.2 0.2 0.1 1 normal
+
 #>GGC3 Particle
 execute if entity @s[scores={particle=500}] run function game:player/particle/ggc3
 

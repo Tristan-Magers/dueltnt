@@ -22,9 +22,9 @@ execute unless entity @e[scores={mode=1}] run scoreboard players set @s[gamemode
 execute if entity @e[scores={mode=1}] run scoreboard players set @s[gamemode=adventure,scores={timer=140..,class=6}] timer 0
 
 #execute unless entity @e[scores={mode=1}] run scoreboard players set @a[gamemode=adventure,scores={timer=160..,class=7}] timer 0
-execute unless entity @e[scores={mode=1}] run scoreboard players set @s[gamemode=adventure,scores={timer=60..,class=7}] timer 0
+execute unless entity @e[scores={mode=1}] run scoreboard players set @s[gamemode=adventure,scores={timer=50..,class=7}] timer 0
 execute unless entity @e[scores={mode=1}] run scoreboard players set @s[gamemode=adventure,scores={timer=30..,class=9}] timer 0
 execute if entity @e[scores={mode=1}] run scoreboard players set @s[gamemode=adventure,scores={timer=30..,class=9}] timer 0
 scoreboard players set @s[gamemode=adventure,scores={timer=50..,class=8}] timer 0
 
-scoreboard players set @s[gamemode=adventure,scores={timer=33..,class=10}] timer 0
+scoreboard players set @s[gamemode=adventure,scores={timer=32..,class=10}] timer 0

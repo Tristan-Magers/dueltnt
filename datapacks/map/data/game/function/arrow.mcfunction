@@ -110,7 +110,7 @@ execute unless entity @e[scores={mode=1}] run execute as @s[type=arrow,scores={S
 execute as @s[type=arrow,scores={SciBow=1..}] at @s run playsound minecraft:entity.tnt.primed master @a ~ ~ ~ .4 1.4
 
 #necro bow
-execute as @s[type=arrow,scores={NecroBow=1..},x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,Invulnerable:1,Marker:1,Silent:1,Invisible:1,CustomName:'{"text":"NArrow"}',NoAI:1}
+execute as @s[type=arrow,scores={NecroBow=1..},x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,Invulnerable:1,Marker:1,Silent:1,Invisible:1,CustomName:{"text":"NArrow"},NoAI:1}
 
 #soldier arrow
 execute as @s[type=arrow,scores={SolBow=1}] at @s run summon tnt ~ ~ ~ {fuse:9,Motion:[0.0d,0.26d,0.0d]}
@@ -119,19 +119,19 @@ execute as @s[type=arrow,scores={SolBow=1}] at @s run playsound minecraft:entity
 #echo bow
 #execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=598,z=598,y=0,dx=39,dz=39,dy=108,distance=..1000] at @s run fill ~-1 0 ~-1 ~1 80 ~1 air
 #execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=598,z=598,y=0,dx=39,dz=39,dy=108,distance=..1000] at @s run particle crit ~ ~ ~ 1 10 1 0 100 force
-#execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=598,z=598,y=0,distance=..1000] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=4.5,type=!armor_stand,tag=!nowalllev] at @s run effect give @s levitation 1 1
-#execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=598,z=598,y=0,distance=..1000,nbt={inBlockState:{Name:"minecraft:barrier"}}] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=4.5,type=!armor_stand,tag=!nowalllev] at @s run scoreboard players set @s grtest 3
-#execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=598,z=598,y=0,distance=..1000,nbt={inBlockState:{Name:"minecraft:barrier"}}] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=4.5,type=!armor_stand,tag=!nowalllev] at @s run tag @s add nowalllev
-#execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=598,z=598,y=0,distance=..1000] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=4.5,type=!armor_stand] at @s run teleport @s ~ ~4 ~
+#execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=598,z=598,y=0,distance=..1000] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=3.5,type=!armor_stand,tag=!nowalllev] at @s run effect give @s levitation 1 1
+#execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=598,z=598,y=0,distance=..1000,nbt={inBlockState:{Name:"minecraft:barrier"}}] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=3.5,type=!armor_stand,tag=!nowalllev] at @s run scoreboard players set @s grtest 3
+#execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=598,z=598,y=0,distance=..1000,nbt={inBlockState:{Name:"minecraft:barrier"}}] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,,type=!armor_stand,tag=!nowalllev] at @s run tag @s add nowalllev
+#execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=598,z=598,y=0,distance=..1000] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=3.5,type=!armor_stand] at @s run teleport @s ~ ~4 ~
 
 execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=620,z=620,y=40,distance=..120] at @s run fill ~-1 0 ~-1 ~1 80 ~1 air replace #game:bolt_place
 execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=620,z=620,y=40,distance=..120] at @s run particle crit ~ ~ ~ 1 10 1 0 100 force
-execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=4.5,type=!armor_stand,tag=!nowalllev] at @s run effect give @s levitation 1 1
-execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000,nbt={inBlockState:{Name:"minecraft:barrier"}}] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=4.5,type=!armor_stand,tag=!nowalllev] at @s run scoreboard players set @s grtest 3
-execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000,nbt={inBlockState:{Name:"minecraft:barrier"}}] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=4.5,type=!armor_stand,tag=!nowalllev] at @s run tag @s add nowalllev
-execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=4.5,type=!armor_stand] at @s run teleport @s ~ ~4 ~
+execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=3.5,type=!armor_stand,tag=!nowalllev] at @s run effect give @s levitation 1 1
+execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000,nbt={inBlockState:{Name:"minecraft:barrier"}}] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=3.5,type=!armor_stand,tag=!nowalllev] at @s run scoreboard players set @s grtest 3
+execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000,nbt={inBlockState:{Name:"minecraft:barrier"}}] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=3.5,type=!armor_stand,tag=!nowalllev] at @s run tag @s add nowalllev
+execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=3.5,type=!armor_stand] at @s run teleport @s ~ ~4 ~
 
-execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=4.5,type=!armor_stand] at @s run playsound minecraft:entity.breeze.deflect master @a ~ ~ ~ 0.6 0.75
+execute as @s[type=arrow,scores={AprBow=1..},x=598,z=598,y=0,distance=..1000] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=3.5,type=!armor_stand] at @s run playsound minecraft:entity.breeze.deflect master @a ~ ~ ~ 0.6 0.75
 
 #execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=620,z=620,y=40,distance=..120] at @s run playsound minecraft:entity.allay.item_given master @a ~ ~ ~ 0.4 0
 execute as @s[type=arrow,scores={Inbarrier=..0,AprBow=1..},x=620,z=620,y=40,distance=..120] at @s run playsound minecraft:entity.wind_charge.wind_burst master @a ~ ~ ~ 0.7 1.4

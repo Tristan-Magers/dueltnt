@@ -25,11 +25,11 @@ execute as @s[scores={slimeT=30},tag=!thrown] at @s run data merge entity @s {Si
 
 execute as @s[tag=!thrown] at @s run particle minecraft:wax_off ~ ~1 ~ 1 1 1 0 2 force
 
-execute as @s[scores={slimeT=59}] at @s run summon tnt ~ ~1 ~
-execute as @s[scores={slimeT=59}] at @s run summon tnt ~ ~1 ~
+execute as @s[scores={slimeT=59}] at @s run summon tnt ~ ~1 ~ {fuse:0}
+execute as @s[scores={slimeT=59}] at @s run summon tnt ~ ~1 ~ {fuse:0}
 
-execute as @s[scores={slimeT=34},tag=!thrown] at @s run summon tnt ~ ~1 ~
-execute as @s[scores={slimeT=34},tag=!thrown] at @s run summon tnt ~ ~1 ~
-execute as @s[scores={slimeT=34},tag=!thrown] at @s run summon tnt ~ ~1 ~
+execute as @s[scores={slimeT=34},tag=!thrown] at @s run summon tnt ~ ~1 ~ {fuse:0}
+execute as @s[scores={slimeT=34},tag=!thrown] at @s run summon tnt ~ ~1 ~ {fuse:0}
+execute as @s[scores={slimeT=34},tag=!thrown] at @s run summon tnt ~ ~1 ~ {fuse:0}
 
 tp @s[scores={slimeT=34},tag=!thrown] ~ ~-10000 ~

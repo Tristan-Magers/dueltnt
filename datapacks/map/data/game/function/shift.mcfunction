@@ -50,7 +50,7 @@ scoreboard players set @s[scores={class=2,timer=1}] shift_cool 76
 scoreboard players set @s[scores={class=3,timer=1}] shift_cool 32
 scoreboard players set @s[scores={class=4,timer=1}] shift_cool 150
 scoreboard players set @s[scores={class=6,timer=1}] shift_cool 160
-scoreboard players set @s[scores={class=7,timer=1}] shift_cool 60
+scoreboard players set @s[scores={class=7,timer=1}] shift_cool 50
 scoreboard players remove @s[scores={class=9,timer=1}] shift_cool 1
 
 #reaper
@@ -63,7 +63,7 @@ execute as @s[scores={class=7}] at @s run effect give @s speed 3 3
 execute as @s[scores={class=7}] at @s run playsound minecraft:entity.breeze.charge master @a ~ ~ ~ 1 1.1
 
 # Unstable mass shift (removed)
-#execute as @s[scores={class=9}] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Silent:1,Invulnerable:1,Invisible:1,CustomName:'{"italic":false,"text":"ground2"}'}
+#execute as @s[scores={class=9}] at @s run summon armor_stand ~ ~ ~ {NoGravity:1,Marker:1,Silent:1,Invulnerable:1,Invisible:1,CustomName:{"italic":false,"text":"ground2"}}
 #execute as @s[scores={class=9,Y=4..}] at @s run fill ~-1 ~-3 ~-1 ~1 ~-1 ~1 purple_wool replace air
 #execute as @s[scores={class=9,Y=..3}] at @s run fill ~-1 0 ~-1 ~1 ~-1 ~1 purple_wool replace air
 #execute as @s[scores={class=9}] at @s run tp @s @s

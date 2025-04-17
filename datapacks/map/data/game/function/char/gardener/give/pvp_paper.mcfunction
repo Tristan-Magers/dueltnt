@@ -1,1 +1,1 @@
-item replace entity @s hotbar.4 with minecraft:paper[custom_name='{"italic":false,"text":"§6You can now PvP with players :D"}']
+item replace entity @s hotbar.4 with minecraft:paper[custom_name={"italic":false,"text":"§6You can now PvP with players :D"}]

@@ -37,7 +37,7 @@ execute as @s[scores={Lives=1,Y=..0,teamed=1..},tag=blue,x=620,y=20,z=620,distan
 execute as @s[scores={Lives=1,Y=..0,teamed=1..},tag=green,x=620,y=20,z=620,distance=..100] at @s run tellraw @a [{"text":"[","color":"white"},{"text":"GREEN","color":"green"},{"text":"] ","color":"white"},{"selector":"@p[scores={Y=..0}]"},{"text":" ☠ DIED! ☠","color":"green"}]
 
 scoreboard players remove @s[scores={Lives=-10..}] Lives 1
-execute as @s[scores={Lives=1..}] at @s run summon armor_stand ~ 44 ~ {NoGravity:1,Invlunerable:1,Marker:1,Silent:1,CustomName:"{\"italic\":false,\"text\":\"SP\"}",Invisible:1}
+execute as @s[scores={Lives=1..}] at @s run summon armor_stand ~ 44 ~ {NoGravity:1,Invlunerable:1,Marker:1,Silent:1,CustomName:{"italic":false,"text":"SP"},Invisible:1}
 execute as @s[scores={Lives=0..}] at @s run function game:killender
 execute as @s[scores={Lives=1..}] at @s run tp @s ~ 45 ~
 execute as @s[x=620,y=20,z=620,distance=..100] at @s run execute as @a[distance=..100] at @s run playsound minecraft:entity.wither.hurt master @s ~ ~ ~ 1 1.5

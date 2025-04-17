@@ -23,4 +23,4 @@ execute store result storage shuba_fix masterwand.damage int 1 run scoreboard pl
 function game:char/overlord/masterwanduse_macro with storage shuba_fix masterwand
 data remove storage shuba_fix masterwand
 
-item replace entity @s[scores={masterc=25..}] hotbar.0 with blaze_rod[custom_name='{"italic":false,"text":"§9On Cooldown"}',lore=['{"italic":false,"color":"white","text":"Mines 3 blocks for material"}','{"italic":false,"color":"white","text":"Reload: 2.5s"}','{"italic":false,"color":"white","text":"Offhand/Throw to Gather"}','{"italic":false,"color":"white","text":"Gather reload: 10s"}']]
+item replace entity @s[scores={masterc=25..}] hotbar.0 with blaze_rod[custom_name={"italic":false,"text":"§9On Cooldown"},lore=[{"italic":false,"color":"white","text":"Mines 3 blocks for material"},{"italic":false,"color":"white","text":"Reload: 2.5s"},{"italic":false,"color":"white","text":"Offhand/Throw to Gather"},{"italic":false,"color":"white","text":"Gather reload: 10s"}]]

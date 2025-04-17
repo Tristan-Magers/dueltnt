@@ -13,9 +13,9 @@ clear @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:4b}]},scores={groundtime=
 execute unless entity @e[scores={mode=1}] as @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:4b}]},scores={groundtime=..0,grounduse=1}] run function game:char/echo/give/groundspell {amount:1}
 execute unless entity @e[scores={mode=1}] as @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:4b}]},scores={groundtime=..0,grounduse=0}] run function game:char/echo/give/groundspell {amount:2}
 
-execute if entity @e[scores={mode=1}] run item replace entity @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:4b}]},scores={groundtime=..0,grounduse=2}] hotbar.4 with minecraft:red_dye[custom_name='{"italic":false,"text":"§eGround Spell : Right-click"}']
-execute if entity @e[scores={mode=1}] run item replace entity @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:4b}]},scores={groundtime=..0,grounduse=1}] hotbar.4 with minecraft:red_dye[custom_name='{"italic":false,"text":"§eGround Spell : Right-click"}'] 2
-execute if entity @e[scores={mode=1}] run item replace entity @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:4b}]},scores={groundtime=..0,grounduse=0}] hotbar.4 with minecraft:red_dye[custom_name='{"italic":false,"text":"§eGround Spell : Right-click"}'] 3
+execute if entity @e[scores={mode=1}] run item replace entity @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:4b}]},scores={groundtime=..0,grounduse=2}] hotbar.4 with minecraft:red_dye[custom_name={"italic":false,"text":"§eGround Spell : Right-click"}]
+execute if entity @e[scores={mode=1}] run item replace entity @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:4b}]},scores={groundtime=..0,grounduse=1}] hotbar.4 with minecraft:red_dye[custom_name={"italic":false,"text":"§eGround Spell : Right-click"}] 2
+execute if entity @e[scores={mode=1}] run item replace entity @s[nbt=!{Inventory:[{id:"minecraft:red_dye",Slot:4b}]},scores={groundtime=..0,grounduse=0}] hotbar.4 with minecraft:red_dye[custom_name={"italic":false,"text":"§eGround Spell : Right-click"}] 3
 
 clear @s[nbt=!{Inventory:[{id:"minecraft:pink_dye",Slot:2b,components:{"minecraft:custom_data":{BlastOrb:1b}}}]},scores={blastwandtime=89..90}] pink_dye[custom_data={BlastOrb:1b}]
 execute as @s[nbt=!{Inventory:[{id:"minecraft:pink_dye",Slot:2b,components:{"minecraft:custom_data":{BlastOrb:1b}}}]},scores={blastwandtime=89..90}] run function game:char/echo/give/orb {wand:"§aBlast Wand§r",orb_id:{BlastOrb:1b},slot:2}

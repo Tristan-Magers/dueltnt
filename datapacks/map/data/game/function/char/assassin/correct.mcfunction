@@ -1,7 +1,6 @@
 execute as @s[scores={nobow=3..}] run function game:char/assassin/give/bow
 
 clear @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]}] ender_pearl
-#item replace entity @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]},scores={endercount=1,enderreload=..0}] hotbar.2 with minecraft:ender_pearl{display:{Name:"{\"italic\":false,\"text\":\"§aTeleport §r: Right-click\"}"}} 1
 
 execute as @s[x=600,y=60,z=600,distance=3..95,nbt=!{Inventory:[{id:"minecraft:ender_pearl",Slot:2b}]},scores={endercount=0,enderreload=..0}] run function game:char/assassin/give/teleport
 

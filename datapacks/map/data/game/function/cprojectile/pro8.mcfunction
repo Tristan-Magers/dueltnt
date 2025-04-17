@@ -11,6 +11,8 @@ clear @s gray_dye
 clear @s clay_ball
 #scoreboard players add @s creepegguse 1
 
+effect give @s minecraft:slow_falling 1 1 true
+
 #explosion delay
 scoreboard players set @s[scores={CPtimer=..18}] CPtimer 18
 
