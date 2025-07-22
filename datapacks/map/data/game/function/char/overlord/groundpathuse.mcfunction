@@ -11,6 +11,8 @@ scoreboard players remove @s masterb 14
 clear @s gold_ore 14
 
 scoreboard players set @s slide_cooldown 110
+attribute @s minecraft:jump_strength base set 0.41999999
+attribute @s minecraft:movement_speed base set 0.1
 
 function game:char/overlord/masterwanditems
 

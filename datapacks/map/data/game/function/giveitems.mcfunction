@@ -2,6 +2,7 @@ clear @a[x=620,y=20,z=620,distance=..100]
 effect give @a fire_resistance 1000000 255 true
 
 execute as @a at @s run attribute @p minecraft:movement_speed base set .1
+execute as @a at @s run attribute @p minecraft:jump_strength base set 0.41999998688697815
 
 execute as @a[scores={class=0},x=620,y=20,z=620,distance=..100] run function game:char/soldier/give/bow
 execute as @a[scores={class=0},x=620,y=20,z=620,distance=..100] run function game:char/soldier/give/slimer
@@ -184,7 +185,10 @@ scoreboard players set @a[scores={class=10},x=620,y=20,z=620,distance=..100] bow
 
 effect give @a[scores={class=10},x=620,y=20,z=620,distance=..100] jump_boost 300 1 true
 execute as @a[scores={class=10},x=620,y=20,z=620,distance=..100] at @s run attribute @p minecraft:movement_speed base set .132
-#effect give @a[scores={class=10},x=620,y=20,z=620,distance=..100] speed 300 0 true
+
+execute as @a[scores={class=9},x=620,y=20,z=620,distance=..100] at @s run attribute @p minecraft:movement_speed base set .112
+execute as @a[scores={class=9},x=620,y=20,z=620,distance=..100] at @s run attribute @p minecraft:jump_strength base set 0.45
+#effect give @a[scores={class=9},x=620,y=20,z=620,distance=..100] jump_boost 300 0 true
 
 #item replace entity @a[scores={class=2},x=620,y=20,z=620,distance=..100] hotbar.5 with minecraft:coal[custom_name={"italic":false,"text":"§9Air Missile§r : Right-click"}]
 
@@ -228,7 +232,7 @@ scoreboard players set @a PStimer 0
 scoreboard players set @a acidTimer 0
 scoreboard players set @a ghostCrouch 0
 scoreboard players set @a timer 0
-scoreboard players set @a masterb 0
+scoreboard players set @a masterb 5
 scoreboard players set @a masterup 0
 scoreboard players set @a masterc 0
 scoreboard players set @a mastercT 0
@@ -239,7 +243,7 @@ scoreboard players set @a misreload 0
 #scoreboard players set @a[scores={class=2}] misreload 80
 scoreboard players set @a squidegguse 0
 scoreboard players set @a alarm 0
-scoreboard players set @a matfill 0
+scoreboard players set @a matfill 20
 scoreboard players set @a gravuse 6
 scoreboard players set @a ggravuse 0
 scoreboard players set @a garboost 0

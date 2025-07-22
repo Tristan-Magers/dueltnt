@@ -650,3 +650,24 @@ Echo
 - Faster shard shift reload from the last patch was purely cosmetic
 - Shovel, Slime/Creeper Eggs, and Scythe did not list knockback as an effect
 - Cloudy particle could not be selected in the book until the redstone particle was unlocked
+
+** 9.2.6 **
+
+Note: Minor update with some changes, due to updating to 1.21.8. Season 10 in development.
+
+[Game]
+- Game updated to version 1.21.8
+
+[Character Changes]
+
+Overlord
+- Note: While overlord can often be strong, it must rely on a campy playstly that has been slowly nerfed.
+        To counter these nerfs, we are giving overlord some tools to be more active in its movement and engagements.
+- Overlord has 112% speed
+    - Note: not active during landslide
+- Overlord ghas 0.45 jump strength (4.2 is default)
+    - Note: slightly less strong than jump boost one
+    - Note: not active during landslide
+- Overlord reloads matter 0.1s faster (1.2s -> 1.1s)
+- Overlord starts with 6 matter
+- Boom Halo costs 2 less (14 -> 12)

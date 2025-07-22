@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:air",
+    "minecraft:barrier",
+    "minecraft:purple_stained_glass"
+  ]
+}

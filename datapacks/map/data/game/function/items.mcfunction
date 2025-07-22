@@ -10,6 +10,10 @@ tp @e[type=minecraft:silverfish] ~ ~-1000 ~
 effect clear @a[scores={nolev=1}] levitation
 scoreboard players remove @a[scores={nolev=0..}] nolev 1
 
+#
+execute as @e[tag=rain_dot,type=marker,sort=random] at @s run function game:char/skid/rdot/main
+execute as @e[tag=rainbow_spread,type=marker] at @s run function game:char/skid/rblocks/main
+
 #characters
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..100] at @s run function game:char/items
 
@@ -176,8 +180,8 @@ tag @a[gamemode=adventure,tag=mwnext,tag=!mwnext2] add mwnext2
 
 #master boom
 execute as @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:beef"}}] at @s run function game:char/overlord/masterboom
-scoreboard players remove @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:beef"}}] masterb 14
-clear @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:beef"}}] gold_ore 14
+scoreboard players remove @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:beef"}}] masterb 12
+clear @a[gamemode=adventure,scores={click=1..},nbt={SelectedItem:{id:"minecraft:beef"}}] gold_ore 12
 execute as @a[gamemode=adventure,scores={click=1..,class=9},nbt={SelectedItem:{id:"minecraft:beef"}}] at @s run function game:char/overlord/masterwanditems
 
 scoreboard players remove @e[scores={halo_cooldown=0..}] halo_cooldown 1
@@ -225,8 +229,8 @@ item modify entity @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores=
 
 #matter refill
 scoreboard players add @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=9}] matfill 1
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=9,matfill=24}] at @s run function game:char/overlord/masterwandget
-scoreboard players set @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=9,matfill=24}] matfill 0
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=9,matfill=22}] at @s run function game:char/overlord/masterwandget
+scoreboard players set @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={class=9,matfill=22}] matfill 0
 
 #master storm
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={masterstorm=..2,click=1..,storm_cooldown=..0},nbt={SelectedItem:{id:"minecraft:cooked_salmon"}}] at @s run function game:char/overlord/stormuse
@@ -314,6 +318,8 @@ execute as @e[tag=groundpath] at @s run function game:char/overlord/groundpath
 
 scoreboard players remove @a[scores={slide_cooldown=0..}] slide_cooldown 1
 
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={slide_cooldown=30,class=9}] run attribute @s minecraft:movement_speed base set 0.112
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={slide_cooldown=30,class=9}] run attribute @s minecraft:jump_strength base set 0.45
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={slide_cooldown=0,class=9}] run function game:char/overlord/masterwanditems
 
 #vortex

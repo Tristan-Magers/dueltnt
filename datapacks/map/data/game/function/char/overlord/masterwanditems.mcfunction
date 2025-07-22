@@ -4,9 +4,9 @@ execute unless entity @e[scores={mode=1}] run clear @s[scores={masterb=..25,mast
 execute if entity @e[scores={mode=1}] run clear @s[scores={masterb=..19,masterup=..3}] cod
 
 # boom halo
-item replace entity @s[scores={masterb=14..,halo_cooldown=..0}] hotbar.4 with minecraft:beef[custom_name={"italic":false,"text":"§cBoom Halo §r: Right-click (14 Material)"},lore=[{"italic":false,"text":"§4Beef"},{"italic":false,"color":"white","text":"8 TNT"},{"italic":false,"color":"white","text":"Reload: 7s"},{"italic":false,"color":"white","text":"Fuse: 0.35s"},{"italic":false,"color":"white","text":"Levitation 16 for 0.65s"}]]
-clear @s[scores={masterb=..13}] beef
-item replace entity @s[scores={masterb=..13,halo_cooldown=..0}] hotbar.4 with minecraft:barrier[custom_name={"italic":false,"text":"§9Not enough material"},lore=[{"italic":false,"text":"§4Beef"},{"italic":false,"color":"white","text":"8 TNT"},{"italic":false,"color":"white","text":"Reload: 7s"},{"italic":false,"color":"white","text":"Fuse: 0.35s"},{"italic":false,"color":"white","text":"Levitation 16 for 0.65s"}]] 1
+item replace entity @s[scores={masterb=12..,halo_cooldown=..0}] hotbar.4 with minecraft:beef[custom_name={"italic":false,"text":"§cBoom Halo §r: Right-click (12 Material)"},lore=[{"italic":false,"text":"§4Beef"},{"italic":false,"color":"white","text":"8 TNT"},{"italic":false,"color":"white","text":"Reload: 7s"},{"italic":false,"color":"white","text":"Fuse: 0.35s"},{"italic":false,"color":"white","text":"Levitation 16 for 0.65s"}]]
+clear @s[scores={masterb=..11}] beef
+item replace entity @s[scores={masterb=..11,halo_cooldown=..0}] hotbar.4 with minecraft:barrier[custom_name={"italic":false,"text":"§9Not enough material"},lore=[{"italic":false,"text":"§4Beef"},{"italic":false,"color":"white","text":"8 TNT"},{"italic":false,"color":"white","text":"Reload: 7s"},{"italic":false,"color":"white","text":"Fuse: 0.35s"},{"italic":false,"color":"white","text":"Levitation 16 for 0.65s"}]] 1
 item replace entity @s[scores={halo_cooldown=1..}] hotbar.4 with minecraft:beetroot[custom_name={"italic":false,"text":"§9On Cooldown"},lore=[{"italic":false,"text":"§4Beef"},{"italic":false,"color":"white","text":"8 TNT"},{"italic":false,"color":"white","text":"Reload: 7s"},{"italic":false,"color":"white","text":"Fuse: 0.35s"},{"italic":false,"color":"white","text":"Levitation 16 for 0.65s"}]] 1
 
 # matter bomb
