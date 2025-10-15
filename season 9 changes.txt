@@ -653,10 +653,10 @@ Echo
 
 ** 9.2.6 **
 
-Note: Minor update with some changes, due to updating to 1.21.8. Season 10 in development.
+Note: Minor update with some changes, due to updating versions. Season 10 in development.
 
 [Game]
-- Game updated to version 1.21.8
+- Game updated to version 1.21.8/1.21.10
 
 [Character Changes]
 

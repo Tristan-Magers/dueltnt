@@ -12,6 +12,6 @@ execute as @s[scores={t5=3..}] at @s run playsound minecraft:block.ancient_debri
 execute as @s[scores={t5=7..}] at @s run playsound minecraft:block.ancient_debris.break master @a ~ ~ ~ 1 0.8
 #execute as @s[scores={t6=35..}] at @s run playsound minecraft:block.amethyst_block.break master @a[distance=..20] ~ ~ ~ 0.6 0.7 0.1
 #execute as @s[scores={t6=35..}] at @s run particle minecraft:enchanted_hit ~ ~ ~ 1 1 1 2 20 force
-#execute as @s[scores={t6=35..}] at @s run particle minecraft:flash ~ ~ ~ 0 0 0 0 1 force
+#execute as @s[scores={t6=35..}] at @s run particle minecraft:flash{color:[1.000,1.000,1.000,1.00]} ~ ~ ~ 0 0 0 0 1 force
 #kill @s[scores={t6=35..}]
 kill @s[scores={blast=200..}]

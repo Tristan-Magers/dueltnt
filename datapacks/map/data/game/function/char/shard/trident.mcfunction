@@ -44,8 +44,8 @@ execute as @s[scores={t4=4}] at @s run summon slime ~ ~-3.2 ~ {NoGravity:1b,Sile
 execute as @s[scores={t4=4}] at @s run summon slime ~ ~-3.2 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Size:11,Tags:["kill_next"],active_effects:[{Id:14,Amplifier:1b,Duration:10,ShowParticles:0b}]}
 execute as @s[scores={t4=4}] at @s run summon slime ~ ~-3.2 ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Size:11,Tags:["kill_next"],active_effects:[{Id:14,Amplifier:1b,Duration:10,ShowParticles:0b}]}
 
-execute as @s[scores={t4=1}] at @s run particle minecraft:flash ~ ~0.5 ~ 0 0 0 0 1 force
-execute as @s[scores={t4=3}] at @s run particle minecraft:flash ~ ~0.5 ~ 0 0 0 0 1 force
+execute as @s[scores={t4=1}] at @s run particle minecraft:flash{color:[1.000,1.000,1.000,1.00]} ~ ~0.5 ~ 0 0 0 0 1 force
+execute as @s[scores={t4=3}] at @s run particle minecraft:flash{color:[1.000,1.000,1.000,1.00]} ~ ~0.5 ~ 0 0 0 0 1 force
 
 execute as @s[scores={t4=1}] at @s run particle item{item:{id:"minecraft:iron_block"}} ~ ~0.5 ~ 0 0 0 0.6 20 force
 execute as @s[scores={t4=1}] at @s run playsound minecraft:item.trident.hit_ground master @a[distance=..16] ~ ~ ~ 1 1 0.5
