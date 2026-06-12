@@ -60,9 +60,31 @@ scoreboard players set @s grave 0
 execute as @s[scores={class=9},tag=!gather] at @s run scoreboard players set @s masterc 0
 execute as @s[scores={class=9},tag=!gather] at @s run function game:char/overlord/masterwanduse
 
+tag @s[scores={class=9,shift_cool=..1}] add overreload
+
+scoreboard players add @s[scores={class=9},tag=overreload] shift_cool 1
+scoreboard players remove @s[scores={class=9},tag=overreload] overlordsc 1
+
+tag @s remove overreload
+
+execute as @s[scores={class=9}] at @s run function game:char/overlord/masterwandget
+execute as @s[scores={class=9}] at @s run function game:char/overlord/masterwandget
+execute as @s[scores={class=9}] at @s run function game:char/overlord/masterwandget
+execute as @s[scores={class=9}] at @s run function game:char/overlord/masterwandget
+execute as @s[scores={class=9}] at @s run function game:char/overlord/masterwandget
+execute as @s[scores={class=9}] at @s run function game:char/overlord/masterwandget
+execute as @s[scores={class=9}] at @s run function game:char/overlord/masterwandget
+execute as @s[scores={class=9}] at @s run function game:char/overlord/masterwandget
+execute as @s[scores={class=9}] at @s run function game:char/overlord/masterwandget
+execute as @s[scores={class=9}] at @s run function game:char/overlord/masterwandget
+execute as @s[scores={class=9}] at @s run function game:char/overlord/masterwandget
+execute as @s[scores={class=9}] at @s run function game:char/overlord/masterwandget
+
 execute as @s[scores={class=4,pig=1..}] at @s run effect clear @s speed
 execute as @s[scores={class=4,pig=1..}] at @s run effect give @s jump_boost 300 2 true
-execute as @s[scores={class=4,pig=1..}] at @s run scoreboard players set @s pig -500
+#it reloads at -90, decreases value at -1. super gross system
+execute as @s[scores={class=4}] at @s run scoreboard players set @s pig -89
+scoreboard players add @s[scores={class=4}] pig_count 1
 
 #
 scoreboard players set @s dive_kick -1

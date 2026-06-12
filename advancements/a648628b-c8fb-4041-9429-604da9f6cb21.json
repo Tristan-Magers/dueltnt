@@ -23,5 +23,47 @@
     },
     "done": true
   },
-  "DataVersion": 4556
+  "classes:class0": {
+    "criteria": {
+      "trapper": "2025-11-10 20:25:17 -0700"
+    },
+    "done": true
+  },
+  "classes:class2": {
+    "criteria": {
+      "trapper": "2026-06-09 10:28:19 -0600"
+    },
+    "done": true
+  },
+  "classes:class4": {
+    "criteria": {
+      "wizard": "2026-06-09 12:17:12 -0600"
+    },
+    "done": true
+  },
+  "classes:class10": {
+    "criteria": {
+      "overlord": "2026-06-09 17:23:27 -0600"
+    },
+    "done": true
+  },
+  "classes:class6": {
+    "criteria": {
+      "reaper": "2026-06-09 18:56:18 -0600"
+    },
+    "done": true
+  },
+  "classes:class8": {
+    "criteria": {
+      "gardener": "2026-06-10 10:29:44 -0600"
+    },
+    "done": true
+  },
+  "classes:class1": {
+    "criteria": {
+      "trapper": "2026-06-11 10:17:30 -0600"
+    },
+    "done": true
+  },
+  "DataVersion": 4671
 }

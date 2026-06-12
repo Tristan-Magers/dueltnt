@@ -17,7 +17,7 @@ tp @e[tag=kill_this] ~ ~-1000 ~
 kill @e[tag=kill_this]
 
 #
-gamerule mobGriefing true
+gamerule mob_griefing true
 
 #
 execute as @e[tag=killthis,type=slime] at @s run fill ~5 ~5 ~5 ~-5 ~-5 ~-5 air replace fire
@@ -490,6 +490,11 @@ team join gardener @a[team=!gardener,scores={class=8},gamemode=adventure,x=620,y
 #
 execute as @a[tag=frozen,scores={frozen=2..}] run function game:player/frozen3
 execute as @a[tag=!frozen] run clear @s ice
+
+#rebuilding blocks
+execute as @e[type=bee] at @s run summon minecraft:marker ~ ~ ~ {Tags:["rblock","has_block"]}
+kill @e[type=bee]
+execute as @e[type=marker,tag=rblock] at @s run function game:game/rblocks/main
 
 #> Tournament Rewards
 # Implemented by TheViralMelon

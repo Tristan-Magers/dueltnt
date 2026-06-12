@@ -55,18 +55,18 @@ scoreboard players remove @a[tag=shift_lock] coyote_frames 1
 tag @a[tag=shift_lock,scores={coyote_frames=1..}] remove shift_lock
 
 execute as @a[tag=!shift_lock] unless entity @s[scores={class=9}] run scoreboard players remove @s shift_cool 1
-execute as @a[tag=shift_lock,scores={shift_cool=..1}] unless entity @s[scores={class=9}] run scoreboard players remove @s shift_cool 1
+#execute as @a[tag=shift_lock,scores={shift_cool=..1}] unless entity @s[scores={class=9}] run scoreboard players remove @s shift_cool 1
 
-scoreboard players remove @a[scores={class=9,overlordsc=2..},tag=!shift_lock] shift_cool 1
+scoreboard players remove @a[scores={class=9,overlordsc=1..},tag=!shift_lock] shift_cool 1
 execute as @a unless entity @s[scores={class=9},tag=!shift_lock] run xp add @s -1 levels
-xp add @a[scores={class=9,overlordsc=2..},tag=!shift_lock] -1 levels
+xp add @a[scores={class=9,overlordsc=1..},tag=!shift_lock] -1 levels
 scoreboard players add @a[gamemode=adventure,scores={timer=1..},distance=..100,x=620,y=20,z=620,tag=!shift_lock] timer 1
 #> WoA1 Cosmetic for TheViralMelon
 execute as 3184a2a5-8544-4135-89ec-e63fd7a3f12f if entity @s[gamemode=adventure,scores={shift=1..,timer=..0,class=6},distance=..100,x=620,y=20,z=620] if score #woa1PhantomJump .num matches 1 at @s run function game:tournament_rewards/woa1/phantom_jump
-execute as @a[gamemode=adventure,scores={shift=1..,timer=..0},distance=..100,x=620,y=20,z=620] at @s unless entity @s[scores={class=9,overlordsc=2..}] unless entity @s[scores={class=0,soldier_shifts=..0}] run function game:shift
-execute as @a[gamemode=adventure,scores={shift=1..,timer=..0},distance=..100,x=620,y=20,z=620] at @s unless entity @s[scores={class=9,overlordsc=2..}] as @s[scores={class=0,soldier_shifts=..0,soldier_shift_sound=..0}] at @s run playsound minecraft:block.note_block.basedrum master @s
-execute as @a[gamemode=adventure,scores={shift=1..,timer=..0},distance=..100,x=620,y=20,z=620] at @s unless entity @s[scores={class=9,overlordsc=2..}] as @s[scores={class=0,soldier_shifts=..0,soldier_shift_sound=..0}] at @s run playsound minecraft:block.note_block.snare master @s
-execute as @a[gamemode=adventure,scores={shift=1..,timer=..0},distance=..100,x=620,y=20,z=620] at @s unless entity @s[scores={class=9,overlordsc=2..}] as @s[scores={class=0,soldier_shifts=..0,soldier_shift_sound=..0}] at @s run scoreboard players set @s soldier_shift_sound 10
+execute as @a[gamemode=adventure,scores={shift=1..,timer=..0},distance=..100,x=620,y=20,z=620] at @s unless entity @s[scores={class=9,overlordsc=1..}] unless entity @s[scores={class=0,soldier_shifts=..0}] run function game:shift
+execute as @a[gamemode=adventure,scores={shift=1..,timer=..0},distance=..100,x=620,y=20,z=620] at @s unless entity @s[scores={class=9,overlordsc=1..}] as @s[scores={class=0,soldier_shifts=..0,soldier_shift_sound=..0}] at @s run playsound minecraft:block.note_block.basedrum master @s
+execute as @a[gamemode=adventure,scores={shift=1..,timer=..0},distance=..100,x=620,y=20,z=620] at @s unless entity @s[scores={class=9,overlordsc=1..}] as @s[scores={class=0,soldier_shifts=..0,soldier_shift_sound=..0}] at @s run playsound minecraft:block.note_block.snare master @s
+execute as @a[gamemode=adventure,scores={shift=1..,timer=..0},distance=..100,x=620,y=20,z=620] at @s unless entity @s[scores={class=9,overlordsc=1..}] as @s[scores={class=0,soldier_shifts=..0,soldier_shift_sound=..0}] at @s run scoreboard players set @s soldier_shift_sound 10
 
 scoreboard players remove @a[scores={soldier_shift_sound=1..}] soldier_shift_sound 1
 
@@ -472,10 +472,11 @@ tag @e remove frozen
 tag @e[scores={frozen=0..}] add frozen
 
 #pig
-execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run scoreboard players set @s pig 41
-execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run effect give @s levitation 1 15 true
-execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run scoreboard players set @s nolev 8
+execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run scoreboard players set @s pig 33
+execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run effect give @s levitation 1 11 true
+execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run scoreboard players set @s nolev 14
 execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run summon pig ~ ~ ~ {Tags:["long"],Invulnerable:1}
+execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run function game:char/wizard/piguse
 execute as @a[gamemode=adventure,x=580,dx=80,y=2,dy=100,z=580,dz=80,distance=..100,scores={pigThrow=1..,egg=0}] at @s run clear @s pig_spawn_egg
 scoreboard players set @a pigThrow 0
 
@@ -483,10 +484,13 @@ scoreboard players add @e[type=pig] egg 1
 execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s run execute as @e[scores={egg=..1},limit=1,type=pig] at @s run teleport @p[scores={class=4,egg=1..}] ~ ~ ~
 execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s run tp @s @s
 tag @a[gamemode=adventure,scores={class=4,egg=1..}] add pig_place
-scoreboard players set @a[gamemode=adventure,scores={class=4,egg=1..}] pig 31
+scoreboard players set @a[gamemode=adventure,scores={class=4,egg=1..}] pig 26
+execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s run function game:char/wizard/piguse
 execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s if block ~ ~-1 ~ air run effect give @s levitation 1 15 true
 execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s if block ~ ~-1 ~ air run scoreboard players set @s nolev 6
-execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s unless block ~ ~-1 ~ air run scoreboard players set @s pig 21
+execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s unless block ~ ~-1 ~ air run tag @s add big_pig
+execute as @a[gamemode=adventure,scores={class=4,egg=1..}] at @s unless block ~ ~-1 ~ air run scoreboard players set @s pig 23
+clear @a[gamemode=adventure,scores={class=4,egg=1..}] pig_spawn_egg
 scoreboard players set @a[gamemode=adventure,scores={class=4}] egg 0
 execute as @e[type=pig] at @s run data merge entity @s {Invulnerable:1}
 scoreboard players set @e[type=pig,scores={egg=..1}] pig 41
@@ -581,7 +585,7 @@ effect give @e[name=Bomb,type=creeper,tag=!slow_disable] slow_falling 999 100 tr
 effect give @e[name=Bomb,type=creeper] slowness 999 100 true
 effect give @e[type=slime] slowness 999 100 true
 effect give @e[type=slime] resistance 999 100 true
-effect give @e[type=creeper] resistance 999 100 true
+effect give @e[type=creeper,tag=!noeffects] resistance 999 100 true
 
 execute as @e[type=slime,tag=s1] at @s run function game:items/reaperslime
 #execute as @e[name=Bomb,type=creeper] at @s run function game:physics/negate_gravity
@@ -678,6 +682,8 @@ scoreboard players set @a[gamemode=adventure,scores={plagueuse=1..,class=8},nbt=
 effect give @a[gamemode=adventure,scores={plagueuse=1..,class=8},nbt={OnGround:0b}] slow_falling 1 7
 effect give @a[gamemode=adventure,scores={plagueuse=1..,class=8},nbt={OnGround:0b}] levitation 1 7
 tag @a[gamemode=adventure,scores={plagueuse=1..}] remove checkairnade
+#execute as @a[gamemode=adventure,scores={plagueuse=1..}] as @e[type=lingering_potion] run say test
+#execute as @e[type=lingering_potion] run attribute @s explosion_knockback_resistance base set 1
 scoreboard players set @a[gamemode=adventure,scores={plagueuse=1..}] plaguetimer 200
 scoreboard players set @a[gamemode=adventure,scores={plagueuse=1..}] plagueuse 0
 scoreboard players remove @a[gamemode=adventure,scores={plaguetimer=0..}] plaguetimer 1
@@ -816,3 +822,7 @@ execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95] unless items e
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95] unless items entity @s weapon.offhand minecraft:carrot_on_a_stick run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick
 
 execute as @e[tag=no_motion] at @s run tp @s @s
+
+#
+scoreboard players remove @a[scores={ex_res=0..}] ex_res 1
+execute as @a[scores={ex_res=0}] run attribute @s minecraft:explosion_knockback_resistance base reset

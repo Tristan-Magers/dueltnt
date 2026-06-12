@@ -1,0 +1,67 @@
+[Game]
+
+[General]
+- added respawning blocks to maps
+    - respawn every 40s
+    - high blast resistance
+
+[Maps]
+Arena, Core, The End, Dead Feast,Terminal
+- added respawning blocks
+
+Hallow Keep
+- added more bedrock and respawning blocks
+
+[Character Changes]
+
+Soldier
+- Teleport (pearls) have 5s cooldown
+
+Assassin
+- Shift reload bug fixed where the visual countdown was 42 but it was still 44 behind the scenes (now 42)
+- Physics for Divekick completely reworked
+    - Note: mostly due to minecraft nonsense, but was also an escuse to make this move feel beeter in General
+- Speed decreased by 5% (140% -> 135%) [no longer uses speed]
+- Jump boost 2 replaced with jump stength .6 (slightly lower)
+- To account for speed changes, Teleport gives speed 1 instead of speed 3
+
+Ghost
+- Teleport (pearls) have 12s cooldown
+- Airmissile hitbox slightly reduced (2x2x2 cube -> 1.8 diameter sphere)
+
+Wizard
+- Fixed unworking code where fireballs spawn more dynamically based on your movement. Now can no long hit yourself with fireballs midair. Fireball jumps now much more consistant.
+- Pig reloads faster (6s/6.5s -> 4.5s) [note: used to depend on how it was used, no longer does]
+- Pig Transforms are now a limited resource
+    - Start with 4
+    - Reload 1 after death
+- Ground pig (placing pig on ground)
+    - Explodes 0.1s slower (1.05s -> 1.15s)
+    - 1 more tnt (2 -> 3)
+    - Explodes player more forward than up
+- Side pig (placing pig on side of block)
+    - Explodes 0.25s faster (1.55s -> 1.3s)
+- Air pig (throwing pig item)
+    - 0.3s more levitation (0.4s -> 0.7s)
+    - 2 levels weaker levetation (16 -> 14)
+    - Explodes 0.4s faster (2.05s -> 1.65s)
+
+Gardener
+- Reworked reloading lives into "Harvest" mechanic
+    - Harvest naturally ticks up 1 a second
+    - At 75 seconds you reload a life
+    - Hitting shovel/arrows/plague (on non-Gardener) reduces time (4s,6s,25s respectively)
+    - Max at 1 more than max and starts immediately
+    - Starts at 13s 
+    - Starts at 25s if you get plagued
+
+Overlord
+- Starts with only one restore world (previously 2)
+- Reloads one restore world on death (Cap at 2)
+- Restore world reloads wand repairs wand to full
+- Restore world give 12 matter
+- Dying gives 12 matter
+
+Shard
+- Shift reload bug fixed where the visual countdown was 32 but it was still 33 behind the scenes (now 32)
+- Trident's biggest pushboxes spawn 0.05s after rest of pushboxes (0.25s)

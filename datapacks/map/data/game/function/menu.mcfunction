@@ -1,4 +1,4 @@
-tellraw @a[scores={clickDis=1..}] ["",{"text":"Click here to join our Discord server.","color":"dark_aqua","bold":true,"click_event":{"action":"open_url","url":"https://discord.gg/XrUJ7K3"}}]
+tellraw @a[scores={clickDis=1..}] ["",{"text":"Click here to join our Discord server.","color":"dark_aqua","bold":true,"click_event":{"action":"open_url","url":"https://discord.gg/6xatFYH"}}]
 scoreboard players set @a clickDis 0
 
 function game:tutorial

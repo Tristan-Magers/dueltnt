@@ -17,14 +17,14 @@ kill @e[type=minecraft:wither]
 kill @e[type=minecraft:creeper]
 kill @e[tag=powerupitem]
 
-gamerule reducedDebugInfo true
+gamerule reduced_debug_info true
 
 execute if entity @e[scores={mode=1}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Overpowered","color":"dark_aqua","bold":true},{"text":"] \nReload times are a thing of the past. Every single item is much more powerful in this mode.","color":"white","bold":false}]
 execute if entity @e[scores={mode=2}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Hotfeet","color":"dark_red","bold":true},{"text":"] \nBe careful in this mode. TNT spawns at your feet at an ever increasing pace. Don't stand still!","color":"white","bold":false}]
 execute if entity @e[scores={mode=3}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Phantom","color":"dark_purple","bold":true},{"text":"] \nSometimes you need more tools. Duel with powerful items spawning across the map.","color":"white","bold":false}]
 execute if entity @e[scores={mode=4}] run tellraw @a [{"text":"[Selected mode: "},{"text":"Survival","color":"dark_green","bold":true},{"text":"] \nSurvive against hoards of enemies until time runs out. Go solo, outlive your peers, or work with a team to get through the storm. Good luck! Remember: ","color":"white","bold":false},{"text":"Ghasts are vulnerable...and chickens aren't what they seem","bold":true},{"text":".","bold":false}]
 
-execute if entity @e[tag=Map,scores={mode=0..1}] run gamerule reducedDebugInfo false
+execute if entity @e[tag=Map,scores={mode=0..1}] run gamerule reduced_debug_info false
 
 scoreboard players set @a pglow 0
 
@@ -54,9 +54,11 @@ execute as @e[name=Map,type=armor_stand,scores={game=5}] at @s run clone 2 9 -16
 
 execute as @e[name=Map,type=armor_stand,scores={game=6}] at @s run clone 2 10 -16 2 10 -16 4 5 -16
 
-execute as @e[name=Map,type=armor_stand,scores={game=7}] at @s run clone -94 7 -50 -54 19 -10 597 18 597
-execute as @e[name=Map,type=armor_stand,scores={game=7}] at @s run clone 2 1 -16 2 1 -16 4 5 -16
-execute as @e[name=Map,type=armor_stand,scores={game=7}] at @s run fill 637 10 637 597 17 597 air
+#execute as @e[name=Map,type=armor_stand,scores={game=7}] at @s run clone -94 7 -50 -54 19 -10 597 18 597
+#execute as @e[name=Map,type=armor_stand,scores={game=7}] at @s run clone 2 1 -16 2 1 -16 4 5 -16
+#execute as @e[name=Map,type=armor_stand,scores={game=7}] at @s run fill 637 10 637 597 17 597 air
+
+execute as @e[name=Map,type=armor_stand,scores={game=7}] at @s run clone 2 17 -16 2 17 -16 4 5 -16
 
 execute as @e[name=Map,type=armor_stand,scores={game=8}] at @s run clone 2 11 -16 2 11 -16 4 5 -16
 
@@ -66,8 +68,9 @@ execute as @e[name=Map,type=armor_stand,scores={game=10}] at @s run clone 2 14 -
 
 execute as @e[name=Map,type=armor_stand,scores={game=11}] at @s run clone 2 13 -16 2 13 -16 4 5 -16
 
-execute as @e[name=Map,type=armor_stand,scores={game=12}] at @s run clone -124 22 3 -91 29 -30 602 12 602
-execute as @e[name=Map,type=armor_stand,scores={game=12}] at @s run clone 2 1 -16 2 1 -16 4 5 -16
+execute as @e[name=Map,type=armor_stand,scores={game=12}] at @s run clone 2 18 -16 2 18 -16 4 5 -16
+#execute as @e[name=Map,type=armor_stand,scores={game=12}] at @s run clone -124 22 3 -91 29 -30 602 12 602
+#execute as @e[name=Map,type=armor_stand,scores={game=12}] at @s run clone 2 1 -16 2 1 -16 4 5 -16
 
 execute as @e[name=Map,type=armor_stand,scores={game=13}] at @s run clone 2 15 -16 2 15 -16 4 5 -16
 
@@ -228,3 +231,6 @@ fill 596 35 496 639 49 539 air
 fill 596 7 696 639 21 739 air
 fill 596 22 696 639 34 739 air
 fill 596 35 696 639 49 739 air
+
+#
+tag @e[tag=rblock] add has_block

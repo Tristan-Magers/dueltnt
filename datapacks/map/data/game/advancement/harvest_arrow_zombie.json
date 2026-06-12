@@ -1,0 +1,34 @@
+{
+  "criteria": {
+    "shot_arrow": {
+      "conditions": {
+        "damage": {
+          "type": {
+            "direct_entity": {
+              "type": "#minecraft:arrows"
+            },
+            "tags": [
+              {
+                "expected": true,
+                "id": "minecraft:is_projectile"
+              }
+            ]
+          }
+        },
+        "entity": {
+          "type": "minecraft:zombie"
+        }
+      },
+      "trigger": "minecraft:player_hurt_entity"
+    }
+  },
+  "requirements": [
+    [
+      "shot_arrow"
+    ]
+  ],
+  "rewards": {
+    "function": "game:char/gardener/harvest2"
+  },
+  "sends_telemetry_event": false
+}

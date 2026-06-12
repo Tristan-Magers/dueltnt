@@ -31,7 +31,7 @@ execute as @s[x=599,z=599,y=5,dx=36,dz=36,dy=25,distance=..1000,scores={t1=1,t2=
 execute as @s[x=599,z=599,y=5,dx=36,dz=36,dy=25,distance=..1000,scores={t1=1,t2=..10},tag=down,tag=!stop_moving] at @s run tp @s ~ ~-1 ~
 
 execute as @s[x=599,z=599,y=5,dx=36,dz=36,dy=25,distance=..1000,scores={t1=1,t2=..10},tag=!down,tag=!stop_moving] at @s run clone ~-1 ~-2 ~-1 ~1 ~1 ~1 ~-1 ~-1 ~-1 masked move
-execute as @s[x=599,z=599,y=5,dx=36,dz=36,dy=25,distance=..1000,scores={t1=1,t2=..10},tag=!down,tag=!stop_moving] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=3.5,type=!armor_stand] at @s run tp @s ~ ~1 ~
+execute as @s[x=599,z=599,y=5,dx=36,dz=36,dy=25,distance=..1000,scores={t1=1,t2=..10},tag=!down,tag=!stop_moving] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=3.5,type=!armor_stand,tag=!rblock] at @s run tp @s ~ ~1 ~
 execute as @s[x=599,z=599,y=5,dx=36,dz=36,dy=25,distance=..1000,scores={t1=1,t2=..10},tag=!down,tag=!stop_moving] positioned ~-2 ~-2 ~-2 run execute as @e[distance=..10,dx=2,dz=2,dy=3.5,type=armor_stand,tag=blue_tnt_marker] at @s run tp @s ~ ~1 ~
 execute as @s[x=599,z=599,y=5,dx=36,dz=36,dy=25,distance=..1000,scores={t1=1,t2=..10},tag=!down,tag=!stop_moving] at @s run tp @s ~ ~1 ~
 

@@ -16,16 +16,32 @@ execute as @a[gamemode=adventure,scores={class=8,garboost=3}] at @s run playsoun
 execute as @a[gamemode=adventure,scores={class=8,garboost=3}] at @s run playsound minecraft:block.beacon.deactivate master @a ~ ~ ~ 1 2
 
 #life boost
-scoreboard players add @s gardlife 1
-execute if score @s Lives >= Lives_start game run scoreboard players set @s gardlife 0
-execute as @s[scores={gardlife=800,Lives=..6}] at @s run function game:player/class_team
-execute as @s[scores={gardlife=800,Lives=..6}] at @s run tellraw @a [{"selector":"@s"},{"text":" gained an ","color":"gray","bold":false},{"text":"Extra Life","color":"green","bold":true}]
-scoreboard players add @s[scores={gardlife=800..,Lives=..6}] Lives 1
-execute as @s[scores={gardlife=800,Lives=..7}] at @s run function game:ui/name_markers
-scoreboard players set @s[scores={gardlife=800..}] gardlife 0
-scoreboard players set @s[scores={Lives=7..}] gardlife 0
+#scoreboard players add @s gardlife 1
+#execute if score @s Lives >= Lives_start game run scoreboard players set @s gardlife 0
+#execute as @s[scores={gardlife=800,Lives=..6}] at @s run function game:player/class_team
+#execute as @s[scores={gardlife=800,Lives=..6}] at @s run tellraw @a [{"selector":"@s"},{"text":" gained an ","color":"gray","bold":false},{"text":"Extra Life","color":"green","bold":true}]
+#scoreboard players add @s[scores={gardlife=800..,Lives=..6}] Lives 1
+#execute as @s[scores={gardlife=800,Lives=..7}] at @s run function game:ui/name_markers
+#scoreboard players set @s[scores={gardlife=800..}] gardlife 0
+#scoreboard players set @s[scores={Lives=7..}] gardlife 0
 
 #> Particle Trail cosmetic
 # Implemented by TheViralMelon
 execute unless score d1f4d3f7-02c6-40e8-a2ff-1d7b5385f5eb Woa1ParticleTrail = #woa1TrailVal .num run function game:tournament_rewards/woa1/trail_dict
 execute as @e[tag=WoaTrail,scores={arrowTime=2..}] at @s unless score #woa1TrailVal .num matches 0 run function game:tournament_rewards/woa1/trail with storage game:woa1 particleTrail
+
+#
+scoreboard players add @s harvest_time 1
+scoreboard players add @s[scores={harvest_time=20}] harvest 1
+scoreboard players set @s[scores={harvest_time=20..}] harvest_time 0
+
+execute if score @s Lives > Lives_start game run scoreboard players set @s harvest_time 0
+execute if score @s Lives > Lives_start game run scoreboard players set @s harvest 0
+
+execute as @s[scores={harvest=75..}] at @s run function game:char/gardener/lifeup
+
+#execute as @s[scores={harvest_level=..0,harvest=60..}] at @s run function game:char/gardener/lifeup
+#execute as @s[scores={harvest_level=1,harvest=70..}] at @s run function game:char/gardener/lifeup
+#execute as @s[scores={harvest_level=2..,harvest=80..}] at @s run function game:char/gardener/lifeup
+
+scoreboard players remove @s[scores={shovel_cool=1..}] shovel_cool 1

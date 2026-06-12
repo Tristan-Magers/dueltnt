@@ -665,7 +665,7 @@ Overlord
         To counter these nerfs, we are giving overlord some tools to be more active in its movement and engagements.
 - Overlord has 112% speed
     - Note: not active during landslide
-- Overlord ghas 0.45 jump strength (4.2 is default)
+- Overlord has 0.45 jump strength (.42 is default)
     - Note: slightly less strong than jump boost one
     - Note: not active during landslide
 - Overlord reloads matter 0.1s faster (1.2s -> 1.1s)

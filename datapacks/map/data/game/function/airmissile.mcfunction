@@ -3,7 +3,13 @@ particle minecraft:enchanted_hit ~ ~ ~ 1 1 1 0 8 force
 scoreboard players add @s blast 1
 
 scoreboard players set @s t5 0
-execute as @s[x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000,scores={blast=7..}] store result score @s t5 run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 air replace #game:bolt_place
+execute as @s[x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000,scores={blast=7..}] store result score @s t5 run fill ~.9 ~ ~ ~-.9 ~ ~ air replace #game:bolt_place
+scoreboard players operation @s t6 += @s t5
+execute as @s[x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000,scores={blast=7..}] store result score @s t5 run fill ~ ~ ~.9 ~ ~ ~-.9 air replace #game:bolt_place
+scoreboard players operation @s t6 += @s t5
+execute as @s[x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000,scores={blast=7..}] store result score @s t5 run fill ~ ~.9 ~ ~ ~-.9 ~ air replace #game:bolt_place
+scoreboard players operation @s t6 += @s t5
+execute as @s[x=597.1,z=597.1,y=0,dx=40.8,dz=40.8,dy=108,distance=..1000,scores={blast=7..}] store result score @s t5 run fill ~.55 ~.55 ~.55 ~-.55 ~-.55 ~-.55 air replace #game:bolt_place
 scoreboard players operation @s t6 += @s t5
 #execute as @s[scores={t5=1..}] at @s run scoreboard players set @s t4 3
 #execute as @s[scores={t5=1..}] at @s run tag @s add pause

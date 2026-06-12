@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "player_sneaks": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": {
+          "type_specific": {
+            "type": "minecraft:player",
+            "input": {
+              "sneak": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "player_sneaks"
+    ]
+  ],
+  "rewards": {
+    "function": "game:char/assassin/trydivekick"
+  }
+}

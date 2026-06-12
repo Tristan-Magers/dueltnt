@@ -53,3 +53,9 @@ effect clear @s minecraft:speed
 tag @s add plague
 
 function game:ui/name_markers
+
+execute as @a[tag=owner] at @s run function game:char/gardener/harvest3
+
+scoreboard players set @s harvest 25
+scoreboard players set @s harvest_level 0
+scoreboard players set @s harvest_time 0

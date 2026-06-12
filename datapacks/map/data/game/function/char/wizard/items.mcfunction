@@ -20,3 +20,7 @@ item replace entity @s[scores={pig=2..}] hotbar.1 with minecraft:pink_stained_gl
 item replace entity @s[scores={pig=2..}] hotbar.2 with minecraft:pink_stained_glass_pane[custom_name={"italic":false,"text":"§7Unavailable"}]
 tag @s[scores={pig=1..}] add pig
 tag @s[scores={pig=..0}] remove pig
+
+#
+scoreboard players set @s[nbt={OnGround:1b}] offground 0
+scoreboard players add @s[nbt={OnGround:0b}] offground 1

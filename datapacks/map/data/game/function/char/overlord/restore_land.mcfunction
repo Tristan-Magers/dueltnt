@@ -25,3 +25,21 @@ execute as @a at @s run function game:char/overlord/in_unstable
 #
 effect give @s blindness 1 1 true
 effect give @s slowness 1 2 true
+
+#reload wand
+execute as @s[scores={class=9},tag=!gather] at @s run scoreboard players set @s masterc 0
+execute as @s[scores={class=9},tag=!gather] at @s run function game:char/overlord/masterwanduse
+
+#reload 12 material. don't judge me
+function game:char/overlord/masterwandget
+function game:char/overlord/masterwandget
+function game:char/overlord/masterwandget
+function game:char/overlord/masterwandget
+function game:char/overlord/masterwandget
+function game:char/overlord/masterwandget
+function game:char/overlord/masterwandget
+function game:char/overlord/masterwandget
+function game:char/overlord/masterwandget
+function game:char/overlord/masterwandget
+function game:char/overlord/masterwandget
+function game:char/overlord/masterwandget

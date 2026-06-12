@@ -78,7 +78,7 @@ scoreboard players set @s[scores={enderct=1,class=0}] soldier_shifts 5
 
 execute as @s[scores={enderct=1,class=1}] run tag @s add ender_tnt_land
 
-execute as @s[scores={enderct=1,class=1}] run effect give @s speed 2 2
+execute as @s[scores={enderct=1,class=1}] run effect give @s speed 2 0
 execute as @s[scores={enderct=1,class=1}] run effect give @s jump_boost 2 4
 
 #execute as @s[scores={enderct=1,class=1}] unless block ~ ~-1 ~ air run summon tnt ~ ~ ~

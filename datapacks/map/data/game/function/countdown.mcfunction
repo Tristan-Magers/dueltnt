@@ -204,7 +204,7 @@ execute as @s[scores={countdown=-20}] at @s run execute if entity @e[tag=Map,sco
 
 scoreboard players remove @s countdown 1
 
-execute as @s[scores={countdown=-20}] at @s run gamerule mobGriefing true
+execute as @s[scores={countdown=-20}] at @s run gamerule mob_griefing true
 
 #players spawning
 scoreboard players set @a[x=600,y=60,z=600,distance=..39,scores={ingame=1..}] Invis 5

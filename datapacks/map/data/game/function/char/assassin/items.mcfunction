@@ -86,7 +86,7 @@ execute as @s[scores={FZtimer=169}] at @s run particle dripping_water ~ ~ ~ 2.3 
 execute as @s[scores={FZtimer=165}] at @s run particle block{block_state: 'minecraft:packed_ice'} ~ ~ ~ 2.3 2.3 2.3 0 100 force @a
 execute as @s[scores={FZtimer=165}] at @s run particle flash{color:[1.000,1.000,1.000,1.00]} ~ ~ ~ 0 0 0 0 1 force @a
 execute as @s[scores={FZtimer=165}] at @s run effect give @p minecraft:levitation 2
-execute as @s[scores={FZtimer=165}] at @s run effect give @p minecraft:speed 2 2 true
+#execute as @s[scores={FZtimer=165}] at @s run effect give @p minecraft:speed 2 2 true
 execute as @s[scores={FZtimer=165}] at @s run scoreboard players set @s nolev 28
 
 #

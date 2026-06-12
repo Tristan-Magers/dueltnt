@@ -11,3 +11,6 @@ tp @s @s
 
 summon tnt ~ ~ ~ {fuse:2,NoGravity:1,Tags:["blue_tnt"]}
 summon tnt ~ ~ ~ {fuse:2,NoGravity:1,Tags:["blue_tnt"]}
+
+attribute @s minecraft:gravity base reset
+attribute @s minecraft:explosion_knockback_resistance base reset

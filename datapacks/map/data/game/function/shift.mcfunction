@@ -17,11 +17,11 @@ execute as @s[scores={class=2}] at @s run playsound minecraft:entity.breeze.land
 execute as @s[scores={class=2}] at @s run playsound minecraft:entity.breeze.land master @a ~ ~ ~ 1 0
 #execute as @s[scores={class=2}] at @s run scoreboard players set @s ghostshift 20
 
-execute as @s[scores={class=1}] at @s run tag @s add divekick
+#execute as @s[scores={class=1}] at @s run tag @s add divekick
 #execute as @s[scores={class=1}] at @s run effect give @s jump_boost 3 4
 #execute as @s[scores={class=1}] at @s run scoreboard players set @p Invis 20
 
-execute as @s[scores={class=0},distance=..100] at @s run summon creeper ~ ~.05 ~ {ignited:1,Fuse:3,Activeeffect:[{Id:14,Amplifier:1,Duration:999999,ShowParticles:0b}]}
+execute as @s[scores={class=0},distance=..100] at @s run summon creeper ~ ~.05 ~ {ignited:1,Fuse:3,Tags:["noeffects"]}
 execute as @s[scores={class=0},distance=..100] at @s run team join noCol @e[type=creeper,distance=..3]
 
 #execute as @s[scores={class=0},distance=..100] at @s run summon minecraft:fireball ~ ~ ~ {Motion:[0.0d,-1.0d,0.0d],ExplosionPower:3}
@@ -140,10 +140,11 @@ execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {fuse:10,No
 execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {fuse:0,NoGravity:1}
 execute as @s[scores={class=6}] at @s run summon minecraft:tnt ~ ~ ~ {fuse:0,NoGravity:1}
 
-execute as @s[scores={class=9,overlordsc=1..}] at @s run function game:player/class_team
-execute as @s[scores={class=9,overlordsc=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":true},{"text":" (1 Remaining) ","color":"white"}]
-execute as @s[scores={class=9,overlordsc=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":true},{"text":" (0 Remaining) ","color":"white"}]
-execute as @s[scores={class=9,overlordsc=3}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":true},{"text":" (0 Remaining) ","color":"white"}]
-execute as @s[scores={class=9,overlordsc=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":true},{"text":" (0 Remaining) ","color":"white"}]
+execute as @s[scores={class=9}] at @s run function game:player/class_team
+execute as @s[scores={class=9,shift_cool=0}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":true},{"text":" (0 Remaining) ","color":"white"}]
+execute as @s[scores={class=9,shift_cool=1}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":true},{"text":" (1 Remaining) ","color":"white"}]
+execute as @s[scores={class=9,shift_cool=2}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":true},{"text":" (2 Remaining) ","color":"white"}]
+execute as @s[scores={class=9,shift_cool=3}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":true},{"text":" (3 Remaining) ","color":"white"}]
+execute as @s[scores={class=9,shift_cool=4}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Used ","color":"white"},{"text":"Restore World","color":"gray","bold":true},{"text":" (4 Remaining) ","color":"white"}]
 
 scoreboard players set @s coyote_frames -1

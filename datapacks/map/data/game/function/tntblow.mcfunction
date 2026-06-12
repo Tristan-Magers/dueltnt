@@ -1,5 +1,5 @@
 #funtions runs when lobby tnt "explodes"
-gamerule mobGriefing false
+gamerule mob_griefing false
 #execute as @e[tag=tnt_start] at @s run summon creeper ~ ~ ~ {ignited:1,Fuse:1,NoAI:1,ExplosionRadius:1}
 tag @e[type=creeper] add boom
 #tp @e[type=creeper,tag=boom] ~ ~-100 ~
