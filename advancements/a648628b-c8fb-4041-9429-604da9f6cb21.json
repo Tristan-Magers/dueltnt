@@ -71,5 +71,17 @@
     },
     "done": true
   },
+  "classes:class7": {
+    "criteria": {
+      "echo": "2026-06-16 11:20:08 -0600"
+    },
+    "done": true
+  },
+  "classes:class5": {
+    "criteria": {
+      "mad": "2026-06-16 11:20:26 -0600"
+    },
+    "done": true
+  },
   "DataVersion": 4671
 }

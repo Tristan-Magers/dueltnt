@@ -26,10 +26,10 @@ clear @s[nbt=!{Inventory:[{id:"minecraft:redstone",Slot:3b}]},scores={TBtimer=..
 scoreboard players set @s[nbt=!{Inventory:[{id:"minecraft:redstone",Slot:3b}]},scores={TBtimer=..-200}] TBtimer 1001
 
 clear @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0}] diamond_sword
-execute as @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0,platUse=2}] run function game:char/trapper/give/platform {damage:0}
-execute as @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0,platUse=1}] run function game:char/trapper/give/platform {damage:520}
-execute as @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0,platUse=0}] run function game:char/trapper/give/platform {damage:1040}
 execute as @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0,platUse=3}] run function game:char/trapper/give/platform {damage:0}
+execute as @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0,platUse=2}] run function game:char/trapper/give/platform {damage:390}
+execute as @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0,platUse=1}] run function game:char/trapper/give/platform {damage:781}
+execute as @s[nbt=!{Inventory:[{id:"minecraft:diamond_sword",Slot:4b}]},scores={PlatTimer=..0,platUse=0}] run function game:char/trapper/give/platform {damage:1171}
 
 clear @s[nbt=!{Inventory:[{id:"minecraft:paper",Slot:7b}]}] paper
 execute as @s[nbt=!{Inventory:[{id:"minecraft:paper",Slot:7b}]}] run function game:char/trapper/give/paper

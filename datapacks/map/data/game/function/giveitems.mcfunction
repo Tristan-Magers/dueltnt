@@ -319,7 +319,7 @@ scoreboard players set @a slimeeggr 0
 
 scoreboard players set @a floatuse 0
 
-scoreboard players set @a platUse 2
+scoreboard players set @a platUse 3
 
 scoreboard players set @a grave 0
 

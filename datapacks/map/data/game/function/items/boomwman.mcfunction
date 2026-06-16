@@ -5,7 +5,7 @@ execute as @s[gamemode=adventure,scores={click=1..,boomwandtime=..0},nbt={Select
 scoreboard players remove @s[gamemode=adventure,scores={click=1..,boomwandtime=..0},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] boomcharge 1
 scoreboard players set @s[gamemode=adventure,scores={click=1..,boomwandtime=..0},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] boomwandcool 1
 #controls increasing cooldown
-scoreboard players set @s[gamemode=adventure,scores={click=1..,boomwandtime=..0,boomcharge=7..},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] boomwandtime 11
+scoreboard players set @s[gamemode=adventure,scores={click=1..,boomwandtime=..0,boomcharge=7..},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] boomwandtime 10
 scoreboard players set @s[gamemode=adventure,scores={click=1..,boomwandtime=..0,boomcharge=5..6},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] boomwandtime 11
 scoreboard players set @s[gamemode=adventure,scores={click=1..,boomwandtime=..0,boomcharge=4},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] boomwandtime 11
 scoreboard players set @s[gamemode=adventure,scores={click=1..,boomwandtime=..0,boomcharge=3},nbt={SelectedItem:{id:"minecraft:wooden_hoe"}}] boomwandtime 12

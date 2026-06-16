@@ -347,8 +347,9 @@ execute as @a at @s if block ~ ~ ~ white_stained_glass run teleport @s ~ ~1 ~
 execute as @a[gamemode=adventure,scores={platAm=1}] at @s positioned ~ ~-.1 ~ run summon armor_stand ~ ~-1 ~ {NoGravity:1,Invlunerable:1,Marker:1,Silent:1,CustomName:{"italic":false,"text":"SP"},Invisible:1,Tags:["extra"]}
 scoreboard players remove @a[gamemode=adventure,scores={platAm=1..}] platAm 1
 execute as @a[gamemode=adventure,scores={platAm=6}] at @s run playsound minecraft:entity.illusion_illager.cast_spell master @a ~ ~ ~ 1 1.2
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=2}] run function game:char/trapper/give/platform {damage:520}
-execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=1}] run function game:char/trapper/give/platform {damage:1040}
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=3}] run function game:char/trapper/give/platform {damage:390}
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=2}] run function game:char/trapper/give/platform {damage:781}
+execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=1,platUse=1}] run function game:char/trapper/give/platform {damage:1171}
 execute as @a[scores={class=10,frostsT=0},x=620,y=20,z=620,distance=..100] run function game:player/class_team
 execute as @a[gamemode=adventure,x=600,y=60,z=600,distance=3..95,scores={PlatTimer=2,platUse=1..}] at @s run tellraw @a[gamemode=spectator] [{"selector":"@s"},{"text":" Reloaded ","color":"white"},{"text":"Platform","color":"red","bold":true},{"text":"","color":"white"}]
 

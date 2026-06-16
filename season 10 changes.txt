@@ -28,7 +28,10 @@ Assassin
 
 Ghost
 - Teleport (pearls) have 5s cooldown
-- Airmissile hitbox slightly reduced (2x2x2 cube -> 1.8 diameter sphere)
+- Airmissile hitbox slightly reduced (2x2x2 cube -> 1.9 diameter sphere)
+
+Trapper
+- Platform has 1 more use (3 -> 4)
 
 Wizard
 - Fixed unworking code where fireballs spawn more dynamically based on your movement. Now can no long hit yourself with fireballs midair. Fireball jumps now much more consistant.
@@ -48,6 +51,9 @@ Wizard
     - Explodes 0.4s faster (2.05s -> 1.65s)
 - Creeper Throw takes 1s to reload at start of match
 
+Echo
+- First Boom wand use reloads 0.05s faster (0.55s -> 0.5s)
+
 Gardener
 - Plague
     - No longer gives position
@@ -55,7 +61,9 @@ Gardener
     - Arrow reloads 0.9s faster after being plagued
     - 1.5s total knockback resistance after being plagued
     - 1s total knockback resistance after plaguing someone
+    - Added more audio and visual on hit
 - Reworked reloading lives into "Harvest" mechanic
+    - Added audio
     - Harvest naturally ticks up 1 a second
     - At 75 seconds you reload a life
     - Hitting shovel/arrows/plague (on non-Gardener) reduces time (4s,6s,25s respectively)
@@ -63,6 +71,7 @@ Gardener
     - Starts at 25s if you get plagued
 
 Overlord
+- Master Bomb cooldown 0.05s faster (1.2s -> 1.15s)
 - Gather gives wand 0.5s less cooldown (1.75s - 1.25s) [plus 0.05s for every matter gathered]
 - Starts with only one restore world (previously 2)
 - Reloads one restore world on death (Cap at 2)
@@ -75,3 +84,4 @@ Shard
 - Trident's biggest pushboxes spawn 0.05s after rest of pushboxes (0.25s)
 
 [Bug Fixes]
+- Fixed timer for most ground shift being slightly inaccurate by 1 (assassin,shard,trapper,echo)
