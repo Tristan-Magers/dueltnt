@@ -57,13 +57,13 @@ execute as @s[x_rotation=-90..45,tag=!grounddash] at @s rotated ~ 0 positioned ^
 execute as @s[x_rotation=-90..45,tag=!grounddash] at @s rotated ~ 0 positioned ^ ^ ^-.21 run summon creeper ~ ~1.27 ~ {ignited:1,Fuse:0,ExplosionRadius:1b,Tags:["noeffects"]}
 execute as @s[x_rotation=-90..45,tag=!grounddash] at @s rotated ~ 0 positioned ^ ^ ^-.21 run summon creeper ~ ~1.27 ~ {ignited:1,Fuse:0,ExplosionRadius:1b,Tags:["noeffects"]}
 
-execute at @s[x_rotation=45.001..51,tag=!grounddash] at @s rotated ~ 0 positioned ^ ^ ^-.21 run summon creeper ~ ~1.27 ~ {ignited:1,Fuse:0,ExplosionRadius:1b,Tags:["noeffects"]}
-execute as @s[x_rotation=45.001..51,tag=!grounddash] at @s rotated ~ 0 positioned ^ ^ ^-.21 run summon creeper ~ ~1.27 ~ {ignited:1,Fuse:0,ExplosionRadius:1b,Tags:["noeffects"]}
-execute as @s[x_rotation=45.001..51,tag=!grounddash] at @s rotated ~ 0 positioned ^ ^ ^-.21 run summon creeper ~ ~1.27 ~ {ignited:1,Fuse:0,ExplosionRadius:1b,Tags:["noeffects"]}
-execute as @s[x_rotation=45.001..51,tag=!grounddash] at @s rotated ~ 0 positioned ^ ^ ^-.21 run summon creeper ~ ~1.27 ~ {ignited:1,Fuse:0,ExplosionRadius:1b,Tags:["noeffects"]}
+execute at @s[x_rotation=45.001..51,tag=!grounddash] at @s rotated ~ 0 positioned ^ ^ ^-.45 run summon creeper ~ ~1.27 ~ {ignited:1,Fuse:0,ExplosionRadius:1b,Tags:["noeffects"]}
+execute as @s[x_rotation=45.001..51,tag=!grounddash] at @s rotated ~ 0 positioned ^ ^ ^-.45 run summon creeper ~ ~1.27 ~ {ignited:1,Fuse:0,ExplosionRadius:1b,Tags:["noeffects"]}
+execute as @s[x_rotation=45.001..51,tag=!grounddash] at @s rotated ~ 0 positioned ^ ^ ^-.45 run summon creeper ~ ~1.27 ~ {ignited:1,Fuse:0,ExplosionRadius:1b,Tags:["noeffects"]}
+execute as @s[x_rotation=45.001..51,tag=!grounddash] at @s rotated ~ 0 positioned ^ ^ ^-.45 run summon creeper ~ ~1.27 ~ {ignited:1,Fuse:0,ExplosionRadius:1b,Tags:["noeffects"]}
 execute as @s[x_rotation=45.001..51,tag=!grounddash] at @s rotated ~ 0 positioned ^ ^ ^-.21 run summon creeper ~ ~1.27 ~ {ignited:1,Fuse:0,ExplosionRadius:1b,Tags:["noeffects"]}
 
-execute at @s[x_rotation=51.001..54,tag=!grounddash] at @s rotated ~ 0 positioned ^ ^ ^-.21 run summon creeper ~ ~1.27 ~ {ignited:1,Fuse:0,ExplosionRadius:1b,Tags:["noeffects"]}
+execute at @s[x_rotation=51.001..54,tag=!grounddash] at @s rotated ~ 0 positioned ^ ^ ^-.45 run summon creeper ~ ~1.27 ~ {ignited:1,Fuse:0,ExplosionRadius:1b,Tags:["noeffects"]}
 execute as @s[x_rotation=51.001..54,tag=!grounddash] at @s rotated ~ 0 positioned ^ ^ ^-.45 run summon creeper ~ ~1.27 ~ {ignited:1,Fuse:0,ExplosionRadius:1b,Tags:["noeffects"]}
 execute as @s[x_rotation=51.001..54,tag=!grounddash] at @s rotated ~ 0 positioned ^ ^ ^-.45 run summon creeper ~ ~1.27 ~ {ignited:1,Fuse:0,ExplosionRadius:1b,Tags:["noeffects"]}
 execute as @s[x_rotation=51.001..54,tag=!grounddash] at @s rotated ~ 0 positioned ^ ^ ^-.45 run summon creeper ~ ~1.27 ~ {ignited:1,Fuse:0,ExplosionRadius:1b,Tags:["noeffects"]}

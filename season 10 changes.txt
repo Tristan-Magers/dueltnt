@@ -21,12 +21,13 @@ Assassin
 - Shift reload bug fixed where the visual countdown was 42 but it was still 44 behind the scenes (now 42)
 - Physics for Divekick completely reworked
     - Note: mostly due to minecraft nonsense, but was also an escuse to make this move feel beeter in General
+- Dive kicking on ground givings higher level levetation (functionally making this move send higher)
 - Speed decreased by 5% (140% -> 135%) [no longer uses speed]
 - Jump boost 2 replaced with jump stength .6 (slightly lower)
 - To account for speed changes, Teleport gives speed 1 instead of speed 3
 
 Ghost
-- Teleport (pearls) have 12s cooldown
+- Teleport (pearls) have 5s cooldown
 - Airmissile hitbox slightly reduced (2x2x2 cube -> 1.8 diameter sphere)
 
 Wizard
@@ -34,7 +35,7 @@ Wizard
 - Pig reloads faster (6s/6.5s -> 4.5s) [note: used to depend on how it was used, no longer does]
 - Pig Transforms are now a limited resource
     - Start with 4
-    - Reload 1 after death
+    - Reload 1 after death (Max 4)
 - Ground pig (placing pig on ground)
     - Explodes 0.1s slower (1.05s -> 1.15s)
     - 1 more tnt (2 -> 3)
@@ -45,17 +46,24 @@ Wizard
     - 0.3s more levitation (0.4s -> 0.7s)
     - 2 levels weaker levetation (16 -> 14)
     - Explodes 0.4s faster (2.05s -> 1.65s)
+- Creeper Throw takes 1s to reload at start of match
 
 Gardener
+- Plague
+    - No longer gives position
+    - Blindness lasts 1s less (2s -> 1s)
+    - Arrow reloads 0.9s faster after being plagued
+    - 1.5s total knockback resistance after being plagued
+    - 1s total knockback resistance after plaguing someone
 - Reworked reloading lives into "Harvest" mechanic
     - Harvest naturally ticks up 1 a second
     - At 75 seconds you reload a life
     - Hitting shovel/arrows/plague (on non-Gardener) reduces time (4s,6s,25s respectively)
     - Max at 1 more than max and starts immediately
-    - Starts at 13s 
     - Starts at 25s if you get plagued
 
 Overlord
+- Gather gives wand 0.5s less cooldown (1.75s - 1.25s) [plus 0.05s for every matter gathered]
 - Starts with only one restore world (previously 2)
 - Reloads one restore world on death (Cap at 2)
 - Restore world reloads wand repairs wand to full
@@ -65,3 +73,5 @@ Overlord
 Shard
 - Shift reload bug fixed where the visual countdown was 32 but it was still 33 behind the scenes (now 32)
 - Trident's biggest pushboxes spawn 0.05s after rest of pushboxes (0.25s)
+
+[Bug Fixes]

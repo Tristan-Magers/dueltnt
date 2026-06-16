@@ -1,8 +1,11 @@
 clear @s
 
-effect give @s minecraft:blindness 2 0
-effect give @s minecraft:poison 3 6
+effect give @s minecraft:blindness 1 0
+#effect give @s minecraft:poison 3 6
 effect give @s minecraft:glowing 5 10
+effect give @s minecraft:darkness 2
+
+scoreboard players set @s kbarmor 30
 
 xp set @s 0 levels
 
@@ -38,7 +41,7 @@ scoreboard players set @p class 8
 function game:char/gardener/give/bow
 #execute if entity @e[scores={mode=1}] run item replace entity @s hotbar.0 with minecraft:bow[damage=220,unbreakable={},enchantments={punch:3},custom_name={"italic":false,"text":"§6Blast Jumper§r : Throw to switch"}]
 
-scoreboard players set @s bow 0
+scoreboard players set @s bow 18
 execute as @s run function game:char/gardener/give/pvp_paper
 execute as @s run function game:char/gardener/give/shift
 execute as @s run function game:char/gardener/give/lives_paper
@@ -59,3 +62,14 @@ execute as @a[tag=owner] at @s run function game:char/gardener/harvest3
 scoreboard players set @s harvest 25
 scoreboard players set @s harvest_level 0
 scoreboard players set @s harvest_time 0
+
+playsound minecraft:entity.zombie_nautilus.death master @a ~ ~ ~ 1 2
+playsound minecraft:entity.zombie_nautilus.ambient_land master @a ~ ~ ~ 1 2
+playsound minecraft:block.lava.extinguish master @a ~ ~ ~ 0.5 0.7
+playsound minecraft:item.armor.unequip_nautilus master @a ~ ~ ~ 1 1
+
+attribute @s minecraft:gravity base reset
+attribute @s minecraft:movement_speed base reset
+
+effect clear @s speed
+effect clear @s jump_boost

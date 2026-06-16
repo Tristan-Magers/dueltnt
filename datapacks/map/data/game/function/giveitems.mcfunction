@@ -208,6 +208,8 @@ scoreboard players set @a click 0
 scoreboard players set @a shift 0
 scoreboard players set @a timer -1
 
+scoreboard players set @a CPtimer 20
+
 scoreboard players set @a Sreload 0
 scoreboard players set @a[scores={class=6},x=620,y=20,z=620,distance=..100] Sreload 20
 scoreboard players set @a endercount 0
@@ -309,7 +311,7 @@ scoreboard players set @a snowmanT -1
 scoreboard players set @a gardlife 20
 scoreboard players set @a harvest_level 0
 scoreboard players set @a harvest_time 0
-scoreboard players set @a harvest 13
+scoreboard players set @a harvest 0
 scoreboard players set @a shovel_cool 0
 
 scoreboard players set @a creepeggr 115
@@ -372,3 +374,6 @@ tag @a remove near_portal
 
 #
 scoreboard players set .ui_varify .data 1
+
+#
+execute as @a run attribute @s minecraft:gravity base reset

@@ -1,6 +1,6 @@
 scoreboard players add @s masterc 1
 scoreboard players set @s[scores={masterc=25..}] masterc 25
-scoreboard players set @s mastercT 100
+scoreboard players set @s mastercT 110
 
 scoreboard players add @s otherlord_gather_count 0
 

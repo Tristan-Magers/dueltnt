@@ -55,7 +55,7 @@ execute if score .player_count .data matches 6.. if score @s ui_action_text matc
 execute if score .player_count .data matches 6.. if score @s ui_action_text matches 2 if score @s ui_action_time matches 1.. run data merge entity @e[tag=actionbar_temp,limit=1] {CustomName:[{"translate":"space.151","font":"space"},{"text":"§cNo portal close","font":"default"},{"translate":"space.-229","font":"space"}]}
 execute if score .player_count .data matches 6.. if score @s ui_action_text matches 3 if score @s ui_action_time matches 1.. run data merge entity @e[tag=actionbar_temp,limit=1] {CustomName:[{"translate":"space.112","font":"space"},{"text":"§6WEAPONS TEMPORARILY BOOSTED","font":"default"},{"translate":"space.-268","font":"space"}]}
 
-execute as @s[scores={class=8}] run function game:ui/harvest
+execute as @s[scores={class=8},gamemode=adventure] run function game:ui/harvest
 
 scoreboard players remove @s[scores={ui_action_time=1..}] ui_action_time 1
 

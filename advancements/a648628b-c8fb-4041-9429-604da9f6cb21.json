@@ -65,5 +65,11 @@
     },
     "done": true
   },
+  "classes:class3": {
+    "criteria": {
+      "trapper": "2026-06-15 21:57:20 -0600"
+    },
+    "done": true
+  },
   "DataVersion": 4671
 }

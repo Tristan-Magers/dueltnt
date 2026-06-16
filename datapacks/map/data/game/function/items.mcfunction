@@ -826,3 +826,10 @@ execute as @e[tag=no_motion] at @s run tp @s @s
 #
 scoreboard players remove @a[scores={ex_res=0..}] ex_res 1
 execute as @a[scores={ex_res=0}] run attribute @s minecraft:explosion_knockback_resistance base reset
+
+execute as @a[scores={kbarmor=..0}] run attribute @s minecraft:knockback_resistance base reset
+execute as @a[scores={kbarmor=1..}] run attribute @s minecraft:knockback_resistance base set 1
+scoreboard players remove @a[scores={kbarmor=0..}] kbarmor 1
+
+#
+effect clear @a poison

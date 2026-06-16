@@ -57,3 +57,5 @@ scoreboard players set @a frozen -10
 
 #
 gamerule reduced_debug_info false
+
+execute as @a run attribute @s minecraft:gravity base reset
