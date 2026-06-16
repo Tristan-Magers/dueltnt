@@ -84,7 +84,7 @@ execute as @s[scores={class=4,pig=1..}] at @s run effect clear @s speed
 execute as @s[scores={class=4,pig=1..}] at @s run effect give @s jump_boost 300 2 true
 #it reloads at -90, decreases value at -1. super gross system
 execute as @s[scores={class=4}] at @s run scoreboard players set @s pig -89
-scoreboard players add @s[scores={class=4,pig_count=..3}] pig_count 1
+scoreboard players add @s[scores={class=4,pig_count=..2}] pig_count 1
 
 #
 scoreboard players set @s dive_kick -1

@@ -1,4 +1,7 @@
 title @s actionbar [{"text":"Class selected.","color":"green"}]
+
+tag @s remove plague
+
 execute as @s at @s run playsound minecraft:entity.player.levelup master @p ~ ~100 ~ 10000 2
 execute as @s[scores={kit=0}] at @s run scoreboard players set @p class 0
 execute as @s[scores={kit=1}] at @s run scoreboard players set @p class 1

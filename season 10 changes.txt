@@ -32,13 +32,14 @@ Ghost
 
 Trapper
 - Platform has 1 more use (3 -> 4)
+- Shift relaod is 0.1s faster (1.6s -> 1.5s) [actually 0.05s faster due to visual bug being fixed]
 
 Wizard
 - Fixed unworking code where fireballs spawn more dynamically based on your movement. Now can no long hit yourself with fireballs midair. Fireball jumps now much more consistant.
 - Pig reloads faster (6s/6.5s -> 4.5s) [note: used to depend on how it was used, no longer does]
 - Pig Transforms are now a limited resource
-    - Start with 4
-    - Reload 1 after death (Max 4)
+    - Start with 3
+    - Reload 1 after death (Max 3)
 - Ground pig (placing pig on ground)
     - Explodes 0.1s slower (1.05s -> 1.15s)
     - 1 more tnt (2 -> 3)
@@ -56,7 +57,7 @@ Echo
 
 Gardener
 - Plague
-    - No longer gives position
+    - No longer gives poison
     - Blindness lasts 1s less (2s -> 1s)
     - Arrow reloads 0.9s faster after being plagued
     - 1.5s total knockback resistance after being plagued
@@ -85,3 +86,5 @@ Shard
 
 [Bug Fixes]
 - Fixed timer for most ground shift being slightly inaccurate by 1 (assassin,shard,trapper,echo)
+- Getting plagued would not reset movement changes (speed/jump height)
+- Switching class after being plagued and leaving spectator resets class to previous

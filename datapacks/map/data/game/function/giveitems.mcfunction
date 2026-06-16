@@ -62,8 +62,8 @@ execute as @a[scores={class=0},x=620,y=20,z=620,distance=..100] run function gam
 
 execute if entity @e[scores={mode=1}] run item replace entity @a[scores={class=0},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:ender_pearl[custom_name={"italic":false,"text":"§aTeleport §r: Right-click"}] 8
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] armor.chest with minecraft:chainmail_chestplate[unbreakable={}]
-execute as @a[x=620,y=20,z=620,distance=..100,scores={class=4}] run function game:char/wizard/give/pig {"amount":4}
-scoreboard players set @a[x=620,y=20,z=620,distance=..100,scores={class=4}] pig_count 4
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=4}] run function game:char/wizard/give/pig {"amount":3}
+scoreboard players set @a[x=620,y=20,z=620,distance=..100,scores={class=4}] pig_count 3
 execute as @a[scores={class=4},x=620,y=20,z=620,distance=..100] at @s run attribute @p minecraft:movement_speed base set .13
 execute as @a[x=620,y=20,z=620,distance=..100,scores={class=6}] run function game:char/reaper/give/feather {amount:6}
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.4 with minecraft:feather[custom_name={"italic":false,"text":"Feather §r: Right-click"}] 9
@@ -279,6 +279,8 @@ scoreboard players set @a dartuse 2
 scoreboard players set @a starT 0
 scoreboard players set @a starUse 0
 
+scoreboard players set @s kbarmor -1
+
 scoreboard players set @a storm_cooldown 0
 scoreboard players set @a halo_cooldown 0
 
@@ -377,3 +379,5 @@ scoreboard players set .ui_varify .data 1
 
 #
 execute as @a run attribute @s minecraft:gravity base reset
+execute as @a run attribute @s minecraft:knockback_resistance base reset
+execute as @a run attribute @s minecraft:explosion_knockback_resistance base reset
