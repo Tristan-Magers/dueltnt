@@ -1,3 +1,9 @@
+#
+execute as @a run attribute @s minecraft:jump_strength base reset
+execute as @a run attribute @s minecraft:movement_speed base reset
+execute as @a run attribute @s minecraft:gravity base reset
+
+#
 clear @a[x=620,y=20,z=620,distance=..100]
 effect give @a fire_resistance 1000000 255 true
 
@@ -62,8 +68,8 @@ execute as @a[scores={class=0},x=620,y=20,z=620,distance=..100] run function gam
 
 execute if entity @e[scores={mode=1}] run item replace entity @a[scores={class=0},x=620,y=20,z=620,distance=..100] hotbar.2 with minecraft:ender_pearl[custom_name={"italic":false,"text":"§aTeleport §r: Right-click"}] 8
 item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=4}] armor.chest with minecraft:chainmail_chestplate[unbreakable={}]
-execute as @a[x=620,y=20,z=620,distance=..100,scores={class=4}] run function game:char/wizard/give/pig {"amount":3}
-scoreboard players set @a[x=620,y=20,z=620,distance=..100,scores={class=4}] pig_count 3
+execute as @a[x=620,y=20,z=620,distance=..100,scores={class=4}] run function game:char/wizard/give/pig {"amount":4}
+scoreboard players set @a[x=620,y=20,z=620,distance=..100,scores={class=4}] pig_count 4
 execute as @a[scores={class=4},x=620,y=20,z=620,distance=..100] at @s run attribute @p minecraft:movement_speed base set .13
 execute as @a[x=620,y=20,z=620,distance=..100,scores={class=6}] run function game:char/reaper/give/feather {amount:6}
 execute if entity @e[scores={mode=1}] run item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=6}] hotbar.4 with minecraft:feather[custom_name={"italic":false,"text":"Feather §r: Right-click"}] 9
@@ -138,7 +144,7 @@ item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.2 with minecraft:barrier[custom_name={"italic":false,"text":"§9Not enough material"},lore=[{"italic":false,"color":"white","text":"3x1 TNT"},{"italic":false,"color":"white","text":"Reload: 3.5s"},{"italic":false,"color":"white","text":"Delay: 0s, 0.1s, 0.2s"},{"italic":false,"color":"white","text":"Velocity: 4.4 bps"}]]
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.3 with minecraft:barrier[custom_name={"italic":false,"text":"§9Not enough material"},lore=[{"italic":false,"color":"white","text":"Duration: 2.5s"},{"italic":false,"color":"white","text":"Reload: 5.5s"},{"italic":false,"color":"white","text":"Max Length: 10 blocks"}]]
 item replace entity @a[x=600,y=60,z=600,distance=3..95,scores={class=9}] hotbar.4 with minecraft:barrier[custom_name={"italic":false,"text":"§9Not enough material"},lore=[{"italic":false,"text":"§4Beef"},{"italic":false,"color":"white","text":"8 TNT"},{"italic":false,"color":"white","text":"Reload: 7s"},{"italic":false,"color":"white","text":"Fuse: 0.35s"},{"italic":false,"color":"white","text":"Levitation 16 for 0.65s"}]]
-item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=9}] hotbar.6 with minecraft:paper[custom_name={"italic":false,"text":"§6Crouch to Restore World"},lore=[{"italic":false,"color":"white","text":"Recreates broken blocks and teleports you up to them"},{"italic":false,"color":"white","text":"Range: 4.5 blocks"},{"italic":false,"color":"white","text":"Does not reload normally"},{"italic":false,"color":"white","text":"Reload 1 on death"}]]
+item replace entity @a[x=620,y=20,z=620,distance=..100,scores={class=9}] hotbar.6 with minecraft:paper[custom_name={"italic":false,"text":"§6Crouch to Restore World"},lore=[{"italic":false,"color":"white","text":"Recreates broken blocks and teleports you up to them"},{"italic":false,"color":"white","text":"Range: 4.5 blocks"},{"italic":false,"color":"white","text":"Does not reload normally"},{"italic":false,"color":"white","text":"Reload 1 on death","text":"Max 2 reloads"}]]
 
 scoreboard players set @a boomwandtime 0
 scoreboard players set @a blastwandtime 0
@@ -359,6 +365,14 @@ scoreboard players set @a soldier_shift_reload 0
 scoreboard players set @a soldier_shift_sound 0
 
 scoreboard players set @a coyote_frames -1
+
+scoreboard players set @a overlord_shift_uses 0
+scoreboard players set @a pig_uses 0
+
+scoreboard players set @a pig_reloads 0
+scoreboard players set @a overlord_shift_reloads 0
+
+scoreboard players set @a deaths 0
 
 tag @a remove wand_fail_streak
 

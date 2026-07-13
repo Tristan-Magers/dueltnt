@@ -60,8 +60,9 @@ scoreboard players set @s grave 0
 execute as @s[scores={class=9},tag=!gather] at @s run scoreboard players set @s masterc 0
 execute as @s[scores={class=9},tag=!gather] at @s run function game:char/overlord/masterwanduse
 
-tag @s[scores={class=9,shift_cool=..1}] add overreload
+tag @s[scores={class=9,shift_cool=..1,overlord_shift_reloads=..1}] add overreload
 
+scoreboard players add @s[scores={class=9},tag=overreload] overlord_shift_reloads 1
 scoreboard players add @s[scores={class=9},tag=overreload] shift_cool 1
 scoreboard players remove @s[scores={class=9},tag=overreload] overlordsc 1
 
@@ -83,8 +84,15 @@ execute as @s[scores={class=9}] at @s run function game:char/overlord/masterwand
 execute as @s[scores={class=4,pig=1..}] at @s run effect clear @s speed
 execute as @s[scores={class=4,pig=1..}] at @s run effect give @s jump_boost 300 2 true
 #it reloads at -90, decreases value at -1. super gross system
-execute as @s[scores={class=4}] at @s run scoreboard players set @s pig -89
-scoreboard players add @s[scores={class=4,pig_count=..2}] pig_count 1
+
+tag @s[scores={class=4,pig_count=..3,pig_reloads=..1}] add pigreload
+scoreboard players set @s[scores={class=4}] pig -89
+scoreboard players add @s[tag=pigreload] pig_count 1
+scoreboard players add @s[tag=pigreload] pig_reloads 1
+
+tag @s remove pigreload
+
+scoreboard players add @s deaths 1
 
 #
 scoreboard players set @s dive_kick -1

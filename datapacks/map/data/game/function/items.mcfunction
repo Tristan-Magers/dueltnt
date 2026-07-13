@@ -57,7 +57,7 @@ tag @a[tag=shift_lock,scores={coyote_frames=1..}] remove shift_lock
 execute as @a[tag=!shift_lock] unless entity @s[scores={class=9}] run scoreboard players remove @s shift_cool 1
 #execute as @a[tag=shift_lock,scores={shift_cool=..1}] unless entity @s[scores={class=9}] run scoreboard players remove @s shift_cool 1
 
-scoreboard players remove @a[scores={class=9,overlordsc=1..},tag=!shift_lock] shift_cool 1
+#scoreboard players remove @a[scores={class=9,overlordsc=1..},tag=!shift_lock] shift_cool 1
 execute as @a unless entity @s[scores={class=9},tag=!shift_lock] run xp add @s -1 levels
 xp add @a[scores={class=9,overlordsc=1..},tag=!shift_lock] -1 levels
 scoreboard players add @a[gamemode=adventure,scores={timer=1..},distance=..100,x=620,y=20,z=620,tag=!shift_lock] timer 1

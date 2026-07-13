@@ -35,11 +35,14 @@ Trapper
 - Shift relaod is 0.1s faster (1.6s -> 1.5s) [actually 0.05s faster due to visual bug being fixed]
 
 Wizard
+- Fireballs move 3% faster
 - Fixed unworking code where fireballs spawn more dynamically based on your movement. Now can no long hit yourself with fireballs midair. Fireball jumps now much more consistant.
+- Telebow upwards platform disappears 4.4s faster (12s -> 7.8s)
 - Pig reloads faster (6s/6.5s -> 4.5s) [note: used to depend on how it was used, no longer does]
 - Pig Transforms are now a limited resource
     - Start with 3
-    - Reload 1 after death (Max 3)
+    - Reload 1 after death (Max 4, Max 2 reloads)
+- Pig Transform gives 1.3s less insivibility (2s -> 0.7s)
 - Ground pig (placing pig on ground)
     - Explodes 0.1s slower (1.05s -> 1.15s)
     - 1 more tnt (2 -> 3)
@@ -50,6 +53,7 @@ Wizard
     - 0.3s more levitation (0.4s -> 0.7s)
     - 2 levels weaker levetation (16 -> 14)
     - Explodes 0.4s faster (2.05s -> 1.65s)
+- Pig transform gives 2s less insivibility out of explosion (3s -> 1s)
 - Creeper Throw takes 1s to reload at start of match
 
 Echo
@@ -72,10 +76,11 @@ Gardener
     - Starts at 25s if you get plagued
 
 Overlord
-- Master Bomb cooldown 0.05s faster (1.2s -> 1.15s)
+- Master Bomb cooldown 0.1s faster (1.2s -> 1.1s)
+- Matter Storm has 0.7s longer reload (3.5s -> 4.2s)
 - Gather gives wand 0.5s less cooldown (1.75s - 1.25s) [plus 0.05s for every matter gathered]
 - Starts with only one restore world (previously 2)
-- Reloads one restore world on death (Cap at 2)
+- Reloads one restore world on death (Cap at 2, Max 2 reloads)
 - Restore world reloads wand repairs wand to full
 - Restore world give 12 matter
 - Dying gives 12 matter

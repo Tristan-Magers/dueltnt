@@ -2,7 +2,7 @@ execute as @s[scores={pig=1..}] at @s run tp @e[limit=1,type=pig] @p
 
 effect give @s[scores={pig=0},x=600,y=40,z=600,distance=..100] slowness 2 2 true
 effect give @s[scores={pig=20..},x=600,y=40,z=600,distance=..100] speed 2 2 true
-effect give @s[scores={pig=20..},x=600,y=40,z=600,distance=..100] invisibility 2 4 true
+effect give @s[scores={pig=1..},x=600,y=40,z=600,distance=..100] invisibility 2 4 true
 #scoreboard players remove @s[x=620,y=20,z=620,distance=..100,scores={class=4,pig=-1}] pig_count 1
 execute as @s[x=620,y=20,z=620,distance=..100,scores={class=4,pig=-90,pig_count=6..}] run function game:char/wizard/give/pig {"amount":6}
 execute as @s[x=620,y=20,z=620,distance=..100,scores={class=4,pig=-90,pig_count=5}] run function game:char/wizard/give/pig {"amount":5}
@@ -26,4 +26,4 @@ execute as @s[scores={pig=20}] at @s run playsound entity.arrow.hit_player maste
 execute as @s[scores={pig=30}] at @s run playsound entity.arrow.hit_player master @a[x=600,y=40,z=600,distance=..100] ~ ~ ~ .6 1.5
 execute as @s[scores={pig=40}] at @s run playsound entity.arrow.hit_player master @a[x=600,y=40,z=600,distance=..100] ~ ~ ~ .8 1.7
 execute as @s[scores={pig=50}] at @s run playsound entity.arrow.hit_player master @a[x=600,y=40,z=600,distance=..100] ~ ~ ~ 1 2
-scoreboard players set @s[scores={pig=20..}] Invis 60
+scoreboard players set @s[scores={pig=1..}] Invis 14
